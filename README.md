@@ -1,4 +1,4 @@
-# voc4cat - Vocaularies for Catalysis
+# voc4cat - Vocabularies for Catalysis
 
 This project is used to create and maintain SKOS-vocabularies for catalysis. It is maintained as part of the [NFDI4Cat](http://www.nfdi4cat.org) initiative.
 

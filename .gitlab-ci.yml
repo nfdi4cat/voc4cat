@@ -96,7 +96,7 @@ vocab:commit:
     - git status
 
     # Use python script to call "git merge-file" on existing or "copy" on new vocabs
-    - python merge_vocab.py outbox vocabularies
+    - merge_vocab outbox vocabularies
     - git add vocabularies/\*.ttl || echo "No ttl files to add."
     - git status
 
@@ -186,7 +186,6 @@ vocab:publish:
   only:
     - main
   script:
-    - pip install .
     - voc4cat --version
     # TODO: add upload to some hosting provider
     # "pages" are not active on gitlab@focus so they cannot be used.

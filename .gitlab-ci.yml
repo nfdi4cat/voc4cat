@@ -1,0 +1,205 @@
+# https://docs.gitlab.com/ee/ci/yaml/#stages
+# https://docs.gitlab.com/ee/ci/yaml/#stage
+stages:
+  # Python build
+  - build
+  # Python testing
+  - test
+  # Prepare/test vocabulary
+  - prepare
+  # Publish vocabulary
+  - publish
+
+# Official language image. Look for the different tagged releases at:
+# https://hub.docker.com/r/library/python/tags/
+image: python:latest
+
+# Change pip's cache directory to be inside the project directory since we can
+# only cache local items.
+variables:
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+
+# If you want to also cache the installed packages, you have to install
+# them in a virtualenv and cache it as well.
+cache:
+  paths:
+    - .cache/pip
+    - .venv/
+
+before_script:
+  - python --version
+  - python -m venv .venv
+  - source .venv/bin/activate
+  - python -m pip install -U pip
+  - pip install git+https://gitlab.fokus.fraunhofer.de/nfdi4cat/ta1-ontologies/heterogen-synth.git@main
+
+# ==== Merge request pipelines (run on changes in merge request’s branch) ====
+
+# show-variables:  # step to list all available variables and their values
+#   script:
+#     - export
+
+vocab:build:
+  # Run voc4cat and provide the generated artifacts for download:
+  # - updated excel-file(s)
+  # - generated turtle file(s)
+  # - Ontospy documentation & dendogram.
+  stage: prepare
+  needs: []
+  rules:
+    - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
+  script:
+    - ls -l outbox/ || echo "outbox directory does not exist."
+    - voc4cat --version
+    # When calling voc4cat we want to get the exit code and fail the pipeline.
+    # When using tee, the bash-pipeline stops on exit code != 0 and we don't
+    # get the command output written to voc4cat.log which happens last.
+    # So we need to evalute the bash pipeline failure not immediately but later.
+    - >
+      voc4cat --add_IRI --add_related --check --forward --docs --output_directory outbox inbox-excel-vocabs/
+      |& tee voc4cat.log
+      || EXIT_CODE=${PIPESTATUS[0]}
+    # tee cannot create a file in a subdir. So we move the file afterwards.
+    - mv voc4cat.log outbox
+    - ls -l outbox/ || echo "outbox directory does not exist."
+    # Evaluate exit code now that we saved voc4cat.log and fail CI
+    - echo "${EXIT_CODE}"
+    - if [ $EXIT_CODE -ne 0 ]; then exit ${EXIT_CODE}; fi;
+  artifacts:
+    when: always
+    # set the name that is shown in UI for the artifact
+    expose_as: 'voc4cat-validation'
+    # set the name of the created artifacts archive.
+    name: 'voc4cat-validation-MR$CI_MERGE_REQUEST_IID-$CI_PIPELINE_CREATED_AT'
+    paths:
+      - outbox/
+
+vocab:commit:
+  # Actions
+  # - copy generated turtle file(s) to vocabularies
+  # - commit new/changed file(s) in vocabularies (from CI account)
+  stage: prepare
+  needs: ["vocab:build"]
+  rules:
+    - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
+    # - exists:
+    #   - outbox/*.ttl
+  before_script:
+    - git config user.name "CI.runner"
+    - git config user.email "CI.runner@gitlab.fokus.fraunhofer.de"
+    # It would also be possible to use the email/name of the acting user
+    # - git config --global user.email "${GITLAB_USER_EMAIL}"
+    # - git config --global user.name "${GITLAB_USER_NAME}"
+  script:
+    # checkout avoids "detached head state", https://stackoverflow.com/a/69268083 (this is not required!)
+    # - git checkout "${CI_COMMIT_REF_NAME}"
+    - git status
+
+    # Use python script to call "git merge-file" on existing or "copy" on new vocabs
+    - python merge_vocab.py outbox vocabularies
+    - git add vocabularies/\*.ttl || echo "No ttl files to add."
+    - git status
+
+    # on project token: https://docs.gitlab.com/ee/user/project/settings/project_access_tokens.html
+    # the secret token is added as masked variable: GitLab Project CI/CD Settings menu > Variables settings
+    - git remote set-url origin "https://$CI_PROJECT_NAME:$PROJECT_ACCESS_TOKEN@$CI_SERVER_HOST/$CI_PROJECT_PATH.git"
+
+    # Nothing to commit gives exit code 1 (=error). We prevent this.
+    # note on colons: https://docs.gitlab.com/ee/ci/yaml/script.html#syntax-is-incorrect-in-scripts-that-use-
+    - 'git commit -m "CI: vocabulary update in pipeline $CI_PIPELINE_ID" || echo "Nothing to commit"'
+
+    # push to MR branch
+    # commit with "-o ci.skip" to prevent triggering another pipeline.
+    - echo "pushing to branch ${CI_MERGE_REQUEST_SOURCE_BRANCH_NAME}"
+    - git push -o ci.skip origin HEAD:${CI_MERGE_REQUEST_SOURCE_BRANCH_NAME}
+
+# vocab:is_approved:
+#   # Approvals are not active on gitlab@focus
+#   #   gitlab docs: https://docs.gitlab.com/ee/user/project/merge_requests/approvals/
+#
+#   # This stage is a work-around because CI_MERGE_REQUEST_APPROVED cannot yet be used in rules
+#   # https://gitlab.com/gitlab-org/gitlab/-/issues/329787
+#   # User defined variables cannot be used because they are job-local.
+#   # So we pass the information as artifact.
+#   stage: prepare
+#   needs: ["vocab:commit"]
+#   rules:
+#     - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
+#   script:
+#     - rm approved.vocab || true
+#     - python -c "import os; print('Approved.' if os.environ.get('CI_MERGE_REQUEST_APPROVED', False) else 'Not yet approved.')"
+#     - python -c "import os, sys; open('./approved.vocab', 'w').write('Approved!') if os.environ.get('CI_MERGE_REQUEST_APPROVED', False) else sys.exit(1)"
+#   artifacts:
+#     paths:
+#       - ./approved.vocab
+#   when: on_success
+
+vocab:clean:
+  # Actions
+  # - delete xlsx files from inbox
+  # - commit & push "deletion" (from CI account)
+  # Note:
+  #  These actions would ideally run "on merge to main" but still on the merge-request branch.
+  #  There is no easy way to trigger a pipeline at this stage. The stage could alternatively
+  #  be linked to approval, but that is not active on gitlab@focus. As a compromise, we run
+  #  this stage now on every merge-request change which removes the excel file too(?) early.
+  stage: prepare
+  # needs: ["vocab:is_approved"]
+  needs: ["vocab:commit"]
+  rules:
+    - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
+    # Note the following commented out lines may be useful if approval is activated.
+    # - if: $CI_PIPELINE_SOURCE == 'merge_request_event' && $CI_MERGE_REQUEST_APPROVED
+    # Using $CI_MERGE_REQUEST_APPROVED does not work well at the moment, https://gitlab.com/gitlab-org/gitlab/-/issues/329787#note_714888608
+
+    # The following was used with the commented out vocab:is_approved stage
+    # - exists:
+    #    - ./approved.vocab
+  before_script:
+    - git config user.name "CI.runner"
+    - git config user.email "CI.runner@gitlab.fokus.fraunhofer.de"
+    # It would also be possible to use the email/name of the acting user
+    # - git config --global user.email "${GITLAB_USER_EMAIL}"
+    # - git config --global user.name "${GITLAB_USER_NAME}"
+  script:
+    # Next line can be used to show all CI variables for debugging
+    # - export
+    # - echo "Value of CI_MERGE_REQUEST_APPROVED ${CI_MERGE_REQUEST_APPROVED}"
+    - git status
+    - git rm inbox-excel-vocabs/\*.xlsx || echo "No xlsx files to remove."
+    - git status
+    - git remote set-url origin "https://$CI_PROJECT_NAME:$PROJECT_ACCESS_TOKEN@$CI_SERVER_HOST/$CI_PROJECT_PATH.git"
+    - git remote -v
+    - 'git commit -o ci.skip -m "CI: remove Excel files from inbox-excel-vocabs" || echo "Nothing to commit"'
+
+    # push to merge request branch
+    #   for more push-options see https://docs.gitlab.com/ee/user/project/push_options.html#push-options-for-gitlab-cicd
+    - git push -o ci.skip origin HEAD:${CI_MERGE_REQUEST_SOURCE_BRANCH_NAME}
+
+    # - rm approved.vocab
+
+vocab:publish:
+  # Actions
+  # - Rebuild docu after merge (push to main)
+  # - Publish updated documentation & vocabularies (ttl & xlsx)
+  stage: publish
+  only:
+    - main
+  script:
+    - pip install .
+    - voc4cat --version
+    # TODO: add upload to some hosting provider
+    # "pages" are not active on gitlab@focus so they cannot be used.
+    - echo "Welcome to the partially implemented deploy pipeline."
+    # Build documentation and create Excel vocabulary files for final vocabularies.
+    - voc4cat --check --forward --docs --output_directory publish vocabularies/
+    # Also copy the turtle vocabulary files into the dir that is published.
+    - cp vocabularies/*.ttl publish/ || echo "no turtle(ttl) vocabulary files to publish."
+    - ls -l publish/ || echo "publish directory does not exist."
+  artifacts:
+    # set the name that is shown in UI for the artifact
+    expose_as: 'voc4cat-published'
+    # set the name of the created artifacts archive.
+    name: 'voc4cat-published-MR$CI_MERGE_REQUEST_IID-$CI_PIPELINE_CREATED_AT'
+    paths:
+      - publish/

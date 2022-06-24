@@ -28,3 +28,12 @@
 	- Protected: No
 	- Masked: Yes
 	- Environments: All
+
+4. Create a variable for a token that allows reading the voc4cat [tool repo](https://gitlab.fokus.fraunhofer.de/nfdi4cat/ta1-ontologies/heterogen-synth)
+
+	Settings > CI/CD > Variables
+
+	- Key: VOC4CAT_READ_TOKEN
+	- Protected: No
+	- Masked: Yes
+	- Environments: All

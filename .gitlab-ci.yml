@@ -31,7 +31,7 @@ before_script:
   - python -m venv .venv
   - source .venv/bin/activate
   - python -m pip install -U pip
-  - pip install git+https://gitlab.fokus.fraunhofer.de/nfdi4cat/ta1-ontologies/heterogen-synth.git@main
+  - pip install -U git+https://$CI_PROJECT_NAME:$PROJECT_ACCESS_TOKEN@gitlab.fokus.fraunhofer.de/nfdi4cat/ta1-ontologies/heterogen-synth.git@main
 
 # ==== Merge request pipelines (run on changes in merge request’s branch) ====
 

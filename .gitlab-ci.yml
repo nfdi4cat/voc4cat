@@ -10,28 +10,32 @@ stages:
   # Publish vocabulary
   - publish
 
-# Official language image. Look for the different tagged releases at:
-# https://hub.docker.com/r/library/python/tags/
-image: python:latest
-
 # Change pip's cache directory to be inside the project directory since we can
 # only cache local items.
 variables:
   PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
 
-# If you want to also cache the installed packages, you have to install
-# them in a virtualenv and cache it as well.
-cache:
-  paths:
-    - .cache/pip
-    - .venv/
-
-before_script:
-  - python --version
-  - python -m venv .venv
-  - source .venv/bin/activate
-  - python -m pip install -U pip
-  - pip install -U git+https://$CI_PROJECT_NAME:$VOC4CAT_READ_TOKEN@gitlab.fokus.fraunhofer.de/nfdi4cat/ta1-ontologies/heterogen-synth.git@main
+default:
+  # Official language image. Look for the different tagged releases at:
+  # https://hub.docker.com/r/library/python/tags/
+  image: python:latest
+  # If you want to also cache the installed packages, you have to install
+  # them in a virtualenv and cache it as well.
+  cache:
+    paths:
+      - .cache/pip
+      - .venv/
+  before_script:
+    - python --version
+    - python -m venv .venv
+    - source .venv/bin/activate
+    - python -m pip install -U pip
+    - pip install -U git+https://$CI_PROJECT_NAME:$VOC4CAT_READ_TOKEN@gitlab.fokus.fraunhofer.de/nfdi4cat/ta1-ontologies/heterogen-synth.git@main
+    - git config user.name "CI.runner"
+    - git config user.email "CI.runner@gitlab.fokus.fraunhofer.de"
+    # It would also be possible to use the email/name of the acting user
+    # - git config --global user.email "${GITLAB_USER_EMAIL}"
+    # - git config --global user.name "${GITLAB_USER_NAME}"
 
 # ==== Merge request pipelines (run on changes in merge request’s branch) ====
 
@@ -84,19 +88,13 @@ vocab:commit:
     - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
     # - exists:
     #   - outbox/*.ttl
-  before_script:
-    - git config user.name "CI.runner"
-    - git config user.email "CI.runner@gitlab.fokus.fraunhofer.de"
-    # It would also be possible to use the email/name of the acting user
-    # - git config --global user.email "${GITLAB_USER_EMAIL}"
-    # - git config --global user.name "${GITLAB_USER_NAME}"
   script:
     # checkout avoids "detached head state", https://stackoverflow.com/a/69268083 (this is not required!)
     # - git checkout "${CI_COMMIT_REF_NAME}"
     - git status
 
     # Use python script to call "git merge-file" on existing or "copy" on new vocabs
-    - merge_vocab outbox vocabularies
+    - merge_vocab outbox/ vocabularies/
     - git add vocabularies/\*.ttl || echo "No ttl files to add."
     - git status
 
@@ -155,12 +153,6 @@ vocab:clean:
     # The following was used with the commented out vocab:is_approved stage
     # - exists:
     #    - ./approved.vocab
-  before_script:
-    - git config user.name "CI.runner"
-    - git config user.email "CI.runner@gitlab.fokus.fraunhofer.de"
-    # It would also be possible to use the email/name of the acting user
-    # - git config --global user.email "${GITLAB_USER_EMAIL}"
-    # - git config --global user.name "${GITLAB_USER_NAME}"
   script:
     # Next line can be used to show all CI variables for debugging
     # - export

@@ -1,13 +1,18 @@
-# voc4cat - Vocabularies for Catalysis
+# A template to maintain vocabularies in gitlab with the voc4cat-tool
 
-This project is used to create and maintain SKOS-vocabularies for catalysis. It is maintained as part of the [NFDI4Cat](http://www.nfdi4cat.org) initiative.
+This repository may be cloned/forked to create and maintain your own SKOS-vocabularies. It is maintained as part of the [NFDI4Cat](http://www.nfdi4cat.org) initiative.
 
 It uses the [voc4cat-tool](https://gitlab.fokus.fraunhofer.de/nfdi4cat/ta1-ontologies/heterogen-synth) and CI-automation to reduce the workload for contributors and editors.
 
 
-# Contributing
+# Workflow improvements
 
-To discuss about the SKOS vocabularies maintained here, feel free create an [issue](https://gitlab.fokus.fraunhofer.de/nfdi4cat/ta1-ontologies/voc4cat/-/issues) in this repository.
+To discuss about the workflow and the tool for maintaining SKOS vocabularies based on this template, feel free create an [voc4cat-tool issue](https://gitlab.fokus.fraunhofer.de/nfdi4cat/ta1-ontologies/voc4cat/-/issues).
+
+
+# Contributing to vocabularies
+
+To discuss about the SKOS vocabularies maintained with this template, create an [issue](https://gitlab.fokus.fraunhofer.de/nfdi4cat/ta1-ontologies/voc4cat/-/issues) in the vocbulary repository (but not in the template-repository).
 
 To contribute concrete new vocabularies or change existing ones, you may either submit your contributions as Excel-file or (as an expert) as new/changed turtle file. The steps for submitting updates in turtle are not different from contributing source code to other gitlab repositories.
 
@@ -26,15 +31,15 @@ Here are the steps, for submitting updates in Excel.
    - or a discussion will be started about what else is needed 
    - or why the proposed change may not fit.
 
-If you like to discuss or contribute to the voc4cat-tool that is used here or have bug reports about it, please do not create an issue here but in the [voc4cat-tool](https://gitlab.fokus.fraunhofer.de/nfdi4cat/ta1-ontologies/heterogen-synth/-/issues) repository.
-
 
 # Authors and acknowledgment
 
 * David Linke (ORCID: 0000-0002-5898-1820): 
   - Initial setup of repository and CI/CD pipelines
 
-
+  
 # License
 
-All vocabularies in this repository are CC0 licenced, see [LICENSE](LICENSE) for details.
+All vocabularies in this repository are CC0 licenced, see [LICENSE](LICENSE) for details. [Adapt this to your needs]
+
+The template itself is CC0 licenced, see [LICENSE](LICENSE). Although there is no obligation, we nevertheless appreciate if our work is acknowledged in any derivative work.

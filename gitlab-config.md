@@ -29,7 +29,7 @@
 	- Masked: Yes
 	- Environments: All
 
-4. Create a variable for a token that allows reading the voc4cat [tool repo](https://gitlab.fokus.fraunhofer.de/nfdi4cat/ta1-ontologies/heterogen-synth)
+4. Create a variable for a token that allows reading the voc4cat [tool repo](https://gitlab.fokus.fraunhofer.de/nfdi4cat/ta1-ontologies/voc4cat-tool)
 
 	Settings > CI/CD > Variables
 

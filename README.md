@@ -2,7 +2,7 @@
 
 This repository may be cloned/forked to create and maintain your own SKOS-vocabularies. It is maintained as part of the [NFDI4Cat](http://www.nfdi4cat.org) initiative.
 
-It uses the [voc4cat-tool](https://gitlab.fokus.fraunhofer.de/nfdi4cat/ta1-ontologies/heterogen-synth) and CI-automation to reduce the workload for contributors and editors.
+It uses the [voc4cat-tool](https://gitlab.fokus.fraunhofer.de/nfdi4cat/ta1-ontologies/voc4cat-tool) and CI-automation to reduce the workload for contributors and editors.
 
 
 # Workflow improvements

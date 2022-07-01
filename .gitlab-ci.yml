@@ -30,7 +30,7 @@ default:
     - python -m venv .venv
     - source .venv/bin/activate
     - python -m pip install -U pip
-    - pip install -U git+https://$CI_PROJECT_NAME:$VOC4CAT_READ_TOKEN@gitlab.fokus.fraunhofer.de/nfdi4cat/ta1-ontologies/heterogen-synth.git@main
+    - pip install -U git+https://$CI_PROJECT_NAME:$VOC4CAT_READ_TOKEN@gitlab.fokus.fraunhofer.de/nfdi4cat/ta1-ontologies/voc4cat-tool.git@main
     - git config user.name "CI.runner"
     - git config user.email "CI.runner@gitlab.fokus.fraunhofer.de"
     # It would also be possible to use the email/name of the acting user

@@ -18,7 +18,7 @@ variables:
 default:
   # Official language image. Look for the different tagged releases at:
   # https://hub.docker.com/r/library/python/tags/
-  image: python:latest
+  image: python:3.10.8-bullseye
   # If you want to also cache the installed packages, you have to install
   # them in a virtualenv and cache it as well.
   cache:
@@ -36,6 +36,13 @@ default:
     # It would also be possible to use the email/name of the acting user
     # - git config --global user.email "${GITLAB_USER_EMAIL}"
     # - git config --global user.name "${GITLAB_USER_NAME}"
+    # To avoid a detached head we have to checkout the merge request branch by name.
+    # However, the branch names are not present in the standard CI-clone that gitlab
+    # creates. So we fetch them:
+    - git fetch --tags
+    # List all branches
+    - git branch -v
+
 
 # ==== Merge request pipelines (run on changes in merge request’s branch) ====
 
@@ -58,7 +65,7 @@ vocab:build:
     # When calling voc4cat we want to get the exit code and fail the pipeline.
     # When using tee, the bash-pipeline stops on exit code != 0 and we don't
     # get the command output written to voc4cat.log which happens last.
-    # So we need to evalute the bash pipeline failure not immediately but later.
+    # So we need to evaluate the bash pipeline failure not immediately but later.
     - >
       voc4cat --add_IRI --add_related --check --forward --docs --output_directory outbox inbox-excel-vocabs/
       |& tee voc4cat.log
@@ -89,8 +96,9 @@ vocab:commit:
     # - exists:
     #   - outbox/*.ttl
   script:
-    # checkout avoids "detached head state", https://stackoverflow.com/a/69268083 (this is not required!)
-    # - git checkout "${CI_COMMIT_REF_NAME}"
+    # Gitlab's standard CI checkout by commit-hash results in a "detached head" state.
+    # To avoid this we check out by MR branch name. https://git-scm.com/docs/git-checkout
+    - git checkout $CI_MERGE_REQUEST_SOURCE_BRANCH_NAME
     - git status
 
     # Use python script to call "git merge-file" on existing or "copy" on new vocabs
@@ -106,8 +114,8 @@ vocab:commit:
     # note on colons: https://docs.gitlab.com/ee/ci/yaml/script.html#syntax-is-incorrect-in-scripts-that-use-
     - 'git commit -m "CI: vocabulary update in pipeline $CI_PIPELINE_ID" || echo "Nothing to commit"'
 
-    # push to MR branch
-    # commit with "-o ci.skip" to prevent triggering another pipeline.
+    # push to MR branch using "-o ci.skip" to prevent triggering another pipeline.
+    #   for more push-options see https://docs.gitlab.com/ee/user/project/push_options.html#push-options-for-gitlab-cicd    
     - echo "pushing to branch ${CI_MERGE_REQUEST_SOURCE_BRANCH_NAME}"
     - git push -o ci.skip origin HEAD:${CI_MERGE_REQUEST_SOURCE_BRANCH_NAME}
 
@@ -157,15 +165,17 @@ vocab:clean:
     # Next line can be used to show all CI variables for debugging
     # - export
     # - echo "Value of CI_MERGE_REQUEST_APPROVED ${CI_MERGE_REQUEST_APPROVED}"
+    
+    # Avoid "detached head state" (as above in vocab:commit:script)
+    - git checkout $CI_MERGE_REQUEST_SOURCE_BRANCH_NAME
     - git status
     - git rm inbox-excel-vocabs/\*.xlsx || echo "No xlsx files to remove."
     - git status
     - git remote set-url origin "https://$CI_PROJECT_NAME:$PROJECT_ACCESS_TOKEN@$CI_SERVER_HOST/$CI_PROJECT_PATH.git"
     - git remote -v
-    - 'git commit -o ci.skip -m "CI: remove Excel files from inbox-excel-vocabs" || echo "Nothing to commit"'
+    - 'git commit -m "CI: remove Excel files from inbox-excel-vocabs" || echo "Nothing to commit"'
 
     # push to merge request branch
-    #   for more push-options see https://docs.gitlab.com/ee/user/project/push_options.html#push-options-for-gitlab-cicd
     - git push -o ci.skip origin HEAD:${CI_MERGE_REQUEST_SOURCE_BRANCH_NAME}
 
     # - rm approved.vocab

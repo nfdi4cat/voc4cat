@@ -66,7 +66,7 @@ vocab:build:
     # get the command output written to voc4cat.log which happens last.
     # So we need to evaluate the bash pipeline failure not immediately but later.
     - >
-      voc4cat --add_IRI --add_related --check --forward --docs --output-directory outbox inbox-excel-vocabs/
+      voc4cat --add_IRI --check --forward --docs --output-directory outbox inbox-excel-vocabs/
       |& tee voc4cat.log
       || EXIT_CODE=${PIPESTATUS[0]}
     # tee cannot create a file in a subdir. So we move the file afterwards.

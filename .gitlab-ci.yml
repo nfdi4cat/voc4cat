@@ -31,11 +31,10 @@ default:
     - source .venv/bin/activate
     - python -m pip install -U pip
     - pip install -U git+https://$CI_PROJECT_NAME:$VOC4CAT_READ_TOKEN@gitlab.fokus.fraunhofer.de/nfdi4cat/ta1-ontologies/voc4cat-tool.git@main
-    - git config user.name "CI.runner"
-    - git config user.email "CI.runner@gitlab.fokus.fraunhofer.de"
-    # It would also be possible to use the email/name of the acting user
-    # - git config --global user.email "${GITLAB_USER_EMAIL}"
-    # - git config --global user.name "${GITLAB_USER_NAME}"
+    # Perform git commits from CI in the name of the acting user to track provenance.
+    # We want git blame to show the user as author (but not the CI runner).
+    - git config --global user.email "${GITLAB_USER_EMAIL}"
+    - git config --global user.name "${GITLAB_USER_NAME}"
     # To avoid a detached head we have to checkout the merge request branch by name.
     # However, the branch names are not present in the standard CI-clone that gitlab
     # creates. So we fetch them:
@@ -67,7 +66,7 @@ vocab:build:
     # get the command output written to voc4cat.log which happens last.
     # So we need to evaluate the bash pipeline failure not immediately but later.
     - >
-      voc4cat --add_IRI --add_related --check --forward --docs --output_directory outbox inbox-excel-vocabs/
+      voc4cat --add_IRI --check --forward --docs --output-directory outbox inbox-excel-vocabs/
       |& tee voc4cat.log
       || EXIT_CODE=${PIPESTATUS[0]}
     # tee cannot create a file in a subdir. So we move the file afterwards.
@@ -165,7 +164,11 @@ vocab:clean:
     # Next line can be used to show all CI variables for debugging
     # - export
     # - echo "Value of CI_MERGE_REQUEST_APPROVED ${CI_MERGE_REQUEST_APPROVED}"
-    
+
+    # Do the clean commit as another user (here we don't want to to track provenance)
+    - git config user.name "CI.runner"
+    - git config user.email "CI.runner@gitlab.fokus.fraunhofer.de"
+ 
     # Avoid "detached head state" (as above in vocab:commit:script)
     - git checkout $CI_MERGE_REQUEST_SOURCE_BRANCH_NAME
     - git status
@@ -193,7 +196,7 @@ vocab:publish:
     # "pages" are not active on gitlab@focus so they cannot be used.
     - echo "Welcome to the partially implemented deploy pipeline."
     # Build documentation and create Excel vocabulary files for final vocabularies.
-    - voc4cat --check --forward --docs --output_directory publish vocabularies/
+    - voc4cat --check --forward --docs --output-directory publish vocabularies/
     # Also copy the turtle vocabulary files into the dir that is published.
     - cp vocabularies/*.ttl publish/ || echo "no turtle(ttl) vocabulary files to publish."
     - ls -l publish/ || echo "publish directory does not exist."

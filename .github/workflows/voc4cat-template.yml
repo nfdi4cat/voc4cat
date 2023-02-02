@@ -13,7 +13,7 @@ env:
   PROJECT_ACCESS_TOKEN: "${{ secrets.PROJECT_ACCESS_TOKEN }}"
   VOC4CAT_READ_TOKEN: "${{ secrets.VOC4CAT_READ_TOKEN }}"
 jobs:
-  vocab:build:
+  vocab_build:
     runs-on: ubuntu-latest
     container:
       image: python:3.10.8-bullseye
@@ -54,7 +54,7 @@ jobs:
       with:
         name: "${{ github.job }}"
         path: outbox/
-  vocab:commit:
+  vocab_commit:
     needs: vocab:build
     runs-on: ubuntu-latest
     container:
@@ -92,7 +92,7 @@ jobs:
     - run: 'git commit -m "CI: vocabulary update in pipeline ${{ github.repository}}/${{ github.workflow }}" || echo "Nothing to commit"'
     - run: echo "pushing to branch ${{ github.event.pull_request.head.ref }}"
     - run: git push -o ci.skip origin HEAD:${{ github.event.pull_request.head.ref }}
-  vocab:clean:
+  vocab_clean:
     needs: vocab:commit
     runs-on: ubuntu-latest
     container:
@@ -131,7 +131,7 @@ jobs:
     - run: git remote -v
     - run: 'git commit -m "CI: remove Excel files from inbox-excel-vocabs" || echo "Nothing to commit"'
     - run: git push -o ci.skip origin HEAD:${{ github.event.pull_request.head.ref }}
-  vocab:publish:
+  vocab_publish:
     needs:
     - vocab:build
     - vocab:commit

@@ -55,7 +55,7 @@ jobs:
         name: "${{ github.job }}"
         path: outbox/
   vocab_commit:
-    needs: vocab:build
+    needs: vocab_build
     runs-on: ubuntu-latest
     container:
       image: python:3.10.8-bullseye
@@ -93,7 +93,7 @@ jobs:
     - run: echo "pushing to branch ${{ github.event.pull_request.head.ref }}"
     - run: git push -o ci.skip origin HEAD:${{ github.event.pull_request.head.ref }}
   vocab_clean:
-    needs: vocab:commit
+    needs: vocab_commit
     runs-on: ubuntu-latest
     container:
       image: python:3.10.8-bullseye
@@ -133,9 +133,9 @@ jobs:
     - run: git push -o ci.skip origin HEAD:${{ github.event.pull_request.head.ref }}
   vocab_publish:
     needs:
-    - vocab:build
-    - vocab:commit
-    - vocab:clean
+    - vocab_build
+    - vocab_commit
+    - vocab_clean
     runs-on: ubuntu-latest
     container:
       image: python:3.10.8-bullseye

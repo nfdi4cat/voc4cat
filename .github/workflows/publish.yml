@@ -1,0 +1,6 @@
+# This action runs when a release is created.
+#
+# Workflow steps:
+# - build docs
+# - create excel-file from turtle
+# - publish docs and excel-file to gh-pages

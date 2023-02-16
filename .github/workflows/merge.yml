@@ -1,0 +1,6 @@
+# This action runs when an approved pull request is merged.
+#
+# Workflow steps:
+# - check approval
+# - remove xlsx-vocab file from PR and commit
+# - commit change

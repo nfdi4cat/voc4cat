@@ -1,0 +1,85 @@
+# This action runs when a pull request to main is created or updated
+# (but not when it is merged).
+#
+# Workflow steps:
+# - run voc4cat to update xlsx file and create turtle file
+# - store artifacts (even on failure)
+# - remove xlsx-vocab file from PR
+# - commit on behalf of the PR-author using "voc4cat-CI-bot" as committer
+
+name: CI on pull request create or update
+on:
+  pull_request:
+    branches:
+      - main
+    types: [opened, edited, synchronize]
+  workflow_dispatch:
+
+env:
+  FORCE_COLOR: "1"  # Make tool output pretty.
+  PIP_DISABLE_PIP_VERSION_CHECK: "1"
+  PIP_PROGRESS_BAR: "off"
+  RUN_URL: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID
+
+jobs:
+  build_vocab:
+    name: Merge & build vocabulary
+    # Run on all pull request types except merge which has its own workflow.
+    if: ${{ !github.event.pull_request.merged }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -VV
+          python -m pip install --upgrade pip setuptools wheel
+          python -m pip install git+https://anon:${{ SECRETS.READ_PAT_VOC4CAT }}@github.com/dalito/voc4cat-tool.git@main
+
+      - name: Run voc4cat
+        run: |
+          voc4cat --version
+          ls -l outbox/ || echo "outbox directory does not exist."
+          voc4cat --add_IRI --check --forward --docs --output-directory outbox inbox-excel-vocabs/ |& tee voc4cat.log || EXIT_CODE=${PIPESTATUS[0]}
+          mv voc4cat.log outbox
+          ls -l outbox/ || echo "outbox directory does not exist."
+
+      - name: Store artifacts
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v3
+        with:
+          name: voc4cat-outbox-run${{ GITHUB.RUN_ID }}
+          path: outbox/
+
+      - name: Merge changes into vocabulary
+        run: |
+          merge_vocab outbox/ vocabularies/
+          git status
+
+      - name: Add vocabulary changes
+        # Pin third party action (v4.16.0)
+        uses: stefanzweifel/git-auto-commit-action@3ea6ae190baf489ba007f7c92608f33ce20ef04a
+        with:
+          # glob pattern of files which should be added to the commit
+          file_pattern: 'vocabularies/\*.ttl'
+
+      - name: Remove Excel vocabulary files from inbox
+        run: |
+          git rm inbox-excel-vocabs/\*.xlsx || echo "No xlsx files to remove."
+          git status
+
+      - name: Commit vocabulary changes & xlsx removal
+        # Pin third party action (v4.16.0)
+        uses: stefanzweifel/git-auto-commit-action@3ea6ae190baf489ba007f7c92608f33ce20ef04a
+        with:
+          commit_user_name: voc4cat-CI-bot
+          commit_message: 'CI: vocabulary update in ${{ GITHUB.SERVER_URL }}/${{ GITHUB.REPOSITORY }}/actions/runs/${{ GITHUB.RUN_ID }}'
+
+# Lit:
+# https://github.com/stefanzweifel/git-auto-commit-action

@@ -1,6 +1,74 @@
-# This action runs when a release is created.
+# This action runs when a release is created and on merges to main.
 #
 # Workflow steps:
 # - build docs
 # - create excel-file from turtle
 # - publish docs and excel-file to gh-pages
+
+name: Build & Publish
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - v[0-9]+.[0-9]+.[0-9]+
+  workflow_dispatch:
+
+env:
+  FORCE_COLOR: "1"  # Make tool output pretty.
+  PIP_DISABLE_PIP_VERSION_CHECK: "1"
+  PIP_PROGRESS_BAR: "off"
+  RUN_URL: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID
+
+jobs:
+  build:
+    name: Build vocabulary & documentation
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -VV
+          python -m pip install --upgrade pip setuptools wheel
+          python -m pip install git+https://anon:${{ SECRETS.READ_PAT_VOC4CAT }}@github.com/dalito/voc4cat-tool.git@main
+
+      - name: Run voc4cat
+        run: |
+          ls -l publish/ || echo "publish directory does not exist."
+          voc4cat --version
+          voc4cat --check --forward --docs --output-directory publish vocabularies/
+
+      - name: Deploy documentation
+        # Pin third party action (v3.9.2) 
+        uses: peaceiris/actions-gh-pages@bd8c6b06eba6b3d25d72b7a1767993c0aeee42e7
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+        with:
+          publish_branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: publish/toplevel4Cat_test/docs_build/
+          force_orphan: true
+
+      - name: Run voc4cat to build Excel-files matching turtle files 
+        run: |
+          voc4cat --version
+          # Next line fails due to issue with forwading vocexcel-options (bug in voc4cat-tool)
+          # voc4cat --output-directory publish vocabularies/ --template template/VocExcel-template_043_4Cat.xlsx
+          mkdir -p publish/xlsx
+          cp template/VocExcel-template_043_4Cat.xlsx publish/xlsx/VocExcel-template_043_4Cat.xlsx
+
+      - name: Store Excel file(s) as artifacts
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v3
+        with:
+          # TODO Give it a better name. Make it easily findable.
+          name: voc4cat-excel-vocab
+          path: publish/xlsx/
+
+# Lit:
+# https://github.com/peaceiris/actions-gh-pages

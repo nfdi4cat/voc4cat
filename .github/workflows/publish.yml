@@ -51,7 +51,7 @@ jobs:
         with:
           publish_branch: gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: publish/toplevel4Cat_test/docs_build/
+          publish_dir: ./publish
           force_orphan: true
 
       - name: Store xlsx file(s) as artifacts

@@ -58,9 +58,9 @@ jobs:
         run: |
           voc4cat --version
           # Next line fails due to issue with forwading vocexcel-options (bug in voc4cat-tool)
-          # voc4cat --output-directory publish vocabularies/ --template template/VocExcel-template_043_4Cat.xlsx
+          # voc4cat --output-directory publish vocabularies/ --template templates/VocExcel-template_043_4Cat.xlsx
           mkdir -p publish/xlsx
-          cp template/VocExcel-template_043_4Cat.xlsx publish/xlsx/VocExcel-template_043_4Cat.xlsx
+          cp templates/VocExcel-template_043_4Cat.xlsx publish/xlsx/VocExcel-template_043_4Cat.xlsx
 
       - name: Store Excel file(s) as artifacts
         if: ${{ always() }}

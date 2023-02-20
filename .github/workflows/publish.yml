@@ -18,7 +18,6 @@ env:
   FORCE_COLOR: "1"  # Make tool output pretty.
   PIP_DISABLE_PIP_VERSION_CHECK: "1"
   PIP_PROGRESS_BAR: "off"
-  RUN_URL: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID
 
 jobs:
   build:
@@ -38,11 +37,12 @@ jobs:
           python -m pip install --upgrade pip setuptools wheel
           python -m pip install git+https://anon:${{ SECRETS.READ_PAT_VOC4CAT }}@github.com/dalito/voc4cat-tool.git@main
 
-      - name: Run voc4cat
+      - name: Run voc4cat to build docs & Excel-files matching turtle files
         run: |
-          ls -l publish/ || echo "publish directory does not exist."
           voc4cat --version
-          voc4cat --check --forward --docs --output-directory publish vocabularies/
+          voc4cat --docs --output-directory publish vocabularies/
+          voc4cat --output-directory publish vocabularies/ --template templates/VocExcel-template_043_4Cat.xlsx
+          ls -l publish/ || echo "publish directory does not exist."
 
       - name: Deploy documentation
         # Pin third party action (v3.9.2) 
@@ -54,21 +54,14 @@ jobs:
           publish_dir: publish/toplevel4Cat_test/docs_build/
           force_orphan: true
 
-      - name: Run voc4cat to build Excel-files matching turtle files 
-        run: |
-          voc4cat --version
-          # Next line fails due to issue with forwading vocexcel-options (bug in voc4cat-tool)
-          # voc4cat --output-directory publish vocabularies/ --template templates/VocExcel-template_043_4Cat.xlsx
-          mkdir -p publish/xlsx
-          cp templates/VocExcel-template_043_4Cat.xlsx publish/xlsx/VocExcel-template_043_4Cat.xlsx
-
-      - name: Store Excel file(s) as artifacts
+      - name: Store xlsx file(s) as artifacts
+        # This step is not required and may be removed.  The xlsx files are
+        # stored in gh-pages and can be linked which makes them easier to find.
         if: ${{ always() }}
         uses: actions/upload-artifact@v3
         with:
-          # TODO Give it a better name. Make it easily findable.
           name: voc4cat-excel-vocab
-          path: publish/xlsx/
+          path: publish/*.xlsx
 
 # Lit:
 # https://github.com/peaceiris/actions-gh-pages

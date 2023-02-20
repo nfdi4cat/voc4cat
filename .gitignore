@@ -172,3 +172,4 @@ _version.py
 
 # output dir
 outbox/
+publish/

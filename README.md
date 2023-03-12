@@ -67,7 +67,7 @@ The template can be used to create your own independant repository for SKOS voca
 
 First create a new repository on github without any contents, named e.g. "my-new-vocabulary". Then set up your own independent vocabulary repository on the command line:
 
-```$bash
+```gitattributes
 git init my-new-vocabulary
 cd my-new-vocabulary
 git pull https://github.com/dalito/voc4cat-template
@@ -91,16 +91,22 @@ After these steps your repository should work just like [voc4cat](https://github
 
 To review the changes made in the template after you last pulled it use:
 
-`git fetch https://github.com/dalito/voc4cat-template`
-`git diff ...FETCH_HEAD`
+```gitattributes
+git fetch https://github.com/dalito/voc4cat-template
+git diff ...FETCH_HEAD
+```
 
 If you want to take over the changes, pull them into your repository
 
-`git pull https://github.com/dalito/voc4cat-template`
+```gitattributes
+git pull https://github.com/dalito/voc4cat-template
+```
 
-and finally take them over by pushing:
+and push the change to the remote repository.
 
-`git push`
+```gitattributes
+git push
+```
 
 It is suggested merge the changes from the template repository before every new release of your vocabulary. This ensures that the centrally maintained features and best practices trickle into your project.
 

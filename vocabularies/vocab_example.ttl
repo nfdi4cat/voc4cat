@@ -1,270 +1,62 @@
-@prefix cs: <http://example.org/toplevel4cat-test> .
+@prefix cs: <https://example.org/test_> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://example.org/toplevel4cat-test/activities> a skos:Concept ;
-    dcterms:identifier "activities"^^xsd:token ;
-    dcterms:provenance "AgroVoc"@en ;
-    rdfs:isDefinedBy <http://aims.fao.org/aos/agrovoc/c_330834> ;
-    skos:definition "This contains activities that are conducted along the food supply chain, such as “breeding”, “feeding”, “surveying”, “cleaning” and “transport”. Included here are also higher-level management activities, such as “accounting” and “planning”; activities on nutritional topics, such as “weight reduction”; and activities that are more loosely related to agriculture and food or rural areas, such as “cartography”, “computer programming” and “recreation”."@en ;
+<https://example.org/col1> a skos:Collection ;
+    dcterms:identifier "col1"^^xsd:token ;
+    dcterms:isPartOf cs: ;
+    dcterms:provenance "voc4cat-template"@en ;
+    skos:definition "Collection of term related to linked data."@en ;
+    skos:member <https://example.org/c01>,
+        <https://example.org/c02>,
+        <https://example.org/c03> ;
+    skos:prefLabel "Linked data term"@en .
+
+<https://example.org/c02> a skos:Concept ;
+    dcterms:identifier "c02"^^xsd:token ;
+    dcterms:provenance "https://www.w3.org/TR/2010/NOTE-curie-20101216/"@en ;
+    skos:altLabel "CURIE"@en,
+        "CompactURI"@en ;
+    skos:broader <https://example.org/c01> ;
+    skos:definition "A CURIE (or Compact URI) defines a generic, abbreviated syntax for expressing Uniform Resource Identifiers (URIs). "@en ;
     skos:inScheme cs: ;
-    skos:prefLabel "Activities"@en ;
+    skos:prefLabel "Compact Universal Resource Locator"@en .
+
+<https://example.org/c01> a skos:Concept ;
+    dcterms:identifier "c01"^^xsd:token ;
+    dcterms:provenance "https://datatracker.ietf.org/doc/html/rfc2396"@en ;
+    skos:altLabel "URI"@en ;
+    skos:definition "Uniform Resource Identifier is a compact string of characters for identifying an abstract or physical resource."@en ;
+    skos:inScheme cs: ;
+    skos:narrower <https://example.org/c02> ;
+    skos:prefLabel "Uniform Resource Identifier"@en ;
+    skos:relatedMatch <https://example.org/c03> ;
     skos:topConceptOf cs: .
 
-<http://example.org/toplevel4cat-test/entities> a skos:Concept ;
-    dcterms:identifier "entities"^^xsd:token ;
-    dcterms:provenance "AgroVoc"@en ;
-    rdfs:isDefinedBy <http://aims.fao.org/aos/agrovoc/c_330892> ;
-    skos:definition "Entities are broadly defined as “something which is distinct and separate from something else.” These include narrower concepts like “agencies”, “labels”, “networks” and “policies”."@en ;
+<https://example.org/c03> a skos:Concept ;
+    dcterms:identifier "c03"^^xsd:token ;
+    dcterms:provenance "https://datatracker.ietf.org/doc/html/rfc3987"@en ;
+    skos:altLabel "IRI"@en ;
+    skos:definition "Internationalized Resource Identifier (IRI) is an internet protocol standard which builds on the Uniform Resource Identifier (URI) protocol by greatly expanding the set of permitted characters."@en ;
     skos:inScheme cs: ;
-    skos:prefLabel "Entities"@en ;
-    skos:topConceptOf cs: .
-
-<http://example.org/toplevel4cat-test/events> a skos:Concept ;
-    dcterms:identifier "events"^^xsd:token ;
-    dcterms:provenance "AgroVoc"@en ;
-    rdfs:isDefinedBy <http://aims.fao.org/aos/agrovoc/c_330979> ;
-    skos:definition "Events in this context are outlined as something taking place at a certain point in time and involving the participation of people, so they include concepts such as “exhibitions” and “training courses”."@en ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Events"@en ;
-    skos:topConceptOf cs: .
-
-<http://example.org/toplevel4cat-test/factors> a skos:Concept ;
-    dcterms:identifier "factors"^^xsd:token ;
-    dcterms:provenance "AgroVoc"@en ;
-    rdfs:isDefinedBy <http://aims.fao.org/aos/agrovoc/c_331093> ;
-    skos:definition "In agricultural research and publications, the term “factors” is frequently used in a number of rather common word combinations. These common combinations are reflected in the narrower concepts to be found here, such as “abiotic factors”, “biotic factors”, “environmental factors” and “production factors”."@en ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Factors"@en ;
-    skos:topConceptOf cs: .
-
-<http://example.org/toplevel4cat-test/features> a skos:Concept ;
-    dcterms:identifier "features"^^xsd:token ;
-    dcterms:provenance "AgroVoc"@en ;
-    rdfs:isDefinedBy <http://aims.fao.org/aos/agrovoc/c_331061> ;
-    skos:definition "This relates to the feature concept from geosciences and genetics and contains narrower concepts, such as “genomic features”, “physiographic features” and “soil morphological features”."@en ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Features"@en ;
-    skos:topConceptOf cs: .
-
-<http://example.org/toplevel4cat-test/groups> a skos:Concept ;
-    dcterms:identifier "groups"^^xsd:token ;
-    dcterms:provenance "AgroVoc"@en ;
-    rdfs:isDefinedBy <http://aims.fao.org/aos/agrovoc/c_50227> ;
-    skos:definition "Groups are defined as “a number of individual items or people brought together.” Narrower concepts, such as “engineers” and “librarians”, can be found here, as well as societal groups, such as “consumers” and “interest groups”."@en ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Groups"@en ;
-    skos:topConceptOf cs: .
-
-<http://example.org/toplevel4cat-test/location> a skos:Concept ;
-    dcterms:identifier "location"^^xsd:token ;
-    dcterms:provenance "AgroVoc"@en ;
-    rdfs:isDefinedBy <http://aims.fao.org/aos/agrovoc/c_330988> ;
-    skos:definition "A location is a “a point or extent in space“ and thus holds concepts such as “climatic zones”, “maritime zones”, “protected areas” and “urban areas”. "@en ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Location"@en ;
-    skos:topConceptOf cs: .
-
-<http://example.org/toplevel4cat-test/measure> a skos:Concept ;
-    dcterms:identifier "measure"^^xsd:token ;
-    dcterms:provenance "AgroVoc"@en ;
-    rdfs:isDefinedBy <http://aims.fao.org/aos/agrovoc/c_330493> ;
-    skos:definition "While a measure can also denote an action taken, in this context, it is clearly defined as something that can be observed and involves a measurement. A measure is defined as a “number or quantity that records a directly observable value or performance. All measures have a unit attached to them: inch, centimetre, dollar, litre, etc.” Examples of narrower concepts are “altitude”, “breeding value”, “humidity”, “price indices” and “soil water potential."@en ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Measure"@en ;
-    skos:topConceptOf cs: .
-
-<http://example.org/toplevel4cat-test/methods> a skos:Concept ;
-    dcterms:identifier "methods"^^xsd:token ;
-    dcterms:provenance "AgroVoc"@en ;
-    rdfs:isDefinedBy <http://aims.fao.org/aos/agrovoc/c_4788> ;
-    skos:definition "Methods describe ways of doing things, either in agricultural research or in production and also in everyday life. They are like recipes, and as a notable fact, “cooking methods” is a narrower concept of the methods top concept. Other examples include “autoclaving”, “irrigation methods”, “sampling”, “statistical methods” and “survey methods”."@en ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Methods"@en ;
-    skos:topConceptOf cs: .
-
-<http://example.org/toplevel4cat-test/objects> a skos:Concept ;
-    dcterms:identifier "objects"^^xsd:token ;
-    dcterms:provenance "AgroVoc"@en ;
-    rdfs:isDefinedBy <http://aims.fao.org/aos/agrovoc/c_330919> ;
-    skos:definition "Objects in this context include human-made, tangible things, such as “equipment” and “furniture”."@en ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Objects"@en ;
-    skos:topConceptOf cs: .
-
-<http://example.org/toplevel4cat-test/organisms> a skos:Concept ;
-    dcterms:identifier "organisms"^^xsd:token ;
-    dcterms:provenance "AgroVoc"@en ;
-    rdfs:isDefinedBy <http://aims.fao.org/aos/agrovoc/c_49904> ;
-    skos:definition "The organisms hierarchy is one of the largest ones in AGROVOC and contains the taxonomic hierarchy of organisms relevant to agriculture under concepts, such as “Eukaryota” and “Prokaryotae”; common organism classes, such as “plants” and “animals”; and roles that an organism can hold, such as “hosts”, “pests” or “predators”. Concepts for organisms that live in a certain habitat, such as “aquatic organisms” and “soil organisms”, are also available."@en ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Organisms"@en ;
-    skos:topConceptOf cs: .
-
-<http://example.org/toplevel4cat-test/phenomena> a skos:Concept ;
-    dcterms:identifier "phenomena"^^xsd:token ;
-    dcterms:provenance "AgroVoc"@en ;
-    rdfs:isDefinedBy <http://aims.fao.org/aos/agrovoc/c_330704> ;
-    skos:definition "In scientific usage, a phenomenon is any event that is observable, however common it might be, even if it requires the use of instrumentation to observe, record or compile data concerning it. In natural sciences, a phenomenon is an observable happening or event. This hierarchy includes the concepts “deficiencies”, “economic phenomena”, “hazards”, “population dynamics” and “trends”."@en ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Phenomena"@en ;
-    skos:topConceptOf cs: .
-
-<http://example.org/toplevel4cat-test/processes> a skos:Concept ;
-    dcterms:identifier "processes"^^xsd:token ;
-    dcterms:provenance "AgroVoc"@en ;
-    rdfs:isDefinedBy <http://aims.fao.org/aos/agrovoc/c_13586> ;
-    skos:definition "A process is a set of interrelated or interacting activities that transform inputs into outputs. Examples of narrower concepts of processes include “anthropogenic changes”, “biological processes”, “evolution”, “inhibition”, “physiological processes” and “synthesis”."@en ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Processes"@en ;
-    skos:topConceptOf cs: .
-
-<http://example.org/toplevel4cat-test/products> a skos:Concept ;
-    dcterms:identifier "products"^^xsd:token ;
-    dcterms:provenance "AgroVoc"@en ;
-    rdfs:isDefinedBy <http://aims.fao.org/aos/agrovoc/c_6211> ;
-    skos:definition "In the context of AGROVOC, these concepts are mostly confined to products and product classes originating from agricultural supply chains, such as “animal products”, “feeds”, “foods” and “oil products”. Raw materials or product properties are also represented by concepts such as “resins”, “forest products”, “biodegradable products” and “sustainable products”."@en ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Products"@en ;
-    skos:topConceptOf cs: .
-
-<http://example.org/toplevel4cat-test/properties> a skos:Concept ;
-    dcterms:identifier "properties"^^xsd:token ;
-    dcterms:provenance "AgroVoc"@en ;
-    rdfs:isDefinedBy <http://aims.fao.org/aos/agrovoc/c_49874> ;
-    skos:definition "A property is a characteristic or quality that can be owned or possessed that serves to define or describe its possessor. This hierarchy contains numerous narrower concepts of differing granularity, such as “age”, “colour-fastness”, “periodicity”, “soil properties”, “toxicity” and “wind direction”. "@en ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Properties"@en ;
-    skos:topConceptOf cs: .
-
-<http://example.org/toplevel4cat-test/resources> a skos:Concept ;
-    dcterms:identifier "resources"^^xsd:token ;
-    dcterms:provenance "AgroVoc"@en ;
-    rdfs:isDefinedBy <http://aims.fao.org/aos/agrovoc/c_9001017> ;
-    skos:definition "Resources are things that are used during a production process or that are required to cover human needs in everyday life. Concepts such as “economic resources”, “inputs” and “raw materials” would refer to the former category. The latter category is covered by more abstract resources, such as “cultural heritage” and “natural resources”."@en ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Resources"@en ;
-    skos:topConceptOf cs: .
-
-<http://example.org/toplevel4cat-test/sites> a skos:Concept ;
-    dcterms:identifier "sites"^^xsd:token ;
-    dcterms:provenance "AgroVoc"@en ;
-    rdfs:isDefinedBy <http://aims.fao.org/aos/agrovoc/c_331000> ;
-    skos:definition "Sites contain narrower concepts that serve to describe locations and facilities that are set up by humans for a certain purpose, such as “hospitals”, “laboratories”, “meteorological stations”, “restaurants” and “timber yards”."@en ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Sites"@en ;
-    skos:topConceptOf cs: .
-
-<http://example.org/toplevel4cat-test/stages> a skos:Concept ;
-    dcterms:identifier "stages"^^xsd:token ;
-    dcterms:provenance "AgroVoc"@en ;
-    rdfs:isDefinedBy <http://aims.fao.org/aos/agrovoc/c_330995> ;
-    skos:definition "Stages has a few narrower concepts, such as “developmental stages” and “life cycle”. The former concept, however, is highly branched, containing plant and animal development stages, such as “embryo stage” and “reproductive stage”."@en ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Stages"@en ;
-    skos:topConceptOf cs: .
-
-<http://example.org/toplevel4cat-test/state> a skos:Concept ;
-    dcterms:identifier "state"^^xsd:token ;
-    dcterms:provenance "AgroVoc"@en ;
-    rdfs:isDefinedBy <http://aims.fao.org/aos/agrovoc/c_330998> ;
-    skos:definition "States are any condition in which a physical substance or organism can be in. Some narrower concepts are “anoxia”, “colloidal state”, “employment”, “physical states” and “sleep”."@en ;
-    skos:inScheme cs: ;
-    skos:prefLabel "State"@en ;
-    skos:topConceptOf cs: .
-
-<http://example.org/toplevel4cat-test/strategies> a skos:Concept ;
-    dcterms:identifier "strategies"^^xsd:token ;
-    dcterms:provenance "AgroVoc"@en ;
-    rdfs:isDefinedBy <http://aims.fao.org/aos/agrovoc/c_330991> ;
-    skos:definition "Strategies describe acting options and include “communication strategies”, “training strategies” and “approaches”."@en ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Strategies"@en ;
-    skos:topConceptOf cs: .
-
-<http://example.org/toplevel4cat-test/subjects> a skos:Concept ;
-    dcterms:identifier "subjects"^^xsd:token ;
-    dcterms:provenance "AgroVoc"@en ;
-    rdfs:isDefinedBy <http://aims.fao.org/aos/agrovoc/c_330829> ;
-    skos:definition "Subjects are disciplines of study or topics relevant to agriculture and nutrition and include “humanities” and “sciences”."@en ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Subjects"@en ;
-    skos:topConceptOf cs: .
-
-<http://example.org/toplevel4cat-test/substances> a skos:Concept ;
-    dcterms:identifier "substances"^^xsd:token ;
-    dcterms:provenance "AgroVoc"@en ;
-    rdfs:isDefinedBy <http://aims.fao.org/aos/agrovoc/c_330705> ;
-    skos:definition "Substances is a broad sub-hierarchy, providing hierarchies for chemical substances according to physical properties, such as “ceramics”, “explosives”, “oils” and “solutes”; their role or function, such as “attractants”, “culture media”, “drugs” and “soil amendments”; and their source or place of origin, such as “exudates”, “filter cakes” and “sediment”."@en ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Substances"@en ;
-    skos:topConceptOf cs: .
-
-<http://example.org/toplevel4cat-test/systems> a skos:Concept ;
-    dcterms:identifier "systems"^^xsd:token ;
-    dcterms:provenance "AgroVoc"@en ;
-    rdfs:isDefinedBy <http://aims.fao.org/aos/agrovoc/c_330985> ;
-    skos:definition "The systems top concept contains a wide range of concepts for systems of human action, interaction and thought (e.g. “economic systems”, “political systems” and “value systems”), production and supply (e.g. “distribution systems”, “drinking water systems” and “agroforestry systems”), technological systems (e.g. “information systems”, “photovoltaic systems” and “surveillance systems”), and systematic and organizational approaches from science (e.g. “knowledge organization system” and “terminology”)."@en ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Systems"@en ;
-    skos:topConceptOf cs: .
-
-<http://example.org/toplevel4cat-test/technology> a skos:Concept ;
-    dcterms:identifier "technology"^^xsd:token ;
-    dcterms:provenance "AgroVoc"@en ;
-    rdfs:isDefinedBy <http://aims.fao.org/aos/agrovoc/c_7644> ;
-    skos:definition "This includes concepts for technological developments and inventions that are applied in modern agricultural and food systems, such as “biotechnology”, “food technology”, “information and communication technologies”, “seed technology” and “wood technology”."@en ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Technology"@en ;
-    skos:topConceptOf cs: .
-
-<http://example.org/toplevel4cat-test/time> a skos:Concept ;
-    dcterms:identifier "time"^^xsd:token ;
-    dcterms:provenance "AgroVoc"@en ;
-    rdfs:isDefinedBy <http://aims.fao.org/aos/agrovoc/c_7778> ;
-    skos:definition "This contains concepts that describe timespans with a certain function, such as “free time”, “seasons”, “times of the day” and “working hours”. Timespans relevant to agricultural production are mostly aggregated in the “timing” concept."@en ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Time"@en ;
+    skos:prefLabel "Internationalized Resource Identifier"@en ;
     skos:topConceptOf cs: .
 
 cs: a skos:ConceptScheme ;
-    dcterms:created "2022-05-23"^^xsd:date ;
-    dcterms:creator <https://www.catalysis.de/> ;
-    dcterms:identifier "toplevel4cat-test"^^xsd:token ;
-    dcterms:modified "2022-05-23"^^xsd:date ;
-    dcterms:provenance "AgroVoc"@en ;
+    dcterms:created "2023-03-10"^^xsd:date ;
+    dcterms:creator <http://example.org/nfdi4cat/> ;
+    dcterms:hasPart <https://example.org/col1> ;
+    dcterms:identifier "test_"^^xsd:token ;
+    dcterms:modified "2023-03-10"^^xsd:date ;
+    dcterms:provenance "Sofia Garcia (orcid:0000-0001-2345-6789)"@en ;
     dcterms:publisher <http://example.org/nfdi4cat/> ;
-    owl:versionInfo "0.1" ;
-    skos:definition "Top level concepts from AgroVoc adapted to catalysis"@en ;
-    skos:hasTopConcept <http://example.org/toplevel4cat-test/activities>,
-        <http://example.org/toplevel4cat-test/entities>,
-        <http://example.org/toplevel4cat-test/events>,
-        <http://example.org/toplevel4cat-test/factors>,
-        <http://example.org/toplevel4cat-test/features>,
-        <http://example.org/toplevel4cat-test/groups>,
-        <http://example.org/toplevel4cat-test/location>,
-        <http://example.org/toplevel4cat-test/measure>,
-        <http://example.org/toplevel4cat-test/methods>,
-        <http://example.org/toplevel4cat-test/objects>,
-        <http://example.org/toplevel4cat-test/organisms>,
-        <http://example.org/toplevel4cat-test/phenomena>,
-        <http://example.org/toplevel4cat-test/processes>,
-        <http://example.org/toplevel4cat-test/products>,
-        <http://example.org/toplevel4cat-test/properties>,
-        <http://example.org/toplevel4cat-test/resources>,
-        <http://example.org/toplevel4cat-test/sites>,
-        <http://example.org/toplevel4cat-test/stages>,
-        <http://example.org/toplevel4cat-test/state>,
-        <http://example.org/toplevel4cat-test/strategies>,
-        <http://example.org/toplevel4cat-test/subjects>,
-        <http://example.org/toplevel4cat-test/substances>,
-        <http://example.org/toplevel4cat-test/systems>,
-        <http://example.org/toplevel4cat-test/technology>,
-        <http://example.org/toplevel4cat-test/time> ;
-    skos:prefLabel "TopLevel4Cat"@en ;
-    dcat:contactPoint "David Linke" .
+    owl:versionInfo "v2023-03-10" ;
+    skos:definition "A test vocabulary for the voc4cat template"@en ;
+    skos:hasTopConcept <https://example.org/c01>,
+        <https://example.org/c03> ;
+    skos:prefLabel "Test-of-Voc4Cat"@en ;
+    dcat:contactPoint "Sofia Garcia (orcid:0000-0001-2345-6789)" .
 

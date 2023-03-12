@@ -32,9 +32,9 @@ To contribute new concepts or collections or change existing ones, you may eithe
 Here are the steps, for submitting updates in Excel including the git commands.
 
 - Get the Excel-vocabulary file
-  - For an existing vocabulary, download the last version of the vocabulary from
-    - TODO Add link! (to-be-decided)
-  - For a new vocabulary, use the xlsx-file from the templates-folder.
+  - For an existing vocabulary, download the latest version of the vocabulary from
+    - TODO add link!
+  - For settin up a new vocabulary, use the xlsx-file from the templates-folder.
 - Make changes to the Excel file
 - Add the Excel file to your clone of the repository into the folder `inbox-excel-vocabs`
   - The name of the Excel-file must match the vocabulary that you want to update (e.g. myvoc.xlsx to update a vocabulary named "myvoc").
@@ -50,6 +50,8 @@ Here are the steps, for submitting updates in Excel including the git commands.
 - If you need to fix something just update the pull request branch. This will trigger the pipeline to run again.
 
 Finally, when the proposed merge request is accepted, your changes will be integrated in the vocabularies in the folder `vocabularies`.
+
+See [inbox-excel-vocabs/README.md](inbox-excel-vocabs/README.md) for a minimal example how to test the submission process.
 
 ## How to suggest improvements to the tooling & template?
 

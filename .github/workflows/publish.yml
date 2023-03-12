@@ -41,11 +41,11 @@ jobs:
         run: |
           voc4cat --version
           voc4cat --docs --output-directory publish vocabularies/
-          voc4cat --output-directory publish vocabularies/ --template templates/VocExcel-template_043_4Cat.xlsx
+          voc4cat --output-directory publish vocabularies/ --template templates/voc4cat_template_043.xlsx
           ls -l publish/ || echo "publish directory does not exist."
 
       - name: Deploy documentation
-        # Pin third party action (v3.9.2) 
+        # Pin third party action (v3.9.2)
         uses: peaceiris/actions-gh-pages@bd8c6b06eba6b3d25d72b7a1767993c0aeee42e7
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
         with:

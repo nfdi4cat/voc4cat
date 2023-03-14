@@ -19,6 +19,11 @@ All vocabularies based on this template have the same standard contribution proc
 
 and finally land in the folder `vocabularies` as SKOS-vocabulary files in turtle-format.
 
+In addition, documentation is created automatically and published on github-pages.
+
+- The general url is `https://{gh-org-name}.github.io/{vocabulary-name}/docs/`
+- In nfdi4cat/voc4cat-template the vocabulary `vocab_example` is documented at [https://dalito.github.io/voc4cat-template/vocab_example/docs/](https://dalito.github.io/voc4cat-template/vocab_example/docs/)
+ 
 ### Creating vocabularies for catalysis or catalytic reaction engineering
 
 Please strongly consider contributing to [voc4cat](https://github.com/nfdi4cat/voc4cat) instead of creating your own.
@@ -32,9 +37,10 @@ To contribute new concepts or collections or change existing ones, you may eithe
 Here are the steps, for submitting updates in Excel including the git commands.
 
 - Get the Excel-vocabulary file
-  - For an existing vocabulary, download the latest version of the vocabulary from
-    - TODO add link!
-  - For settin up a new vocabulary, use the xlsx-file from the templates-folder.
+  - For an existing vocabulary, the latest version of the vocabulary is always available via github-pages.
+    - The general url is `https://{gh-org-name}.github.io/{vocabulary-name}/{vocabulary-name}.xlsx`
+    - For example in nfdi4cat/voc4cat-template the vocabulary `vocab_example` can be downloaded from [https://nfdi4at.github.io/voc4cat-template/vocab_example.xlsx](https://nfdi4at.github.io/voc4cat-template/vocab_example.xlsx)
+  - For setting up a new vocabulary, use the xlsx-file from the templates-folder.
 - Make changes to the Excel file
 - Add the Excel file to your clone of the repository into the folder `inbox-excel-vocabs`
   - The name of the Excel-file must match the vocabulary that you want to update (e.g. myvoc.xlsx to update a vocabulary named "myvoc").

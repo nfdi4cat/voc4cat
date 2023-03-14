@@ -1,8 +1,12 @@
-# A template to maintain vocabularies on GitHub with the voc4cat-tool
+# A repository to maintain SKOS-vocabularies for the Catalysis disciplines
 
-This repository may be used to create and maintain your own SKOS-vocabularies on Github.
+> **This repository has just been made public (March-2023)**.
+> **We will move more content here in the coming days and weeks.**
+
+The vocabularies have been created and maintained as part of the [NFDI4Cat](http://www.nfdi4cat.org) initiative.
+
+This repository was created from the template [voc4cat-template](https://github.com/nfdi4cat/voc4cat-template)]. 
 It uses the [voc4cat-tool](https://github.com/nfdi4cat/voc4cat-tool) and GitHub features like gh-actions, pull requests etc. to reduce the maintenance workload for contributors and editors.
-The template is maintained as part of the [NFDI4Cat](http://www.nfdi4cat.org) initiative.
 
 ## How to start?
 
@@ -22,24 +26,24 @@ and finally land in the folder `vocabularies` as SKOS-vocabulary files in turtle
 In addition, documentation is created automatically and published on github-pages.
 
 - The general url is `https://{gh-org-name}.github.io/{vocabulary-name}/docs/`
-- In repository `nfdi4cat/voc4cat-template` the vocabulary `vocab_example` is documented at [https://nfdi4cat.github.io/voc4cat-template/vocab_example/docs/](https://nfdi4cat.github.io/voc4cat-template/vocab_example/docs/)
+- In repository `nfdi4cat/voc4cat` the vocabulary `vocab_example` is documented at [https://nfdi4cat.github.io/voc4cat/vocab_example/docs/](https://nfdi4cat.github.io/voc4cat/vocab_example/docs/)
  
 ### Creating vocabularies for catalysis or catalytic reaction engineering
 
-Please strongly consider contributing to [voc4cat](https://github.com/nfdi4cat/voc4cat) instead of creating your own.
+Please strongly consider contributing to the vocabularies in this repository [voc4cat](https://github.com/nfdi4cat/voc4cat) instead of creating your own.
 
 ## Contributing to vocabularies
 
-To discuss about the SKOS vocabularies maintained with this template, create an issue in the vocabulary repository itself (but not in this template-repository).
+To discuss about the SKOS vocabularies maintained here, create an [issue](https://github.com/nfdi4cat/voc4cat/issues).
 
 To contribute new concepts or collections or change existing ones, you may either submit your contributions as Excel-file or (as an expert) as new/changed turtle file.
 
-Here are the steps, for submitting updates in Excel including the git commands.
+Here are the steps for submitting updates in Excel.
 
 - Get the Excel-vocabulary file
   - For an existing vocabulary, the latest version of the vocabulary is always available via github-pages.
     - The general url is `https://{gh-org-name}.github.io/{vocabulary-name}/{vocabulary-name}.xlsx`
-    - For example in nfdi4cat/voc4cat-template the vocabulary `vocab_example` can be downloaded from [https://nfdi4cat.github.io/voc4cat-template/vocab_example.xlsx](https://nfdi4cat.github.io/voc4cat-template/vocab_example.xlsx)
+    - For example in nfdi4cat/voc4cat the vocabulary `vocab_example` can be downloaded from [https://nfdi4cat.github.io/voc4cat-template/vocab_example.xlsx](https://nfdi4cat.github.io/voc4cat/vocab_example.xlsx)
   - For setting up a new vocabulary, use the xlsx-file from the templates-folder.
 - Make changes to the Excel file
 - Add the Excel file to your clone of the repository into the folder `inbox-excel-vocabs`
@@ -65,62 +69,12 @@ To discuss about the workflow for maintaining SKOS vocabularies based on this te
 
 To discuss about the tool that converts Excel to SKOS in gh-actions of this template, create an [voc4cat-tool issue](https://github.com/nfdi4cat/voc4cat-tool/issues).
 
-## How can use this template for my own vocabularies?
-
-The template can be used to create your own independant repository for SKOS vocabularies maintenance.
-
-### Setting up our own github repository
-
-First create a new repository on github without any contents, named e.g. "my-new-vocabulary". Then set up your own independent vocabulary repository on the command line:
-
-```gitattributes
-git init my-new-vocabulary
-cd my-new-vocabulary
-git pull https://github.com/nfdi4cat/voc4cat-template
-git remote add origin https://github.com/my-gh-name/my-new-vocabulary.git
-git push -u origin main
-```
-
-This adds all commits made in the template´s main branch to your new repository. In addition to this basic setup you may want to
-
-- Adjust the README.md file for your vocabulary.
-- TODO complete list of required changes
-  - adjust settings of your new GitHub repository.
-  - adjust idranges.json
-- Optionally
-  - Add a different license for your vocabulary.
-  - Adjust the styling of the Excel template for your vocabulary.
-
-After these steps your repository should work just like [voc4cat](https://github.com/nfdi4cat/voc4cat) or [voc4cat-playground](https://github.com/nfdi4cat/voc4cat-playground).
-
-### Keeping your vocabulary repository in sync with the voc4cat-template
-
-To review the changes made in the template after you last pulled it use:
-
-```gitattributes
-git fetch https://github.com/nfdi4cat/voc4cat-template
-git diff ...FETCH_HEAD
-```
-
-If you want to take over the changes, pull them into your repository
-
-```gitattributes
-git pull https://github.com/nfdi4cat/voc4cat-template
-```
-
-and push the change to the remote repository.
-
-```gitattributes
-git push
-```
-
-It is suggested merge the changes from the template repository before every new release of your vocabulary. This ensures that the centrally maintained features and best practices trickle into your project.
 
 ## Authors and acknowledgment
 
 ### Vocabularies
 
-- *Add all collaborators.*
+- TODO: *List collaborators.*
 
 ### Voc4cat template
 
@@ -129,8 +83,6 @@ It is suggested merge the changes from the template repository before every new 
 ## License
 
 ### Vocabularies
-
-*Adapt this paragraph to your needs! (Please consider CC0 or CC-BY 4.0)*
 
 All vocabularies in this repository are CC0 licensed, see [LICENSE](LICENSE) for details.
 

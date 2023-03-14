@@ -76,7 +76,7 @@ First create a new repository on github without any contents, named e.g. "my-new
 ```gitattributes
 git init my-new-vocabulary
 cd my-new-vocabulary
-git pull https://github.com/dalito/voc4cat-template
+git pull https://github.com/nfdi4cat/voc4cat-template
 git remote add origin https://github.com/my-gh-name/my-new-vocabulary.git
 git push -u origin main
 ```
@@ -98,14 +98,14 @@ After these steps your repository should work just like [voc4cat](https://github
 To review the changes made in the template after you last pulled it use:
 
 ```gitattributes
-git fetch https://github.com/dalito/voc4cat-template
+git fetch https://github.com/nfdi4cat/voc4cat-template
 git diff ...FETCH_HEAD
 ```
 
 If you want to take over the changes, pull them into your repository
 
 ```gitattributes
-git pull https://github.com/dalito/voc4cat-template
+git pull https://github.com/nfdi4cat/voc4cat-template
 ```
 
 and push the change to the remote repository.

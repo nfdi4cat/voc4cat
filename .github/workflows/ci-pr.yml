@@ -40,7 +40,8 @@ jobs:
         run: |
           python -VV
           python -m pip install --upgrade pip setuptools wheel
-          python -m pip install git+https://anon:${{ SECRETS.READ_PAT_VOC4CAT }}@github.com/dalito/voc4cat-tool.git@main
+          python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@main
+        # from private repo: python -m pip install git+https://anon:${{ SECRETS.READ_PAT_VOC4CAT }}@github.com/dalito/voc4cat-tool.git@main
 
       - name: Run voc4cat
         run: |

@@ -1,49 +1,44 @@
-# A repository to maintain SKOS-vocabularies for the Catalysis disciplines
+# A repository to maintain SKOS-vocabularies for the catalysis disciplines
 
 > **This repository has just been made public (March-2023)**.
 > **We will move more content here in the coming days and weeks.**
 
-The vocabularies have been created and maintained as part of the [NFDI4Cat](http://www.nfdi4cat.org) initiative.
+The vocabularies have been created and maintained as part of the [NFDI4Cat](http://www.nfdi4cat.org) initiative and follow our [Voc4Cat Guidelines](https://doi.org/10.5281/zenodo.7669183).
 
-This repository was created from the template [voc4cat-template](https://github.com/nfdi4cat/voc4cat-template)]. 
+This repository was created from the template [voc4cat-template](https://github.com/nfdi4cat/voc4cat-template). 
 It uses the [voc4cat-tool](https://github.com/nfdi4cat/voc4cat-tool) and GitHub features like gh-actions, pull requests etc. to reduce the maintenance workload for contributors and editors.
 
-## How to start?
+## Basic principles
 
-### Trying out the workflow
-
-To just try out the workflow just go to [voc4cat-playground](https://github.com/nfdi4cat/voc4cat-playground) which is a "deployment" of this repository.
-
-All vocabularies based on this template have the same standard contribution process of
+All vocabularies managed here have the same standard contribution process,
 
 - get and update the vocablary file (xlsx),
 - submit a pull request with the updated file,
 - collaborate on the pull request with editors or other github users,
-- approval and merge of the pull request
+- approval and merge of the pull request.
 
-and finally land in the folder `vocabularies` as SKOS-vocabulary files in turtle-format.
+Finally the SKOS-vocabularies land in the folder `vocabularies` in turtle-format.
 
 In addition, documentation is created automatically and published on github-pages.
 
 - The general url is `https://{gh-org-name}.github.io/{vocabulary-name}/docs/`
 - In repository `nfdi4cat/voc4cat` the vocabulary `vocab_example` is documented at [https://nfdi4cat.github.io/voc4cat/vocab_example/docs/](https://nfdi4cat.github.io/voc4cat/vocab_example/docs/)
- 
-### Creating vocabularies for catalysis or catalytic reaction engineering
 
-Please strongly consider contributing to the vocabularies in this repository [voc4cat](https://github.com/nfdi4cat/voc4cat) instead of creating your own.
 
 ## Contributing to vocabularies
 
-To discuss about the SKOS vocabularies maintained here, create an [issue](https://github.com/nfdi4cat/voc4cat/issues).
+To discuss about the SKOS-vocabularies maintained here, create an [issue](https://github.com/nfdi4cat/voc4cat/issues).
 
 To contribute new concepts or collections or change existing ones, you may either submit your contributions as Excel-file or (as an expert) as new/changed turtle file.
+
+> *To try out the workflow with some example data, you may use  [voc4cat-playground](https://github.com/nfdi4cat/voc4cat-playground) which is identical to this repository but will be purged from time to time.*
 
 Here are the steps for submitting updates in Excel.
 
 - Get the Excel-vocabulary file
   - For an existing vocabulary, the latest version of the vocabulary is always available via github-pages.
     - The general url is `https://{gh-org-name}.github.io/{vocabulary-name}/{vocabulary-name}.xlsx`
-    - For example in nfdi4cat/voc4cat the vocabulary `vocab_example` can be downloaded from [https://nfdi4cat.github.io/voc4cat-template/vocab_example.xlsx](https://nfdi4cat.github.io/voc4cat/vocab_example.xlsx)
+    - For example here the vocabulary `vocab_example` can be downloaded from [https://nfdi4cat.github.io/voc4cat/vocab_example.xlsx](https://nfdi4cat.github.io/voc4cat/vocab_example.xlsx)
   - For setting up a new vocabulary, use the xlsx-file from the templates-folder.
 - Make changes to the Excel file
 - Add the Excel file to your clone of the repository into the folder `inbox-excel-vocabs`
@@ -59,7 +54,7 @@ Here are the steps for submitting updates in Excel.
   - or why the proposed change may not fit.
 - If you need to fix something just update the pull request branch. This will trigger the pipeline to run again.
 
-Finally, when the proposed merge request is accepted, your changes will be integrated in the vocabularies in the folder `vocabularies`.
+Finally, when the proposed merge request is accepted, your changes will be integrated in the vocabularies in the folder [vocabularies](https://github.com/nfdi4cat/voc4cat/tree/main/vocabularies).
 
 See [inbox-excel-vocabs/README.md](inbox-excel-vocabs/README.md) for a minimal example how to test the submission process.
 

@@ -29,6 +29,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
+    permissions:
+      # Give the default GITHUB_TOKEN write permission to commit to the PR branch.
+      contents: write
+
     steps:
       - uses: actions/checkout@v3
 

@@ -65,9 +65,9 @@ To discuss about the workflow for maintaining SKOS vocabularies based on this te
 
 To discuss about the tool that converts Excel to SKOS in gh-actions of this template, create an [voc4cat-tool issue](https://github.com/nfdi4cat/voc4cat-tool/issues).
 
-## How can use this template for my own vocabularies?
+## How to use this template for my own vocabularies?
 
-The template can be used to create your own independant repository for SKOS vocabularies maintenance.
+The template can be used to create your own independent repository for SKOS vocabularies maintenance.
 
 ### Setting up our own github repository
 

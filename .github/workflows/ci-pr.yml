@@ -9,7 +9,7 @@
 
 name: CI on pull request create or update
 on:
-  pull_request:
+  pull_request_target:
     branches:
       - main
     types: [opened, edited, synchronize]
@@ -35,6 +35,13 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+        with:
+          # Checkout the fork/head-repository to push changes to the fork.
+          # Without this the base repository will be checked out and committed to.
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+
+          # Checkout the branch made in the fork.
+          ref: ${{ github.head_ref }}
 
       - uses: actions/setup-python@v4
         with:

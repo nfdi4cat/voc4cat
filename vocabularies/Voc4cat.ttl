@@ -1,0 +1,1669 @@
+@prefix cs: <https://w3id.org/nfdi4cat/voc4cat/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cs:area-of-deposited-film a skos:Concept ;
+    dcterms:identifier "area-of-deposited-film"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:dimensions-of-deposited-film ;
+    skos:definition "The area of the substrate covered by the deposited photocatalyst."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "area of deposited film"@en .
+
+cs:batch-mode a skos:Concept ;
+    dcterms:identifier "batch-mode"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:operation-mode ;
+    skos:definition "Operation mode in which the reaction chamber is filled with the (reactant) gas(es) up to a certain pressure, and the photoreaction products acummulate over time."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "batch mode"@en .
+
+cs:blank-measurements a skos:Concept ;
+    dcterms:identifier "blank-measurements"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:photocatalytic-co2-reduction-experiment ;
+    skos:definition "Measurements performed under a humidified inert gas atmosphre without the presence of CO2 but otherwise under the same conditions as a CO2 photoreduction experiment. These measurements provide an indirect proof of the origin of the carbon-containing products, as no products should be observed in the absence of CO2."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "blank measurements"@en .
+
+cs:borosilicate-glass a skos:Concept ;
+    dcterms:identifier "borosilicate-glass"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:glass-substrate ;
+    skos:definition "A resistant to thermal shock type of glass, composed mainly of silica and boron trioxide."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "borosilicate glass"@en .
+
+cs:brunauer-emmett-teller-surface-area-analysis a skos:Concept ;
+    dcterms:identifier "brunauer-emmett-teller-surface-area-analysis"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "BET"@en ;
+    skos:broader cs:characterization-of-photocatalysts ;
+    skos:definition "The study of physical adsorption of gas molecules on a solid surface for the calculation of the specific surface area of materials."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Brunauer-Emmett-Teller surface area analysis"@en .
+
+cs:calibration-of-gas-chromatograph a skos:Concept ;
+    dcterms:identifier "calibration-of-gas-chromatograph"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:gas-chromatograph ;
+    skos:definition "A process in which gaseous substances of known purity and concentration are introduced to the gas chromatograph and the respective area and retention time of the resulting peaks are identified. This process when concluded, allows for the calculation of concentrations of products and intermediates of the photoreaction."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "calibration of gas chromatograph"@en .
+
+cs:calibration-of-mass-spectrometer a skos:Concept ;
+    dcterms:identifier "calibration-of-mass-spectrometer"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:mass-spectrometer ;
+    skos:definition "A process in which gaseous substances of known purity and concentration are introduced to the mass spectrometer and the respective mass-to-charge ratios are identified. This process when concluded, allows for the calculation of concentrations of products and intermediates of the photoreaction."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "calibration of mass spectrometer"@en .
+
+cs:ceramic-substrate a skos:Concept ;
+    dcterms:identifier "ceramic-substrate"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:material-of-substrate ;
+    skos:definition "A  surface made of a ceramic material (e.g., alumina) serving as a substrate for the deposition of a photocatalyst."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "ceramic substrate"@en .
+
+cs:characterization-of-photocatalysts-coll a skos:Collection ;
+    dcterms:identifier "characterization-of-photocatalysts-coll"^^xsd:token ;
+    dcterms:isPartOf cs: ;
+    dcterms:provenance "Self"@en ;
+    skos:definition "A collection of techniques used to identify the (physico)chemical, morphological, structural, mechanical, optical and electrical properties of the syntesized photocatalysts. Characterization is performed after the synthesis of the photocatalysts to evaluate the success of the synthetic approach, but also after the completion of the evaluation of the materials in CO2 photoreduction to ensure their stability under the selected experimental parameters."@en ;
+    skos:member cs:atomic-force-microscopy,
+        cs:differential-scanning-calorimetry,
+        cs:electron-energy-loss-spectroscopy,
+        cs:fourier-transform-infrared-spectroscopy,
+        cs:gas-chromatography,
+        cs:liquid-chromatography,
+        cs:mass-spectroscopy,
+        cs:nuclear-magnetic-resonance-spectroscopy,
+        cs:photoluminescence,
+        cs:raman-spectroscopy,
+        cs:scanning-electron-microscopy,
+        cs:thermogravimetric-analysis,
+        cs:transmission-electron-microscopy,
+        cs:ultraviolet-visible-spectroscopy,
+        cs:x-ray-diffraction,
+        cs:x-ray-fluorescence,
+        cs:x-ray-photoelectron-spectroscopy ;
+    skos:prefLabel "Characterization of photocatalysts"@en .
+
+cs:co2-photoreduction-measurement a skos:Concept ;
+    dcterms:identifier "co2-photoreduction-measurement"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "carbon dioxide photoreduction measurement; photocatalytic CO2 reduction measurement; photocatalytic carbon dioxide reduction measurement"@en ;
+    skos:broader cs:photocatalytic-co2-reduction-experiment ;
+    skos:definition "A single measurement of a CO2 photoreduction experiment performed either in flow or in batch mode. The measurement involves the collection of a gaseous sample, and its analysis employing an appropriate product identification method. "@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "CO2 photoreduction measurement"@en .
+
+cs:collection-of-publications-of-interest a skos:Concept ;
+    dcterms:identifier "collection-of-publications-of-interest"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:literature-research ;
+    skos:definition "Filtering of literature research to include only the most relevant sources of information for the application / experiment / catalysts of interest."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "collection of publications of interest"@en .
+
+cs:current-of-operation-of-the-light-source a skos:Concept ;
+    dcterms:identifier "current-of-operation-of-the-light-source"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:light-source ;
+    skos:definition "The value of current (usually in A or mA) used to operate the selected light source."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "current of operation of the light source"@en .
+
+cs:cyclic-voltammetry a skos:Concept ;
+    dcterms:identifier "cyclic-voltammetry"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "CV"@en,
+        "cyclovoltammetry"@en ;
+    skos:broader cs:characterization-of-photocatalysts ;
+    skos:definition "An electrochemical technique used to study the redox properties of a sample by measuring the current produced by an applied voltage sweep."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "cyclic voltammetry"@en .
+
+cs:diameter-of-optical-window a skos:Concept ;
+    dcterms:identifier "diameter-of-optical-window"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "diameter of window; window diameter"@en ;
+    skos:broader cs:dimensions-of-optical-window ;
+    skos:definition "Diameter of the optical window allowing the incoming light to enter the reaction chamber and interact with the photocatalyst."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "diameter of optical window"@en .
+
+cs:dielectric-barrier-discharge-ionization-detector a skos:Concept ;
+    dcterms:identifier "dielectric-barrier-discharge-ionization-detector"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "BID"@en ;
+    skos:definition "Detector incorporating Ionization via a new dielectric barrier discharge He plasma."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "dielectric-barrier discharge ionization detector"@en ;
+    skos:topConceptOf cs: .
+
+cs:dimensions-of-reaction-chamber a skos:Concept ;
+    dcterms:identifier "dimensions-of-reaction-chamber"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:reaction-chamber ;
+    skos:definition "Height, width and depth (in cubic- or rectangular- shaped reaction chambers) or diameter and height (in cylindrer - shaped reaction chambers)"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "dimensions of reaction chamber"@en .
+
+cs:dimensions-of-substrate a skos:Concept ;
+    dcterms:identifier "dimensions-of-substrate"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:substrate ;
+    skos:definition "The diamensions (area / thickness / diameter) of the substrate."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "dimensions of substrate"@en .
+
+cs:distance-of-light-source-from-the-reaction-chamber-sample a skos:Concept ;
+    dcterms:identifier "distance-of-light-source-from-the-reaction-chamber-sample"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:light-source ;
+    skos:definition "The distance of the light source from the reaction chamber and the photocatalyst."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "distance of light source from the reaction chamber / sample "@en .
+
+cs:doctor-blading a skos:Concept ;
+    dcterms:identifier "doctor-blading"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:deposition-technique ;
+    skos:definition "A tape-casting method used to deposit thin films of a photocatalyst onto the surface of a substrate."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "doctor blading"@en .
+
+cs:duration-of-steps a skos:Concept ;
+    dcterms:identifier "duration-of-steps"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:synthesis-steps ;
+    skos:definition "Duration of each synthesis step needed to synthesize the desired photocatalyst."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "duration of steps"@en .
+
+cs:dwelling-time a skos:Concept ;
+    dcterms:identifier "dwelling-time"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "soaking time"@en ;
+    skos:broader cs:calcination-steps ;
+    skos:definition "Time (usually in h) for which a desired temperature is held."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "dwelling time"@en .
+
+cs:equipment-for-controlling-and-monitoring-operation-temperature a skos:Concept ;
+    dcterms:identifier "equipment-for-controlling-and-monitoring-operation-temperature"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "temperature controller; temperature gauge; temperature monitor; heating device; cooling device"@en ;
+    skos:broader cs:range-of-operation-temperature ;
+    skos:definition "Equipment used for controlling and/or monitoring the temperature in various parts of a photoreactor. This can include hot plates, heating elements and cryostats. Light sources in operation can also affect the temperature in the reaction chamber."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "equipment for controlling and monitoring operation temperature"@en .
+
+cs:equipment-used-for-synthesis a skos:Concept ;
+    dcterms:identifier "equipment-used-for-synthesis"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:synthesis-steps ;
+    skos:definition "Equipment used in each step of the synthesis of the photocatalysts. The equipment can incude (but not limited to): crucibles, pH meters, condensers, volumetric cylinders, centrifuges, test tubes, flasks, beakers, mechanical shakers, pipettes, syringes, magenetic stirrers, heating plates, fitlers, funnels and digital balances."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "equipment used for synthesis"@en .
+
+cs:equipped-detectors-of-mass-spectrometer a skos:Concept ;
+    dcterms:identifier "equipped-detectors-of-mass-spectrometer"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:definition "Detectors of the mass spectrometer used to identify the reaction products and intemediates."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "equipped detectors of mass spectrometer"@en ;
+    skos:topConceptOf cs: .
+
+cs:evaluation-of-performance-coll a skos:Collection ;
+    dcterms:identifier "evaluation-of-performance-coll"^^xsd:token ;
+    dcterms:isPartOf cs: ;
+    dcterms:provenance "Self"@en ;
+    skos:definition "Selection of experimental parameters applied for the evaluation of the performance of a photocatalyst in CO2 photoreduction."@en ;
+    skos:member cs:concentration-of-reactants,
+        cs:form-of-photocatalyst,
+        cs:irradiation-time,
+        cs:light-source,
+        cs:operation-mode,
+        cs:purity-of-reactants,
+        cs:sampling-intervals,
+        cs:total-duration-of-experiment ;
+    skos:prefLabel "Evaluation of performance"@en .
+
+cs:evaluation-of-products-formed a skos:Concept ;
+    dcterms:identifier "evaluation-of-products-formed"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:photocatalytic-co2-reduction-experiment ;
+    skos:definition "Calculation of the concentration of the products formed in a CO2 photoreduction experiment. "@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "evaluation of products formed"@en .
+
+cs:final-temperature a skos:Concept ;
+    dcterms:identifier "final-temperature"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:calcination-steps ;
+    skos:definition "Final temperature of the calcination step."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "final temperature"@en .
+
+cs:flame-ionization-detector a skos:Concept ;
+    dcterms:identifier "flame-ionization-detector"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "FID"@en ;
+    skos:broader cs:equipped-detectors-of-gas-chromatograph ;
+    skos:definition "A type of gas chromatography detector that detects and quantifies the concentration of organic compounds in a gas sample emerging from a column, by measuring the electrical current generated by ionized gas constituents in a hydrogen flame."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "flame ionization detector"@en .
+
+cs:flow-mode a skos:Concept ;
+    dcterms:identifier "flow-mode"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "continuous flow mode"@en ;
+    skos:broader cs:operation-mode ;
+    skos:definition " Under flow conditions, a continuous flow of reactants is supplied to the reaction chamber and the formed products are removed and identified by an appropriate technique."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "flow mode"@en .
+
+cs:flow-rate-of-gas-used-for-calcination a skos:Concept ;
+    dcterms:identifier "flow-rate-of-gas-used-for-calcination"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:gaseous-enviroment ;
+    skos:definition "The flow of gas (usually in ml min-1) used in the calcination steps during synthesis"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "flow rate of gas used for calcination"@en .
+
+cs:flow-rates-of-reactants a skos:Concept ;
+    dcterms:identifier "flow-rates-of-reactants"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:reactants ;
+    skos:definition "The rate of flow of reactants (often in ml per min) in the photoreactor. Flow rates are usually controlled by mass flow controllers (MFCs)  "@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "flow rates of reactants"@en .
+
+cs:fluorine-doped-tin-oxide-coated-glass a skos:Concept ;
+    dcterms:identifier "fluorine-doped-tin-oxide-coated-glass"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "FTO glass"@en ;
+    skos:broader cs:glass-substrate ;
+    skos:definition "Transparent conductive metal oxide (fluorine doped tin oxide) that can be used in the fabrication of transparent electrodes for thin films."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "fluorine doped tin oxide coated glass"@en .
+
+cs:general-terms-coll a skos:Collection ;
+    dcterms:identifier "general-terms-coll"^^xsd:token ;
+    dcterms:isPartOf cs: ;
+    dcterms:provenance "Self"@en ;
+    skos:definition "General terms often used in the field of photocatalysis."@en ;
+    skos:member cs:absorption,
+        cs:bandgap-energy,
+        cs:charge-photogeneration,
+        cs:charge-recombination,
+        cs:charge-separation,
+        cs:conduction-band,
+        cs:crystallinity,
+        cs:doping,
+        cs:electron-transfer,
+        cs:excited-state,
+        cs:fermi-level,
+        cs:ground-state,
+        cs:hole-transfer,
+        cs:infrared,
+        cs:metal-oxide,
+        cs:oxidation,
+        cs:photocatalyst,
+        cs:photoexcitation,
+        cs:pore-size-distribution,
+        cs:reduction,
+        cs:semiconductor,
+        cs:specific-surface-area,
+        cs:ultraviolet,
+        cs:valence-band,
+        cs:visible,
+        cs:wavelength ;
+    skos:prefLabel "General terms"@en .
+
+cs:heating-rate a skos:Concept ;
+    dcterms:identifier "heating-rate"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:calcination-steps ;
+    skos:definition "Rate of increasing or decreasing the temperature during the calcination step. Usually mentioned in K min-1."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "heating rate"@en .
+
+cs:hole-tranfer a skos:Concept ;
+    dcterms:identifier "hole-tranfer"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:definition "A movement of a positive charged carrier (hole i.e., electron vacancy in the valence band) in a semiconductor.	"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "hole tranfer"@en ;
+    skos:topConceptOf cs: .
+
+cs:indium-tin-oxide-coated-glass a skos:Concept ;
+    dcterms:identifier "indium-tin-oxide-coated-glass"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "ITO glass"@en ;
+    skos:broader cs:glass-substrate ;
+    skos:definition "Transparent conductive metal oxide (indium tin oxide) that can be used in the fabrication of transparent electrodes for thin films."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "indium tin oxide coated glass"@en .
+
+cs:initial-temperature a skos:Concept ;
+    dcterms:identifier "initial-temperature"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:calcination-steps ;
+    skos:definition "Initial temperature of the calcination step."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "initial temperature"@en .
+
+cs:intensity-of-the-light-source a skos:Concept ;
+    dcterms:identifier "intensity-of-the-light-source"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "light intensity"@en ;
+    skos:broader cs:light-source ;
+    skos:definition "The light intensity (usually in mW cm-2) of the selected light source. The light intensity should be measured at the same distance as the one between the light source and the reaction chamber / sample."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "intensity of the light source"@en .
+
+cs:light-intensity a skos:Concept ;
+    dcterms:identifier "light-intensity"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:selected-light-source ;
+    skos:definition "The value of intensity of light emitted by the selected light source. The light intensity must be measured at the same distance as the light source from the reaction chamber / sample. "@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "light intensity"@en .
+
+cs:mass-flow-controller a skos:Concept ;
+    dcterms:identifier "mass-flow-controller"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "MFC; MFCs"@en ;
+    skos:broader cs:equipment-controlling-and-monitoring-gas-flow ;
+    skos:definition "Devices used to control and monitor gas or liquid flow rates."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "mass flow controller"@en .
+
+cs:mass-of-deposited-catalyst a skos:Concept ;
+    dcterms:identifier "mass-of-deposited-catalyst"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:definition "Mass of catalyst deposited onto the surface of a substrate."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "mass of deposited catalyst"@en ;
+    skos:topConceptOf cs: .
+
+cs:mass-of-powder-used a skos:Concept ;
+    dcterms:identifier "mass-of-powder-used"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:powdered-photocatalyst ;
+    skos:definition "Mass of a powdered photocatalyst used for a CO2 photoreduction experiment."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "mass of powder used"@en .
+
+cs:masses-volumes-concentrations-of-chemicals-used-in-synthesis a skos:Concept ;
+    dcterms:identifier "masses-volumes-concentrations-of-chemicals-used-in-synthesis"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:chemical-substances-used-for-synthesis ;
+    skos:definition "Masses / volumes / concentrations of chemicals used for synthesis"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "masses / volumes / concentrations of chemicals used in synthesis"@en .
+
+cs:material-of-optical-window a skos:Concept ;
+    dcterms:identifier "material-of-optical-window"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:optical-window ;
+    skos:definition "Material that the window is made of. The window, usually attached to the lid sealing the reaction chamber, allows for the incoming light to enter the reaction chamber and interact with the photocatalyst. The material of the window influences the wavelenth range the the photocatalyst experieneces. "@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "material of optical window"@en .
+
+cs:material-of-reaction-chamber a skos:Concept ;
+    dcterms:identifier "material-of-reaction-chamber"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:reaction-chamber ;
+    skos:definition "Material used for the construction of the main body of the reaction chamber."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "material of reaction chamber"@en .
+
+cs:metallic-substrate a skos:Concept ;
+    dcterms:identifier "metallic-substrate"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:material-of-substrate ;
+    skos:definition "A  flat surface made of a metal (e.g., titanium, stainless steel) serving as a substrate for the deposition of a photocatalyst."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "metallic substrate"@en .
+
+cs:mott-schottky-analysis a skos:Concept ;
+    dcterms:identifier "mott-schottky-analysis"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:characterization-of-photocatalysts ;
+    skos:definition "A method used in cyclic voltammetry to determine the charge carrier concentration and the flat-band potential of an electrochemical system by measuring the capacitance as a function of applied voltage."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Mott-Schottky analysis"@en .
+
+cs:organization-of-literature-in-a-citation-management-software a skos:Concept ;
+    dcterms:identifier "organization-of-literature-in-a-citation-management-software"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "literature organization; organization of literature; citation management software"@en ;
+    skos:broader cs:literature-research ;
+    skos:definition "Addition and organization of relevant literature of interest using a citation management software (e.g., Mendeley, Zotero, EndNote etc.) allowing for easy access and categorization."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "organization of literature in a citation management software"@en .
+
+cs:ph-in-synthesis a skos:Concept ;
+    dcterms:identifier "ph-in-synthesis"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:synthesis-steps ;
+    skos:definition "pH value in each of the synthesis steps"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "pH in synthesis"@en .
+
+cs:photocatalysis a skos:Concept ;
+    dcterms:identifier "photocatalysis"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "photocatalytic reaction"@en ;
+    skos:definition "A process which catalyzes a chemical reaction through the absorption of sufficient light energy by a photocatalyst. "@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "photocatalysis"@en ;
+    skos:topConceptOf cs: .
+
+cs:photocatalytic-co2-reduction-coll a skos:Collection ;
+    dcterms:identifier "photocatalytic-co2-reduction-coll"^^xsd:token ;
+    dcterms:isPartOf cs: ;
+    dcterms:provenance "Self"@en ;
+    skos:definition "The light-driven reduction (conversion) of carbon dioxide (CO2) to hydrocarbons and / or platform chemicals in presence of water. The absorption of light and the adsorption of the reactants is performed by a photocatalyst (usually a metal oxide). "@en ;
+    skos:member cs:characterization-of-photocatalysts,
+        cs:evaluation-of-performance,
+        cs:photoreactor-design,
+        cs:synthesis-of-photocatalysts ;
+    skos:prefLabel "Photocatalytic CO2 reduction"@en .
+
+cs:photoinduced-electron-transfer a skos:Concept ;
+    dcterms:identifier "photoinduced-electron-transfer"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:definition "The transfer of an electron initiated by the absorption of a photon of sufficient energy. "@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "photoinduced electron transfer"@en ;
+    skos:topConceptOf cs: .
+
+cs:power-output-of-the-light-source a skos:Concept ;
+    dcterms:identifier "power-output-of-the-light-source"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:light-source ;
+    skos:definition "The power of the light source (usually in W or mW). The power can be calculated by the multiplication of the current and voltage used to operate the light source,"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "power output of the light source"@en .
+
+cs:pressure-drop-in-a-co2-phoreduction-experiment a skos:Concept ;
+    dcterms:identifier "pressure-drop-in-a-co2-phoreduction-experiment"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "pressure drop in a carbon dioxide photoreduction experiment"@en ;
+    skos:definition "When performing a CO2 photoreduction experiment in batch mode, with each sampling event, the pressure in the reaction chamber decreases. This pressure drop should be taken into consideration when calculating the concentration of formed products."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "pressure drop in a CO2 phoreduction experiment"@en ;
+    skos:topConceptOf cs: .
+
+cs:pressure-in-a-co2-photoreduction-experiment a skos:Concept ;
+    dcterms:identifier "pressure-in-a-co2-photoreduction-experiment"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "pressure in a carbon dioxide photoreduction experiment"@en ;
+    skos:broader cs:photocatalytic-co2-reduction-experiment ;
+    skos:definition "The pressure (range) under which the CO2 photoreduction takes place."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "pressure in a CO2 photoreduction experiment"@en .
+
+cs:pressure-in-synthesis a skos:Concept ;
+    dcterms:identifier "pressure-in-synthesis"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:synthesis-steps ;
+    skos:definition "Pressure applied (if necessary) in any of the synthesis step. Changes in the pressure may be observed if variations in the temperature of the reaction occur (e.g., exothermic reaction) "@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "pressure in synthesis"@en .
+
+cs:purging-time a skos:Concept ;
+    dcterms:identifier "purging-time"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:total-duration-of-experiment ;
+    skos:definition "Time for which a gas is purged through the reaction chamber."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "purging time"@en .
+
+cs:quartz a skos:Concept ;
+    dcterms:identifier "quartz"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:definition "A type of pure silicon dioxide, highly crystalline glass that allows the transmission of light in the UV wavelength range."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "quartz"@en ;
+    skos:topConceptOf cs: .
+
+cs:reactor-design-coll a skos:Collection ;
+    dcterms:identifier "reactor-design-coll"^^xsd:token ;
+    dcterms:isPartOf cs: ;
+    dcterms:provenance "Self"@en ;
+    skos:definition "Details describing the construction, physical dimensions, and operation of the photoreactor used for the photocalytic CO2 reduction reactions."@en ;
+    skos:member cs:gas-flow,
+        cs:light-source,
+        cs:operation-mode,
+        cs:product-identification-method,
+        cs:range-of-operation-pressure,
+        cs:range-of-operation-temperature,
+        cs:reaction-chamber ;
+    skos:prefLabel "Reactor design"@en .
+
+cs:sacrificial-acceptor a skos:Concept ;
+    dcterms:identifier "sacrificial-acceptor"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:sacrificial-reagents ;
+    skos:definition "A molecule that accepts electrons from photoexcited species in a redox reaction and is subsequently consumed or degraded."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "sacrificial acceptor"@en .
+
+cs:sacrificial-donor a skos:Concept ;
+    dcterms:identifier "sacrificial-donor"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:sacrificial-reagents ;
+    skos:definition "A molecule that donates electrons from photoexcited species in a redox reaction and is subsequently consumed or degraded."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "sacrificial donor"@en .
+
+cs:sample-pre-treatment a skos:Concept ;
+    dcterms:identifier "sample-pre-treatment"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:photocatalytic-co2-reduction-experiment ;
+    skos:definition "Pretreatment of the photocatalyst before its intoduction to the reaction chamber."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "sample pre-treatment"@en .
+
+cs:selectivity a skos:Concept ;
+    dcterms:identifier "selectivity"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:photocatalytic-co2-reduction-experiment ;
+    skos:definition "Identification of the mixture of gaseous products in a CO2 photoreduction experiment. "@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "selectivity"@en .
+
+cs:sensitivity-of-gas-chromatograph a skos:Concept ;
+    dcterms:identifier "sensitivity-of-gas-chromatograph"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:gas-chromatograph ;
+    skos:definition "The minimum concentration of a product or intermediate that the gas chromatograph can identify. "@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "sensitivity of gas chromatograph"@en .
+
+cs:sensitivity-of-mass-spectrometer a skos:Concept ;
+    dcterms:identifier "sensitivity-of-mass-spectrometer"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:mass-spectrometer ;
+    skos:definition "The minimum concentration of a product or intermediate that the mass spectrometer can identify. "@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "sensitivity of mass spectrometer"@en .
+
+cs:shape-of-reaction-chamber a skos:Concept ;
+    dcterms:identifier "shape-of-reaction-chamber"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:reaction-chamber ;
+    skos:definition "The shape of the reaction chamber. In gas-phase CO2 photoreduction, reaction chambers have usually a cylindrical, cubical or rectangular shape."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "shape of reaction chamber"@en .
+
+cs:spin-coating a skos:Concept ;
+    dcterms:identifier "spin-coating"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "spin casting"@en,
+        "spin-casting"@en,
+        "spin-coating"@en ;
+    skos:broader cs:deposition-technique ;
+    skos:definition "A technique used to deposit uniform thin films onto a substrate (e.g., metal or glass) by spinning at high speeds a solution (paste) of the material onto the surface."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "spin coating"@en .
+
+cs:spray-coating a skos:Concept ;
+    dcterms:identifier "spray-coating"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "spray-coating"@en ;
+    skos:broader cs:deposition-technique ;
+    skos:definition "A technique used to deposit uniform thin films onto a substrate by spraying a solution of the material onto the surface."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "spray coating"@en .
+
+cs:synthesis-of-photocatalysts-coll a skos:Collection ;
+    dcterms:identifier "synthesis-of-photocatalysts-coll"^^xsd:token ;
+    dcterms:isPartOf cs: ;
+    dcterms:provenance "Self"@en ;
+    skos:definition "The process by which one or more chemical reactions are performed with the aim of converting a reactant or starting material into a product or multiple products."@en ;
+    skos:member cs:chemical-substances-used-for-synthesis,
+        cs:literature-research,
+        cs:synthesis-steps ;
+    skos:prefLabel "Synthesis of photocatalysts"@en .
+
+cs:temperature-in-a-co2-photoreduction-experiment a skos:Concept ;
+    dcterms:identifier "temperature-in-a-co2-photoreduction-experiment"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "temperature in a carbon dioxide photoreduction experiment"@en ;
+    skos:definition "The temperature (range) under which the CO2 photoreduction takes place."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "temperature in a CO2 photoreduction experiment"@en ;
+    skos:topConceptOf cs: .
+
+cs:temperature-in-synthesis a skos:Concept ;
+    dcterms:identifier "temperature-in-synthesis"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:synthesis-steps ;
+    skos:definition "Temperature externally applied (if necessary) in any of the synthesis step. Higher temperature values can be observed if an exothermic reaction takes place during the synthesis."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "temperature in synthesis"@en .
+
+cs:thermal-conductivity-detector a skos:Concept ;
+    dcterms:identifier "thermal-conductivity-detector"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "TCD"@en ;
+    skos:broader cs:equipped-detectors-of-gas-chromatograph ;
+    skos:definition "A type of gas chromatography detector that measures the thermal conductivity of a gas sample and identifies its constituent molecules through changes in a filament’s temperature."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "thermal conductivity detector"@en .
+
+cs:thickness-of-deposited-film a skos:Concept ;
+    dcterms:identifier "thickness-of-deposited-film"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:dimensions-of-deposited-film ;
+    skos:definition "The thickness of the film of the deposited photocatalyst. "@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "thickness of deposited film"@en .
+
+cs:thickness-of-optical-window a skos:Concept ;
+    dcterms:identifier "thickness-of-optical-window"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "thickness of window; window thickness"@en ;
+    skos:broader cs:dimensions-of-optical-window ;
+    skos:definition "Thickness of the optical window allowing the incoming light to enter the reaction chamber and interact with the photocatalyst."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "thickness of optical window"@en .
+
+cs:vacuum-pump a skos:Concept ;
+    dcterms:identifier "vacuum-pump"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "pump"@en ;
+    skos:broader cs:equipment-for-controlling-and-monitoring-operation-pressure ;
+    skos:definition "Α mechanical device that removes gas molecules from a sealed chamber reaching pressures lower than the atmospheric pressure. "@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "vacuum pump"@en .
+
+cs:voltage-of-operation-of-the-light-source a skos:Concept ;
+    dcterms:identifier "voltage-of-operation-of-the-light-source"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:light-source ;
+    skos:definition "The value of voltage  (usually in V or mV) used to operate the selected light source."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "voltage of operation of the light source"@en .
+
+cs:volume-of-the-reaction-chamber a skos:Concept ;
+    dcterms:identifier "volume-of-the-reaction-chamber"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:reaction-chamber ;
+    skos:definition "Volume of the reaction chamber, calculated by its dimensions. Volume of pipes and valves connected to the reaction chamber should also be calculated and added to the total volume. "@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "volume of the reaction chamber"@en .
+
+cs:absorption a skos:Concept ;
+    dcterms:identifier "absorption"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:general-terms ;
+    skos:definition "Absorption is the process in which energy (e.g., photons) or an absorbent (e.g., a gas) is taken up by an absorbate. "@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "absorption"@en .
+
+cs:atomic-force-microscopy a skos:Concept ;
+    dcterms:identifier "atomic-force-microscopy"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "AFM"@en,
+        "SFM"@en,
+        "atomic force imaging"@en,
+        "atomic-force microscopy"@en,
+        "scanning force microscopy"@en ;
+    skos:broader cs:characterization-of-photocatalysts ;
+    skos:definition "A high-resolution imaging technique that measures the interaction between a sharp probe and the sample’s surface to create a three-dimensional image of the surface’s morphology.  "@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "atomic force microscopy"@en .
+
+cs:bandgap-energy a skos:Concept ;
+    dcterms:identifier "bandgap-energy"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "energy bandgap; Eg"@en ;
+    skos:broader cs:general-terms ;
+    skos:definition "The energy difference between a semiconductor’s valence band top and conduction band bottom, which is required to excite an electron from the former to the latter.  "@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "bandgap energy"@en .
+
+cs:charge-photogeneration a skos:Concept ;
+    dcterms:identifier "charge-photogeneration"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "photogenerated charges; charge photo-generation; electron excitation; electron-hole pair;"@en ;
+    skos:broader cs:general-terms ;
+    skos:definition "The generation of electron - hole pairs in a semiconductor as a result of light absorption of sufficient energy to overcome the bandgap energy. Electrons (negative charge) get excited to the conduction band, while holes (positive charge) remain in the valence band. "@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "charge photogeneration"@en .
+
+cs:charge-recombination a skos:Concept ;
+    dcterms:identifier "charge-recombination"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:general-terms ;
+    skos:definition "The process by which photogenerated charges (electrons and holes) in a semiconductor recombine, resulting in the dissipation of energy in the form of e.g., heat or light. "@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "charge recombination"@en .
+
+cs:charge-separation a skos:Concept ;
+    dcterms:identifier "charge-separation"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:general-terms ;
+    skos:definition "The process of separating positive and negative charges in a semiconductor, typically as a result of an external force, (e.g., photoexcitation). "@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "charge separation"@en .
+
+cs:concentration-of-reactants a skos:Concept ;
+    dcterms:identifier "concentration-of-reactants"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:reactants ;
+    skos:definition "Concentration of the reactants (e.g., CO2 and H2O) used in the photocatalytic CO2 reduction experiments"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "concentration of reactants"@en .
+
+cs:conduction-band a skos:Concept ;
+    dcterms:identifier "conduction-band"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "CB"@en ;
+    skos:broader cs:general-terms ;
+    skos:definition "The energy band of electronic levels of partially or fully filled mobile electrons in a metal or a semiconductor. "@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "conduction band"@en .
+
+cs:crystallinity a skos:Concept ;
+    dcterms:identifier "crystallinity"^^xsd:token ;
+    dcterms:provenance "IUPAC"@en ;
+    skos:broader cs:general-terms ;
+    skos:definition "The degree of a three-dimensional structural order of atoms which constitute the crystal lattice of a material."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "crystallinity"@en .
+
+cs:deposited-film a skos:Concept ;
+    dcterms:identifier "deposited-film"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:thin-film ;
+    skos:definition "A thin film of the photocatalyst deposited on an appropiate for the application substrate."@en ;
+    skos:inScheme cs: ;
+    skos:narrower cs:dimensions-of-deposited-film ;
+    skos:prefLabel "deposited film"@en .
+
+cs:differential-scanning-calorimetry a skos:Concept ;
+    dcterms:identifier "differential-scanning-calorimetry"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "DSC"@en,
+        "differential scanning calorimetric (DSC) analysis"@en,
+        "differential scanning calorimetric analysis"@en ;
+    skos:broader cs:characterization-of-photocatalysts ;
+    skos:definition "A thermal analysis technique which compares the heat flow in a sample and a reference material under controlled applied temperature profiles. "@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "differential scanning calorimetry"@en .
+
+cs:doping a skos:Concept ;
+    dcterms:identifier "doping"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:general-terms ;
+    skos:definition "The introduction of foreign atoms into a semiconductor leading to the formation of new energy levels and charge concentrations."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "doping"@en .
+
+cs:electron-energy-loss-spectroscopy a skos:Concept ;
+    dcterms:identifier "electron-energy-loss-spectroscopy"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "EELS"@en ;
+    skos:broader cs:characterization-of-photocatalysts ;
+    skos:definition "An analytical technique used to measure the energy loss of electrons passing through a sample. "@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "electron energy loss spectroscopy"@en .
+
+cs:electron-transfer a skos:Concept ;
+    dcterms:identifier "electron-transfer"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:general-terms ;
+    skos:definition "Electron transfer is the movement of a negative charge carrier in a semiconductor."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "electron transfer"@en .
+
+cs:equipment-controlling-and-monitoring-gas-flow a skos:Concept ;
+    dcterms:identifier "equipment-controlling-and-monitoring-gas-flow"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:gas-flow ;
+    skos:definition "Equipment used for controlling and / or monitoring the flow of gases (reactant or inert) needed for a CO2 photoreduction experiment. Mass flow controllers (MFCs) are commonly used to controll gas flows."@en ;
+    skos:inScheme cs: ;
+    skos:narrower cs:mass-flow-controller ;
+    skos:prefLabel "equipment controlling and monitoring gas flow"@en .
+
+cs:equipment-for-controlling-and-monitoring-operation-pressure a skos:Concept ;
+    dcterms:identifier "equipment-for-controlling-and-monitoring-operation-pressure"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "pressure controller; pressure gauge; pressure monitor"@en ;
+    skos:broader cs:range-of-operation-pressure ;
+    skos:definition "Equipment used for controlling and / or monitoring the pressure in various parts of a photoreactor. A vaccum pump is a typical example of such equipment."@en ;
+    skos:inScheme cs: ;
+    skos:narrower cs:vacuum-pump ;
+    skos:prefLabel "equipment for controlling and monitoring operation pressure"@en .
+
+cs:excited-state a skos:Concept ;
+    dcterms:identifier "excited-state"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:general-terms ;
+    skos:definition "Τhe temporary state of a system with higher energy than its ground state caused by an external factor. "@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "excited state"@en .
+
+cs:fermi-level a skos:Concept ;
+    dcterms:identifier "fermi-level"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "EF"@en ;
+    skos:broader cs:general-terms ;
+    skos:definition "The energy level in a semiconductor where the probability of finding an electron is 0.5. "@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "fermi level"@en .
+
+cs:fourier-transform-infrared-spectroscopy a skos:Concept ;
+    dcterms:identifier "fourier-transform-infrared-spectroscopy"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "FT-IR"@en,
+        "FT-IR spectroscopy"@en,
+        "FTIR"@en,
+        "FTIR spectrometry"@en,
+        "FTIR spectroscopy"@en,
+        "Fourier transform infra-red absoprtion spectroscopy"@en,
+        "Fourier transform infra-red spectrometry"@en,
+        "Fourier transform infrared (FT-IR)"@en,
+        "Fourier transform infrared (FT-IR) spectroscopy"@en,
+        "Fourier-transform infra-red absorption spectrometry"@en,
+        "Fourier-transform infrared (FTIR) absorption spectroscopy"@en ;
+    skos:broader cs:characterization-of-photocatalysts ;
+    skos:definition "A spectroscopic technique used to study the vibrational modes of chemical bonds of a sample using infrared radiation."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "fourier transform infrared spectroscopy"@en .
+
+cs:gas-chromatography a skos:Concept ;
+    dcterms:identifier "gas-chromatography"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "GC"@en,
+        "high pressure gas chromatography"@en,
+        "vapor phase chromatography"@en ;
+    skos:broader cs:characterization-of-photocatalysts ;
+    skos:definition "An analytical technique that separates and analyzes the components of a gas mixture by passing it through a stationary phase. "@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "gas chromatography"@en .
+
+cs:gaseous-enviroment a skos:Concept ;
+    dcterms:identifier "gaseous-enviroment"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "calcination environment"@en ;
+    skos:definition "A gas flow under which the calcination step takes place (e,g,, Ar or synthetic air)"@en ;
+    skos:inScheme cs: ;
+    skos:narrower cs:flow-rate-of-gas-used-for-calcination ;
+    skos:prefLabel "gaseous enviroment"@en ;
+    skos:topConceptOf cs: .
+
+cs:ground-state a skos:Concept ;
+    dcterms:identifier "ground-state"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:general-terms ;
+    skos:definition "Τhe lowest energy state of a system. "@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "ground state"@en .
+
+cs:irradiation-time a skos:Concept ;
+    dcterms:identifier "irradiation-time"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:total-duration-of-experiment ;
+    skos:definition "The total duration in which the photocatalyst was under irradiation by the selected light source. "@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "irradiation time"@en .
+
+cs:liquid-chromatography a skos:Concept ;
+    dcterms:identifier "liquid-chromatography"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "LC"@en ;
+    skos:broader cs:characterization-of-photocatalysts ;
+    skos:definition "A separation technique that uses a liquid mobile phase to separate the components of a mixture based on their interactions with a stationary phase and a mobile phase."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "liquid chromatography"@en .
+
+cs:mass-spectroscopy a skos:Concept ;
+    dcterms:identifier "mass-spectroscopy"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "MS"@en ;
+    skos:broader cs:characterization-of-photocatalysts ;
+    skos:definition "An analytical technique which determines the mass-to-charge ratio of ions in a sample to give information about the composition of the material.	"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "mass spectroscopy"@en .
+
+cs:metal-oxide a skos:Concept ;
+    dcterms:identifier "metal-oxide"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:general-terms ;
+    skos:definition "A chemical compound formed by the reaction of a metal with oxygen."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "metal oxide"@en .
+
+cs:nuclear-magnetic-resonance-spectroscopy a skos:Concept ;
+    dcterms:identifier "nuclear-magnetic-resonance-spectroscopy"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "NMR"@en ;
+    skos:broader cs:characterization-of-photocatalysts ;
+    skos:definition "A spectroscopic technique that uses a static magnetic field and radiofrequency radiation to measure the magnetic resonance of atomic nuclei protons or electrons."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "nuclear magnetic resonance spectroscopy"@en .
+
+cs:oxidation a skos:Concept ;
+    dcterms:identifier "oxidation"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:general-terms ;
+    skos:definition "The loss of electrons or an increase in the oxidation state of a species. "@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "oxidation "@en .
+
+cs:photocatalyst a skos:Concept ;
+    dcterms:identifier "photocatalyst"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "photocatalytic material"@en ;
+    skos:broader cs:general-terms ;
+    skos:definition "A material that absorbs photons (light) of appropriate energy and initiates or accelerates a photochemical reaction, while it regenerates itself after each reaction cycle. "@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "photocatalyst"@en .
+
+cs:photoexcitation a skos:Concept ;
+    dcterms:identifier "photoexcitation"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "photo-excitation"@en ;
+    skos:broader cs:general-terms ;
+    skos:definition "The state caused by the transition of electrons from the valence band top to the conduction band bottom by absorption of photons of sufficient energy.  "@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "photoexcitation"@en .
+
+cs:photoluminescence a skos:Concept ;
+    dcterms:identifier "photoluminescence"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "PL"@en ;
+    skos:broader cs:characterization-of-photocatalysts ;
+    skos:definition "Light emission of lower energy photons from a sample upon its photoexcitation. "@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "photoluminescence"@en .
+
+cs:pore-size-distribution a skos:Concept ;
+    dcterms:identifier "pore-size-distribution"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:general-terms ;
+    skos:definition "Pore size distribution refers to the range of pore sizes in a material. "@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "pore size distribution"@en .
+
+cs:powdered-photocatalyst a skos:Concept ;
+    dcterms:identifier "powdered-photocatalyst"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:form-of-photocatalyst ;
+    skos:definition "A photocatalyst introduced to the reaction chamber in the form of a powder. Usually the powdered photocatalyst is spread inside a quartz / glass plate."@en ;
+    skos:inScheme cs: ;
+    skos:narrower cs:mass-of-powder-used ;
+    skos:prefLabel "powdered photocatalyst"@en .
+
+cs:purity-of-reactants a skos:Concept ;
+    dcterms:identifier "purity-of-reactants"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:reactants ;
+    skos:definition "Purity of reactants (e.g., CO2, H2O, He) used in the photocatalytic CO2 reduction experiments. Purity is measure of the impurities contained in the reactants' supply. The highest purity reactants should be used to ensure the collection of reliable results. "@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "purity of reactants"@en .
+
+cs:raman-spectroscopy a skos:Concept ;
+    dcterms:identifier "raman-spectroscopy"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "RAMAN"@en,
+        "Raman"@en,
+        "Raman scattering spectrometry"@en,
+        "Raman spectrometry"@en,
+        "raman scattering spectroscopy"@en ;
+    skos:broader cs:characterization-of-photocatalysts ;
+    skos:definition "A spectroscopy technique studying the vibrational modes of molecules, by measuring the intensity and frequency of scattered by the sample of monochromatic light. "@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Raman spectroscopy"@en .
+
+cs:reduction a skos:Concept ;
+    dcterms:identifier "reduction"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:general-terms ;
+    skos:definition "The gain of electrons or a decrease in the oxidation state of a species. "@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "reduction"@en .
+
+cs:sampling-intervals a skos:Concept ;
+    dcterms:identifier "sampling-intervals"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:total-duration-of-experiment ;
+    skos:definition "The time in between the collection of two data points."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "sampling intervals"@en .
+
+cs:scanning-electron-microscopy a skos:Concept ;
+    dcterms:identifier "scanning-electron-microscopy"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "SEM"@en ;
+    skos:broader cs:characterization-of-photocatalysts ;
+    skos:definition "An electron microscopy technique that produces high-resolution images under high magnification of a sample's surface by assessing the secondary and back-scattered electrons produced by a focused electron beam."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "scanning electron microscopy"@en .
+
+cs:semiconductor a skos:Concept ;
+    dcterms:identifier "semiconductor"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:general-terms ;
+    skos:definition "A material with electrical conductivity between that of a conductor and an insulator."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "semiconductor"@en .
+
+cs:specific-surface-area a skos:Concept ;
+    dcterms:identifier "specific-surface-area"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "SSA"@en ;
+    skos:broader cs:general-terms ;
+    skos:definition "Α measure of the total surface area of a material per unit mass or volume."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "specific surface area"@en .
+
+cs:thermogravimetric-analysis a skos:Concept ;
+    dcterms:identifier "thermogravimetric-analysis"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "TG"@en,
+        "TG analysis"@en,
+        "TG measurements"@en,
+        "TGA"@en,
+        "thermal gravimetric analysis"@en,
+        "thermo-gravimetric analysis"@en,
+        "thermogravimetric (TG) analyses"@en,
+        "thermogravimetric (TG) analysis"@en ;
+    skos:broader cs:characterization-of-photocatalysts ;
+    skos:definition "A thermal analysis technique used to measure the change of a sample’s mass under the influence of controlled applied temperature profiles."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "thermogravimetric analysis"@en .
+
+cs:transmission-electron-microscopy a skos:Concept ;
+    dcterms:identifier "transmission-electron-microscopy"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "TEM"@en ;
+    skos:broader cs:characterization-of-photocatalysts ;
+    skos:definition "Transmission electron microscopy is a technique that produces high-resolution images if the internal structure of a sample by using a beam of electrons to bombard the thin sample and measuring the intensity of the scattered transmitted electrons."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "transmission electron microscopy"@en .
+
+cs:ultraviolet-visible-spectroscopy a skos:Concept ;
+    dcterms:identifier "ultraviolet-visible-spectroscopy"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "UV-Vis"@en ;
+    skos:broader cs:characterization-of-photocatalysts ;
+    skos:definition "A technique used to measure the absorption, transmission or reflectance of light by a sample in the ultraviolet and visible regions of the electromagnetic spectrum."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "ultraviolet-visible spectroscopy"@en .
+
+cs:valence-band a skos:Concept ;
+    dcterms:identifier "valence-band"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "VB"@en ;
+    skos:broader cs:general-terms ;
+    skos:definition "The band of energy levels in a solid fully occupied by electrons at 0 K (273.15 °C)."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "valence band"@en .
+
+cs:wavelength a skos:Concept ;
+    dcterms:identifier "wavelength"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "λ"@en ;
+    skos:broader cs:general-terms ;
+    skos:definition "The distance between two successive peaks or troughs in a wave."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "wavelength"@en .
+
+cs:x-ray-diffraction a skos:Concept ;
+    dcterms:identifier "x-ray-diffraction"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "X-ray analysis"@en,
+        "X-ray crystallographic analysis"@en,
+        "X-ray crystallography"@en,
+        "X-ray diffraction analysis"@en,
+        "X-ray diffractometry"@en,
+        "X-ray structure determination"@en,
+        "XRD"@en ;
+    skos:broader cs:characterization-of-photocatalysts ;
+    skos:definition "A technique which analyses the diffraction pattern produced when X-rays are scattered by a sample bombarded by a focused electron beam."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "X-ray diffraction"@en .
+
+cs:x-ray-fluorescence a skos:Concept ;
+    dcterms:identifier "x-ray-fluorescence"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "X-ray emission spectrometry"@en,
+        "X-ray fluorescence spectrometry; X-ray fluorescence spectroscopy"@en,
+        "XES"@en,
+        "XRES"@en,
+        "XRF"@en,
+        "XRF spectrometry"@en,
+        "XRF spectroscopy"@en ;
+    skos:broader cs:characterization-of-photocatalysts ;
+    skos:definition "A non-destructive analytical technique which uses a high-energy X-ray source to expose a material and monitors the emitted characteristic fluorescent X-Rays.  "@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "X-ray fluorescence"@en .
+
+cs:x-ray-photoelectron-spectroscopy a skos:Concept ;
+    dcterms:identifier "x-ray-photoelectron-spectroscopy"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "XPS"@en ;
+    skos:broader cs:characterization-of-photocatalysts ;
+    skos:definition "A technique that analyzes the chemical composition of an X-ray irradiated sample by measuring the energies of the emitted electrons."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "X-ray photoelectron spectroscopy"@en .
+
+cs:chemical-substances-used-for-synthesis a skos:Concept ;
+    dcterms:identifier "chemical-substances-used-for-synthesis"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "chemicals; chemical reagents; reagents"@en ;
+    skos:definition "Chemical substances used in the synthesis process of a desired photocatalyst."@en ;
+    skos:inScheme cs: ;
+    skos:narrower cs:masses-volumes-concentrations-of-chemicals-used-in-synthesis ;
+    skos:prefLabel "chemical substances used for synthesis"@en ;
+    skos:topConceptOf cs: .
+
+cs:dimensions-of-deposited-film a skos:Concept ;
+    dcterms:identifier "dimensions-of-deposited-film"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:deposited-film ;
+    skos:definition "The diamensions (area / thickness / diameter) of the - deposited on the substrate - thin film"@en ;
+    skos:inScheme cs: ;
+    skos:narrower cs:area-of-deposited-film,
+        cs:thickness-of-deposited-film ;
+    skos:prefLabel "dimensions of deposited film"@en .
+
+cs:dimensions-of-optical-window a skos:Concept ;
+    dcterms:identifier "dimensions-of-optical-window"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:optical-window ;
+    skos:definition "The dimension of the optical window (diameter / thickness) allowing the incoming light to enter the reaction chamber and interact with the photocatalyst."@en ;
+    skos:inScheme cs: ;
+    skos:narrower cs:diameter-of-optical-window,
+        cs:thickness-of-optical-window ;
+    skos:prefLabel "dimensions of optical window"@en .
+
+cs:equipped-detectors-of-gas-chromatograph a skos:Concept ;
+    dcterms:identifier "equipped-detectors-of-gas-chromatograph"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:definition "Detectors of the gas chromatogragh used to identify the reaction products and intemediates."@en ;
+    skos:inScheme cs: ;
+    skos:narrower cs:flame-ionization-detector,
+        cs:thermal-conductivity-detector ;
+    skos:prefLabel "equipped detectors of gas chromatograph"@en ;
+    skos:topConceptOf cs: .
+
+cs:gas-chromatograph a skos:Concept ;
+    dcterms:identifier "gas-chromatograph"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:product-identification-method ;
+    skos:definition "A device used for mass spectrometry measurements."@en ;
+    skos:inScheme cs: ;
+    skos:narrower cs:calibration-of-gas-chromatograph,
+        cs:sensitivity-of-gas-chromatograph ;
+    skos:prefLabel "gas chromatograph"@en .
+
+cs:gas-flow a skos:Concept ;
+    dcterms:identifier "gas-flow"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:photoreactor-design ;
+    skos:definition "Flow rates of gases used in a CO2 photoreduction experiment. Gases can have either the role of a reactant (e.g., CO2) or be inert (e.g., Ar, He). "@en ;
+    skos:inScheme cs: ;
+    skos:narrower cs:equipment-controlling-and-monitoring-gas-flow ;
+    skos:prefLabel "gas flow"@en .
+
+cs:infrared a skos:Concept ;
+    dcterms:identifier "infrared"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "IR; Ir"@en ;
+    skos:broader cs:general-terms,
+        cs:wavelength-range ;
+    skos:definition "Electromagnetic radiation with wavelengths typically in the range of 800 nm - 20000 nm."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "infrared"@en .
+
+cs:mass-spectrometer a skos:Concept ;
+    dcterms:identifier "mass-spectrometer"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:product-identification-method ;
+    skos:definition "A device used for mass spectrometry measurements."@en ;
+    skos:inScheme cs: ;
+    skos:narrower cs:calibration-of-mass-spectrometer,
+        cs:sensitivity-of-mass-spectrometer ;
+    skos:prefLabel "mass spectrometer"@en .
+
+cs:optical-window a skos:Concept ;
+    dcterms:identifier "optical-window"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:reaction-chamber ;
+    skos:definition "A transparent material optimized to allow the transmission of electromagnetic radiation with low reflectance and scattering. "@en ;
+    skos:inScheme cs: ;
+    skos:narrower cs:dimensions-of-optical-window,
+        cs:material-of-optical-window ;
+    skos:prefLabel "optical window"@en .
+
+cs:range-of-operation-pressure a skos:Concept ;
+    dcterms:identifier "range-of-operation-pressure"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "operation pressure; operation pressure range; \\Ppressure range"@en ;
+    skos:definition "Maximum and minimum of operation pressure range within the reactor can operate safely. Higher operation temperatures can lead to higher pressure values."@en ;
+    skos:inScheme cs: ;
+    skos:narrower cs:equipment-for-controlling-and-monitoring-operation-pressure ;
+    skos:prefLabel "range of operation pressure"@en ;
+    skos:topConceptOf cs: .
+
+cs:range-of-operation-temperature a skos:Concept ;
+    dcterms:identifier "range-of-operation-temperature"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "operation temperature; operation temperature range; temparature range"@en ;
+    skos:broader cs:photoreactor-design ;
+    skos:definition "Maximum and minimum of operation temperature range within the reactor can operate safely."@en ;
+    skos:inScheme cs: ;
+    skos:narrower cs:equipment-for-controlling-and-monitoring-operation-temperature ;
+    skos:prefLabel "range of operation temperature"@en .
+
+cs:sacrificial-reagents a skos:Concept ;
+    dcterms:identifier "sacrificial-reagents"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:reactants ;
+    skos:definition "Electron donors or hole scavengers used to reduce the recombination tendency of electrons and holes. Sacrificial reagents are used in photocatalysis to study an oxidation or reduction reaction seperately."@en ;
+    skos:inScheme cs: ;
+    skos:narrower cs:sacrificial-acceptor,
+        cs:sacrificial-donor ;
+    skos:prefLabel "sacrificial reagents"@en .
+
+cs:selected-light-source a skos:Concept ;
+    dcterms:identifier "selected-light-source"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:definition "The light source used for the irradiation of the reactants in the reaction chamber."@en ;
+    skos:inScheme cs: ;
+    skos:narrower cs:light-intensity,
+        cs:wavelength-range ;
+    skos:prefLabel "selected light source"@en ;
+    skos:topConceptOf cs: .
+
+cs:substrate a skos:Concept ;
+    dcterms:identifier "substrate"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:thin-film ;
+    skos:definition "The substate onto which a (powdered) photocatalyst is deposited. Such substrates incude glass surfaces (e.g., borosilicate glass or conductive glass like ITO and FTO), ceramic substrates (e.g., alumina) or metal substrates (e.g., Ti foils, stainless steel etc.) "@en ;
+    skos:inScheme cs: ;
+    skos:narrower cs:dimensions-of-substrate,
+        cs:material-of-substrate ;
+    skos:prefLabel "substrate"@en .
+
+cs:ultraviolet a skos:Concept ;
+    dcterms:identifier "ultraviolet"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "UV"@en,
+        "UV-A"@en,
+        "UV-B"@en,
+        "UV-C"@en,
+        "VUV"@en ;
+    skos:broader cs:general-terms,
+        cs:wavelength-range ;
+    skos:definition "Electromagnetic radiation with a wavelength typically in the range of 100-400 nanometers."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "ultraviolet"@en .
+
+cs:visible a skos:Concept ;
+    dcterms:identifier "visible"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "Vis; VIS"@en ;
+    skos:broader cs:general-terms,
+        cs:wavelength-range ;
+    skos:definition "Electromagnetic radiation with wavelengths visible to the human eye, typically in the range of 400-800 nm. "@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "visible"@en .
+
+cs:deposition-technique a skos:Concept ;
+    dcterms:identifier "deposition-technique"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:thin-film ;
+    skos:definition "A technique used to deposit (immobilize) a (powdered) photocatalyst on a substate. These techniques indlude (but are not limited to): doctor blading, spin coating, spray coating, etc."@en ;
+    skos:inScheme cs: ;
+    skos:narrower cs:doctor-blading,
+        cs:spin-coating,
+        cs:spray-coating ;
+    skos:prefLabel "deposition technique"@en .
+
+cs:form-of-photocatalyst a skos:Concept ;
+    dcterms:identifier "form-of-photocatalyst"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:evaluation-of-performance ;
+    skos:definition "The form in which the photocatalyst is introduced to the reaction chamber. This can include e.g., powders, pellets or thin films deposited on a substrate. "@en ;
+    skos:inScheme cs: ;
+    skos:narrower cs:powdered-photocatalyst,
+        cs:thin-film ;
+    skos:prefLabel "form of photocatalyst"@en .
+
+cs:glass-substrate a skos:Concept ;
+    dcterms:identifier "glass-substrate"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:material-of-substrate ;
+    skos:definition "A flat surface made of glass serving as a substrate for the deposition of a photocatalyst."@en ;
+    skos:inScheme cs: ;
+    skos:narrower cs:borosilicate-glass,
+        cs:fluorine-doped-tin-oxide-coated-glass,
+        cs:indium-tin-oxide-coated-glass ;
+    skos:prefLabel "glass substrate"@en .
+
+cs:literature-research a skos:Concept ;
+    dcterms:identifier "literature-research"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "publications; papers; manuscripts;"@en ;
+    skos:broader cs:synthesis-of-photocatalysts ;
+    skos:definition "Thorough search of available literature on the research topic of interest using online research platforms (e.g, Scopus, Google Scholar, Web of Science, Research Gate etc.) and / or libraries. Relevant literature can be found in the form of publications, books, abstracts and conference presentations. "@en ;
+    skos:inScheme cs: ;
+    skos:narrower cs:collection-of-publications-of-interest,
+        cs:organization-of-literature-in-a-citation-management-software ;
+    skos:prefLabel "literature research"@en .
+
+cs:material-of-substrate a skos:Concept ;
+    dcterms:identifier "material-of-substrate"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:substrate ;
+    skos:definition "The material that the substrate is made of. Common materials include: glass (conductive or not), ceramics and metal."@en ;
+    skos:inScheme cs: ;
+    skos:narrower cs:ceramic-substrate,
+        cs:glass-substrate,
+        cs:metallic-substrate ;
+    skos:prefLabel "material of substrate"@en .
+
+cs:photocatalytic-co2-reduction a skos:Concept ;
+    dcterms:identifier "photocatalytic-co2-reduction"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "photocatalytic carbon dioxide reduction; CO2 photoreduction; carbon dioxide photoreduction; artificial photosynthesis"@en ;
+    skos:definition "The light-driven reduction (conversion) of carbon dioxide (CO2) to hydrocarbons and / or platform chemicals in presence of water. The absorption of light and the adsorption of the reactants is performed by a photocatalyst (usually a metal oxide). "@en ;
+    skos:inScheme cs: ;
+    skos:narrower cs:characterization-of-photocatalysts,
+        cs:evaluation-of-performance,
+        cs:synthesis-of-photocatalysts ;
+    skos:prefLabel "photocatalytic CO2 reduction"@en ;
+    skos:topConceptOf cs: .
+
+cs:product-identification-method a skos:Concept ;
+    dcterms:identifier "product-identification-method"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:photoreactor-design ;
+    skos:definition "Spectroscopic or chromatographic methods used to qualitatively and quantitatively identify the products of the photoreaction. Such devices are usually attached to the photoreactor, or a sample is being trasfered to an identification method via another medium (e.g., gastight syringes)."@en ;
+    skos:inScheme cs: ;
+    skos:narrower cs:gas-chromatograph,
+        cs:mass-spectrometer ;
+    skos:prefLabel "product identification method"@en .
+
+cs:synthesis-of-photocatalysts a skos:Concept ;
+    dcterms:identifier "synthesis-of-photocatalysts"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:photocatalytic-co2-reduction ;
+    skos:definition "The process by which one or more chemical reactions are performed with the aim of converting a reactant or starting material into a product or multiple products."@en ;
+    skos:inScheme cs: ;
+    skos:narrower cs:literature-research,
+        cs:synthesis-steps ;
+    skos:prefLabel "synthesis of photocatalysts"@en .
+
+cs:thin-film a skos:Concept ;
+    dcterms:identifier "thin-film"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:form-of-photocatalyst ;
+    skos:definition "A photocatalyst introduced to the reaction chamber in the form of a thin film. To form a thin film, a (powdered) photocatalyst is deposited on a substrate (e.g., glass or metal) using an appropriate deposition technique. "@en ;
+    skos:inScheme cs: ;
+    skos:narrower cs:deposited-film,
+        cs:deposition-technique,
+        cs:substrate ;
+    skos:prefLabel "thin film"@en .
+
+cs:calcination-steps a skos:Concept ;
+    dcterms:identifier "calcination-steps"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "heat treatment; heat-treatment; calcination"@en ;
+    skos:broader cs:synthesis-steps ;
+    skos:definition "Heat treatment to reach the desired final photocatalyst. The parameters of the heat treatment can vary between each calcination step. "@en ;
+    skos:inScheme cs: ;
+    skos:narrower cs:dwelling-time,
+        cs:final-temperature,
+        cs:heating-rate,
+        cs:initial-temperature ;
+    skos:prefLabel "calcination steps"@en .
+
+cs:reactants a skos:Concept ;
+    dcterms:identifier "reactants"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "reactant"@en ;
+    skos:broader cs:evaluation-of-performance ;
+    skos:definition "The starting substances that undergo a chemical reaction to produce a desired product."@en ;
+    skos:inScheme cs: ;
+    skos:narrower cs:concentration-of-reactants,
+        cs:flow-rates-of-reactants,
+        cs:purity-of-reactants,
+        cs:sacrificial-reagents ;
+    skos:prefLabel "reactants"@en .
+
+cs:total-duration-of-experiment a skos:Concept ;
+    dcterms:identifier "total-duration-of-experiment"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:evaluation-of-performance ;
+    skos:definition "The total duration of an experiment"@en ;
+    skos:inScheme cs: ;
+    skos:narrower cs:irradiation-time,
+        cs:purging-time,
+        cs:sampling-intervals ;
+    skos:prefLabel "total duration of experiment"@en .
+
+cs:wavelength-range a skos:Concept ;
+    dcterms:identifier "wavelength-range"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:light-source,
+        cs:selected-light-source ;
+    skos:definition "Wavelength (single, narrow distribution or range) of the light emmited by the light source."@en ;
+    skos:inScheme cs: ;
+    skos:narrower cs:infrared,
+        cs:ultraviolet,
+        cs:visible ;
+    skos:prefLabel "wavelength range"@en .
+
+cs:operation-mode a skos:Concept ;
+    dcterms:identifier "operation-mode"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:evaluation-of-performance,
+        cs:photoreactor-design ;
+    skos:definition "Operation mode under the which the experiment takes place: batch of continuous flow mode."@en ;
+    skos:inScheme cs: ;
+    skos:narrower cs:batch-mode,
+        cs:flow-mode ;
+    skos:prefLabel "operation mode"@en .
+
+cs:photocatalytic-co2-reduction-experiment a skos:Concept ;
+    dcterms:identifier "photocatalytic-co2-reduction-experiment"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "carbon dioxide photoreduction experiment; photocatalytic CO2 reduction experiment; photocatalytic carbon dioxide reduction experiment"@en ;
+    skos:broader cs:evaluation-of-performance ;
+    skos:definition "An experiment in which a photocatalyst in the presence of H2O and under the influence of light of appropriate wavelength, converts CO2 to hydrocarbons and / or useful platform chemicals. "@en ;
+    skos:inScheme cs: ;
+    skos:narrower cs:blank-measurements,
+        cs:co2-photoreduction-measurement,
+        cs:evaluation-of-products-formed,
+        cs:pressure-in-a-co2-photoreduction-experiment,
+        cs:sample-pre-treatment,
+        cs:selectivity ;
+    skos:prefLabel "photocatalytic CO2 reduction experiment"@en .
+
+cs:reaction-chamber a skos:Concept ;
+    dcterms:identifier "reaction-chamber"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "photoreaction chamber"@en ;
+    skos:broader cs:photoreactor-design ;
+    skos:definition "A construction inside of which the photocatalyst and the reactants coexist and the photoreaction takes place."@en ;
+    skos:inScheme cs: ;
+    skos:narrower cs:dimensions-of-reaction-chamber,
+        cs:material-of-reaction-chamber,
+        cs:optical-window,
+        cs:shape-of-reaction-chamber,
+        cs:volume-of-the-reaction-chamber ;
+    skos:prefLabel "reaction chamber"@en .
+
+cs:evaluation-of-performance a skos:Concept ;
+    dcterms:identifier "evaluation-of-performance"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:photocatalytic-co2-reduction ;
+    skos:definition "Selection of experimental parameters applied for the evaluation of the performance of a photocatalyst in CO2 photoreduction."@en ;
+    skos:inScheme cs: ;
+    skos:narrower cs:form-of-photocatalyst,
+        cs:light-source,
+        cs:operation-mode,
+        cs:photocatalytic-co2-reduction-experiment,
+        cs:reactants,
+        cs:total-duration-of-experiment ;
+    skos:prefLabel "evaluation of performance"@en .
+
+cs:photoreactor-design a skos:Concept ;
+    dcterms:identifier "photoreactor-design"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:altLabel "reactor design; reactor engineering; photoreactor engineering"@en ;
+    skos:definition "Details describing the construction, physical dimensions, and operation of the photoreactor used for the photocalytic CO2 reduction reactions."@en ;
+    skos:inScheme cs: ;
+    skos:narrower cs:gas-flow,
+        cs:light-source,
+        cs:operation-mode,
+        cs:product-identification-method,
+        cs:range-of-operation-temperature,
+        cs:reaction-chamber ;
+    skos:prefLabel "photoreactor design"@en ;
+    skos:topConceptOf cs: .
+
+cs:synthesis-steps a skos:Concept ;
+    dcterms:identifier "synthesis-steps"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:synthesis-of-photocatalysts ;
+    skos:definition "Necessary steps needed to follow in order to reach the desired photocatalyst."@en ;
+    skos:inScheme cs: ;
+    skos:narrower cs:calcination-steps,
+        cs:duration-of-steps,
+        cs:equipment-used-for-synthesis,
+        cs:ph-in-synthesis,
+        cs:pressure-in-synthesis,
+        cs:temperature-in-synthesis ;
+    skos:prefLabel "synthesis steps"@en .
+
+cs:light-source a skos:Concept ;
+    dcterms:identifier "light-source"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:evaluation-of-performance,
+        cs:photoreactor-design ;
+    skos:definition "Light sources used to irradiate a photocatalyst. These include sources with various intensities, powers and wavelength ranges,  including Hg/Xe lamps, Xe lamps and LEDs. "@en ;
+    skos:inScheme cs: ;
+    skos:narrower cs:current-of-operation-of-the-light-source,
+        cs:distance-of-light-source-from-the-reaction-chamber-sample,
+        cs:intensity-of-the-light-source,
+        cs:power-output-of-the-light-source,
+        cs:voltage-of-operation-of-the-light-source,
+        cs:wavelength-range ;
+    skos:prefLabel "light source"@en .
+
+cs:characterization-of-photocatalysts a skos:Concept ;
+    dcterms:identifier "characterization-of-photocatalysts"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:broader cs:photocatalytic-co2-reduction ;
+    skos:definition "A collection of techniques used to identify the (physico)chemical, morphological, structural, mechanical, optical and electrical properties of the syntesized photocatalysts. Characterization is performed after the synthesis of the photocatalysts to evaluate the success of the synthetic approach, but also after the completion of the evaluation of the materials in CO2 photoreduction to ensure their stability under the selected experimental parameters."@en ;
+    skos:inScheme cs: ;
+    skos:narrower cs:atomic-force-microscopy,
+        cs:brunauer-emmett-teller-surface-area-analysis,
+        cs:cyclic-voltammetry,
+        cs:differential-scanning-calorimetry,
+        cs:electron-energy-loss-spectroscopy,
+        cs:fourier-transform-infrared-spectroscopy,
+        cs:gas-chromatography,
+        cs:liquid-chromatography,
+        cs:mass-spectroscopy,
+        cs:mott-schottky-analysis,
+        cs:nuclear-magnetic-resonance-spectroscopy,
+        cs:photoluminescence,
+        cs:raman-spectroscopy,
+        cs:scanning-electron-microscopy,
+        cs:thermogravimetric-analysis,
+        cs:transmission-electron-microscopy,
+        cs:ultraviolet-visible-spectroscopy,
+        cs:x-ray-diffraction,
+        cs:x-ray-fluorescence,
+        cs:x-ray-photoelectron-spectroscopy ;
+    skos:prefLabel "characterization of photocatalysts"@en .
+
+cs:general-terms a skos:Concept ;
+    dcterms:identifier "general-terms"^^xsd:token ;
+    dcterms:provenance "Self"@en ;
+    skos:definition "General terms often used in the field of photocatalysis."@en ;
+    skos:inScheme cs: ;
+    skos:narrower cs:absorption,
+        cs:bandgap-energy,
+        cs:charge-photogeneration,
+        cs:charge-recombination,
+        cs:charge-separation,
+        cs:conduction-band,
+        cs:crystallinity,
+        cs:doping,
+        cs:electron-transfer,
+        cs:excited-state,
+        cs:fermi-level,
+        cs:ground-state,
+        cs:infrared,
+        cs:metal-oxide,
+        cs:oxidation,
+        cs:photocatalyst,
+        cs:photoexcitation,
+        cs:pore-size-distribution,
+        cs:reduction,
+        cs:semiconductor,
+        cs:specific-surface-area,
+        cs:ultraviolet,
+        cs:valence-band,
+        cs:visible,
+        cs:wavelength ;
+    skos:prefLabel "general terms"@en ;
+    skos:topConceptOf cs: .
+
+cs: a skos:ConceptScheme ;
+    dcterms:created "2022-04-13"^^xsd:date ;
+    dcterms:creator <https://www.catalysis.de/> ;
+    dcterms:hasPart cs:characterization-of-photocatalysts-coll,
+        cs:evaluation-of-performance-coll,
+        cs:general-terms-coll,
+        cs:photocatalytic-co2-reduction-coll,
+        cs:reactor-design-coll,
+        cs:synthesis-of-photocatalysts-coll ;
+    dcterms:identifier ""^^xsd:token ;
+    dcterms:modified "2022-04-13"^^xsd:date ;
+    dcterms:provenance "Heterogene Photokatalyse / Leibniz Institute für Katalyse e.V. (LIKAT)"@en ;
+    dcterms:publisher <http://example.org/nfdi4cat/> ;
+    owl:versionInfo "0.1" ;
+    skos:definition "A vocabulary of the most commonly used terms in the heterogeneous photocatalytic (light-driven) reduction (conversion) of carbon dioxide (CO2) to hydrocarbons and / or platform chemicals"@en ;
+    skos:hasTopConcept cs:chemical-substances-used-for-synthesis,
+        cs:dielectric-barrier-discharge-ionization-detector,
+        cs:equipped-detectors-of-gas-chromatograph,
+        cs:equipped-detectors-of-mass-spectrometer,
+        cs:gaseous-enviroment,
+        cs:general-terms,
+        cs:hole-tranfer,
+        cs:mass-of-deposited-catalyst,
+        cs:photocatalysis,
+        cs:photocatalytic-co2-reduction,
+        cs:photoinduced-electron-transfer,
+        cs:photoreactor-design,
+        cs:pressure-drop-in-a-co2-phoreduction-experiment,
+        cs:quartz,
+        cs:range-of-operation-pressure,
+        cs:selected-light-source,
+        cs:temperature-in-a-co2-photoreduction-experiment ;
+    skos:prefLabel "Photocatalytic CO2 reduction"@en ;
+    dcat:contactPoint "Nikolaos Moustakas / David Linke / Jennifer Strunk" .
+

@@ -1,0 +1,29 @@
+# Documentation of tomli format: https://toml.io/en/latest
+
+# Length of integer IDs in vocabulary. IDs will be left-padded with zeros to specified length.
+id_length = 8
+
+# Section of IDranges for coordinating the allocation of numeric ID ranges to
+# contributors for each vocabulary. Each idrange contains the same keys:
+#
+#   first_id = <int>              - first reserved integer ID in idrange
+#   last_id = <int>               - last reserved integer ID in idrange
+#   gh_username = "<string>"      - username on github
+#   orcid = "<string>"            - contributor's ORCID, e.g. "0000-0001-2345-6789"
+#   organisation_ror_id = "<url>" - ROR of home organisation, e.g. "https://ror.org/04fa4r544"
+
+[[idrange]]
+first_id = 1
+last_id = 10
+gh_username = "sofia-garcia"
+orcid = "0000-0001-2345-6789"
+organisation_ror_id = "https://ror.org/04fa4r544"
+
+[[idrange]]
+first_id = 11
+last_id = 20
+gh_username = "n.n."
+orcid = ""
+organisation_ror_id = ""
+
+# Continue with as many [[idrange]] sections as needed.

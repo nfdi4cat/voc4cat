@@ -1,7 +1,7 @@
 # Documentation of the TOML format: https://toml.io/en/latest
 
 # Length of integer IDs in vocabulary. IDs will be left-padded with zeros to specified length.
-id_length = 8
+id_length = 7
 
 # Section of IDranges for coordinating the allocation of numeric ID ranges to
 # contributors for each vocabulary. Each idrange contains the same keys:

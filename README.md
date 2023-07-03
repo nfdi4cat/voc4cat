@@ -1,11 +1,11 @@
-# A repository to maintain SKOS-vocabularies for the catalysis disciplines
+# A SKOS vocabulary for the catalysis disciplines
 
-> **This repository has just been made public (March-2023)**.
-> **We will move more content here in the coming days and weeks.**
+> **The first collection of terms has just been made public (June-2023)**.
+> **We will add more content in the coming weeks and month.**
 
-The vocabularies have been created and maintained as part of the [NFDI4Cat](http://www.nfdi4cat.org) initiative and follow our [Voc4Cat Guidelines](https://doi.org/10.5281/zenodo.7669183).
+The vocabulary has been created and maintained as part of the [NFDI4Cat](http://www.nfdi4cat.org) initiative and follow our [Voc4Cat Guidelines](https://doi.org/10.5281/zenodo.7669183).
 
-This repository was created from the template [voc4cat-template](https://github.com/nfdi4cat/voc4cat-template). 
+This repository was created from the template [voc4cat-template](https://github.com/nfdi4cat/voc4cat-template).
 It uses the [voc4cat-tool](https://github.com/nfdi4cat/voc4cat-tool) and GitHub features like gh-actions, pull requests etc. to reduce the maintenance workload for contributors and editors.
 
 ## Basic principles
@@ -23,7 +23,6 @@ In addition, documentation is created automatically and published on github-page
 
 - The general url is `https://{gh-org-name}.github.io/{vocabulary-name}/docs/`
 - In repository `nfdi4cat/voc4cat` the vocabulary `vocab_example` is documented at [https://nfdi4cat.github.io/voc4cat/vocab_example/docs/](https://nfdi4cat.github.io/voc4cat/vocab_example/docs/)
-
 
 ## Contributing to vocabularies
 
@@ -63,7 +62,6 @@ See [inbox-excel-vocabs/README.md](inbox-excel-vocabs/README.md) for a minimal e
 To discuss about the workflow for maintaining SKOS vocabularies based on this template, create an [voc4cat-template issue](https://github.com/nfdi4cat/voc4cat-template/issues).
 
 To discuss about the tool that converts Excel to SKOS in gh-actions of this template, create an [voc4cat-tool issue](https://github.com/nfdi4cat/voc4cat-tool/issues).
-
 
 ## Authors and acknowledgment
 

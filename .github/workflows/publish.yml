@@ -43,7 +43,7 @@ jobs:
       - name: Run voc4cat to build docs & Excel-files matching turtle files
         run: |
           voc4cat --version
-          voc4cat --docs --output-directory publish vocabularies/
+          voc4cat --docs pylode --output-directory publish vocabularies/
           voc4cat --output-directory publish vocabularies/ --template templates/voc4cat_template_043.xlsx
           ls -l publish/ || echo "publish directory does not exist."
 

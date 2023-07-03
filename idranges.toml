@@ -1,7 +1,19 @@
 # Documentation of the TOML format: https://toml.io/en/latest
 
+# ==== General Configuration ====
+
+# Allow only a single vocabulary (default) or multiple vocabularies in the repository.
+single_vocab = true
+
+# ==== Configuration for vocabulary "voc4cat" ====
+
+[[voc4cat]]
 # Length of integer IDs in vocabulary. IDs will be left-padded with zeros to specified length.
 id_length = 7
+
+# Section to configure checks (useful in CI pipeline)
+[[voc4cat.checks]]
+no_delete = true
 
 # Section of IDranges for coordinating the allocation of numeric ID ranges to
 # contributors for each vocabulary. Each idrange contains the same keys:
@@ -12,16 +24,16 @@ id_length = 7
 #   orcid = "<string>"            - contributor's ORCID, e.g. "0000-0001-2345-6789"
 #   organisation_ror_id = "<url>" - ROR of home organisation, e.g. "https://ror.org/04fa4r544"
 
-[[idrange]]
+[[voc4cat.idrange]]
 first_id = 1
-last_id = 2000
+last_id = 5000
 gh_username = "nmoust"
 orcid = "0000-0002-6242-2167"
 organisation_ror_id = "https://ror.org/029hg0311"
 
-[[idrange]]
-first_id = 2001
-last_id = 3000
+[[voc4cat.idrange]]
+first_id = 5001
+last_id = 6000
 gh_username = "dalito"
 orcid = "0000-0002-5898-1820"
 organisation_ror_id = "https://ror.org/029hg0311"

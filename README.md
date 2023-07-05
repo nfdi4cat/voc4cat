@@ -3,7 +3,7 @@
 > **The first collection of terms has just been made public (June-2023)**.
 > **We will add more content in the coming weeks and month.**
 
-The vocabulary has been created and maintained as part of the [NFDI4Cat](http://www.nfdi4cat.org) initiative and follow our [Voc4Cat Guidelines](https://doi.org/10.5281/zenodo.7669183).
+The vocabulary has been created and maintained as part of the [NFDI4Cat](http://www.nfdi4cat.org) initiative and follows our [Voc4Cat Guidelines](https://doi.org/10.5281/zenodo.7669183).
 
 This repository was created from the template [voc4cat-template](https://github.com/nfdi4cat/voc4cat-template).
 It uses the [voc4cat-tool](https://github.com/nfdi4cat/voc4cat-tool) and GitHub features like gh-actions, pull requests etc. to reduce the maintenance workload for contributors and editors.
@@ -22,7 +22,7 @@ Finally the SKOS-vocabularies land in the folder `vocabularies` in turtle-format
 In addition, documentation is created automatically and published on github-pages.
 
 - The general url is `https://{gh-org-name}.github.io/{vocabulary-name}/docs/`
-- In repository `nfdi4cat/voc4cat` the vocabulary `vocab_example` is documented at [https://nfdi4cat.github.io/voc4cat/vocab_example/docs/](https://nfdi4cat.github.io/voc4cat/vocab_example/docs/)
+- In repository `nfdi4cat/voc4cat` the vocabulary `vocab_example` is documented at [https://nfdi4cat.github.io/voc4cat/voc4cat/](https://nfdi4cat.github.io/voc4cat/voc4cat/)
 
 ## Contributing to vocabularies
 

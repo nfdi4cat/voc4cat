@@ -67,7 +67,7 @@ To discuss about the tool that converts Excel to SKOS in gh-actions of this temp
 
 ### Vocabularies
 
-- TODO: *List collaborators.*
+- *List all contributors.*
 
 ### Voc4cat template
 

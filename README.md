@@ -12,7 +12,7 @@ To just try out the workflow just go to [voc4cat-playground](https://github.com/
 
 All vocabularies based on this template have the same standard contribution process of
 
-- get and update the vocablary file (xlsx),
+- get and update the vocabulary file (xlsx),
 - submit a pull request with the updated file,
 - collaborate on the pull request with editors or other github users,
 - approval and merge of the pull request
@@ -21,7 +21,7 @@ and finally land in the folder `vocabularies` as SKOS-vocabulary files in turtle
 
 In addition, html-documentation is created automatically and published on github-pages.
 
-- The general url is `https://{gh-org-name}.github.io/{vocabulary-name}/`
+- The general url is `https://{gh-org-name}.github.io/{repository-name}/{vocabulary-name}/`
 - In repository `nfdi4cat/voc4cat-template` the vocabulary `vocab_example` is documented at [https://nfdi4cat.github.io/voc4cat-template/vocab_example/](https://nfdi4cat.github.io/voc4cat-template/vocab_example/)
  
 ### Creating vocabularies for catalysis or catalytic reaction engineering
@@ -38,7 +38,7 @@ Here are the steps, for submitting updates in Excel including the git commands.
 
 - Get the Excel-vocabulary file
   - For an existing vocabulary, the latest version of the vocabulary is always available via github-pages.
-    - The general url is `https://{gh-org-name}.github.io/{vocabulary-name}/{vocabulary-name}.xlsx`
+    - The general url is `https://{gh-org-name}.github.io/{repository-name}/{vocabulary-name}/{vocabulary-name}.xlsx`
     - For example in nfdi4cat/voc4cat-template the vocabulary `vocab_example` can be downloaded from [https://nfdi4cat.github.io/voc4cat-template/vocab_example.xlsx](https://nfdi4cat.github.io/voc4cat-template/vocab_example.xlsx)
   - For setting up a new vocabulary, use the xlsx-file from the templates-folder.
 - Make changes to the Excel file

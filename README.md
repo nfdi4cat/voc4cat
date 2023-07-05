@@ -19,9 +19,9 @@ All vocabularies managed here have the same standard contribution process,
 
 Finally the SKOS-vocabularies land in the folder `vocabularies` in turtle-format.
 
-In addition, documentation is created automatically and published on github-pages.
+In addition, HTML-documentation is created automatically and published on github-pages.
 
-- The general url is `https://{gh-org-name}.github.io/{vocabulary-name}/docs/`
+- The general url is `https://{gh-org-name}.github.io/{repository-name}/{vocabulary-name}/`
 - In repository `nfdi4cat/voc4cat` the vocabulary `vocab_example` is documented at [https://nfdi4cat.github.io/voc4cat/voc4cat/](https://nfdi4cat.github.io/voc4cat/voc4cat/)
 
 ## Contributing to vocabularies
@@ -36,13 +36,12 @@ Here are the steps for submitting updates in Excel.
 
 - Get the Excel-vocabulary file
   - For an existing vocabulary, the latest version of the vocabulary is always available via github-pages.
-    - The general url is `https://{gh-org-name}.github.io/{vocabulary-name}/{vocabulary-name}.xlsx`
-    - For example here the vocabulary `vocab_example` can be downloaded from [https://nfdi4cat.github.io/voc4cat/vocab_example.xlsx](https://nfdi4cat.github.io/voc4cat/vocab_example.xlsx)
-  - For setting up a new vocabulary, use the xlsx-file from the templates-folder.
+    - The general url is `https://{gh-org-name}.github.io/{repository-name}/{vocabulary-name}/{vocabulary-name}.xlsx`
+    - For example in nfdi4cat/voc4cat the vocabulary `voc4cat` can be downloaded from [https://nfdi4cat.github.io/voc4cat/voc4cat/voc4cat.xlsx](https://nfdi4cat.github.io/voc4cat/voc4cat/voc4cat.xlsx)
 - Make changes to the Excel file
 - Add the Excel file to your clone of the repository into the folder `inbox-excel-vocabs`
   - The name of the Excel-file must match the vocabulary that you want to update (e.g. myvoc.xlsx to update a vocabulary named "myvoc").
-  - New vocabularies will be named like the Excel-file (minus the .xlsx-extension).
+  - Important: In this repository we accept only files named `voc4cat.xlsx`.
 - Create a pull request with the updated Excel-file on github.
   - Please describe your changes and the motivation for the changes in the pull request note or link to an issue with this information. This will help reviewers to understand the proposed change and decide about it.
 - Your pull request will be processed automatically by a CI/CD pipeline that typically runs less than a minute.

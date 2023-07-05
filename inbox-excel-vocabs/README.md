@@ -1,4 +1,4 @@
-**Please drop your filled out VocExcel-templates into this folder and create a merge request.**
+**Please drop your filled out Excel-templates into this folder and create a merge request.**
 
 See also [../README.md](../README.md) for the steps in the contribution process.
 

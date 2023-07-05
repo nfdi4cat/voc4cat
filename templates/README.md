@@ -1,6 +1,6 @@
 # Excel templates
 
-The templates here match structure-wise with the templates in [VocExcel](https://github.com/nfdi4cat/VocExcel) of the same version number.
+The templates here match structure-wise with the templates in [Voc4Cat-tool](https://github.com/nfdi4cat/voc4cat-tool) of the same version number.
 
 ## Version 0.4.3
 

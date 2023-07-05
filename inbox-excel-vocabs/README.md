@@ -1,4 +1,4 @@
-**Please drop your filled out VocExcel-templates into this folder and create a merge request.**
+**Please drop your filled out Excel-templates into this folder and create a merge request.**
 
 To test the pipeline you may use the template `templates/voc4cat_template_043.xlsx` file.
 

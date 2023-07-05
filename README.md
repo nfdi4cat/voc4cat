@@ -19,10 +19,10 @@ All vocabularies based on this template have the same standard contribution proc
 
 and finally land in the folder `vocabularies` as SKOS-vocabulary files in turtle-format.
 
-In addition, documentation is created automatically and published on github-pages.
+In addition, html-documentation is created automatically and published on github-pages.
 
-- The general url is `https://{gh-org-name}.github.io/{vocabulary-name}/docs/`
-- In repository `nfdi4cat/voc4cat-template` the vocabulary `vocab_example` is documented at [https://nfdi4cat.github.io/voc4cat-template/vocab_example/docs/](https://nfdi4cat.github.io/voc4cat-template/vocab_example/docs/)
+- The general url is `https://{gh-org-name}.github.io/{vocabulary-name}/`
+- In repository `nfdi4cat/voc4cat-template` the vocabulary `vocab_example` is documented at [https://nfdi4cat.github.io/voc4cat-template/vocab_example/](https://nfdi4cat.github.io/voc4cat-template/vocab_example/)
  
 ### Creating vocabularies for catalysis or catalytic reaction engineering
 

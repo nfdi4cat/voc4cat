@@ -120,7 +120,7 @@ It is suggested merge the changes from the template repository before every new 
 
 ### Vocabularies
 
-- *Add all collaborators.*
+- *List all contributors.*
 
 ### Voc4cat template
 

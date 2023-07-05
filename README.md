@@ -22,7 +22,7 @@ Finally the SKOS-vocabularies land in the folder `vocabularies` in turtle-format
 In addition, HTML-documentation is created automatically and published on github-pages.
 
 - The general url is `https://{gh-org-name}.github.io/{repository-name}/{vocabulary-name}/`
-- In repository `nfdi4cat/voc4cat` the vocabulary `vocab_example` is documented at [https://nfdi4cat.github.io/voc4cat/voc4cat/](https://nfdi4cat.github.io/voc4cat/voc4cat/)
+- In repository `nfdi4cat/voc4cat` the vocabulary `voc4cat` is documented at [https://nfdi4cat.github.io/voc4cat/voc4cat/](https://nfdi4cat.github.io/voc4cat/voc4cat/)
 
 ## Contributing to vocabularies
 

@@ -36,8 +36,8 @@ Here are the steps for submitting updates in Excel.
 
 - Get the Excel-vocabulary file
   - For an existing vocabulary, the latest version of the vocabulary is always available via github-pages.
-    - The general url is `https://{gh-org-name}.github.io/{repository-name}/{vocabulary-name}/{vocabulary-name}.xlsx`
-    - For example in nfdi4cat/voc4cat the vocabulary `voc4cat` can be downloaded from [https://nfdi4cat.github.io/voc4cat/voc4cat/voc4cat.xlsx](https://nfdi4cat.github.io/voc4cat/voc4cat/voc4cat.xlsx)
+    - The general url is `https://{gh-org-name}.github.io/{repository-name}/{vocabulary-name}.xlsx`
+    - For example in nfdi4cat/voc4cat the vocabulary `voc4cat` can be downloaded from [https://nfdi4cat.github.io/voc4cat/voc4cat.xlsx](https://nfdi4cat.github.io/voc4cat/voc4cat.xlsx)
 - Make changes to the Excel file
 - Add the Excel file to your clone of the repository into the folder `inbox-excel-vocabs`
   - The name of the Excel-file must match the vocabulary that you want to update (e.g. myvoc.xlsx to update a vocabulary named "myvoc").

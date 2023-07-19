@@ -1,46 +1,53 @@
-# Documentation of the TOML format: https://toml.io/en/latest
-
 # ==== General Configuration ====
+# Documentation of the TOML format: https://toml.io/en/latest
 
 # Allow only a single vocabulary (default) or multiple vocabularies in the repository.
 single_vocab = true
 
-# ==== Configuration for vocabulary "voc4cat" ====
+# ==== Configuration for vocabulary "myvocab" ====
 
-[[myvocab]]
+# The name of the vocabulary is used as section name.
+# It should match the filename-stem of the vocabulary files.
+[vocabs.myvocab]
 # Length of integer IDs in vocabulary. IDs will be left-padded with zeros to specified length.
 id_length = 7
+# permanent part of IRIs defined in the vocabulary
+permanent_iri_part = "https://example.org/"
 
 # Section to configure checks (useful in CI pipeline)
-[[myvocab.checks]]
-no_delete = true
+[vocabs.myvocab.checks]
+# Deleting allowed (relevant in CI-pipeline)
+allow_delete = false
 
+[vocabs.myvocab.prefix_map]
+ex = "https://example.org/"
 # Section of IDranges for coordinating the allocation of numeric ID ranges to
 # contributors for each vocabulary. Each idrange contains the same keys:
 #
-#   first_id = <int>              - first reserved integer ID in idrange
-#   last_id = <int>               - last reserved integer ID in idrange
-#   gh_username = "<string>"      - username on github
-#   orcid = "<string>"            - contributor's ORCID, e.g. "0000-0001-2345-6789"
-#   organisation_ror_id = "<url>" - ROR of home organisation, e.g. "https://ror.org/04fa4r544"
+# first_id = <int>            - first reserved integer ID in idrange
+# last_id = <int>             - last reserved integer ID in idrange
+# gh_name = "<string>"        - user or organisation name on github
+# orcid = "<string> or <url>" - contributor's ORCID, e.g. "0000-0002-1825-0097" or "https://orcid.org/0000-0002-1825-0097"
+# ror_id = "<url>"            - ROR identifier of home organisation, e.g. "https://ror.org/04fa4r544"
 
-[[myvocab.idrange]]
+[[vocabs.myvocab.id_range]]
 first_id = 1
 last_id = 10
-gh_username = "sofia-garcia"
+gh_name = "sofia-garcia"
 orcid = "0000-0001-2345-6789"
-organisation_ror_id = "https://ror.org/04fa4r544"
+ror_id = "https://ror.org/04fa4r544"
 
-[[myvocab.idrange]]
+[[vocabs.myvocab.id_range]]
 first_id = 11
 last_id = 20
-gh_username = "n.n."
+gh_name = "unknown"
 orcid = ""
-organisation_ror_id = ""
+ror_id = ""
 
 # Continue with as many [[myvocab.idrange]] sections as needed.
 
 # More vocabularies can be configured by adding sections with appropriate name.
-# [[othervocab]]
-# [[othervocab.checks]]
-# [[othervocab.idrange]]
+# [vocabs.othervocab]
+# [vocabs.othervocab.checks]
+# [vocabs.othervocab.prefix_map]
+# [[vocabs.othervocab.idrange]]

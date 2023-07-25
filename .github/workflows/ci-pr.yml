@@ -1,11 +1,5 @@
 # This action runs when a pull request to main is created or updated
-# (but not when it is merged).
-#
-# Workflow steps:
-# - run voc4cat to update xlsx file and create turtle file
-# - store artifacts (even on failure)
-# - remove xlsx-vocab file from PR
-# - commit on behalf of the PR-author using "voc4cat-CI-bot" as committer
+# (but not when it is merged into main).
 
 name: CI on pull request create or update
 on:
@@ -34,7 +28,8 @@ jobs:
       contents: write
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout PR branch into cwd
+        uses: actions/checkout@v3
         with:
           # Checkout the fork/head-repository to push changes to the fork.
           # Without this the base repository will be checked out and committed to.
@@ -42,6 +37,16 @@ jobs:
 
           # Checkout the branch made in the fork.
           ref: ${{ github.head_ref }}
+
+      - name: Checkout main branch into directory _main_branch/
+        uses: actions/checkout@v3
+        with:
+          ref: main
+          path: _main_branch
+          # This sparse-checkout includes all toplevel files and everything below vocabularies/
+          sparse-checkout: |
+            vocabularies/
+          fetch-depth: 1
 
       - uses: actions/setup-python@v4
         with:
@@ -51,33 +56,31 @@ jobs:
         run: |
           python -VV
           python -m pip install --upgrade pip setuptools wheel
+
           python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@main
-        # from private repo: python -m pip install git+https://anon:${{ SECRETS.READ_PAT_VOC4CAT }}@github.com/dalito/voc4cat-tool.git@main
+          # from private repo: python -m pip install git+https://anon:${{ SECRETS.READ_PAT_VOC4CAT }}@github.com/dalito/voc4cat-tool.git@main
+
+      - name: Dynamically set RUN_DATE environment variable
+        run: echo "RUN_DATE=$(date +'%Y-%m-%dT%H%M')" >> $GITHUB_ENV
 
       - name: Run voc4cat
         run: |
           voc4cat --version
-          ls -l outbox/ || echo "outbox directory does not exist."
-          voc4cat --check --forward --docs pylode --output-directory outbox inbox-excel-vocabs/ |& tee voc4cat.log
-          VOC4CAT_EXIT_CODE=${PIPESTATUS[0]}
-          mv voc4cat.log outbox
-          ls -l outbox/ || echo "outbox directory does not exist."
-          echo voc4cat exit code: ${VOC4CAT_EXIT_CODE}
-          exit ${VOC4CAT_EXIT_CODE}
+          voc4cat -v --ci-check --config _main_branch/idranges.toml --check --forward --logfile voc4cat.log --docs pylode --output-directory outbox inbox-excel-vocabs/
+
+      - name: Merge changes into vocabulary (in PR branch)
+        run: |
+          merge_vocab --logfile voc4cat.log outbox/ vocabularies/
+          git status
 
       - name: Store artifacts
         if: ${{ always() }}
         uses: actions/upload-artifact@v3
         with:
-          name: voc4cat-outbox-run${{ GITHUB.RUN_ID }}
+          name: voc4cat-outbox_${{ env.RUN_DATE }}_run${{ GITHUB.RUN_ID }}
           path: outbox/
 
-      - name: Merge changes into vocabulary
-        run: |
-          merge_vocab outbox/ vocabularies/
-          git status
-
-      - name: Add vocabulary changes
+      - name: Add/stage vocabulary changes
         # Pin third party action (v4.16.0)
         uses: stefanzweifel/git-auto-commit-action@3ea6ae190baf489ba007f7c92608f33ce20ef04a
         with:
@@ -89,12 +92,9 @@ jobs:
           git rm inbox-excel-vocabs/\*.xlsx || echo "No xlsx files to remove."
           git status
 
-      - name: Commit vocabulary changes & xlsx removal
+      - name: Commit vocabulary changes & xlsx cleanup on behalf of PR-author
         # Pin third party action (v4.16.0)
         uses: stefanzweifel/git-auto-commit-action@3ea6ae190baf489ba007f7c92608f33ce20ef04a
         with:
           commit_user_name: voc4cat-CI-bot
           commit_message: 'CI: vocabulary update in ${{ GITHUB.SERVER_URL }}/${{ GITHUB.REPOSITORY }}/actions/runs/${{ GITHUB.RUN_ID }}'
-
-# Lit:
-# https://github.com/stefanzweifel/git-auto-commit-action

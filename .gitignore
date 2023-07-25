@@ -104,3 +104,6 @@ _version.py
 # output dir
 outbox/
 publish/
+
+# Special dir for a clone of main branch in gh-actions
+_main_branch

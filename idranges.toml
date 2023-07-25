@@ -44,7 +44,7 @@ gh_name = "unknown"
 orcid = ""
 ror_id = ""
 
-# Continue with as many [[vocab_example.idrange]] sections as needed.
+# Continue with as many [[vocabs.vocab_example.idrange]] sections as needed.
 
 # More vocabularies can be configured by adding sections with appropriate name.
 # [vocabs.othervocab]

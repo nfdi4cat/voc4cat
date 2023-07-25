@@ -15,9 +15,8 @@ All vocabularies based on this template have the same standard contribution proc
 - get and update the vocabulary file (xlsx),
 - submit a pull request with the updated file,
 - collaborate on the pull request with editors or other github users,
-- approval and merge of the pull request
 
-and finally land in the folder `vocabularies` as SKOS-vocabulary files in turtle-format.
+After approval your pull request is ready to be merged by the editors. The merge will include your contribution into the SKOS-vocabulary file in the `vocabularies`-folder and it will also be reflected in the documentation that is automatically updated.
 
 The Excel/xlsx files submitted as pull request are automatically checked and (if all is good) converted to turtle.
 By using a vocabulary-specific configuration more thorough validation can be activated,
@@ -41,10 +40,10 @@ To discuss about the SKOS vocabularies maintained with this template, create an 
 
 To contribute new concepts or collections or change existing ones, you may either submit your contributions as Excel/xlsx-file or (as an expert) as new/changed turtle file.
 
-Here are the steps, for submitting updates in Excel including the git commands.
+Here are the steps, for submitting updates in Excel.
 
 - Get the Excel/xlsx-vocabulary file
-  - For an existing vocabulary, the latest version of the vocabulary is always available via github-pages.
+  - The latest version of the vocabulary is always available via github-pages.
     - The general url is `https://{gh-org-name}.github.io/{repository-name}/{vocabulary-name}.xlsx`
     - For example in nfdi4cat/voc4cat-template the vocabulary `vocab_example` can be downloaded from [https://nfdi4cat.github.io/voc4cat-template/vocab_example.xlsx](https://nfdi4cat.github.io/voc4cat-template/vocab_example.xlsx)
   - For setting up a new vocabulary, use the xlsx-file from the templates-folder.

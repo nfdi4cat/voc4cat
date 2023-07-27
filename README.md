@@ -16,7 +16,7 @@ The process to contribute to the **voc4cat vocabulary** is as follows:
 - submit a pull request with the updated file,
 - collaborate on the pull request with editors or other github users,
 
-After approval your pull request will be merged by the editors. Immediately afterwards your contribution will be included in the SKOS-vocabulary file in the `vocabularies`-folder and it will also be reflected in the documentation that is automatically updated.
+After approval your pull request is ready to be merged by the editors. The merge will include your contribution into the SKOS-vocabulary file in the `vocabularies`-folder and it will also be reflected in the documentation that is automatically updated.
 
 - The vocabulary `voc4cat` is documented at [https://nfdi4cat.github.io/voc4cat/voc4cat/](https://nfdi4cat.github.io/voc4cat/voc4cat/)
 

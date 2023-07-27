@@ -1,16 +1,18 @@
-# Excel templates
+## Excel templates
 
 The templates here match structure-wise with the templates in [Voc4Cat-tool](https://github.com/nfdi4cat/voc4cat-tool) of the same version number.
 
-## Version 0.4.3
+### Version 0.4.3
 
-### Revision 2023-06a
+#### Revision 2023-07a
 
-The following has changed compared to the last revision.
+- Fixed typos.
+
+#### Revision 2023-06a
 
 - Corrected the pre-defined prefix for voc4cat.
 
-### Revision 2023-03a
+#### Revision 2023-03a
 
 The following is different in the voc4cat-template (`voc4cat_template_043.xlsx`):
 
@@ -24,6 +26,6 @@ The following is different in the voc4cat-template (`voc4cat_template_043.xlsx`)
 
 The identical template `voc4cat_template_043.xlsx` is included in [voc4cat-tool/templates](https://github.com/nfdi4cat/voc4cat-tool/tree/main/templates).
 
-## Earlier template versions
+### Earlier template versions
 
 Earlier template versions which are not listed here should not be used.

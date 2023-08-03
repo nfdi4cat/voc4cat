@@ -1,6 +1,6 @@
 # A SKOS vocabulary for the catalysis disciplines
 
-> **The first collection of terms has just been made public (June-2023)**.
+> **The first collection of terms was just published (June-2023)**.
 > **We will add more content in the coming weeks and month.**
 
 The vocabulary has been created and maintained as part of the [NFDI4Cat](http://www.nfdi4cat.org) initiative and follows our [Voc4Cat Guidelines](https://doi.org/10.5281/zenodo.7669183).

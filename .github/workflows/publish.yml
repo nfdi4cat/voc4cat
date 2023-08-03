@@ -38,7 +38,7 @@ jobs:
         run: |
           python -VV
           python -m pip install --upgrade pip setuptools wheel
-          python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@main
+          python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@v0.5.1
 
       - name: Run voc4cat to build docs & Excel-files matching turtle files
         run: |

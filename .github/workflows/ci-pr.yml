@@ -57,7 +57,11 @@ jobs:
           python -VV
           python -m pip install --upgrade pip setuptools wheel
 
-          python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@main
+          # install tagged version
+          python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@v0.5.1
+
+          # examples for other install options
+          # python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@main
           # from private repo: python -m pip install git+https://anon:${{ SECRETS.READ_PAT_VOC4CAT }}@github.com/dalito/voc4cat-tool.git@main
 
       - name: Dynamically set RUN_DATE environment variable

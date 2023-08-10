@@ -6,7 +6,7 @@
 The vocabulary has been created and maintained as part of the [NFDI4Cat](http://www.nfdi4cat.org) initiative and follows our [Voc4Cat Guidelines](https://doi.org/10.5281/zenodo.7669183).
 
 This repository was created from the template [voc4cat-template](https://github.com/nfdi4cat/voc4cat-template).
-It uses the [voc4cat-tool](https://github.com/nfdi4cat/voc4cat-tool) and GitHub features like gh-actions, pull requests etc. to reduce the maintenance workload for contributors and editors.
+It uses the [voc4cat-tool](https://github.com/nfdi4cat/voc4cat-tool) and GitHub features like pull requests, gh-actions, gh-pages etc. to reduce the maintenance workload for contributors and editors.
 
 ## Basic principles
 
@@ -26,7 +26,7 @@ To discuss about the **voc4cat**-vocabulary maintained here, create an [issue](h
 
 To contribute new concepts or collections or change existing ones, you may either submit your contributions as Excel/xlsx-file or (as an expert) as new/changed turtle file.
 
-> *To try out the workflow with some example data, you may use  [voc4cat-playground](https://github.com/nfdi4cat/voc4cat-playground) which is identical to this repository but will be purged from time to time.*
+> *To try out the workflow with some example data, you may use  [voc4cat-playground](https://github.com/nfdi4cat/voc4cat-playground) which is almost identical to this repository but is not meant to last.*
 
 Here are the steps for submitting updates in Excel.
 
@@ -47,7 +47,7 @@ Here are the steps for submitting updates in Excel.
   - or why the proposed change may not fit.
 - If you need to fix something update the pull request branch. This will trigger the pipeline to run again.
 
-Finally, when the proposed merge request is accepted, your changes will be integrated in the vocabulary in the folder [vocabularies](https://github.com/nfdi4cat/voc4cat/tree/main/vocabularies).
+Finally, when the proposed merge request is accepted, your changes will be integrated in the vocabulary in the folder [vocabularies](https://github.com/nfdi4cat/voc4cat/tree/main/vocabularies). The vocabulary is stored in split form using a folder of turtle files. Each concept, collection and concept scheme is stored in a separate file using the ID-part of the IRI as file name.
 
 See [inbox-excel-vocabs/README.md](inbox-excel-vocabs/README.md) for a minimal example how to test the submission process.
 

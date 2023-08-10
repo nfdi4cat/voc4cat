@@ -4,6 +4,11 @@ The templates here match structure-wise with the templates in [Voc4Cat-tool](htt
 
 ### Version 0.4.3
 
+#### Revision 2023-08a
+
+- Changed included example data to be consistent with improved validation.
+- Updated help on filling out provenance fields.
+
 #### Revision 2023-07a
 
 - Fixed typos.

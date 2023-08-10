@@ -1,0 +1,24 @@
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://example.org/test/>
+    a skos:ConceptScheme ;
+    dcterms:created "2023-03-10"^^xsd:date ;
+    dcterms:creator <http://example.org/nfdi4cat/> ;
+    dcterms:hasPart <https://example.org/test/0000010> ;
+    dcterms:identifier ""^^xsd:token ;
+    dcterms:modified "2023-03-10"^^xsd:date ;
+    dcterms:provenance "https://orcid.org/0000-0001-2345-6789 Sofia Garcia"@en ;
+    dcterms:publisher <http://example.org/nfdi4cat/> ;
+    owl:versionInfo "v2023-03-10" ;
+    skos:definition "A test vocabulary for the voc4cat template"@en ;
+    skos:hasTopConcept
+        <https://example.org/test/0000001> ,
+        <https://example.org/test/0000003> ;
+    skos:prefLabel "Test-of-Voc4Cat"@en ;
+    dcat:contactPoint "Sofia Garcia (orcid:0000-0001-2345-6789)" ;
+.
+

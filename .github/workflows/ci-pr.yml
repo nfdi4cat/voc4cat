@@ -13,6 +13,7 @@ env:
   FORCE_COLOR: "1"  # Make tool output pretty.
   PIP_DISABLE_PIP_VERSION_CHECK: "1"
   PIP_PROGRESS_BAR: "off"
+  LOGLEVEL: "DEBUG"
   RUN_URL: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID
 
 jobs:
@@ -58,23 +59,46 @@ jobs:
           python -m pip install --upgrade pip setuptools wheel
 
           # install tagged version
-          python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@v0.5.1
-
-          # examples for other install options
+          python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@v0.6.2
           # python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@main
-          # from private repo: python -m pip install git+https://anon:${{ SECRETS.READ_PAT_VOC4CAT }}@github.com/dalito/voc4cat-tool.git@main
 
-      - name: Dynamically set RUN_DATE environment variable
-        run: echo "RUN_DATE=$(date +'%Y-%m-%dT%H%M')" >> $GITHUB_ENV
+          # Example for installing from private repo:
+          # python -m pip install git+https://anon:${{ SECRETS.READ_PAT_VOC4CAT }}@github.com/dalito/voc4cat-tool.git@main
 
-      - name: Run voc4cat
+      - name: Set dynamic environment variables.
+        run: |
+          echo "RUN_DATE=$(date +'%Y-%m-%dT%H%M')" >> $GITHUB_ENV
+
+      - name: Run voc4cat (pre-convert checks)
         run: |
           voc4cat --version
-          voc4cat -v --ci-check --config _main_branch/idranges.toml --check --forward --logfile voc4cat.log --docs pylode --output-directory outbox inbox-excel-vocabs/
+          # check inbox file names
+          voc4cat check --config _main_branch/idranges.toml --logfile outbox/voc4cat.log --ci-pre inbox-excel-vocabs/ _main_branch/vocabularies
+          # check xlsx file(s). If the check fails, write annotated file to outbox.
+          voc4cat check --config _main_branch/idranges.toml --logfile outbox/voc4cat.log --outdir outbox inbox-excel-vocabs/
 
-      - name: Merge changes into vocabulary (in PR branch)
+      - name: Run voc4cat (convert)
         run: |
-          merge_vocab --logfile voc4cat.log outbox/ vocabularies/
+          # convert file(s) from xlsx in inbox to turtle in outbox
+          voc4cat convert --config _main_branch/idranges.toml --logfile outbox/voc4cat.log --outdir outbox inbox-excel-vocabs/
+
+      - name: Run voc4cat (post-convert checks)
+        run: |
+          # check all ttl file(s) in outbox
+          voc4cat check --config _main_branch/idranges.toml --logfile outbox/voc4cat.log outbox/
+          # check if vocabulary changes are allowed
+          voc4cat check --config _main_branch/idranges.toml --logfile outbox/voc4cat.log --ci-post _main_branch/vocabularies outbox/
+
+      - name: Run voc4cat (build HTML documentation)
+        run: |
+          voc4cat docs --logfile outbox/voc4cat.log --force outbox/
+
+      - name: Split vocabulary and merge into vocabulary dir (in PR branch)
+        run: |
+          voc4cat transform --split --inplace --logfile outbox/voc4cat.log --outdir outbox_new_voc outbox/
+          merge_vocab --logfile outbox/voc4cat.log  outbox_new_voc/ vocabularies/
+          # copy xlsx to outbox so that the xlsx file is part of the artifact
+          cp $(find inbox-excel-vocabs -name "*.xlsx") outbox/
           git status
 
       - name: Store artifacts

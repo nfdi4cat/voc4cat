@@ -1,0 +1,17 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://example.org/test/0000010>
+    a skos:Collection ;
+    dcterms:identifier "0000010"^^xsd:token ;
+    dcterms:isPartOf <https://example.org/test/> ;
+    dcterms:provenance "0000-0001-2345-6789 Created collection"@en ;
+    skos:definition "Collection of terms related to linked data."@en ;
+    skos:member
+        <https://example.org/test/0000001> ,
+        <https://example.org/test/0000002> ,
+        <https://example.org/test/0000003> ;
+    skos:prefLabel "Linked data term"@en ;
+.
+

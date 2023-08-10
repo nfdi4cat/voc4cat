@@ -101,9 +101,9 @@ cython_debug/
 # setuptools_scm generated version file
 _version.py
 
-# output dir
+# Special directories used in github actions of voc4cat vocabularies
+# which must be ignored to not get committed automatically.
 outbox/
+outbox_new_voc/
 publish/
-
-# Special dir for a clone of main branch in gh-actions
 _main_branch

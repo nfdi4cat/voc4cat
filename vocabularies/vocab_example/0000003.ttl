@@ -1,0 +1,17 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://example.org/test/0000003>
+    a skos:Concept ;
+    dcterms:identifier "0000003"^^xsd:token ;
+    dcterms:provenance "0000-0001-2345-6789 Created concept"@en ;
+    rdfs:isDefinedBy <https://datatracker.ietf.org/doc/html/rfc3987> ;
+    skos:altLabel "IRI"@en ;
+    skos:definition "Internationalized Resource Identifier (IRI) is an internet protocol standard which builds on the Uniform Resource Identifier (URI) protocol by greatly expanding the set of permitted characters."@en ;
+    skos:inScheme <https://example.org/test/> ;
+    skos:prefLabel "Internationalized Resource Identifier"@en ;
+    skos:topConceptOf <https://example.org/test/> ;
+.
+

@@ -1,0 +1,19 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://example.org/test/0000002>
+    a skos:Concept ;
+    dcterms:identifier "0000002"^^xsd:token ;
+    dcterms:provenance "0000-0001-2345-6789 Created concept"@en ;
+    rdfs:isDefinedBy <https://www.w3.org/TR/2010/NOTE-curie-20101216/> ;
+    skos:altLabel
+        "CURIE"@en ,
+        "CompactURI"@en ;
+    skos:broader <https://example.org/test/0000001> ;
+    skos:definition "A CURIE (or Compact URI) defines a generic, abbreviated syntax for expressing Uniform Resource Identifiers (URIs). "@en ;
+    skos:inScheme <https://example.org/test/> ;
+    skos:prefLabel "Compact Universal Resource Locator"@en ;
+.
+

@@ -1,9 +1,10 @@
 # This action runs when a release is created and on merges to main.
 #
 # Workflow steps:
-# - build docs
+# - create joined vocabulary file in addition to split version
 # - create excel-file from turtle
-# - publish docs and excel-file to gh-pages
+# - build docs
+# - publish docs, vocabulary-turtle files and excel-file to gh-pages
 
 name: Build & Publish
 on:
@@ -18,6 +19,7 @@ env:
   FORCE_COLOR: "1"  # Make tool output pretty.
   PIP_DISABLE_PIP_VERSION_CHECK: "1"
   PIP_PROGRESS_BAR: "off"
+  LOGLEVEL: "DEBUG"
 
 jobs:
   build:
@@ -38,16 +40,28 @@ jobs:
         run: |
           python -VV
           python -m pip install --upgrade pip setuptools wheel
-          python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@v0.5.1
 
-      - name: Run voc4cat to build docs & Excel-files matching turtle files
+          # install tagged version
+          python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@v0.6.2
+          # python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@main
+
+      - name: Run voc4cat (publish joined & split SKOS/turtle)
         run: |
           voc4cat --version
-          voc4cat --docs pylode --output-directory publish vocabularies/
-          voc4cat --output-directory publish vocabularies/ --template templates/voc4cat_template_043.xlsx
+          cp -r vocabularies/ publish/
+          # Build joined turtle
+          voc4cat transform --logfile publish/voc4cat.log --join publish/
+
+      - name: Run voc4cat (build HTML documentation)
+        run: |
+          voc4cat docs --force --logfile publish/voc4cat.log publish/
+
+      - name: Run voc4cat (build current Excel file)
+        run: |
+          voc4cat convert --logfile publish/voc4cat.log --template templates/voc4cat_template_043.xlsx publish/
           ls -l publish/ || echo "publish directory does not exist."
 
-      - name: Deploy documentation
+      - name: Deploy documentation & SKOS/turtle & xlsx
         # Pin third party action (v3.9.3)
         uses: peaceiris/actions-gh-pages@373f7f263a76c20808c831209c920827a82a2847
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
@@ -57,14 +71,14 @@ jobs:
           publish_dir: ./publish
           force_orphan: true
 
-      - name: Store xlsx file(s) as artifacts
-        # This step is not required and may be removed.  The xlsx files are
-        # stored in gh-pages and can be linked which makes them easier to find.
+      - name: Store publish dir (=pages) as artifact
+        # This step is not required and may be removed.
+        # It may be helpful for trouble shooting.
         if: ${{ always() }}
         uses: actions/upload-artifact@v3
         with:
-          name: voc4cat-excel-vocab
-          path: publish/*.xlsx
+          name: voc4cat-pages-content
+          path: publish/
 
 # Lit:
 # https://github.com/peaceiris/actions-gh-pages

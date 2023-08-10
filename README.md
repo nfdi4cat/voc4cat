@@ -1,7 +1,7 @@
 # A template to maintain vocabularies on GitHub
 
 This repository may be used to create and maintain your own SKOS-vocabularies on GitHub.
-It uses the [voc4cat-tool](https://github.com/nfdi4cat/voc4cat-tool) and GitHub features like gh-actions, pull requests etc. to reduce the maintenance workload for contributors and editors.
+It uses the [voc4cat-tool](https://github.com/nfdi4cat/voc4cat-tool) and GitHub features like pull requests, gh-actions, gh-pages etc. to reduce the maintenance workload for contributors and editors.
 The template is maintained as part of the [NFDI4Cat](http://www.nfdi4cat.org) initiative.
 
 ## How to start?
@@ -21,7 +21,7 @@ After approval your pull request is ready to be merged by the editors. The merge
 The Excel/xlsx files submitted as pull request are automatically checked and (if all is good) converted to turtle.
 By using a vocabulary-specific configuration more thorough validation can be activated,
 e.g. if terms get removed in a PR or if correct IRIs are used.
-To validate IRIs the configuration supports ID-ranges (similar to [OBO idrange](https://oboacademy.github.io/obook/howto/idrange/) but we use toml-format).
+To validate IRIs the configuration supports ID-ranges (similar to [OBO idrange](https://oboacademy.github.io/obook/howto/idrange/) but we use the [toml](https://toml.io/)-format).
 The idea is that every author gets their own range of IDs to consume.
 This allows independent work and avoids using the same ID repeatedly.
 
@@ -62,7 +62,7 @@ Here are the steps for submitting updates in Excel.
   - or why the proposed change may not fit.
 - If you need to fix something update the pull request branch. This will trigger the pipeline to run again.
 
-Finally, when the proposed merge request is accepted, your changes will be integrated in the vocabularies in the folder `vocabularies`.
+Finally, when the proposed merge request is accepted, your changes will be integrated in the vocabularies in the folder `vocabularies`. The vocabularies are stored in split  form using one folder per vocabulary. Each concept, collection and concept scheme is stored in a separate file using the ID-part of the IRI as file name.
 
 See [inbox-excel-vocabs/README.md](inbox-excel-vocabs/README.md) for a minimal example how to test the submission process.
 
@@ -72,11 +72,11 @@ To discuss about the workflow for maintaining SKOS vocabularies based on this te
 
 To discuss about the tool that converts Excel to SKOS in gh-actions of this template, create an [voc4cat-tool issue](https://github.com/nfdi4cat/voc4cat-tool/issues).
 
-## How to use this template for my own vocabularies?
+## How to use this template for your own vocabularies?
 
 The template can be used to create your own independent repository for SKOS vocabularies maintenance.
 
-### Setting up our own github repository
+### Setting up your own github repository
 
 First create a new repository on github without any contents, named e.g. "my-new-vocabulary". Then set up your own independent vocabulary repository on the command line:
 

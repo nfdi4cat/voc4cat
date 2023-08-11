@@ -1,0 +1,18 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0000167>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0000167"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel
+        "Hg-Xe lamp"@en ,
+        "Hg/Xe lamp"@en ,
+        "mercury xenon lamp"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000166> ;
+    skos:definition "A lamp containing a mixture of mercury (Hg) and xenon (Xe) gases. Under electric current, the gas mixture gets ionized through a discharge electric charge creating a plasma generating UV and visible light. "@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "mercury-xenon lamp"@en ;
+.
+

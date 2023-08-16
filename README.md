@@ -25,11 +25,17 @@ To validate IRIs the configuration supports ID-ranges (similar to [OBO idrange](
 The idea is that every author gets their own range of IDs to consume.
 This allows independent work and avoids using the same ID repeatedly.
 
-In addition, HTML-documentation is created automatically and published on GitHub-pages.
+The voc4cat-template implements automatic storage of different versions of the vocabularies in gh-pages:
 
-- The general url is `https://{gh-org-name}.github.io/{repository-name}/{vocabulary-name}/`
-- In repository `nfdi4cat/voc4cat-template` the vocabulary `vocab_example` is documented at [https://nfdi4cat.github.io/voc4cat-template/vocab_example/](https://nfdi4cat.github.io/voc4cat-template/vocab_example/)
- 
+ - `dev` - Directory with artifacts built from the most recent commit to the main branch.
+ - `latest` - Directory with all files built for the latest release.
+ - `vYYYY-MM-DD` (for example `v2023-08-16`) - Directory with all files built for the release with this tag.
+
+For all versions, multiple files are stored (see https://github.com/nfdi4cat/voc4cat-template/issues/11#issuecomment-1680592185 for details). The correct version string is automatically inserted to all build artifacts. For `dev`, the first eight characters of the commit hash are used as version (for example `v_fadfa5f9`).
+
+- Taking into account the above scheme, the url for the artifacts for the `dev` version in gh-pages is `https://{gh-org-name}.github.io/{repository-name}/dev/{vocabulary-name}/`
+- For example, in repository `nfdi4cat/voc4cat-template` the vocabulary `vocab_example` is documented at [https://nfdi4cat.github.io/voc4cat-template/dev/vocab_example/](https://nfdi4cat.github.io/voc4cat-template/dev/vocab_example/)
+
 ### Creating vocabularies for catalysis or catalytic reaction engineering
 
 Please strongly consider contributing to [voc4cat](https://github.com/nfdi4cat/voc4cat) instead of creating your own.
@@ -43,9 +49,9 @@ To contribute new concepts or collections or change existing ones, you may eithe
 Here are the steps for submitting updates in Excel.
 
 - Get the Excel/xlsx-vocabulary file
-  - The latest version of the vocabulary is always available via github-pages.
-    - The general url is `https://{gh-org-name}.github.io/{repository-name}/{vocabulary-name}.xlsx`
-    - For example in nfdi4cat/voc4cat-template the vocabulary `vocab_example` can be downloaded from [https://nfdi4cat.github.io/voc4cat-template/vocab_example.xlsx](https://nfdi4cat.github.io/voc4cat-template/vocab_example.xlsx)
+  - The most recent version of the vocabulary is always available via github-pages.
+    - The general url is `https://{gh-org-name}.github.io/{repository-name}/dev/{vocabulary-name}.xlsx`
+    - For example in nfdi4cat/voc4cat-template the most recent vocabulary `vocab_example` can be downloaded from [https://nfdi4cat.github.io/voc4cat-template/dev/vocab_example.xlsx](https://nfdi4cat.github.io/voc4cat-template/dev/vocab_example.xlsx)
   - For setting up a new vocabulary, use the xlsx-file from the templates-folder.
 - Make changes to the Excel file
 - Add the xlsx file to your clone of the repository into the folder `inbox-excel-vocabs`

@@ -4,6 +4,10 @@ The templates here match structure-wise with the templates in [Voc4Cat-tool](htt
 
 ### Version 0.4.3
 
+#### Revision 2023-08b
+
+- Cells version and modified date in concept scheme sheet are now optional. Updated notes accordingly.
+
 #### Revision 2023-08a
 
 - Changed included example data to be consistent with improved validation.

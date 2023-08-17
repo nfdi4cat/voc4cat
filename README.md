@@ -16,10 +16,22 @@ The process to contribute to the **voc4cat vocabulary** is as follows:
 - submit a pull request with the updated file,
 - collaborate on the pull request with editors or other github users,
 
-After approval your pull request is ready to be merged by the editors. The merge will include your contribution into the SKOS-vocabulary file in the `vocabularies`-folder and it will also be reflected in the documentation that is automatically updated.
+After approval your pull request is ready to be merged by the editors. The merge will include your contribution into the SKOS-vocabulary file in the `vocabularies`-folder. Upon merge the corresponding documentation and a joined turtle file will be automatically built and published to gh-pages.
 
-- The vocabulary `voc4cat` is documented at [https://nfdi4cat.github.io/voc4cat/voc4cat/](https://nfdi4cat.github.io/voc4cat/voc4cat/)
-- The whole vocabulary as one big turtle file can be accessed via gh-pages at [https://nfdi4cat.github.io/voc4cat/voc4cat.ttl](https://nfdi4cat.github.io/voc4cat/voc4cat.ttl) (and soon via w3id.org IRI).
+Besides this "in-developement" version of the vocabulary, the latest released version and older releases are also available.
+
+Links to the "in-development" vesion:
+- `voc4cat` vocabulary documentation [https://nfdi4cat.github.io/voc4cat/dev/voc4cat/](https://nfdi4cat.github.io/voc4cat/dev/voc4cat/)
+- `voc4cat` vocabulary as one large turtle file [https://nfdi4cat.github.io/voc4cat/dev/voc4cat.ttl](https://nfdi4cat.github.io/voc4cat/dev/voc4cat.ttl) (and soon via w3id.org IRI).
+
+Links to the latest release (target of w3id.org redirects):
+- `voc4cat` vocabulary documentation [https://nfdi4cat.github.io/voc4cat/dev/voc4cat/](https://nfdi4cat.github.io/voc4cat/dev/voc4cat/)
+- `voc4cat` vocabulary as one large turtle file [https://nfdi4cat.github.io/voc4cat/dev/voc4cat.ttl](https://nfdi4cat.github.io/voc4cat/dev/voc4cat.ttl) (and soon via w3id.org IRI).
+
+Links to current and earlier releases (targets of w3id.org redirects):
+- `voc4cat` vocabulary documentation `https://nfdi4cat.github.io/voc4cat/{release-tag}/voc4cat/`
+- `voc4cat` vocabulary as one large turtle file `https://nfdi4cat.github.io/voc4cat/{release-tag}/voc4cat.ttl`
+
 
 ## Contributing to vocabularies
 
@@ -27,13 +39,13 @@ To discuss about the **voc4cat**-vocabulary maintained here, create an [issue](h
 
 To contribute new concepts or collections or change existing ones, you may either submit your contributions as Excel/xlsx-file or (as an expert) as new/changed turtle file.
 
-> *To try out the workflow with some example data, you may use  [voc4cat-playground](https://github.com/nfdi4cat/voc4cat-playground) which is almost identical to this repository but is not meant to last.*
+> *To try out the workflow with some example data, you may use [voc4cat-playground](https://github.com/nfdi4cat/voc4cat-playground) which is almost identical to this repository but is not meant to last.*
 
 Here are the steps for submitting updates in Excel.
 
 - Get the Excel/xlsx-vocabulary file
-  - The latest version of the vocabulary is always available via github-pages.
-    - The xlsx-file for `voc4cat` can be downloaded from [https://nfdi4cat.github.io/voc4cat/voc4cat.xlsx](https://nfdi4cat.github.io/voc4cat/voc4cat.xlsx)
+  - The most recent version of the vocabulary is always available via github-pages.
+    - The xlsx-file for `voc4cat` can be downloaded from [https://nfdi4cat.github.io/voc4cat/dev/voc4cat.xlsx](https://nfdi4cat.github.io/voc4cat/dev/voc4cat.xlsx)
 - Make changes to the Excel file
 - Add the xlsx file to your clone of the repository into the folder `inbox-excel-vocabs`
   - The name of the file must match the vocabulary that you want to update. So do not change the filename, but keep `voc4cat.xlsx`.
@@ -48,7 +60,7 @@ Here are the steps for submitting updates in Excel.
   - or why the proposed change may not fit.
 - If you need to fix something update the pull request branch. This will trigger the pipeline to run again.
 
-Finally, when the proposed merge request is accepted, your changes will be integrated in the vocabulary in the folder [vocabularies](https://github.com/nfdi4cat/voc4cat/tree/main/vocabularies). The vocabulary is stored in split form using a folder of turtle files. Each concept, collection and concept scheme is stored in a separate file using the ID-part of the IRI as file name.
+Finally, when the proposed merge request is accepted, your changes will be integrated in the vocabularies in the folder `vocabularies`. The vocabularies are stored in split form using one folder per vocabulary. Each concept, collection and concept scheme is stored in a separate file using the ID-part of the IRI as file name.
 
 See [inbox-excel-vocabs/README.md](inbox-excel-vocabs/README.md) for a minimal example how to test the submission process.
 

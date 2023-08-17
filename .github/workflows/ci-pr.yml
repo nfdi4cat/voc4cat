@@ -59,7 +59,7 @@ jobs:
           python -m pip install --upgrade pip setuptools wheel
 
           # install tagged version
-          python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@v0.6.2
+          python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@v0.7.0
           # python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@main
 
           # Example for installing from private repo:
@@ -98,7 +98,7 @@ jobs:
           voc4cat transform --split --inplace --logfile outbox/voc4cat.log --outdir outbox_new_voc outbox/
           merge_vocab --logfile outbox/voc4cat.log  outbox_new_voc/ vocabularies/
           # copy xlsx to outbox so that the xlsx file is part of the artifact
-          cp $(find inbox-excel-vocabs -name "*.xlsx") outbox/
+          find inbox-excel-vocabs -name '*.xlsx' -exec cp {} -t outbox/ \;
           git status
 
       - name: Store artifacts

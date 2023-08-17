@@ -24,11 +24,11 @@ Links to the "in-development" vesion:
 - `voc4cat` vocabulary documentation [https://nfdi4cat.github.io/voc4cat/dev/voc4cat/](https://nfdi4cat.github.io/voc4cat/dev/voc4cat/)
 - `voc4cat` vocabulary as one large turtle file [https://nfdi4cat.github.io/voc4cat/dev/voc4cat.ttl](https://nfdi4cat.github.io/voc4cat/dev/voc4cat.ttl) (and soon via w3id.org IRI).
 
-Links to the latest release (target of w3id.org redirects):
-- `voc4cat` vocabulary documentation [https://nfdi4cat.github.io/voc4cat/dev/voc4cat/](https://nfdi4cat.github.io/voc4cat/dev/voc4cat/)
-- `voc4cat` vocabulary as one large turtle file [https://nfdi4cat.github.io/voc4cat/dev/voc4cat.ttl](https://nfdi4cat.github.io/voc4cat/dev/voc4cat.ttl) (and soon via w3id.org IRI).
+Links to the latest release (soon also via w3id.org IRI):
+- `voc4cat` vocabulary documentation [https://nfdi4cat.github.io/voc4cat/latest/voc4cat/](https://nfdi4cat.github.io/voc4cat/latest/voc4cat/)
+- `voc4cat` vocabulary as one large turtle file [https://nfdi4cat.github.io/voc4cat/latest/voc4cat.ttl](https://nfdi4cat.github.io/voc4cat/latest/voc4cat.ttl)
 
-Links to current and earlier releases (targets of w3id.org redirects):
+Links to current and earlier releases (soon also via w3id.org IRI):
 - `voc4cat` vocabulary documentation `https://nfdi4cat.github.io/voc4cat/{release-tag}/voc4cat/`
 - `voc4cat` vocabulary as one large turtle file `https://nfdi4cat.github.io/voc4cat/{release-tag}/voc4cat.ttl`
 

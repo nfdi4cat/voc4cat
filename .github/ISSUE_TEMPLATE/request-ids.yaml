@@ -17,11 +17,11 @@ body:
 - type: input
   id: orcid
   attributes:
-    label: Your ORCID identifyer.
+    label: Your ORCID identifier.
 - type: input
   id: ror
   attributes:
-    label: The ROR of the organisation you work for.
+    label: The ROR of the organization you work for.
 - type: input
   id: count
   attributes:

@@ -6,13 +6,14 @@ assignees: []
 body:
 - type: markdown
   id: intro
-  value: |
-    We track provenance and want to give credit to contributors.
-    Therefore, we ask for your [ORCID](https://orcid.org) below.
-    If you don't have one, we can use your GitHub name instead.
-    In addition you can supply the [ROR](https://ror.org) of the organization you work for.
+  attributes:
+    value: |
+      We track provenance and want to give credit to contributors.
+      Therefore, we ask for your [ORCID](https://orcid.org) below.
+      If you don't have one, we can use your GitHub name instead.
+      In addition you can supply the [ROR](https://ror.org) of the organization you work for.
 
-    Also tell us how many IDs you need.
+      Also tell us how many IDs you need.
 - type: input
   id: orcid
   attributes:

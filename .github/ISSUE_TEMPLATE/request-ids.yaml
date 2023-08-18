@@ -7,7 +7,7 @@ body:
 - type: markdown
   id: intro
   attributes:
-    value: |
+    value: >
       We track provenance and want to give credit to contributors.
       Therefore, we ask for your [ORCID](https://orcid.org) below.
       If you don't have one, we can use your GitHub name instead.

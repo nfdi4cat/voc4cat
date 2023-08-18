@@ -20,18 +20,32 @@ After approval your pull request is ready to be merged by the editors. The merge
 
 Besides this "in-developement" version of the vocabulary, the latest released version and older releases are also available.
 
-Links to the "in-development" vesion:
-- `voc4cat` vocabulary documentation [https://nfdi4cat.github.io/voc4cat/dev/voc4cat/](https://nfdi4cat.github.io/voc4cat/dev/voc4cat/)
-- `voc4cat` vocabulary as one large turtle file [https://nfdi4cat.github.io/voc4cat/dev/voc4cat.ttl](https://nfdi4cat.github.io/voc4cat/dev/voc4cat.ttl) (and soon via w3id.org IRI).
+Links to specific versions:
 
-Links to the latest release (soon also via w3id.org IRI):
-- `voc4cat` vocabulary documentation [https://nfdi4cat.github.io/voc4cat/latest/voc4cat/](https://nfdi4cat.github.io/voc4cat/latest/voc4cat/)
-- `voc4cat` vocabulary as one large turtle file [https://nfdi4cat.github.io/voc4cat/latest/voc4cat.ttl](https://nfdi4cat.github.io/voc4cat/latest/voc4cat.ttl)
+- latest released version
+  - https://w3id.org/nfdi4cat/voc4cat
+- "in-development" vesion (built from most recent commit to main)
+  - `voc4cat` vocabulary documentation https://w3id.org/nfdi4cat/voc4cat/dev
+- current and earlier releases identified by release date (the "v" before the data is optional)
+  - General scheme `https://w3id.org/nfdi4cat/voc4cat/{release-tag}`<BR>for example https://w3id.org/nfdi4cat/voc4cat/v2023-08-17
 
-Links to current and earlier releases (soon also via w3id.org IRI):
-- `voc4cat` vocabulary documentation `https://nfdi4cat.github.io/voc4cat/{release-tag}/voc4cat/`
-- `voc4cat` vocabulary as one large turtle file `https://nfdi4cat.github.io/voc4cat/{release-tag}/voc4cat.ttl`
+We have configured [content negotiation](https://en.wikipedia.org/wiki/Content_negotiation) for these urls.
+So you can get human readable HTML documentation and but also a machine-readable turtle file of the vocabulary from the same url.
+The IRI-design is described in detail in [iri-design.md](https://github.com/nfdi4cat/voc4cat/main/iri-design.md).
 
+To get the turtle file you may use tools like [curl](https://curl.se/) or [httpie](https://httpie.io/docs/cli) that allow to specify the content type. For example, to download the turtle file of the latest released version:
+
+```bash
+# with httpie
+http -o voc4cat.ttl --download https://w3id.org/nfdi4cat/voc4cat Accept:"application/x-turtle"
+# with curl
+curl -o voc4cat.ttl -L -H "accept:application/x-turtle" https://w3id.org/nfdi4cat/voc4cat
+```
+
+We also provide links to turtle files of individual concepts and collections:
+
+- for the latest release `https://w3id.org/nfdi4cat/voc4cat_{NUMERIC-ID}.ttl`<BR>for example https://w3id.org/nfdi4cat/voc4cat_0000123
+- for releases by date-tag `https://w3id.org/nfdi4cat/voc4cat/{release-tag}/voc4cat_{NUMERIC-ID}.ttl`<BR>for example https://w3id.org/nfdi4cat/voc4cat/v2023-08-17/voc4cat_0000123
 
 ## Contributing to vocabularies
 
@@ -44,9 +58,8 @@ To contribute new concepts or collections or change existing ones, you may eithe
 Here are the steps for submitting updates in Excel.
 
 - Get the Excel/xlsx-vocabulary file
-  - The most recent version of the vocabulary is always available via github-pages.
-    - The xlsx-file for `voc4cat` can be downloaded from [https://nfdi4cat.github.io/voc4cat/dev/voc4cat.xlsx](https://nfdi4cat.github.io/voc4cat/dev/voc4cat.xlsx)
-- Make changes to the Excel file
+  - The most recent version of the vocabulary is always available via github-pages https://nfdi4cat.github.io/voc4cat/dev/voc4cat.xlsx
+- Make changes to the Excel file. If you want to add something new you need to [request a range of IDs](https://github.com/nfdi4cat/voc4cat/issues/new/choose) for you.
 - Add the xlsx file to your clone of the repository into the folder `inbox-excel-vocabs`
   - The name of the file must match the vocabulary that you want to update. So do not change the filename, but keep `voc4cat.xlsx`.
 - Create a pull request with the updated Excel-file in this repository.
@@ -84,7 +97,6 @@ To discuss about the tool that converts Excel to SKOS in gh-actions of this temp
 
 ### Vocabularies
 
-
 All vocabularies in this repository are CC0 licensed, see [LICENSE](LICENSE) for details.
 
 ### Voc4cat template
@@ -94,3 +106,5 @@ The template itself is CC0 licensed, see [LICENSE](LICENSE). Although there is n
 ## Acknowledgement
 
 This work was funded by the German Research Foundation (DFG) through the project "[NFDI4Cat](https://www.nfdi4cat.org) - NFDI for Catalysis-Related Sciences" (DFG project no. [441926934](https://gepris.dfg.de/gepris/projekt/441926934)), within the National Research Data Infrastructure ([NFDI](https://www.nfdi.de)) programme of the Joint Science Conference (GWK).
+
+We thank the [W3ID Consortium](https://w3id.org) for making its permanent url service available to the community.

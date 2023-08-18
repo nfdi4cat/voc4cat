@@ -1,0 +1,12 @@
+name: 💡 Improvement
+description: Suggest an improvement
+title: "💡 <title>"
+labels: ["Enhancement"]
+body:
+- type: textarea
+  id: description
+  attributes:
+    label: Description
+    render: markdown
+  validations:
+    required: false

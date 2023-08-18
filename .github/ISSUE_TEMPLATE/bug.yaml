@@ -1,0 +1,19 @@
+name: 🐞 Bug
+description: File a bug report
+title: "🐞 <title>"
+labels: ["Bug"]
+body:
+- type: input
+  id: version
+  attributes:
+    label: Observed in version
+  validations:
+    required: false
+
+- type: textarea
+  id: description
+  attributes:
+    label: Description
+    render: markdown
+  validations:
+    required: false

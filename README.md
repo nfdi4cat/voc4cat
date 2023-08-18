@@ -16,7 +16,7 @@ All vocabularies based on this template have the same standard contribution proc
 - submit a pull request with the updated file,
 - collaborate on the pull request with editors or other github users,
 
-After approval your pull request is ready to be merged by the editors. The merge will include your contribution into the SKOS-vocabulary file in the `vocabularies`-folder and it will also be reflected in the documentation that is automatically updated.
+After approval your pull request is ready to be merged by the editors. The merge will include your contribution into the SKOS-vocabulary file in the `vocabularies`-folder. Upon merge the corresponding documentation and a joined turtle file will be automatically built and published to gh-pages.
 
 The Excel/xlsx files submitted as pull request are automatically checked and (if all is good) converted to turtle.
 By using a vocabulary-specific configuration more thorough validation can be activated,
@@ -24,6 +24,7 @@ e.g. if terms get removed in a PR or if correct IRIs are used.
 To validate IRIs the configuration supports ID-ranges (similar to [OBO idrange](https://oboacademy.github.io/obook/howto/idrange/) but we use the [toml](https://toml.io/)-format).
 The idea is that every author gets their own range of IDs to consume.
 This allows independent work and avoids using the same ID repeatedly.
+
 
 The voc4cat-template implements automatic storage of different versions of the vocabularies in gh-pages:
 
@@ -68,7 +69,7 @@ Here are the steps for submitting updates in Excel.
   - or why the proposed change may not fit.
 - If you need to fix something update the pull request branch. This will trigger the pipeline to run again.
 
-Finally, when the proposed merge request is accepted, your changes will be integrated in the vocabularies in the folder `vocabularies`. The vocabularies are stored in split  form using one folder per vocabulary. Each concept, collection and concept scheme is stored in a separate file using the ID-part of the IRI as file name.
+Finally, when the proposed merge request is accepted, your changes will be integrated in the vocabularies in the folder `vocabularies`. The vocabularies are stored in split form using one folder per vocabulary. Each concept, collection and concept scheme is stored in a separate file using the ID-part of the IRI as file name.
 
 See [inbox-excel-vocabs/README.md](inbox-excel-vocabs/README.md) for a minimal example how to test the submission process.
 

@@ -30,7 +30,7 @@ Links to specific versions:
   - General scheme `https://w3id.org/nfdi4cat/voc4cat/{release-tag}`<BR>for example https://w3id.org/nfdi4cat/voc4cat/v2023-08-17
 
 We have configured [content negotiation](https://en.wikipedia.org/wiki/Content_negotiation) for these urls.
-So you can get human readable HTML documentation and but also a machine-readable turtle file of the vocabulary from the same url.
+So you can get the human readable HTML documentation but also the machine-readable turtle file of the vocabulary from the same url.
 The IRI-design is described in detail in [iri-design.md](https://github.com/nfdi4cat/voc4cat/main/iri-design.md).
 
 To get the turtle file you may use tools like [curl](https://curl.se/) or [httpie](https://httpie.io/docs/cli) that allow to specify the content type. For example, to download the turtle file of the latest released version:

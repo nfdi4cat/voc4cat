@@ -1,4 +1,4 @@
-# This action runs on merges to main.
+# This action runs on merges of turtle files to main.
 #
 # Workflow steps:
 # - checkout gh-pages for updating
@@ -12,6 +12,8 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'vocabularies/**.ttl'
   workflow_dispatch:
 
 env:

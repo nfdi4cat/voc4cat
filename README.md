@@ -37,6 +37,9 @@ For all versions, multiple files are stored (see https://github.com/nfdi4cat/voc
 - Taking into account the above scheme, the url for the artifacts for the `dev` version in gh-pages is `https://{gh-org-name}.github.io/{repository-name}/dev/{vocabulary-name}/`
 - For example, in repository `nfdi4cat/voc4cat-template` the vocabulary `vocab_example` is documented at [https://nfdi4cat.github.io/voc4cat-template/dev/vocab_example/](https://nfdi4cat.github.io/voc4cat-template/dev/vocab_example/)
 
+In addition to the specific versions, an index page is generated that links to all vocabularies and the tagged releases.
+It is placed at the root of gh-pages (`https://{gh-org-name}.github.io/{repository-name}/`).
+
 ### Creating vocabularies for catalysis or catalytic reaction engineering
 
 Please strongly consider contributing to [voc4cat](https://github.com/nfdi4cat/voc4cat) instead of creating your own.

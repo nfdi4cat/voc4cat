@@ -7,7 +7,7 @@
 # - build docs
 # - publish docs, vocabulary-turtle files and excel-file to gh-pages
 
-name: Build & Publish
+name: Build
 on:
   push:
     branches:

@@ -1,3 +1,7 @@
+[![DOI](https://zenodo.org/badge/577900339.svg)](https://zenodo.org/badge/latestdoi/577900339)
+[![](https://github.com/nfdi4cat/voc4cat-template/workflows/Publish/badge.svg)](https://github.com/nfdi4cat/voc4cat-template/actions)
+[![](https://github.com/nfdi4cat/voc4cat-template/workflows/Build/badge.svg)](https://github.com/nfdi4cat/voc4cat-template/actions)
+
 # A template to maintain vocabularies on GitHub
 
 This repository may be used to create and maintain your own SKOS-vocabularies on GitHub.
@@ -25,12 +29,11 @@ To validate IRIs the configuration supports ID-ranges (similar to [OBO idrange](
 The idea is that every author gets their own range of IDs to consume.
 This allows independent work and avoids using the same ID repeatedly.
 
-
 The voc4cat-template implements automatic storage of different versions of the vocabularies in gh-pages:
 
- - `dev` - Directory with artifacts built from the most recent commit to the main branch.
- - `latest` - Directory with all files built for the latest release.
- - `vYYYY-MM-DD` (for example `v2023-08-16`) - Directory with all files built for the release with this tag.
+- `dev` - Directory with artifacts built from the most recent commit to the main branch.
+- `latest` - Directory with all files built for the latest release.
+- `vYYYY-MM-DD` (for example `v2023-08-16`) - Directory with all files built for the release with this tag.
 
 For all versions, multiple files are stored (see https://github.com/nfdi4cat/voc4cat-template/issues/11#issuecomment-1680592185 for details). The correct version string is automatically inserted to all build artifacts. For `dev`, the first eight characters of the commit hash are used as version (for example `v_fadfa5f9`).
 

@@ -29,5 +29,5 @@ body:
 - type: textarea
   id: message
   attributes:
-    label: Additional information on your plans.
-    render: markdown
+    label: Additional information.
+    description: Optionally tell us more about your plans.

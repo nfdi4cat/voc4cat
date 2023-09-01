@@ -1,5 +1,5 @@
-[![](https://github.com/nfdi4cat/voc4cat-template/workflows/Publish/badge.svg)](https://github.com/nfdi4cat/voc4cat-template/actions)
-[![](https://github.com/nfdi4cat/voc4cat-template/workflows/Build/badge.svg)](https://github.com/nfdi4cat/voc4cat-template/actions)`
+[![](https://github.com/nfdi4cat/voc4cat/workflows/Publish/badge.svg)](https://github.com/nfdi4cat/voc4cat/actions)
+[![](https://github.com/nfdi4cat/voc4cat/workflows/Build/badge.svg)](https://github.com/nfdi4cat/voc4cat/actions)
 
 # A SKOS vocabulary for the catalysis disciplines
 

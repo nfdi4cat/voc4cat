@@ -7,6 +7,7 @@ body:
   id: version
   attributes:
     label: Observed in version
+    description: "Please provide the vocabulary version."
   validations:
     required: false
 
@@ -14,6 +15,6 @@ body:
   id: description
   attributes:
     label: Description
-    render: markdown
+    description: Which issue did you observe?
   validations:
     required: false

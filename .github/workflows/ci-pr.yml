@@ -59,8 +59,12 @@ jobs:
           python -m pip install --upgrade pip setuptools wheel
 
           # install tagged version
-          python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@v0.7.0
+          python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@v0.7.4
           # python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@main
+
+          # install custom pylode 2.x  (adds sorted collections,
+          #    uses URIs as fragment IDs and is git-installable)
+          python -m pip install git+https://github.com/dalito/pyLODE.git@nfdi4cat-2.x
 
           # Example for installing from private repo:
           # python -m pip install git+https://anon:${{ SECRETS.READ_PAT_VOC4CAT }}@github.com/dalito/voc4cat-tool.git@main

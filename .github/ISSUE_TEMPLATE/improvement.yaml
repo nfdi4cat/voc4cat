@@ -7,6 +7,6 @@ body:
   id: description
   attributes:
     label: Description
-    render: markdown
+    description: What do you propose?
   validations:
     required: false

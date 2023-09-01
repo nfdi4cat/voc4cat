@@ -1,3 +1,6 @@
+[![](https://github.com/nfdi4cat/voc4cat-template/workflows/Publish/badge.svg)](https://github.com/nfdi4cat/voc4cat-template/actions)
+[![](https://github.com/nfdi4cat/voc4cat-template/workflows/Build/badge.svg)](https://github.com/nfdi4cat/voc4cat-template/actions)`
+
 # A SKOS vocabulary for the catalysis disciplines
 
 > **The first collection of terms was just published (June-2023)**.
@@ -46,6 +49,9 @@ We also provide links to turtle files of individual concepts and collections:
 
 - for the latest release `https://w3id.org/nfdi4cat/voc4cat_{NUMERIC-ID}.ttl`<BR>for example https://w3id.org/nfdi4cat/voc4cat_0000123
 - for releases by date-tag `https://w3id.org/nfdi4cat/voc4cat/{release-tag}/voc4cat_{NUMERIC-ID}.ttl`<BR>for example https://w3id.org/nfdi4cat/voc4cat/v2023-08-17/voc4cat_0000123
+
+In addition to the specific versions, an [index page](https://nfdi4cat.github.io/voc4cat/) is generated that links to all tagged releases.
+It is placed at the root of gh-pages.
 
 ## Contributing to vocabularies
 

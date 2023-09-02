@@ -75,7 +75,7 @@ Here are the steps for submitting updates in Excel.
   - or why the proposed change may not fit.
 - If you need to fix something update the pull request branch. This will trigger the pipeline to run again.
 
-Finally, when the proposed merge request is accepted, your changes will be integrated in the vocabularies in the folder `vocabularies`. The vocabularies are stored in split form using one folder per vocabulary. Each concept, collection and concept scheme is stored in a separate file using the ID-part of the IRI as file name.
+Finally, when the proposed pull request is accepted, your changes will be integrated in the vocabularies in the folder `vocabularies`. The vocabularies are stored in split form using one folder per vocabulary. Each concept, collection and concept scheme is stored in a separate file using the ID-part of the IRI as file name.
 
 See [inbox-excel-vocabs/README.md](inbox-excel-vocabs/README.md) for a minimal example how to test the submission process.
 
@@ -138,27 +138,27 @@ git push
 
 It is suggested to merge the changes from the template repository before every new release of your vocabulary. This ensures that the centrally maintained features and best practices trickle into your project.
 
-## Authors and acknowledgment
+## Authors and Contributors
 
 ### Vocabularies
 
-- *List all contributors.*
+- *List all authors and contributors.*
 
 ### Voc4cat template
 
-- David Linke (ORCID: 0000-0002-5898-1820) - Initial setup of repository and CI/CD pipelines
+- David Linke (ORCID: 0000-0002-5898-1820) - Creator of this repository template and its GitHub workflows.
 
 ## License
 
 ### Vocabularies
 
-*Adapt this paragraph to your needs! (Please consider CC0 or CC-BY 4.0)*
+*Adapt this paragraph to your needs! (Please consider CC0-1.0 or CC-BY 4.0)*
 
-All vocabularies in this repository are CC0 licensed, see [LICENSE](LICENSE) for details.
+All vocabularies in this repository are CC0-1.0 licensed, see [LICENSE](LICENSE) for details.
 
 ### Voc4cat template
 
-The template itself is CC0 licensed, see [LICENSE](LICENSE). Although there is no obligation, we nevertheless appreciate if our work is acknowledged in any derivative work.
+The template itself is CC0-1.0 licensed, see [LICENSE](LICENSE). Although there is no obligation, we nevertheless appreciate if our work is acknowledged in any derivative work.
 
 ## Acknowledgement
 

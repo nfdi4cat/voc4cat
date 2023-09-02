@@ -7,11 +7,16 @@
       "name": "Linke, David",
       "orcid": "0000-0002-5898-1820",
       "affiliation": "Leibniz Institute for Catalysis, Albert-Einstein-Str. 29 A, 18059 Rostock, Germany"
+    },
+    {
+      "name": "Moustakas, Nikolaos",
+      "orcid": "0000-0002-6242-2167",
+      "affiliation": "Leibniz Institute for Catalysis, Albert-Einstein-Str. 29 A, 18059 Rostock, Germany"
     }
   ],
-  "description": "<p>A repository template with workflows to maintain SKOS-vocabularies on GitHub as a community of for yourself.</p>\n\n<p>The workflows use the software <a href=\"https://github.com/nfdi4cat/voc4cat-tool/\">voc4cat-tool(</a> and GitHub features like pull requests, gh-actions, gh-pages etc. to reduce the maintenance workload for contributors and editors. The template has been developed as part of the <a href=\"http://www.nfdi4cat.org\">NFDI4Cat</a> initiative and is used for the SKOS-vocabulary for catalysis <a href=\"https://github.com/nfdi4cat/voc4cat/\"><b>voc4cat</b></a>.</p>",
+  "description": "<p><b>Voc4Cat</b> is a SKOS vocabulary for the catalysis disciplines.</p><p>The vocabulary was created in the <a href=\"http://www.nfdi4cat.org\">NFDI4Cat</a> initiative. The first collection of terms was published in June 2023 with a focus on photo catalysis. Our goal is to continuously extend the vocabulary to cover all subdisciplines of catalysis. The principles that we follow are summarized in the <a href=\"https://doi.org/10.5281/zenodo.7669182\">Voc4Cat Guidelines</a>.</p><p>If you want to help us building a catalysis vocabulary, please come to our GitHub repository. Everyone is welcome! We tried to make contributing easy: Download the current vocabulary as Excel file, make your edits and upload the modified file in a pull request.</p><p>The voc4cat repository is based on <a href=\"https://github.com/nfdi4cat/voc4cat-template/\">voc4cat-template</a>. The workflows use <a href=\"https://github.com/nfdi4cat/voc4cat-tool/\">voc4cat-tool</a> and GitHub features like pull requests, gh-actions, gh-pages etc. to minimize the workload for contributors and editors.</p>",
   "keywords": [
-    "SKOS", "vocabulary", "maintenance", "xlsx", "linked data", "rdf"
+    "SKOS", "vocabulary", "catalysis", "linked data", "rdf", "Excel"
   ],
   "license": "CC0-1.0",
   "related_identifiers": [
@@ -20,7 +25,13 @@
         "relation": "requires",
         "resource_type": "software",
         "scheme": "doi"
+    },
+    {
+      "identifier": "doi:10.5281/zenodo.8306845",
+      "relation": "hasPart",
+      "resource_type": "workflow",
+      "scheme": "doi"
     }
   ],
-  "upload_type": "workflow"
+  "upload_type": "software"
 }

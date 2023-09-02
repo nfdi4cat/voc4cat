@@ -3,8 +3,9 @@
 
 # A SKOS vocabulary for the catalysis disciplines
 
-> **The first collection of terms was just published (June-2023)**.
-> **We will add more content in the coming weeks and month.**
+> **The first collection of terms was published in June 2023.**
+> **Our goal is to grow the vocabulary to cover all subdisciplines of catalysis.**
+>**Please join if you like to help. Everyone is welcome!**
 
 The vocabulary has been created and maintained as part of the [NFDI4Cat](http://www.nfdi4cat.org) initiative and follows our [Voc4Cat Guidelines](https://doi.org/10.5281/zenodo.7669183).
 
@@ -13,13 +14,13 @@ It uses the [voc4cat-tool](https://github.com/nfdi4cat/voc4cat-tool) and GitHub 
 
 ## Basic principles
 
-The process to contribute to the **voc4cat vocabulary** is as follows:
+We tried hard to make contributing easy. The process is essentially *(see further below for details)*:
 
-- get and update the vocabulary file (xlsx),
-- submit a pull request with the updated file,
-- collaborate on the pull request with editors or other github users,
+- Download the [most current vocabulary file (xlsx)](https://nfdi4cat.github.io/voc4cat/dev/voc4cat.xlsx),
+- Edit the vocabulary file in Excel,
+- Submit a pull request with the updated file placed in the folder `inbox-excel-vocabs`.<BR>It is important to keep the original file name `voc4cat.xlsx`.
 
-After approval your pull request is ready to be merged by the editors. The merge will include your contribution into the SKOS-vocabulary file in the `vocabularies`-folder. Upon merge the corresponding documentation and a joined turtle file will be automatically built and published to gh-pages.
+After approval your pull request is ready to be merged by the editors. The merge will integrate your contribution into the SKOS-vocabulary files in the `vocabularies`-folder. Upon merge the corresponding documentation and a joined turtle file will be automatically built and published to gh-pages.
 
 Besides this "in-developement" version of the vocabulary, the latest released version and older releases are also available.
 
@@ -79,7 +80,7 @@ Here are the steps for submitting updates in Excel.
   - or why the proposed change may not fit.
 - If you need to fix something update the pull request branch. This will trigger the pipeline to run again.
 
-Finally, when the proposed merge request is accepted, your changes will be integrated in the vocabularies in the folder `vocabularies`. The vocabularies are stored in split form using one folder per vocabulary. Each concept, collection and concept scheme is stored in a separate file using the ID-part of the IRI as file name.
+Finally, when the proposed pull request is accepted, your changes will be integrated in the vocabularies in the folder `vocabularies`. The vocabularies are stored in split form using one folder per vocabulary. Each concept, collection and concept scheme is stored in a separate file using the ID-part of the IRI as file name.
 
 See [inbox-excel-vocabs/README.md](inbox-excel-vocabs/README.md) for a minimal example how to test the submission process.
 
@@ -89,25 +90,27 @@ To discuss about the workflow for maintaining SKOS vocabularies based on this te
 
 To discuss about the tool that converts Excel to SKOS in gh-actions of this template, create an [voc4cat-tool issue](https://github.com/nfdi4cat/voc4cat-tool/issues).
 
-## Authors and acknowledgment
+## Contributors
 
-### Vocabularies
+For details see the Zenodo record.
 
-- *List all contributors.*
+**A big thanks to our GitHub contributors:**
 
-### Voc4cat template
+<a href="https://github.com/nfdi4cat/voc4cat/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=nfdi4cat/voc4cat" />
+</a>
 
-- David Linke (ORCID: 0000-0002-5898-1820) - Initial setup of repository and CI/CD pipelines
+*Figure made with [contrib.rocks](https://contrib.rocks).*
 
 ## License
 
 ### Vocabularies
 
-All vocabularies in this repository are CC0 licensed, see [LICENSE](LICENSE) for details.
+All vocabularies in this repository are CC0-1.0 licensed, see [LICENSE](LICENSE) for details.
 
 ### Voc4cat template
 
-The template itself is CC0 licensed, see [LICENSE](LICENSE). Although there is no obligation, we nevertheless appreciate if our work is acknowledged in any derivative work.
+The template itself is CC0-1.0 licensed, see [LICENSE](LICENSE). Although there is no obligation, we nevertheless appreciate if our work is acknowledged in any derivative work.
 
 ## Acknowledgement
 

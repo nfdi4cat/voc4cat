@@ -2,7 +2,7 @@
 
 To test the pipeline you may use the template `templates/voc4cat_template_043.xlsx` file.
 
-- Check the filename of your excel file. In general, the stem of filename must match the vocabulary to create or update. So, in case of the example in this repo the name msut  be `vocab_example.xlsx`
+- Check the filename of your excel file. In general, the stem of filename must match the vocabulary to create or update. So, in case of the example in this repo the name must  be `vocab_example.xlsx`
 - Copy the file to this folder.
 - Add the file to git and submit a pull request. On GitHub the file can be added by dropping it to this folder.
 - If there are no validation errors the turtle files of the vocabulary in `vocabularies/vocab_example/` are generated (or updated) via gh-actions and committed to your pull request. The Excel file is removed from the pull request.

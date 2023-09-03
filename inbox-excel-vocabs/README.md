@@ -1,4 +1,4 @@
-**Please drop/add your updated Excel-file into this folder and create a pull request.**
+**Please drop/add your edited Excel-vocabulary file into this folder and create a pull request.**
 
 See also [../README.md](../README.md) for the steps in the contribution process.
 

@@ -1,3 +1,4 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8313341.svg)](https://doi.org/10.5281/zenodo.8313341)
 [![](https://github.com/nfdi4cat/voc4cat/workflows/Publish/badge.svg)](https://github.com/nfdi4cat/voc4cat/actions)
 [![](https://github.com/nfdi4cat/voc4cat/workflows/Build/badge.svg)](https://github.com/nfdi4cat/voc4cat/actions)
 
@@ -22,7 +23,7 @@ We tried hard to make contributing easy. The process is essentially *(see furthe
 
 After approval your pull request is ready to be merged by the editors. The merge will integrate your contribution into the SKOS-vocabulary files in the `vocabularies`-folder. Upon merge the corresponding documentation and a joined turtle file will be automatically built and published to gh-pages.
 
-Besides this "in-developement" version of the vocabulary, the latest released version and older releases are also available.
+Besides this "in-development" version of the vocabulary, the latest released version and older releases are also available.
 
 Links to specific versions:
 

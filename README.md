@@ -55,6 +55,9 @@ We also provide links to turtle files of individual concepts and collections:
 In addition to the specific versions, an [index page](https://nfdi4cat.github.io/voc4cat/) is generated that links to all tagged releases.
 It is placed at the root of gh-pages.
 
+To see how voc4cat rates in the [qSKOS](https://github.com/cmader/qSKOS) quality checks,
+you can use this link to the [SKOS testing tool](http://skos-play.sparna.fr/skos-testing-tool/test?url=https://nfdi4cat.github.io/voc4cat/dev/voc4cat.ttl&rules=anr,chr,dcc,dlv,el,hr,husv,ilc,ipl,ml,mri,ncl,oc,oilt,ol,otc,rc,rrc,strc,tchbc,uc,ucil,urc&format=html).
+
 ## Contributing to vocabularies
 
 To discuss about the **voc4cat**-vocabulary maintained here, create an [issue](https://github.com/nfdi4cat/voc4cat/issues).

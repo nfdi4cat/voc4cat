@@ -1,6 +1,7 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8313341.svg)](https://doi.org/10.5281/zenodo.8313341)
 [![](https://github.com/nfdi4cat/voc4cat/workflows/Publish/badge.svg)](https://github.com/nfdi4cat/voc4cat/actions)
 [![](https://github.com/nfdi4cat/voc4cat/workflows/Build/badge.svg)](https://github.com/nfdi4cat/voc4cat/actions)
+[<img src="https://www.w3.org/Icons/SW/Buttons/sw-skos-blue-v.svg" height="20" />](https://www.w3.org/TR/skos-primer/)
 
 # A SKOS vocabulary for the catalysis disciplines
 

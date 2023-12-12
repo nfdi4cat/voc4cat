@@ -37,7 +37,7 @@ Links to specific versions:
 
 We have configured [content negotiation](https://en.wikipedia.org/wiki/Content_negotiation) for these urls.
 So you can get the human readable HTML documentation but also the machine-readable turtle file of the vocabulary from the same url.
-The IRI-design is described in detail in [iri-design.md](https://github.com/nfdi4cat/voc4cat/main/iri-design.md).
+The IRI-design is described in detail in [iri-design.md](https://github.com/nfdi4cat/voc4cat/blob/main/iri-design.md).
 
 To get the turtle file you may use tools like [curl](https://curl.se/) or [httpie](https://httpie.io/docs/cli) that allow to specify the content type. For example, to download the turtle file of the latest released version:
 

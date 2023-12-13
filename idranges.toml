@@ -52,3 +52,103 @@ orcid = "0000-0003-3270-6895"
 ror_id = "https://ror.org/00r1edq15"
 
 # Continue with as many [[vocabs.voc4cat.id_range]] sections as needed.
+
+
+# ==== Configuration for vocabulary "physics_chemistry" ====
+
+[vocabs.physics_chemistry]
+id_length = 7
+permanent_iri_part = "https://w3id.org/nfdi4cat/voc4cat_physics_chemistry/"
+
+[vocabs.physics_chemistry.checks]
+allow_delete = false
+
+[vocabs.physics_chemistry.prefix_map]
+v4c-pc = "https://w3id.org/nfdi4cat/voc4cat_physics_chemistry/"
+
+# ==== Configuration for vocabulary "catalysis" ====
+
+[vocabs.catalysis]
+id_length = 7
+permanent_iri_part = "https://w3id.org/nfdi4cat/voc4cat_catalysis/"
+
+[vocabs.catalysis.checks]
+allow_delete = false
+
+[vocabs.catalysis.prefix_map]
+v4c-cat = "https://w3id.org/nfdi4cat/voc4cat_catalysis/"
+
+# ==== Configuration for vocabulary "homogeneous_catalysis" ====
+
+[vocabs.homogeneous_catalysis]
+id_length = 7
+permanent_iri_part = "https://w3id.org/nfdi4cat/voc4cat_homogeneous_catalysis/"
+
+[vocabs.homogeneous_catalysis.checks]
+allow_delete = false
+
+[vocabs.homogeneous_catalysis.prefix_map]
+v4c-hc = "https://w3id.org/nfdi4cat/voc4cat_homogeneous_catalysis/"
+
+# heterogeneous catalysis vocabulary
+
+# ==== Configuration for vocabulary "heterogeneous_catalysis" ====
+
+[vocabs.heterogeneous_catalysis]
+id_length = 7
+permanent_iri_part = "https://w3id.org/nfdi4cat/voc4cat_heterogeneous_catalysis/"
+
+[vocabs.heterogeneous_catalysis.checks]
+allow_delete = false
+
+[vocabs.heterogeneous_catalysis.prefix_map]
+v4c-het = "https://w3id.org/nfdi4cat/voc4cat_heterogeneous_catalysis/"
+
+
+# ==== Configuration for vocabulary "chemical_processes" ====
+
+[vocabs.chemical_processes]
+id_length = 7
+permanent_iri_part = "https://w3id.org/nfdi4cat/voc4cat_chemical_processes/"
+
+[vocabs.chemical_processes.checks]
+allow_delete = false
+
+[vocabs.chemical_processes.prefix_map]
+v4c-cp = "https://w3id.org/nfdi4cat/voc4cat_chemical_processes/"
+
+
+
+# ==== Configuration for vocabulary "photochemistry" ====
+
+[vocabs.photochemistry]
+id_length = 7
+
+permanent_iri_part = "https://w3id.org/nfdi4cat/voc4cat_photochemistry/"
+
+[vocabs.photochemistry.checks]
+allow_delete = false
+
+[vocabs.photochemistry.prefix_map]
+v4c-pc = "https://w3id.org/nfdi4cat/voc4cat_photochemistry/"
+
+
+
+# ==== Configuration for vocabulary "biocatalysis" ====
+
+[vocabs.biocatalysis]
+id_length = 7
+permanent_iri_part = "https://w3id.org/nfdi4cat/voc4cat_biocatalysis/"
+
+[vocabs.biocatalysis.checks]
+allow_delete = false
+
+[vocabs.biocatalysis.prefix_map]
+v4c-bc = "https://w3id.org/nfdi4cat/voc4cat_biocatalysis/"
+
+[[vocabs.biocatalysis.id_range]]
+first_id = 1
+last_id = 1000
+gh_name = "markdoerr"
+orcid = "0000-0003-3270-6895"
+ror_id = "https://ror.org/00r1edq15"

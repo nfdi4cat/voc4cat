@@ -81,6 +81,10 @@ jobs:
         run: |
           voc4cat convert --logfile publish/latest/voc4cat.log --template templates/voc4cat_template_043.xlsx publish/latest/
 
+      - name: Run voc4cat (build vocabulary in xml/rdf from Excel file)
+        run: |
+          voc4cat convert --logfile publish/latest/voc4cat.log --outputformat xml publish/latest/voc4cat.xlsx
+
       - name: Copy release to release-name directory
         run: |
           mkdir -p publish/${{ github.ref_name }}

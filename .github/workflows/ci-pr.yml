@@ -30,7 +30,7 @@ jobs:
 
     steps:
       - name: Checkout PR branch into cwd
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           # Checkout the fork/head-repository to push changes to the fork.
           # Without this the base repository will be checked out and committed to.
@@ -40,7 +40,7 @@ jobs:
           ref: ${{ github.head_ref }}
 
       - name: Checkout main branch into directory _main_branch/
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: main
           path: _main_branch

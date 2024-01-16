@@ -113,7 +113,7 @@ jobs:
           path: outbox/
 
       - name: Add/stage vocabulary changes
-        # Pin third party action (v4.16.0)
+        # Pinning of action managed by dependabot
         uses: stefanzweifel/git-auto-commit-action@8756aa072ef5b4a080af5dc8fef36c5d586e521d
         with:
           # glob pattern of files which should be added to the commit
@@ -125,7 +125,7 @@ jobs:
           git status
 
       - name: Commit vocabulary changes & xlsx cleanup on behalf of PR-author
-        # Pin third party action (v4.16.0)
+        # Pinning of action managed by dependabot
         uses: stefanzweifel/git-auto-commit-action@8756aa072ef5b4a080af5dc8fef36c5d586e521d
         with:
           commit_user_name: voc4cat-CI-bot

@@ -90,7 +90,7 @@ jobs:
         # This replaces all prior content in gh-pages branch. But we have
         # checked out the gh-pages branch above so that we keep all prior
         # content and just re-publish the extended version.
-        # Pin third party action (v3.9.3)
+        # Pinning of action managed by dependabot
         uses: peaceiris/actions-gh-pages@373f7f263a76c20808c831209c920827a82a2847
         with:
           publish_branch: gh-pages

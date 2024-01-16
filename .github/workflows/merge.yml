@@ -102,7 +102,7 @@ jobs:
         # This step is not required and may be removed.
         # It may be helpful for trouble shooting.
         if: ${{ always() }}
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: voc4cat-pages-dev-content
           path: publish/

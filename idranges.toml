@@ -51,4 +51,11 @@ gh_name = "markdoerr"
 orcid = "0000-0003-3270-6895"
 ror_id = "https://ror.org/00r1edq15"
 
+[[vocabs.voc4cat.id_range]]
+first_id = 7001
+last_id = 7100
+gh_name = "schumnannj"
+orcid = "0000-0002-4041-0165"
+ror_id = "https://ror.org/01hcx6992"
+
 # Continue with as many [[vocabs.voc4cat.id_range]] sections as needed.

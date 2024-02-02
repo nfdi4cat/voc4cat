@@ -67,8 +67,8 @@ jobs:
         run: |
           voc4cat --version
           mkdir -p publish/latest/
-          # delete files xlsx and ttl produced in previous workflow runs
-          find publish/latest/ -type f \( -name "*.xlsx" -o -name "*.ttl" \) -delete
+          # delete files xlsx, xml and ttl produced in previous workflow runs
+          find publish/latest/ -type f \( -name "*.xlsx" -o -name "*.ttl"  -o -name "*.xml" \) -delete
           cp -r vocabularies/. publish/latest/
           # Build joined turtle
           voc4cat transform --logfile publish/latest/voc4cat.log --join publish/latest/

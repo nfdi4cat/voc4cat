@@ -22,7 +22,9 @@ We tried hard to make contributing easy. The process is essentially *(see furthe
 - Edit the vocabulary file in Excel,
 - Submit a pull request with the updated file placed in the folder `inbox-excel-vocabs`.<BR>It is important to keep the original file name `voc4cat.xlsx`.
 
-After approval your pull request is ready to be merged by the editors. The merge will integrate your contribution into the SKOS-vocabulary files in the `vocabularies`-folder. Upon merge the corresponding documentation and a joined turtle file will be automatically built and published to GitHub pages.
+After approval your pull request is ready to be merged by the editors. 
+The merge will integrate your contribution into the SKOS-vocabulary files in the `vocabularies`-folder. 
+Upon merge the corresponding documentation and a joined turtle file will be automatically built and published to GitHub pages.
 
 Besides this "in-development" version of the vocabulary, the latest released version and older releases are also available.
 
@@ -59,6 +61,12 @@ It is placed at the root of the gh-pages branch.
 To see how voc4cat rates in the [qSKOS](https://github.com/cmader/qSKOS) quality checks,
 you can use this link to the [SKOS testing tool](http://skos-play.sparna.fr/skos-testing-tool/test?url=https://nfdi4cat.github.io/voc4cat/dev/voc4cat.ttl&rules=anr,chr,dcc,dlv,el,hr,husv,ilc,ipl,ml,mri,ncl,oc,oilt,ol,otc,rc,rrc,strc,tchbc,uc,ucil,urc&format=html).
 
+## API access
+
+voc4cat is also available via the [TIB Terminology Service](https://terminology.tib.eu/ts/ontologies/voc4cat).
+This service offers API access to voc4cat. Currently a modified version of [OLS](https://terminology.tib.eu/ts/about) is used.
+There are plans to host voc4cat and other vocabularies on a [SKOSMOS](https://skosmos.org/) server in the future which will provide more SKOS-specific features than OLS.
+
 ## Contributing to vocabularies
 
 To discuss about the **voc4cat**-vocabulary maintained here, create an [issue](https://github.com/nfdi4cat/voc4cat/issues).
@@ -83,7 +91,9 @@ Here are the steps for submitting updates in Excel.
   - or why the proposed change may not fit.
 - If you need to fix something update the pull request branch. This will trigger the pipeline to run again.
 
-Finally, when the proposed pull request is accepted, your changes will be integrated in the vocabularies in the folder `vocabularies`. The vocabularies are stored in split form using one folder per vocabulary. Each concept, collection and concept scheme is stored in a separate file using the ID-part of the IRI as file name.
+Finally, when the proposed pull request is accepted, your changes will be integrated in the vocabularies in the folder `vocabularies`. 
+The vocabularies are stored in split form using one folder per vocabulary.
+Each concept, collection and concept scheme is stored in a separate file using the ID-part of the IRI as file name.
 
 See [inbox-excel-vocabs/README.md](inbox-excel-vocabs/README.md) for a minimal example how to test the submission process.
 
@@ -118,4 +128,7 @@ The template itself is CC0-1.0 licensed, see [LICENSE](LICENSE). Although there 
 
 This work was funded by the German Research Foundation (DFG) through the project "[NFDI4Cat](https://www.nfdi4cat.org) - NFDI for Catalysis-Related Sciences" (DFG project no. [441926934](https://gepris.dfg.de/gepris/projekt/441926934)), within the National Research Data Infrastructure ([NFDI](https://www.nfdi.de)) programme of the Joint Science Conference (GWK).
 
-We thank the [W3ID Consortium](https://w3id.org) for making its permanent URL service available to the community.
+Special thanks to:
+
+- [TIB - Leibniz Information Centre for Science and Technology](https://www.tib.eu/en/) for providing API access to voc4cat.
+- [W3ID Consortium](https://w3id.org) for making its permanent URL service available to the community.

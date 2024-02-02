@@ -30,7 +30,7 @@ jobs:
 
     steps:
       - name: Checkout PR branch into cwd
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           # Checkout the fork/head-repository to push changes to the fork.
           # Without this the base repository will be checked out and committed to.
@@ -40,7 +40,7 @@ jobs:
           ref: ${{ github.head_ref }}
 
       - name: Checkout main branch into directory _main_branch/
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: main
           path: _main_branch
@@ -49,7 +49,7 @@ jobs:
             vocabularies/
           fetch-depth: 1
 
-      - uses: actions/setup-python@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
@@ -59,7 +59,7 @@ jobs:
           python -m pip install --upgrade pip setuptools wheel
 
           # install tagged version
-          python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@v0.7.8
+          python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@v0.7.9
           # python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@main
 
           # install custom pylode 2.x  (adds sorted collections,
@@ -113,8 +113,8 @@ jobs:
           path: outbox/
 
       - name: Add/stage vocabulary changes
-        # Pin third party action (v4.16.0)
-        uses: stefanzweifel/git-auto-commit-action@3ea6ae190baf489ba007f7c92608f33ce20ef04a
+        # Pinning of action managed by dependabot
+        uses: stefanzweifel/git-auto-commit-action@8756aa072ef5b4a080af5dc8fef36c5d586e521d
         with:
           # glob pattern of files which should be added to the commit
           file_pattern: 'vocabularies/\*.ttl'
@@ -125,8 +125,8 @@ jobs:
           git status
 
       - name: Commit vocabulary changes & xlsx cleanup on behalf of PR-author
-        # Pin third party action (v4.16.0)
-        uses: stefanzweifel/git-auto-commit-action@3ea6ae190baf489ba007f7c92608f33ce20ef04a
+        # Pinning of action managed by dependabot
+        uses: stefanzweifel/git-auto-commit-action@8756aa072ef5b4a080af5dc8fef36c5d586e521d
         with:
           commit_user_name: voc4cat-CI-bot
           commit_message: 'CI: vocabulary update in ${{ GITHUB.SERVER_URL }}/${{ GITHUB.REPOSITORY }}/actions/runs/${{ GITHUB.RUN_ID }}'

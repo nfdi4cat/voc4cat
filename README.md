@@ -63,7 +63,7 @@ you can use this link to the [SKOS testing tool](http://skos-play.sparna.fr/skos
 
 ## API access
 
-voc4cat is also available via the [TIB terminology service](https://terminology.tib.eu/ts/ontologies/voc4cat).
+voc4cat is also available via the [TIB Terminology Service](https://terminology.tib.eu/ts/ontologies/voc4cat).
 This service offers API access to voc4cat. Currently a modified version of [OLS](https://terminology.tib.eu/ts/about) is used.
 There are plans to host voc4cat and other vocabularies on a [SKOSMOS](https://skosmos.org/) server in the future which will provide more SKOS-specific features than OLS.
 

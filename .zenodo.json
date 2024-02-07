@@ -21,7 +21,7 @@
     {
       "name": "Schumann, Julia",
       "orcid": "0000-0002-4041-0165",
-      "affiliation": "Consortium FAIRmat, c/o, Humboldt-Universität zu Berlin, Zum Großen Windkanal 2, 12489 Berlin, Germany"
+      "affiliation": "Physics Department and CSMB, Humboldt-Universität zu Berlin, Zum Großen Windkanal 2, 12489 Berlin, Germany"
     }
   ],
   "description": "<p><b>Voc4Cat</b> is a SKOS vocabulary for the catalysis disciplines.</p><p>The vocabulary was created in the <a href=\"http://www.nfdi4cat.org\">NFDI4Cat</a> initiative. The first collection of terms was published in June 2023 with a focus on photo catalysis. Our goal is to continuously extend the vocabulary to other areas of catalysis and related disciplines like chemical engineering or materials science. The principles that we follow are summarized in the <a href=\"https://doi.org/10.5281/zenodo.7669182\">Voc4Cat Guidelines</a>.</p><p>If you want to help us building a catalysis vocabulary, please come to our <a href=\"https://github.com/nfdi4cat/voc4cat/\">GitHub repository</a>. Everyone is welcome! We tried to make contributing easy: Download the current vocabulary as Excel file, make your edits and upload the modified file in a pull request.</p><p>The voc4cat repository is based on <a href=\"https://github.com/nfdi4cat/voc4cat-template/\">voc4cat-template</a>. The workflows use <a href=\"https://github.com/nfdi4cat/voc4cat-tool/\">voc4cat-tool</a> and GitHub features like pull requests, gh-actions, gh-pages etc. to minimize the workload for contributors and editors.</p>",

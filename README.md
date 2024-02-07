@@ -158,7 +158,7 @@ All vocabularies in this repository are CC0-1.0 licensed, see [LICENSE](LICENSE)
 
 ### Voc4cat template
 
-The template itself is CC0-1.0 licensed, see [LICENSE](LICENSE). Although there is no obligation, we nevertheless appreciate if our work is acknowledged in any derivative work.
+The template itself is CC0-1.0 licensed, see [LICENSE](https://github.com/nfdi4cat/voc4cat-template/blob/main/LICENSE). Although there is no obligation, we nevertheless appreciate if our work is acknowledged in any derivative work.
 
 ## Acknowledgement
 

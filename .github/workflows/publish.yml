@@ -31,19 +31,19 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           # Using fetch-depth 0 is the only way to get all tags which are needed for building docs.
           fetch-depth: 0
 
       - name: Checkout gh-pages branch to dir publish/
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: gh-pages
           path: publish
           fetch-depth: 1
 
-      - uses: actions/setup-python@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
@@ -53,7 +53,7 @@ jobs:
           python -m pip install --upgrade pip setuptools wheel
 
           # install tagged version
-          python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@v0.7.8
+          python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@v0.7.9
           # python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@main
 
           # install custom pylode 2.x
@@ -67,8 +67,8 @@ jobs:
         run: |
           voc4cat --version
           mkdir -p publish/latest/
-          # delete files xlsx and ttl produced in previous workflow runs
-          find publish/latest/ -type f \( -name "*.xlsx" -o -name "*.ttl" \) -delete
+          # delete files xlsx, xml and ttl produced in previous workflow runs
+          find publish/latest/ -type f \( -name "*.xlsx" -o -name "*.ttl"  -o -name "*.xml" \) -delete
           cp -r vocabularies/. publish/latest/
           # Build joined turtle
           voc4cat transform --logfile publish/latest/voc4cat.log --join publish/latest/
@@ -81,6 +81,10 @@ jobs:
         run: |
           voc4cat convert --logfile publish/latest/voc4cat.log --template templates/voc4cat_template_043.xlsx publish/latest/
 
+      - name: Run voc4cat (build vocabulary in xml/rdf from Excel file)
+        run: |
+          voc4cat convert --logfile publish/latest/voc4cat.log --outputformat xml publish/latest/voc4cat.xlsx
+
       - name: Copy release to release-name directory
         run: |
           mkdir -p publish/${{ github.ref_name }}
@@ -90,7 +94,7 @@ jobs:
         # This replaces all prior content in gh-pages branch. But we have
         # checked out the gh-pages branch above so that we keep all prior
         # content and just re-publish the extended version.
-        # Pin third party action (v3.9.3)
+        # Pinning of action managed by dependabot
         uses: peaceiris/actions-gh-pages@373f7f263a76c20808c831209c920827a82a2847
         with:
           publish_branch: gh-pages

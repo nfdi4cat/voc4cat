@@ -5,7 +5,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://w3id.org/nfdi4cat/voc4cat_0000151>
     a skos:Concept ;
     dcterms:identifier "voc4cat_0000151"^^xsd:token ;
-    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:altLabel
         "cooling device"@en ,
         "heating device"@en ,
@@ -14,6 +13,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         "temperature monitor"@en ;
     skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000148> ;
     skos:definition "Equipment used for controlling and/or monitoring the temperature in various parts of a photoreactor. This can include hot plates, heating elements and cryostats. Light sources in operation can also affect the temperature in the reaction chamber."@en ;
+    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
     skos:prefLabel "temperature controller and monitor"@en ;
 .

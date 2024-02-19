@@ -5,7 +5,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://w3id.org/nfdi4cat/voc4cat_0000080>
     a skos:Concept ;
     dcterms:identifier "voc4cat_0000080"^^xsd:token ;
-    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:altLabel
         "FT-IR"@en ,
         "FT-IR spectroscopy"@en ,
@@ -20,6 +19,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         "Fourier-transform infrared (FTIR) absorption spectroscopy"@en ;
     skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000066> ;
     skos:definition "A spectroscopic technique used to study the vibrational modes of chemical bonds of a sample using infrared radiation."@en ;
+    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
     skos:prefLabel "fourier transform infrared spectroscopy"@en ;
 .

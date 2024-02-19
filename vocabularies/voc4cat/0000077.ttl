@@ -5,7 +5,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://w3id.org/nfdi4cat/voc4cat_0000077>
     a skos:Concept ;
     dcterms:identifier "voc4cat_0000077"^^xsd:token ;
-    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:altLabel
         "X-ray analysis"@en ,
         "X-ray crystallographic analysis"@en ,
@@ -16,6 +15,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         "XRD"@en ;
     skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000066> ;
     skos:definition "A technique which analyses the diffraction pattern produced when X-rays are scattered by a sample bombarded by a focused electron beam."@en ;
+    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
     skos:prefLabel "X-ray diffraction"@en ;
 .

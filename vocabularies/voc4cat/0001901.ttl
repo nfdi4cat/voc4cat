@@ -1,4 +1,5 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
@@ -6,8 +7,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a skos:Collection ;
     dcterms:identifier "voc4cat_0001901"^^xsd:token ;
     dcterms:isPartOf <https://w3id.org/nfdi4cat/voc4cat_> ;
-    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    rdfs:isDefinedBy <https://w3id.org/nfdi4cat/voc4cat_> ;
     skos:definition "A collection of concepts referring to photocatalysis."@en ;
+    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
     skos:member
         <https://w3id.org/nfdi4cat/voc4cat_0000001> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000002> ,

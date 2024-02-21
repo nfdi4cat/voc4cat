@@ -59,7 +59,7 @@ jobs:
           python -m pip install --upgrade pip setuptools wheel
 
           # install tagged version
-          python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@v0.8.1
+          python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@v0.8.2
           # python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@main
 
           # install custom pylode 2.x  (adds sorted collections,

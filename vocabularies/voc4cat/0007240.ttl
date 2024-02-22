@@ -5,7 +5,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://w3id.org/nfdi4cat/voc4cat_0007240>
     a skos:Concept ;
     dcterms:identifier "voc4cat_0007240"^^xsd:token ;
-    skos:definition "AC resistance."@en ;
+    skos:definition "Impedance is the analogue of the resistance when applied to alternating current. That is, it is a measure of a circuit element's inability to carry the electrical current. "@en ;
     skos:historyNote "0009-0008-1278-8890 Michael Götte created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
     skos:prefLabel "impedance"@en ;

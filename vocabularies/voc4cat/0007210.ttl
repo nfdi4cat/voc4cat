@@ -5,10 +5,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://w3id.org/nfdi4cat/voc4cat_0007210>
     a skos:Concept ;
     dcterms:identifier "voc4cat_0007210"^^xsd:token ;
-    skos:definition "open circuit voltage measurement"@en ;
+    skos:altLabel "OCV"@en ;
+    skos:definition "The cell voltage under zero current conditions."@en ;
     skos:historyNote "0009-0008-1278-8890 Michael Götte created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
-    skos:prefLabel "open circuit voltage measurement"@en ;
+    skos:prefLabel "open circuit voltage"@en ;
     skos:topConceptOf <https://w3id.org/nfdi4cat/voc4cat_> ;
 .
 

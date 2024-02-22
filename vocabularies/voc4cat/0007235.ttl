@@ -5,9 +5,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://w3id.org/nfdi4cat/voc4cat_0007235>
     a skos:Concept ;
     dcterms:identifier "voc4cat_0007235"^^xsd:token ;
-    skos:definition "membrane"@en ;
+    skos:altLabel "separator"@en ;
+    skos:definition "A thin structural material (usually a sheet) used to separate the electrolyte of a divided electrochemical cell into two or more compartments."@en ;
     skos:historyNote "0009-0008-1278-8890 Michael Götte created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0007250> ;
     skos:prefLabel "membrane"@en ;
     skos:topConceptOf <https://w3id.org/nfdi4cat/voc4cat_> ;
 .

@@ -5,10 +5,16 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://w3id.org/nfdi4cat/voc4cat_0007219>
     a skos:Concept ;
     dcterms:identifier "voc4cat_0007219"^^xsd:token ;
-    skos:definition "electric potential"@en ;
+    skos:broader
+        <https://w3id.org/nfdi4cat/voc4cat_0007213> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007214> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007215> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007216> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007217> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007218> ;
+    skos:definition "The electrical potential difference between two point in a circuit is the cause of the flow of a current."@en ;
     skos:historyNote "0009-0008-1278-8890 Michael Götte created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
     skos:prefLabel "electric potential"@en ;
-    skos:topConceptOf <https://w3id.org/nfdi4cat/voc4cat_> ;
 .
 

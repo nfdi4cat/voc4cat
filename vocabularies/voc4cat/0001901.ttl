@@ -136,7 +136,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://w3id.org/nfdi4cat/voc4cat_0000122> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000123> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000124> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000125> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000126> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000127> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000128> ,

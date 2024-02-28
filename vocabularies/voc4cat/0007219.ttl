@@ -6,7 +6,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a skos:Concept ;
     dcterms:identifier "voc4cat_0007219"^^xsd:token ;
     skos:altLabel "voltage"@en ;
-    skos:definition "The electrical potential difference between two points in a circuit is the cause of the flow of a current."@en ;
+    skos:definition "Defined as the amount of work needed per unit of electric charge to move the charge from a reference point to a specific point in an electric field. By definition, the electric potential at the reference point is zero units. A typical reference point is earth (ground)."@en ;
     skos:historyNote "0009-0008-1278-8890 Michael Götte created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
     skos:narrower

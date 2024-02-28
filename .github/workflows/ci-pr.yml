@@ -59,7 +59,7 @@ jobs:
           python -m pip install --upgrade pip setuptools wheel
 
           # install tagged version
-          python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@v0.8.2
+          python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@v0.8.3
           # python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@main
 
           # install custom pylode 2.x  (adds sorted collections,
@@ -85,6 +85,10 @@ jobs:
         run: |
           # convert file(s) from xlsx in inbox to turtle in outbox
           voc4cat convert --config _main_branch/idranges.toml --logfile outbox/voc4cat.log --outdir outbox inbox-excel-vocabs/
+          if [ ! -f outbox/*.ttl ]; then
+            echo "No ttl file in outbox. Building joined vocabulary ttl-file from individual ttl-files in vocabulary."
+            voc4cat transform --join --logfile outbox/voc4cat.log --outdir outbox/ vocabularies/
+          fi
 
       - name: Run voc4cat (post-convert checks)
         run: |

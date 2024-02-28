@@ -107,3 +107,7 @@ outbox/
 outbox_new_voc/
 publish/
 _main_branch
+
+# Excel/OpenOffice temporary files
+~$*
+.~*

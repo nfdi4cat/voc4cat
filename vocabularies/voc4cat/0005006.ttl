@@ -1,0 +1,18 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0005006>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0005006"^^xsd:token ;
+    skos:broader
+        <https://w3id.org/nfdi4cat/voc4cat_0005001> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005002> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005003> ;
+    skos:definition """A physical quantity that describes the amount of product produced per unit of time and unit of producing entity. The producing entity is for example the volume of a chemical reactor or in catalysis the mass or volume or moles of catalyst.
+Example unit: kg{product} / (hour * cubicmeter{catalyst})"""@en ;
+    skos:historyNote "0000-0002-5898-1820 David Linke created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "space-time yield"@en ;
+.
+

@@ -9,7 +9,7 @@
 > **Our goal is to grow the vocabulary to cover all subdisciplines of catalysis.**
 > **Please join if you like to help.**
 
-The vocabulary has been created and maintained as part of the [NFDI4Cat](http://www.nfdi4cat.org) initiative and follows our [Voc4Cat Guidelines](https://doi.org/10.5281/zenodo.7669183).
+The vocabulary has been created and maintained as part of the [NFDI4Cat](http://nfdi4cat.org) initiative and follows our [Voc4Cat Guidelines](https://doi.org/10.5281/zenodo.7669183).
 
 This repository was created from the template [voc4cat-template](https://github.com/nfdi4cat/voc4cat-template).
 It uses the [voc4cat-tool](https://github.com/nfdi4cat/voc4cat-tool) and GitHub features like pull requests, actions, pages etc. to reduce the maintenance workload for contributors and editors.
@@ -126,7 +126,7 @@ The template itself is CC0-1.0 licensed, see [LICENSE](https://github.com/nfdi4c
 
 ## Acknowledgement
 
-This work was funded by the German Research Foundation (DFG) through the project "[NFDI4Cat](https://www.nfdi4cat.org) - NFDI for Catalysis-Related Sciences" (DFG project no. [441926934](https://gepris.dfg.de/gepris/projekt/441926934)), within the National Research Data Infrastructure ([NFDI](https://www.nfdi.de)) programme of the Joint Science Conference (GWK).
+This work was funded by the German Research Foundation (DFG) through the project "[NFDI4Cat](https://nfdi4cat.org) - NFDI for Catalysis-Related Sciences" (DFG project no. [441926934](https://gepris.dfg.de/gepris/projekt/441926934)), within the National Research Data Infrastructure ([NFDI](https://www.nfdi.de)) programme of the Joint Science Conference (GWK).
 
 Special thanks to:
 

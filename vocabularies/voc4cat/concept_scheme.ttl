@@ -12,7 +12,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://w3id.org/nfdi4cat/voc4cat_0001900> ,
         <https://w3id.org/nfdi4cat/voc4cat_0001901> ;
     dcterms:identifier "voc4cat_"^^xsd:token ;
-    dcterms:modified "2024-02-20"^^xsd:date ;
+    dcterms:modified "2024-02-28"^^xsd:date ;
     dcterms:publisher <https://w3id.org/nfdi4cat/> ;
     owl:versionInfo "automatic" ;
     skos:definition "A vocabulary for all areas of catalysis initiated in NFDI4Cat. Starting with photocatalysis we add more and more terms from other areas of catalysis and related disciplines like chemical engineering or materials science."@en ;
@@ -66,7 +66,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://w3id.org/nfdi4cat/voc4cat_0007251> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007252> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007253> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007258> ;
+        <https://w3id.org/nfdi4cat/voc4cat_0007258> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007260> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007261> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007262> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007263> ;
     skos:historyNote "https://orcid.org/0000-0002-5898-1820 David Linke, https://orcid.org/0000-0002-6242-2167 Nikolaos G. Moustakas"@en ;
     skos:prefLabel "Voc4Cat - A SKOS vocabulary for Catalysis."@en ;
     dcat:contactPoint "David Linke (orcid:0000-0002-5898-1820), Nikolaos G. Moustakas (orcid:0000-0002-6242-2167)" ;

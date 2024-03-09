@@ -1,0 +1,19 @@
+name: 📝 Improvement Guidelines
+description: Suggest a change or addition to the voc4cat guidelines
+title: "📝 <title>"
+labels: ["voc4cat guidelines"]
+body:
+- type: input
+  id: version
+  attributes:
+    label: Observed in version
+    description: "Please provide the version of the guidelines."
+  validations:
+    required: false
+- type: textarea
+  id: description
+  attributes:
+    label: Description
+    description: What do you propose?
+  validations:
+    required: false

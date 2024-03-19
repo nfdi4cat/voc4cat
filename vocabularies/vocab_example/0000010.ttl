@@ -1,4 +1,5 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
@@ -6,8 +7,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a skos:Collection ;
     dcterms:identifier "0000010"^^xsd:token ;
     dcterms:isPartOf <https://example.org/test/> ;
-    dcterms:provenance "0000-0001-2345-6789 Created collection"@en ;
+    rdfs:isDefinedBy <https://example.org/test/> ;
     skos:definition "Collection of terms related to linked data."@en ;
+    skos:historyNote "0000-0001-2345-6789 Created collection"@en ;
+    skos:inScheme <https://example.org/test/> ;
     skos:member
         <https://example.org/test/0000001> ,
         <https://example.org/test/0000002> ,

@@ -1,12 +1,14 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <https://w3id.org/nfdi4cat/voc4cat_0007027>
     a skos:Concept ;
     dcterms:identifier "voc4cat_0007027"^^xsd:token ;
+    rdfs:isDefinedBy <https://doi.org/10.1351/goldbook.P04795> ;
     skos:broader <https://w3id.org/nfdi4cat/voc4cat_0007016> ;
-    skos:definition "One or more solutions are added in a reaction vessel and a solid forms."@en ;
+    skos:definition "A synthesis method in which a solid material (a precipitate) sediments from a liquid solution in the material is present in amounts greater than its solubility in the liquid."@en ;
     skos:historyNote "0000-0002-4041-0165 Julia Schumann created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
     skos:prefLabel "precipitation"@en ;

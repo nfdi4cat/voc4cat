@@ -5,7 +5,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://w3id.org/nfdi4cat/voc4cat_0007017>
     a skos:Concept ;
     dcterms:identifier "voc4cat_0007017"^^xsd:token ;
-    skos:definition "A process equipment to which elevated temperature and pressure can be applied to convert chemicals into desired products, often in presence of a catalyst."@en ;
+    skos:definition "A process equipment to which elevated temperature and pressure can be applied to convert chemicals into desired products, often in the presence of a catalyst."@en ;
     skos:historyNote "0000-0002-4041-0165 Julia Schumann created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
     skos:narrower

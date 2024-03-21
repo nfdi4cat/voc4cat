@@ -33,6 +33,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://w3id.org/nfdi4cat/voc4cat_0007024> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007025> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007026> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007034> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007201> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007206> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007207> ,

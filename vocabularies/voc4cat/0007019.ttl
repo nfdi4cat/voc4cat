@@ -6,7 +6,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a skos:Concept ;
     dcterms:identifier "voc4cat_0007019"^^xsd:token ;
     skos:altLabel "CSTR"@en ;
-    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0007018> ;
+    skos:broader
+        <https://w3id.org/nfdi4cat/voc4cat_0007018> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007036> ;
     skos:definition "A reaction vessel, equipped with a stirring mechanism, in which reagents and solvents flow into the reactor while the products of the reaction steadily exit the vessel. "@en ;
     skos:historyNote "0000-0002-4041-0165 Julia Schumann created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;

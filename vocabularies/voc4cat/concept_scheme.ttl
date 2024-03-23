@@ -12,26 +12,34 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://w3id.org/nfdi4cat/voc4cat_0001900> ,
         <https://w3id.org/nfdi4cat/voc4cat_0001901> ;
     dcterms:identifier "voc4cat_"^^xsd:token ;
-    dcterms:modified "2024-03-07"^^xsd:date ;
+    dcterms:modified "2024-03-09"^^xsd:date ;
     dcterms:publisher <https://w3id.org/nfdi4cat/> ;
     owl:versionInfo "automatic" ;
     skos:definition "A vocabulary for all areas of catalysis initiated in NFDI4Cat. Starting with photocatalysis we add more and more terms from other areas of catalysis and related disciplines like chemical engineering or materials science."@en ;
     skos:hasTopConcept
         <https://w3id.org/nfdi4cat/voc4cat_0000001> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000033> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000037> ,
         <https://w3id.org/nfdi4cat/voc4cat_0005001> ,
         <https://w3id.org/nfdi4cat/voc4cat_0005002> ,
         <https://w3id.org/nfdi4cat/voc4cat_0005003> ,
         <https://w3id.org/nfdi4cat/voc4cat_0005007> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005008> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005009> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005010> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007001> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007002> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007003> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007004> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007005> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007006> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007007> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007008> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007009> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007010> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007012> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007016> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007017> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007018> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007023> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007024> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007025> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007026> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007034> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007201> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007206> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007207> ,

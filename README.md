@@ -73,7 +73,10 @@ To discuss about the **voc4cat**-vocabulary maintained here, create an [issue](h
 
 To contribute new concepts or collections or change existing ones, you may either submit your contributions as Excel/xlsx-file or (as an expert) as new/changed turtle file.
 
-Here are the steps for submitting updates in Excel.
+> Small contributions like adding a single concept are as valuable as bigger ones. 
+> In fact if you plan a bigger change (50+ concepts), consider splitting up the additions/changes into smaller chunks with max. ~25 changes to make the review process not too hard for the reviewers and you as author. 
+
+Here are the steps for submitting updates via Excel/xlsx.
 
 - Get the Excel/xlsx-vocabulary file
   - The most recent version of the vocabulary is always available via GitHub-pages https://nfdi4cat.github.io/voc4cat/dev/voc4cat.xlsx

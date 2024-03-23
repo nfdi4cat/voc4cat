@@ -1,0 +1,37 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0001900>
+    a skos:Collection ;
+    dcterms:identifier "voc4cat_0001900"^^xsd:token ;
+    dcterms:isPartOf <https://w3id.org/nfdi4cat/voc4cat_> ;
+    rdfs:isDefinedBy <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:definition "A collection of concepts referring to material  characterization techniques and methods to evaluate their efficiency in photocatalysis."@en ;
+    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:member
+        <https://w3id.org/nfdi4cat/voc4cat_0000067> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000068> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000069> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000070> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000071> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000072> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000073> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000074> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000075> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000076> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000077> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000078> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000079> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000080> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000081> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000082> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000083> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000130> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000137> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000141> ;
+    skos:prefLabel "Characterization and evaluation techniques"@en ;
+.
+

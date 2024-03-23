@@ -9,7 +9,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:isPartOf <https://w3id.org/nfdi4cat/voc4cat_> ;
     rdfs:isDefinedBy <https://w3id.org/nfdi4cat/voc4cat_> ;
     skos:definition "A collection of concepts referring to photocatalysis."@en ;
-    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource, 0000-0002-5898-1820 David Linke updated members"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
     skos:member
         <https://w3id.org/nfdi4cat/voc4cat_0000001> ,
@@ -27,10 +27,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://w3id.org/nfdi4cat/voc4cat_0000013> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000014> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000015> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000016> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000017> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000018> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000019> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000020> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000021> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000022> ,

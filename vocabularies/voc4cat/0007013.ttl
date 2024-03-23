@@ -9,9 +9,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:definition "The temperature at which a chemical reaction is happening."@en ;
     skos:historyNote "0000-0002-4041-0165 Julia Schumann created the resource, 0000-0002-5898-1820 David Linke contributed to the definition of the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
-    skos:narrower
-        <https://w3id.org/nfdi4cat/voc4cat_0007032> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007033> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0007032> ;
     skos:prefLabel "reaction temperature"@en ;
 .
 

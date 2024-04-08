@@ -76,6 +76,8 @@ jobs:
       - name: Run voc4cat (build HTML documentation)
         run: |
           voc4cat docs --force --logfile publish/latest/voc4cat.log publish/latest/
+          # move versions-overview to what becomes gh-pages root
+          mv publish/latest/index.html publish/
 
       - name: Run voc4cat (build current Excel file)
         run: |

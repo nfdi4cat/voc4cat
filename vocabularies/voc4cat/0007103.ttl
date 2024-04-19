@@ -1,0 +1,14 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0007103>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0007103"^^xsd:token ;
+    skos:definition "An archtype/ideal reactor type, in which a large volume of fluid is considered to be perfectly mixed and has a certain residence time. Thus contrasting to the plug flow reactor, the reaction does not take place over a certain distance but rather a certain time. "@en ;
+    skos:historyNote "0000-0001-5886-7860 Hendrik Borgelt created this resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "stirred tank reactor"@en ;
+    skos:topConceptOf <https://w3id.org/nfdi4cat/voc4cat_> ;
+.
+

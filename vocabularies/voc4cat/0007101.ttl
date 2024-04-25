@@ -1,0 +1,14 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0007101>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0007101"^^xsd:token ;
+    skos:definition "Chemical reactors are often classified by abstract concept reactors, which can then be extended with multiple devices and so on. The reactor type characterizes the basic behavior of a reactor and thus creates a level of comparability. "@en ;
+    skos:historyNote "0000-0001-5886-7860 Hendrik Borgelt created this resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "reactor type"@en ;
+    skos:topConceptOf <https://w3id.org/nfdi4cat/voc4cat_> ;
+.
+

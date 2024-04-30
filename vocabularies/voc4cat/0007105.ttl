@@ -5,10 +5,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://w3id.org/nfdi4cat/voc4cat_0007105>
     a skos:Concept ;
     dcterms:identifier "voc4cat_0007105"^^xsd:token ;
-    skos:definition "A Coiled tubular reactor is a extension of the concept of the tubular reactor, in that the fluid is not having a uniform and simetrical flow but rather a nonuniform flow pattern, thus introducing mixing of the fluid. Variants and derivatives of this reactor can still be considered a coiled tubular reactor, like e.g. a coiled-flow inverter reactor."@en ;
+    skos:definition "A Coiled tubular reactor is an extension of the concept of the tubular reactor model, in that the fluid does not have a uniform and symmetrical flow but rather a nonuniform flow pattern, thus introducing mixing of the fluid. Variants and derivatives of this reactor can still be considered a coiled tubular reactor, like e.g. a coiled-flow inverter reactor."@en ;
     skos:historyNote "0000-0001-5886-7860 Hendrik Borgelt created this resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
-    skos:prefLabel "coiled tubular reactor"@en ;
+    skos:prefLabel "coiled tubular reactor model"@en ;
     skos:topConceptOf <https://w3id.org/nfdi4cat/voc4cat_> ;
 .
 

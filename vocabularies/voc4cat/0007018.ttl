@@ -9,7 +9,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "0000-0002-4041-0165 Julia Schumann created the resource, 0000-0002-5898-1820 David Linke provided the definition"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
     skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0007019> ;
-    skos:prefLabel "reactor type"@en ;
+    skos:prefLabel "reactor design type"@en ;
     skos:topConceptOf <https://w3id.org/nfdi4cat/voc4cat_> ;
 .
 

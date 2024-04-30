@@ -5,10 +5,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://w3id.org/nfdi4cat/voc4cat_0007104>
     a skos:Concept ;
     dcterms:identifier "voc4cat_0007104"^^xsd:token ;
-    skos:definition "A tubular reactor is a subtype of the plugflow reactor, in which opposing to the ideal plug flow behavior, friction is acting on the fluid, thus creating a residence time distribution."@en ;
+    skos:definition "A tubular reactor is a subtype of the plug flow reactor model, in which opposing to the ideal plug flow behavior, friction is acting on the fluid, thus creating a residence time distribution."@en ;
     skos:historyNote "0000-0001-5886-7860 Hendrik Borgelt created this resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
-    skos:prefLabel "tubular reactor"@en ;
+    skos:prefLabel "tubular reactor model"@en ;
     skos:topConceptOf <https://w3id.org/nfdi4cat/voc4cat_> ;
 .
 

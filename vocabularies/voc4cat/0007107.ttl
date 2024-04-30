@@ -5,10 +5,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://w3id.org/nfdi4cat/voc4cat_0007107>
     a skos:Concept ;
     dcterms:identifier "voc4cat_0007107"^^xsd:token ;
-    skos:definition "A discontinous stirred tank reactor is a reaction vessel which is either operated in batch, feed batch or sometimes even drained batch process."@en ;
+    skos:definition "A discontinuous stirred tank reactor model is a reaction vessel that is either operated in batch, feed batch, or sometimes even drained batch process."@en ;
     skos:historyNote "0000-0001-5886-7860 Hendrik Borgelt created this resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
-    skos:prefLabel "discontinous stirred tank reactor"@en ;
+    skos:prefLabel "discontinous stirred tank reactor model"@en ;
     skos:topConceptOf <https://w3id.org/nfdi4cat/voc4cat_> ;
 .
 

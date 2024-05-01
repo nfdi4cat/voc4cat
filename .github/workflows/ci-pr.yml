@@ -118,7 +118,7 @@ jobs:
 
       - name: Add/stage vocabulary changes
         # Pinning of action managed by dependabot
-        uses: stefanzweifel/git-auto-commit-action@8756aa072ef5b4a080af5dc8fef36c5d586e521d
+        uses: stefanzweifel/git-auto-commit-action@8621497c8c39c72f3e2a999a26b4ca1b5058a842
         with:
           # glob pattern of files which should be added to the commit
           file_pattern: 'vocabularies/\*.ttl'
@@ -130,7 +130,7 @@ jobs:
 
       - name: Commit vocabulary changes & xlsx cleanup on behalf of PR-author
         # Pinning of action managed by dependabot
-        uses: stefanzweifel/git-auto-commit-action@8756aa072ef5b4a080af5dc8fef36c5d586e521d
+        uses: stefanzweifel/git-auto-commit-action@8621497c8c39c72f3e2a999a26b4ca1b5058a842
         with:
           commit_user_name: voc4cat-CI-bot
           commit_message: 'CI: vocabulary update in ${{ GITHUB.SERVER_URL }}/${{ GITHUB.REPOSITORY }}/actions/runs/${{ GITHUB.RUN_ID }}'

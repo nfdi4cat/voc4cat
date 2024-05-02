@@ -6,7 +6,7 @@ on:
   pull_request_target:
     branches:
       - main
-    types: [opened, edited, synchronize]
+    types: [opened, reopened, synchronize]
   workflow_dispatch:
 
 env:

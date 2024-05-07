@@ -12,7 +12,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://w3id.org/nfdi4cat/voc4cat_0001900> ,
         <https://w3id.org/nfdi4cat/voc4cat_0001901> ;
     dcterms:identifier "voc4cat_"^^xsd:token ;
-    dcterms:modified "2024-04-08"^^xsd:date ;
+    dcterms:modified "2024-04-29"^^xsd:date ;
     dcterms:publisher <https://w3id.org/nfdi4cat/> ;
     owl:versionInfo "automatic" ;
     skos:definition "A vocabulary for all areas of catalysis initiated in NFDI4Cat. Starting with photocatalysis we add more and more terms from other areas of catalysis and related disciplines like chemical engineering or materials science."@en ;
@@ -43,11 +43,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://w3id.org/nfdi4cat/voc4cat_0007034> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007201> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007206> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007207> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007208> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007209> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007210> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007212> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007219> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007220> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007221> ,
@@ -62,7 +58,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://w3id.org/nfdi4cat/voc4cat_0007230> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007233> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007234> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007237> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007238> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007239> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007240> ,

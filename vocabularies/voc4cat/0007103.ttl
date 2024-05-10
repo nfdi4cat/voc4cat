@@ -5,10 +5,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://w3id.org/nfdi4cat/voc4cat_0007103>
     a skos:Concept ;
     dcterms:identifier "voc4cat_0007103"^^xsd:token ;
-    skos:definition "An abstract concept/ideal reactor model type, in which a large volume of fluid is considered to be perfectly mixed and has a certain residence time. Thus contrasting to the plug flow reactor, the reaction does not take place over a certain distance but rather over a certain time."@en ;
-    skos:historyNote "0000-0001-5886-7860 Hendrik Borgelt created this resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0007101> ;
+    skos:definition "An abstract concept/ideal reactor model type, in which the volume of fluid in the reaction vessel is considered to be perfectly mixed which results in the same concentration of all components in the whole reaction volume."@en ;
+    skos:historyNote "0000-0001-5886-7860 Hendrik Borgelt created this resource, 0000-0002-5898-1820 David Linke contributed to the definition of the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower
+        <https://w3id.org/nfdi4cat/voc4cat_0007106> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007107> ;
     skos:prefLabel "stirred tank reactor model"@en ;
-    skos:topConceptOf <https://w3id.org/nfdi4cat/voc4cat_> ;
 .
 

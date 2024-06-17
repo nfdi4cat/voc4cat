@@ -6,7 +6,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a skos:Concept ;
     dcterms:identifier "voc4cat_0000166"^^xsd:token ;
     skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000165> ;
-    skos:definition "Light source used to irradiate a photocatalyst in a reaction chamber. These include sources with various intensities, powers and wavelength ranges, including Hg/Xe lamps, Xe lamps and LEDs. "@en ;
+    skos:definition "Source used to irradiate a catalyst in a reaction chamber. These include sources with various intensities, power, and wavelength ranges, including Hg/Xe lamps, Xe lamps and LEDs."@en ;
     skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
     skos:narrower

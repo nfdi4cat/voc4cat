@@ -79,4 +79,11 @@ gh_name = "khatamirad"
 orcid = "0000-0002-6723-1650"
 ror_id = "https://ror.org/03v4gjf40"
 
+[[vocabs.voc4cat.id_range]]
+first_id = 7321
+last_id = 7370
+gh_name = "philippstangl"
+orcid = "0009-0007-4179-2365"
+ror_id = "https://ror.org/00f7hpc57"
+
 # Continue with as many [[vocabs.voc4cat.id_range]] sections as needed.

@@ -6,7 +6,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a skos:Concept ;
     dcterms:identifier "voc4cat_0000038"^^xsd:token ;
     skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000019> ;
-    skos:definition "A thin film of the photocatalyst deposited on an appropriate for the application substrate."@en ;
+    skos:definition "A thin film of the catalyst deposited on an appropriate for the application substrate."@en ;
     skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
     skos:narrower

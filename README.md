@@ -101,13 +101,17 @@ Finally, when the proposed pull request is accepted, your changes will be integr
 The vocabularies are stored in split form using one folder per vocabulary.
 Each concept, collection and concept scheme is stored in a separate file using the ID-part of the IRI as file name.
 
-See [inbox-excel-vocabs/README.md](inbox-excel-vocabs/README.md) for a minimal example how to test the submission process.
+See [inbox-excel-vocabs/README.md](https://github.com/nfdi4cat/voc4cat/tree/main/inbox-excel-vocabs/README.md) for a minimal example how to test the submission process.
 
 ## How to suggest improvements to the tooling & template?
 
 To discuss about the workflow for maintaining SKOS vocabularies based on this template, create an [voc4cat-template issue](https://github.com/nfdi4cat/voc4cat-template/issues).
 
 To discuss about the tool that converts Excel to SKOS in GitHub-actions of this template, create an [voc4cat-tool issue](https://github.com/nfdi4cat/voc4cat-tool/issues).
+
+## Documentation for voc4cat maintainers
+
+We collect notes on some typical workflows for maintainers in the `docs`-folder, see [docs/README.txt](https://github.com/nfdi4cat/voc4cat/tree/main/docs/for_maintainers/README.md) for an overview.
 
 ## Contributors
 

@@ -12,7 +12,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://w3id.org/nfdi4cat/voc4cat_0001900> ,
         <https://w3id.org/nfdi4cat/voc4cat_0001901> ;
     dcterms:identifier "voc4cat_"^^xsd:token ;
-    dcterms:modified "2024-07-01"^^xsd:date ;
+    dcterms:modified "2024-08-26"^^xsd:date ;
     dcterms:publisher <https://w3id.org/nfdi4cat/> ;
     owl:versionInfo "automatic" ;
     skos:definition "A vocabulary for all areas of catalysis initiated in NFDI4Cat. Starting with photocatalysis we add more and more terms from other areas of catalysis and related disciplines like chemical engineering or materials science."@en ;

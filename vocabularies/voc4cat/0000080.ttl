@@ -21,6 +21,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:definition "A spectroscopic technique used to study the vibrational modes of chemical bonds of a sample using infrared radiation."@en ;
     skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
-    skos:prefLabel "fourier transform infrared spectroscopy"@en ;
+    skos:prefLabel "Fourier transform infrared spectroscopy"@en ;
 .
 

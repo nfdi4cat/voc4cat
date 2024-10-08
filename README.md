@@ -6,17 +6,17 @@
 # A SKOS vocabulary for the catalysis disciplines
 
 > **The first collection of terms was published in June 2023.**
-> **Our goal is to grow the vocabulary to cover all subdisciplines of catalysis.**
+> **Our goal is to continuously extend the vocabulary to cover all subdisciplines of catalysis.**
 > **Please join if you like to help.**
 
-The vocabulary has been created and maintained as part of the [NFDI4Cat](http://nfdi4cat.org) initiative and follows our [Voc4Cat Guidelines](https://doi.org/10.5281/zenodo.7669183).
+The Voc4Cat vocabulary and its [guidelines](https://doi.org/10.5281/zenodo.13773255) have been created and are maintained as part of the [NFDI4Cat](http://nfdi4cat.org) initiative.
 
 This repository was created from the template [voc4cat-template](https://github.com/nfdi4cat/voc4cat-template).
 It uses the [voc4cat-tool](https://github.com/nfdi4cat/voc4cat-tool) and GitHub features like pull requests, actions, pages etc. to reduce the maintenance workload for contributors and editors.
 
 ## Basic principles
 
-We tried hard to make contributing easy. The process is essentially *(see further below for details)*:
+Voc4cat makes contributing easy for everyone with a GitHub account. The process is essentially *(see further below for details or browse through our [step-by-step guide](https://doi.org/10.5281/zenodo.13757351)*:
 
 - Download the [most current vocabulary file (xlsx)](https://nfdi4cat.github.io/voc4cat/dev/voc4cat.xlsx),
 - Edit the vocabulary file in Excel,
@@ -97,7 +97,7 @@ Here are the steps for submitting updates via Excel/xlsx.
 - If you need to fix something, commit further changes to the pull request branch in your clone.
   - If any commits have been made by the CI pipeline, pull the changes to your repo (via "Sync fork" button in GUI) before committing any additional changes.
 
-Finally, when the proposed pull request is accepted, your changes will be integrated in the vocabularies in the folder `vocabularies`. 
+Finally, when the proposed pull request is accepted, your changes will be integrated in the vocabularies in the folder `vocabularies`.
 The vocabularies are stored in split form using one folder per vocabulary.
 Each concept, collection and concept scheme is stored in a separate file using the ID-part of the IRI as file name.
 

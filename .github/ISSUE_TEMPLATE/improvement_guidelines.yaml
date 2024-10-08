@@ -7,7 +7,7 @@ body:
   id: version
   attributes:
     label: Observed in version
-    description: "Please provide the version of the guidelines."
+    description: "Please provide the version of the guidelines (if known)."
   validations:
     required: false
 - type: textarea

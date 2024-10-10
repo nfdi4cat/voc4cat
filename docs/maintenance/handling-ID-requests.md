@@ -1,13 +1,14 @@
-# voc4cat maintenance - Handling of ID-requests
+# Handling ID-requests
 
-> This guide is for voc4cat maintainers.
+```{note} This guide is only relevant for maintainers with commit rights.
+```
 
 To update or create ID-ranges for people use the following workflow.
-It is written for using the git command line.
+It is written for using git from the command line.
 
 **Step 1**: Navigate to the folder on your computer with a local clone of the voc4cat-repo:
 
-```cmd
+```bat
 C:\Users\dlinke\MyProg_local
 λ cd gh-nfdi4cat\voc4cat
 ```
@@ -16,7 +17,7 @@ Make sure you are on the main branch. If not switch to the main branch with `git
 
 **Step 2**: Pull the latest changes into the local repo.
 
-```cmd
+```bat
 C:\Users\dlinke\MyProg_local\gh-nfdi4cat\voc4cat(main -> origin)
 λ git pull
 remote: Enumerating objects: 33, done.
@@ -36,7 +37,7 @@ Fast-forward
 
 **Step 3**: Create a feature branch with a reasonable name (here the IDs were requested in issue #79).
 
-```cmd
+```bat
 C:\Users\dlinke\MyProg_local\gh-nfdi4cat\voc4cat(main -> origin)
 λ git switch -c issue79-id-request
 Switched to a new branch 'issue79-id-request'
@@ -44,7 +45,7 @@ Switched to a new branch 'issue79-id-request'
 
 **Step 4**: Open an editor and update the `idranges.toml` file based on the request.
 
-```cmd
+```bat
 C:\Users\dlinke\MyProg_local\gh-nfdi4cat\voc4cat(issue79-id-request)
 λ code .
 ```
@@ -53,7 +54,7 @@ C:\Users\dlinke\MyProg_local\gh-nfdi4cat\voc4cat(issue79-id-request)
 
 First it is a good idea to check the status of the git repository.
 
-```cmd
+```bat
 C:\Users\dlinke\MyProg_local\gh-nfdi4cat\voc4cat(issue79-id-request)
 λ git status
 On branch issue79-id-request
@@ -67,7 +68,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 If there is just `idrange.toml` changed (as expected) we proceed:
 
-```cmd
+```bat
 C:\Users\dlinke\MyProg_local\gh-nfdi4cat\voc4cat(issue79-id-request)
 λ git add idranges.toml
 
@@ -110,7 +111,7 @@ After the successful merge, delete the feature branch in the PR-page on GitHub (
 
 Switch back to main in the local repo and pull the latest changes:
 
-```cmd
+```bat
 C:\Users\dlinke\MyProg_local\gh-nfdi4cat\voc4cat(issue79-id-request)
 λ git switch main
 Switched to branch 'main'
@@ -133,7 +134,7 @@ Fast-forward
 
 Finally, you may want to delete the feature branch to keep your local repo clean.
 
-```cmd
+```bat
 C:\Users\dlinke\MyProg_local\gh-nfdi4cat\voc4cat(main -> origin)
 λ git branch -d issue79-id-request
 warning: deleting branch 'issue79-id-request' that has been merged to

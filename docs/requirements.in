@@ -1,0 +1,7 @@
+# Compile to requirements.txt with `pip-compile requirements.in`
+Sphinx
+myst-parser
+furo
+sphinx_inline_tabs
+sphinx-copybutton
+sphinx-design

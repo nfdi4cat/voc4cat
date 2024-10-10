@@ -1,0 +1,14 @@
+/*
+Configuration file for VSCode-markdownlint extension,
+see https://github.com/DavidAnson/vscode-markdownlint#configure
+
+For how the rules can be configured,
+see https://github.com/DavidAnson/markdownlint/blob/v0.35.0/schema/.markdownlint.jsonc
+*/
+{
+  "default": true,
+  "MD013": {
+    "line_length": 160  // Allow longer lines
+  },
+  "MD034": false,
+}

@@ -1,0 +1,4 @@
+# Config for the spell checker https://github.com/crate-ci/typos
+[default.extend-words]
+# Don't correct the surname "Linke"
+linke = "linke"

@@ -88,5 +88,5 @@ html_theme_options = {
         },
     ],
     # HTML to be show in a announcement banner at the top of the page
-    "announcement": "🛠️ <strong>Work-in-progress!</strong> This will soon replace the GitHub project page as the main access point to Voc4Cat. 🛠️",
+    "announcement": "🛠️ <strong>Work-in-progress!</strong> This site will soon replace the GitHub project page as the main access point to Voc4Cat. 🛠️",
 }

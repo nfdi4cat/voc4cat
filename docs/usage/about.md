@@ -1,4 +1,4 @@
-# About Voc4cat
+# About Voc4Cat
 
 Voc4Cat is an example for applying *open data, open code, and open infrastructure (O3)* to create community-curated scientific resources that can outlast funding.
 For more information on the *O3* idea, see [C. Hoyt and B. Gyori, 2024](https://doi.org/10.1038/s41597-024-03406-w).

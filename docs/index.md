@@ -11,42 +11,77 @@ which reflects the community's shared understanding of the concept's meaning.
 By using the identifiers provided by Voc4Cat to annotate data, rather than just words and symbols, ambiguity as to what is meant is avoided.
 Producing Voc4Cat-annotated data contributes to realising the vision of machine-actionability described as the ultimate goal of the [FAIR principles](https://doi.org/10.1038/sdata.2016.18).
 
-Voc4Cat conforms to the [SKOS](https://www.w3.org/TR/skos-reference/) standard. 
+Voc4Cat conforms to the [SKOS](https://www.w3.org/TR/skos-reference/) standard.
 The vocabulary is available in rdf/turtle or rdf/xml format to facilitate integration with other tools and services.
 Voc4Cat is also available in xlsx (Excel) format, making it easy for researchers to submit additions and updates.
 
-## Vocabulary Files & Documentation
+::::{grid} 3
+:::{grid-item-card} Documentation (HTML)
+:link: https://w3id.org/nfdi4cat/voc4cat/dev
 
-```{todo} Add links to rdf and xlsx vocabulary files and to the pylode html-documentation generated from SKOS.
+```{image} _static/voc4cat-pylode-docs.webp
+:height: 180
+:align: center
+:alt: screenshot of pylode generated vocabulary documentation
 ```
 
-::::{grid} 2
-:::{grid-item-card}  Title Card 1
-Header 1
-^^^
-Card 1 content
 +++
-Footer 1
+Development preview
 :::
 
-:::{grid-item-card}  Title Card 2
-Header 2
-^^^
-Card 2 content
+:::{grid-item-card} Spreadsheet file (xlsx)
+:link: https://nfdi4cat.github.io/voc4cat/dev/voc4cat.xlsx
+
+```{image} _static/xlsx-icon-on-concept-sheet.webp
+:height: 180
+:align: center
+:alt: xlsx file icon
+```
 +++
-Footer 2
+Most current
+:::
+
+:::{grid-item-card} Documentation (HTML)
+:link: https://w3id.org/nfdi4cat/voc4cat
+
+```{image} _static/voc4cat-pylode-docs.webp
+:height: 180
+:align: center
+:alt: screenshot of pylode generated vocabulary documentation
+```
++++
+Latest release
 :::
 ::::
 
-:::{card} Clickable Card (external)
-:link: https://example.com
+By default the HTML documentation is served from the URLs below.
+Corresponding RDF-files (turtle or xml) can be requested from the same URLs using content negotiation.
 
-The entire card can be clicked to navigate to <https://example.com>.
-:::
+| Version                       | Permanent URL                               |
+| ----------------------------- | ------------------------------------------- |
+| Most current (in development) | ```https://w3id.org/nfdi4cat/voc4cat/dev``` |
+| Latest release                | ```https://w3id.org/nfdi4cat/voc4cat```     |
+
+```{tip}
+:class: dropdown
+:class: open
+**`voc4cat`** is the preferred and [registered](https://bioregistry.io/registry/voc4cat) **prefix** for the Voc4Cat vocabulary.
+
+With the prefix, long URIs can be shortened to **compact URI**s (also called *CURIES*). These short notations are typically  preferred in linked-data applications.
+
+For example, the compact URI of `https://w3id.org/nfdi4cat/voc4cat_0005001` is `voc4cat:0005001`.
+```
+
+## Older releases
+
+- **v2024-04-08**: [Documentation (HTML)](https://w3id.org/nfdi4cat/voc4cat/v2024-04-08), permanent url `https://w3id.org/nfdi4cat/voc4cat/v2024-04-08`
+- **v2023-09-03**: [Documentation (HTML)](https://w3id.org/nfdi4cat/voc4cat/v2023-09-03"), permanent url `https://w3id.org/nfdi4cat/voc4cat/v2023-09-03`
+- **v2023-08-17**: [Documentation (HTML)](https://w3id.org/nfdi4cat/voc4cat/v2023-08-17), permanent url `https://w3id.org/nfdi4cat/voc4cat/v2023-08-17`
 
 ```{toctree}
 :hidden:
-SKOS files & docs <self>
+Overview <self>
+GitHub page <https://github.com/nfdi4cat/voc4cat>
 About <usage/about>
 ```
 

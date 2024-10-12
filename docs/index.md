@@ -16,8 +16,10 @@ The vocabulary is available in rdf/turtle or rdf/xml format to facilitate integr
 Voc4Cat is also available in xlsx (Excel) format, making it easy for researchers to submit additions and updates.
 
 ::::{grid} 3
-:::{grid-item-card} Documentation (HTML)
+:::{grid-item-card}
 :link: https://w3id.org/nfdi4cat/voc4cat/dev
+**Documentation**, preview
+^^^
 
 ```{image} _static/voc4cat-pylode-docs.webp
 :height: 180
@@ -26,31 +28,40 @@ Voc4Cat is also available in xlsx (Excel) format, making it easy for researchers
 ```
 
 +++
-Development preview
+Most current, \
+matches XLSX file
 :::
 
-:::{grid-item-card} Spreadsheet file (xlsx)
+:::{grid-item-card}
 :link: https://nfdi4cat.github.io/voc4cat/dev/voc4cat.xlsx
+**Vocabulary**, XLSX file
+^^^
 
-```{image} _static/xlsx-icon-on-concept-sheet.webp
+```{image} _static/voc4cat-concept-sheet.webp
 :height: 180
 :align: center
-:alt: xlsx file icon
+:alt: screenshot concepts in xlsx worksheet
 ```
+
 +++
-Most current
+Most current, \
+download to contribute
 :::
 
-:::{grid-item-card} Documentation (HTML)
+:::{grid-item-card}
 :link: https://w3id.org/nfdi4cat/voc4cat
+**Documentation**, released
+^^^
 
 ```{image} _static/voc4cat-pylode-docs.webp
 :height: 180
 :align: center
 :alt: screenshot of pylode generated vocabulary documentation
 ```
+
 +++
-Latest release
+Latest release, \
+v2024-04-08
 :::
 ::::
 

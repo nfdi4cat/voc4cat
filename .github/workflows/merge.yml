@@ -4,7 +4,7 @@
 # - checkout gh-pages for updating
 # - create joined vocabulary file in addition to split version
 # - create excel-file from turtle
-# - build docs
+# - build pyLODE docs
 # - publish docs, vocabulary-turtle files and excel-file to gh-pages
 
 name: Build
@@ -31,21 +31,21 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871
         with:
           # Using fetch-depth 0 is the only way to get all tags which are needed for building docs.
           fetch-depth: 0
 
       - name: Checkout gh-pages branch to dir publish/
-        uses: actions/checkout@v4
+        uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871
         with:
           ref: gh-pages
           path: publish
           fetch-depth: 1
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@f677139bbe7f9c59b41e40162b753c062f5d49a3
         with:
-          python-version: '3.11'
+          python-version: '3.12'
 
       - name: Install dependencies
         run: |
@@ -75,7 +75,7 @@ jobs:
           # Build joined turtle
           voc4cat transform --logfile publish/dev/voc4cat.log --join publish/dev/
 
-      - name: Run voc4cat (build HTML documentation)
+      - name: Run voc4cat (build pyLODE HTML documentation)
         run: |
           voc4cat docs --force --logfile publish/dev/voc4cat.log publish/dev/
           # move versions-overview to what becomes gh-pages root
@@ -102,10 +102,11 @@ jobs:
         # This step is not required and may be removed.
         # It may be helpful for trouble shooting.
         if: ${{ always() }}
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@50769540e7f4bd5e21e526ee35c689e35e0d6874
         with:
           name: voc4cat-pages-dev-content
           path: publish/
+          retention-days: 5
 
 # Lit:
 # https://github.com/peaceiris/actions-gh-pages

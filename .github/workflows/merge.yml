@@ -31,21 +31,21 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@d632683dd7b4114ad314bca15554477dd762a938
         with:
           # Using fetch-depth 0 is the only way to get all tags which are needed for building docs.
           fetch-depth: 0
 
       - name: Checkout gh-pages branch to dir publish/
-        uses: actions/checkout@v4
+        uses: actions/checkout@d632683dd7b4114ad314bca15554477dd762a938
         with:
           ref: gh-pages
           path: publish
           fetch-depth: 1
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@f677139bbe7f9c59b41e40162b753c062f5d49a3
         with:
-          python-version: '3.11'
+          python-version: '3.12'
 
       - name: Install dependencies
         run: |
@@ -75,7 +75,7 @@ jobs:
           # Build joined turtle
           voc4cat transform --logfile publish/dev/voc4cat.log --join publish/dev/
 
-      - name: Run voc4cat (build HTML documentation)
+      - name: Run voc4cat (build pyLODE HTML documentation)
         run: |
           voc4cat docs --force --logfile publish/dev/voc4cat.log publish/dev/
           # move versions-overview to what becomes gh-pages root
@@ -88,6 +88,13 @@ jobs:
       - name: Run voc4cat (build vocabulary in xml/rdf from Excel file)
         run: |
           voc4cat convert --logfile publish/dev/voc4cat.log --outputformat xml publish/dev/voc4cat.xlsx
+
+      - name: Build Sphinx documentation (website)
+        run: |
+          python -VV
+          python -m pip install -r docs/requirements.txt --force
+          sphinx-build --nitpicky --fail-on-warning --keep-going docs docs/_build
+          cp -r docs/_build/. publish/
 
       - name: Deploy updated gh-pages content
         # This replaces all prior content in gh-pages branch. But we have
@@ -106,10 +113,11 @@ jobs:
         # This step is not required and may be removed.
         # It may be helpful for trouble shooting.
         if: ${{ always() }}
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@50769540e7f4bd5e21e526ee35c689e35e0d6874
         with:
           name: voc4cat-pages-dev-content
           path: publish/
+          retention-days: 5
 
 # Lit:
 # https://github.com/peaceiris/actions-gh-pages

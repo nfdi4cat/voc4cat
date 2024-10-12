@@ -82,7 +82,7 @@ For example, the compact URI of `https://w3id.org/nfdi4cat/voc4cat_0005001` is `
 :hidden:
 Overview <self>
 GitHub page <https://github.com/nfdi4cat/voc4cat>
-About <usage/about>
+About <docs_usage/about>
 ```
 
 ```{toctree}
@@ -90,9 +90,9 @@ About <usage/about>
 :hidden:
 :maxdepth: 2
 
-usage/how-to-use
-usage/how-to-contribute
-usage/guidelines
+docs_usage/how-to-use
+docs_usage/how-to-contribute
+docs_usage/guidelines
 ```
 
 ```{toctree}
@@ -100,7 +100,7 @@ usage/guidelines
 :glob:
 :hidden:
 
-maintenance/*
+docs_maintenance/*
 ```
 
 ```{toctree}
@@ -108,5 +108,5 @@ maintenance/*
 :hidden:
 :maxdepth: 3
 
-All-in-one-page (as published) <usage/published-guidelines-v2>
+All-in-one-page (as published) <docs_usage/published-guidelines-v2>
 ```

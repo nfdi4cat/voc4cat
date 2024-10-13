@@ -12,11 +12,10 @@ py -m venv .venv
 pip install -r docs\requirements.txt
 ```
 
-Navigate to the docs-directory and build the documentation:
+Build the documentation (option `-a` tells sphinx to rebuild all files, `--nitpicky` warns on missing references):
 
 ```bat
-cd docs
-make html
+sphinx-build -a --nitpicky docs docs/_build
 ```
 
 The documentation is created in `docs/_build` and can be previewed by opening the file `docs\_build\html\index.html` in a web browser.

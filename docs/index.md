@@ -72,8 +72,8 @@ The direct links in the table are just given for convenience; they are not perma
 
 | Version        | Permanent URL                               | Direct RDF download links                 |
 | -------------- | ------------------------------------------- | ----------------------------------------- |
-| Most current   | ```https://w3id.org/nfdi4cat/voc4cat/dev``` | {raw-html}`<img src="_images/W3C-SKOS-blue.svg" alt="W3C SKOS logo" style="vertical-align: middle" width=90px>` [Turtle](https://nfdi4cat.github.io/voc4cat/dev/voc4cat.ttl) - [RDF/XML](https://nfdi4cat.github.io/voc4cat/dev/voc4cat.xml) |
-| Latest release | ```https://w3id.org/nfdi4cat/voc4cat```     | {raw-html}`<img src="_images/W3C-SKOS-blue.svg" alt="W3C SKOS logo" style="vertical-align: middle" width=90px>` [Turtle](https://nfdi4cat.github.io/voc4cat/latest/voc4cat.ttl) - [RDF/XML](https://nfdi4cat.github.io/voc4cat/latest/voc4cat.xml) |
+| Most current   | ```https://w3id.org/nfdi4cat/voc4cat/dev``` | {raw-html}`<img src="_static/W3C-SKOS-blue.svg" alt="W3C SKOS logo" style="vertical-align: middle" width=90px>` [Turtle](https://nfdi4cat.github.io/voc4cat/dev/voc4cat.ttl) - [RDF/XML](https://nfdi4cat.github.io/voc4cat/dev/voc4cat.xml) |
+| Latest release | ```https://w3id.org/nfdi4cat/voc4cat```     | {raw-html}`<img src="_static/W3C-SKOS-blue.svg" alt="W3C SKOS logo" style="vertical-align: middle" width=90px>` [Turtle](https://nfdi4cat.github.io/voc4cat/latest/voc4cat.ttl) - [RDF/XML](https://nfdi4cat.github.io/voc4cat/latest/voc4cat.xml) |
 
 ```{tip}
 

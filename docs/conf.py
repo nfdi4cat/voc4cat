@@ -48,9 +48,9 @@ autosectionlabel_prefix_document = True
 # https://myst-parser.readthedocs.io/en/latest/configuration.html
 
 myst_enable_extensions = [
-    "colon_fence", # enable the colon_fence ::: syntax for admonitions
-    "deflist",     # enable definistion list syntax
-    "html_image",  # convert HTML <img> elements to sphinx image nodes
+    "attrs_inline", # enable {}-attribute syntax like ![](img/fish.png){w=100px align=center}
+    "colon_fence",  # enable the colon_fence ::: syntax for admonitions
+    "html_image",   # convert HTML <img> elements to sphinx image nodes
 ]
 
 # -- Options for Furo theme ---------------------------------------------------
@@ -88,5 +88,5 @@ html_theme_options = {
         },
     ],
     # HTML to be show in a announcement banner at the top of the page
-    "announcement": "🛠️ <strong>Work-in-progress!</strong> This site will soon replace the GitHub project page as the main access point to Voc4Cat. 🛠️",
+    "announcement": "<strong>News 2024-10-12</strong>: Voc4Cat finally got a nice home page! - <small>Some sections are still work in progress. 🛠️ </small>",
 }

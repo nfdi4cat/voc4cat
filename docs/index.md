@@ -11,18 +11,13 @@ which reflects the community's shared understanding of the concept's meaning.
 By using the identifiers provided by Voc4Cat to annotate data, rather than just words and symbols, ambiguity as to what is meant is avoided.
 Producing Voc4Cat-annotated data contributes to realising the vision of machine-actionability described as the ultimate goal of the [FAIR principles](https://doi.org/10.1038/sdata.2016.18).
 
-Voc4Cat conforms to the [SKOS](https://www.w3.org/TR/skos-reference/) standard.
-The vocabulary is available in rdf/turtle or rdf/xml format to facilitate integration with other tools and services.
-Voc4Cat is also available in xlsx (Excel) format, making it easy for researchers to submit additions and updates.
-
 ::::{grid} 3
 :::{grid-item-card}
 :link: https://w3id.org/nfdi4cat/voc4cat/dev
 **Documentation**, preview
 ^^^
 
-```{image} _static/voc4cat-pylode-docs.webp
-:height: 180
+```{image} _static/voc4cat-pylode-docs.png
 :align: center
 :alt: screenshot of pylode generated vocabulary documentation
 ```
@@ -37,8 +32,7 @@ matches XLSX file
 **Vocabulary**, XLSX file
 ^^^
 
-```{image} _static/voc4cat-concept-sheet.webp
-:height: 180
+```{image} _static/voc4cat-concept-sheet.png
 :align: center
 :alt: screenshot concepts in xlsx worksheet
 ```
@@ -53,8 +47,7 @@ download to contribute
 **Documentation**, released
 ^^^
 
-```{image} _static/voc4cat-pylode-docs.webp
-:height: 180
+```{image} _static/voc4cat-pylode-docs.png
 :align: center
 :alt: screenshot of pylode generated vocabulary documentation
 ```
@@ -65,17 +58,26 @@ v2024-04-08
 :::
 ::::
 
-By default the HTML documentation is served from the URLs below.
-Corresponding RDF-files (turtle or xml) can be requested from the same URLs using content negotiation.
+Voc4Cat conforms to the [SKOS](https://www.w3.org/TR/skos-reference/) standard.
+The vocabulary is available in rdf/turtle or rdf/xml format to facilitate integration with other tools and services.
+Voc4Cat is also available in xlsx (Excel) format, making it easy for researchers to submit additions and updates.
 
-| Version                       | Permanent URL                               |
-| ----------------------------- | ------------------------------------------- |
-| Most current (in development) | ```https://w3id.org/nfdi4cat/voc4cat/dev``` |
-| Latest release                | ```https://w3id.org/nfdi4cat/voc4cat```     |
+By default the HTML documentation is served from the permanent URLs below.
+Corresponding RDF-files (turtle or xml) can be requested from the same URLs using content negotiation.
+The direct links in the table are just given for convenience; they are not permanent.
+
+:::{role} raw-html(raw)
+:format: html
+:::
+
+| Version        | Permanent URL                               | Direct RDF download links                 |
+| -------------- | ------------------------------------------- | ----------------------------------------- |
+| Most current   | ```https://w3id.org/nfdi4cat/voc4cat/dev``` | {raw-html}`<img src="_images/W3C-SKOS-blue.svg" alt="W3C SKOS logo" style="vertical-align: middle" width=90px>` [Turtle](https://nfdi4cat.github.io/voc4cat/dev/voc4cat.ttl) - [RDF/XML](https://nfdi4cat.github.io/voc4cat/dev/voc4cat.xml) |
+| Latest release | ```https://w3id.org/nfdi4cat/voc4cat```     | {raw-html}`<img src="_images/W3C-SKOS-blue.svg" alt="W3C SKOS logo" style="vertical-align: middle" width=90px>` [Turtle](https://nfdi4cat.github.io/voc4cat/latest/voc4cat.ttl) - [RDF/XML](https://nfdi4cat.github.io/voc4cat/latest/voc4cat.xml) |
 
 ```{tip}
-:class: dropdown
-:class: open
+:class: dropdown, open
+
 **`voc4cat`** is the preferred and [registered](https://bioregistry.io/registry/voc4cat) **prefix** for the Voc4Cat vocabulary.
 
 With the prefix, long URIs can be shortened to **compact URI**s (also called *CURIES*). These short notations are typically  preferred in linked-data applications.
@@ -83,7 +85,7 @@ With the prefix, long URIs can be shortened to **compact URI**s (also called *CU
 For example, the compact URI of `https://w3id.org/nfdi4cat/voc4cat_0005001` is `voc4cat:0005001`.
 ```
 
-## Older releases
+## All releases
 
 - **v2024-04-08**: [Documentation (HTML)](https://w3id.org/nfdi4cat/voc4cat/v2024-04-08), permanent url `https://w3id.org/nfdi4cat/voc4cat/v2024-04-08`
 - **v2023-09-03**: [Documentation (HTML)](https://w3id.org/nfdi4cat/voc4cat/v2023-09-03"), permanent url `https://w3id.org/nfdi4cat/voc4cat/v2023-09-03`

@@ -76,7 +76,6 @@ The direct links in the table are just given for convenience; they are not perma
 | Latest release | ```https://w3id.org/nfdi4cat/voc4cat```     | {raw-html}`<img src="_images/W3C-SKOS-blue.svg" alt="W3C SKOS logo" style="vertical-align: middle" width=90px>` [Turtle](https://nfdi4cat.github.io/voc4cat/latest/voc4cat.ttl) - [RDF/XML](https://nfdi4cat.github.io/voc4cat/latest/voc4cat.xml) |
 
 ```{tip}
-:class: dropdown, open
 
 **`voc4cat`** is the preferred and [registered](https://bioregistry.io/registry/voc4cat) **prefix** for the Voc4Cat vocabulary.
 

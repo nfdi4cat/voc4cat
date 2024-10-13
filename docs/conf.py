@@ -32,6 +32,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'README.md']
 
 html_theme = 'furo'
 html_static_path = ['_static']
+html_favicon = '_static/favicon_32.png'
 
 # -- Options for todo extension -----------------------------------
 # https://www.sphinx-doc.org/en/master/usage/extensions/todo.html#module-sphinx.ext.todo

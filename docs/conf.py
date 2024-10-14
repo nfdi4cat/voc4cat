@@ -6,10 +6,9 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'voc4cat-guidelines'
-copyright = '2024, Nikolaos Moustakas, David Linke'
-author = 'Nikolaos Moustakas, David Linke'
-release = '2.0'
+project = 'Voc4Cat'
+copyright = '2024, Voc4Cat contributors'
+author = 'David Linke, Nikolaos Moustakas, and Voc4Cat contributors'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -33,6 +32,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'README.md']
 html_theme = 'furo'
 html_static_path = ['_static']
 html_favicon = '_static/favicon_32.png'
+html_last_updated_fmt = '%Y-%m-%d'
 
 # -- Options for todo extension -----------------------------------
 # https://www.sphinx-doc.org/en/master/usage/extensions/todo.html#module-sphinx.ext.todo

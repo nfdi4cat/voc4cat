@@ -4,7 +4,7 @@ You need a recent Python version on your computer and a local clone of the repos
 
 The following commands should be run from the root directory of the clone.
 
-First, install the required packages into a virtual environment. The documentation is build with Sphinx and MyST for markdown support.
+First, install the required packages into a virtual environment. The documentation is built with Sphinx and MyST for markdown support.
 
 ```bat
 py -m venv .venv

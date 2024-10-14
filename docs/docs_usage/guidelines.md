@@ -16,8 +16,7 @@ The guidelines have been through excessive discussions and were evolved
 over the course of *Task Area 1 (TA1): Ontology Development and Metadata
 Standards* of NFDI4Cat.
 
-Please note that all language dependent
-parts refer to only the default language (**British English**).
+Please note that all language dependent parts refer to only the default language (British English).
 
 ## General recommendations
 
@@ -96,7 +95,7 @@ considerations should be followed when adding definitions:
 6. A definition of a concept should not start with mentioning the
     concept that it defines.
 
-7. If the source of a definition is not the contributor, the use of a
+7. If the source of a definition is not the contributor, a
     trusted and stable source should be used. Credit must be given to
     the original creator. When copyright or license is restrictive, it
     must be respected. To identify the source, a URL, or a descriptive

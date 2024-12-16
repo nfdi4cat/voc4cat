@@ -15,7 +15,15 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://w3id.org/nfdi4cat/voc4cat_0000188> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000189> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000192> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007201> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007205> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007224> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007230> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007231> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007232> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007235> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007236> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007249> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007250> ;
     skos:prefLabel "equipment"@en ;
 .

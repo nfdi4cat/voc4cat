@@ -10,11 +10,14 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
     skos:narrower
+        <https://w3id.org/nfdi4cat/voc4cat_0000061> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000146> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000151> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000163> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000188> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000189> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000192> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007012> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007201> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007205> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007224> ,

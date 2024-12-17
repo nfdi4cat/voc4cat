@@ -10,9 +10,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         "pressure controller and monitor"@en ,
         "pressure gauge"@en ,
         "pressure monitor"@en ;
-    skos:broader
-        <https://w3id.org/nfdi4cat/voc4cat_0000143> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000187> ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000187> ;
     skos:definition "Equipment (e.g., a vacuum pump) used for controlling and / or monitoring the pressure in various parts of a reactor."@en ;
     skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;

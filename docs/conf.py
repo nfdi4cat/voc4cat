@@ -89,5 +89,5 @@ html_theme_options = {
         },
     ],
     # HTML to be show in a announcement banner at the top of the page
-    "announcement": "<strong>News 2024-10-12</strong>: Voc4Cat finally got a nice home page! - <small>Some sections are still work in progress. 🛠️ </small>",
+    "announcement": "<strong>News 2024-12-17</strong>: A new release of Voc4Cat adding top-level concepts.",
 }

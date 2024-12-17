@@ -23,8 +23,7 @@ Producing Voc4Cat-annotated data contributes to realising the vision of machine-
 ```
 
 +++
-Most current, \
-matches XLSX file
+<small>Most current, matches XLSX file</small>
 :::
 
 :::{grid-item-card}
@@ -38,8 +37,7 @@ matches XLSX file
 ```
 
 +++
-Most current, \
-download to contribute
+<small>Download to contribute</small>
 :::
 
 :::{grid-item-card}
@@ -53,8 +51,7 @@ download to contribute
 ```
 
 +++
-Latest release, \
-v2024-12-17
+<small>Latest release **v2024-12-17**</small>
 :::
 ::::
 

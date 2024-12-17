@@ -5,7 +5,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://w3id.org/nfdi4cat/voc4cat_0000006>
     a skos:Concept ;
     dcterms:identifier "voc4cat_0000006"^^xsd:token ;
-    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000003> ;
     skos:definition "Characteristic properties of a semiconductor used in catalysis. These properties determine its performance in the studied catalytic application."@en ;
     skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
@@ -18,5 +17,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://w3id.org/nfdi4cat/voc4cat_0000012> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000013> ;
     skos:prefLabel "semiconductor property"@en ;
+    skos:topConceptOf <https://w3id.org/nfdi4cat/voc4cat_> ;
 .
 

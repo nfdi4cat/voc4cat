@@ -1,0 +1,14 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0007234>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0007234"^^xsd:token ;
+    skos:definition "The phenomenon of movement (transportation) of electrical charge (that is, the electrical current) from one part of the electrochemical cell to another, occurring mainly as electromigration of ions, but it can also occur by diffusion of ions. See electrochemical potential."@en ;
+    skos:historyNote "0009-0008-1278-8890 Michael Götte created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "charge transport"@en ;
+    skos:topConceptOf <https://w3id.org/nfdi4cat/voc4cat_> ;
+.
+

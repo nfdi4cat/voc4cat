@@ -148,35 +148,31 @@ considerations should be followed when adding definitions:
 
 ## Singular vs. plural
 
+Use **singular** for
+
+- **mass nouns** which are names for non-countable entities subject to the question “How much?”.
+ Examples are names of materials or substances.
+- names of **abstract concepts** (e.g., activities, properties, disciplines).
+- names of **unique entities**, no matter if abstract or concrete.
+
+Use **plural** for
+
+- **count nouns** which are names for entities or concepts that are subject to the question “How many?” (e.g., redox cycles).
+- names representing a **class** with more than one member (e.g., plastics).
+
 Where the singular and plural forms of a term represent different
 concepts, separate terms for each should be added to Voc4Cat as
-appropriate. The distinction should be indicated by a qualifier (e.g.,
-Wood (material), woods (forested areas)).
-
-### Count nouns
-
-Concepts that are subject to the question “How many?” but not “How
-much?” should normally be expressed as plurals.
-
-### Noncount (mass) nouns
-
-Names of materials or substances that are subject to the question “How
-much?” but not “How many?” should be expressed in the singular. If the
-community of users served by Voc4Cat regards a given substance or
-material as a class with more than one member, the class should be
-expressed in the plural (e.g., plastics). The names of abstract
-concepts, e.g., activities, properties, disciplines etc., should be
-expressed in the singular, even though some of the terms are subject to
-the question “How much?”.
+appropriate. The distinction may be indicated by a qualifier, e.g.,
+Wood (material), woods (forested areas).
 
 ## Lower vs. capital letters
 
-1. Concepts should be written in all lower-case letters.
+Concepts should be written in all lower-case letters.
 
-2. The first letter of proper names must be a capital, when the proper
-    name occurs within longer terms, such in combination with “method”,
-    “theory”, or “process” (e.g., Brønsted acid site, Lewis acid site,
-    Röntgen crystallography, Langmuir-Hinshelwood mechanism).
+However, the first letter of proper names must be a capital, when the proper
+name occurs within longer terms, such in combination with “method”,
+“theory”, or “process” (e.g., Brønsted acid site, Lewis acid site,
+Röntgen crystallography, Langmuir-Hinshelwood mechanism).
 
 ## Grammatical forms
 

@@ -92,6 +92,7 @@ For example, the compact URI of `https://w3id.org/nfdi4cat/voc4cat_0005001` is `
 :hidden:
 Overview <self>
 GitHub page <https://github.com/nfdi4cat/voc4cat>
+Kanban board <https://github.com/orgs/nfdi4cat/projects/11>
 About <docs_usage/about>
 ```
 

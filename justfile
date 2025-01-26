@@ -57,6 +57,8 @@ convert: _fake_actions_env
   fi
 
   #=== post-convert checks ===
+  # Delete xlsx in outbox that may be present from former runs
+  @rm -f outbox/voc4cat.xlsx
   # check all ttl file(s) in outbox
   @voc4cat check --config _main_branch/idranges.toml --logfile outbox/voc4cat.log outbox/
   # check if vocabulary changes are allowed
@@ -66,8 +68,13 @@ convert: _fake_actions_env
 docs:
   @voc4cat docs --logfile outbox/voc4cat.log --force outbox/
 
-# Run combination of steps as in gh-actions: check xlsx, convert to SKOS, build docs
-all: check convert docs
+# Rebuild the xlsx file from the joined ttl file.
+xlsx:
+  @rm -f outbox/voc4cat.xlsx
+  @voc4cat convert --logfile outbox/voc4cat.log --template templates/voc4cat_template_043.xlsx outbox/
+
+# Run all steps as in gh-actions: check xlsx, convert to SKOS, build docs, re-build xlsx
+all: check convert docs xlsx
 
 # Create local environment suitable to run the same commands as in gh-actions
 _fake_actions_env:
@@ -75,7 +82,7 @@ _fake_actions_env:
   @mkdir -p _main_branch/vocabularies
   @cp idranges.toml _main_branch/idranges.toml
 
-# # Clean all generated files
+# Remove all generated files/directories
 clean:
   rm -rf outbox
   rm -rf outbox_new_voc

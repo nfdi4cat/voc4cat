@@ -133,10 +133,10 @@ For details see the Zenodo record.
 
 All vocabularies in this repository are CC0-1.0 licensed, see [LICENSE](LICENSE) for details.
 
-### Voc4cat template
+### Voc4Cat template
 
-The template itself is CC0-1.0 licensed, see [LICENSE](https://github.com/nfdi4cat/voc4cat-template/blob/main/LICENSE).
-Although there is no obligation, we nevertheless appreciate if our work is acknowledged in any derivative work.
+The template itself is CC0-1.0 licensed, see [LICENSE](https://github.com/nfdi4cat/voc4cat-template/blob/main/LICENSE). 
+Although there is no obligation, we will nevertheless highly appreciate if you acknowledge our work in any derivative work.
 
 ## Acknowledgement
 

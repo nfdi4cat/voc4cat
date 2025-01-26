@@ -12,7 +12,9 @@ The template is maintained as part of the [NFDI4Cat](http://www.nfdi4cat.org) in
 
 ### Trying out the workflow
 
-To try out the workflow you can use [voc4cat-playground](https://github.com/nfdi4cat/voc4cat-playground) which is a "deployment" of this repository.
+To experience the workflow, we suggest that you try contributing to [voc4cat](https://github.com/nfdi4cat/voc4cat) which is a "deployment" of this repository.
+If you are interested in understanding the technical details or in developing your own vocabulary,
+follow the instructions [below](#how-to-use-this-template-for-your-own-vocabularies).
 
 All vocabularies based on this template have the same standard contribution process of
 
@@ -113,7 +115,7 @@ This adds all commits made in the template´s main branch to your new repository
   - Add a different license for your vocabulary.
   - Adjust the styling of the Excel template for your vocabulary.
 
-After these steps your repository should work just like [voc4cat](https://github.com/nfdi4cat/voc4cat) or [voc4cat-playground](https://github.com/nfdi4cat/voc4cat-playground).
+After these steps your repository should work just like [voc4cat](https://github.com/nfdi4cat/voc4cat).
 
 ### Keeping your vocabulary repository in sync with the voc4cat-template
 

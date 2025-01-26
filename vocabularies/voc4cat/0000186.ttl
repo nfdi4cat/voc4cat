@@ -109,4 +109,3 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "attributes"@en ;
     skos:topConceptOf <https://w3id.org/nfdi4cat/voc4cat_> ;
 .
-

@@ -15,4 +15,3 @@ Example unit: kg{product} / (hour * cubicmeter{catalyst})"""@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
     skos:prefLabel "space-time yield"@en ;
 .
-

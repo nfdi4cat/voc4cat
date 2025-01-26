@@ -12,4 +12,3 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
     skos:prefLabel "reversible hydrogen electrode"@en ;
 .
-

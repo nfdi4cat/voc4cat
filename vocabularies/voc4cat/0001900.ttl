@@ -34,4 +34,3 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://w3id.org/nfdi4cat/voc4cat_0000141> ;
     skos:prefLabel "Characterization and evaluation techniques"@en ;
 .
-

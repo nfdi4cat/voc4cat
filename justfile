@@ -30,15 +30,18 @@ src := "src"
 set ignore-comments	:= true
 
 # Run initial setup (run this first)
+[group('environment')]
 setup:
   # install current voc4cat-tool version
   uv tool install voc4cat --with git+https://github.com/dalito/pyLODE.git@nfdi4cat-2.x
 
-# Updates voc4cat-tool installation
-update:
-  uv tool install voc4cat
+# Upgrades voc4cat-tool installation
+[group('environment')]
+upgrade:
+  uv tool install --upgrade voc4cat --with git+https://github.com/dalito/pyLODE.git@nfdi4cat-2.x
 
 # Check the voc4cat.xlsx file in inbox/ for errors
+[group('individual steps')]
 check: _fake_actions_env
   @voc4cat --version
   # check inbox file names
@@ -47,6 +50,7 @@ check: _fake_actions_env
   @voc4cat check --config _main_branch/idranges.toml --logfile outbox/voc4cat.log --outdir outbox inbox-excel-vocabs/
 
 # Convert the voc4cat.xlsx file in inbox/ to turtle
+[group('individual steps')]
 convert: _fake_actions_env
   # make a backup of the original file just in case
   @cp inbox-excel-vocabs/voc4cat.xlsx inbox-excel-vocabs/voc4cat.xlsx.backup
@@ -65,13 +69,20 @@ convert: _fake_actions_env
   @voc4cat check --config _main_branch/idranges.toml --logfile outbox/voc4cat.log --ci-post _main_branch/vocabularies outbox/
 
 # Run voc4cat (build HTML documentation from ttl files)
+[group('individual steps')]
 docs:
   @voc4cat docs --logfile outbox/voc4cat.log --force outbox/
 
 # Rebuild the xlsx file from the joined ttl file.
+[group('individual steps')]
 xlsx:
   @rm -f outbox/voc4cat.xlsx
   @voc4cat convert --logfile outbox/voc4cat.log --template templates/voc4cat_template_043.xlsx outbox/
+
+# Join individual ttl files in vocabularies/ to one turtle file in outbox/
+[group('individual steps')]
+join:
+  @voc4cat transform --logfile outbox/voc4cat.log -O outbox --join vocabularies/
 
 # Run all steps as in gh-actions: check xlsx, convert to SKOS, build docs, re-build xlsx
 all: check convert docs xlsx
@@ -83,6 +94,7 @@ _fake_actions_env:
   @cp idranges.toml _main_branch/idranges.toml
 
 # Remove all generated files/directories
+[group('environment')]
 clean:
   rm -rf outbox
   rm -rf outbox_new_voc

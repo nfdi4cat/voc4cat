@@ -21,4 +21,3 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "Test-of-Voc4Cat"@en ;
     dcat:contactPoint "Sofia Garcia (orcid:0000-0001-2345-6789)" ;
 .
-

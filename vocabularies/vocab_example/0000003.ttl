@@ -14,4 +14,3 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "Internationalized Resource Identifier"@en ;
     skos:topConceptOf <https://example.org/test/> ;
 .
-

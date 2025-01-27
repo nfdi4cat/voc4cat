@@ -17,4 +17,3 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://example.org/test/0000003> ;
     skos:prefLabel "Linked data term"@en ;
 .
-

@@ -16,4 +16,3 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:relatedMatch <https://example.org/test/0000003> ;
     skos:topConceptOf <https://example.org/test/> ;
 .
-

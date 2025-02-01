@@ -1,7 +1,13 @@
 # For more on what a codeowners file does and its syntax see
 # https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
 
+# Order is important; the last matching pattern takes the most precedence.
+
 # These owners will be the default owners for everything in the repo.
 # Unless a later match takes precedence, the team @nfdi4cat/voc4cat-curators
 # will be requested for review when someone opens a pull request.
 *       @nfdi4cat/voc4cat-curators
+
+# Curators should not take care of technical details of gh-actions or
+# manage code ownership. This is currently taken care of by dalito.
+/.github/ @dalito

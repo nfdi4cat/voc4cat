@@ -8,6 +8,8 @@
 # will be requested for review when someone opens a pull request.
 *       @nfdi4cat/voc4cat-curators
 
-# Curators should not take care of technical details of gh-actions or
-# manage code ownership. This is currently taken care of by dalito.
+# Curators should not take care of technical details of gh-actions,
+# the template or manage code ownership.
+# This is currently taken care of by dalito.
+/templates/ @dalito
 /.github/ @dalito

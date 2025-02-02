@@ -80,8 +80,9 @@ jobs:
           mv publish/latest/index.html publish/
 
       - name: Run voc4cat (build current Excel file)
+        # Passing the config is important to make use of the prefixes therein.
         run: |
-          voc4cat convert --logfile publish/latest/voc4cat.log --template templates/voc4cat_template_043.xlsx publish/latest/
+          voc4cat convert --config _main_branch/idranges.toml --logfile publish/latest/voc4cat.log --template templates/voc4cat_template_043.xlsx publish/latest/
 
       - name: Copy release to release-name directory
         run: |

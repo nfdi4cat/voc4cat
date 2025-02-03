@@ -1,4 +1,4 @@
-# This action runs on merges of turtle files to main.
+# This action runs on merge to main.
 #
 # Workflow steps:
 # - checkout gh-pages for updating
@@ -7,12 +7,15 @@
 # - build pyLODE docs
 # - publish docs, vocabulary-turtle files and excel-file to gh-pages
 
-name: Build
+name: Merge & re-build
 on:
   push:
     branches:
       - main
     paths:
+      - 'idranges.toml'
+      - '.zenodo.json'
+      - '.github/workflows/**.yml'
       - 'vocabularies/**.ttl'
   workflow_dispatch:
 

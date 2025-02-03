@@ -20,7 +20,7 @@ permanent_iri_part = "https://w3id.org/nfdi4cat/voc4cat_"
 allow_delete = false
 
 [vocabs.voc4cat.prefix_map]
-v4c = "https://w3id.org/nfdi4cat/voc4cat_"
+voc4cat = "https://w3id.org/nfdi4cat/voc4cat_"
 # Section of IDranges for coordinating the allocation of numeric ID ranges to
 # contributors for each vocabulary. Each idrange contains the same keys:
 #

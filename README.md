@@ -29,7 +29,7 @@ Please see [README_TEMPLATE.md](/README_TEMPLATE.md#contributing-to-vocabularies
 
 ### Voc4Cat template
 
-- David Linke (ORCID: 0000-0002-5898-1820) - Creator of this repository template and its GitHub workflows.
+- David Linke (ORCID: 0000-0002-5898-1820) - Creator of the repository template and its GitHub workflows.
 
 ## License
 

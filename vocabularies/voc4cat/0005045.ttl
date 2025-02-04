@@ -7,11 +7,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a skos:Concept ;
     dcterms:identifier "voc4cat_0005045"^^xsd:token ;
     rdfs:isDefinedBy <https://w3id.org/nfdi4cat/voc4cat_0005045> ;
-    skos:altLabel
-        "\" \""@en ,
-        "\"-\")&\" relation\""@en ,
-        "=SUBSTITUTE(LOWER(concepts[[#This Row]"@en ,
-        "[Preferred Label*]])"@en ;
     skos:broader <https://w3id.org/nfdi4cat/voc4cat_0005018> ;
     skos:definition "The resource is collected by another resource."@en ;
     skos:historyNote "0000-0002-5898-1820 David Linke created the resource"@en ;

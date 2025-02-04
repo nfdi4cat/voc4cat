@@ -1,4 +1,4 @@
-# This action runs on merges of turtle files to main.
+# This action runs on merge to main.
 #
 # Workflow steps:
 # - checkout gh-pages for updating
@@ -8,13 +8,17 @@
 # - build sphinx docs/site
 # - publish docs, vocabulary-turtle files and excel-file to gh-pages
 
-name: Build
+name: Merge & re-build
 on:
   push:
     branches:
       - main
     paths:
+      - 'idranges.toml'
+      - '.zenodo.json'
+      - '.github/workflows/**.yml'
       - 'docs/**'
+      - 'templates/**.xlsx'
       - 'vocabularies/**.ttl'
   workflow_dispatch:
 
@@ -55,7 +59,7 @@ jobs:
           python -m pip install --upgrade pip setuptools wheel
 
           # install tagged version
-          python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@v0.8.8
+          python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@v0.9.0
           # python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@main
 
           # install custom pylode 2.x
@@ -84,8 +88,9 @@ jobs:
           mv publish/dev/index.html publish/
 
       - name: Run voc4cat (build current Excel file)
+        # Passing the config is important to make use of the prefixes therein.
         run: |
-          voc4cat convert --logfile publish/dev/voc4cat.log --template templates/voc4cat_template_043.xlsx publish/dev/
+          voc4cat convert --config _main_branch/idranges.toml --logfile publish/dev/voc4cat.log --template templates/voc4cat_template_043.xlsx publish/dev/
 
       - name: Run voc4cat (build vocabulary in xml/rdf from Excel file)
         run: |

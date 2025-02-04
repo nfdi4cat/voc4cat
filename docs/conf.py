@@ -89,5 +89,5 @@ html_theme_options = {
         },
     ],
     # HTML to be show in a announcement banner at the top of the page
-    "announcement": 'Follow what has been done and see what comes next in our new <strong><a href="https://github.com/orgs/nfdi4cat/projects/11">Kanban board</a></strong>.',
+    "announcement": '<strong> Much improved styling for the Vocabulary XLSX-file </strong> thanks to Release 0.9.0 of voc4cat-tool.',
 }

@@ -293,7 +293,8 @@ Voc4Cat are illustrated in Figure 2. Steps 1-4 are performed only once
 and are intended to set up the GitHub environment for the contributor.
 The actual contribution process involves steps 5-7 which are repeated
 with each new submission. A more detailed (visual) guide with
-screenshots can be found under: https://zenodo.org/uploads/13757351.
+screenshots can be found on Zenodo under 
+[DOI:10.5281/zenodo.13757350](https://doi.org/10.5281/zenodo.13757350).
 
 ```{figure} media/contributions-steps.png
 :alt: steps-of-contribution-process

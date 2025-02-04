@@ -16,6 +16,7 @@ on:
       - 'idranges.toml'
       - '.zenodo.json'
       - '.github/workflows/**.yml'
+      - 'templates/**.xlsx'
       - 'vocabularies/**.ttl'
   workflow_dispatch:
 

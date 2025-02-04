@@ -1,10 +1,12 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <https://w3id.org/nfdi4cat/voc4cat_0000002>
     a skos:Concept ;
     dcterms:identifier "voc4cat_0000002"^^xsd:token ;
+    rdfs:isDefinedBy <https://w3id.org/nfdi4cat/voc4cat_0000002> ;
     skos:altLabel "photocatalytic material"@en ;
     skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000194> ;
     skos:definition "A material that absorbs photons (light) of appropriate energy and initiates or accelerates a photochemical reaction, while it regenerates itself after each reaction cycle."@en ;

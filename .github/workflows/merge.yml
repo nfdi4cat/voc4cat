@@ -88,7 +88,7 @@ jobs:
       - name: Run voc4cat (build current Excel file)
         # Passing the config is important to make use of the prefixes therein.
         run: |
-          voc4cat convert --config _main_branch/idranges.toml --logfile publish/dev/voc4cat.log --template templates/voc4cat_template_043.xlsx publish/dev/
+          voc4cat convert --config idranges.toml --logfile publish/dev/voc4cat.log --template templates/voc4cat_template_043.xlsx publish/dev/
 
       - name: Deploy updated gh-pages content
         # This replaces all prior content in gh-pages branch. But we have

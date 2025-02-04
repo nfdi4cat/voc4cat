@@ -77,7 +77,7 @@ docs:
 [group('individual steps')]
 xlsx:
   @rm -f outbox/voc4cat.xlsx
-  @voc4cat convert --config _main_branch/idranges.toml --logfile outbox/voc4cat.log --template templates/voc4cat_template_043.xlsx outbox/
+  @voc4cat convert --config idranges.toml --logfile outbox/voc4cat.log --template templates/voc4cat_template_043.xlsx outbox/
 
 # Join individual ttl files in vocabularies/ to one turtle file in outbox/
 [group('individual steps')]

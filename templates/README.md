@@ -4,6 +4,12 @@ The templates here match structure-wise with the templates in [Voc4Cat-tool](htt
 
 ### Version 0.4.3
 
+#### Revision 2025-02a
+
+- Update help to reflect the prefix sheet is read-only.
+- Update introduction to reflect progress of tooling.
+- Adjust column widths for better compatibility with new IRI notation with qualifier.
+
 #### Revision 2023-08b
 
 - Cells version and modified date in concept scheme sheet are now optional. Updated notes accordingly.

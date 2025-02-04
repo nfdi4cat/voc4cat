@@ -92,9 +92,9 @@ jobs:
         run: |
           voc4cat convert --config idranges.toml --logfile publish/dev/voc4cat.log --template templates/voc4cat_template_043.xlsx publish/dev/
 
-      # - name: Run voc4cat (build vocabulary in xml/rdf from Excel file)
-      #   run: |
-      #     voc4cat convert --logfile publish/dev/voc4cat.log --outputformat xml publish/dev/voc4cat.xlsx
+      - name: Run voc4cat (build vocabulary in xml/rdf from Excel file)
+        run: |
+          voc4cat convert --config idranges.toml --logfile publish/dev/voc4cat.log --outputformat xml publish/dev/voc4cat.xlsx
 
       - name: Build Sphinx documentation (website)
         run: |

@@ -16,7 +16,10 @@ It uses the [voc4cat-tool](https://github.com/nfdi4cat/voc4cat-tool) and GitHub 
 
 ## Basic principles
 
-Voc4cat makes contributing easy for everyone with a GitHub account. The process is essentially *(see further below for details or browse through our [step-by-step guide](https://nfdi4cat.github.io/voc4cat/docs_usage/published-guidelines-v2.html#contribution-step-by-step-guide)*:
+Voc4cat makes contributing easy for everyone with a GitHub account.
+The process is essentially *(see further below for details,
+browse through our [step-by-step guide](https://nfdi4cat.github.io/voc4cat/docs_usage/published-guidelines-v2.html#contribution-step-by-step-guide),
+or read the guide in pdf form with screenshots of each step (https://zenodo.org/records/13757351)*.
 
 - Download the [most current vocabulary file (xlsx)](https://nfdi4cat.github.io/voc4cat/dev/voc4cat.xlsx),
 - Edit the vocabulary file in Excel,

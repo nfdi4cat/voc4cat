@@ -86,4 +86,17 @@ gh_name = "philippstangl"
 orcid = "0009-0007-4179-2365"
 ror_id = "https://ror.org/00f7hpc57"
 
+[[vocabs.voc4cat.id_range]]
+first_id = 7371
+last_id = 7390
+gh_name = "sofia-angeli"
+orcid = "0000-0001-8623-047X"
+ror_id = "https://ror.org/04t3en479"
+
+[[vocabs.voc4cat.id_range]]
+first_id = 7391
+last_id = 7790
+gh_name = "HendrikBorgelt"
+orcid = "0000-0001-5886-7860"
+ror_id = "https://ror.org/01k97gp34"
 # Continue with as many [[vocabs.voc4cat.id_range]] sections as needed.

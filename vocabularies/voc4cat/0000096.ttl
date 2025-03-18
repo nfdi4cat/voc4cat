@@ -1,12 +1,10 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <https://w3id.org/nfdi4cat/voc4cat_0000096>
     a skos:Concept ;
     dcterms:identifier "voc4cat_0000096"^^xsd:token ;
-    rdfs:isDefinedBy <https://w3id.org/nfdi4cat/voc4cat_0000096> ;
     skos:altLabel "photo-excitation"@en ;
     skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000183> ;
     skos:definition "The state caused by the transition of electrons from the valence band top to the conduction band bottom by absorption of photons of sufficient energy. "@en ;

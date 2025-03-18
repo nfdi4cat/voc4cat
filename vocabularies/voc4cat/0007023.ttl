@@ -1,12 +1,10 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <https://w3id.org/nfdi4cat/voc4cat_0007023>
     a skos:Concept ;
     dcterms:identifier "voc4cat_0007023"^^xsd:token ;
-    rdfs:isDefinedBy <https://w3id.org/nfdi4cat/voc4cat_0007023> ;
     skos:altLabel "GHSV"@en ;
     skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000186> ;
     skos:definition "A physical quantity given by the volumetric flow entering a control volume devided by the size of the control volume; the quantity must be given in the unit 1/hour.  In heterogeneous catalysis the volume of the undiluted catalyst bed is used as characteristic control volume. In case of gases the flow at reference conditions (0°C, 100 kPa = 1 bar) is used."@en ;

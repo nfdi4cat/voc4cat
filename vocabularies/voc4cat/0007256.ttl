@@ -8,6 +8,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:broader <https://w3id.org/nfdi4cat/voc4cat_0007249> ;
     skos:definition "An electrochemical cell that converts chemical energy into electrical energy. A cell in which chemical reactions occur spontaneously at the electrodes when they are connected through an external circuit, producing an electrical current."@en ;
     skos:historyNote "0009-0008-1278-8890 Michael Götte created the resource"@en ;
-    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:prefLabel "galvanic cell"@en ;
 .

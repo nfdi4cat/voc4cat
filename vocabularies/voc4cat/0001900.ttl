@@ -6,11 +6,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://w3id.org/nfdi4cat/voc4cat_0001900>
     a skos:Collection ;
     dcterms:identifier "voc4cat_0001900"^^xsd:token ;
-    dcterms:isPartOf <https://w3id.org/nfdi4cat/voc4cat_> ;
-    rdfs:isDefinedBy <https://w3id.org/nfdi4cat/voc4cat_> ;
+    dcterms:isPartOf <https://w3id.org/nfdi4cat/voc4cat> ;
+    rdfs:isDefinedBy <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:definition "A collection of concepts referring to material  characterization techniques and methods to evaluate their efficiency in photocatalysis."@en ;
     skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
-    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:member
         <https://w3id.org/nfdi4cat/voc4cat_0000067> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000068> ,

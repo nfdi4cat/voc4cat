@@ -8,6 +8,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:broader <https://w3id.org/nfdi4cat/voc4cat_0005018> ;
     skos:definition "The resource is a version of another resource. This is useful to refer to an abstract resource that has different versions, for example, \"Python 3.12.4 is version of Python\"."@en ;
     skos:historyNote "0000-0002-5898-1820 David Linke created the resource"@en ;
-    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:prefLabel "is version of"@en ;
 .

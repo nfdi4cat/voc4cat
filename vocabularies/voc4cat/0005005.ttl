@@ -11,6 +11,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://w3id.org/nfdi4cat/voc4cat_0005003> ;
     skos:definition "A dimensionless physical quantity describing the fraction of a product B that is formed from a reactant A taking into account the stoichiometry. If A fully reacts to B without side-reactions, the yield of product B is 1 (or 100 %)."@en ;
     skos:historyNote "0000-0002-5898-1820 David Linke created the resource"@en ;
-    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:prefLabel "yield"@en ;
 .

@@ -17,6 +17,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000066> ;
     skos:definition "A non-destructive analytical technique which uses a high-energy X-ray source to expose a material and monitors the emitted characteristic fluorescent X-Rays. "@en ;
     skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
-    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:prefLabel "X-ray fluorescence"@en ;
 .

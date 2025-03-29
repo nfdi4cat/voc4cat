@@ -4,15 +4,15 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://w3id.org/nfdi4cat/voc4cat_>
+<https://w3id.org/nfdi4cat/voc4cat>
     a skos:ConceptScheme ;
     dcterms:created "2023-06-29"^^xsd:date ;
     dcterms:creator <https://w3id.org/nfdi4cat/> ;
     dcterms:hasPart
         <https://w3id.org/nfdi4cat/voc4cat_0001900> ,
         <https://w3id.org/nfdi4cat/voc4cat_0001901> ;
-    dcterms:identifier "voc4cat_"^^xsd:token ;
-    dcterms:modified "2025-03-18"^^xsd:date ;
+    dcterms:identifier "voc4cat"^^xsd:token ;
+    dcterms:modified "2025-03-19"^^xsd:date ;
     dcterms:publisher <https://w3id.org/nfdi4cat/> ;
     owl:versionInfo "automatic" ;
     skos:definition """The Voc4Cat vocabulary is a collection of concepts (or "terms") from the field of catalysis and related disciplines such as chemical engineering or materials science. For each concept, Voc4Cat provides a unique resolvable persistent identifier and a carefully written textual definition, which reflects the community’s shared understanding of the concept’s meaning.

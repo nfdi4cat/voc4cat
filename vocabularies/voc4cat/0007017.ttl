@@ -8,7 +8,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000180> ;
     skos:definition "An apparatus or system designed for the controlled execution of reactions, encompassing a wide range of processes including chemical, nuclear, biochemical, or other physical transformations."@en ;
     skos:historyNote "0000-0002-4041-0165 Julia Schumann created the resource, 0000-0002-5898-1820 David Linke contributed to the definition of the resource"@en ;
-    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:narrower
         <https://w3id.org/nfdi4cat/voc4cat_0000193> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007035> ,

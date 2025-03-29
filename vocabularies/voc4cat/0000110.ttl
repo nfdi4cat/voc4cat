@@ -11,6 +11,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000108> ;
     skos:definition "Operation mode in which the reaction chamber is filled with the (reactant) gas(es) up to a certain pressure, and the reaction products accummulate over time."@en ;
     skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
-    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:prefLabel "batch operation"@en ;
 .

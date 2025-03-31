@@ -42,7 +42,15 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://w3id.org/nfdi4cat/voc4cat_0007041> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007101> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007246> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007247> ;
+        <https://w3id.org/nfdi4cat/voc4cat_0007247> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007794> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007809> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007818> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007825> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007828> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007829> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007838> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007847> ;
     skos:prefLabel "non-temporal abstract entity"@en ;
     skos:topConceptOf <https://w3id.org/nfdi4cat/voc4cat> ;
 .

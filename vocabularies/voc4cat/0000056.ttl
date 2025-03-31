@@ -10,5 +10,5 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:definition "The flow of gas (usually in ml min-1) used in the calcination steps during synthesis."@en ;
     skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
-    skos:prefLabel "calcincation gas flow rate"@en ;
+    skos:prefLabel "calcination gas flow rate"@en ;
 .

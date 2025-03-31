@@ -1,0 +1,17 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0007848>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0007848"^^xsd:token ;
+    skos:altLabel
+        "poisoning"@en ,
+        "poisoning experiment"@en ,
+        "poisoning test"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0007849> ;
+    skos:definition "A type of catalytic test, where a catalyst poison in most cases either for homogeneous species or for heterogeneous species is added to the reaction mixture to determine the nature, either homogeneous or heterogeneous, of the catalytically active species. "@en ;
+    skos:historyNote "0000-0003-4418-7455 Franziska Flecken created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "poisoning study"@en ;
+.

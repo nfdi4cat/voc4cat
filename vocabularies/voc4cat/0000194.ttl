@@ -16,6 +16,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://w3id.org/nfdi4cat/voc4cat_0000038> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007003> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007015> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007034> ;
+        <https://w3id.org/nfdi4cat/voc4cat_0007034> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007804> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007805> ;
     skos:prefLabel "catalyst"@en ;
 .

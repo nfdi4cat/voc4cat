@@ -1,0 +1,35 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0000195>
+    a skos:Collection ;
+    dcterms:identifier "voc4cat_0000195"^^xsd:token ;
+    dcterms:isPartOf <https://w3id.org/nfdi4cat/voc4cat> ;
+    rdfs:isDefinedBy <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:definition "A collection of concepts most often appearing as publication keywords in the journal ChemCatChem (Wiley)."@en ;
+    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the collection"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:member
+        <https://w3id.org/nfdi4cat/voc4cat_0000196> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000197> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000198> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000199> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000200> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000201> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000202> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000203> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000204> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000205> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000206> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000207> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000208> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000209> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000210> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000211> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000212> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000213> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000214> ;
+    skos:prefLabel "ChemCatChem collection"@en ;
+.

@@ -52,7 +52,7 @@ jobs:
             vocabularies/
           fetch-depth: 1
 
-      - uses: actions/setup-python@e797f83bcb11b83ae66e0230d6156d7c80228e7c
+      - uses: actions/setup-python@8d9ed9ac5c53483de85588cdf95a591a75ab9f55
         with:
           python-version: '3.12'
 

@@ -12,6 +12,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the collection"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:member
+        <https://w3id.org/nfdi4cat/voc4cat_0000001> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000197> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000198> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000199> ,
@@ -30,6 +31,29 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://w3id.org/nfdi4cat/voc4cat_0000212> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000213> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000214> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000215> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000216> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000217> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000218> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000219> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000220> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000221> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000222> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000223> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000224> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000225> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000226> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000227> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000228> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000229> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000230> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000231> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000232> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000233> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000234> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000235> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007001> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007002> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007034> ;
     skos:prefLabel "ChemCatChem collection"@en ;
 .

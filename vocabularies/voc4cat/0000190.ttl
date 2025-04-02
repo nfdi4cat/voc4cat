@@ -14,7 +14,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://w3id.org/nfdi4cat/voc4cat_0000005> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000024> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000194> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000196> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000197> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000198> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000210> ,

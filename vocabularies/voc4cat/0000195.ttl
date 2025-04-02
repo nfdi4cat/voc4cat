@@ -12,7 +12,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the collection"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:member
-        <https://w3id.org/nfdi4cat/voc4cat_0000196> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000197> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000198> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000199> ,
@@ -30,6 +29,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://w3id.org/nfdi4cat/voc4cat_0000211> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000212> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000213> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000214> ;
+        <https://w3id.org/nfdi4cat/voc4cat_0000214> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007034> ;
     skos:prefLabel "ChemCatChem collection"@en ;
 .

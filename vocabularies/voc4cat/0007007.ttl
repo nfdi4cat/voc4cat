@@ -7,7 +7,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:identifier "voc4cat_0007007"^^xsd:token ;
     skos:altLabel
         "stability experiment"@en ,
-        "stability study"@en ,
         "stability test"@en ;
     skos:broader
         <https://w3id.org/nfdi4cat/voc4cat_0000184> ,

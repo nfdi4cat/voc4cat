@@ -8,12 +8,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:altLabel
         "in situ analysis"@en ,
         "in situ characterization"@en ,
-        "in situ technique"@en ,
-        "in-situ analysis"@en ,
         "in-situ characterization"@en ;
     skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000066> ;
-    skos:definition "Characterization under the catalytic conditions. "@en ;
+    skos:definition "Characterization under the catalytic conditions without measuring the catalytic activity simultaneously. "@en ;
     skos:historyNote "0000-0003-4418-7455 Franziska Flecken created the resource"@en ;
-    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
-    skos:prefLabel "in-situ technique"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:prefLabel "in-situ analysis"@en ;
 .

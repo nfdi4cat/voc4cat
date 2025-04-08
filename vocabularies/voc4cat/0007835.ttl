@@ -7,7 +7,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:identifier "voc4cat_0007835"^^xsd:token ;
     skos:definition "Temperature during mixing of the precursors for the synthesis of the catalyst. "@en ;
     skos:historyNote "0000-0003-4418-7455 Franziska Flecken created the resource"@en ;
-    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:prefLabel "mixing temperature"@en ;
-    skos:topConceptOf <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:topConceptOf <https://w3id.org/nfdi4cat/voc4cat> ;
 .

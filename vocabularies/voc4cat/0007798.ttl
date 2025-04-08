@@ -6,9 +6,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a skos:Concept ;
     dcterms:identifier "voc4cat_0007798"^^xsd:token ;
     skos:altLabel "dip-coating"@en ;
-    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0007827> ;
-    skos:definition "A synthesis method for catalysts in which a substrate is immersed into a coating solution and withdrawed for deposition of a thin film. "@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0007016> ;
+    skos:definition "A synthesis method for catalysts in which a substrate is immersed into a coating solution and withdrawn for deposition of a thin film. "@en ;
     skos:historyNote "0000-0003-4418-7455 Franziska Flecken created the resource"@en ;
-    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:prefLabel "dip coating"@en ;
 .

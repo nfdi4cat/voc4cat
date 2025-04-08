@@ -11,7 +11,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:broader <https://w3id.org/nfdi4cat/voc4cat_0007010> ;
     skos:definition "A specified catalytic experiment to gain further insights into the catalytic process and nature of the catalytically active species, such as poisoning, kinetic or stability studies. "@en ;
     skos:historyNote "0000-0003-4418-7455 Franziska Flecken created the resource"@en ;
-    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:narrower
         <https://w3id.org/nfdi4cat/voc4cat_0007007> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007008> ,

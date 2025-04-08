@@ -34,7 +34,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://w3id.org/nfdi4cat/voc4cat_0007238> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007803> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007820> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007827> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007845> ;
     skos:prefLabel "processes"@en ;
 .

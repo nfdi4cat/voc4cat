@@ -6,8 +6,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a skos:Concept ;
     dcterms:identifier "voc4cat_0007804"^^xsd:token ;
     skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000194> ;
-    skos:definition "A substance that increases the rate of a chemical reaction that is in a different phase than the reagents."@en ;
+    skos:definition "A substance that increases the rate of a chemical reaction that is in the same phase as the reagents."@en ;
     skos:historyNote "0000-0003-4418-7455 Franziska Flecken created the resource"@en ;
-    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:prefLabel "homogeneous catalyst"@en ;
 .

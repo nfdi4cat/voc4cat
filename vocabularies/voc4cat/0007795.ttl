@@ -7,8 +7,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:identifier "voc4cat_0007795"^^xsd:token ;
     skos:altLabel "co precipitation"@en ;
     skos:broader <https://w3id.org/nfdi4cat/voc4cat_0007027> ;
-    skos:definition "A synthesis method for catalysts which includes the simultaneous precipitation of tow or more precursors."@en ;
+    skos:definition "A synthesis method for catalysts which includes the simultaneous precipitation of two or more precursors."@en ;
     skos:historyNote "0000-0003-4418-7455 Franziska Flecken created the resource"@en ;
-    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:prefLabel "co-precipitation"@en ;
 .

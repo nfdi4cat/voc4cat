@@ -8,6 +8,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000049> ;
     skos:definition "A step in the catalyst synthesis in which the catalyst is compressed into a uniform pellet shape"@en ;
     skos:historyNote "0000-0003-4418-7455 Franziska Flecken created the resource"@en ;
-    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:prefLabel "pelleting"@en ;
 .

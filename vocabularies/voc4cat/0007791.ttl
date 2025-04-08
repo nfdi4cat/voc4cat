@@ -6,8 +6,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a skos:Concept ;
     dcterms:identifier "voc4cat_0007791"^^xsd:token ;
     skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000186> ;
-    skos:definition "Amount of catalyst used for the catalytic reaction which is referred to the amount of a reactant."@en ;
+    skos:definition "The amount of the supported active material with regard to the sum of the support material and the active material."@en ;
     skos:historyNote "0000-0003-4418-7455 Franziska Flecken created the resource"@en ;
-    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:prefLabel "catalyst loading"@en ;
 .

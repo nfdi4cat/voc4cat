@@ -5,15 +5,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://w3id.org/nfdi4cat/voc4cat_0007827>
     a skos:Concept ;
     dcterms:identifier "voc4cat_0007827"^^xsd:token ;
-    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000185> ;
-    skos:definition "The concept which is used for the synthesis of a catalyst."@en ;
+    skos:altLabel "catalyst poison"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000181> ;
+    skos:definition "A substance which coordinates (irreversibly) to the active site and leads to a reduction of the catalytic activity."@en ;
     skos:historyNote "0000-0003-4418-7455 Franziska Flecken created the resource"@en ;
-    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
-    skos:narrower
-        <https://w3id.org/nfdi4cat/voc4cat_0007027> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007028> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007029> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007031> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007798> ;
-    skos:prefLabel "synthesis method"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:prefLabel "poison"@en ;
 .

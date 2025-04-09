@@ -108,6 +108,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://w3id.org/nfdi4cat/voc4cat_0007253> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007258> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007260> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007261> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007262> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007263> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007791> ,

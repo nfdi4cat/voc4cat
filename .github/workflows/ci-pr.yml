@@ -109,6 +109,12 @@ jobs:
           find inbox-excel-vocabs -name '*.xlsx' -exec cp {} -t outbox/ \;
           git status
 
+      - name: Run voc4cat (re-build an updated Excel file)
+        # Passing the config is important to make use of the prefixes therein.
+        run: |
+          mkdir -p outbox/updated-xlsx
+          voc4cat convert --config idranges.toml --logfile outbox/voc4cat.log --template templates/voc4cat_template_043.xlsx outbox/updated-xlsx
+
       - name: Store artifacts
         if: ${{ always() }}
         uses: actions/upload-artifact@v4

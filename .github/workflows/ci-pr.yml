@@ -3,6 +3,10 @@
 
 name: CI on pull request create or update
 on:
+  # Using "pull_request" is not sufficient to allow commits to PR branches in
+  # forks. Since the workflow only accesses the xlsx and turtle files, but does
+  # not run any code, it is safe to use pull_request_target. More info:
+  # https://securitylab.github.com/resources/github-actions-preventing-pwn-requests/
   pull_request_target:
     branches:
       - main

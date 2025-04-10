@@ -19,6 +19,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://w3id.org/nfdi4cat/voc4cat_0000217> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000232> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000233> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000246> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007001> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007002> ;
     skos:prefLabel "catalysis research field"@en ;

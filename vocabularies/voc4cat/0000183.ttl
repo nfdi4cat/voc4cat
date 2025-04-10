@@ -27,6 +27,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://w3id.org/nfdi4cat/voc4cat_0000224> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000226> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000230> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000236> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000237> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000241> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000242> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000243> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000244> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000245> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000247> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000250> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000251> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000252> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000253> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007234> ;
     skos:prefLabel "events"@en ;
 .

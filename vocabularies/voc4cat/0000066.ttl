@@ -26,6 +26,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://w3id.org/nfdi4cat/voc4cat_0000079> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000080> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000081> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000083> ;
+        <https://w3id.org/nfdi4cat/voc4cat_0000083> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007807> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007808> ;
     skos:prefLabel "characterization technique"@en ;
 .

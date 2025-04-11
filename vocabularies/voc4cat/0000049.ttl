@@ -9,5 +9,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:definition "Necessary steps needed to follow to reach the desired catalyst."@en ;
     skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:narrower
+        <https://w3id.org/nfdi4cat/voc4cat_0007028> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007030> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007797> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007799> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007801> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007802> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007830> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007834> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007836> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007837> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007840> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007841> ;
     skos:prefLabel "synthesis procedure"@en ;
 .

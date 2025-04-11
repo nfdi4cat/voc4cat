@@ -37,6 +37,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://w3id.org/nfdi4cat/voc4cat_0000247> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000252> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000253> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000258> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000259> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000260> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000261> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007234> ;
     skos:prefLabel "events"@en ;
 .

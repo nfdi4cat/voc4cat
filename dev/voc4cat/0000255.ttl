@@ -1,0 +1,13 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0000255>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0000255"^^xsd:token ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000181> ;
+    skos:definition "The characteristics of a material or substance that determine how it interacts or responds to a magnetic field."@en ;
+    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource, 0000-0002-5898-1820 David Linke edited the definition"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:prefLabel "magnetic property"@en ;
+.

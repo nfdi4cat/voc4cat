@@ -1,0 +1,16 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0007381>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0007381"^^xsd:token ;
+    skos:altLabel
+        "dispersion"@en ,
+        "surface metal dispersion"@en ;
+    skos:definition "the mole fraction of metal on the surface with respect to overall moles of metal dispersed on the catalyst support."@en ;
+    skos:historyNote "0000-0001-8623-047X Sofia Angeli created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:prefLabel "metal dispersion"@en ;
+    skos:topConceptOf <https://w3id.org/nfdi4cat/voc4cat> ;
+.

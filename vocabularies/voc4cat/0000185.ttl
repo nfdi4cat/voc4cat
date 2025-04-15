@@ -38,8 +38,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://w3id.org/nfdi4cat/voc4cat_0000266> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000269> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000273> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000277> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000278> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000281> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000285> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000291> ,

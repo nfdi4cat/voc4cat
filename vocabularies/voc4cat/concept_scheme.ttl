@@ -25,8 +25,7 @@ See also [voc4cat help](https://nfdi4cat.github.io/voc4cat/)."""@en ;
         <https://w3id.org/nfdi4cat/voc4cat_0000180> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000181> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000182> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000186> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000308> ;
+        <https://w3id.org/nfdi4cat/voc4cat_0000186> ;
     skos:historyNote "https://orcid.org/0000-0002-5898-1820 David Linke, https://orcid.org/0000-0002-6242-2167 Nikolaos G. Moustakas"@en ;
     skos:prefLabel "Voc4Cat - A SKOS vocabulary for Catalysis."@en ;
     dcat:contactPoint "David Linke (orcid:0000-0002-5898-1820), Nikolaos G. Moustakas (orcid:0000-0002-6242-2167)" ;

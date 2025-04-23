@@ -9,5 +9,5 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:definition "The study and characterization of the temporal progression of physical and (bio-)chemical processes, with particular emphasis on the rates and mechanisms by which chemical transformations occur."@en ;
     skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
-    skos:prefLabel "kinetic"@en ;
+    skos:prefLabel "kinetics"@en ;
 .

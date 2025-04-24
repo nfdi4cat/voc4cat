@@ -63,7 +63,7 @@ jobs:
           python -m pip install --upgrade pip setuptools wheel
 
           # install tagged version
-          python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@v0.9.1
+          python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@v0.9.2
           # python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@main
 
           # install custom pylode 2.x  (adds sorted collections,
@@ -113,11 +113,12 @@ jobs:
           find inbox-excel-vocabs -name '*.xlsx' -exec cp {} -t outbox/ \;
           git status
 
-      - name: Run voc4cat (re-build an updated Excel file)
+      - name: Run voc4cat (re-build updated Excel file and joined turtle vocabulary file)
         # Passing the config is important to make use of the prefixes therein.
         run: |
-          mkdir -p outbox/updated-xlsx
-          voc4cat convert --config idranges.toml --logfile outbox/voc4cat.log --template templates/voc4cat_template_043.xlsx outbox/updated-xlsx
+          mkdir -p outbox/updated-xlsx-ttl
+          voc4cat convert --config idranges.toml --logfile outbox/voc4cat.log --template templates/voc4cat_template_043.xlsx outbox/updated-xlsx-ttl
+          voc4cat transform --config idranges.toml --logfile outbox/voc4cat.log -O outbox/updated-xlsx-ttl --join vocabularies/
 
       - name: Store artifacts
         if: ${{ always() }}

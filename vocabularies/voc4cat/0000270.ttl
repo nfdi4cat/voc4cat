@@ -14,5 +14,5 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://w3id.org/nfdi4cat/voc4cat_0000198> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000271> ,
         <https://w3id.org/nfdi4cat/voc4cat_0000272> ;
-    skos:prefLabel "porous material "@en ;
+    skos:prefLabel "porous material"@en ;
 .

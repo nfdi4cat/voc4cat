@@ -12,5 +12,5 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:definition "A C-C (or C-X) bond forming reaction in which a nucleophile (typically an enolate), reacts with an α,β-unsaturated carbonyl compound."@en ;
     skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
-    skos:prefLabel "Michael addition "@en ;
+    skos:prefLabel "Michael addition"@en ;
 .

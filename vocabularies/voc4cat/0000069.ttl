@@ -12,7 +12,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         "Raman spectrometry"@en ,
         "raman scattering spectroscopy"@en ;
     skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000066> ;
-    skos:definition "A spectroscopy technique studying the vibrational modes of molecules, by measuring the intensity and frequency of scattered by the sample of monochromatic light. "@en ;
+    skos:definition "A spectroscopy technique studying the vibrational modes of molecules, by measuring the intensity and frequency of scattered by the sample of monochromatic light."@en ;
     skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:prefLabel "Raman spectroscopy"@en ;

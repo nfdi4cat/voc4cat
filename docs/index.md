@@ -51,7 +51,7 @@ Producing Voc4Cat-annotated data contributes to realising the vision of machine-
 ```
 
 +++
-<small>Latest release **v2024-12-17**</small>
+<small>Latest release **v2025-05-21**</small>
 :::
 ::::
 

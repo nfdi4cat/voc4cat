@@ -66,7 +66,11 @@ Changes not staged for commit:
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
-If there is just `idrange.toml` changed (as expected) we proceed:
+If there is just `idrange.toml` changed (as expected) we proceed with
+
+- adding the file to the staging area,
+- committing the changes with an informative message and
+- pushing the changes to GitHub.
 
 ```bat
 C:\Users\dlinke\MyProg_local\gh-nfdi4cat\voc4cat(issue79-id-request)
@@ -99,9 +103,9 @@ C:\Users\dlinke\MyProg_local\gh-nfdi4cat\voc4cat(issue79-id-request -> origin)
 
 **Step 6**: Create a pull request on GitHub.
 
-To do this open the the [voc4cat-repo](https://github.com/nfdi4cat/voc4cat). GitHub will automatically offer you to create a PR from the branch just pushed.
+To do this open the [voc4cat-repo](https://github.com/nfdi4cat/voc4cat). GitHub will automatically offer you to create a PR from the branch just pushed.
 
-You can also use the the link provided in the command line output.
+You can also use the link provided in the command line output.
 
 **Step 7**: Accept the PR in GitHub GUI (needs approval by another developer/curator).
 

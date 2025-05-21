@@ -89,5 +89,5 @@ html_theme_options = {
         },
     ],
     # HTML to be show in a announcement banner at the top of the page
-    "announcement": 'New <strong>Release 2025-05-21 </strong> includes the most frequently used keywords from Chem. Cat. Chem. Journal.',
+    "announcement": 'New <strong>Release 2025-05-21 </strong> includes the most frequently used keywords from ChemCatChem Journal.',
 }

@@ -89,5 +89,5 @@ html_theme_options = {
         },
     ],
     # HTML to be show in a announcement banner at the top of the page
-    "announcement": '<strong> Much improved styling for the Vocabulary XLSX-file </strong> thanks to Release 0.9.0 of voc4cat-tool.',
+    "announcement": 'New <strong>Release 2025-05-21 </strong> includes the most frequently used keywords from Chem. Cat. Chem. Journal.',
 }

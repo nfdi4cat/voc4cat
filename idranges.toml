@@ -21,6 +21,7 @@ allow_delete = false
 
 [vocabs.voc4cat.prefix_map]
 voc4cat = "https://w3id.org/nfdi4cat/voc4cat_"
+
 # Section of IDranges for coordinating the allocation of numeric ID ranges to
 # contributors for each vocabulary. Each idrange contains the same keys:
 #

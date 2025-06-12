@@ -342,6 +342,48 @@ concept can be expressed by both a loanword and a translated equivalent,
 the most widely used of the two should be used as the preferred label
 and the other as an alternate label.
 
+## Mappings
+
+Mappings are used to relate concepts in Voc4Cat to concepts in other controlled vocabularies or ontologies.
+This enables interoperability, data integration, and reuse across different systems and domains.
+We only add mappings to well-established external vocabularies or ontologies that are relevant to catalysis.
+The mappings are reviewed and approved by the Voc4Cat team before being added to the vocabulary assuring a high level of mapping confidence.
+
+Voc4Cat uses the [SKOS](https://www.w3.org/TR/skos-reference/) (Simple Knowledge Organization System) standard for representing mappings.
+SKOS provides a set of properties for expressing relationships to concepts in other concept schemes (or OWL ontologies):
+
+| Mapping relation | Description |
+|------------------|-------------|
+| `skos:exactMatch` | Indicates that two concepts are equivalent in meaning and can be used interchangeably in all contexts.|
+| `skos:closeMatch`| Indicates a high degree of similarity, but not complete interchangeability for example due to slight differences in meaning or context.|
+| `skos:broadMatch`<br>`skos:narrowMatch` | Indicate hierarchical relationships between concepts in different schemes.|
+| `skos:relatedMatch`| Indicates an associative relationship, where none of the concepts is more general than the other.|
+
+Mappings in Voc4Cat are intended to be simple connections to external concepts.
+They are expressed purely in the SKOS data model which has the consequence that assertions about the mapping itself are not possible (e.g. about the mapping-author).
+If you need mappings with rich metadata,
+consider using [SSSOM](https://github.com/mapping-commons/sssom) (Simple Standard for Sharing Ontology Mappings) or
+[JSKOS](https://gbv.github.io/jskos/) (JSON for Knowledge Organization Systems),
+which allow for detailed mapping assertions, provenance, and other metadata.
+
+When creating mappings in Voc4Cat, please follow these guidelines:
+
+- Only create mappings to well-established external vocabularies or ontologies.
+- Use the most specific SKOS mapping property that fits the relationship.
+- Use hierarchical relationships between concepts only if mappings on the same hierarchical level are not possible.
+- Use skos:relatedMatch relationships sparingly. If you suggest them, explain why the proposed loose mapping is worth to add.
+
+:::{admonition} Example
+The skos:concept **[voc4cat:0000222 (hydroformylation)](https://w3id.org/nfdi4cat/voc4cat_0007201)
+should be mapped to [RXNO:hydroformylation](https://purl.obolibrary.org/obo/RXNO_0000272)**, an owl:class.<br>
+**Which mapping-relation would be appropriate?**<br>
+Concepts are not only defined by their textual definition, but implicitly also by their position in the class hierarchy and other axioms.
+`skos:exactMatch` would imply that the definition of `RXNO:Hydroformylation` is exactly the same as the definition of `voc4cat:0000222` (hydroformylation).
+However, `RXNO:Hydroformylation` is defined as a "planned process" in the [RXNO ontology](https://purl.obolibrary.org/obo/RXNO_0000272), 
+which is not the case for `voc4cat:0000222` (hydroformylation) in the [voc4cat](https://w3id.org/nfdi4cat/voc4cat) vocabulary.
+Therefore, the less specific **`skos:closeMatch` should be used.**<BR> *Source of example: Hendrik Borgelt ([issue #157](https://github.com/nfdi4cat/voc4cat/issues/157)).*
+:::
+
 ## References
 
 1. FAO. 2022. The AGROVOC Editorial Guidelines 2020 – Second edition.

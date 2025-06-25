@@ -1,4 +1,4 @@
-# Compile to requirements.txt with `pip-compile requirements.in`
+# Compile to requirements.txt with `pip-compile --upgrade requirements.in`
 Sphinx
 myst-parser
 furo

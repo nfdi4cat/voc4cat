@@ -1,0 +1,13 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0000280>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0000280"^^xsd:token ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000183> ;
+    skos:definition "A catalytic chemical reaction in which a mixture of carbon monoxide (CO) and hydrogen (H2), is converted via a chain-growth mechanism into long-chain hydrocarbons (e.g., alkanes, alkenes or alcohols)—typically using iron or cobalt catalysts under moderate to high pressures and temperatures."@en ;
+    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:prefLabel "Fischer-Tropsch synthesis"@en ;
+.

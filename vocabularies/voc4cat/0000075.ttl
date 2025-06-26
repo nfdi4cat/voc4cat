@@ -10,5 +10,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:definition "An electron microscopy technique that produces high-resolution images under high magnification of a sample's surface by assessing the secondary and back-scattered electrons produced by a focused electron beam."@en ;
     skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:narrowMatch <http://purl.org/pan-science/PaNET/PaNET01293> ;
     skos:prefLabel "scanning electron microscopy"@en ;
 .

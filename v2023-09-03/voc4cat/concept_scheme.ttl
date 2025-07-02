@@ -1,0 +1,24 @@
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_>
+    a skos:ConceptScheme ;
+    dcterms:created "2023-06-29"^^xsd:date ;
+    dcterms:creator <https://w3id.org/nfdi4cat/> ;
+    dcterms:hasPart
+        <https://w3id.org/nfdi4cat/voc4cat_0001900> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0001901> ;
+    dcterms:identifier "voc4cat_"^^xsd:token ;
+    dcterms:modified "2023-06-29"^^xsd:date ;
+    dcterms:provenance "https://orcid.org/0000-0002-5898-1820 David Linke, https://orcid.org/0000-0002-6242-2167 Nikolaos G. Moustakas"@en ;
+    dcterms:publisher <https://w3id.org/nfdi4cat/> ;
+    owl:versionInfo "v2023-06-29" ;
+    skos:definition "A vocabulary for all areas of catalysis initiated in NFDI4Cat. Starting with photocatalysis we add more and more terms from other areas of catalysis and related disciplines like chemical enineering or material science."@en ;
+    skos:hasTopConcept <https://w3id.org/nfdi4cat/voc4cat_0000001> ;
+    skos:prefLabel "Voc4Cat - A SKOS vocabulary for Catalysis."@en ;
+    dcat:contactPoint "David Linke (orcid:0000-0002-5898-1820), Nikolaos G. Moustakas (orcid:0000-0002-6242-2167)" ;
+.
+

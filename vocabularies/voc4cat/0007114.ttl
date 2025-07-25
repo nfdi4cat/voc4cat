@@ -1,0 +1,13 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0007114>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0007114"^^xsd:token ;
+    skos:definition "The classification of the energy-dispersive X-ray (EDX) detector based on its internal sensor technology, which determines characteristics such as energy resolution and count rate performance"@en ;
+    skos:historyNote "0000-0001-5886-7860 Hendrik Borgelt created this resource,"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:prefLabel "detector type"@en ;
+    skos:topConceptOf <https://w3id.org/nfdi4cat/voc4cat> ;
+.

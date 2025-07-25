@@ -1,0 +1,14 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0007122>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0007122"^^xsd:token ;
+    skos:altLabel "offset correction; zero-point adjustment; baseline offset"@en ;
+    skos:definition "A constant value applied to shift measured data to align with a known reference or baseline, ensuring the accuracy of absolute measurements."@en ;
+    skos:historyNote "0000-0001-5886-7860 Hendrik Borgelt created this resource,"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:prefLabel "calibration offset"@en ;
+    skos:topConceptOf <https://w3id.org/nfdi4cat/voc4cat> ;
+.

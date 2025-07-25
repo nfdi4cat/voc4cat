@@ -1,0 +1,14 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0007108>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0007108"^^xsd:token ;
+    skos:altLabel "primary energy; accelerating voltage; electron beam energy"@en ;
+    skos:definition "The kinetic energy of the incident electron beam, typically measured in kiloelectronvolts (keV), which influences the interaction volume and excitation of X-rays in the sample."@en ;
+    skos:historyNote "0000-0001-5886-7860 Hendrik Borgelt created this resource,"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:prefLabel "beam energy"@en ;
+    skos:topConceptOf <https://w3id.org/nfdi4cat/voc4cat> ;
+.

@@ -1,0 +1,14 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0007109>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0007109"^^xsd:token ;
+    skos:altLabel "tilt angle; sample tilt"@en ;
+    skos:definition "The angle between the sample holder (stage) surface and the incident electron beam axis, used to optimize geometry for imaging or detection."@en ;
+    skos:historyNote "0000-0001-5886-7860 Hendrik Borgelt created this resource,"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:prefLabel "stage tilt"@en ;
+    skos:topConceptOf <https://w3id.org/nfdi4cat/voc4cat> ;
+.

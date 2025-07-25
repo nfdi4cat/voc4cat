@@ -1,0 +1,16 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0007110>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0007110"^^xsd:token ;
+    skos:altLabel
+        "beam emission angle"@en ,
+        "take-off angle"@en ;
+    skos:definition "The angle between the sample surface and the line-of-sight to a detector, which affects the path length and detection efficiency."@en ;
+    skos:historyNote "0000-0001-5886-7860 Hendrik Borgelt created this resource,"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:prefLabel "detector tilt angle"@en ;
+    skos:topConceptOf <https://w3id.org/nfdi4cat/voc4cat> ;
+.

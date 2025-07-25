@@ -1,0 +1,14 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0007112>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0007112"^^xsd:token ;
+    skos:altLabel "real time; clock time; elapsed acquisition time"@en ;
+    skos:definition "The total elapsed time during the data acquisition process, including both periods when the detector is actively collecting data and when it is not (due to dead time or processing delays)."@en ;
+    skos:historyNote "0000-0001-5886-7860 Hendrik Borgelt created this resource,"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:prefLabel "measurement reference time"@en ;
+    skos:topConceptOf <https://w3id.org/nfdi4cat/voc4cat> ;
+.

@@ -122,4 +122,10 @@ gh_name = "mvoelken-hub"
 orcid = "0009-0006-1375-2895"
 ror_id = "https://ror.org/01k97gp34"
 
+[[vocabs.voc4cat.id_range]]
+first_id = 8061
+last_id = 8080
+gh_name = "b-elisa"
+ror_id = "https://ror.org/03v4gjf40"
+
 # Continue with as many [[vocabs.voc4cat.id_range]] sections as needed.

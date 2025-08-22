@@ -113,7 +113,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://w3id.org/nfdi4cat/voc4cat_0007260> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007261> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007262> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007263> ;
+        <https://w3id.org/nfdi4cat/voc4cat_0007263> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007803> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007817> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007839> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007844> ;
     skos:prefLabel "attributes"@en ;
     skos:topConceptOf <https://w3id.org/nfdi4cat/voc4cat> ;
 .

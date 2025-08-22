@@ -1,0 +1,15 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0007828>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0007828"^^xsd:token ;
+    rdfs:isDefinedBy <https://w3id.org/nfdi4cat/voc4cat_0007828> ;
+    skos:definition "A compound that is used to generate a calibration curve which can then be used to determine the concentration of a compound in a reaction mixture using gas chromatography."@en ;
+    skos:historyNote "0000-0003-4418-7455 Franziska Flecken created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:prefLabel "external standard"@en ;
+    skos:topConceptOf <https://w3id.org/nfdi4cat/voc4cat> ;
+.

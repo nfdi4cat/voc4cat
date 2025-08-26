@@ -128,4 +128,11 @@ last_id = 8080
 gh_name = "b-elisa"
 ror_id = "https://ror.org/03v4gjf40"
 
+[[vocabs.voc4cat.id_range]]
+first_id = 8081
+last_id = 8100
+gh_name = "carla-terboven"
+orcid = "0009-0004-3786-0773"
+ror_id = "https://ror.org/02aj13c28"
+
 # Continue with as many [[vocabs.voc4cat.id_range]] sections as needed.

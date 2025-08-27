@@ -1,0 +1,16 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0008091>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0008091"^^xsd:token ;
+    skos:altLabel
+        "fluo"@en ,
+        "fluorescence"@en ;
+    skos:definition "Measured detector signal resulting from fluorescence photons emitted by the sample upon X-ray excitation."@en ;
+    skos:historyNote "0009-0004-3786-0773 Carla Terboven created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:prefLabel "fluorescence signal"@en ;
+    skos:topConceptOf <https://w3id.org/nfdi4cat/voc4cat> ;
+.

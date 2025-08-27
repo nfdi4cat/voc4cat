@@ -1,0 +1,16 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0008087>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0008087"^^xsd:token ;
+    skos:definition "Dimensionless quantity that expresses how much of the incident radiation is absorbed by a material. It is defined as the negative logarithm of the ratio of transmitted intensity to the incident intensity. Absorbance depends on the absorption properties of the material, the path length, and the concentration of absorbing species."@en ;
+    skos:historyNote "0009-0004-3786-0773 Carla Terboven created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:narrower
+        <https://w3id.org/nfdi4cat/voc4cat_0008088> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0008089> ;
+    skos:prefLabel "absorbance"@en ;
+    skos:topConceptOf <https://w3id.org/nfdi4cat/voc4cat> ;
+.

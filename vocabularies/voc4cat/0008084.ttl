@@ -6,9 +6,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a skos:Concept ;
     dcterms:identifier "voc4cat_0008084"^^xsd:token ;
     skos:altLabel "dead-time"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000186> ;
     skos:definition "Time interval after each detection event during which the detector is unable to record another event."@en ;
     skos:historyNote "0009-0004-3786-0773 Carla Terboven created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:prefLabel "dead time"@en ;
-    skos:topConceptOf <https://w3id.org/nfdi4cat/voc4cat> ;
 .

@@ -1,0 +1,14 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0000307>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0000307"^^xsd:token ;
+    skos:altLabel "POM"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000190> ;
+    skos:definition "An anionic metal-oxygen cluster composed of early transition metals in high oxidation states, interconnected by shared oxygen atoms to form a closed 3-dimensional framework."@en ;
+    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:prefLabel "polyoxometalate"@en ;
+.

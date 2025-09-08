@@ -5,10 +5,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://w3id.org/nfdi4cat/voc4cat_0008096>
     a skos:Concept ;
     dcterms:identifier "voc4cat_0008096"^^xsd:token ;
-    skos:altLabel "RT"@en ;
-    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000186> ;
-    skos:definition "The total elapsed time of the measurement, including both live and dead time periods."@en ;
+    skos:altLabel
+        "RT"@en ,
+        "real time"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0008100> ;
+    skos:definition "The total duration over which a measurement is conducted, including both the periods when the detector or measurement system is actively recording events and the periods when it is inactive due to dead time or processing delays."@en ;
     skos:historyNote "0009-0004-3786-0773 Carla Terboven created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
-    skos:prefLabel "real time"@en ;
+    skos:prefLabel "total measurement time"@en ;
 .

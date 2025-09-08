@@ -115,7 +115,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://w3id.org/nfdi4cat/voc4cat_0007261> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007262> ,
         <https://w3id.org/nfdi4cat/voc4cat_0007263> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0008084> ,
         <https://w3id.org/nfdi4cat/voc4cat_0008085> ,
         <https://w3id.org/nfdi4cat/voc4cat_0008086> ,
         <https://w3id.org/nfdi4cat/voc4cat_0008087> ,
@@ -123,12 +122,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://w3id.org/nfdi4cat/voc4cat_0008089> ,
         <https://w3id.org/nfdi4cat/voc4cat_0008090> ,
         <https://w3id.org/nfdi4cat/voc4cat_0008091> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0008092> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0008093> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0008094> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0008095> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0008096> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0008097> ;
+        <https://w3id.org/nfdi4cat/voc4cat_0008097> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0008099> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0008100> ;
     skos:prefLabel "attributes"@en ;
     skos:topConceptOf <https://w3id.org/nfdi4cat/voc4cat> ;
 .

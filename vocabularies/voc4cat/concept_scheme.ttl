@@ -13,7 +13,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://w3id.org/nfdi4cat/voc4cat_0001900> ,
         <https://w3id.org/nfdi4cat/voc4cat_0001901> ;
     dcterms:identifier "voc4cat"^^xsd:token ;
-    dcterms:modified "2025-07-02"^^xsd:date ;
+    dcterms:modified "2025-09-02"^^xsd:date ;
     dcterms:publisher <https://w3id.org/nfdi4cat/> ;
     owl:versionInfo "automatic" ;
     skos:definition """The Voc4Cat vocabulary is a collection of concepts (or "terms") from the field of catalysis and related disciplines such as chemical engineering or materials science. For each concept, Voc4Cat provides a unique resolvable persistent identifier and a carefully written textual definition, which reflects the community’s shared understanding of the concept’s meaning.

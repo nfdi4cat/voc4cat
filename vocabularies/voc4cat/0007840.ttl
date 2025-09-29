@@ -8,7 +8,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:identifier "voc4cat_0007840"^^xsd:token ;
     rdfs:isDefinedBy <https://w3id.org/nfdi4cat/voc4cat_0007840> ;
     skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000049> ;
-    skos:definition "A step within the synthesis of a catalyst whereby a precursor should be dissolved or dispersed in a solution."@en ;
+    skos:definition "A step within the synthesis of a catalyst whereby a precursor is dissolved or dispersed in a solution."@en ;
     skos:historyNote "0000-0003-4418-7455 Franziska Flecken created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:prefLabel "solvation"@en ;

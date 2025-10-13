@@ -83,7 +83,7 @@ For example, the compact URI of `https://w3id.org/nfdi4cat/voc4cat_0005001` is `
 
 ## All releases
 
-- **v2025-05-22**: [Documentation (HTML)](https://w3id.org/nfdi4cat/voc4cat/v2025-05-22), permanent url `https://w3id.org/nfdi4cat/voc4cat/v2024-05-22`
+- **v2025-05-22**: [Documentation (HTML)](https://w3id.org/nfdi4cat/voc4cat/v2025-05-22), permanent url `https://w3id.org/nfdi4cat/voc4cat/v2025-05-22`
 - **v2024-12-17**: [Documentation (HTML)](https://w3id.org/nfdi4cat/voc4cat/v2024-12-17), permanent url `https://w3id.org/nfdi4cat/voc4cat/v2024-12-17`
 - **v2024-04-08**: [Documentation (HTML)](https://w3id.org/nfdi4cat/voc4cat/v2024-04-08), permanent url `https://w3id.org/nfdi4cat/voc4cat/v2024-04-08`
 - **v2023-09-03**: [Documentation (HTML)](https://w3id.org/nfdi4cat/voc4cat/v2023-09-03"), permanent url `https://w3id.org/nfdi4cat/voc4cat/v2023-09-03`

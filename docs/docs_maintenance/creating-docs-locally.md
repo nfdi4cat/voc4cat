@@ -1,4 +1,4 @@
-# Building the documentation locally
+# Building the docs locally
 
 You need a recent Python version on your computer and a local clone of the repository.
 

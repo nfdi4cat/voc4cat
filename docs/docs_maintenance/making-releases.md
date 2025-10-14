@@ -45,7 +45,7 @@ C:\Users\dlinke\MyProg_local\gh-nfdi4cat\voc4cat(main -> origin)
 Switched to a new branch 'release-prep-vYYYY-MM-DD'
 ```
 
-Open the `docs/index.md` file in your editor and update:
+Update 2 files in the `docs/` folder:
 
 1. The announcement banner (in `docs/conf.py`):
    ```python

@@ -1,0 +1,16 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0000125>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0000125"^^xsd:token ;
+    skos:broader
+        <https://w3id.org/nfdi4cat/voc4cat_0005001> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005002> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005003> ;
+    skos:definition "A dimensionless physical quantity describing how effective a reactant is converted to the desired product in a chemical conversion. It is calculated as the ratio between the amount of the desired product and the amount of the desired product that could have been formed if all reactants were converted to the desired product. The selectivity is 1 (or 100 %) if no other than the desired product is formed."@en ;
+    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource, 0000-0002-5898-1820 David Linke generalized the definition"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:prefLabel "selectivity"@en ;
+.

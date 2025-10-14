@@ -25,9 +25,7 @@ Before creating a release, ensure:
 
 ## Release Process
 
-### Step 1: Update Release Information in Documentation
-
-The `docs/index.md` file contains references to the latest release version that need to be updated before creating a new release.
+### Step 1: Create Feature Branch
 
 Navigate to your local clone of the voc4cat repository. Make sure you are on the main branch and have the latest changes:
 
@@ -37,7 +35,7 @@ C:\Users\dlinke\MyProg_local\gh-nfdi4cat\voc4cat
 λ git pull
 ```
 
-Create a feature branch for the documentation update:
+Create a feature branch for the release preparation:
 
 ```bat
 C:\Users\dlinke\MyProg_local\gh-nfdi4cat\voc4cat(main -> origin)
@@ -45,7 +43,25 @@ C:\Users\dlinke\MyProg_local\gh-nfdi4cat\voc4cat(main -> origin)
 Switched to a new branch 'release-prep-vYYYY-MM-DD'
 ```
 
-Update 2 files in the `docs/` folder:
+### Step 2: Update Contributor Information (if needed)
+
+If there are new contributors since the last release, update the `.zenodo.json` file to include them. This ensures proper attribution when the release is archived on Zenodo.
+
+1. Check for new contributors by reviewing recent commit history and pull requests
+2. For each new contributor, add an entry to the `creators` array in `.zenodo.json`:
+   ```json
+   {
+     "name": "LastName, FirstName",
+     "orcid": "0000-0000-0000-0000",
+     "affiliation": "Institution Name"
+   }
+   ```
+3. Ensure contributors are listed in the order they should appear on Zenodo
+4. Use the affiliation format as shown on the contributor's ORCID profile or their institution's ROR records
+
+### Step 3: Update Release Information in Documentation
+
+Update the following files in the `docs/` folder:
 
 1. The announcement banner (in `docs/conf.py`):
    ```python
@@ -63,13 +79,13 @@ Update 2 files in the `docs/` folder:
    - **vYYYY-MM-DD**: [Documentation (HTML)](https://w3id.org/nfdi4cat/voc4cat/vYYYY-MM-DD), permanent url `https://w3id.org/nfdi4cat/voc4cat/vYYYY-MM-DD`
    ```
 
-### Step 2: Create and Merge Pull Request
+### Step 4: Create and Merge Pull Request
 
 Commit and push your documentation changes:
 
 ```bat
 C:\Users\dlinke\MyProg_local\gh-nfdi4cat\voc4cat(release-prep-vYYYY-MM-DD)
-λ git add docs/index.md docs/conf.py
+λ git add docs/index.md docs/conf.py .zenodo.json
 
 C:\Users\dlinke\MyProg_local\gh-nfdi4cat\voc4cat(release-prep-vYYYY-MM-DD)
 λ git commit -m "Prepare documentation for vYYYY-MM-DD release"
@@ -82,7 +98,7 @@ Create a pull request on GitHub and get the PR reviewed and approved by another 
 
 Then merge it to `main`. After merging, delete the feature branch on GitHub.
 
-### Step 3: Pull Updated Main Branch
+### Step 5: Pull Updated Main Branch
 
 Switch back to main and pull the merged changes:
 
@@ -102,7 +118,7 @@ C:\Users\dlinke\MyProg_local\gh-nfdi4cat\voc4cat(main -> origin)
 λ git branch -d release-prep-vYYYY-MM-DD
 ```
 
-### Step 4: Create and Push Release Tag
+### Step 6: Create and Push Release Tag
 
 Create an annotated tag following the pattern `vYYYY-MM-DD` (e.g., `v2025-05-22`):
 
@@ -115,16 +131,16 @@ Push the tag to GitHub:
 
 ```bat
 C:\Users\dlinke\MyProg_local\gh-nfdi4cat\voc4cat(main -> origin)
-λ git push origin v2025-05-22
+λ git push --tags
 Enumerating objects: 1, done.
 Counting objects: 100% (1/1), done.
-Writing objects: 100% (1/1), 164 bytes | 164.00 KiB/s, done.
+Writing objects: 100% (1/1), 170 bytes | 164.00 KiB/s, done.
 Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
 To https://github.com/nfdi4cat/voc4cat.git
  * [new tag]         v2025-05-22 -> v2025-05-22
 ```
 
-### Step 5: Monitor Automated Publish Workflow
+### Step 7: Monitor Automated Publish Workflow
 
 The push of a tag matching `v[0-9]+-[0-9]+-[0-9]+` triggers the `.github/workflows/publish.yml` workflow automatically. This workflow:
 
@@ -153,19 +169,19 @@ git tag -d vYYYY-MM-DD  # delete local tag
 git push --delete origin vYYYY-MM-DD  # delete remote tag
 ```
 
-### Step 6: Create GitHub Release
+### Step 8: Create GitHub Release
 
 Once the publish workflow completes successfully, create a GitHub Release from the tag:
 
 1. Navigate to <https://github.com/nfdi4cat/voc4cat/releases>
 2. Click "Draft a new release"
 3. Click "Choose a tag" and select your version tag (e.g., `v2025-05-22`)
-4. Set the release title to match the tag (e.g., `v2025-05-22`)
+4. Set a release title that matches the tag (e.g., `Release 2025-05-22`)
 5. In the release notes, summarize the changes included in the new release. Follow the style of the previous release notes.
 6. Check "Set as the latest release"
 7. Click "Publish release"
 
-### Step 7: Verify Release
+### Step 9: Verify Release
 
 After publishing, verify the release is accessible:
 

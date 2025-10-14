@@ -104,11 +104,11 @@ C:\Users\dlinke\MyProg_local\gh-nfdi4cat\voc4cat(main -> origin)
 
 ### Step 4: Create and Push Release Tag
 
-Create a tag following the pattern `vYYYY-MM-DD` (e.g., `v2025-05-22`):
+Create an annotated tag following the pattern `vYYYY-MM-DD` (e.g., `v2025-05-22`):
 
 ```bat
 C:\Users\dlinke\MyProg_local\gh-nfdi4cat\voc4cat(main -> origin)
-λ git tag v2025-05-22
+λ git tag -a v2025-05-22 -m "Release v2025-05-22"
 ```
 
 Push the tag to GitHub:

@@ -8,9 +8,12 @@ Thank you for your interest in contributing to the Voc4Cat vocabulary! This SKOS
 2. **Edit** the Excel file to add/modify concepts
 3. **Request a range of IDs** (for new concepts): [Create an issue](https://github.com/nfdi4cat/voc4cat/issues/new/choose)
 4. **Submit** your Excel file in a pull request:
+   - Create a new branch for the changes in your fork and switch to it
    - Place file in `inbox-excel-vocabs/` folder
    - Keep the filename as `voc4cat.xlsx`
-   - Describe your changes in the PR description
+   - Create a PR and describe your changes in the PR description
+
+For more details, see [How to contribute?](https://nfdi4cat.github.io/voc4cat/docs_usage/how-to-contribute.html)
 
 ## Important Guidelines
 
@@ -18,6 +21,8 @@ Thank you for your interest in contributing to the Voc4Cat vocabulary! This SKOS
 - **Break up large changes**: Split contributions of 50+ concepts into smaller chunks (~20 changes each)
 - **Use Excel workflow only**: Never edit Turtle (.ttl) files directly
 - **ID ranges required**: Request your ID range before adding new concepts
+- **Use feature branches**: Create a new branch for your changes instead of committing to your fork's main branch
+- **Classify concepts properly**: Ensure new concepts are linked to the hierarchy via broader concepts
 
 ## Documentation
 
@@ -33,9 +38,15 @@ For detailed guidelines and step-by-step instructions, see:
 
 1. CI/CD pipeline automatically processes your Excel file
 2. Turtle files are generated and validated
-3. Updated Excel file is created from the processed data
-4. Reviewers will check your contribution
-5. Upon approval, your changes are merged and published
+3. Automated checks provide helpful feedback:
+   - Detects PRs from main branch (suggests using feature branches)
+   - Identifies organization account issues that will block CI
+   - GitHub Copilot may provide additional review guidance
+4. Updated Excel file is created from the processed data
+5. Reviewers will check your contribution
+6. Upon approval, your changes are merged and published
+
+**Note**: Automated checks are informational and won't block your PR (except organization accounts due to GitHub limitations).
 
 ## Questions or Issues?
 

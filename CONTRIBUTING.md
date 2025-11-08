@@ -18,6 +18,8 @@ Thank you for your interest in contributing to the Voc4Cat vocabulary! This SKOS
 - **Break up large changes**: Split contributions of 50+ concepts into smaller chunks (~20 changes each)
 - **Use Excel workflow only**: Never edit Turtle (.ttl) files directly
 - **ID ranges required**: Request your ID range before adding new concepts
+- **Use feature branches**: Create a new branch for your changes instead of committing to your fork's main branch
+- **Classify concepts properly**: Ensure new concepts are linked to the hierarchy via broader concepts
 
 ## Documentation
 
@@ -33,9 +35,15 @@ For detailed guidelines and step-by-step instructions, see:
 
 1. CI/CD pipeline automatically processes your Excel file
 2. Turtle files are generated and validated
-3. Updated Excel file is created from the processed data
-4. Reviewers will check your contribution
-5. Upon approval, your changes are merged and published
+3. Automated checks provide helpful feedback:
+   - Detects PRs from main branch (suggests using feature branches)
+   - Validates that new concepts are properly classified in the hierarchy
+   - Provides friendly reminders about best practices
+4. Updated Excel file is created from the processed data
+5. Reviewers will check your contribution
+6. Upon approval, your changes are merged and published
+
+**Note**: Automated checks are informational and won't block your PR. They're designed to help, not hinder!
 
 ## Questions or Issues?
 

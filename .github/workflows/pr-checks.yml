@@ -1,5 +1,9 @@
 # This workflow checks for common PR submission issues
 # and provides helpful feedback to contributors
+#
+# Security Note: This workflow uses pull_request_target which runs in the context
+# of the base repository, not the fork. User-controlled data (PR titles, descriptions,
+# branch names, usernames) must be sanitized before use to prevent script injection.
 
 name: PR Submission Checks
 
@@ -25,6 +29,8 @@ jobs:
         with:
           script: |
             const pr = context.payload.pull_request;
+            
+            // Get PR details from context (these are all user-controlled)
             const headRef = pr.head.ref;
             const headRepo = pr.head.repo.full_name;
             const baseRepo = pr.base.repo.full_name;
@@ -32,13 +38,14 @@ jobs:
             const isFromMain = headRef === 'main';
             const isFromOrg = pr.head.repo.owner.type === 'Organization';
             
-            console.log(`PR #${pr.number} details:`);
-            console.log(`  Head branch: ${headRef}`);
-            console.log(`  Head repo: ${headRepo}`);
-            console.log(`  Base repo: ${baseRepo}`);
-            console.log(`  Is fork: ${isFork}`);
-            console.log(`  From main branch: ${isFromMain}`);
-            console.log(`  Owner type: ${pr.head.repo.owner.type}`);
+            // Log details - no user input in template literals for security
+            console.log('PR number:', pr.number);
+            console.log('Head branch:', headRef);
+            console.log('Head repo:', headRepo);
+            console.log('Base repo:', baseRepo);
+            console.log('Is fork:', isFork);
+            console.log('From main branch:', isFromMain);
+            console.log('Owner type:', pr.head.repo.owner.type);
             
             core.setOutput('is_fork', isFork);
             core.setOutput('is_from_main', isFromMain);
@@ -77,10 +84,13 @@ jobs:
               return;
             }
             
+            // Sanitize username - GitHub usernames can only contain alphanumeric characters and hyphens
+            const username = pr.user.login.replace(/[^a-zA-Z0-9-]/g, '');
+            
             // Post helpful comment
             const commentBody = `## ⚠️ Pull Request Submitted from Main Branch
 
-Hi @${pr.user.login}! 👋
+Hi @${username}! 👋
 
 Thank you for your contribution to voc4cat! 
 
@@ -148,9 +158,12 @@ For more information, see our [Contributing Guidelines](https://github.com/nfdi4
               return;
             }
             
+            // Sanitize username - GitHub usernames can only contain alphanumeric characters and hyphens
+            const username = pr.user.login.replace(/[^a-zA-Z0-9-]/g, '');
+            
             const commentBody = `## ⚠️ Pull Request from Organization Account
 
-Hi @${pr.user.login}! 👋
+Hi @${username}! 👋
 
 We noticed that this pull request comes from an organization account rather than a personal account. 
 

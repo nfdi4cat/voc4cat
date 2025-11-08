@@ -15,6 +15,14 @@ Automated GitHub Actions workflow that provides immediate feedback for:
 - PRs from fork's main branch (helpful workflow suggestion)
 - Organization account submissions (critical - blocks CI due to GitHub limitation)
 
+**Security**: This workflow uses `pull_request_target` and implements script injection prevention. See `SECURITY.md` for details.
+
+### `SECURITY.md`
+Documents security considerations and mitigations implemented in the workflow, including:
+- Script injection prevention
+- Sanitization of user-controlled data
+- Testing procedures with security tools
+
 ## What Gets Checked
 
 ### 1. Main Branch Submissions
@@ -44,7 +52,7 @@ Automated GitHub Actions workflow that provides immediate feedback for:
 1. **Helpful, Not Blocking**: Comments are informational only and don't prevent PR merging (except org accounts which can't work)
 2. **Friendly Tone**: Messages are welcoming and educational, not punitive
 3. **No Spam**: Comments are only posted once per PR
-4. **Secure**: Uses `pull_request_target` to safely work with forks while protecting secrets
+4. **Secure**: Uses `pull_request_target` safely with script injection prevention (user-controlled data is sanitized)
 5. **Lightweight**: Checks run quickly and don't burden CI resources
 
 ## Limitations

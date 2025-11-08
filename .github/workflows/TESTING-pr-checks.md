@@ -57,16 +57,38 @@ The workflow `.github/workflows/pr-checks.yml` will run automatically when:
 
 **Expected Behavior:**
 - Workflow runs successfully
-- An informational comment is posted about organization accounts
-- Comment explains potential implications
-- Comment includes option to switch to personal account
+- A **critical** comment is posted about organization accounts
+- Comment explains this is a GitHub limitation that blocks CI
+- Comment clearly states the PR cannot be merged as-is
+- Comment provides instructions to re-submit from personal account
 
 **How to Verify:**
 - Check that `check-pr-submission` job completes
 - Look for comment about organization account
-- Verify comment is informational and non-blocking
+- Verify comment explains the "Allow edits from maintainers" issue
+- Verify comment links to GitHub community discussion #5634
 
-### Test 4: New Concepts with Proper Classification
+### Test 4: GitHub Copilot Review for Classification
+
+**Setup:**
+1. Add new concepts to the vocabulary Excel file
+2. Intentionally omit `skos:broader` relationships OR
+3. Add broader relationship that doesn't chain to a top concept
+4. Submit the PR
+5. Ask GitHub Copilot to review: "@copilot can you review this PR?"
+
+**Expected Behavior:**
+- Workflow runs successfully (no automated Python check)
+- GitHub Copilot (if enabled) may provide feedback about missing classification
+- Copilot uses guidance from `.github/copilot-instructions.md`
+- Human reviewers can also check for proper classification
+
+**How to Verify:**
+- Check that workflow completes without errors
+- If Copilot is enabled, verify it provides helpful feedback
+- Manually verify concepts have proper broader relationships
+
+### Test 5: New Concepts with Proper Classification
 
 **Setup:**
 1. Add new concepts to the vocabulary Excel file
@@ -75,36 +97,14 @@ The workflow `.github/workflows/pr-checks.yml` will run automatically when:
 4. Submit the PR
 
 **Expected Behavior:**
-- Workflow runs successfully
-- `check-top-concepts` job completes without errors
-- NO comment about missing classification is posted
-- Workflow passes
+- Workflow runs successfully  
+- No automated comments about classification (that check was removed)
+- Manual review or Copilot review confirms proper classification
 
 **How to Verify:**
-- Check that both jobs complete successfully
-- Review job logs to see concepts were analyzed
-- Confirm "All new concepts are properly classified" message in logs
-
-### Test 5: New Concepts WITHOUT Proper Classification
-
-**Setup:**
-1. Add new concepts to the vocabulary Excel file
-2. Intentionally omit `skos:broader` relationships OR
-3. Add broader relationship that doesn't chain to a top concept
-4. Submit the PR
-
-**Expected Behavior:**
-- Workflow runs
-- `check-top-concepts` job detects unclassified concepts
-- A comment is posted listing the unclassified concepts
-- Comment explains why classification is important
-- Comment provides guidance on how to fix
-
-**How to Verify:**
-- Check that `check-top-concepts` job runs
-- Verify comment lists the unclassified concept URIs
-- Confirm comment includes helpful guidance
-- Check that comment is updated (not duplicated) if more commits are pushed
+- Check that workflow completes successfully
+- Verify no false warnings about classification
+- Confirm concepts are properly linked in hierarchy
 
 ### Test 6: PR with No New Concepts (Modification Only)
 
@@ -115,14 +115,14 @@ The workflow `.github/workflows/pr-checks.yml` will run automatically when:
 
 **Expected Behavior:**
 - Workflow runs successfully
-- `check-top-concepts` job completes
-- Logs show "No new concepts added in this PR"
-- No classification comments posted
+- Only checks for branch and org account issues
+- No classification checks run (those are manual/Copilot)
+- Workflow completes successfully
 
 **How to Verify:**
-- Check job logs for the expected message
-- Confirm no classification-related comments appear
-- Workflow completes successfully
+- Check workflow completes successfully
+- Confirm no unexpected errors
+- Verify only relevant checks run
 
 ### Test 7: Documentation-Only Changes
 
@@ -132,14 +132,12 @@ The workflow `.github/workflows/pr-checks.yml` will run automatically when:
 3. Submit the PR
 
 **Expected Behavior:**
-- `check-pr-submission` job runs (checks branch regardless of changes)
-- `check-top-concepts` job runs but finds no vocabulary changes
-- No issues or comments about concepts
+- `check-pr-submission` job runs (checks branch and org account regardless of changes)
+- No issues or unexpected comments
 - Workflow completes successfully
 
 **How to Verify:**
-- Both jobs complete
-- Logs show no vocabulary files changed
+- Job completes successfully
 - No errors or unexpected behavior
 
 ## Monitoring and Debugging

@@ -37,13 +37,13 @@ For detailed guidelines and step-by-step instructions, see:
 2. Turtle files are generated and validated
 3. Automated checks provide helpful feedback:
    - Detects PRs from main branch (suggests using feature branches)
-   - Validates that new concepts are properly classified in the hierarchy
-   - Provides friendly reminders about best practices
+   - Identifies organization account issues that will block CI
+   - GitHub Copilot may provide additional review guidance
 4. Updated Excel file is created from the processed data
 5. Reviewers will check your contribution
 6. Upon approval, your changes are merged and published
 
-**Note**: Automated checks are informational and won't block your PR. They're designed to help, not hinder!
+**Note**: Automated checks are informational and won't block your PR (except organization accounts due to GitHub limitations).
 
 ## Questions or Issues?
 

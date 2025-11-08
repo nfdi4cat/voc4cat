@@ -1,8 +1,21 @@
 # Automated PR Submission Checks
 
-This directory contains the `pr-checks.yml` workflow that provides automated feedback to help contributors follow best practices when submitting pull requests.
+This directory contains workflows and instructions that help contributors follow best practices when submitting pull requests.
 
-## What It Checks
+## Files
+
+### `copilot-instructions.md`
+Instructions for GitHub Copilot to provide helpful review feedback on PRs. These guide Copilot to:
+- Detect PRs from main branch and suggest using feature branches
+- Identify organization account submissions that will block CI
+- Check for proper concept classification in the hierarchy
+
+### `pr-checks.yml`
+Automated GitHub Actions workflow that provides immediate feedback for:
+- PRs from fork's main branch (helpful workflow suggestion)
+- Organization account submissions (critical - blocks CI due to GitHub limitation)
+
+## What Gets Checked
 
 ### 1. Main Branch Submissions
 **Problem**: Contributors sometimes submit PRs from the `main` branch of their fork, which makes it difficult to:
@@ -10,77 +23,66 @@ This directory contains the `pr-checks.yml` workflow that provides automated fee
 - Work on multiple PRs simultaneously
 - Manage future contributions
 
-**Solution**: The workflow detects this pattern and posts a friendly comment with:
-- Explanation of why this is problematic
-- Step-by-step instructions to use feature branches in the future
-- Reassurance that the current PR can still be merged
+**Solution**: The workflow posts a friendly comment explaining why feature branches are better, with step-by-step instructions.
 
-### 2. Missing Top-Concept Classification
-**Problem**: New concepts must be part of the SKOS hierarchy and eventually link to one of the top-level concepts.
+### 2. Organization Account Submissions ⚠️ CRITICAL
+**Problem**: GitHub does not allow the "Allow edits from maintainers" option for forks stored in organizations. This blocks our CI because it needs to:
+- Commit generated turtle files from submitted Excel files
+- Remove Excel files from inbox after processing
 
-**Solution**: The workflow:
-- Parses all vocabulary Turtle files using RDFLib
-- Identifies new concepts added in the PR
-- Validates that each new concept has a path to a top concept via `skos:broader` relationships
-- Comments with a list of unclassified concepts if any are found
+**Solution**: The workflow posts a comment explaining this is a GitHub limitation and the PR must come from a personal account.
 
-### 3. Organization Account Submissions
-**Problem**: PRs from organization accounts (vs. personal accounts) may have implications for:
-- Contributor credit in releases (Zenodo, etc.)
-- Permission settings
+**Reference**: https://github.com/orgs/community/discussions/5634
 
-**Solution**: The workflow posts an informational comment when it detects an organization account, explaining:
-- This is generally fine
-- Potential implications for contributor credit
-- How to switch to a personal account if desired
+### 3. Missing Top-Concept Classification
+**Problem**: New concepts must be linked to the vocabulary hierarchy via `skos:broader` relationships.
+
+**Solution**: GitHub Copilot (via `copilot-instructions.md`) watches for this and provides guidance. This check is **not** automated in the workflow because Python code in Actions is difficult to test.
 
 ## Design Principles
 
-1. **Helpful, Not Blocking**: Comments are informational only and don't prevent PR merging
-2. **Friendly Tone**: Messages are welcoming and provide actionable guidance
-3. **No Spam**: Comments are only posted once per PR (or updated if already exists)
-4. **Security**: Uses `pull_request_target` to safely work with forks while protecting secrets
+1. **Helpful, Not Blocking**: Comments are informational only and don't prevent PR merging (except org accounts which can't work)
+2. **Friendly Tone**: Messages are welcoming and educational, not punitive
+3. **No Spam**: Comments are only posted once per PR
+4. **Secure**: Uses `pull_request_target` to safely work with forks while protecting secrets
 5. **Lightweight**: Checks run quickly and don't burden CI resources
 
 ## Limitations
 
 ### Organization Account Detection
-The check for organization accounts works but has some limitations:
-- GitHub's API correctly identifies the owner type
-- However, there may be edge cases where permissions make it difficult to automatically detect all scenarios
-- The original issue mentioned this "fails due to GitHub issue" - we've implemented it anyway as it works in most cases
+Works correctly via GitHub API. The issue is a GitHub platform limitation documented at https://github.com/orgs/community/discussions/5634 - organization forks simply cannot grant the "Allow edits from maintainers" permission.
 
 ### Top-Concept Classification
-The SKOS hierarchy validation:
-- Relies on properly formatted Turtle files
-- May miss concepts if the RDF parsing fails
-- Assumes the vocabulary follows SKOS conventions
-- Only checks new concepts (not modifications to existing ones)
+This is handled by GitHub Copilot review suggestions rather than automated checking because:
+- Python code in GitHub Actions is difficult to test automatically
+- Manual review provides better context-specific feedback
+- Allows for nuanced judgment about proper classification
 
-## Testing
+## Using GitHub Copilot for Reviews
 
-To test these workflows:
+The `.github/copilot-instructions.md` file provides guidance to GitHub Copilot when reviewing PRs. To use:
 
-1. **Main Branch Test**: Create a PR from the main branch of a fork
-2. **Org Account Test**: Create a PR from an organization-owned fork
-3. **Unclassified Concept Test**: Add a concept without a proper `skos:broader` link to the hierarchy
+1. Enable GitHub Copilot in your repository settings
+2. Copilot will automatically read the instructions file
+3. When reviewing PRs, Copilot will follow these guidelines
+4. You can also explicitly ask Copilot questions like:
+   - "@copilot is this PR from the main branch?"
+   - "@copilot are the new concepts properly classified?"
+
+See: https://docs.github.com/en/copilot/how-tos/configure-custom-instructions/add-repository-instructions
 
 ## Maintenance
 
 ### Updating Comment Text
-To modify the messages shown to contributors, edit the `commentBody` strings in `.github/workflows/pr-checks.yml`.
+To modify the messages shown to contributors, edit the `commentBody` strings in `pr-checks.yml`.
 
-### Adjusting Validation Logic
-The top-concept classification logic is in the Python script within the workflow. Key functions:
-- `is_classified_under_top_concept()`: Recursively checks if a concept reaches a top concept
-- `get_top_concepts()`: Identifies concepts marked with `skos:topConceptOf`
-- `get_broader_concepts()`: Finds parent concepts via `skos:broader` and `skos:narrower` relationships
+### Updating Copilot Guidance
+Edit `copilot-instructions.md` to change how Copilot reviews PRs and what it looks for.
 
 ### Future Enhancements
 Potential improvements:
 - Check for duplicate concept IDs
 - Validate definition quality (e.g., minimum length, no "TBD")
-- Detect concepts with multiple parents (which may need special attention)
 - Check for proper use of collections
 - Validate cross-references and mappings
 
@@ -92,7 +94,8 @@ Potential improvements:
 
 ## Feedback
 
-If you have suggestions for improving these automated checks or encounter issues, please:
+If you have suggestions for improving these checks or encounter issues, please:
 1. Create an issue in this repository
 2. Tag it with the `automation` or `ci/cd` label
 3. Describe the problem or enhancement you'd like to see
+

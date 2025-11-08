@@ -148,29 +148,33 @@ For more information, see our [Contributing Guidelines](https://github.com/nfdi4
               return;
             }
             
-            const commentBody = `## ℹ️ Pull Request from Organization Account
+            const commentBody = `## ⚠️ Pull Request from Organization Account
 
 Hi @${pr.user.login}! 👋
 
 We noticed that this pull request comes from an organization account rather than a personal account. 
 
-### Note about organization contributions:
+### Why this is problematic:
 
-- This is generally fine and the PR can be merged normally
-- However, if you intend to be credited as a contributor in releases (e.g., in Zenodo), we may need your personal account information
-- Organization accounts may have different permission settings that could affect your ability to update the PR
+GitHub does not allow the "Allow edits from maintainers" option for forks stored in an organization (see [GitHub Community Discussion](https://github.com/orgs/community/discussions/5634)). This option is **required** for PRs in voc4cat because our CI workflow needs to:
+- Commit the generated turtle files from your submitted Excel file
+- Remove the Excel file from the inbox after processing
 
-### If you prefer to use a personal account:
+**Without this permission, the CI workflow will fail and your PR cannot be merged.**
 
-You can transfer the PR by:
-1. Forking the repository to your personal account
-2. Creating a new branch with your changes
-3. Submitting a new PR from your personal fork
+### How to fix this:
 
-Feel free to proceed with this PR, or let us know if you'd like to switch to a personal account.
+You need to transfer this PR to a personal account:
+
+1. Fork the voc4cat repository to your **personal GitHub account** (not an organization)
+2. Create a new branch with your changes in your personal fork
+3. Submit a new PR from your personal fork
+4. Close this PR
+
+If you need help with this process, please let us know!
 
 ---
-*This is an automated informational message. No action is required unless you want to change accounts.* 📋`;
+*This is an automated check. Organization forks cannot be used for contributions to voc4cat due to GitHub limitations.* 🚫`;
             
             await github.rest.issues.createComment({
               owner: context.repo.owner,
@@ -179,266 +183,3 @@ Feel free to proceed with this PR, or let us know if you'd like to switch to a p
               body: commentBody
             });
 
-  check-top-concepts:
-    name: Check for top-concept classification
-    runs-on: ubuntu-latest
-    if: ${{ !github.event.pull_request.merged }}
-    
-    steps:
-      - name: Checkout PR branch
-        uses: actions/checkout@v5
-        with:
-          repository: ${{ github.event.pull_request.head.repo.full_name }}
-          ref: ${{ github.head_ref }}
-
-      - name: Checkout main branch for comparison
-        uses: actions/checkout@v5
-        with:
-          ref: main
-          path: _main_branch
-          sparse-checkout: |
-            vocabularies/
-          fetch-depth: 1
-
-      - name: Setup Python
-        uses: actions/setup-python@v6
-        with:
-          python-version: '3.12'
-
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install rdflib
-
-      - name: Check for top-concept classification
-        id: check-concepts
-        run: |
-          python << 'PYTHON_SCRIPT'
-          import os
-          import sys
-          from pathlib import Path
-          from rdflib import Graph, Namespace, RDF, SKOS
-          
-          SKOS = Namespace("http://www.w3.org/2004/02/skos/core#")
-          VOC4CAT = Namespace("https://w3id.org/nfdi4cat/voc4cat_")
-          
-          def load_graph(vocab_dir):
-              """Load all turtle files from vocabulary directory"""
-              g = Graph()
-              vocab_path = Path(vocab_dir)
-              if not vocab_path.exists():
-                  return g
-              
-              for ttl_file in vocab_path.rglob("*.ttl"):
-                  try:
-                      g.parse(ttl_file, format="turtle")
-                  except Exception as e:
-                      print(f"Warning: Could not parse {ttl_file}: {e}")
-              return g
-          
-          def get_top_concepts(graph):
-              """Get all concepts marked as skos:topConceptOf"""
-              top_concepts = set()
-              for s, p, o in graph.triples((None, SKOS.topConceptOf, None)):
-                  top_concepts.add(s)
-              return top_concepts
-          
-          def get_all_concepts(graph):
-              """Get all SKOS concepts"""
-              concepts = set()
-              for s in graph.subjects(RDF.type, SKOS.Concept):
-                  concepts.add(s)
-              return concepts
-          
-          def get_broader_concepts(graph, concept):
-              """Get broader concepts for a given concept"""
-              broader = set()
-              for o in graph.objects(concept, SKOS.broader):
-                  broader.add(o)
-              # Also check inverse (narrower) relationships
-              for s in graph.subjects(SKOS.narrower, concept):
-                  broader.add(s)
-              return broader
-          
-          def is_classified_under_top_concept(graph, concept, top_concepts, visited=None):
-              """Check if a concept is eventually under a top concept"""
-              if visited is None:
-                  visited = set()
-              
-              if concept in visited:
-                  return False
-              visited.add(concept)
-              
-              if concept in top_concepts:
-                  return True
-              
-              broader = get_broader_concepts(graph, concept)
-              for b in broader:
-                  if is_classified_under_top_concept(graph, b, top_concepts, visited):
-                      return True
-              
-              return False
-          
-          # Load graphs
-          print("Loading vocabulary files...")
-          current_graph = load_graph("vocabularies/voc4cat")
-          main_graph = load_graph("_main_branch/vocabularies/voc4cat")
-          
-          # Get concepts
-          current_concepts = get_all_concepts(current_graph)
-          main_concepts = get_all_concepts(main_graph)
-          new_concepts = current_concepts - main_concepts
-          
-          print(f"Found {len(current_concepts)} total concepts in PR")
-          print(f"Found {len(main_concepts)} concepts in main branch")
-          print(f"Found {len(new_concepts)} new concepts in this PR")
-          
-          if len(new_concepts) == 0:
-              print("No new concepts added in this PR")
-              sys.exit(0)
-          
-          # Get top concepts from current graph
-          top_concepts = get_top_concepts(current_graph)
-          print(f"Found {len(top_concepts)} top concepts")
-          
-          # Check each new concept
-          unclassified_concepts = []
-          for concept in new_concepts:
-              if not is_classified_under_top_concept(current_graph, concept, top_concepts):
-                  # Get the concept's label for reporting
-                  label = None
-                  for o in current_graph.objects(concept, SKOS.prefLabel):
-                      label = str(o)
-                      break
-                  unclassified_concepts.append((str(concept), label))
-          
-          if unclassified_concepts:
-              print(f"\n⚠️  Found {len(unclassified_concepts)} concept(s) not classified under a top concept:")
-              for uri, label in unclassified_concepts:
-                  print(f"  - {uri} ({label if label else 'no label'})")
-              
-              # Write output for GitHub Action
-              with open(os.environ.get('GITHUB_OUTPUT', '/dev/null'), 'a') as f:
-                  f.write(f"has_unclassified=true\n")
-                  # Format the list for the comment
-                  concepts_list = '\n'.join([f"- `{uri}` {f'({label})' if label else '(no label)'}" 
-                                            for uri, label in unclassified_concepts])
-                  # Use multiline output format for GitHub Actions
-                  f.write(f"unclassified_list<<EOF\n{concepts_list}\nEOF\n")
-              sys.exit(1)
-          else:
-              print("✅ All new concepts are properly classified under top concepts")
-              with open(os.environ.get('GITHUB_OUTPUT', '/dev/null'), 'a') as f:
-                  f.write(f"has_unclassified=false\n")
-              sys.exit(0)
-          PYTHON_SCRIPT
-
-      - name: Post comment about missing classification
-        if: failure() && steps.check-concepts.outputs.has_unclassified == 'true'
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const pr = context.payload.pull_request;
-            const unclassifiedList = `${{ steps.check-concepts.outputs.unclassified_list }}`;
-            
-            // Check if we already posted this comment
-            const comments = await github.rest.issues.listComments({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: pr.number
-            });
-            
-            const botComment = comments.data.find(comment => 
-              comment.user.type === 'Bot' && 
-              comment.body.includes('Missing Top-Concept Classification')
-            );
-            
-            if (botComment) {
-              // Update existing comment
-              await github.rest.issues.updateComment({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                comment_id: botComment.id,
-                body: `## ⚠️ Missing Top-Concept Classification
-
-Hi @${pr.user.login}! 👋
-
-Our automated check found that some new concepts in this PR are not classified under one of the top-level concepts in the vocabulary hierarchy.
-
-### Concepts needing classification:
-
-${unclassifiedList}
-
-### Why is this important?
-
-Every concept in the voc4cat vocabulary should be part of the hierarchical structure, ultimately linking to one of the top-level concepts. This ensures:
-- Better organization and discoverability
-- Consistent vocabulary structure
-- Proper semantic relationships
-
-### How to fix this:
-
-1. Open your vocabulary Excel file
-2. For each concept listed above, add a broader concept (\`skos:broader\`) relationship
-3. Ensure the chain of broader concepts eventually reaches one of the top concepts
-4. Commit and push the updated file
-
-The top-level concepts in voc4cat include concepts like:
-- Process
-- Method
-- Material entity
-- Quality
-- Role
-- etc.
-
-For more guidance, see our [Contributing Guidelines](https://github.com/nfdi4cat/voc4cat/blob/main/CONTRIBUTING.md).
-
----
-*This is an automated check. If you believe this is an error or need help, please ask!* 🔍
-
-**Last checked:** ${new Date().toISOString()}`
-              });
-            } else {
-              // Create new comment
-              await github.rest.issues.createComment({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                issue_number: pr.number,
-                body: `## ⚠️ Missing Top-Concept Classification
-
-Hi @${pr.user.login}! 👋
-
-Our automated check found that some new concepts in this PR are not classified under one of the top-level concepts in the vocabulary hierarchy.
-
-### Concepts needing classification:
-
-${unclassifiedList}
-
-### Why is this important?
-
-Every concept in the voc4cat vocabulary should be part of the hierarchical structure, ultimately linking to one of the top-level concepts. This ensures:
-- Better organization and discoverability
-- Consistent vocabulary structure
-- Proper semantic relationships
-
-### How to fix this:
-
-1. Open your vocabulary Excel file
-2. For each concept listed above, add a broader concept (\`skos:broader\`) relationship
-3. Ensure the chain of broader concepts eventually reaches one of the top concepts
-4. Commit and push the updated file
-
-The top-level concepts in voc4cat include concepts like:
-- Process
-- Method
-- Material entity
-- Quality
-- Role
-- etc.
-
-For more guidance, see our [Contributing Guidelines](https://github.com/nfdi4cat/voc4cat/blob/main/CONTRIBUTING.md).
-
----
-*This is an automated check. If you believe this is an error or need help, please ask!* 🔍`
-              });
-            }

@@ -1,63 +1,10 @@
 # GitHub Copilot Instructions for voc4cat
 
-This repository contains a SKOS vocabulary for catalysis maintained by NFDI4Cat. When reviewing pull requests, please help contributors follow these best practices:
+This repository contains a SKOS vocabulary for catalysis. When reviewing pull requests, please help contributors follow these best practices:
 
 ## Common PR Submission Issues
 
-### 1. PRs Submitted from Main Branch of Fork
-
-**Problem:** Contributors sometimes submit PRs from the `main` branch of their fork, which makes it difficult to:
-- Keep their fork synchronized with upstream changes
-- Work on multiple PRs simultaneously
-- Manage future contributions cleanly
-
-**What to look for:**
-- Check if the PR is from a fork's `main` branch to `nfdi4cat/voc4cat:main`
-- Look at the source branch name in the PR header
-
-**Suggested response:**
-```
-Thank you for your contribution! I noticed this PR is submitted from the main branch of your fork. While this works, it can cause issues:
-
-- It makes it harder to keep your fork updated with upstream changes
-- You won't be able to work on multiple PRs at once
-- Future contributions may be complicated by merge conflicts
-
-For future PRs, please use a feature branch:
-1. Create a new branch: `git checkout -b descriptive-branch-name`
-2. Make your changes and commit to this branch
-3. Push the branch: `git push origin descriptive-branch-name`
-4. Create PR from the feature branch
-
-This PR can still be merged, but please use feature branches going forward!
-```
-
-### 2. PRs from Organization Accounts
-
-**Problem:** GitHub does not allow the "Allow edits from maintainers" option for forks stored in organizations. This is **critical** because our CI workflow needs this permission to:
-- Commit generated turtle files from submitted Excel files
-- Remove Excel files from the inbox after processing
-
-**What to look for:**
-- Check if the PR originates from an organization account (org icon next to username)
-- Look at the fork owner in the PR source information
-
-**Suggested response:**
-```
-⚠️ This PR comes from an organization account, which will prevent our CI workflow from working correctly.
-
-GitHub does not allow the "Allow edits from maintainers" option for forks in organizations (see https://github.com/orgs/community/discussions/5634). Our CI needs this permission to commit turtle files and clean up Excel files.
-
-**This PR cannot be merged as-is.** Please:
-1. Fork voc4cat to your personal GitHub account
-2. Create a feature branch with your changes
-3. Submit a new PR from your personal fork
-4. Close this PR
-
-Sorry for the inconvenience - this is a GitHub limitation, not our choice!
-```
-
-### 3. Missing Classification Under Top Concepts
+### Missing Classification Under Top Concepts
 
 **Problem:** New concepts in the SKOS vocabulary must be properly classified by linking them to the hierarchy through `skos:broader` relationships, eventually reaching one of the top concepts.
 
@@ -66,7 +13,7 @@ Sorry for the inconvenience - this is a GitHub limitation, not our choice!
 - Check if new concepts have `skos:broader` relationships defined
 - Verify the broader concepts eventually chain to a top concept like:
   - Process
-  - Method  
+  - Method
   - Material entity
   - Quality
   - Role
@@ -96,7 +43,7 @@ Let me know if you need help identifying the appropriate parent concepts!
 
 ### What to Check in PRs
 
-1. **File locations**: Excel files should be in `inbox-excel-vocabs/`
+1. **File locations**: Excel files must be in `inbox-excel-vocabs/`
 2. **File naming**: Keep as `voc4cat.xlsx`
 3. **No direct .ttl edits**: Turtle files should only be modified by CI
 4. **Documentation**: Changes should be described in PR description
@@ -104,9 +51,10 @@ Let me know if you need help identifying the appropriate parent concepts!
 
 ### Helpful Resources
 
-- Contributing Guide: https://github.com/nfdi4cat/voc4cat/blob/main/CONTRIBUTING.md
-- Vocabulary Guidelines: https://nfdi4cat.github.io/voc4cat/docs_usage/guidelines.html
-- Current Vocabulary: https://nfdi4cat.github.io/voc4cat/
+- Contributing Guide: https://github.com/nfdi4cat/voc4cat/blob/main/docs/docs_usage/how-to-contribute.md
+- Vocabulary Guidelines: https://github.com/nfdi4cat/voc4cat/blob/main/docs/docs_usage/guidelines.md
+- Current Vocabulary as HTML: https://nfdi4cat.github.io/voc4cat/dev/voc4cat/index.html
+- Current Vocabulary in SKOS/turtle format: https://github.com/nfdi4cat/voc4cat/tree/main/vocabularies/voc4cat
 
 ## Tone and Approach
 

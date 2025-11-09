@@ -69,10 +69,10 @@ you can use this link to the [SKOS testing tool](http://skos-play.sparna.fr/skos
 
 The latest release of voc4cat is available via
 
-* [SKOSMOS](https://semanticlookup.zbmed.de/skosmos/voc4cat/en/) operated by [ZBmed](https://www.zbmed.de/en/). The SKOSMOS API is used for the integration of Voc4Cat into the NFDI4Cat data repository **[repo4cat](https://repository.nfdi4cat.org/)**.
+* [Skosmos](https://semanticlookup.zbmed.de/skosmos/voc4cat/en/) operated by [ZBmed](https://www.zbmed.de/en/). The Skosmos API is used for the integration of Voc4Cat into the NFDI4Cat data repository **[repo4cat](https://repository.nfdi4cat.org/)**.
 * [TIB Terminology Service](https://terminology.tib.eu/ts/ontologies/voc4cat) which is based on a customized OLS version.
 
-Both services offer API access to voc4cat. SKOSMOS has more SKOS-specific features than OLS and is therefore recommended.
+Both services offer API access to voc4cat. Skosmos has more SKOS-specific features than OLS and is therefore recommended.
 
 ## Contributing to vocabularies
 
@@ -155,7 +155,7 @@ This work was funded by the German Research Foundation (DFG) through the project
 
 Special thanks to:
 
-- Roman Baum (@rombaum) who helped us to make voc4cat accessible via SKOSMOS in a [TS4NFDI incubator project](https://terminology.services.base4nfdi.de/incubators), see also [doi:10.5281/zenodo.16736361](https://doi.org/10.5281/zenodo.16736361).
-- [ZBmed](https://www.zbmed.de/en/) for operating the SKOSMOS instance that provides a modern [user interface](https://semanticlookup.zbmed.de/skosmos/voc4cat/en/) for browsing Voc4Cat plus REST API access.
+- [Roman Baum](https://github.com/rombaum) and his team who helped us to make voc4cat accessible via Skosmos in a [TS4NFDI incubator project](https://terminology.services.base4nfdi.de/incubators), see also [doi:10.5281/zenodo.16736361](https://doi.org/10.5281/zenodo.16736361).
+- [ZBmed](https://www.zbmed.de/en/) for operating the Skosmos instance that provides a modern [user interface](https://semanticlookup.zbmed.de/skosmos/voc4cat/en/) for browsing Voc4Cat plus REST API access.
 - [TIB - Leibniz Information Centre for Science and Technology](https://www.tib.eu/en/) for providing API access to Voc4Cat.
 - [W3ID Consortium](https://w3id.org) for making its permanent URL service available to the community.

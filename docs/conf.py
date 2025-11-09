@@ -89,5 +89,8 @@ html_theme_options = {
         },
     ],
     # HTML to be show in a announcement banner at the top of the page
-    "announcement": 'New: <strong> Release 2025-10-14 </strong> includes many concepts contributed by the growing community.',
+    "announcement":
+        '<em>News: Voc4Cat is available via <a class="reference external" href="https://semanticlookup.zbmed.de/skosmos/voc4cat/en/">SKOSMOS</a>'
+        ' at ZBmed thanks to a <a class="reference external" href="https://terminology.services.base4nfdi.de/incubators">TS4NFDI incubator</a> project.'
+        ' (2025-11-09) </em>',
 }

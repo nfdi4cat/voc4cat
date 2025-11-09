@@ -67,9 +67,12 @@ you can use this link to the [SKOS testing tool](http://skos-play.sparna.fr/skos
 
 ## API access
 
-voc4cat is also available via the [TIB Terminology Service](https://terminology.tib.eu/ts/ontologies/voc4cat).
-This service offers API access to voc4cat. Currently a modified version of [OLS](https://terminology.tib.eu/ts/about) is used.
-There are plans to host voc4cat and other vocabularies on a [SKOSMOS](https://skosmos.org/) server in the future which will provide more SKOS-specific features than OLS.
+The latest release of voc4cat is available via
+
+* [SKOSMOS](https://semanticlookup.zbmed.de/skosmos/voc4cat/en/) operated by [ZBmed](https://www.zbmed.de/en/). The SKOSMOS API is used for the integration of Voc4Cat into the NFDI4Cat data repository **[repo4cat](https://repository.nfdi4cat.org/)**.
+* [TIB Terminology Service](https://terminology.tib.eu/ts/ontologies/voc4cat) which is based on a customized OLS version.
+
+Both services offers API access to voc4cat. SKOSMOS has more SKOS-specific features than OLS and is therefore recommended.
 
 ## Contributing to vocabularies
 
@@ -82,7 +85,9 @@ To contribute new concepts or collections or change existing ones, you may eithe
 > with max. ~20 changes to make the review process not too hard for the reviewers and you as author.
 
 Here are the steps for submitting updates via Excel/xlsx:
+
 <details>
+
 - Get the Excel/xlsx-vocabulary file
   - The most recent version of the vocabulary is always available via GitHub-pages https://nfdi4cat.github.io/voc4cat/dev/voc4cat.xlsx
 - Make changes to the Excel file. If you want to add something new you need to [request a range of IDs](https://github.com/nfdi4cat/voc4cat/issues/new/choose) for you.
@@ -102,6 +107,7 @@ Here are the steps for submitting updates via Excel/xlsx:
   - or why the proposed change may not fit.
 - If you need to fix something, first pull the changes made by the action with `git pull` (or "sync" in GUI) and then commit further changes to the pull request branch in your clone.
   - If any commits have been made by the CI pipeline, pull the changes to your repo (via "Sync fork" button in GUI) before committing any additional changes.
+
 </details>
 
 Finally, when the proposed pull request is accepted, your changes will be integrated in the vocabularies in the folder `vocabularies`.
@@ -149,5 +155,7 @@ This work was funded by the German Research Foundation (DFG) through the project
 
 Special thanks to:
 
-- [TIB - Leibniz Information Centre for Science and Technology](https://www.tib.eu/en/) for providing API access to voc4cat.
+- Roman Baum (@rombaum) who helped us to make voc4cat accessible via SKOSMOS in a [TS4NFDI incubator project](https://terminology.services.base4nfdi.de/incubators), see also [doi:10.5281/zenodo.16736361](https://doi.org/10.5281/zenodo.16736361).
+- [ZBmed](https://www.zbmed.de/en/) for operating the SKOSMOS instance that  provides a modern [user interface](https://semanticlookup.zbmed.de/skosmos/voc4cat/en/) for browsing Voc4Cat plus REST API access.
+- [TIB - Leibniz Information Centre for Science and Technology](https://www.tib.eu/en/) for providing API access to Voc4Cat.
 - [W3ID Consortium](https://w3id.org) for making its permanent URL service available to the community.

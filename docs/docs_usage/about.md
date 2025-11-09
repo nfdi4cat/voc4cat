@@ -12,7 +12,7 @@ For maintainer contact or editorial queries, please open an issue in the [Voc4Ca
 
 ## Citing Voc4Cat
 
-If you use Voc4Cat in publications or software, please cite the deposited vocabulary either using the version-indepandant general citation
+If you use Voc4Cat in publications or software, please cite the deposited vocabulary either using the version-independent general citation
 
 > Voc4Cat – A SKOS Vocabulary for the Catalysis Disciplines. nfdi4cat/voc4cat. Zenodo. DOI: 10.5281/zenodo.8313340
 
@@ -38,6 +38,6 @@ A recent paper refers to these underlying ideas as "O3" (open data, open code, o
 
 <img src="./media/dfg.png" alt="DFG logo" />
 
-The creation and mainteanance of Voc4Cat has been funded by the German Research Foundation (DFG) through the project "[NFDI4Cat](https://nfdi4cat.org/) - NFDI for Catalysis-Related
+The creation and maintenance of Voc4Cat has been funded by the German Research Foundation (DFG) through the project "[NFDI4Cat](https://nfdi4cat.org/) - NFDI for Catalysis-Related
 Sciences" (DFG project no. [441926934](https://gepris.dfg.de/gepris/projekt/441926934)),
 within the National Research Data Infrastructure ([NFDI](https://www.nfdi.de/)) programme of the Joint Science Conference (GWK).

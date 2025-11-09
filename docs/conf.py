@@ -20,8 +20,8 @@ extensions = [
     # External extensions
     "myst_parser",
     "sphinx_copybutton",
-    "sphinx_inline_tabs",
-    "sphinx_design",
+    "sphinx_design",  # design extensions like tabs/cards
+    "sphinxcontrib.mermaid",  # diagrams via MyST directive {mermaid}
 ]
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'README.md']
@@ -50,7 +50,7 @@ autosectionlabel_prefix_document = True
 
 myst_enable_extensions = [
     "attrs_inline", # enable {}-attribute syntax like ![](img/fish.png){w=100px align=center}
-    "colon_fence",  # enable the colon_fence ::: syntax for admonitions
+    "colon_fence",  # required for ::: tab-set / tab-item and admonitions syntax
     "html_image",   # convert HTML <img> elements to sphinx image nodes
 ]
 
@@ -90,7 +90,7 @@ html_theme_options = {
     ],
     # HTML to be show in a announcement banner at the top of the page
     "announcement":
-        '<em>News: Voc4Cat is available via <a class="reference external" href="https://semanticlookup.zbmed.de/skosmos/voc4cat/en/">SKOSMOS</a>'
+        '<em>News: Voc4Cat is available via <a class="reference external" href="https://semanticlookup.zbmed.de/skosmos/voc4cat/en/">Skosmos</a>'
         ' at ZBmed thanks to a <a class="reference external" href="https://terminology.services.base4nfdi.de/incubators">TS4NFDI incubator</a> project.'
         ' (2025-11-09) </em>',
 }

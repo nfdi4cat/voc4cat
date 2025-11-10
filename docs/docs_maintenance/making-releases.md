@@ -1,11 +1,12 @@
-# Making Releases on GitHub
+# Making Releases
 
 ```{note} This guide is only relevant for maintainers with commit rights.
 ```
 
 ## Overview
 
-Releases in the voc4cat repository publish versioned snapshots of the vocabulary and documentation to permanent URLs following the pattern `https://w3id.org/nfdi4cat/voc4cat/vYYYY-MM-DD`. The release process is automated via GitHub Actions, triggered by pushing a tag with the version pattern.
+Releases in the voc4cat repository publish versioned snapshots of the vocabulary and documentation to permanent URLs following the pattern `https://w3id.org/nfdi4cat/voc4cat/vYYYY-MM-DD`.
+The release process is automated via GitHub Actions, triggered by pushing a tag with the version pattern.
 
 The voc4cat version tags reflect the date when a release is created.
 Tags must follow the pattern `vYYYY-MM-DD`:

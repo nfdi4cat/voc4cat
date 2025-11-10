@@ -144,40 +144,177 @@ Press the green "Sync fork" button. If this fails, see [](#troubleshooting).
 
 #### Step 6 – Add / edit concepts in Excel
 
-Follow classification & Excel rules above. Ensure each new concept has a broader chain to a top concept.
+:::{dropdown} Introduction to the xlsx vocabulary file (click to unfold).
 
-::::{tab-set}
-:::{tab-item} Git commands
-:sync: Git commands
-Edit the Excel file locally in your spreadsheet program. (Optional future tooling: local validator.) After edits:
+The downloaded Excel file consists of seven sheets:
 
-1. Stage file:
-   - `git add inbox-excel-vocabs/voc4cat.xlsx`
-2. Commit with informative message (include ID span):
-   - `git commit -m "voc4cat: add <topic> (IDs ####–####)"`
+1.  **Introduction**: General information regarding Voc4Cat.
+
+2.  **Help**: A guide on how to properly fill the necessary information
+    in Voc4Cat Excel sheets.
+
+3.  **Concept Scheme**: Collects the top-level information about the
+    vocabulary.
+
+4.  **Concepts**: A concept according to SKOS is a unit of thought,
+    idea, meaning, or category of an object or event which underlines a
+    knowledge organization system. This sheet collects concept
+    descriptions, (optionally) their translations to other languages,
+    simple broader / narrower relations between the concepts and
+    provenance information. This is the sheet where most edits are made.
+
+5.  **Additional Concept Features**: This sheet allows to add more
+    relations between concepts. These extra relations are adapted from
+    the SKOS specification, and they include:
+
+    1.  *Related Matches*: Mapping with this cell asserts a related or
+        associated relationship to the concepts listed. It is important
+        to note that this relation is not transitive (if concept A has a
+        close match with concept B, and concept B has a close match with
+        concept C, it doesn't necessarily follow that concept A has a
+        close match with concept C).
+
+    2.  *Close Matches*: Mapping with this cell means the concepts are
+        sufficiently similar that they can be used interchangeably.
+        Close matches are also not transitive.
+
+    3.  *Exact Matches*: This is a subset of a close match. Concepts are
+        to be added if they are similar enough to be used
+        interchangeably but have an even higher degree of closeness that
+        includes transitivity, e.g., if concept A is an exact match for
+        concept B, and B is an exact match for C, then A is also an
+        exact match for C.
+
+    4.  *Broader Matches*: Broader match allows the user to assert that
+        a concept is broader in meaning to another concept. This is the
+        inverse of a narrower relation.
+
+    5.  *Narrower Matches*: Narrower match allows the user to assert
+        that a concept is narrower in meaning to another concept. This
+        is the inverse of a broader relation.
+
+6.  **Collections**: Collections are an easy way to group together
+    concepts for various purposes. If collection rows are added to the
+    sheet, all cells must be filled out.
+
+    1.  *Preferred Label*: A simple one-line title for the *Collection*.
+
+    2.  *Definition*: The defining description of this *Collection* that
+        may be longer and include line-breaks.
+
+    3.  *Member IRIs*: A comma-separated list of the *Concept IRIs* of
+        all *Concepts* belonging to this collection.
+
+    4.  *Provenance*: A note on the source of this *Collection*.
+
+7.  **Prefix Sheet**: This sheet is for defining a mapping between short
+    prefixes and namespaces which are the basis for using “compact URI”
+    also called “CURIE”. For Voc4Cat we have registered “voc4cat” as
+    prefix in the Bio Registry (bioregistry.io) and the compact URI form
+    would be “voc4cat:xxxxxxx” (e.g., *voc4cat:0007001* for the concept
+    “heterogeneous catalysis” with a full URI:
+    *https://w3id.org/nfdi4cat/voc4cat_0007001*). For more on compact
+    URIs, see
+    [<u>https://www.w3.org/TR/2010/NOTE-curie-20101216/</u>](https://www.w3.org/TR/2010/NOTE-curie-20101216/).
+
+The *Concepts* sheet is where most contributions by users will be made.
+Detailed descriptions on how to properly fill these columns can be found
+in paragraph 6.6. There are nine columns used in the “*Concepts*” sheet:
+
+1. **Concept IRI**: Must be a valid URI. This is based on the
+    Vocabulary URI (Uniform Resource Identifier) and for new
+    contributions must align with the requested ID range.
+
+2. **Preferred Label**: A simple one-line label for the concept.
+
+3. **Pref. Label Language Code**: Two or three letter language code
+    according to ISO 639-2 or 639-3 for the *Preferred Label*. If no
+    language code is given, “en” is assumed as default (for English).
+
+4. **Definition**: The defining description of the *Concept*.
+
+5. **Def. Label Language Code**: Two or three letter language code
+    according to ISO 639-2 or 639-3 for the *Definition*. If no language
+    code is given, “en” is assumed as default (for English).
+    Translations of a concept into different languages use the same IRI
+    but they occupy different rows in the template. As an example, as
+    shown in the following table for the “heterogenous catalysis” two
+    translations of the concept name and the definition are available
+    (in English -*en*- and in German -*de*-) but they both use the same
+    concept URI (voc4cat:0007001).
+
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 18%" />
+<col style="width: 12%" />
+<col style="width: 33%" />
+<col style="width: 13%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>Concept Compact
+IRI</strong></td>
+<td style="text-align: center;"><strong>Preferred Label</strong></td>
+<td style="text-align: center;"><strong>Pref. Label Language
+Code</strong></td>
+<td style="text-align: center;"><strong>Definition</strong></td>
+<td style="text-align: center;"><strong>Def. Language Code</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">voc4cat:0007001</td>
+<td style="text-align: center;">heterogeneous catalysis</td>
+<td style="text-align: center;">en</td>
+<td style="text-align: left;">A process during which a chemical reaction
+is accelerated by the presence of a catalyst in a different phase than
+the reactant. The reaction generally proceeds at the interface.</td>
+<td style="text-align: center;">en</td>
+</tr>
+<tr>
+<td style="text-align: center;">voc4cat:0007001</td>
+<td style="text-align: center;">heterogene Katalyse</td>
+<td style="text-align: center;">de</td>
+<td style="text-align: left;">Ein Prozess, bei dem eine chemische
+Reaktion durch das Vorhandensein eines Katalysators in einer anderen
+Phase als der Reaktant beschleunigt wird. Die Reaktion findet im
+Allgemeinen an der Grenzfläche statt.</td>
+<td style="text-align: center;">de</td>
+</tr>
+</tbody>
+</table>
+
+6. **Alternate Labels**: Any other names (labels) for this *Concept*.
+    Separated by commas. If the user wants to use a comma as part of the
+    Alternate label, escape it with “\\ like in: “one\\two”.
+
+7. **Children IRIs**: A list of IRIs of children of this *Concept*,
+    separated by commas. This creates a hierarchical relationship
+    between the terms. In SKOS terminology, the *Concept* is broader
+    than its *Concept-Child* and in turn the *Concept-Child* is narrower
+    than the *Concept*. Note, broader/narrower are not transitive.
+
+8. **Provenance**: A note on the source of this concept. This should be
+    an identifier for the person and a provenance note. As an
+    identifier, an ORCID ID (with or without the *https://orcid.org/*
+    part) or a GitHub name should be used. Multiple entries must be
+    separated by comma.
+
+9. **Source Vocab URI**: If this *Concept* is imported from another
+    vocabulary, this should be the URI of the concept in the other
+    vocabulary. Before including content from other sources, make sure
+    that such re-use is permitted by their license.
 :::
-:::{tab-item} GitHub Web UI
-:sync: GitHub Web UI
-Download the template from your branch, edit locally, then drag & drop updated
-`voc4cat.xlsx` into `inbox-excel-vocabs/` on your feature branch page. Add
-commit message: `voc4cat: add <topic> (IDs ####–####)`.
-For subsequent revisions repeat download → edit → upload.
-:::
-::::
 
-**Excel file rules**
+Edit the xlsx vocabulary file locally in your spreadsheet program of choice.
+Follow the [Guidelines](guidelines.md) page.
+These guidelines for suggesting, adding, and editing content to Voc4Cat guarantee consistency and coherence in the selection and structuring of concepts.
 
-- Location: `inbox-excel-vocabs/voc4cat.xlsx` (or additional files if split; keep naming consistent).
-- Do not rename arbitrarily.
-- One conceptual change set per PR (keep focused).
+**Vocabulary xlsx file rules**
+
 - Provide clear definition text (concise, domain-relevant).
-- Download the current Excel template: https://nfdi4cat.github.io/voc4cat/dev/voc4cat.xlsx
-- Do not change the Excel template structure (sheet names, header row, column order).
-
-```{seealso}
-For deeper methodological guidance see the published guidelines section on
-contribution steps.
-```
+- Do not change the Excel template structure (sheet names, header rows, column order).
+- Keep changes focussed. Solve one issue or add/edit a set of strongly related concepts.
+- Not more than 20 new concepts per PR. This keeps the review process manageable for you and the curators. Less is better!
 
 #### Step 7 – Open & iterate on the Pull Request
 

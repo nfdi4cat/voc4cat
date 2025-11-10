@@ -107,45 +107,40 @@ To prepare for contributing from your local computer
 
 #### Step 5 – Get the latest versions
 
-Step 5 is the first of the 3 steps that need to be repeated for each individual contribution.
-
 First, **download the current version of Voc4Cat as xlsx (Excel) file**.
 Go to the [voc4cat-homepage](https://nfdi4cat.github.io/voc4cat/), and download the file by clicking on the middle *Vocabulary card*
 (or use this direct [download link](https://nfdi4cat.github.io/voc4cat/dev/voc4cat.xlsx)).
 
-Second you have to **update your voc4cat-fork**. 
-While not absolutely essential it is recommended that the vocabulary stored in the repository as RDF/turtle matches the concepts stored in the downloaded xlsx file.
+Second you have to **update your voc4cat-fork**.
+While not essential it is strongly recommended that the vocabulary stored in the repository as RDF/turtle files matches the concepts stored in the downloaded xlsx file.
 
 ::::{tab-set}
 :::{tab-item} Git commands
 :sync: Git commands
-3. Fetch upstream:
-   - `git fetch upstream`
-5. Ensure local main tracks upstream main:
-   - `git checkout main`
-   - `git pull upstream main`
-
-
-From your cloned repo root:
+From the root directory of your cloned repo:
 
 1. Update local main:
-   - `git checkout main && git pull upstream main`
-2. Create feature branch for the contribution:
-   - `git checkout -b feat/<short-topic>`
-3. Download fresh template (overwriting old if present):
-   - Use browser to download https://nfdi4cat.github.io/voc4cat/dev/voc4cat.xlsx
-4. Place file at `inbox-excel-vocabs/voc4cat.xlsx`.
+  ```bash
+  git fetch upstream --tags
+  git switch main
+  git pull upstream main`
+  ```
+
+2. Create a feature branch for the contribution (reference the issue solved by the PR):
+```bash
+  git switch -c issue###_<short_topic>`
+```
+
+3. Place the freshly download voc4cat xlsx-file in `inbox-excel-vocabs/voc4cat.xlsx`. Do not change the filename.
 :::
 
 :::{tab-item} GitHub Web UI
 :sync: GitHub Web UI
 Open your fork of voc4cat <https://github.com/your_username/voc4cat> in the browser.
 
-Press the green "Sync fork" button. If this fails, see troubleshooting.
+Press the green "Sync fork" button. If this fails, see [](#troubleshooting).
 :::
 ::::
-
-Get the latest vocabulary as Excel (xlsx) file.
 
 #### Step 6 – Add / edit concepts in Excel
 
@@ -263,7 +258,11 @@ or the [MyST authoring documentation](https://mystmd.org/guide/typography).
 
 To help you checking your changes before making a pull request, we provide instructions how to [build the documentation locally](../docs_maintenance/creating-docs-locally.md).
 
-## Questions or issues?
+## Troubleshooting
+
+- Step 5: failing sync.
+
+## Qquestions or issues?
 
 - Vocabulary discussions: <https://github.com/nfdi4cat/voc4cat/issues>
 - Tooling improvements (voc4cat-tool): <https://github.com/nfdi4cat/voc4cat-tool/issues>

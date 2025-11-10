@@ -54,6 +54,9 @@ myst_enable_extensions = [
     "html_image",   # convert HTML <img> elements to sphinx image nodes
 ]
 
+# generate slug anchors for headings (levels 1..3) so fragment links resolve
+myst_heading_anchors = 3
+
 # -- Options for Furo theme ---------------------------------------------------
 # https://pradyunsg.me/furo/customisation/
 

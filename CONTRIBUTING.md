@@ -4,9 +4,9 @@ Thank you for your interest in contributing to the Voc4Cat vocabulary! This SKOS
 
 ## Quick Start
 
-1. **Download** the current vocabulary Excel file: [voc4cat.xlsx](https://nfdi4cat.github.io/voc4cat/dev/voc4cat.xlsx)
-2. **Edit** the Excel file to add/modify concepts
-3. **Request a range of IDs** (for new concepts): [Create an issue](https://github.com/nfdi4cat/voc4cat/issues/new/choose)
+1. **Request a range of IDs** (for new concepts): [Create an issue](https://github.com/nfdi4cat/voc4cat/issues/new/choose)
+2. **Download** the current vocabulary Excel file: [voc4cat.xlsx](https://nfdi4cat.github.io/voc4cat/dev/voc4cat.xlsx)
+3. **Edit** the Excel file to add/modify concepts
 4. **Submit** your Excel file in a pull request:
    - Create a new branch for the changes in your fork and switch to it
    - Place file in `inbox-excel-vocabs/` folder

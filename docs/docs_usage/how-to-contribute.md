@@ -1,5 +1,20 @@
 # How to contribute to Voc4Cat?
 
+The contribution process is almost the same as in source code repositories.
+Below we describe the steps in detail so that beginners without git or GitHub experience can follow. 
+The essentials of the contribution process are:
+
+1. **Request a range of IDs** (for new concepts): [Create an issue](https://github.com/nfdi4cat/voc4cat/issues/new/choose)
+2. **Download** the current vocabulary Excel file: [voc4cat.xlsx](https://nfdi4cat.github.io/voc4cat/dev/voc4cat.xlsx)
+3. **Edit** the Excel file to add/modify concepts
+4. **Submit** your Excel file in a pull request placing your changed `voc4cat.xlsx` in the `inbox-excel-vocabs/` folder (keep the filename)
+
+```{figure} media/workflow.png
+:alt: GitHub contribution workflow and continuous integration pipeline
+
+**Vocabulary contribution workflow & Continuous Integration (CI) Pipeline.**
+```
+
 ## Step-by-step contribution guide
 
 The main steps that a community member needs to follow to contribute to
@@ -20,11 +35,7 @@ flowchart LR
   B5[Step 5<br>Get latest Excel template] --> B6[Step 6<br>Edit concepts in Excel] --> B7[Step 7<br>Open PR and iterate]
 ```
 
-```{admonition} Contribution overview
-:class: tip
-
-Below is a compact overview of the contribution flow. Select the tabs that match your preferred way of working, either Git commands or GitHub Web UI.
-```
+What happens during the contribution steps is visualized in the next figure.
 
 ### Initial steps (one-time)
 
@@ -114,8 +125,8 @@ Go to the [voc4cat-homepage](https://nfdi4cat.github.io/voc4cat/), and download 
 Second you have to **update your voc4cat-fork**.
 While not essential it is strongly recommended that the vocabulary stored in the repository as RDF/turtle files matches the concepts stored in the downloaded xlsx file.
 
-::::{tab-set}
-:::{tab-item} Git commands
+:::::{tab-set}
+::::{tab-item} Git commands
 :sync: Git commands
 From the root directory of your cloned repo:
 
@@ -132,15 +143,27 @@ From the root directory of your cloned repo:
 ```
 
 3. Place the freshly download voc4cat xlsx-file in `inbox-excel-vocabs/voc4cat.xlsx`. Do not change the filename.
-:::
-
-:::{tab-item} GitHub Web UI
-:sync: GitHub Web UI
-Open your fork of voc4cat <https://github.com/your_username/voc4cat> in the browser.
-
-Press the green "Sync fork" button. If this fails, see [](#troubleshooting).
-:::
 ::::
+
+::::{tab-item} GitHub Web UI
+:sync: GitHub Web UI
+1. Open your fork of voc4cat <https://github.com/your_username/voc4cat> in the browser.
+
+2. Sync your fork with upstream nfdi4cat/voc4cat. Press the green "Sync fork" button which makes your fork/clone an exact copy of upstream `main` again (nfdi4cat/voc4cat). If this fails, see [](#troubleshooting).
+
+:::{dropdown} **Be careful when you "*Sync fork*" in GitHub UI.**
+:icon: copilot-warning
+**It should look like this screenshot.** Your main branch should only be behind the forked repository (not ahead of it).
+
+![](media/fork_behind_forked_repo.png)
+
+**If your main-branch is ahead of main in the forked repo, do not press "*Sync fork*"** but go to [](#troubleshooting).
+
+![](media/fork_ahead_forked_repo_conflict_case.png)
+:::
+
+::::
+:::::
 
 #### Step 6 – Add / edit concepts in Excel
 
@@ -312,78 +335,124 @@ These guidelines for suggesting, adding, and editing content to Voc4Cat guarante
 **Vocabulary xlsx file rules**
 
 - Provide clear definition text (concise, domain-relevant).
-- Do not change the Excel template structure (sheet names, header rows, column order).
 - Keep changes focussed. Solve one issue or add/edit a set of strongly related concepts.
 - Not more than 20 new concepts per PR. This keeps the review process manageable for you and the curators. Less is better!
+- Do not change the Excel template structure (sheet names, header rows, column order).
 
-#### Step 7 – Open & iterate on the Pull Request
+#### Step 7 – Create & iterate on the Pull Request
 
-```{warning}
-Do not create PRs from your fork's main branch. Always work on a feature branch (created in Step 5).
-```
+After you finished the additions and edits in the Voc4Cat xlsx file,
+the update file can be submitted. This happens in a “*Pull request*”.
 
-```{tip}
-Before starting work, sync your fork/clone with upstream `main` to avoid conflicts.
-```
+Make sure that you are in your fork .
 
 ::::{tab-set}
 :::{tab-item} Git commands
 :sync: Git commands
-Push branch (first time):
+Add and commit the xlsx file to your local feature branch.
+If you changed other files as part of your contribution, `git add` them as well (before commit).
 
-- `git push -u origin feat/<short-topic>`
+```bash
+git add inbox-excel-vocabs/voc4cat.xlsx
+git commit -m "A meaningful commit message"
+```
 
-Open PR in browser (compare: your branch; base: nfdi4cat/voc4cat `main`). Use
-template & checklist.
-For updates: edit Excel, commit, push again:
+Push the branch to GitHub (first time):
 
-- `git add inbox-excel-vocabs/voc4cat.xlsx`
-- `git commit -m "update: refine definitions (IDs ####–####)"`
-- `git push`
+```bash
+git push -set-upstream origin <your-feature-branch-name>
+```
+
+and for later updates:
+
+```bash
+git push
+```
+
 :::
+
 :::{tab-item} GitHub Web UI
 :sync: GitHub Web UI
-Click “Compare & pull request” after pushing branch or use “New pull request”.
-Fill description: summary, ID range, confirmation of broader chains, no TTL
-edits. Mark checklist. Use Draft PR for early feedback. To update: re-upload
-improved Excel to same path; commit automatically appears in PR.
-After approval a maintainer merges; CI generates TTL & HTML preview.
+
+- Open the GitHub page of your fork `https://github.com/<your_username>/voc4cat` and - if you already created a branch for your contribution - switch to the branch.
+- Open the “inbox-excel-vocabs” folder
+- Click click on the "*Add file*" then "*Upload files*" to open a file a file submission page.
+- Upload the voc4cat.xlsx file (the file name must be exactly this).
+- Commit the uploaded file making sure that you **commit to your feature-branch** (not `main`). If you have to create a new branch, you may change the default name to a more reasonable name describing your contribution in the form `issue###_<short_title>`. 
+
 :::
 ::::
 
-**PR checklist**
+**Create the pull request**
 
-- [ ] File is `inbox-excel-vocabs/voc4cat.xlsx` (name and path unchanged)
-- [ ] IDs are within my allocated range
-- [ ] Each concept has prefLabel, definition, and a broader chain to a top concept
-- [ ] Contribution is focused/small enough for review (split if needed)
-- [ ] No `.ttl` files edited
-- [ ] PR title and description summarize the motivation and scope
+The easiest way is go to the original [nfdi4cat/voc4cat](https://github.com/nfdi4cat/voc4cat) repository. 
+A notification will show up (1st screenshot) and if you click "Compare & pull request" the defaults will be correct (2nd screenshot).
 
-```{tip}
-Open your PR as "Draft" if you want early feedback. Mention any specific questions. Curators are informed automatically about every new PR.
+```{figure} media/create-pr-msg.png
+:alt: Screenshot of GitHub UI suggesting to create a PR from your fork
+
+Vocabulary contribution workflow & Continuous Integration (CI) Pipeline
 ```
 
-The xlsx file is ephemeral and never stored in the repository. It is generated from the RDF/turtle files.
+```{figure} media/selecting-source-and-target-branch-for-pr.png
+:alt: Screenshot of GitHub UI with the correct selection of source and target branch for your PR
 
-**Review priorities**
+Check that the source is your feature branach and the target is `nfdi4cat/voc4cat`
+```
 
-1. Classification completeness
-2. ID correctness
-3. Scope / definition clarity
-4. Optional enhancements (examples, altLabels)
+Here are some points to check before you finally submit the PR:
+
+- PR title and description summarize motivation and scope.
+- Vocabulary file is `inbox-excel-vocabs/voc4cat.xlsx` (name and path unchanged).
+- IDs of added concepts are within my allocated range.
+- Each concept has prefLabel, definition, and a broader chain to a top concept.
+- Contribution is focused/small enough for review (split if needed).
+- No `.ttl` files edited.
+
+```{tip}
+Open your PR as "Draft" if you want early feedback. Mention any specific questions. Curators are informed automatically about every new PR, also drafts.
+```
+
+**What happens next?**
+
+When the PR is submitted, an automated Continuous Integration (CI) pipeline is triggered.
+The pipeline first checks the submitted Excel file for various errors.
+
+If errors are detected, github reports the failed job with a red cross, see example
+
+![GitHub Screenshot of action failure](media/PR-action-failure.png)
+
+To find out more about the reasons for the failure, click on the red cross ❌.
+This brings you to a page with a run log that typically gives enough information to understand the reason for the failure.
+In addition to the run log, we also create a so called job artifact which can be accessed by going to the job "*Summary*" from the run log page.
+The artifact is a zip-file with several files that help to diagnose the source of the failure. It contains:
+
+- log-file of the run
+- xlsx vocabulary file enriched with error information in the failing row (for some errors).
+- HTML vocabulary documentation (useful to check the broader/narrower hierarchy)
+
+If the run succeeded you see a similar job message but with a green checkmark:
+![GitHub Screenshot of action success](media/succesful-job-with-ttl-commit.png)
+
+The second line with the GitHub icon is a commit created by the pipeline in which
+
+- the xlsx vocabulary file gets removed and 
+- the RDF/turtle (ttl-files) with the SKOS representation are added.
+
+If you work on a local checkout on you computer, you need to pull this commit made on GitHub to your local clone with `git pull`.
+
+**Later updates on your PR**
+
+For updates: Switch to the previously created feature branch, fix the xlsx file (or other files) Excel, commit and push it again.
 
 #### After merge
 
-CI builds and publishes updated development version. Verify your concepts
-using:
+CI builds and publishes the updated development version.
 
-- HTML preview: https://nfdi4cat.github.io/voc4cat/dev/voc4cat/index.html
+- Go to the [homepage](https://nfdi4cat.github.io/voc4cat/) which is now updated with your contribution.
 - Download new Excel if planning further contributions.
 
-```{tip}
-Open follow-up issue for any post-merge adjustments; do not edit generated Turtle directly.
-```
+Note that this development version is not published to Skosmos at ZB Med or the TIB Technology service. Only releases are published to these services.
 
 ## Contributing to the homepage
 
@@ -397,9 +466,18 @@ To help you checking your changes before making a pull request, we provide instr
 
 ## Troubleshooting
 
-- Step 5: failing sync.
+- **Fork out-of-sync** If you ever committed to the main branch in your repository directly, your history is no longer the same as in the upstream voc4cat.
+  This is a problem because it creates a merge conflict. 
+  The fix is to reset your main match the upstream one exctly.
+  You can do this via the following git command:
 
-## Qquestions or issues?
+  ```bash
+  git fetch upstream
+  git reset --hard upstream/main
+  git push --force
+  ```
+
+## Questions or issues?
 
 - Vocabulary discussions: <https://github.com/nfdi4cat/voc4cat/issues>
 - Tooling improvements (voc4cat-tool): <https://github.com/nfdi4cat/voc4cat-tool/issues>

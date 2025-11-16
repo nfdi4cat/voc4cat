@@ -38,6 +38,8 @@ jobs:
             const isFork = headRepo !== baseRepo;
             const isFromMain = headRef === 'main';
             const isFromOrg = pr.head.repo.owner.type === 'Organization';
+            const headOwnerLogin = pr.head.repo.owner.login;
+            const baseOwnerLogin = pr.base.repo.owner.login;
 
             // Log details - no user input in template literals for security
             console.log('PR number:', pr.number);
@@ -47,12 +49,16 @@ jobs:
             console.log('Is fork:', isFork);
             console.log('From main branch:', isFromMain);
             console.log('Owner type:', pr.head.repo.owner.type);
+            console.log('Head owner login:', headOwnerLogin);
+            console.log('Base owner login:', baseOwnerLogin);
 
             core.setOutput('is_fork', isFork);
             core.setOutput('is_from_main', isFromMain);
             core.setOutput('is_from_org', isFromOrg);
             core.setOutput('head_ref', headRef);
             core.setOutput('head_repo', headRepo);
+            core.setOutput('head_owner_login', headOwnerLogin);
+            core.setOutput('base_owner_login', baseOwnerLogin);
 
             return {
               isFork,
@@ -114,7 +120,7 @@ jobs:
             });
 
       - name: Post info about organization account
-        if: steps.check-main-branch.outputs.is_from_org == 'true'
+        if: steps.check-main-branch.outputs.is_from_org == 'true' && steps.check-main-branch.outputs.is_fork == 'true' && steps.check-main-branch.outputs.head_owner_login != steps.check-main-branch.outputs.base_owner_login
         uses: actions/github-script@v7
         with:
           script: |
@@ -142,7 +148,7 @@ jobs:
 
             const commentBody = `Hi @${username}! 👋
 
-            ⚠️ We noticed that this pull request comes from an organization account,
+            ⚠️ We noticed that this pull request comes from a fork under an organization account,
             which will prevent our CI workflow from working correctly.
 
             GitHub does not allow the "Allow edits from maintainers" option for forks in organizations (see [discussion](https://github.com/orgs/community/discussions/5634)).

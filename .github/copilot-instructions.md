@@ -71,9 +71,9 @@ Use simple heuristics based on PR intent and CI signals:
 ### What to Check in PRs
 
 1. **Excel upload**: `inbox-excel-vocabs/voc4cat.xlsx` (if visible in the initial upload commit; CI may remove it after conversion)
-3. **No direct .ttl edits**: Turtle files should only be modified by CI
-4. **Documentation**: Changes should be described in PR description
-5. **Size**: Large contributions should be split into smaller PRs
+2. **No direct .ttl edits**: Turtle files should only be modified by CI
+3. **Documentation**: Changes should be described in PR description
+4. **Size**: Large contributions should be split into smaller PRs
 
 ### Helpful Resources
 

@@ -376,7 +376,7 @@ git push
 
 - Open the GitHub page of your fork `https://github.com/<your_username>/voc4cat` and - if you already created a branch for your contribution - switch to the branch.
 - Open the “inbox-excel-vocabs” folder
-- Click click on the "*Add file*" then "*Upload files*" to open a file a file submission page.
+- Click click on the "*Add file*" then "*Upload files*" to open a file submission page.
 - Upload the voc4cat.xlsx file (the file name must be exactly this).
 - Commit the uploaded file making sure that you **commit to your feature-branch** (not `main`). 
   If you have to create a new branch, you may change the default name to a more reasonable name describing your contribution in the form `issue###_<short_title>`. 
@@ -401,7 +401,7 @@ Vocabulary contribution workflow & Continuous Integration (CI) Pipeline
 ```{figure} media/selecting-source-and-target-branch-for-pr.png
 :alt: Screenshot of GitHub UI with the correct selection of source and target branch for your PR
 
-Check that the source is your feature branach and the target is `nfdi4cat/voc4cat`
+Check that the source is your feature branch and the target is `nfdi4cat/voc4cat`
 ```
 
 Here are some points to check before you finally submit the PR:

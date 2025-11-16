@@ -99,8 +99,9 @@ jobs:
 
             Thank you for your contribution to voc4cat!
 
-            ⚠️ We noticed that this pull request was submitted from the \`main\` branch of your fork.
-            While this works, it can cause issues:
+            > [!WARNING]
+            > We noticed that this pull request was submitted from the \`main\` branch of your fork.
+            > While this works, it can cause issues:
 
             - It makes it harder to keep your fork updated with upstream changes
             - You won't be able to work on multiple PRs at once
@@ -148,8 +149,9 @@ jobs:
 
             const commentBody = `Hi @${username}! 👋
 
-            ⚠️ We noticed that this pull request comes from a fork under an organization account,
-            which will prevent our CI workflow from working correctly.
+            > [!CAUTION]
+            > We noticed that this pull request comes from a fork under an organization account,
+            > which will prevent our CI workflow from working correctly.
 
             GitHub does not allow the "Allow edits from maintainers" option for forks in organizations (see [discussion](https://github.com/orgs/community/discussions/5634)).
             Our CI needs this permission to commit turtle files and clean up Excel files.

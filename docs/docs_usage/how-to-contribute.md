@@ -151,7 +151,7 @@ From the root directory of your cloned repo:
 
 2. Sync your fork with upstream nfdi4cat/voc4cat. Press the green "Sync fork" button which makes your fork/clone an exact copy of upstream `main` again (nfdi4cat/voc4cat). If this fails, see [](#troubleshooting).
 
-:::{dropdown} **Be careful when you "*Sync fork*" in GitHub UI.**
+:::{dropdown} Be careful when you "*Sync fork*" in GitHub UI.
 :icon: copilot-warning
 **It should look like this screenshot.** Your main branch should only be behind the forked repository (not ahead of it).
 
@@ -242,7 +242,7 @@ The downloaded Excel file consists of seven sheets:
 
 The *Concepts* sheet is where most contributions by users will be made.
 Detailed descriptions on how to properly fill these columns can be found
-in paragraph 6.6. There are nine columns used in the “*Concepts*” sheet:
+in the [guidelines](guidelines.md). There are nine columns used in the “*Concepts*” sheet:
 
 1. **Concept IRI**: Must be a valid URI. This is based on the
     Vocabulary URI (Uniform Resource Identifier) and for new
@@ -378,15 +378,19 @@ git push
 - Open the “inbox-excel-vocabs” folder
 - Click click on the "*Add file*" then "*Upload files*" to open a file a file submission page.
 - Upload the voc4cat.xlsx file (the file name must be exactly this).
-- Commit the uploaded file making sure that you **commit to your feature-branch** (not `main`). If you have to create a new branch, you may change the default name to a more reasonable name describing your contribution in the form `issue###_<short_title>`. 
+- Commit the uploaded file making sure that you **commit to your feature-branch** (not `main`). 
+  If you have to create a new branch, you may change the default name to a more reasonable name describing your contribution in the form `issue###_<short_title>`. 
 
 :::
 ::::
 
 **Create the pull request**
 
-The easiest way is go to the original [nfdi4cat/voc4cat](https://github.com/nfdi4cat/voc4cat) repository. 
-A notification will show up (1st screenshot) and if you click "Compare & pull request" the defaults will be correct (2nd screenshot).
+The easiest way is go to the original [nfdi4cat/voc4cat](https://github.com/nfdi4cat/voc4cat) repository.
+A notification will show up (1st screenshot).
+After clicking on "Compare & pull request" you will be asked about the source and target of your PR.
+Verify that the defaults are correct (2nd screenshot).
+If the selection box on the left does not show the upstream voc4cat repository, click on the "compare across forks" link to switch the view.
 
 ```{figure} media/create-pr-msg.png
 :alt: Screenshot of GitHub UI suggesting to create a PR from your fork

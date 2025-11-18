@@ -8,7 +8,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:identifier "voc4cat_0007131"^^xsd:token ;
     dcterms:isPartOf <https://w3id.org/nfdi4cat/voc4cat> ;
     rdfs:isDefinedBy <https://w3id.org/nfdi4cat/voc4cat> ;
-    skos:definition "A collection of terms used in various measurement techniques, relevant in the domain of catalysis. (This collection is not exclusive"@en ;
+    skos:definition "A collection of terms used in various measurement techniques, relevant in the domain of catalysis. (This collection is not exclusive)"@en ;
     skos:historyNote "0000-0001-5886-7860 Hendrik Borgelt created this resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:member

@@ -18,6 +18,11 @@ Standards* of NFDI4Cat.
 
 Please note that all language dependent parts refer to only the default language (British English).
 
+:::{tip}
+In addition to this guidelines page, we also provide the page **[organisation of concepts](organizing-concepts.md)**
+that explains Voc4Cat´s approach to hierarchy and grouping of concepts.
+:::
+
 ## General recommendations
 
 ### Preferred label

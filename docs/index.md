@@ -109,6 +109,7 @@ About <docs_usage/about>
 
 docs_usage/how-to-use
 docs_usage/how-to-contribute
+Organizing Concepts <docs_usage/organizing-concepts>
 docs_usage/guidelines
 ```
 

@@ -152,7 +152,7 @@ The concepts included in Voc4Cat are structured under the following **Top-Concep
 | 3.3 | voc4cat:0000185     | Processes                     | A series of temporal entities, like actions, events, changes, or functions that are not isolated but rather a connected sequence of activities. Processes often involve the transformation of inputs into outputs and can be conceptualized as workflows. |
 | 4   | voc4cat:0000186     | Attributes                    | A characteristic of an entity that is intrinsic to and cannot exist without the entity. (Properties, characteristics, qualities of things, states).                 |
 
-These top concepts are similar to those in top-level ontologies (BFO, SIO, DOLCE), to what is proposed in ANSO/NISO Z39.19-2005 (R2010), or what was proposed as minimal set of terms for a re-organization of AgroVoc.
+These top concepts are similar to those in top-level ontologies (BFO, SIO, DOLCE), to what is proposed in ANSI/NISO Z39.19-2005 (R2010), or what was proposed as minimal set of terms for a re-organization of AgroVoc.
 
 ## Summary: Relation Types and Their Modeling
 

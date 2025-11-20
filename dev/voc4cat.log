@@ -1,0 +1,410 @@
+2025-10-14 14:49:04|voc4cat.gh_index    |DEBUG   |Adding tag "v2024-12-17" to index.html
+2025-10-14 14:49:04|voc4cat.gh_index    |DEBUG   |Adding tag "v2025-05-21" to index.html
+2025-10-14 14:49:04|voc4cat.gh_index    |DEBUG   |Adding tag "v2025-05-22" to index.html
+2025-10-14 14:49:04|voc4cat.cli         |INFO    |Executing cmd: voc4cat convert --config idranges.toml --logfile publish/dev/voc4cat.log --template templates/voc4cat_template_043.xlsx publish/dev/
+2025-10-14 14:49:04|voc4cat.cli         |DEBUG   |Processing common options.
+2025-10-14 14:49:04|voc4cat.config      |DEBUG   |Config loaded from: idranges.toml
+2025-10-14 14:49:04|voc4cat.convert     |DEBUG   |Convert subcommand started!
+2025-10-14 14:49:04|voc4cat.convert     |DEBUG   |Processing "publish/dev/voc4cat.ttl"
+2025-10-14 14:49:04|voc4cat.checks      |DEBUG   |-> Validating ID range config for vocabulary "voc4cat".
+2025-10-14 14:49:05|voc4cat.convert     |INFO    |-> successfully converted to publish/dev/voc4cat.xlsx
+2025-10-14 14:49:05|voc4cat.utils       |DEBUG   |Adjusted table "concepts" in sheet "Concepts" from {A2:I4} to {A2:I534}.
+2025-10-14 14:49:06|voc4cat.utils       |DEBUG   |Adjusted table "concept_relations" in sheet "Additional Concept Features" from {A2:F4} to {A2:F28}.
+2025-10-14 14:49:06|voc4cat.utils       |DEBUG   |Adjusted table "collections" in sheet "Collections" from {A2:E4} to {A2:E28}.
+2025-10-14 14:49:06|voc4cat.utils       |DEBUG   |Adjusted table "prefixes" in sheet "Prefix Sheet" from {A1:B3} to {A1:B31}.
+2025-10-14 14:49:06|voc4cat.cli         |INFO    |Executing cmd: voc4cat convert --config idranges.toml --logfile publish/dev/voc4cat.log --outputformat xml publish/dev/voc4cat.xlsx
+2025-10-14 14:49:06|voc4cat.cli         |DEBUG   |Processing common options.
+2025-10-14 14:49:06|voc4cat.config      |DEBUG   |Config loaded from: idranges.toml
+2025-10-14 14:49:06|voc4cat.convert     |DEBUG   |Convert subcommand started!
+2025-10-14 14:49:06|voc4cat.convert     |DEBUG   |Processing "publish/dev/voc4cat.xlsx"
+2025-10-14 14:49:07|voc4cat.checks      |DEBUG   |-> Validating ID range config for vocabulary "voc4cat".
+2025-10-14 14:49:07|voc4cat.convert     |INFO    |-> successfully converted to publish/dev/voc4cat.xml
+2025-10-14 14:55:12|voc4cat.cli         |INFO    |Executing cmd: voc4cat transform --logfile publish/dev/voc4cat.log --join publish/dev/
+2025-10-14 14:55:12|voc4cat.cli         |DEBUG   |Processing common options.
+2025-10-14 14:55:12|voc4cat.transform   |DEBUG   |Transform subcommand started!
+2025-10-14 14:55:12|voc4cat.transform   |DEBUG   |Processing rdf files in "publish/dev/voc4cat"
+2025-10-14 14:55:13|voc4cat.transform   |INFO    |-> joined vocabulary into: publish/dev/voc4cat.ttl
+2025-10-14 14:55:14|voc4cat.cli         |INFO    |Executing cmd: voc4cat docs --force --logfile publish/dev/voc4cat.log publish/dev/
+2025-10-14 14:55:14|voc4cat.cli         |DEBUG   |Processing common options.
+2025-10-14 14:55:14|voc4cat.docs        |DEBUG   |Docs subcommand started!
+2025-10-14 14:55:14|voc4cat.docs        |DEBUG   |Processing "publish/dev/voc4cat.ttl"
+2025-10-14 14:55:19|voc4cat.docs        |INFO    |-> built pyLODE documentation for publish/dev/voc4cat.ttl
+2025-10-14 14:55:19|voc4cat.config      |DEBUG   |Config loaded from: idranges.toml
+2025-10-14 14:55:19|voc4cat.gh_index    |DEBUG   |Running cmd: git -C . tag --list v[0-9]*-[0-9]*-[0-9]*
+2025-10-14 14:55:19|voc4cat.gh_index    |DEBUG   |Cmd output: b'v2023-08-17\nv2023-09-03\nv2024-04-08\nv2024-12-17\nv2025-05-21\nv2025-05-22\n'
+2025-10-14 14:55:19|voc4cat.gh_index    |DEBUG   |Repository name (from env.var): "voc4cat"
+2025-10-14 14:55:19|voc4cat.gh_index    |DEBUG   |Adding tag "v2023-08-17" to index.html
+2025-10-14 14:55:19|voc4cat.gh_index    |DEBUG   |Adding tag "v2023-09-03" to index.html
+2025-10-14 14:55:19|voc4cat.gh_index    |DEBUG   |Adding tag "v2024-04-08" to index.html
+2025-10-14 14:55:19|voc4cat.gh_index    |DEBUG   |Adding tag "v2024-12-17" to index.html
+2025-10-14 14:55:19|voc4cat.gh_index    |DEBUG   |Adding tag "v2025-05-21" to index.html
+2025-10-14 14:55:19|voc4cat.gh_index    |DEBUG   |Adding tag "v2025-05-22" to index.html
+2025-10-14 14:55:20|voc4cat.cli         |INFO    |Executing cmd: voc4cat convert --config idranges.toml --logfile publish/dev/voc4cat.log --template templates/voc4cat_template_043.xlsx publish/dev/
+2025-10-14 14:55:20|voc4cat.cli         |DEBUG   |Processing common options.
+2025-10-14 14:55:20|voc4cat.config      |DEBUG   |Config loaded from: idranges.toml
+2025-10-14 14:55:20|voc4cat.convert     |DEBUG   |Convert subcommand started!
+2025-10-14 14:55:20|voc4cat.convert     |DEBUG   |Processing "publish/dev/voc4cat.ttl"
+2025-10-14 14:55:20|voc4cat.checks      |DEBUG   |-> Validating ID range config for vocabulary "voc4cat".
+2025-10-14 14:55:21|voc4cat.convert     |INFO    |-> successfully converted to publish/dev/voc4cat.xlsx
+2025-10-14 14:55:21|voc4cat.utils       |DEBUG   |Adjusted table "concepts" in sheet "Concepts" from {A2:I4} to {A2:I534}.
+2025-10-14 14:55:21|voc4cat.utils       |DEBUG   |Adjusted table "concept_relations" in sheet "Additional Concept Features" from {A2:F4} to {A2:F28}.
+2025-10-14 14:55:21|voc4cat.utils       |DEBUG   |Adjusted table "collections" in sheet "Collections" from {A2:E4} to {A2:E28}.
+2025-10-14 14:55:21|voc4cat.utils       |DEBUG   |Adjusted table "prefixes" in sheet "Prefix Sheet" from {A1:B3} to {A1:B31}.
+2025-10-14 14:55:22|voc4cat.cli         |INFO    |Executing cmd: voc4cat convert --config idranges.toml --logfile publish/dev/voc4cat.log --outputformat xml publish/dev/voc4cat.xlsx
+2025-10-14 14:55:22|voc4cat.cli         |DEBUG   |Processing common options.
+2025-10-14 14:55:22|voc4cat.config      |DEBUG   |Config loaded from: idranges.toml
+2025-10-14 14:55:22|voc4cat.convert     |DEBUG   |Convert subcommand started!
+2025-10-14 14:55:22|voc4cat.convert     |DEBUG   |Processing "publish/dev/voc4cat.xlsx"
+2025-10-14 14:55:22|voc4cat.checks      |DEBUG   |-> Validating ID range config for vocabulary "voc4cat".
+2025-10-14 14:55:23|voc4cat.convert     |INFO    |-> successfully converted to publish/dev/voc4cat.xml
+2025-10-14 20:55:41|voc4cat.cli         |INFO    |Executing cmd: voc4cat transform --logfile publish/dev/voc4cat.log --join publish/dev/
+2025-10-14 20:55:41|voc4cat.cli         |DEBUG   |Processing common options.
+2025-10-14 20:55:41|voc4cat.transform   |DEBUG   |Transform subcommand started!
+2025-10-14 20:55:41|voc4cat.transform   |DEBUG   |Processing rdf files in "publish/dev/voc4cat"
+2025-10-14 20:55:42|voc4cat.transform   |INFO    |-> joined vocabulary into: publish/dev/voc4cat.ttl
+2025-10-14 20:55:43|voc4cat.cli         |INFO    |Executing cmd: voc4cat docs --force --logfile publish/dev/voc4cat.log publish/dev/
+2025-10-14 20:55:43|voc4cat.cli         |DEBUG   |Processing common options.
+2025-10-14 20:55:43|voc4cat.docs        |DEBUG   |Docs subcommand started!
+2025-10-14 20:55:43|voc4cat.docs        |DEBUG   |Processing "publish/dev/voc4cat.ttl"
+2025-10-14 20:55:48|voc4cat.docs        |INFO    |-> built pyLODE documentation for publish/dev/voc4cat.ttl
+2025-10-14 20:55:48|voc4cat.config      |DEBUG   |Config loaded from: idranges.toml
+2025-10-14 20:55:48|voc4cat.gh_index    |DEBUG   |Running cmd: git -C . tag --list v[0-9]*-[0-9]*-[0-9]*
+2025-10-14 20:55:48|voc4cat.gh_index    |DEBUG   |Cmd output: b'v2023-08-17\nv2023-09-03\nv2024-04-08\nv2024-12-17\nv2025-05-21\nv2025-05-22\nv2025-10-14\n'
+2025-10-14 20:55:48|voc4cat.gh_index    |DEBUG   |Repository name (from env.var): "voc4cat"
+2025-10-14 20:55:48|voc4cat.gh_index    |DEBUG   |Adding tag "v2023-08-17" to index.html
+2025-10-14 20:55:48|voc4cat.gh_index    |DEBUG   |Adding tag "v2023-09-03" to index.html
+2025-10-14 20:55:48|voc4cat.gh_index    |DEBUG   |Adding tag "v2024-04-08" to index.html
+2025-10-14 20:55:48|voc4cat.gh_index    |DEBUG   |Adding tag "v2024-12-17" to index.html
+2025-10-14 20:55:48|voc4cat.gh_index    |DEBUG   |Adding tag "v2025-05-21" to index.html
+2025-10-14 20:55:48|voc4cat.gh_index    |DEBUG   |Adding tag "v2025-05-22" to index.html
+2025-10-14 20:55:48|voc4cat.gh_index    |DEBUG   |Adding tag "v2025-10-14" to index.html
+2025-10-14 20:55:49|voc4cat.cli         |INFO    |Executing cmd: voc4cat convert --config idranges.toml --logfile publish/dev/voc4cat.log --template templates/voc4cat_template_043.xlsx publish/dev/
+2025-10-14 20:55:49|voc4cat.cli         |DEBUG   |Processing common options.
+2025-10-14 20:55:49|voc4cat.config      |DEBUG   |Config loaded from: idranges.toml
+2025-10-14 20:55:49|voc4cat.convert     |DEBUG   |Convert subcommand started!
+2025-10-14 20:55:49|voc4cat.convert     |DEBUG   |Processing "publish/dev/voc4cat.ttl"
+2025-10-14 20:55:49|voc4cat.checks      |DEBUG   |-> Validating ID range config for vocabulary "voc4cat".
+2025-10-14 20:55:49|voc4cat.convert     |INFO    |-> successfully converted to publish/dev/voc4cat.xlsx
+2025-10-14 20:55:50|voc4cat.utils       |DEBUG   |Adjusted table "concepts" in sheet "Concepts" from {A2:I4} to {A2:I534}.
+2025-10-14 20:55:50|voc4cat.utils       |DEBUG   |Adjusted table "concept_relations" in sheet "Additional Concept Features" from {A2:F4} to {A2:F28}.
+2025-10-14 20:55:50|voc4cat.utils       |DEBUG   |Adjusted table "collections" in sheet "Collections" from {A2:E4} to {A2:E28}.
+2025-10-14 20:55:50|voc4cat.utils       |DEBUG   |Adjusted table "prefixes" in sheet "Prefix Sheet" from {A1:B3} to {A1:B31}.
+2025-10-14 20:55:51|voc4cat.cli         |INFO    |Executing cmd: voc4cat convert --config idranges.toml --logfile publish/dev/voc4cat.log --outputformat xml publish/dev/voc4cat.xlsx
+2025-10-14 20:55:51|voc4cat.cli         |DEBUG   |Processing common options.
+2025-10-14 20:55:51|voc4cat.config      |DEBUG   |Config loaded from: idranges.toml
+2025-10-14 20:55:51|voc4cat.convert     |DEBUG   |Convert subcommand started!
+2025-10-14 20:55:51|voc4cat.convert     |DEBUG   |Processing "publish/dev/voc4cat.xlsx"
+2025-10-14 20:55:51|voc4cat.checks      |DEBUG   |-> Validating ID range config for vocabulary "voc4cat".
+2025-10-14 20:55:51|voc4cat.convert     |INFO    |-> successfully converted to publish/dev/voc4cat.xml
+2025-11-08 09:48:59|voc4cat.cli         |INFO    |Executing cmd: voc4cat transform --logfile publish/dev/voc4cat.log --join publish/dev/
+2025-11-08 09:48:59|voc4cat.cli         |DEBUG   |Processing common options.
+2025-11-08 09:48:59|voc4cat.transform   |DEBUG   |Transform subcommand started!
+2025-11-08 09:48:59|voc4cat.transform   |DEBUG   |Processing rdf files in "publish/dev/voc4cat"
+2025-11-08 09:49:00|voc4cat.transform   |INFO    |-> joined vocabulary into: publish/dev/voc4cat.ttl
+2025-11-08 09:49:01|voc4cat.cli         |INFO    |Executing cmd: voc4cat docs --force --logfile publish/dev/voc4cat.log publish/dev/
+2025-11-08 09:49:01|voc4cat.cli         |DEBUG   |Processing common options.
+2025-11-08 09:49:01|voc4cat.docs        |DEBUG   |Docs subcommand started!
+2025-11-08 09:49:01|voc4cat.docs        |DEBUG   |Processing "publish/dev/voc4cat.ttl"
+2025-11-08 09:49:06|voc4cat.docs        |INFO    |-> built pyLODE documentation for publish/dev/voc4cat.ttl
+2025-11-08 09:49:06|voc4cat.config      |DEBUG   |Config loaded from: idranges.toml
+2025-11-08 09:49:06|voc4cat.gh_index    |DEBUG   |Running cmd: git -C . tag --list v[0-9]*-[0-9]*-[0-9]*
+2025-11-08 09:49:06|voc4cat.gh_index    |DEBUG   |Cmd output: b'v2023-08-17\nv2023-09-03\nv2024-04-08\nv2024-12-17\nv2025-05-21\nv2025-05-22\nv2025-10-14\n'
+2025-11-08 09:49:06|voc4cat.gh_index    |DEBUG   |Repository name (from env.var): "voc4cat"
+2025-11-08 09:49:06|voc4cat.gh_index    |DEBUG   |Adding tag "v2023-08-17" to index.html
+2025-11-08 09:49:06|voc4cat.gh_index    |DEBUG   |Adding tag "v2023-09-03" to index.html
+2025-11-08 09:49:06|voc4cat.gh_index    |DEBUG   |Adding tag "v2024-04-08" to index.html
+2025-11-08 09:49:06|voc4cat.gh_index    |DEBUG   |Adding tag "v2024-12-17" to index.html
+2025-11-08 09:49:06|voc4cat.gh_index    |DEBUG   |Adding tag "v2025-05-21" to index.html
+2025-11-08 09:49:06|voc4cat.gh_index    |DEBUG   |Adding tag "v2025-05-22" to index.html
+2025-11-08 09:49:06|voc4cat.gh_index    |DEBUG   |Adding tag "v2025-10-14" to index.html
+2025-11-08 09:49:06|voc4cat.cli         |INFO    |Executing cmd: voc4cat convert --config idranges.toml --logfile publish/dev/voc4cat.log --template templates/voc4cat_template_043.xlsx publish/dev/
+2025-11-08 09:49:06|voc4cat.cli         |DEBUG   |Processing common options.
+2025-11-08 09:49:06|voc4cat.config      |DEBUG   |Config loaded from: idranges.toml
+2025-11-08 09:49:06|voc4cat.convert     |DEBUG   |Convert subcommand started!
+2025-11-08 09:49:06|voc4cat.convert     |DEBUG   |Processing "publish/dev/voc4cat.ttl"
+2025-11-08 09:49:06|voc4cat.checks      |DEBUG   |-> Validating ID range config for vocabulary "voc4cat".
+2025-11-08 09:49:07|voc4cat.convert     |INFO    |-> successfully converted to publish/dev/voc4cat.xlsx
+2025-11-08 09:49:07|voc4cat.utils       |DEBUG   |Adjusted table "concepts" in sheet "Concepts" from {A2:I4} to {A2:I534}.
+2025-11-08 09:49:08|voc4cat.utils       |DEBUG   |Adjusted table "concept_relations" in sheet "Additional Concept Features" from {A2:F4} to {A2:F28}.
+2025-11-08 09:49:08|voc4cat.utils       |DEBUG   |Adjusted table "collections" in sheet "Collections" from {A2:E4} to {A2:E28}.
+2025-11-08 09:49:08|voc4cat.utils       |DEBUG   |Adjusted table "prefixes" in sheet "Prefix Sheet" from {A1:B3} to {A1:B31}.
+2025-11-08 09:49:08|voc4cat.cli         |INFO    |Executing cmd: voc4cat convert --config idranges.toml --logfile publish/dev/voc4cat.log --outputformat xml publish/dev/voc4cat.xlsx
+2025-11-08 09:49:08|voc4cat.cli         |DEBUG   |Processing common options.
+2025-11-08 09:49:08|voc4cat.config      |DEBUG   |Config loaded from: idranges.toml
+2025-11-08 09:49:08|voc4cat.convert     |DEBUG   |Convert subcommand started!
+2025-11-08 09:49:08|voc4cat.convert     |DEBUG   |Processing "publish/dev/voc4cat.xlsx"
+2025-11-08 09:49:09|voc4cat.checks      |DEBUG   |-> Validating ID range config for vocabulary "voc4cat".
+2025-11-08 09:49:09|voc4cat.convert     |INFO    |-> successfully converted to publish/dev/voc4cat.xml
+2025-11-08 15:15:03|voc4cat.cli         |INFO    |Executing cmd: voc4cat transform --logfile publish/dev/voc4cat.log --join publish/dev/
+2025-11-08 15:15:03|voc4cat.cli         |DEBUG   |Processing common options.
+2025-11-08 15:15:03|voc4cat.transform   |DEBUG   |Transform subcommand started!
+2025-11-08 15:15:03|voc4cat.transform   |DEBUG   |Processing rdf files in "publish/dev/voc4cat"
+2025-11-08 15:15:04|voc4cat.transform   |INFO    |-> joined vocabulary into: publish/dev/voc4cat.ttl
+2025-11-08 15:15:04|voc4cat.cli         |INFO    |Executing cmd: voc4cat docs --force --logfile publish/dev/voc4cat.log publish/dev/
+2025-11-08 15:15:04|voc4cat.cli         |DEBUG   |Processing common options.
+2025-11-08 15:15:04|voc4cat.docs        |DEBUG   |Docs subcommand started!
+2025-11-08 15:15:04|voc4cat.docs        |DEBUG   |Processing "publish/dev/voc4cat.ttl"
+2025-11-08 15:15:09|voc4cat.docs        |INFO    |-> built pyLODE documentation for publish/dev/voc4cat.ttl
+2025-11-08 15:15:09|voc4cat.config      |DEBUG   |Config loaded from: idranges.toml
+2025-11-08 15:15:09|voc4cat.gh_index    |DEBUG   |Running cmd: git -C . tag --list v[0-9]*-[0-9]*-[0-9]*
+2025-11-08 15:15:09|voc4cat.gh_index    |DEBUG   |Cmd output: b'v2023-08-17\nv2023-09-03\nv2024-04-08\nv2024-12-17\nv2025-05-21\nv2025-05-22\nv2025-10-14\n'
+2025-11-08 15:15:09|voc4cat.gh_index    |DEBUG   |Repository name (from env.var): "voc4cat"
+2025-11-08 15:15:09|voc4cat.gh_index    |DEBUG   |Adding tag "v2023-08-17" to index.html
+2025-11-08 15:15:09|voc4cat.gh_index    |DEBUG   |Adding tag "v2023-09-03" to index.html
+2025-11-08 15:15:09|voc4cat.gh_index    |DEBUG   |Adding tag "v2024-04-08" to index.html
+2025-11-08 15:15:09|voc4cat.gh_index    |DEBUG   |Adding tag "v2024-12-17" to index.html
+2025-11-08 15:15:09|voc4cat.gh_index    |DEBUG   |Adding tag "v2025-05-21" to index.html
+2025-11-08 15:15:09|voc4cat.gh_index    |DEBUG   |Adding tag "v2025-05-22" to index.html
+2025-11-08 15:15:09|voc4cat.gh_index    |DEBUG   |Adding tag "v2025-10-14" to index.html
+2025-11-08 15:15:10|voc4cat.cli         |INFO    |Executing cmd: voc4cat convert --config idranges.toml --logfile publish/dev/voc4cat.log --template templates/voc4cat_template_043.xlsx publish/dev/
+2025-11-08 15:15:10|voc4cat.cli         |DEBUG   |Processing common options.
+2025-11-08 15:15:10|voc4cat.config      |DEBUG   |Config loaded from: idranges.toml
+2025-11-08 15:15:10|voc4cat.convert     |DEBUG   |Convert subcommand started!
+2025-11-08 15:15:10|voc4cat.convert     |DEBUG   |Processing "publish/dev/voc4cat.ttl"
+2025-11-08 15:15:10|voc4cat.checks      |DEBUG   |-> Validating ID range config for vocabulary "voc4cat".
+2025-11-08 15:15:11|voc4cat.convert     |INFO    |-> successfully converted to publish/dev/voc4cat.xlsx
+2025-11-08 15:15:11|voc4cat.utils       |DEBUG   |Adjusted table "concepts" in sheet "Concepts" from {A2:I4} to {A2:I534}.
+2025-11-08 15:15:11|voc4cat.utils       |DEBUG   |Adjusted table "concept_relations" in sheet "Additional Concept Features" from {A2:F4} to {A2:F28}.
+2025-11-08 15:15:11|voc4cat.utils       |DEBUG   |Adjusted table "collections" in sheet "Collections" from {A2:E4} to {A2:E28}.
+2025-11-08 15:15:11|voc4cat.utils       |DEBUG   |Adjusted table "prefixes" in sheet "Prefix Sheet" from {A1:B3} to {A1:B31}.
+2025-11-08 15:15:12|voc4cat.cli         |INFO    |Executing cmd: voc4cat convert --config idranges.toml --logfile publish/dev/voc4cat.log --outputformat xml publish/dev/voc4cat.xlsx
+2025-11-08 15:15:12|voc4cat.cli         |DEBUG   |Processing common options.
+2025-11-08 15:15:12|voc4cat.config      |DEBUG   |Config loaded from: idranges.toml
+2025-11-08 15:15:12|voc4cat.convert     |DEBUG   |Convert subcommand started!
+2025-11-08 15:15:12|voc4cat.convert     |DEBUG   |Processing "publish/dev/voc4cat.xlsx"
+2025-11-08 15:15:12|voc4cat.checks      |DEBUG   |-> Validating ID range config for vocabulary "voc4cat".
+2025-11-08 15:15:12|voc4cat.convert     |INFO    |-> successfully converted to publish/dev/voc4cat.xml
+2025-11-09 13:52:42|voc4cat.cli         |INFO    |Executing cmd: voc4cat transform --logfile publish/dev/voc4cat.log --join publish/dev/
+2025-11-09 13:52:42|voc4cat.cli         |DEBUG   |Processing common options.
+2025-11-09 13:52:42|voc4cat.transform   |DEBUG   |Transform subcommand started!
+2025-11-09 13:52:42|voc4cat.transform   |DEBUG   |Processing rdf files in "publish/dev/voc4cat"
+2025-11-09 13:52:43|voc4cat.transform   |INFO    |-> joined vocabulary into: publish/dev/voc4cat.ttl
+2025-11-09 13:52:43|voc4cat.cli         |INFO    |Executing cmd: voc4cat docs --force --logfile publish/dev/voc4cat.log publish/dev/
+2025-11-09 13:52:43|voc4cat.cli         |DEBUG   |Processing common options.
+2025-11-09 13:52:43|voc4cat.docs        |DEBUG   |Docs subcommand started!
+2025-11-09 13:52:43|voc4cat.docs        |DEBUG   |Processing "publish/dev/voc4cat.ttl"
+2025-11-09 13:52:49|voc4cat.docs        |INFO    |-> built pyLODE documentation for publish/dev/voc4cat.ttl
+2025-11-09 13:52:49|voc4cat.config      |DEBUG   |Config loaded from: idranges.toml
+2025-11-09 13:52:49|voc4cat.gh_index    |DEBUG   |Running cmd: git -C . tag --list v[0-9]*-[0-9]*-[0-9]*
+2025-11-09 13:52:49|voc4cat.gh_index    |DEBUG   |Cmd output: b'v2023-08-17\nv2023-09-03\nv2024-04-08\nv2024-12-17\nv2025-05-21\nv2025-05-22\nv2025-10-14\n'
+2025-11-09 13:52:49|voc4cat.gh_index    |DEBUG   |Repository name (from env.var): "voc4cat"
+2025-11-09 13:52:49|voc4cat.gh_index    |DEBUG   |Adding tag "v2023-08-17" to index.html
+2025-11-09 13:52:49|voc4cat.gh_index    |DEBUG   |Adding tag "v2023-09-03" to index.html
+2025-11-09 13:52:49|voc4cat.gh_index    |DEBUG   |Adding tag "v2024-04-08" to index.html
+2025-11-09 13:52:49|voc4cat.gh_index    |DEBUG   |Adding tag "v2024-12-17" to index.html
+2025-11-09 13:52:49|voc4cat.gh_index    |DEBUG   |Adding tag "v2025-05-21" to index.html
+2025-11-09 13:52:49|voc4cat.gh_index    |DEBUG   |Adding tag "v2025-05-22" to index.html
+2025-11-09 13:52:49|voc4cat.gh_index    |DEBUG   |Adding tag "v2025-10-14" to index.html
+2025-11-09 13:52:49|voc4cat.cli         |INFO    |Executing cmd: voc4cat convert --config idranges.toml --logfile publish/dev/voc4cat.log --template templates/voc4cat_template_043.xlsx publish/dev/
+2025-11-09 13:52:49|voc4cat.cli         |DEBUG   |Processing common options.
+2025-11-09 13:52:49|voc4cat.config      |DEBUG   |Config loaded from: idranges.toml
+2025-11-09 13:52:49|voc4cat.convert     |DEBUG   |Convert subcommand started!
+2025-11-09 13:52:49|voc4cat.convert     |DEBUG   |Processing "publish/dev/voc4cat.ttl"
+2025-11-09 13:52:49|voc4cat.checks      |DEBUG   |-> Validating ID range config for vocabulary "voc4cat".
+2025-11-09 13:52:50|voc4cat.convert     |INFO    |-> successfully converted to publish/dev/voc4cat.xlsx
+2025-11-09 13:52:50|voc4cat.utils       |DEBUG   |Adjusted table "concepts" in sheet "Concepts" from {A2:I4} to {A2:I534}.
+2025-11-09 13:52:50|voc4cat.utils       |DEBUG   |Adjusted table "concept_relations" in sheet "Additional Concept Features" from {A2:F4} to {A2:F28}.
+2025-11-09 13:52:50|voc4cat.utils       |DEBUG   |Adjusted table "collections" in sheet "Collections" from {A2:E4} to {A2:E28}.
+2025-11-09 13:52:50|voc4cat.utils       |DEBUG   |Adjusted table "prefixes" in sheet "Prefix Sheet" from {A1:B3} to {A1:B31}.
+2025-11-09 13:52:51|voc4cat.cli         |INFO    |Executing cmd: voc4cat convert --config idranges.toml --logfile publish/dev/voc4cat.log --outputformat xml publish/dev/voc4cat.xlsx
+2025-11-09 13:52:51|voc4cat.cli         |DEBUG   |Processing common options.
+2025-11-09 13:52:51|voc4cat.config      |DEBUG   |Config loaded from: idranges.toml
+2025-11-09 13:52:51|voc4cat.convert     |DEBUG   |Convert subcommand started!
+2025-11-09 13:52:51|voc4cat.convert     |DEBUG   |Processing "publish/dev/voc4cat.xlsx"
+2025-11-09 13:52:51|voc4cat.checks      |DEBUG   |-> Validating ID range config for vocabulary "voc4cat".
+2025-11-09 13:52:52|voc4cat.convert     |INFO    |-> successfully converted to publish/dev/voc4cat.xml
+2025-11-12 23:14:36|voc4cat.cli         |INFO    |Executing cmd: voc4cat transform --logfile publish/dev/voc4cat.log --join publish/dev/
+2025-11-12 23:14:36|voc4cat.cli         |DEBUG   |Processing common options.
+2025-11-12 23:14:36|voc4cat.transform   |DEBUG   |Transform subcommand started!
+2025-11-12 23:14:36|voc4cat.transform   |DEBUG   |Processing rdf files in "publish/dev/voc4cat"
+2025-11-12 23:14:37|voc4cat.transform   |INFO    |-> joined vocabulary into: publish/dev/voc4cat.ttl
+2025-11-12 23:14:38|voc4cat.cli         |INFO    |Executing cmd: voc4cat docs --force --logfile publish/dev/voc4cat.log publish/dev/
+2025-11-12 23:14:38|voc4cat.cli         |DEBUG   |Processing common options.
+2025-11-12 23:14:38|voc4cat.docs        |DEBUG   |Docs subcommand started!
+2025-11-12 23:14:38|voc4cat.docs        |DEBUG   |Processing "publish/dev/voc4cat.ttl"
+2025-11-12 23:14:43|voc4cat.docs        |INFO    |-> built pyLODE documentation for publish/dev/voc4cat.ttl
+2025-11-12 23:14:43|voc4cat.config      |DEBUG   |Config loaded from: idranges.toml
+2025-11-12 23:14:43|voc4cat.gh_index    |DEBUG   |Running cmd: git -C . tag --list v[0-9]*-[0-9]*-[0-9]*
+2025-11-12 23:14:43|voc4cat.gh_index    |DEBUG   |Cmd output: b'v2023-08-17\nv2023-09-03\nv2024-04-08\nv2024-12-17\nv2025-05-21\nv2025-05-22\nv2025-10-14\n'
+2025-11-12 23:14:43|voc4cat.gh_index    |DEBUG   |Repository name (from env.var): "voc4cat"
+2025-11-12 23:14:43|voc4cat.gh_index    |DEBUG   |Adding tag "v2023-08-17" to index.html
+2025-11-12 23:14:43|voc4cat.gh_index    |DEBUG   |Adding tag "v2023-09-03" to index.html
+2025-11-12 23:14:43|voc4cat.gh_index    |DEBUG   |Adding tag "v2024-04-08" to index.html
+2025-11-12 23:14:43|voc4cat.gh_index    |DEBUG   |Adding tag "v2024-12-17" to index.html
+2025-11-12 23:14:43|voc4cat.gh_index    |DEBUG   |Adding tag "v2025-05-21" to index.html
+2025-11-12 23:14:43|voc4cat.gh_index    |DEBUG   |Adding tag "v2025-05-22" to index.html
+2025-11-12 23:14:43|voc4cat.gh_index    |DEBUG   |Adding tag "v2025-10-14" to index.html
+2025-11-12 23:14:44|voc4cat.cli         |INFO    |Executing cmd: voc4cat convert --config idranges.toml --logfile publish/dev/voc4cat.log --template templates/voc4cat_template_043.xlsx publish/dev/
+2025-11-12 23:14:44|voc4cat.cli         |DEBUG   |Processing common options.
+2025-11-12 23:14:44|voc4cat.config      |DEBUG   |Config loaded from: idranges.toml
+2025-11-12 23:14:44|voc4cat.convert     |DEBUG   |Convert subcommand started!
+2025-11-12 23:14:44|voc4cat.convert     |DEBUG   |Processing "publish/dev/voc4cat.ttl"
+2025-11-12 23:14:44|voc4cat.checks      |DEBUG   |-> Validating ID range config for vocabulary "voc4cat".
+2025-11-12 23:14:44|voc4cat.convert     |INFO    |-> successfully converted to publish/dev/voc4cat.xlsx
+2025-11-12 23:14:45|voc4cat.utils       |DEBUG   |Adjusted table "concepts" in sheet "Concepts" from {A2:I4} to {A2:I534}.
+2025-11-12 23:14:45|voc4cat.utils       |DEBUG   |Adjusted table "concept_relations" in sheet "Additional Concept Features" from {A2:F4} to {A2:F28}.
+2025-11-12 23:14:45|voc4cat.utils       |DEBUG   |Adjusted table "collections" in sheet "Collections" from {A2:E4} to {A2:E28}.
+2025-11-12 23:14:45|voc4cat.utils       |DEBUG   |Adjusted table "prefixes" in sheet "Prefix Sheet" from {A1:B3} to {A1:B31}.
+2025-11-12 23:14:46|voc4cat.cli         |INFO    |Executing cmd: voc4cat convert --config idranges.toml --logfile publish/dev/voc4cat.log --outputformat xml publish/dev/voc4cat.xlsx
+2025-11-12 23:14:46|voc4cat.cli         |DEBUG   |Processing common options.
+2025-11-12 23:14:46|voc4cat.config      |DEBUG   |Config loaded from: idranges.toml
+2025-11-12 23:14:46|voc4cat.convert     |DEBUG   |Convert subcommand started!
+2025-11-12 23:14:46|voc4cat.convert     |DEBUG   |Processing "publish/dev/voc4cat.xlsx"
+2025-11-12 23:14:46|voc4cat.checks      |DEBUG   |-> Validating ID range config for vocabulary "voc4cat".
+2025-11-12 23:14:46|voc4cat.convert     |INFO    |-> successfully converted to publish/dev/voc4cat.xml
+2025-11-13 17:15:30|voc4cat.cli         |INFO    |Executing cmd: voc4cat transform --logfile publish/dev/voc4cat.log --join publish/dev/
+2025-11-13 17:15:30|voc4cat.cli         |DEBUG   |Processing common options.
+2025-11-13 17:15:30|voc4cat.transform   |DEBUG   |Transform subcommand started!
+2025-11-13 17:15:30|voc4cat.transform   |DEBUG   |Processing rdf files in "publish/dev/voc4cat"
+2025-11-13 17:15:30|voc4cat.transform   |INFO    |-> joined vocabulary into: publish/dev/voc4cat.ttl
+2025-11-13 17:15:31|voc4cat.cli         |INFO    |Executing cmd: voc4cat docs --force --logfile publish/dev/voc4cat.log publish/dev/
+2025-11-13 17:15:31|voc4cat.cli         |DEBUG   |Processing common options.
+2025-11-13 17:15:31|voc4cat.docs        |DEBUG   |Docs subcommand started!
+2025-11-13 17:15:31|voc4cat.docs        |DEBUG   |Processing "publish/dev/voc4cat.ttl"
+2025-11-13 17:15:36|voc4cat.docs        |INFO    |-> built pyLODE documentation for publish/dev/voc4cat.ttl
+2025-11-13 17:15:36|voc4cat.config      |DEBUG   |Config loaded from: idranges.toml
+2025-11-13 17:15:36|voc4cat.gh_index    |DEBUG   |Running cmd: git -C . tag --list v[0-9]*-[0-9]*-[0-9]*
+2025-11-13 17:15:36|voc4cat.gh_index    |DEBUG   |Cmd output: b'v2023-08-17\nv2023-09-03\nv2024-04-08\nv2024-12-17\nv2025-05-21\nv2025-05-22\nv2025-10-14\n'
+2025-11-13 17:15:36|voc4cat.gh_index    |DEBUG   |Repository name (from env.var): "voc4cat"
+2025-11-13 17:15:36|voc4cat.gh_index    |DEBUG   |Adding tag "v2023-08-17" to index.html
+2025-11-13 17:15:36|voc4cat.gh_index    |DEBUG   |Adding tag "v2023-09-03" to index.html
+2025-11-13 17:15:36|voc4cat.gh_index    |DEBUG   |Adding tag "v2024-04-08" to index.html
+2025-11-13 17:15:36|voc4cat.gh_index    |DEBUG   |Adding tag "v2024-12-17" to index.html
+2025-11-13 17:15:36|voc4cat.gh_index    |DEBUG   |Adding tag "v2025-05-21" to index.html
+2025-11-13 17:15:36|voc4cat.gh_index    |DEBUG   |Adding tag "v2025-05-22" to index.html
+2025-11-13 17:15:36|voc4cat.gh_index    |DEBUG   |Adding tag "v2025-10-14" to index.html
+2025-11-13 17:15:37|voc4cat.cli         |INFO    |Executing cmd: voc4cat convert --config idranges.toml --logfile publish/dev/voc4cat.log --template templates/voc4cat_template_043.xlsx publish/dev/
+2025-11-13 17:15:37|voc4cat.cli         |DEBUG   |Processing common options.
+2025-11-13 17:15:37|voc4cat.config      |DEBUG   |Config loaded from: idranges.toml
+2025-11-13 17:15:37|voc4cat.convert     |DEBUG   |Convert subcommand started!
+2025-11-13 17:15:37|voc4cat.convert     |DEBUG   |Processing "publish/dev/voc4cat.ttl"
+2025-11-13 17:15:37|voc4cat.checks      |DEBUG   |-> Validating ID range config for vocabulary "voc4cat".
+2025-11-13 17:15:38|voc4cat.convert     |INFO    |-> successfully converted to publish/dev/voc4cat.xlsx
+2025-11-13 17:15:38|voc4cat.utils       |DEBUG   |Adjusted table "concepts" in sheet "Concepts" from {A2:I4} to {A2:I534}.
+2025-11-13 17:15:38|voc4cat.utils       |DEBUG   |Adjusted table "concept_relations" in sheet "Additional Concept Features" from {A2:F4} to {A2:F28}.
+2025-11-13 17:15:38|voc4cat.utils       |DEBUG   |Adjusted table "collections" in sheet "Collections" from {A2:E4} to {A2:E28}.
+2025-11-13 17:15:38|voc4cat.utils       |DEBUG   |Adjusted table "prefixes" in sheet "Prefix Sheet" from {A1:B3} to {A1:B31}.
+2025-11-13 17:15:39|voc4cat.cli         |INFO    |Executing cmd: voc4cat convert --config idranges.toml --logfile publish/dev/voc4cat.log --outputformat xml publish/dev/voc4cat.xlsx
+2025-11-13 17:15:39|voc4cat.cli         |DEBUG   |Processing common options.
+2025-11-13 17:15:39|voc4cat.config      |DEBUG   |Config loaded from: idranges.toml
+2025-11-13 17:15:39|voc4cat.convert     |DEBUG   |Convert subcommand started!
+2025-11-13 17:15:39|voc4cat.convert     |DEBUG   |Processing "publish/dev/voc4cat.xlsx"
+2025-11-13 17:15:39|voc4cat.checks      |DEBUG   |-> Validating ID range config for vocabulary "voc4cat".
+2025-11-13 17:15:39|voc4cat.convert     |INFO    |-> successfully converted to publish/dev/voc4cat.xml
+2025-11-16 17:17:40|voc4cat.cli         |INFO    |Executing cmd: voc4cat transform --logfile publish/dev/voc4cat.log --join publish/dev/
+2025-11-16 17:17:40|voc4cat.cli         |DEBUG   |Processing common options.
+2025-11-16 17:17:40|voc4cat.transform   |DEBUG   |Transform subcommand started!
+2025-11-16 17:17:40|voc4cat.transform   |DEBUG   |Processing rdf files in "publish/dev/voc4cat"
+2025-11-16 17:17:41|voc4cat.transform   |INFO    |-> joined vocabulary into: publish/dev/voc4cat.ttl
+2025-11-16 17:17:42|voc4cat.cli         |INFO    |Executing cmd: voc4cat docs --force --logfile publish/dev/voc4cat.log publish/dev/
+2025-11-16 17:17:42|voc4cat.cli         |DEBUG   |Processing common options.
+2025-11-16 17:17:42|voc4cat.docs        |DEBUG   |Docs subcommand started!
+2025-11-16 17:17:42|voc4cat.docs        |DEBUG   |Processing "publish/dev/voc4cat.ttl"
+2025-11-16 17:17:47|voc4cat.docs        |INFO    |-> built pyLODE documentation for publish/dev/voc4cat.ttl
+2025-11-16 17:17:47|voc4cat.config      |DEBUG   |Config loaded from: idranges.toml
+2025-11-16 17:17:47|voc4cat.gh_index    |DEBUG   |Running cmd: git -C . tag --list v[0-9]*-[0-9]*-[0-9]*
+2025-11-16 17:17:47|voc4cat.gh_index    |DEBUG   |Cmd output: b'v2023-08-17\nv2023-09-03\nv2024-04-08\nv2024-12-17\nv2025-05-21\nv2025-05-22\nv2025-10-14\n'
+2025-11-16 17:17:47|voc4cat.gh_index    |DEBUG   |Repository name (from env.var): "voc4cat"
+2025-11-16 17:17:47|voc4cat.gh_index    |DEBUG   |Adding tag "v2023-08-17" to index.html
+2025-11-16 17:17:47|voc4cat.gh_index    |DEBUG   |Adding tag "v2023-09-03" to index.html
+2025-11-16 17:17:47|voc4cat.gh_index    |DEBUG   |Adding tag "v2024-04-08" to index.html
+2025-11-16 17:17:47|voc4cat.gh_index    |DEBUG   |Adding tag "v2024-12-17" to index.html
+2025-11-16 17:17:47|voc4cat.gh_index    |DEBUG   |Adding tag "v2025-05-21" to index.html
+2025-11-16 17:17:47|voc4cat.gh_index    |DEBUG   |Adding tag "v2025-05-22" to index.html
+2025-11-16 17:17:47|voc4cat.gh_index    |DEBUG   |Adding tag "v2025-10-14" to index.html
+2025-11-16 17:17:48|voc4cat.cli         |INFO    |Executing cmd: voc4cat convert --config idranges.toml --logfile publish/dev/voc4cat.log --template templates/voc4cat_template_043.xlsx publish/dev/
+2025-11-16 17:17:48|voc4cat.cli         |DEBUG   |Processing common options.
+2025-11-16 17:17:48|voc4cat.config      |DEBUG   |Config loaded from: idranges.toml
+2025-11-16 17:17:48|voc4cat.convert     |DEBUG   |Convert subcommand started!
+2025-11-16 17:17:48|voc4cat.convert     |DEBUG   |Processing "publish/dev/voc4cat.ttl"
+2025-11-16 17:17:48|voc4cat.checks      |DEBUG   |-> Validating ID range config for vocabulary "voc4cat".
+2025-11-16 17:17:48|voc4cat.convert     |INFO    |-> successfully converted to publish/dev/voc4cat.xlsx
+2025-11-16 17:17:49|voc4cat.utils       |DEBUG   |Adjusted table "concepts" in sheet "Concepts" from {A2:I4} to {A2:I534}.
+2025-11-16 17:17:49|voc4cat.utils       |DEBUG   |Adjusted table "concept_relations" in sheet "Additional Concept Features" from {A2:F4} to {A2:F28}.
+2025-11-16 17:17:49|voc4cat.utils       |DEBUG   |Adjusted table "collections" in sheet "Collections" from {A2:E4} to {A2:E28}.
+2025-11-16 17:17:49|voc4cat.utils       |DEBUG   |Adjusted table "prefixes" in sheet "Prefix Sheet" from {A1:B3} to {A1:B31}.
+2025-11-16 17:17:50|voc4cat.cli         |INFO    |Executing cmd: voc4cat convert --config idranges.toml --logfile publish/dev/voc4cat.log --outputformat xml publish/dev/voc4cat.xlsx
+2025-11-16 17:17:50|voc4cat.cli         |DEBUG   |Processing common options.
+2025-11-16 17:17:50|voc4cat.config      |DEBUG   |Config loaded from: idranges.toml
+2025-11-16 17:17:50|voc4cat.convert     |DEBUG   |Convert subcommand started!
+2025-11-16 17:17:50|voc4cat.convert     |DEBUG   |Processing "publish/dev/voc4cat.xlsx"
+2025-11-16 17:17:50|voc4cat.checks      |DEBUG   |-> Validating ID range config for vocabulary "voc4cat".
+2025-11-16 17:17:50|voc4cat.convert     |INFO    |-> successfully converted to publish/dev/voc4cat.xml
+2025-11-18 12:29:27|voc4cat.cli         |INFO    |Executing cmd: voc4cat transform --logfile publish/dev/voc4cat.log --join publish/dev/
+2025-11-18 12:29:27|voc4cat.cli         |DEBUG   |Processing common options.
+2025-11-18 12:29:27|voc4cat.transform   |DEBUG   |Transform subcommand started!
+2025-11-18 12:29:27|voc4cat.transform   |DEBUG   |Processing rdf files in "publish/dev/voc4cat"
+2025-11-18 12:29:27|voc4cat.transform   |INFO    |-> joined vocabulary into: publish/dev/voc4cat.ttl
+2025-11-18 12:29:28|voc4cat.cli         |INFO    |Executing cmd: voc4cat docs --force --logfile publish/dev/voc4cat.log publish/dev/
+2025-11-18 12:29:28|voc4cat.cli         |DEBUG   |Processing common options.
+2025-11-18 12:29:28|voc4cat.docs        |DEBUG   |Docs subcommand started!
+2025-11-18 12:29:28|voc4cat.docs        |DEBUG   |Processing "publish/dev/voc4cat.ttl"
+2025-11-18 12:29:33|voc4cat.docs        |INFO    |-> built pyLODE documentation for publish/dev/voc4cat.ttl
+2025-11-18 12:29:33|voc4cat.config      |DEBUG   |Config loaded from: idranges.toml
+2025-11-18 12:29:33|voc4cat.gh_index    |DEBUG   |Running cmd: git -C . tag --list v[0-9]*-[0-9]*-[0-9]*
+2025-11-18 12:29:33|voc4cat.gh_index    |DEBUG   |Cmd output: b'v2023-08-17\nv2023-09-03\nv2024-04-08\nv2024-12-17\nv2025-05-21\nv2025-05-22\nv2025-10-14\n'
+2025-11-18 12:29:33|voc4cat.gh_index    |DEBUG   |Repository name (from env.var): "voc4cat"
+2025-11-18 12:29:33|voc4cat.gh_index    |DEBUG   |Adding tag "v2023-08-17" to index.html
+2025-11-18 12:29:33|voc4cat.gh_index    |DEBUG   |Adding tag "v2023-09-03" to index.html
+2025-11-18 12:29:33|voc4cat.gh_index    |DEBUG   |Adding tag "v2024-04-08" to index.html
+2025-11-18 12:29:33|voc4cat.gh_index    |DEBUG   |Adding tag "v2024-12-17" to index.html
+2025-11-18 12:29:33|voc4cat.gh_index    |DEBUG   |Adding tag "v2025-05-21" to index.html
+2025-11-18 12:29:33|voc4cat.gh_index    |DEBUG   |Adding tag "v2025-05-22" to index.html
+2025-11-18 12:29:33|voc4cat.gh_index    |DEBUG   |Adding tag "v2025-10-14" to index.html
+2025-11-18 12:29:34|voc4cat.cli         |INFO    |Executing cmd: voc4cat convert --config idranges.toml --logfile publish/dev/voc4cat.log --template templates/voc4cat_template_043.xlsx publish/dev/
+2025-11-18 12:29:34|voc4cat.cli         |DEBUG   |Processing common options.
+2025-11-18 12:29:34|voc4cat.config      |DEBUG   |Config loaded from: idranges.toml
+2025-11-18 12:29:34|voc4cat.convert     |DEBUG   |Convert subcommand started!
+2025-11-18 12:29:34|voc4cat.convert     |DEBUG   |Processing "publish/dev/voc4cat.ttl"
+2025-11-18 12:29:34|voc4cat.checks      |DEBUG   |-> Validating ID range config for vocabulary "voc4cat".
+2025-11-18 12:29:35|voc4cat.convert     |INFO    |-> successfully converted to publish/dev/voc4cat.xlsx
+2025-11-18 12:29:35|voc4cat.utils       |DEBUG   |Adjusted table "concepts" in sheet "Concepts" from {A2:I4} to {A2:I541}.
+2025-11-18 12:29:35|voc4cat.utils       |DEBUG   |Adjusted table "concept_relations" in sheet "Additional Concept Features" from {A2:F4} to {A2:F28}.
+2025-11-18 12:29:35|voc4cat.utils       |DEBUG   |Adjusted table "collections" in sheet "Collections" from {A2:E4} to {A2:E28}.
+2025-11-18 12:29:35|voc4cat.utils       |DEBUG   |Adjusted table "prefixes" in sheet "Prefix Sheet" from {A1:B3} to {A1:B31}.
+2025-11-18 12:29:36|voc4cat.cli         |INFO    |Executing cmd: voc4cat convert --config idranges.toml --logfile publish/dev/voc4cat.log --outputformat xml publish/dev/voc4cat.xlsx
+2025-11-18 12:29:36|voc4cat.cli         |DEBUG   |Processing common options.
+2025-11-18 12:29:36|voc4cat.config      |DEBUG   |Config loaded from: idranges.toml
+2025-11-18 12:29:36|voc4cat.convert     |DEBUG   |Convert subcommand started!
+2025-11-18 12:29:36|voc4cat.convert     |DEBUG   |Processing "publish/dev/voc4cat.xlsx"
+2025-11-18 12:29:36|voc4cat.checks      |DEBUG   |-> Validating ID range config for vocabulary "voc4cat".
+2025-11-18 12:29:36|voc4cat.convert     |INFO    |-> successfully converted to publish/dev/voc4cat.xml
+2025-11-20 15:29:21|voc4cat.cli         |INFO    |Executing cmd: voc4cat transform --logfile publish/dev/voc4cat.log --join publish/dev/
+2025-11-20 15:29:21|voc4cat.cli         |DEBUG   |Processing common options.
+2025-11-20 15:29:21|voc4cat.transform   |DEBUG   |Transform subcommand started!
+2025-11-20 15:29:21|voc4cat.transform   |DEBUG   |Processing rdf files in "publish/dev/voc4cat"
+2025-11-20 15:29:22|voc4cat.transform   |INFO    |-> joined vocabulary into: publish/dev/voc4cat.ttl
+2025-11-20 15:29:22|voc4cat.cli         |INFO    |Executing cmd: voc4cat docs --force --logfile publish/dev/voc4cat.log publish/dev/
+2025-11-20 15:29:22|voc4cat.cli         |DEBUG   |Processing common options.
+2025-11-20 15:29:22|voc4cat.docs        |DEBUG   |Docs subcommand started!
+2025-11-20 15:29:22|voc4cat.docs        |DEBUG   |Processing "publish/dev/voc4cat.ttl"
+2025-11-20 15:29:28|voc4cat.docs        |INFO    |-> built pyLODE documentation for publish/dev/voc4cat.ttl
+2025-11-20 15:29:28|voc4cat.config      |DEBUG   |Config loaded from: idranges.toml
+2025-11-20 15:29:28|voc4cat.gh_index    |DEBUG   |Running cmd: git -C . tag --list v[0-9]*-[0-9]*-[0-9]*
+2025-11-20 15:29:28|voc4cat.gh_index    |DEBUG   |Cmd output: b'v2023-08-17\nv2023-09-03\nv2024-04-08\nv2024-12-17\nv2025-05-21\nv2025-05-22\nv2025-10-14\n'
+2025-11-20 15:29:28|voc4cat.gh_index    |DEBUG   |Repository name (from env.var): "voc4cat"
+2025-11-20 15:29:28|voc4cat.gh_index    |DEBUG   |Adding tag "v2023-08-17" to index.html
+2025-11-20 15:29:28|voc4cat.gh_index    |DEBUG   |Adding tag "v2023-09-03" to index.html
+2025-11-20 15:29:28|voc4cat.gh_index    |DEBUG   |Adding tag "v2024-04-08" to index.html
+2025-11-20 15:29:28|voc4cat.gh_index    |DEBUG   |Adding tag "v2024-12-17" to index.html
+2025-11-20 15:29:28|voc4cat.gh_index    |DEBUG   |Adding tag "v2025-05-21" to index.html
+2025-11-20 15:29:28|voc4cat.gh_index    |DEBUG   |Adding tag "v2025-05-22" to index.html
+2025-11-20 15:29:28|voc4cat.gh_index    |DEBUG   |Adding tag "v2025-10-14" to index.html
+2025-11-20 15:29:28|voc4cat.cli         |INFO    |Executing cmd: voc4cat convert --config idranges.toml --logfile publish/dev/voc4cat.log --template templates/voc4cat_template_043.xlsx publish/dev/
+2025-11-20 15:29:28|voc4cat.cli         |DEBUG   |Processing common options.
+2025-11-20 15:29:28|voc4cat.config      |DEBUG   |Config loaded from: idranges.toml
+2025-11-20 15:29:28|voc4cat.convert     |DEBUG   |Convert subcommand started!
+2025-11-20 15:29:28|voc4cat.convert     |DEBUG   |Processing "publish/dev/voc4cat.ttl"
+2025-11-20 15:29:28|voc4cat.checks      |DEBUG   |-> Validating ID range config for vocabulary "voc4cat".
+2025-11-20 15:29:29|voc4cat.convert     |INFO    |-> successfully converted to publish/dev/voc4cat.xlsx
+2025-11-20 15:29:29|voc4cat.utils       |DEBUG   |Adjusted table "concepts" in sheet "Concepts" from {A2:I4} to {A2:I541}.
+2025-11-20 15:29:30|voc4cat.utils       |DEBUG   |Adjusted table "concept_relations" in sheet "Additional Concept Features" from {A2:F4} to {A2:F28}.
+2025-11-20 15:29:30|voc4cat.utils       |DEBUG   |Adjusted table "collections" in sheet "Collections" from {A2:E4} to {A2:E28}.
+2025-11-20 15:29:30|voc4cat.utils       |DEBUG   |Adjusted table "prefixes" in sheet "Prefix Sheet" from {A1:B3} to {A1:B31}.
+2025-11-20 15:29:30|voc4cat.cli         |INFO    |Executing cmd: voc4cat convert --config idranges.toml --logfile publish/dev/voc4cat.log --outputformat xml publish/dev/voc4cat.xlsx
+2025-11-20 15:29:30|voc4cat.cli         |DEBUG   |Processing common options.
+2025-11-20 15:29:30|voc4cat.config      |DEBUG   |Config loaded from: idranges.toml
+2025-11-20 15:29:30|voc4cat.convert     |DEBUG   |Convert subcommand started!
+2025-11-20 15:29:30|voc4cat.convert     |DEBUG   |Processing "publish/dev/voc4cat.xlsx"
+2025-11-20 15:29:30|voc4cat.checks      |DEBUG   |-> Validating ID range config for vocabulary "voc4cat".
+2025-11-20 15:29:31|voc4cat.convert     |INFO    |-> successfully converted to publish/dev/voc4cat.xml

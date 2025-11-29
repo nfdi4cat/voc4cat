@@ -111,6 +111,7 @@ docs_usage/how-to-use
 docs_usage/how-to-contribute
 Organizing Concepts <docs_usage/organizing-concepts>
 docs_usage/guidelines
+Guidelines Publication <docs_usage/published-guidelines>
 ```
 
 ```{toctree}
@@ -119,12 +120,4 @@ docs_usage/guidelines
 :hidden:
 
 docs_maintenance/*
-```
-
-```{toctree}
-:caption: Guidelines (V2.0)
-:hidden:
-:maxdepth: 3
-
-All-in-one-page (as published) <docs_usage/published-guidelines-v2>
 ```

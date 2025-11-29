@@ -310,10 +310,10 @@ Allgemeinen an der Grenzfläche statt.</td>
     Separated by commas. If the user wants to use a comma as part of the
     Alternate label, escape it with “\\ like in: “one\\two”.
 
-7. **Children IRIs**: A list of IRIs of children of this *Concept*,
+7. **Parent IRIs**: A list of IRIs of parents of this *Concept*,
     separated by commas. This creates a hierarchical relationship
-    between the terms. In SKOS terminology, the *Concept* is broader
-    than its *Concept-Child* and in turn the *Concept-Child* is narrower
+    between the terms. In SKOS terminology, the *Concept* is narrower
+    than its *Concept-Parent* and in turn the *Concept-Parent* is broader
     than the *Concept*. Note, broader/narrower are not transitive.
 
 8. **Provenance**: A note on the source of this concept. This should be

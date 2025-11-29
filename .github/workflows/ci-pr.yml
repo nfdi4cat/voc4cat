@@ -122,7 +122,7 @@ jobs:
 
       - name: Store artifacts
         if: ${{ always() }}
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4
         with:
           name: voc4cat-outbox_${{ env.RUN_DATE }}_run${{ GITHUB.RUN_ID }}
           path: outbox/

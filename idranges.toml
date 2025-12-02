@@ -135,4 +135,10 @@ gh_name = "carla-terboven"
 orcid = "0009-0004-3786-0773"
 ror_id = "https://ror.org/02aj13c28"
 
+[[vocabs.voc4cat.id_range]]
+first_id = 8101
+last_id = 8150
+gh_name = "arjunneyyathalaCat"
+orcid = "0000-0001-5161-4801"
+ror_id = "https://ror.org/04t3en479"
 # Continue with as many [[vocabs.voc4cat.id_range]] sections as needed.

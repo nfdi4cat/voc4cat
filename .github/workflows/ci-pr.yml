@@ -34,7 +34,7 @@ jobs:
 
     steps:
       - name: Checkout PR branch into cwd
-        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3
         with:
           # Checkout the fork/head-repository to push changes to the fork.
           # Without this the base repository will be checked out and committed to.
@@ -44,7 +44,7 @@ jobs:
           ref: ${{ github.head_ref }}
 
       - name: Checkout main branch into directory _main_branch/
-        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3
         with:
           ref: main
           path: _main_branch
@@ -53,7 +53,7 @@ jobs:
             vocabularies/
           fetch-depth: 1
 
-      - uses: actions/setup-python@e797f83bcb11b83ae66e0230d6156d7c80228e7c
+      - uses: actions/setup-python@83679a892e2d95755f2dac6acb0bfd1e9ac5d548
         with:
           python-version: '3.13'
 

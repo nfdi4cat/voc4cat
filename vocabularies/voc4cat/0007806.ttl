@@ -1,12 +1,10 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <https://w3id.org/nfdi4cat/voc4cat_0007806>
     a skos:Concept ;
     dcterms:identifier "voc4cat_0007806"^^xsd:token ;
-    rdfs:isDefinedBy <https://w3id.org/nfdi4cat/voc4cat_0007806> ;
     skos:altLabel "IWI"@en ;
     skos:broader <https://w3id.org/nfdi4cat/voc4cat_0007028> ;
     skos:definition "A synthesis method in which inorganic compounds are dissolved in a solvent and brought into contact with a solid support in order to deposit them. The volume of the solution corresponds exactly to the pore volume."@en ;

@@ -1,0 +1,178 @@
+# This workflow checks for common PR submission issues and provides helpful feedback
+# - PRs from fork's main branch (helpful workflow suggestion)
+# - Organization account submissions (critical - blocks CI due to GitHub limitation)
+#
+# Security Note: This workflow uses pull_request_target which runs in the context
+# of the base repository, not the fork. User-controlled data (PR titles, descriptions,
+# branch names, usernames) must be sanitized before use to prevent script injection.
+
+name: PR Submission Checks
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+    branches:
+      - main
+
+permissions: {}
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check-pr-submission:
+    name: Check PR submission best practices
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write  # to post a message to PR
+
+    steps:
+      - name: Check if PR is from main branch of fork
+        id: check-main-branch
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const pr = context.payload.pull_request;
+
+            // Get PR details from context (these are all user-controlled)
+            const headRef = pr.head.ref;
+            const headRepo = pr.head.repo.full_name;
+            const baseRepo = pr.base.repo.full_name;
+            const isFork = headRepo !== baseRepo;
+            const isFromMain = headRef === 'main';
+            const isFromOrg = pr.head.repo.owner.type === 'Organization';
+            const headOwnerLogin = pr.head.repo.owner.login;
+            const baseOwnerLogin = pr.base.repo.owner.login;
+
+            // Log details - no user input in template literals for security
+            console.log('PR number:', pr.number);
+            console.log('Head branch:', headRef);
+            console.log('Head repo:', headRepo);
+            console.log('Base repo:', baseRepo);
+            console.log('Is fork:', isFork);
+            console.log('From main branch:', isFromMain);
+            console.log('Owner type:', pr.head.repo.owner.type);
+            console.log('Head owner login:', headOwnerLogin);
+            console.log('Base owner login:', baseOwnerLogin);
+
+            core.setOutput('is_fork', isFork);
+            core.setOutput('is_from_main', isFromMain);
+            core.setOutput('is_from_org', isFromOrg);
+            core.setOutput('head_ref', headRef);
+            core.setOutput('head_repo', headRepo);
+            core.setOutput('head_owner_login', headOwnerLogin);
+            core.setOutput('base_owner_login', baseOwnerLogin);
+
+            return {
+              isFork,
+              isFromMain,
+              isFromOrg,
+              needsComment: isFork && isFromMain
+            };
+
+      - name: Post comment about main branch submission
+        if: steps.check-main-branch.outputs.is_fork == 'true' && steps.check-main-branch.outputs.is_from_main == 'true'
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const pr = context.payload.pull_request;
+
+            // Check if we already posted this comment
+            const comments = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: pr.number
+            });
+
+            const botComment = comments.data.find(comment =>
+              comment.user.type === 'Bot' &&
+              comment.body.includes('submitted from the main branch')
+            );
+
+            if (botComment) {
+              console.log('Comment about main branch already exists, skipping');
+              return;
+            }
+
+            // Sanitize username - GitHub usernames can only contain alphanumeric characters and hyphens
+            const username = pr.user.login.replace(/[^a-zA-Z0-9-]/g, '');
+
+            // Post helpful comment
+            const commentBody = `Hi @${username}! 👋
+
+            Thank you for your contribution to voc4cat!
+
+            > [!WARNING]
+            > We noticed that this pull request was submitted from the \`main\` branch of your fork.
+            > While this works, it can cause issues:
+
+            - It makes it harder to keep your fork updated with upstream changes
+            - You won't be able to work on multiple PRs at once
+            - Future contributions may be complicated by merge conflicts
+
+            This PR can still be merged, but please use feature branches going forward!
+
+            For more information, see our [How to contribute](https://nfdi4cat.github.io/voc4cat/docs_usage/how-to-contribute.html) guide.
+
+            *If you have any questions, please don't hesitate to ask!* 🚀`;
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: pr.number,
+              body: commentBody
+            });
+
+      - name: Post info about organization account
+        if: steps.check-main-branch.outputs.is_from_org == 'true' && steps.check-main-branch.outputs.is_fork == 'true' && steps.check-main-branch.outputs.head_owner_login != steps.check-main-branch.outputs.base_owner_login
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const pr = context.payload.pull_request;
+
+            // Check if we already posted this comment
+            const comments = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: pr.number
+            });
+
+            const botComment = comments.data.find(comment =>
+              comment.user.type === 'Bot' &&
+              comment.body.includes('organization account')
+            );
+
+            if (botComment) {
+              console.log('Comment about organization account already exists, skipping');
+              return;
+            }
+
+            // Sanitize username - GitHub usernames can only contain alphanumeric characters and hyphens
+            const username = pr.user.login.replace(/[^a-zA-Z0-9-]/g, '');
+
+            const commentBody = `Hi @${username}! 👋
+
+            > [!CAUTION]
+            > We noticed that this pull request comes from a fork under an organization account,
+            > which will prevent our CI workflow from working correctly.
+
+            GitHub does not allow the "Allow edits from maintainers" option for forks in organizations (see [discussion](https://github.com/orgs/community/discussions/5634)).
+            Our CI needs this permission to commit turtle files and clean up Excel files.
+
+            **This PR cannot be merged as-is.** Please:
+            1. Fork voc4cat to your personal GitHub account
+            2. Create a feature branch with your changes
+            3. Submit a new PR from your personal fork
+            4. Close this PR
+
+            Sorry for the inconvenience - this is a GitHub limitation, not our choice!`;
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: pr.number,
+              body: commentBody
+            });
+

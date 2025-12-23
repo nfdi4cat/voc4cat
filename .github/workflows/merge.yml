@@ -21,17 +21,21 @@ on:
   workflow_dispatch:
 
 env:
-  FORCE_COLOR: "1"  # Make tool output pretty.
   PIP_DISABLE_PIP_VERSION_CHECK: "1"
   PIP_PROGRESS_BAR: "off"
   LOGLEVEL: "DEBUG"
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+permissions: {}
 
 jobs:
   build:
     name: Development build of vocabulary & documentation
     permissions:
-      # Required for peaceiris/actions-gh-pages below
-      contents: write
+      contents: write  # Required for peaceiris/actions-gh-pages below
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -39,6 +43,8 @@ jobs:
         with:
           # Using fetch-depth 0 is the only way to get all tags which are needed for building docs.
           fetch-depth: 0
+          # Be specific about keeping credentials (it is the default)
+          persist-credentials: true
 
       - name: Checkout gh-pages branch to dir publish/
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
@@ -46,6 +52,8 @@ jobs:
           ref: gh-pages
           path: publish
           fetch-depth: 1
+          # Be specific about keeping credentials (it is the default)
+          persist-credentials: true
 
       - uses: actions/setup-python@e797f83bcb11b83ae66e0230d6156d7c80228e7c
         with:
@@ -57,7 +65,7 @@ jobs:
           python -m pip install --upgrade pip setuptools wheel
 
           # install tagged version
-          python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@v0.10.0
+          python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@v1.0.0rc1
           # python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@main
 
           # install custom pylode 2.x
@@ -89,6 +97,10 @@ jobs:
         # Passing the config is important to make use of the prefixes therein.
         run: |
           voc4cat convert --config idranges.toml --logfile publish/dev/voc4cat.log --template templates/voc4cat_template_043.xlsx publish/dev/
+
+          # Choose the conversion either with or without an xlsx template
+          voc4cat convert --config idranges.toml --logfile publish/dev/voc4cat.log publish/dev/
+          # voc4cat convert --config idranges.toml --logfile publish/dev/voc4cat.log --template templates/voc4cat_template_v1.0.xlsx publish/dev/
 
       - name: Deploy updated gh-pages content
         # This replaces all prior content in gh-pages branch. But we have

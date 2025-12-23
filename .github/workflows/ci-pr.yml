@@ -7,6 +7,7 @@ on:
   # forks. Since the workflow only accesses the xlsx and turtle files, but does
   # not run any code, it is safe to use pull_request_target. More info:
   # https://securitylab.github.com/resources/github-actions-preventing-pwn-requests/
+  # zizmor: ignore[dangerous-triggers] OK as per comment above
   pull_request_target:
     branches:
       - main
@@ -20,6 +21,12 @@ env:
   LOGLEVEL: "DEBUG"
   RUN_URL: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+permissions: {}
+
 jobs:
   build_vocab:
     name: Merge & build vocabulary
@@ -29,8 +36,7 @@ jobs:
     timeout-minutes: 10
 
     permissions:
-      # Give the default GITHUB_TOKEN write permission to commit to the PR branch.
-      contents: write
+      contents: write  # Give the default GITHUB_TOKEN write permission to commit to the PR branch.
 
     steps:
       - name: Checkout PR branch into cwd
@@ -39,9 +45,10 @@ jobs:
           # Checkout the fork/head-repository to push changes to the fork.
           # Without this the base repository will be checked out and committed to.
           repository: ${{ github.event.pull_request.head.repo.full_name }}
-
           # Checkout the branch made in the fork.
           ref: ${{ github.head_ref }}
+          # Be specific about keeping credentials (it is the default)
+          persist-credentials: true
 
       - name: Checkout main branch into directory _main_branch/
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
@@ -52,6 +59,8 @@ jobs:
           sparse-checkout: |
             vocabularies/
           fetch-depth: 1
+          # Be specific about keeping credentials (it is the default)
+          persist-credentials: true
 
       - uses: actions/setup-python@e797f83bcb11b83ae66e0230d6156d7c80228e7c
         with:
@@ -63,18 +72,15 @@ jobs:
           python -m pip install --upgrade pip setuptools wheel
 
           # install tagged version
-          python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@v0.10.0
+          python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@v1.0.0rc1
           # python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@main
 
           # install custom pylode 2.x  (adds sorted collections,
           #    uses URIs as fragment IDs and is git-installable)
           python -m pip install git+https://github.com/dalito/pyLODE.git@nfdi4cat-2.x
 
-          # Example for installing from private repo:
-          # python -m pip install git+https://anon:${{ SECRETS.READ_PAT_VOC4CAT }}@github.com/dalito/voc4cat-tool.git@main
-
       - name: Set dynamic environment variables.
-        run: |
+        run: |  # zizmor: ignore[github-env] safe without user controllable input
           echo "RUN_DATE=$(date +'%Y-%m-%dT%H%M')" >> $GITHUB_ENV
 
       - name: Run voc4cat (pre-convert checks)
@@ -117,7 +123,11 @@ jobs:
         # Passing the config is important to make use of the prefixes therein.
         run: |
           mkdir -p outbox/updated-xlsx-ttl
-          voc4cat convert --config idranges.toml --logfile outbox/voc4cat.log --template templates/voc4cat_template_043.xlsx outbox/updated-xlsx-ttl
+
+          # Choose the conversion either with or without an xlsx template
+          voc4cat convert --config idranges.toml --logfile outbox/voc4cat.log outbox/updated-xlsx-ttl
+          # voc4cat convert --config idranges.toml --logfile outbox/voc4cat.log --template templates/voc4cat_template_v1.0.xlsx outbox/updated-xlsx-ttl
+
           voc4cat transform --config idranges.toml --logfile outbox/voc4cat.log -O outbox/updated-xlsx-ttl --join vocabularies/
 
       - name: Store artifacts

@@ -5,7 +5,7 @@
 # A template to maintain vocabularies on GitHub
 
 This repository helps to create and maintain your own SKOS-vocabularies on GitHub.
-It builds upon the [voc4cat-tool](https://github.com/nfdi4cat/voc4cat-tool) and GitHub features like pull requests, gh-actions, gh-pages etc. to reduce the maintenance workload for contributors and editors.
+It builds upon [voc4cat-tool](https://github.com/nfdi4cat/voc4cat-tool) and GitHub features like pull requests, gh-actions, gh-pages etc. to reduce the workload for contributors and editors.
 The template is maintained as part of the [NFDI4Cat](http://www.nfdi4cat.org) initiative.
 
 ## How to start?

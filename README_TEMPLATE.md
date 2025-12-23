@@ -1,28 +1,29 @@
 # Voc4Cat Template Help
 
-> The presence of this file indicates that this vocabuary is based on [voc4cat-template](https://github.com/nfdi4cat/voc4cat-template).<BR>
+> The presence of this file indicates that this vocabulary is based on [voc4cat-template](https://github.com/nfdi4cat/voc4cat-template).<BR>
 > To **avoid merge conflicts on updates**, this file should mainly change via merging an updated version from the template repository. Therefore, please consider submitting your requests for changes/improvements as [issue in the voc4cat-template](https://github.com/nfdi4cat/voc4cat-template/issues/new?template=Blank+issue) repository.
 
 ## How to start?
 
 ### Trying out the workflow
 
-To experience the workflow, we suggest that you try contributing to [voc4cat](https://github.com/nfdi4cat/voc4cat) which is a "deployment" of this repository.
+To test the workflow, you may try contributing to [voc4cat](https://github.com/nfdi4cat/voc4cat) or explore past PRs in that repository. Voc4Cat is a "deployment" of this repository.
 If you are interested in understanding the technical details or in developing your own vocabulary,
 follow the instructions [below](#how-to-use-this-template-for-your-own-vocabularies).
 
 All vocabularies based on this template have the same standard contribution process of
 
 - get and update the vocabulary file (xlsx),
-- submit a pull request with the updated file,
+- submit a pull request with the updated xlsx file,
 - collaborate on the pull request with editors or other github users,
 
-After approval your pull request is ready to be merged by the editors. The merge will include your contribution into the SKOS-vocabulary file in the `vocabularies`-folder. Upon merge the corresponding documentation and a joined turtle file will be automatically built and published to gh-pages.
+After approval, your pull request is ready to be merged by the editors.
+The merge will include your contribution into the SKOS-vocabulary file in the `vocabularies`-folder, rebuild the vocabulary documentation and create a joined turtle file that will be published to gh-pages alongside an updated xlsx file.
 
-The Excel/xlsx files submitted as pull request are automatically checked and (if all is good) converted to turtle.
-By using a vocabulary-specific configuration more thorough validation can be activated,
+Excel/xlsx files submitted in pull requests are automatically checked and (if all is good) converted to turtle.
+A vocabulary-specific configuration enables extended validation,
 e.g. if terms get removed in a PR or if correct IRIs are used.
-To validate IRIs the configuration supports ID-ranges (similar to [OBO idrange](https://oboacademy.github.io/obook/howto/idrange/) but we use the [toml](https://toml.io/)-format).
+To validate IRIs the configuration supports ID-ranges (similar to [OBO idrange](https://oboacademy.github.io/obook/howto/idrange/) but in [toml](https://toml.io/)-format).
 The idea is that every author gets their own range of IDs to consume.
 This allows independent work and avoids using the same ID repeatedly.
 
@@ -40,9 +41,9 @@ For all versions, multiple files are stored (see https://github.com/nfdi4cat/voc
 In addition to the specific versions, an index page is generated that links to all vocabularies and the tagged releases.
 It is placed at the root of gh-pages (`https://{gh-org-name}.github.io/{repository-name}/`).
 
-### Creating vocabularies for catalysis or catalytic reaction engineering
+### Creating vocabularies for catalysis, materials science or reaction engineering
 
-Please strongly consider contributing to [voc4cat](https://github.com/nfdi4cat/voc4cat) instead of creating your own.
+Please strongly consider contributing to the [voc4cat](https://github.com/nfdi4cat/voc4cat) vocabulary instead of creating another one.
 
 ## Contributing to vocabularies
 
@@ -56,16 +57,14 @@ Here are the steps for submitting updates in Excel.
   - The most recent version of the vocabulary is always available via github-pages.
     - The general url is `https://{gh-org-name}.github.io/{repository-name}/dev/{vocabulary-name}.xlsx`
     - For example in nfdi4cat/voc4cat-template the most recent vocabulary `vocab_example` can be downloaded from [https://nfdi4cat.github.io/voc4cat-template/dev/vocab_example.xlsx](https://nfdi4cat.github.io/voc4cat-template/dev/vocab_example.xlsx)
-  - For setting up a new vocabulary, use the xlsx-file from the templates-folder.
-- Make changes to the Excel file. If you want to add something new you need to [request a range of IDs](https://github.com/{gh-org-name}/{repository-name}/issues/new/choose) for you.
+- Before you can add something new you need to [request a range of IDs](https://github.com/{gh-org-name}/{repository-name}/issues/new/choose) to assign new IRIs to your additions.
 - Create a fork of the vocabulary repository (if you don't yet have one) or pull the latest changes to your fork (via "Sync fork" button in GUI).
 - Create a feature branch for your contribution (via GitHub GUI or `git switch -c name-of-branch`)
 - Add the xlsx file to your clone of the repository into the folder `inbox-excel-vocabs`
   - The name of the file must match the vocabulary that you want to update (e.g. myvoc.xlsx to update a vocabulary named "myvoc").
-  - New vocabularies will be named like the xlsx-file (minus the `.xlsx`-extension).
 - Create a pull request with the updated Excel-file on GitHub.
-  - Please describe your changes and the motivation for the changes in the pull request note or link to an issue with this information.
-    This will help reviewers to understand the proposed change and decide about it.
+  - Describe your changes and the motivation for the changes in the pull request note or link to an issue with this information.
+    This will help reviewers to understand the proposed change better.
 - Your pull request will be processed automatically by a CI/CD pipeline that typically runs less than a minute.
 - Review the artifacts/logs generated by the CI pipeline.
   - The [workflow artifact](https://docs.github.com/en/actions/managing-workflow-runs/downloading-workflow-artifacts) will contain an updated xlsx file.
@@ -115,11 +114,11 @@ This adds all commits made in the template´s main branch to your new repository
   - Configure GitHub pages to use as source "deploy from a branch" and select the branch `gh-pages` (Settings > Pages > Build and deployment)
 - Optionally
   - Add a different license for your vocabulary.
-  - Adjust the styling of the Excel template for your vocabulary.
+- Optionally provide a custom Excel template with extra sheets, see [documentation](https://nfdi4cat.github.io/voc4cat-tool/migration-to-v1.0.html#step-3-generate-v1-0-excel-template).
 
 After these steps your repository should work just like [voc4cat](https://github.com/nfdi4cat/voc4cat).
 
-### Keeping your vocabulary repository in sync with the voc4cat-template
+### Keeping your vocabulary repository in sync with voc4cat-template
 
 To review the changes made in the template after you last pulled it use:
 
@@ -152,18 +151,23 @@ The justfile helps to tun (almost) the same commands as are used in the GitHub w
 This makes local testing of a modified vocabulary xlsx-file easier.
 Read the header of the justfile for more info on setting up your environment.
 
-Once you have `just` installed type the command `just` at the root of the git-project to list the available commands. For version 0.8.7 of the template, it gives:
+Once you have `just` installed type the command `just` at the root of the git-project to list the available commands. For version 0.10.0 of the template, it gives:
 
 ```bash
 $ just
 Available recipes:
     all     # Run all steps as in gh-actions: check xlsx, convert to SKOS, build docs, re-build xlsx
-    check   # Check the voc4cat.xlsx file in inbox/ for errors
+
+    [environment]
     clean   # Remove all generated files/directories
+    setup   # Run initial setup (run this first)
+    upgrade # Upgrades voc4cat-tool installation
+
+    [individual steps]
+    check   # Check the voc4cat.xlsx file in inbox/ for errors
     convert # Convert the voc4cat.xlsx file in inbox/ to turtle
     docs    # Run voc4cat (build HTML documentation from ttl files)
-    setup   # Run initial setup (run this first)
-    update  # Updates voc4cat-tool installation
+    join    # Join individual ttl files in vocabularies/ to one turtle file in outbox/
     xlsx    # Rebuild the xlsx file from the joined ttl file.
 ```
 

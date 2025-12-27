@@ -40,7 +40,7 @@ jobs:
 
     steps:
       - name: Checkout PR branch into cwd
-        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8
         with:
           # Checkout the fork/head-repository to push changes to the fork.
           # Without this the base repository will be checked out and committed to.
@@ -51,7 +51,7 @@ jobs:
           persist-credentials: true
 
       - name: Checkout main branch into directory _main_branch/
-        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8
         with:
           ref: main
           path: _main_branch

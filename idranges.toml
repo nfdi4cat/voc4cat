@@ -65,7 +65,7 @@ Sofia Garcia https://orcid.org/0000-0001-2345-6789
 
 # MANDATORY: URL of repository or online vocabulary editor
 # repository = "https://github.com/YOUR-ORG/YOUR-REPO"
-repository = "https://github.com/NFDI4Cat/vocab-template"
+repository = "https://github.com/NFDI4Cat/voc4cat-template"
 
 # Optional: Jinja template for provenance URLs (git blame links)
 # Available template variables: entity_id, vocab_name, version, github_repo

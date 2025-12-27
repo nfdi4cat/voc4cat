@@ -64,7 +64,7 @@ convert: _fake_actions_env
   # Delete xlsx in outbox that may be present from former runs
   @rm -f outbox/voc4cat.xlsx
   # check all ttl file(s) in outbox
-  @voc4cat check --config _main_branch/idranges.toml --logfile outbox/voc4cat.log outbox/
+  @voc4cat check --detect-hierarchy-redundancy --config _main_branch/idranges.toml --logfile outbox/voc4cat.log outbox/
   # check if vocabulary changes are allowed
   @voc4cat check --config _main_branch/idranges.toml --logfile outbox/voc4cat.log --ci-post _main_branch/vocabularies outbox/
 
@@ -77,12 +77,17 @@ docs:
 [group('individual steps')]
 xlsx:
   @rm -f outbox/voc4cat.xlsx
-  @voc4cat convert --config idranges.toml --logfile outbox/voc4cat.log --template templates/voc4cat_template_043.xlsx outbox/
+  @voc4cat convert --config idranges.toml --logfile outbox/voc4cat.log --template templates/default_sheets.xlsx outbox/
 
 # Join individual ttl files in vocabularies/ to one turtle file in outbox/
 [group('individual steps')]
 join:
   @voc4cat transform --logfile outbox/voc4cat.log -O outbox --join vocabularies/
+
+# Add provenance information to all ttl files in vocabularies/
+[group('individual steps')]
+prov:
+  voc4cat transform --prov-from-git --inplace --logfile outbox/voc4cat.log vocabularies/
 
 # Run all steps as in gh-actions: check xlsx, convert to SKOS, build docs, re-build xlsx
 all: check convert docs xlsx

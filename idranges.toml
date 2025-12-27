@@ -36,10 +36,10 @@ description = "Description of the vocabulary"
 created_date = "2025-01-01"
 
 # MANDATORY: Creator(s) - multi-line text, each line: "<name> <orcid-URL or ror-URL>"
-# creator = """
-# Alice Smith https://orcid.org/0000-0001-2345-6788
-# Sofia Garcia https://orcid.org/0000-0001-2345-6789
-# """
+creator = """
+Alice Smith https://orcid.org/0000-0001-2345-6788
+Sofia Garcia https://orcid.org/0000-0001-2345-6789
+"""
 
 # Optional: Publisher(s) - multi-line text, each line: "<name> <orcid-URL or ror-URL>"
 # publisher = """
@@ -65,6 +65,7 @@ created_date = "2025-01-01"
 
 # MANDATORY: URL of repository or online vocabulary editor
 # repository = "https://github.com/YOUR-ORG/YOUR-REPO"
+repository = "https://github.com/NFDI4Cat/vocab-template"
 
 # Optional: Jinja template for provenance URLs (git blame links)
 # Available template variables: entity_id, vocab_name, version, github_repo
@@ -93,7 +94,7 @@ allow_delete = false
 
 # ==== Prefix Map ====
 # Namespace prefix mappings used for CURIE expansion/compression
-[vocabs.myvocab.prefix_map]
+[vocabs.vocab_example.prefix_map]
 ex = "https://example.org/"
 
 # ==== ID Ranges ====

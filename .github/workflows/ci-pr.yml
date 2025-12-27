@@ -103,7 +103,7 @@ jobs:
       - name: Run voc4cat (post-convert checks)
         run: |
           # check all ttl file(s) in outbox
-          voc4cat check --config _main_branch/idranges.toml --logfile outbox/voc4cat.log outbox/
+          voc4cat check --detect-hierarchy-redundancy --config _main_branch/idranges.toml --logfile outbox/voc4cat.log outbox/
           # check if vocabulary changes are allowed
           voc4cat check --config _main_branch/idranges.toml --logfile outbox/voc4cat.log --ci-post _main_branch/vocabularies outbox/
 
@@ -111,13 +111,15 @@ jobs:
         run: |
           voc4cat docs --logfile outbox/voc4cat.log --force outbox/
 
-      - name: Split vocabulary and merge into vocabulary dir (in PR branch)
+      - name: Split vocabulary, merge into vocabulary dir (in PR branch) and update provenance info
         run: |
           voc4cat transform --split --inplace --logfile outbox/voc4cat.log --outdir outbox_new_voc outbox/
           voc4cat-merge --logfile outbox/voc4cat.log  outbox_new_voc/ vocabularies/
           # copy xlsx to outbox so that the xlsx file is part of the artifact
           find inbox-excel-vocabs -name '*.xlsx' -exec cp {} -t outbox/ \;
           git status
+          # Add/update dct:created and dct:modified base on git history
+          voc4cat transform --prov-from-git --inplace --logfile outbox/voc4cat.log vocabularies/
 
       - name: Run voc4cat (re-build updated Excel file and joined turtle vocabulary file)
         # Passing the config is important to make use of the prefixes therein.
@@ -126,7 +128,7 @@ jobs:
 
           # Choose the conversion either with or without an xlsx template
           voc4cat convert --config idranges.toml --logfile outbox/voc4cat.log outbox/updated-xlsx-ttl
-          # voc4cat convert --config idranges.toml --logfile outbox/voc4cat.log --template templates/voc4cat_template_v1.0.xlsx outbox/updated-xlsx-ttl
+          # voc4cat convert --config idranges.toml --logfile outbox/voc4cat.log --template templates/default_sheets.xlsx outbox/updated-xlsx-ttl
 
           voc4cat transform --config idranges.toml --logfile outbox/voc4cat.log -O outbox/updated-xlsx-ttl --join vocabularies/
 

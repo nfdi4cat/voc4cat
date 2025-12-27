@@ -64,7 +64,7 @@ convert: _fake_actions_env
   # Delete xlsx in outbox that may be present from former runs
   @rm -f outbox/voc4cat.xlsx
   # check all ttl file(s) in outbox
-  @voc4cat check --detect-hierarchy-redundancy --config _main_branch/idranges.toml --logfile outbox/voc4cat.log outbox/
+  @voc4cat check --redundant-hierarchies --config _main_branch/idranges.toml --logfile outbox/voc4cat.log outbox/
   # check if vocabulary changes are allowed
   @voc4cat check --config _main_branch/idranges.toml --logfile outbox/voc4cat.log --ci-post _main_branch/vocabularies outbox/
 

@@ -15,7 +15,6 @@ on:
   workflow_dispatch:
 
 env:
-  FORCE_COLOR: "1"  # Make tool output pretty.
   PIP_DISABLE_PIP_VERSION_CHECK: "1"
   PIP_PROGRESS_BAR: "off"
   LOGLEVEL: "DEBUG"

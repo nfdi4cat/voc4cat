@@ -125,12 +125,11 @@ jobs:
         # Passing the config is important to make use of the prefixes therein.
         run: |
           mkdir -p outbox/updated-xlsx-ttl
-
+          voc4cat transform --config idranges.toml --logfile outbox/voc4cat.log -O outbox/updated-xlsx-ttl --join vocabularies/
           # Choose the conversion either with or without an xlsx template
           voc4cat convert --config idranges.toml --logfile outbox/voc4cat.log outbox/updated-xlsx-ttl
           # voc4cat convert --config idranges.toml --logfile outbox/voc4cat.log --template templates/default_sheets.xlsx outbox/updated-xlsx-ttl
 
-          voc4cat transform --config idranges.toml --logfile outbox/voc4cat.log -O outbox/updated-xlsx-ttl --join vocabularies/
 
       - name: Store artifacts
         if: ${{ always() }}

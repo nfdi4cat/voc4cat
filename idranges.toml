@@ -1,53 +1,215 @@
 # ==== General Configuration ====
 # Documentation of the TOML format: https://toml.io/en/latest
 
+# Configuration format version (for future compatibility)
+config_version = "v1.0"
+
 # Allow only a single vocabulary (default) or multiple vocabularies in the repository.
 single_vocab = true
 
-# ==== Configuration for vocabulary "vocab_example" ====
+# ==== Configuration for vocabulary "voc4cat" ====
 
 # The name of the vocabulary is used as section name.
 # It should match the filename-stem of the vocabulary files.
-[vocabs.vocab_example]
+[vocabs.voc4cat]
 # Length of integer IDs in vocabulary. IDs will be left-padded with zeros to specified length.
 id_length = 7
-# permanent part of IRIs defined in the vocabulary
-permanent_iri_part = "https://example.org/test/"
+# permanent part of IRIs defined in the vocabulary (used to construct concept IRIs)
+permanent_iri_part = "https://w3id.org/nfdi4cat/voc4cat_"
 
+# ==== ConceptScheme Metadata ====
+
+# MANDATORY: IRI for the vocabulary (skos:ConceptScheme)
+vocabulary_iri = "https://w3id.org/nfdi4cat/voc4cat"
+
+# Optional: Registered (or preferred) prefix for this vocabulary
+prefix = "voc4cat"
+
+# MANDATORY: Title of the vocabulary
+title = "Voc4Cat - A SKOS vocabulary for Catalysis."
+
+# MANDATORY: General description of the vocabulary
+description = """The Voc4Cat vocabulary is a collection of concepts (or "terms") from the field of catalysis and related disciplines such as chemical engineering or materials science. For each concept, Voc4Cat provides a unique resolvable persistent identifier and a carefully written textual definition, which reflects the community's shared understanding of the concept's meaning.
+
+By using the identifiers provided by Voc4Cat to annotate data, rather than just words and symbols, ambiguity as to what is meant is avoided. Producing Voc4Cat-annotated data contributes to realising the vision of machine-actionability described as the ultimate goal of the FAIR principles.
+
+See also [voc4cat help](https://nfdi4cat.github.io/voc4cat/)."""
+
+# MANDATORY: Date of creation (ISO-8601 format: YYYY-MM-DD)
+created_date = "2023-06-29"
+
+# MANDATORY: Creator(s) - multi-line text, each line: "<name> <orcid-URL or ror-URL>"
+# Original TTL had URI reference to https://w3id.org/nfdi4cat/
+creator = """
+David Linke https://orcid.org/0000-0002-5898-1820
+Nikolaos Moustakas https://orcid.org/0000-0002-6242-2167
+"""
+
+# Optional: Publisher(s) - multi-line text, each line: "<name> <orcid-URL or ror-URL>"
+publisher = "NFDI4Cat Consortium https://w3id.org/nfdi4cat/"
+
+# Optional: Custodian(s) - multi-line text, each line: "<name> <orcid-URL or ror-URL>"
+custodian = """
+Voc4Cat curator group https://github.com/orgs/nfdi4cat/teams/voc4cat-curators
+"""
+
+# MANDATORY: URL of repository or online vocabulary editor
+repository = "https://github.com/nfdi4cat/voc4cat"
+
+# Optional: URL of homepage
+homepage = "https://nfdi4cat.github.io/voc4cat/"
+
+# Optional: DOI or other catalogue persistent identifier
+catalogue_pid = "https://doi.org/10.5281/zenodo.8313340"
+
+# Optional: URL of documentation or guidelines
+documentation = "https://nfdi4cat.github.io/voc4cat/"
+
+# Optional: URL of issue tracker
+issue_tracker = "https://github.com/nfdi4cat/voc4cat/issues"
+
+# Optional: URL of helpdesk
+# helpdesk = ""
+
+# Optional: multi-line text, each line with one URL of a SHACL profile the vocabulary conforms to
+conforms_to = "https://w3id.org/nfdi4cat/voc4cat/profile/vp4cat/"
+
+# ==== Checks Configuration ====
 # Section to configure checks (useful in CI pipeline)
-[vocabs.vocab_example.checks]
+[vocabs.voc4cat.checks]
 # Deleting allowed (relevant in CI-pipeline)
 allow_delete = false
 
-[vocabs.vocab_example.prefix_map]
-ex = "https://example.org/"
+# ==== Prefix Map ====
+# Namespace prefix mappings used for CURIE expansion/compression
+[vocabs.voc4cat.prefix_map]
+voc4cat = "https://w3id.org/nfdi4cat/voc4cat_"
+
+# ==== ID Ranges ====
 # Section of IDranges for coordinating the allocation of numeric ID ranges to
-# contributors for each vocabulary. Each idrange contains the same keys:
-#
-# first_id = <int>            - first reserved integer ID in idrange
-# last_id = <int>             - last reserved integer ID in idrange
-# gh_name = "<string>"        - user or organisation name on github
-# orcid = "<string> or <url>" - contributor's ORCID, e.g. "0000-0002-1825-0097" or "https://orcid.org/0000-0002-1825-0097"
-# ror_id = "<url>"            - ROR identifier of home organisation, e.g. "https://ror.org/04fa4r544"
+# contributors for each vocabulary.
 
-[[vocabs.vocab_example.id_range]]
+[[vocabs.voc4cat.id_range]]
 first_id = 1
-last_id = 10
-gh_name = "sofia-garcia"
-orcid = "0000-0001-2345-6789"
-ror_id = "https://ror.org/04fa4r544"
+last_id = 5000
+gh_name = "nmoust"
+name = "Nikolaos Moustakas"
+orcid = "0000-0002-6242-2167"
+ror_id = "https://ror.org/029hg0311"
 
-[[vocabs.vocab_example.id_range]]
-first_id = 11
-last_id = 20
-gh_name = "unknown"
-orcid = ""
-ror_id = ""
+[[vocabs.voc4cat.id_range]]
+first_id = 5001
+last_id = 6000
+gh_name = "dalito"
+name = "David Linke"
+orcid = "0000-0002-5898-1820"
+ror_id = "https://ror.org/029hg0311"
 
-# Continue with as many [[vocabs.vocab_example.idrange]] sections as needed.
+[[vocabs.voc4cat.id_range]]
+first_id = 6001
+last_id = 7000
+gh_name = "markdoerr"
+name = "Mark Doerr"
+orcid = "0000-0003-3270-6895"
+ror_id = "https://ror.org/00r1edq15"
 
-# More vocabularies can be configured by adding sections with appropriate name.
-# [vocabs.othervocab]
-# [vocabs.othervocab.checks]
-# [vocabs.othervocab.prefix_map]
-# [[vocabs.othervocab.idrange]]
+[[vocabs.voc4cat.id_range]]
+first_id = 7001
+last_id = 7100
+gh_name = "schumnannj"
+name = "Julia Schumann"
+orcid = "0000-0002-4041-0165"
+ror_id = "https://ror.org/01hcx6992"
+
+[[vocabs.voc4cat.id_range]]
+first_id = 7101
+last_id = 7200
+gh_name = "HendrikBorgelt"
+name = "Hendrik Borgelt"
+orcid = "0000-0001-5886-7860"
+ror_id = "https://ror.org/01k97gp34"
+
+[[vocabs.voc4cat.id_range]]
+first_id = 7201
+last_id = 7300
+gh_name = "RoteKekse"
+name = "Michael Goette"
+orcid = "0009-0008-1278-8890"
+ror_id = "https://ror.org/02aj13c28"
+
+[[vocabs.voc4cat.id_range]]
+first_id = 7301
+last_id = 7320
+gh_name = "khatamirad"
+orcid = "0000-0002-6723-1650"
+ror_id = "https://ror.org/03v4gjf40"
+
+[[vocabs.voc4cat.id_range]]
+first_id = 7321
+last_id = 7370
+gh_name = "philippstangl"
+orcid = "0009-0007-4179-2365"
+ror_id = "https://ror.org/00f7hpc57"
+
+[[vocabs.voc4cat.id_range]]
+first_id = 7371
+last_id = 7390
+gh_name = "sofia-angeli"
+name = "Sofia Angeli"
+orcid = "0000-0001-8623-047X"
+ror_id = "https://ror.org/04t3en479"
+
+[[vocabs.voc4cat.id_range]]
+first_id = 7391
+last_id = 7790
+gh_name = "HendrikBorgelt"
+name = "Hendrik Borgelt"
+orcid = "0000-0001-5886-7860"
+ror_id = "https://ror.org/01k97gp34"
+
+[[vocabs.voc4cat.id_range]]
+first_id = 7791
+last_id = 7850
+gh_name = "FranziFlecken"
+name = "Franziska Flecken"
+orcid = "0000-0003-4418-7455"
+ror_id = "https://ror.org/04t3en479"
+
+[[vocabs.voc4cat.id_range]]
+first_id = 7851
+last_id = 7860
+gh_name = "kara-mela"
+name = "Melanie Nentwich"
+orcid = "0000-0002-5850-4469"
+ror_id = "https://ror.org/01js2sh04"
+
+[[vocabs.voc4cat.id_range]]
+first_id = 7861
+last_id = 8060
+gh_name = "mvoelken-hub"
+orcid = "0009-0006-1375-2895"
+ror_id = "https://ror.org/01k97gp34"
+
+[[vocabs.voc4cat.id_range]]
+first_id = 8061
+last_id = 8080
+gh_name = "b-elisa"
+ror_id = "https://ror.org/03v4gjf40"
+
+[[vocabs.voc4cat.id_range]]
+first_id = 8081
+last_id = 8100
+gh_name = "carla-terboven"
+name = "Carla Terboven"
+orcid = "0009-0004-3786-0773"
+ror_id = "https://ror.org/02aj13c28"
+
+[[vocabs.voc4cat.id_range]]
+first_id = 8101
+last_id = 8150
+gh_name = "arjunneyyathalaCat"
+name = "Arjun Neyyathala"
+orcid = "0000-0001-5161-4801"
+ror_id = "https://ror.org/04t3en479"
+
+# Continue with as many [[vocabs.voc4cat.id_range]] sections as needed.

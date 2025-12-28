@@ -129,7 +129,6 @@ jobs:
           voc4cat convert --config idranges.toml --logfile outbox/voc4cat.log outbox/updated-xlsx-ttl
           # voc4cat convert --config idranges.toml --logfile outbox/voc4cat.log --template templates/default_sheets.xlsx outbox/updated-xlsx-ttl
 
-
       - name: Store artifacts
         if: ${{ always() }}
         uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4

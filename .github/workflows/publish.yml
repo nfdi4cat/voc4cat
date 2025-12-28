@@ -16,32 +16,40 @@ on:
     types: [published]
 
 env:
-  FORCE_COLOR: "1"  # Make tool output pretty.
   PIP_DISABLE_PIP_VERSION_CHECK: "1"
   PIP_PROGRESS_BAR: "off"
   LOGLEVEL: "DEBUG"
   VOC4CAT_VERSION: ${{github.ref_name}}  # use release tag as version
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+permissions: {}
+
 jobs:
   build:
     name: Release vocabulary & documentation
     permissions:
-      # Required for peaceiris/actions-gh-pages below
-      contents: write
+      contents: write  # Required for peaceiris/actions-gh-pages below
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3
+      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8
         with:
           # Using fetch-depth 0 is the only way to get all tags which are needed for building docs.
           fetch-depth: 0
+          # Be specific about keeping credentials (it is the default)
+          persist-credentials: true
 
       - name: Checkout gh-pages branch to dir publish/
-        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8
         with:
           ref: gh-pages
           path: publish
           fetch-depth: 1
+          # Be specific about keeping credentials (it is the default)
+          persist-credentials: true
 
       - uses: actions/setup-python@83679a892e2d95755f2dac6acb0bfd1e9ac5d548
         with:
@@ -53,8 +61,8 @@ jobs:
           python -m pip install --upgrade pip setuptools wheel
 
           # install tagged version
-          python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@v0.10.0
-          # python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@main
+          # python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@v1.0.0rc2
+          python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@main
 
           # install custom pylode 2.x
           python -m pip install git+https://github.com/dalito/pyLODE.git@nfdi4cat-2.x
@@ -82,7 +90,9 @@ jobs:
       - name: Run voc4cat (build current Excel file)
         # Passing the config is important to make use of the prefixes therein.
         run: |
-          voc4cat convert --config idranges.toml --logfile publish/latest/voc4cat.log --template templates/voc4cat_template_043.xlsx publish/latest/
+          # Choose the conversion either with or without an xlsx template
+          # voc4cat convert --config idranges.toml --logfile publish/dev/voc4cat.log publish/latest/
+          voc4cat convert --config idranges.toml --logfile publish/latest/voc4cat.log --template templates/default_sheets.xlsx publish/latest/
 
       - name: Run voc4cat (build vocabulary in xml/rdf from Excel file)
         # Passing the config is important to make use of the prefixes therein.
@@ -91,8 +101,8 @@ jobs:
 
       - name: Copy release to release-name directory
         run: |
-          mkdir -p publish/${{ github.ref_name }}
-          cp -r publish/latest/. publish/${{ github.ref_name }}/
+          mkdir -p publish/${GITHUB_REF_NAME}
+          cp -r publish/latest/. publish/${GITHUB_REF_NAME}/
 
       - name: Build Sphinx documentation (website)
         run: |

@@ -9,19 +9,24 @@
 name: PR Submission Checks
 
 on:
-  pull_request_target:
+  pull_request:
     types: [opened, reopened, synchronize]
     branches:
       - main
 
-permissions:
-  pull-requests: write
-  contents: read
+permissions: {}
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 
 jobs:
   check-pr-submission:
     name: Check PR submission best practices
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write  # to post a message to PR
 
     steps:
       - name: Check if PR is from main branch of fork

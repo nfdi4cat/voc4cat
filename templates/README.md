@@ -1,52 +1,7 @@
 ## Excel templates
 
-The templates here match structure-wise with the templates in [Voc4Cat-tool](https://github.com/nfdi4cat/voc4cat-tool) of the same version number.
+With version v1.0.0 of voc4cat-tool xlsx-templates have become optional.
 
-### Version 0.4.3
+Use this folder to provide a your own custom template, for example, with a help or a about sheet. Note that templates may not contain any of the sheets that are dynamically created in v1.0.0.
 
-#### Revision 2025-07a
-
-- Switch from ChildrenIRIs to ParentIRIs for concept hierarchy representation.
-- Move template version from sheet "Introduction" to "Concept Scheme".
-  The sheet "Introduction" sheet is no longer required but still present.
-
-#### Revision 2025-02a
-
-- Update help to reflect the prefix sheet is read-only.
-- Update introduction to reflect progress of tooling.
-- Adjust column widths for better compatibility with new IRI notation with qualifier.
-
-#### Revision 2023-08b
-
-- Cells version and modified date in concept scheme sheet are now optional. Updated notes accordingly.
-
-#### Revision 2023-08a
-
-- Changed included example data to be consistent with improved validation.
-- Updated help on filling out provenance fields.
-
-#### Revision 2023-07a
-
-- Fixed typos.
-
-#### Revision 2023-06a
-
-- Corrected the pre-defined prefix for voc4cat.
-
-#### Revision 2023-03a
-
-The following is different in the voc4cat-template (`voc4cat_template_043.xlsx`):
-
-- Recreated "Introduction" sheet for voc4cat and added NFDI4Cat logo
-- Replaced "README" sheet by "Help" sheet that is adapted for voc4cat
-- Sheets "Concept Scheme", "Concepts", "Additional Concept Features", "Collections"
-  - Renamed columns to be more consistent (e.g. URI vs. IRI, plural column names for columns that accept lists)
-  - Changed all data entry ranges to tables. The tables are named as the sheet they are in. The table names are not used in code so far but may be in the future.
-- Sheet "Additional Concept Features": Removed Excel formula in Concept-IRI-column since the formula could easily lead to mixing-up previously added relations.
-- Sheet "Prefix Sheet": Added a xlsx-validation rule to check that prefixes do not end with a colon.
-
-The identical template `voc4cat_template_043.xlsx` is included in [voc4cat-tool/templates](https://github.com/nfdi4cat/voc4cat-tool/tree/main/templates).
-
-### Earlier template versions
-
-Earlier template versions which are not listed here should not be used.
+Therefore, **earlier template versions cannot be used** without adaption, see [documentation](https://nfdi4cat.github.io/voc4cat-tool/migration-to-v1.0.html#step-3-generate-v1-0-excel-template).

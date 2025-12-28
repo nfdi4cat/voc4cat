@@ -4,24 +4,23 @@
 # Allow only a single vocabulary (default) or multiple vocabularies in the repository.
 single_vocab = true
 
-# ==== Configuration for vocabulary "voc4cat" ====
+# ==== Configuration for vocabulary "vocab_example" ====
 
 # The name of the vocabulary is used as section name.
 # It should match the filename-stem of the vocabulary files.
-[vocabs.voc4cat]
+[vocabs.vocab_example]
 # Length of integer IDs in vocabulary. IDs will be left-padded with zeros to specified length.
 id_length = 7
 # permanent part of IRIs defined in the vocabulary
-permanent_iri_part = "https://w3id.org/nfdi4cat/voc4cat_"
+permanent_iri_part = "https://example.org/test/"
 
 # Section to configure checks (useful in CI pipeline)
-[vocabs.voc4cat.checks]
+[vocabs.vocab_example.checks]
 # Deleting allowed (relevant in CI-pipeline)
 allow_delete = false
 
-[vocabs.voc4cat.prefix_map]
-voc4cat = "https://w3id.org/nfdi4cat/voc4cat_"
-
+[vocabs.vocab_example.prefix_map]
+ex = "https://example.org/"
 # Section of IDranges for coordinating the allocation of numeric ID ranges to
 # contributors for each vocabulary. Each idrange contains the same keys:
 #
@@ -31,114 +30,24 @@ voc4cat = "https://w3id.org/nfdi4cat/voc4cat_"
 # orcid = "<string> or <url>" - contributor's ORCID, e.g. "0000-0002-1825-0097" or "https://orcid.org/0000-0002-1825-0097"
 # ror_id = "<url>"            - ROR identifier of home organisation, e.g. "https://ror.org/04fa4r544"
 
-[[vocabs.voc4cat.id_range]]
+[[vocabs.vocab_example.id_range]]
 first_id = 1
-last_id = 5000
-gh_name = "nmoust"
-orcid = "0000-0002-6242-2167"
-ror_id = "https://ror.org/029hg0311"
+last_id = 10
+gh_name = "sofia-garcia"
+orcid = "0000-0001-2345-6789"
+ror_id = "https://ror.org/04fa4r544"
 
-[[vocabs.voc4cat.id_range]]
-first_id = 5001
-last_id = 6000
-gh_name = "dalito"
-orcid = "0000-0002-5898-1820"
-ror_id = "https://ror.org/029hg0311"
+[[vocabs.vocab_example.id_range]]
+first_id = 11
+last_id = 20
+gh_name = "unknown"
+orcid = ""
+ror_id = ""
 
-[[vocabs.voc4cat.id_range]]
-first_id = 6001
-last_id = 7000
-gh_name = "markdoerr"
-orcid = "0000-0003-3270-6895"
-ror_id = "https://ror.org/00r1edq15"
+# Continue with as many [[vocabs.vocab_example.idrange]] sections as needed.
 
-[[vocabs.voc4cat.id_range]]
-first_id = 7001
-last_id = 7100
-gh_name = "schumnannj"
-orcid = "0000-0002-4041-0165"
-ror_id = "https://ror.org/01hcx6992"
-
-[[vocabs.voc4cat.id_range]]
-first_id = 7101
-last_id = 7200
-gh_name = "HendrikBorgelt"
-orcid = "0000-0001-5886-7860"
-ror_id = "https://ror.org/01k97gp34"
-
-[[vocabs.voc4cat.id_range]]
-first_id = 7201
-last_id = 7300
-gh_name = "RoteKekse"
-orcid = "0009-0008-1278-8890"
-ror_id = "https://ror.org/02aj13c28"
-
-[[vocabs.voc4cat.id_range]]
-first_id = 7301
-last_id = 7320
-gh_name = "khatamirad"
-orcid = "0000-0002-6723-1650"
-ror_id = "https://ror.org/03v4gjf40"
-
-[[vocabs.voc4cat.id_range]]
-first_id = 7321
-last_id = 7370
-gh_name = "philippstangl"
-orcid = "0009-0007-4179-2365"
-ror_id = "https://ror.org/00f7hpc57"
-
-[[vocabs.voc4cat.id_range]]
-first_id = 7371
-last_id = 7390
-gh_name = "sofia-angeli"
-orcid = "0000-0001-8623-047X"
-ror_id = "https://ror.org/04t3en479"
-
-[[vocabs.voc4cat.id_range]]
-first_id = 7391
-last_id = 7790
-gh_name = "HendrikBorgelt"
-orcid = "0000-0001-5886-7860"
-ror_id = "https://ror.org/01k97gp34"
-
-[[vocabs.voc4cat.id_range]]
-first_id = 7791
-last_id = 7850
-gh_name = "FranziFlecken"
-orcid = "0000-0003-4418-7455"
-ror_id = "https://ror.org/04t3en479"
-
-[[vocabs.voc4cat.id_range]]
-first_id = 7851
-last_id = 7860
-gh_name = "kara-mela"
-orcid = "0000-0002-5850-4469"
-ror_id = "https://ror.org/01js2sh04"
-
-[[vocabs.voc4cat.id_range]]
-first_id = 7861
-last_id = 8060
-gh_name = "mvoelken-hub"
-orcid = "0009-0006-1375-2895"
-ror_id = "https://ror.org/01k97gp34"
-
-[[vocabs.voc4cat.id_range]]
-first_id = 8061
-last_id = 8080
-gh_name = "b-elisa"
-ror_id = "https://ror.org/03v4gjf40"
-
-[[vocabs.voc4cat.id_range]]
-first_id = 8081
-last_id = 8100
-gh_name = "carla-terboven"
-orcid = "0009-0004-3786-0773"
-ror_id = "https://ror.org/02aj13c28"
-
-[[vocabs.voc4cat.id_range]]
-first_id = 8101
-last_id = 8150
-gh_name = "arjunneyyathalaCat"
-orcid = "0000-0001-5161-4801"
-ror_id = "https://ror.org/04t3en479"
-# Continue with as many [[vocabs.voc4cat.id_range]] sections as needed.
+# More vocabularies can be configured by adding sections with appropriate name.
+# [vocabs.othervocab]
+# [vocabs.othervocab.checks]
+# [vocabs.othervocab.prefix_map]
+# [[vocabs.othervocab.idrange]]

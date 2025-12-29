@@ -1,35 +1,39 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://w3id.org/nfdi4cat/voc4cat_0000066>
+voc4cat:0000066
     a skos:Concept ;
-    dcterms:identifier "voc4cat_0000066"^^xsd:token ;
+    dcterms:identifier "0000066"^^xsd:token ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000066.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000066.ttl> ;
     skos:altLabel "characterization"@en ;
-    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000185> ;
+    skos:broader voc4cat:0000185 ;
+    skos:changeNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:definition "Techniques used to identify the (physico)chemical, morphological, structural, mechanical, optical and electrical properties of the syntesized catalysts. Characterization is performed after the synthesis of the catalysts to evaluate the success of the synthetic approach, but also after the completion of the evaluation of the materials in a reaction to ensure their stability under the selected experimental parameters."@en ;
-    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:narrower
-        <https://w3id.org/nfdi4cat/voc4cat_0000067> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000068> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000069> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000070> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000071> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000072> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000073> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000074> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000075> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000076> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000077> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000078> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000079> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000080> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000081> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000083> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000286> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000288> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007807> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007808> ;
+        voc4cat:0000067 ,
+        voc4cat:0000068 ,
+        voc4cat:0000069 ,
+        voc4cat:0000070 ,
+        voc4cat:0000071 ,
+        voc4cat:0000072 ,
+        voc4cat:0000073 ,
+        voc4cat:0000074 ,
+        voc4cat:0000075 ,
+        voc4cat:0000076 ,
+        voc4cat:0000077 ,
+        voc4cat:0000078 ,
+        voc4cat:0000079 ,
+        voc4cat:0000080 ,
+        voc4cat:0000081 ,
+        voc4cat:0000083 ,
+        voc4cat:0000286 ,
+        voc4cat:0000288 ,
+        voc4cat:0007807 ,
+        voc4cat:0007808 ;
     skos:prefLabel "characterization technique"@en ;
 .

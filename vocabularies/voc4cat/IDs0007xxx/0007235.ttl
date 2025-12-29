@@ -1,14 +1,18 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://w3id.org/nfdi4cat/voc4cat_0007235>
+voc4cat:0007235
     a skos:Concept ;
-    dcterms:identifier "voc4cat_0007235"^^xsd:token ;
+    dcterms:identifier "0007235"^^xsd:token ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007235.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007235.ttl> ;
     skos:altLabel "separator"@en ;
-    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000187> ;
+    skos:broader voc4cat:0000187 ;
+    skos:changeNote "0009-0008-1278-8890 Michael Götte created the resource"@en ;
     skos:definition "A thin structural material (usually a sheet) used to separate the electrolyte of a divided electrochemical cell into two or more compartments."@en ;
-    skos:historyNote "0009-0008-1278-8890 Michael Götte created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:prefLabel "membrane"@en ;
 .

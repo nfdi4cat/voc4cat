@@ -1,17 +1,21 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://w3id.org/nfdi4cat/voc4cat_0000222>
+voc4cat:0000222
     a skos:Concept ;
-    dcterms:identifier "voc4cat_0000222"^^xsd:token ;
+    dcterms:identifier "0000222"^^xsd:token ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000222.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000222.ttl> ;
     skos:altLabel
         "hydroformylation reaction"@en ,
         "oxo process"@en ,
         "oxo synthesis"@en ;
-    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000183> ;
+    skos:broader voc4cat:0000183 ;
+    skos:changeNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:definition "A catalytic reaction for synthesizing an aldehyde from an alkene, by adding a formyl group (-CHO) and a hydrogen atom to a carbon-carbon double bond."@en ;
-    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:prefLabel "hydroformylation"@en ;
 .

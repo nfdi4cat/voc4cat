@@ -1,13 +1,17 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://w3id.org/nfdi4cat/voc4cat_0007257>
+voc4cat:0007257
     a skos:Concept ;
-    dcterms:identifier "voc4cat_0007257"^^xsd:token ;
-    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0007249> ;
+    dcterms:identifier "0007257"^^xsd:token ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007257.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007257.ttl> ;
+    skos:broader voc4cat:0007249 ;
+    skos:changeNote "0009-0008-1278-8890 Michael Götte created the resource"@en ;
     skos:definition "An electrochemical cell that converts electrical energy into chemical energy. The chemical reactions do not occur \"spontaneously\" at the electrodes when they are connected through an external circuit. The reaction must be forced by applying an external electrical current."@en ;
-    skos:historyNote "0009-0008-1278-8890 Michael Götte created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:prefLabel "electrolytic cell"@en ;
 .

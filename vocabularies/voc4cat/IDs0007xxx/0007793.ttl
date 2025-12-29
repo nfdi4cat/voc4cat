@@ -1,13 +1,17 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://w3id.org/nfdi4cat/voc4cat_0007793>
+voc4cat:0007793
     a skos:Concept ;
-    dcterms:identifier "voc4cat_0007793"^^xsd:token ;
-    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000181> ;
+    dcterms:identifier "0007793"^^xsd:token ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007793.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007793.ttl> ;
+    skos:broader voc4cat:0000181 ;
+    skos:changeNote "0000-0003-4418-7455 Franziska Flecken created the resource"@en ;
     skos:definition "A substance that is added to a reaction or material and influences the reaction outcome or material properties."@en ;
-    skos:historyNote "0000-0003-4418-7455 Franziska Flecken created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:prefLabel "additive"@en ;
 .

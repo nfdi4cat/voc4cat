@@ -1,15 +1,19 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://w3id.org/nfdi4cat/voc4cat_0008088>
+voc4cat:0008088
     a skos:Concept ;
-    dcterms:identifier "voc4cat_0008088"^^xsd:token ;
+    dcterms:identifier "0008088"^^xsd:token ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0008088.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0008088.ttl> ;
     skos:broader
-        <https://w3id.org/nfdi4cat/voc4cat_0000186> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0008087> ;
+        voc4cat:0000186 ,
+        voc4cat:0008087 ;
+    skos:changeNote "0009-0004-3786-0773 Carla Terboven created the resource"@en ;
     skos:definition "Absorbance measured on a reference material under the same experimental conditions as the sample. Typically used for calibration, normalization, or comparison."@en ;
-    skos:historyNote "0009-0004-3786-0773 Carla Terboven created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:prefLabel "absorbance of the reference"@en ;
 .

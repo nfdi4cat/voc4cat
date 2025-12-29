@@ -1,13 +1,17 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://w3id.org/nfdi4cat/voc4cat_0008082>
+voc4cat:0008082
     a skos:Concept ;
-    dcterms:identifier "voc4cat_0008082"^^xsd:token ;
-    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000286> ;
+    dcterms:identifier "0008082"^^xsd:token ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0008082.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0008082.ttl> ;
+    skos:broader voc4cat:0000286 ;
+    skos:changeNote "0009-0004-3786-0773 Carla Terboven created the resource"@en ;
     skos:definition "Mode of XAS measurement where absorption is probed via fluorescence yield."@en ;
-    skos:historyNote "0009-0004-3786-0773 Carla Terboven created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:prefLabel "XAS Fluorescence"@en ;
 .

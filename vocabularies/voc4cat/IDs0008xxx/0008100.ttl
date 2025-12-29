@@ -1,20 +1,24 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://w3id.org/nfdi4cat/voc4cat_0008100>
+voc4cat:0008100
     a skos:Concept ;
-    dcterms:identifier "voc4cat_0008100"^^xsd:token ;
-    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000186> ;
+    dcterms:identifier "0008100"^^xsd:token ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0008100.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0008100.ttl> ;
+    skos:broader voc4cat:0000186 ;
+    skos:changeNote "0009-0004-3786-0773 Carla Terboven created the resource"@en ;
     skos:definition "Measurable quantity that characterizes the performance or operational behavior of a detector during active operation."@en ;
-    skos:historyNote "0009-0004-3786-0773 Carla Terboven created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:narrower
-        <https://w3id.org/nfdi4cat/voc4cat_0008084> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0008092> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0008093> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0008094> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0008095> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0008096> ;
+        voc4cat:0008084 ,
+        voc4cat:0008092 ,
+        voc4cat:0008093 ,
+        voc4cat:0008094 ,
+        voc4cat:0008095 ,
+        voc4cat:0008096 ;
     skos:prefLabel "detector performance measure"@en ;
 .

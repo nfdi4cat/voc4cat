@@ -1,10 +1,14 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://w3id.org/nfdi4cat/voc4cat_0000080>
+voc4cat:0000080
     a skos:Concept ;
-    dcterms:identifier "voc4cat_0000080"^^xsd:token ;
+    dcterms:identifier "0000080"^^xsd:token ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000080.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000080.ttl> ;
     skos:altLabel
         "FT-IR"@en ,
         "FT-IR spectroscopy"@en ,
@@ -17,10 +21,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         "Fourier transform infrared (FT-IR) spectroscopy"@en ,
         "Fourier-transform infra-red absorption spectrometry"@en ,
         "Fourier-transform infrared (FTIR) absorption spectroscopy"@en ;
-    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000066> ;
+    skos:broader voc4cat:0000066 ;
+    skos:changeNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:definition "A spectroscopic technique used to study the vibrational modes of chemical bonds of a sample using infrared radiation."@en ;
     skos:exactMatch <http://purl.org/pan-science/PaNET/PaNET01320> ;
-    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:prefLabel "Fourier transform infrared spectroscopy"@en ;
 .

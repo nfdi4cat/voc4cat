@@ -1,13 +1,17 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://w3id.org/nfdi4cat/voc4cat_0007255>
+voc4cat:0007255
     a skos:Concept ;
-    dcterms:identifier "voc4cat_0007255"^^xsd:token ;
-    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0007201> ;
+    dcterms:identifier "0007255"^^xsd:token ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007255.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007255.ttl> ;
+    skos:broader voc4cat:0007201 ;
+    skos:changeNote "0009-0008-1278-8890 Michael Götte created the resource"@en ;
     skos:definition "The electrode where oxidation occurs in an electrochemical cell. It is the positive electrode in an electrolytic cell, while it is the negative electrode in a galvanic cell."@en ;
-    skos:historyNote "0009-0008-1278-8890 Michael Götte created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:prefLabel "anode"@en ;
 .

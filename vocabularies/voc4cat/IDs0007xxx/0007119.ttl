@@ -1,14 +1,18 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://w3id.org/nfdi4cat/voc4cat_0007119>
+voc4cat:0007119
     a skos:Concept ;
-    dcterms:identifier "voc4cat_0007119"^^xsd:token ;
+    dcterms:identifier "0007119"^^xsd:token ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007119.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007119.ttl> ;
     skos:altLabel "Mn FWHM; energy resolution at Mn Kα; manganese peak width; Mn resolution"@en ;
-    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000186> ;
+    skos:broader voc4cat:0000186 ;
+    skos:changeNote "0000-0001-5886-7860 Hendrik Borgelt created this resource, 0009-0006-1375-2895 Marc Völkenrath contributed to the definition of the resource"@en ;
     skos:definition "The spectral linewidth of a peak, expressed as the width between the two points on either side of the maximum intensity where the intensity is half of the maximum value.Also known as full width at half maximum (FWHM)."@en ;
-    skos:historyNote "0000-0001-5886-7860 Hendrik Borgelt created this resource, 0009-0006-1375-2895 Marc Völkenrath contributed to the definition of the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:prefLabel "Peak full width at half maximum"@en ;
 .

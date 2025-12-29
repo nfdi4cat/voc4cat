@@ -1,18 +1,22 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://w3id.org/nfdi4cat/voc4cat_0005056>
+voc4cat:0005056
     a skos:Concept ;
-    dcterms:identifier "voc4cat_0005056"^^xsd:token ;
+    dcterms:identifier "0005056"^^xsd:token ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0005056.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0005056.ttl> ;
     skos:altLabel "specimen"@en ;
     skos:broadMatch <https://www.w3.org/ns/sosa/Sample> ;
-    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000190> ;
+    skos:broader voc4cat:0000190 ;
+    skos:changeNote "0000-0002-5898-1820 David Linke created the resource"@en ;
     skos:definition "A representative part of a material of interest on which observations are made."@en ;
-    skos:historyNote "0000-0002-5898-1820 David Linke created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:narrower
-        <https://w3id.org/nfdi4cat/voc4cat_0007811> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007812> ;
+        voc4cat:0007811 ,
+        voc4cat:0007812 ;
     skos:prefLabel "material sample"@en ;
 .

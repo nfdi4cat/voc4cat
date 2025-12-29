@@ -1,18 +1,22 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://w3id.org/nfdi4cat/voc4cat_0007206>
+voc4cat:0007206
     a skos:Concept ;
-    dcterms:identifier "voc4cat_0007206"^^xsd:token ;
-    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000185> ;
+    dcterms:identifier "0007206"^^xsd:token ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007206.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007206.ttl> ;
+    skos:broader voc4cat:0000185 ;
+    skos:changeNote "0009-0008-1278-8890 Michael Götte created the resource"@en ;
     skos:definition "An electroanalytical technique based on the measurement of the electromotive force of an electrochemical cell comprised of a measuring and a reference electrode."@en ;
-    skos:historyNote "0009-0008-1278-8890 Michael Götte created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:narrower
-        <https://w3id.org/nfdi4cat/voc4cat_0007208> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007209> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007212> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007237> ;
+        voc4cat:0007208 ,
+        voc4cat:0007209 ,
+        voc4cat:0007212 ,
+        voc4cat:0007237 ;
     skos:prefLabel "potentiometry"@en ;
 .

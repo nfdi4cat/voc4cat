@@ -1,20 +1,24 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://w3id.org/nfdi4cat/voc4cat_0000070>
+voc4cat:0000070
     a skos:Concept ;
-    dcterms:identifier "voc4cat_0000070"^^xsd:token ;
+    dcterms:identifier "0000070"^^xsd:token ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000070.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000070.ttl> ;
     skos:altLabel
         "AFM"@en ,
         "SFM"@en ,
         "atomic force imaging"@en ,
         "atomic-force microscopy"@en ,
         "scanning force microscopy"@en ;
-    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000066> ;
+    skos:broader voc4cat:0000066 ;
+    skos:changeNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:definition "A high-resolution imaging technique that measures the interaction between a sharp probe and the sample’s surface to create a three-dimensional image of the surface’s morphology."@en ;
     skos:exactMatch <http://purl.org/pan-science/PaNET/PaNET01318> ;
-    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:prefLabel "atomic force microscopy"@en ;
 .

@@ -1,20 +1,24 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://w3id.org/nfdi4cat/voc4cat_0000191>
+voc4cat:0000191
     a skos:Concept ;
-    dcterms:identifier "voc4cat_0000191"^^xsd:token ;
-    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000192> ;
+    dcterms:identifier "0000191"^^xsd:token ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000191.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000191.ttl> ;
+    skos:broader voc4cat:0000192 ;
+    skos:changeNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource, 0009-0004-3786-0773 Carla Terboven added a child"@en ;
     skos:definition "A device designed to identify a measurable change or signal in a system, often providing a binary (detected / not detected) or a qualitative response."@en ;
-    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource, 0009-0004-3786-0773 Carla Terboven added a child"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:narrower
-        <https://w3id.org/nfdi4cat/voc4cat_0000131> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000132> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000133> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000134> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000138> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0008083> ;
+        voc4cat:0000131 ,
+        voc4cat:0000132 ,
+        voc4cat:0000133 ,
+        voc4cat:0000134 ,
+        voc4cat:0000138 ,
+        voc4cat:0008083 ;
     skos:prefLabel "detector"@en ;
 .

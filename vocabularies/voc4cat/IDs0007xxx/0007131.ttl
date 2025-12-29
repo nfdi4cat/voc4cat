@@ -1,37 +1,39 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://w3id.org/nfdi4cat/voc4cat_0007131>
+voc4cat:0007131
     a skos:Collection ;
-    dcterms:identifier "voc4cat_0007131"^^xsd:token ;
-    dcterms:isPartOf <https://w3id.org/nfdi4cat/voc4cat> ;
+    dcterms:identifier "0007131"^^xsd:token ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007131.ttl> ;
     rdfs:isDefinedBy <https://w3id.org/nfdi4cat/voc4cat> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007131.ttl> ;
+    skos:changeNote "0000-0001-5886-7860 Hendrik Borgelt created this resource"@en ;
     skos:definition "A collection of terms used in various measurement techniques, relevant in the domain of catalysis. (This collection is not exclusive)"@en ;
-    skos:historyNote "0000-0001-5886-7860 Hendrik Borgelt created this resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:member
-        <https://w3id.org/nfdi4cat/voc4cat_0007108> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007109> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007111> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007112> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007113> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007114> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007115> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007116> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007117> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007118> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007119> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007120> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007121> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007122> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007123> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007124> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007125> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007126> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007127> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007128> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007129> ;
+        voc4cat:0007108 ,
+        voc4cat:0007109 ,
+        voc4cat:0007111 ,
+        voc4cat:0007112 ,
+        voc4cat:0007113 ,
+        voc4cat:0007114 ,
+        voc4cat:0007115 ,
+        voc4cat:0007116 ,
+        voc4cat:0007117 ,
+        voc4cat:0007118 ,
+        voc4cat:0007119 ,
+        voc4cat:0007120 ,
+        voc4cat:0007121 ,
+        voc4cat:0007122 ,
+        voc4cat:0007123 ,
+        voc4cat:0007124 ,
+        voc4cat:0007125 ,
+        voc4cat:0007126 ,
+        voc4cat:0007127 ,
+        voc4cat:0007128 ,
+        voc4cat:0007129 ;
     skos:prefLabel "measurement metadata attribute collection"@en ;
 .

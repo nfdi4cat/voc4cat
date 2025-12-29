@@ -1,35 +1,37 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://w3id.org/nfdi4cat/voc4cat_0008098>
+voc4cat:0008098
     a skos:Collection ;
-    dcterms:identifier "voc4cat_0008098"^^xsd:token ;
-    dcterms:isPartOf <https://w3id.org/nfdi4cat/voc4cat> ;
+    dcterms:identifier "0008098"^^xsd:token ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0008098.ttl> ;
     rdfs:isDefinedBy <https://w3id.org/nfdi4cat/voc4cat> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0008098.ttl> ;
+    skos:changeNote "0009-0004-3786-0773 Carla Terboven created the collection"@en ;
     skos:definition "A collection of concepts related to X-ray Absorption Spectroscopy (XAS)."@en ;
-    skos:historyNote "0009-0004-3786-0773 Carla Terboven created the collection"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:member
-        <https://w3id.org/nfdi4cat/voc4cat_0000092> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000286> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0008081> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0008082> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0008083> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0008084> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0008085> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0008086> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0008087> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0008088> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0008089> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0008090> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0008091> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0008092> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0008093> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0008094> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0008095> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0008096> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0008097> ;
+        voc4cat:0000092 ,
+        voc4cat:0000286 ,
+        voc4cat:0008081 ,
+        voc4cat:0008082 ,
+        voc4cat:0008083 ,
+        voc4cat:0008084 ,
+        voc4cat:0008085 ,
+        voc4cat:0008086 ,
+        voc4cat:0008087 ,
+        voc4cat:0008088 ,
+        voc4cat:0008089 ,
+        voc4cat:0008090 ,
+        voc4cat:0008091 ,
+        voc4cat:0008092 ,
+        voc4cat:0008093 ,
+        voc4cat:0008094 ,
+        voc4cat:0008095 ,
+        voc4cat:0008096 ,
+        voc4cat:0008097 ;
     skos:prefLabel "XAS collection"@en ;
 .

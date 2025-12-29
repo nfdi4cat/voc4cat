@@ -1,13 +1,17 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://w3id.org/nfdi4cat/voc4cat_0000061>
+voc4cat:0000061
     a skos:Concept ;
-    dcterms:identifier "voc4cat_0000061"^^xsd:token ;
-    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000187> ;
+    dcterms:identifier "0000061"^^xsd:token ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000061.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000061.ttl> ;
+    skos:broader voc4cat:0000187 ;
+    skos:changeNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:definition "Equipment used in each step of the synthesis of the catalysts. The equipment can include (but not limited to): crucibles, pH meters, condensers, volumetric cylinders, centrifuges, test tubes, flasks, beakers, mechanical shakers, pipettes, syringes, magnetic stirrers, heating plates, filters, funnels, and digital balances."@en ;
-    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:prefLabel "synthesis equipment"@en ;
 .

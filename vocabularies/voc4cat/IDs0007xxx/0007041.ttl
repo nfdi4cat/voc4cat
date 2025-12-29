@@ -1,16 +1,20 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://w3id.org/nfdi4cat/voc4cat_0007041>
+voc4cat:0007041
     a skos:Concept ;
-    dcterms:identifier "voc4cat_0007041"^^xsd:token ;
-    rdfs:isDefinedBy <https://doi.org/10.1351/goldbook.E02035> ;
+    dcterms:identifier "0007041"^^xsd:token ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007041.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007041.ttl> ;
     skos:altLabel "elementary step"@en ;
-    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000181> ;
+    skos:broader voc4cat:0000181 ;
+    skos:changeNote "0000-0002-4041-0165 Julia Schumann created the resource"@en ;
     skos:definition "A reaction for which no reaction intermediates have been detected or need to be postulated in order to describe the chemical reaction on a molecular scale. An elementary reaction is assumed to occur in a single step and to pass through a single transition state."@en ;
-    skos:historyNote "0000-0002-4041-0165 Julia Schumann created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:prefLabel "elementary reaction"@en ;
+    prov:hadPrimarySource <https://doi.org/10.1351/goldbook.E02035> ;
 .

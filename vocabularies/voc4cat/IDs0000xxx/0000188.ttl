@@ -1,16 +1,20 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://w3id.org/nfdi4cat/voc4cat_0000188>
+voc4cat:0000188
     a skos:Concept ;
-    dcterms:identifier "voc4cat_0000188"^^xsd:token ;
-    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000187> ;
+    dcterms:identifier "0000188"^^xsd:token ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000188.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000188.ttl> ;
+    skos:broader voc4cat:0000187 ;
+    skos:changeNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:definition "Components being integral parts of a catalytic reactor."@en ;
-    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:narrower
-        <https://w3id.org/nfdi4cat/voc4cat_0000152> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007020> ;
+        voc4cat:0000152 ,
+        voc4cat:0007020 ;
     skos:prefLabel "reactor equipment"@en ;
 .

@@ -1,23 +1,25 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://w3id.org/nfdi4cat/voc4cat_0007130>
+voc4cat:0007130
     a skos:Collection ;
-    dcterms:identifier "voc4cat_0007130"^^xsd:token ;
-    dcterms:isPartOf <https://w3id.org/nfdi4cat/voc4cat> ;
+    dcterms:identifier "0007130"^^xsd:token ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007130.ttl> ;
     rdfs:isDefinedBy <https://w3id.org/nfdi4cat/voc4cat> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007130.ttl> ;
+    skos:changeNote "0000-0001-5886-7860 Hendrik Borgelt created this resource"@en ;
     skos:definition "Metadata attributes relevant for Scanning Electron Microscopy (SEM)"@en ;
-    skos:historyNote "0000-0001-5886-7860 Hendrik Borgelt created this resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:member
-        <https://w3id.org/nfdi4cat/voc4cat_0007123> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007124> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007125> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007126> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007127> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007128> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007129> ;
+        voc4cat:0007123 ,
+        voc4cat:0007124 ,
+        voc4cat:0007125 ,
+        voc4cat:0007126 ,
+        voc4cat:0007127 ,
+        voc4cat:0007128 ,
+        voc4cat:0007129 ;
     skos:prefLabel "SEM measurement attribute"@en ;
 .

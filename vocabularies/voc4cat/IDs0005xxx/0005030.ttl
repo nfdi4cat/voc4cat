@@ -1,13 +1,17 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://w3id.org/nfdi4cat/voc4cat_0005030>
+voc4cat:0005030
     a skos:Concept ;
-    dcterms:identifier "voc4cat_0005030"^^xsd:token ;
-    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0005018> ;
+    dcterms:identifier "0005030"^^xsd:token ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0005030.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0005030.ttl> ;
+    skos:broader voc4cat:0005018 ;
+    skos:changeNote "0000-0002-5898-1820 David Linke created the resource"@en ;
     skos:definition "The resource is a previous version of another versioned resource. This is useful to refer between versioned resources, for example, \"Python 3.12.0 is_previous_version_of Python 3.12.1\"."@en ;
-    skos:historyNote "0000-0002-5898-1820 David Linke created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:prefLabel "is previous version of"@en ;
 .

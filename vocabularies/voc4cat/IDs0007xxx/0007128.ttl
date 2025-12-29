@@ -1,13 +1,17 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://w3id.org/nfdi4cat/voc4cat_0007128>
+voc4cat:0007128
     a skos:Concept ;
-    dcterms:identifier "voc4cat_0007128"^^xsd:token ;
-    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000186> ;
+    dcterms:identifier "0007128"^^xsd:token ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007128.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007128.ttl> ;
+    skos:broader voc4cat:0000186 ;
+    skos:changeNote "0000-0001-5886-7860 Hendrik Borgelt created this resource"@en ;
     skos:definition "The defined set of dimensions, often expressed as the total number of discrete points or pixels in one or more coordinates, that constitute the structural grid for a data recording."@en ;
-    skos:historyNote "0000-0001-5886-7860 Hendrik Borgelt created this resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:prefLabel "measurement matrix size"@en ;
 .

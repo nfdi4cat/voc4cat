@@ -1,14 +1,18 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://w3id.org/nfdi4cat/voc4cat_0008101>
+voc4cat:0008101
     a skos:Concept ;
-    dcterms:identifier "voc4cat_0008101"^^xsd:token ;
+    dcterms:identifier "0008101"^^xsd:token ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0008101.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0008101.ttl> ;
     skos:altLabel "Metal leaching"@en ;
-    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000185> ;
+    skos:broader voc4cat:0000185 ;
+    skos:changeNote "0000-0001-5161-4801 Arjun Neyyathala created this resource"@en ;
     skos:definition "The loss of catalytically active species from a solid catalyst into the surrounding reaction medium."@en ;
-    skos:historyNote "0000-0001-5161-4801 Arjun Neyyathala created this resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:prefLabel "Catalyst leaching"@en ;
 .

@@ -1,27 +1,31 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://w3id.org/nfdi4cat/voc4cat_0000190>
+voc4cat:0000190
     a skos:Concept ;
-    dcterms:identifier "voc4cat_0000190"^^xsd:token ;
-    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000180> ;
+    dcterms:identifier "0000190"^^xsd:token ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000190.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000190.ttl> ;
+    skos:broader voc4cat:0000180 ;
+    skos:changeNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:definition "Substances used as catalysts, supports, or reactants in catalytic processes."@en ;
-    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:narrower
-        <https://w3id.org/nfdi4cat/voc4cat_0000003> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000005> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000024> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000194> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000197> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000210> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000268> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000270> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000293> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000295> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000300> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000307> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0005056> ;
+        voc4cat:0000003 ,
+        voc4cat:0000005 ,
+        voc4cat:0000024 ,
+        voc4cat:0000194 ,
+        voc4cat:0000197 ,
+        voc4cat:0000210 ,
+        voc4cat:0000268 ,
+        voc4cat:0000270 ,
+        voc4cat:0000293 ,
+        voc4cat:0000295 ,
+        voc4cat:0000300 ,
+        voc4cat:0000307 ,
+        voc4cat:0005056 ;
     skos:prefLabel "material"@en ;
 .

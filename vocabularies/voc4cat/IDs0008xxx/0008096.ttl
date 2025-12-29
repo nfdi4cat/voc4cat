@@ -1,16 +1,20 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://w3id.org/nfdi4cat/voc4cat_0008096>
+voc4cat:0008096
     a skos:Concept ;
-    dcterms:identifier "voc4cat_0008096"^^xsd:token ;
+    dcterms:identifier "0008096"^^xsd:token ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0008096.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0008096.ttl> ;
     skos:altLabel
         "RT"@en ,
         "real time"@en ;
-    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0008100> ;
+    skos:broader voc4cat:0008100 ;
+    skos:changeNote "0009-0004-3786-0773 Carla Terboven created the resource"@en ;
     skos:definition "The total duration over which a measurement is conducted, including both the periods when the detector or measurement system is actively recording events and the periods when it is inactive due to dead time or processing delays."@en ;
-    skos:historyNote "0009-0004-3786-0773 Carla Terboven created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:prefLabel "total measurement time"@en ;
 .

@@ -1,14 +1,18 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://w3id.org/nfdi4cat/voc4cat_0005031>
+voc4cat:0005031
     a skos:Concept ;
-    dcterms:identifier "voc4cat_0005031"^^xsd:token ;
-    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0005018> ;
-    skos:definition """The resource is part of another resource. This relation applies to container-contained type relationships.\r
+    dcterms:identifier "0005031"^^xsd:token ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0005031.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0005031.ttl> ;
+    skos:broader voc4cat:0005018 ;
+    skos:changeNote "0000-0002-5898-1820 David Linke created the resource"@en ;
+    skos:definition """The resource is part of another resource. This relation applies to container-contained type relationships.
 If the relation refers to publishing one resource as part of another resource, use "IS_PUBLISHED_IN" instead. If the relation refers to a versioned resource and non-versioned resource, use "IS_VERSION_OF" instead."""@en ;
-    skos:historyNote "0000-0002-5898-1820 David Linke created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:prefLabel "is part of"@en ;
 .

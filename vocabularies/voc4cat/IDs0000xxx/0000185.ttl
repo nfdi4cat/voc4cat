@@ -1,52 +1,56 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://w3id.org/nfdi4cat/voc4cat_0000185>
+voc4cat:0000185
     a skos:Concept ;
-    dcterms:identifier "voc4cat_0000185"^^xsd:token ;
-    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000182> ;
+    dcterms:identifier "0000185"^^xsd:token ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000185.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000185.ttl> ;
+    skos:broader voc4cat:0000182 ;
+    skos:changeNote "0000-0002-6242-2167 Nikolaos G. Moustakas and 0000-0002-5898-1820 David Linke created the resource"@en ;
     skos:definition "A series of temporal entities, like actions, events, changes, or functions that are not isolated but rather a connected sequence of activities. Processes often involve the transformation of inputs into outputs and can be conceptualized as workflows."@en ;
-    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas and 0000-0002-5898-1820 David Linke created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:narrower
-        <https://w3id.org/nfdi4cat/voc4cat_0000014> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000020> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000045> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000049> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000066> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000087> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000099> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000100> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000123> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000130> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000137> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000141> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000202> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000205> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000206> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000221> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000227> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000239> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000248> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000249> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000250> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000251> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000256> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000262> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000265> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000266> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000269> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000273> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000281> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000285> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000291> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000304> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007029> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007031> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007206> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007238> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0008101> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0008102> ;
+        voc4cat:0000014 ,
+        voc4cat:0000020 ,
+        voc4cat:0000045 ,
+        voc4cat:0000049 ,
+        voc4cat:0000066 ,
+        voc4cat:0000087 ,
+        voc4cat:0000099 ,
+        voc4cat:0000100 ,
+        voc4cat:0000123 ,
+        voc4cat:0000130 ,
+        voc4cat:0000137 ,
+        voc4cat:0000141 ,
+        voc4cat:0000202 ,
+        voc4cat:0000205 ,
+        voc4cat:0000206 ,
+        voc4cat:0000221 ,
+        voc4cat:0000227 ,
+        voc4cat:0000239 ,
+        voc4cat:0000248 ,
+        voc4cat:0000249 ,
+        voc4cat:0000250 ,
+        voc4cat:0000251 ,
+        voc4cat:0000256 ,
+        voc4cat:0000262 ,
+        voc4cat:0000265 ,
+        voc4cat:0000266 ,
+        voc4cat:0000269 ,
+        voc4cat:0000273 ,
+        voc4cat:0000281 ,
+        voc4cat:0000285 ,
+        voc4cat:0000291 ,
+        voc4cat:0000304 ,
+        voc4cat:0007029 ,
+        voc4cat:0007031 ,
+        voc4cat:0007206 ,
+        voc4cat:0007238 ,
+        voc4cat:0008101 ,
+        voc4cat:0008102 ;
     skos:prefLabel "processes"@en ;
 .

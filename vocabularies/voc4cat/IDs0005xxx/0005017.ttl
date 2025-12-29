@@ -1,13 +1,17 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://w3id.org/nfdi4cat/voc4cat_0005017>
+voc4cat:0005017
     a skos:Concept ;
-    dcterms:identifier "voc4cat_0005017"^^xsd:token ;
-    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0005011> ;
+    dcterms:identifier "0005017"^^xsd:token ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0005017.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0005017.ttl> ;
+    skos:broader voc4cat:0005011 ;
+    skos:changeNote "0000-0002-5898-1820 David Linke created the resource"@en ;
     skos:definition "A PID resource category for a data service, which is an organized system of operations that provide data processing functions or access to datasets."@en ;
-    skos:historyNote "0000-0002-5898-1820 David Linke created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:prefLabel "data service"@en ;
 .

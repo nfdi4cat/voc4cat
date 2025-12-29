@@ -1,14 +1,18 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://w3id.org/nfdi4cat/voc4cat_0007211>
+voc4cat:0007211
     a skos:Concept ;
-    dcterms:identifier "voc4cat_0007211"^^xsd:token ;
+    dcterms:identifier "0007211"^^xsd:token ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007211.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007211.ttl> ;
     skos:altLabel "LSV"@en ;
-    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0007237> ;
+    skos:broader voc4cat:0007237 ;
+    skos:changeNote "0009-0008-1278-8890 Michael Götte created the resource"@en ;
     skos:definition "A voltammetry where the voltage changes linearly over time from a initial potential to a final potential."@en ;
-    skos:historyNote "0009-0008-1278-8890 Michael Götte created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:prefLabel "linear sweep voltammetry"@en ;
 .

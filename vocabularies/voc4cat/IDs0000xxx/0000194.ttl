@@ -1,22 +1,26 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://w3id.org/nfdi4cat/voc4cat_0000194>
+voc4cat:0000194
     a skos:Concept ;
-    dcterms:identifier "voc4cat_0000194"^^xsd:token ;
-    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000190> ;
+    dcterms:identifier "0000194"^^xsd:token ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000194.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000194.ttl> ;
+    skos:broader voc4cat:0000190 ;
+    skos:changeNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:definition "A material that initiates or increases the rate of a catalytic reaction, without it being consumed in the process."@en ;
-    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:narrower
-        <https://w3id.org/nfdi4cat/voc4cat_0000002> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000017> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000019> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000038> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000254> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007003> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007015> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0007034> ;
+        voc4cat:0000002 ,
+        voc4cat:0000017 ,
+        voc4cat:0000019 ,
+        voc4cat:0000038 ,
+        voc4cat:0000254 ,
+        voc4cat:0007003 ,
+        voc4cat:0007015 ,
+        voc4cat:0007034 ;
     skos:prefLabel "catalyst"@en ;
 .

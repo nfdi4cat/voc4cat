@@ -1,36 +1,38 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://w3id.org/nfdi4cat/voc4cat_0001900>
+voc4cat:0001900
     a skos:Collection ;
-    dcterms:identifier "voc4cat_0001900"^^xsd:token ;
-    dcterms:isPartOf <https://w3id.org/nfdi4cat/voc4cat> ;
+    dcterms:identifier "0001900"^^xsd:token ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0001900.ttl> ;
     rdfs:isDefinedBy <https://w3id.org/nfdi4cat/voc4cat> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0001900.ttl> ;
+    skos:changeNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:definition "A collection of concepts referring to material  characterization techniques and methods to evaluate their efficiency in photocatalysis."@en ;
-    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:member
-        <https://w3id.org/nfdi4cat/voc4cat_0000067> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000068> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000069> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000070> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000071> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000072> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000073> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000074> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000075> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000076> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000077> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000078> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000079> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000080> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000081> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000082> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000083> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000130> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000137> ,
-        <https://w3id.org/nfdi4cat/voc4cat_0000141> ;
+        voc4cat:0000067 ,
+        voc4cat:0000068 ,
+        voc4cat:0000069 ,
+        voc4cat:0000070 ,
+        voc4cat:0000071 ,
+        voc4cat:0000072 ,
+        voc4cat:0000073 ,
+        voc4cat:0000074 ,
+        voc4cat:0000075 ,
+        voc4cat:0000076 ,
+        voc4cat:0000077 ,
+        voc4cat:0000078 ,
+        voc4cat:0000079 ,
+        voc4cat:0000080 ,
+        voc4cat:0000081 ,
+        voc4cat:0000082 ,
+        voc4cat:0000083 ,
+        voc4cat:0000130 ,
+        voc4cat:0000137 ,
+        voc4cat:0000141 ;
     skos:prefLabel "Characterization and evaluation techniques"@en ;
 .

@@ -6,7 +6,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 voc4cat:0000182
     a skos:Concept ;
+    dcterms:created "2024-08-21"^^xsd:date ;
     dcterms:identifier "0000182"^^xsd:token ;
+    dcterms:modified "2025-12-29"^^xsd:date ;
     dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000182.ttl> ;
     rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000182.ttl> ;
     skos:changeNote "0000-0002-6242-2167 Nikolaos G. Moustakas and 0000-0002-5898-1820 David Linke created the resource"@en ;

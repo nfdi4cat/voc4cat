@@ -16,7 +16,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://orcid.org/0000-0002-5898-1820> ,
         <https://orcid.org/0000-0002-6242-2167> ;
     dcterms:identifier "https://doi.org/10.5281/zenodo.8313340" ;
-    dcterms:modified "2025-12-28"^^xsd:date ;
+    dcterms:modified "2025-12-29"^^xsd:date ;
     dcterms:publisher <https://w3id.org/nfdi4cat/> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.8313340> ;
     owl:versionInfo "v_40c0ddaf" ;

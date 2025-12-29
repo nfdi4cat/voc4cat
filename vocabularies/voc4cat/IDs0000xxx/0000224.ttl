@@ -6,7 +6,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 voc4cat:0000224
     a skos:Concept ;
+    dcterms:created "2025-04-02"^^xsd:date ;
     dcterms:identifier "0000224"^^xsd:token ;
+    dcterms:modified "2025-12-29"^^xsd:date ;
     dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000224.ttl> ;
     rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000224.ttl> ;
     skos:altLabel

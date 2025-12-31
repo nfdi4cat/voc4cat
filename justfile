@@ -40,7 +40,7 @@ setup:
 upgrade:
   uv tool install --upgrade voc4cat --with git+https://github.com/dalito/pyLODE.git@nfdi4cat-2.x
 
-# Check the voc4cat.xlsx file in inbox/ for errors
+# Check the vocab_example.xlsx file in inbox/ for errors
 [group('individual steps')]
 check: _fake_actions_env
   @voc4cat --version
@@ -53,18 +53,18 @@ check: _fake_actions_env
 [group('individual steps')]
 convert: _fake_actions_env
   # make a backup of the original file just in case
-  @cp inbox-excel-vocabs/voc4cat.xlsx inbox-excel-vocabs/voc4cat.xlsx.backup
+  @cp inbox-excel-vocabs/vocab_example.xlsx inbox-excel-vocabs/vocab_example.xlsx.backup
   @voc4cat convert --config _main_branch/idranges.toml --logfile outbox/voc4cat.log --outdir outbox inbox-excel-vocabs/
   @if [ -z "$(ls outbox/*.ttl 2>/dev/null)" ]; then \
     @echo "No ttl file in outbox. Building joined vocabulary ttl-file from individual ttl-files in vocabulary.\n" && \
-    @voc4cat transform --join --logfile outbox/voc4cat.log --outdir outbox/ vocabularies/ ;\
+    @voc4cat transform --join --config _main_branch/idranges.toml --logfile outbox/voc4cat.log --outdir outbox/ vocabularies/ ;\
   fi
 
   #=== post-convert checks ===
   # Delete xlsx in outbox that may be present from former runs
-  @rm -f outbox/voc4cat.xlsx
+  @rm -f outbox/vocab_example.xlsx
   # check all ttl file(s) in outbox
-  @voc4cat check --config _main_branch/idranges.toml --logfile outbox/voc4cat.log outbox/
+  @voc4cat check --redundant-hierarchies --config _main_branch/idranges.toml --logfile outbox/voc4cat.log outbox/
   # check if vocabulary changes are allowed
   @voc4cat check --config _main_branch/idranges.toml --logfile outbox/voc4cat.log --ci-post _main_branch/vocabularies outbox/
 
@@ -75,14 +75,19 @@ docs:
 
 # Rebuild the xlsx file from the joined ttl file.
 [group('individual steps')]
-xlsx:
-  @rm -f outbox/voc4cat.xlsx
-  @voc4cat convert --config idranges.toml --logfile outbox/voc4cat.log --template templates/voc4cat_template_043.xlsx outbox/
+xlsx: _fake_actions_env
+  @rm -f outbox/vocab_example.xlsx
+  @voc4cat convert --config _main_branch/idranges.toml --logfile outbox/voc4cat.log --template templates/default_sheets.xlsx outbox/
 
 # Join individual ttl files in vocabularies/ to one turtle file in outbox/
 [group('individual steps')]
 join:
-  @voc4cat transform --logfile outbox/voc4cat.log -O outbox --join vocabularies/
+  @voc4cat transform --join --config idranges.toml --logfile outbox/voc4cat.log --outdir outbox vocabularies/
+
+# Add provenance information to all ttl files in vocabularies/
+[group('individual steps')]
+prov:
+  voc4cat transform --prov-from-git --inplace --config idranges.toml --logfile outbox/voc4cat.log vocabularies/
 
 # Run all steps as in gh-actions: check xlsx, convert to SKOS, build docs, re-build xlsx
 all: check convert docs xlsx

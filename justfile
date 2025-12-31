@@ -53,7 +53,8 @@ check: _fake_actions_env
 [group('individual steps')]
 convert: _fake_actions_env
   # make a backup of the original file just in case
-  @cp inbox-excel-vocabs/vocab_example.xlsx inbox-excel-vocabs/vocab_example.xlsx.backup
+  @mkdir -p inbox-excel-vocabs/backup
+  @cp inbox-excel-vocabs/*.xlsx inbox-excel-vocabs/backup
   @voc4cat convert --config _main_branch/idranges.toml --logfile outbox/voc4cat.log --outdir outbox inbox-excel-vocabs/
   @if [ -z "$(ls outbox/*.ttl 2>/dev/null)" ]; then \
     @echo "No ttl file in outbox. Building joined vocabulary ttl-file from individual ttl-files in vocabulary.\n" && \
@@ -62,7 +63,7 @@ convert: _fake_actions_env
 
   #=== post-convert checks ===
   # Delete xlsx in outbox that may be present from former runs
-  @rm -f outbox/vocab_example.xlsx
+  @rm -f outbox/*.xlsx
   # check all ttl file(s) in outbox
   @voc4cat check --redundant-hierarchies --config _main_branch/idranges.toml --logfile outbox/voc4cat.log outbox/
   # check if vocabulary changes are allowed
@@ -76,7 +77,7 @@ docs:
 # Rebuild the xlsx file from the joined ttl file.
 [group('individual steps')]
 xlsx: _fake_actions_env
-  @rm -f outbox/vocab_example.xlsx
+  @rm -f outbox/*.xlsx
   @voc4cat convert --config _main_branch/idranges.toml --logfile outbox/voc4cat.log --template templates/default_sheets.xlsx outbox/
 
 # Join individual ttl files in vocabularies/ to one turtle file in outbox/

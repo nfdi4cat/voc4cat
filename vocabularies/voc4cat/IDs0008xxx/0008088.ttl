@@ -11,9 +11,7 @@ voc4cat:0008088
     dcterms:modified "2025-12-31"^^xsd:date ;
     dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0008088.ttl> ;
     rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0008088.ttl> ;
-    skos:broader
-        voc4cat:0000186 ,
-        voc4cat:0008087 ;
+    skos:broader voc4cat:0008087 ;
     skos:changeNote "0009-0004-3786-0773 Carla Terboven created the resource"@en ;
     skos:definition "Absorbance measured on a reference material under the same experimental conditions as the sample. Typically used for calibration, normalization, or comparison."@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;

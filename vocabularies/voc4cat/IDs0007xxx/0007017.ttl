@@ -17,7 +17,6 @@ voc4cat:0007017
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:narrower
         voc4cat:0000193 ,
-        voc4cat:0007035 ,
-        voc4cat:0007036 ;
+        voc4cat:0007035 ;
     skos:prefLabel "reactor"@en ;
 .

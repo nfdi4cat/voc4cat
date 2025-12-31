@@ -12,9 +12,7 @@ voc4cat:0000037
     dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000037.ttl> ;
     rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000037.ttl> ;
     skos:altLabel "substrate surface area"@en ;
-    skos:broader
-        voc4cat:0000033 ,
-        voc4cat:0000186 ;
+    skos:broader voc4cat:0000033 ;
     skos:changeNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:definition "The surface area of the substrate."@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;

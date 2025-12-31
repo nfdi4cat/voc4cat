@@ -1,7 +1,6 @@
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
@@ -16,10 +15,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://orcid.org/0000-0002-5898-1820> ,
         <https://orcid.org/0000-0002-6242-2167> ;
     dcterms:identifier "https://doi.org/10.5281/zenodo.8313340" ;
-    dcterms:modified "2025-12-28"^^xsd:date ;
+    dcterms:modified "2025-12-31"^^xsd:date ;
     dcterms:publisher <https://w3id.org/nfdi4cat/> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.8313340> ;
-    owl:versionInfo "v_40c0ddaf" ;
     skos:definition """The Voc4Cat vocabulary is a collection of concepts (or "terms") from the field of catalysis and related disciplines such as chemical engineering or materials science. For each concept, Voc4Cat provides a unique resolvable persistent identifier and a carefully written textual definition, which reflects the community's shared understanding of the concept's meaning.
 
 By using the identifiers provided by Voc4Cat to annotate data, rather than just words and symbols, ambiguity as to what is meant is avoided. Producing Voc4Cat-annotated data contributes to realising the vision of machine-actionability described as the ultimate goal of the FAIR principles.

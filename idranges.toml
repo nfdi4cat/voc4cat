@@ -11,7 +11,7 @@ single_vocab = true
 [vocabs.voc4cat]
 # Length of integer IDs in vocabulary. IDs will be left-padded with zeros to specified length.
 id_length = 7
-# permanent part of IRIs defined in the vocabulary
+# permanent part of IRIs defined in the vocabulary (used to construct concept IRIs)
 permanent_iri_part = "https://w3id.org/nfdi4cat/voc4cat_"
 
 # Section to configure checks (useful in CI pipeline)
@@ -19,6 +19,8 @@ permanent_iri_part = "https://w3id.org/nfdi4cat/voc4cat_"
 # Deleting allowed (relevant in CI-pipeline)
 allow_delete = false
 
+# ==== Prefix Map ====
+# Namespace prefix mappings used for CURIE expansion/compression
 [vocabs.voc4cat.prefix_map]
 voc4cat = "https://w3id.org/nfdi4cat/voc4cat_"
 
@@ -30,6 +32,10 @@ voc4cat = "https://w3id.org/nfdi4cat/voc4cat_"
 # gh_name = "<string>"        - user or organisation name on github
 # orcid = "<string> or <url>" - contributor's ORCID, e.g. "0000-0002-1825-0097" or "https://orcid.org/0000-0002-1825-0097"
 # ror_id = "<url>"            - ROR identifier of home organisation, e.g. "https://ror.org/04fa4r544"
+# name = "<string>"           - (optional) human-readable name for contributor display (e.g. from ORCID profile)
+#
+# Note: Contributors are auto-derived from ID range usage. Anyone who used IDs
+# from their reserved range will be listed as dct:contributor in the output.
 
 [[vocabs.voc4cat.id_range]]
 first_id = 1

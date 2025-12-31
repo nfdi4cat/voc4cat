@@ -11,9 +11,7 @@ voc4cat:0007036
     dcterms:modified "2025-12-31"^^xsd:date ;
     dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007036.ttl> ;
     rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007036.ttl> ;
-    skos:broader
-        voc4cat:0007017 ,
-        voc4cat:0007035 ;
+    skos:broader voc4cat:0007035 ;
     skos:changeNote "0000-0002-4041-0165 Julia Schumann created the resource"@en ;
     skos:definition "A chemical reactor in which the reaction is carried out in the presence of a catalyst."@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;

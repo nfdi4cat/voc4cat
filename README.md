@@ -5,14 +5,14 @@
 
 # A SKOS vocabulary for the catalysis disciplines
 
-> **The first collection of terms was published in June 2023.**
-> **Since then we are continuously extending the vocabulary with the help of the community to cover all subdisciplines of catalysis.**
-> **Please join if you like to help.**
+This repository helps to create and maintain your own SKOS-vocabularies on GitHub.
+It builds upon [voc4cat-tool](https://github.com/nfdi4cat/voc4cat-tool) and GitHub features like pull requests, gh-actions, gh-pages etc. to reduce the workload for contributors and editors.
+The template is maintained as part of the [NFDI4Cat](http://www.nfdi4cat.org) initiative.
 
 The Voc4Cat [vocabulary](https://w3id.org/nfdi4cat/voc4cat/dev) and its [current guidelines](https://nfdi4cat.github.io/voc4cat/docs_usage/guidelines.html) have been created and are maintained as part of the [NFDI4Cat](http://nfdi4cat.org) initiative. The guidelines have also been published at [Zenodo](https://doi.org/10.5281/zenodo.13773255).
 
-This repository was created from the template [voc4cat-template](https://github.com/nfdi4cat/voc4cat-template).
-It uses the [voc4cat-tool](https://github.com/nfdi4cat/voc4cat-tool) and GitHub features like pull requests, actions, pages etc. to reduce the maintenance workload for contributors and editors.
+Please follow the [Setting up a Vocabulary Project](https://nfdi4cat.github.io/voc4cat-tool/user-guide/project-setup.html) guide in the voc4cat-tool documentation. 
+See also [README_TEMPLATE.md](/README_TEMPLATE.md#how-to-start) included in this repositroy for help and guidance on using the template.
 
 ## Basic principles
 

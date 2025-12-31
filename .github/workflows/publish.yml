@@ -61,8 +61,8 @@ jobs:
           python -m pip install --upgrade pip setuptools wheel
 
           # Select to install a stable tagged version or main branch (in development)
-          python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@v1.0.0
-          # python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@main
+          # python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@v1.0.0
+          python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@main
 
           # install custom pylode 2.x
           python -m pip install git+https://github.com/dalito/pyLODE.git@nfdi4cat-2.x
@@ -93,22 +93,10 @@ jobs:
           # Using a template is optional and gives just a warning if missing.
           voc4cat convert --config idranges.toml --logfile publish/latest/voc4cat.log --template templates/default_sheets.xlsx publish/latest/
 
-      - name: Run voc4cat (build vocabulary in xml/rdf from Excel file)
-        # Passing the config is important to make use of the prefixes therein.
-        run: |
-          voc4cat convert --config idranges.toml --logfile publish/latest/voc4cat.log --outputformat xml publish/latest/voc4cat.xlsx
-
       - name: Copy release to release-name directory
         run: |
           mkdir -p publish/${GITHUB_REF_NAME}
           cp -r publish/latest/. publish/${GITHUB_REF_NAME}/
-
-      - name: Build Sphinx documentation (website)
-        run: |
-          python -VV
-          python -m pip install -r docs/requirements.txt --force
-          sphinx-build --nitpicky --fail-on-warning --keep-going docs docs/_build
-          cp -r docs/_build/. publish/
 
       - name: Deploy updated gh-pages content
         # This replaces all prior content in gh-pages branch. But we have

@@ -1,9 +1,8 @@
 **Please drop/add your edited Excel-vocabulary file into this folder and create a pull request.**
 
-See also [../README.md](../README.md) for the steps in the contribution process.
+If you need more guidance, see the [How-to-Cuontribute](https://nfdi4cat.github.io/voc4cat/docs_usage/how-to-contribute.html) guide.
 
-- If required change the file name back to its original name `voc4cat.xlsx`.
-- Copy your file with the updates to this folder.
+- Make sure that the file with your contributions is named exactly `voc4cat.xlsx`. Using the correct file name is essential to start the processing.
 - Add the file to git and submit a pull request. On GitHub the file can be added by dropping it to this folder.
 - If there are no validation errors the turtle files of the vocabulary in `vocabularies/voc4cat/` are updated via gh-actions and committed to your pull request. The Excel file is removed from the pull request.
 - If there are errors, you can examine them in the run log.

@@ -5,11 +5,14 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <https://example.org/test/0000010>
     a skos:Collection ;
+    dcterms:created "2023-08-10"^^xsd:date ;
     dcterms:identifier "0000010"^^xsd:token ;
-    dcterms:isPartOf <https://example.org/test/> ;
+    dcterms:modified "2025-12-27"^^xsd:date ;
+    dcterms:provenance <https://github.com/NFDI4Cat/voc4cat-template/blame/main/vocabularies/vocab_example/0000010.ttl> ;
     rdfs:isDefinedBy <https://example.org/test/> ;
+    rdfs:seeAlso <https://github.com/NFDI4Cat/voc4cat-template/blame/main/vocabularies/vocab_example/0000010.ttl> ;
+    skos:changeNote "0000-0001-2345-6789 Created collection"@en ;
     skos:definition "Collection of terms related to linked data."@en ;
-    skos:historyNote "0000-0001-2345-6789 Created collection"@en ;
     skos:inScheme <https://example.org/test/> ;
     skos:member
         <https://example.org/test/0000001> ,

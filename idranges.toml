@@ -1,6 +1,9 @@
 # ==== General Configuration ====
 # Documentation of the TOML format: https://toml.io/en/latest
 
+# Configuration format version (for future compatibility)
+config_version = "v1.0"
+
 # Allow only a single vocabulary (default) or multiple vocabularies in the repository.
 single_vocab = true
 
@@ -11,16 +14,90 @@ single_vocab = true
 [vocabs.vocab_example]
 # Length of integer IDs in vocabulary. IDs will be left-padded with zeros to specified length.
 id_length = 7
-# permanent part of IRIs defined in the vocabulary
+# permanent part of IRIs defined in the vocabulary (used to construct concept IRIs)
 permanent_iri_part = "https://example.org/test/"
 
+# ==== ConceptScheme Metadata ====
+# Fields marked MANDATORY must be filled before use.
+
+# MANDATORY: IRI for the vocabulary (skos:ConceptScheme)
+vocabulary_iri = "https://example.org/vocab/"
+
+# Optional: Registered (or preferred) prefix for this vocabulary
+prefix = "ex"
+
+# MANDATORY: Title of the vocabulary
+title = "My Vocabulary"
+
+# MANDATORY: General description of the vocabulary
+description = "Description of the vocabulary"
+
+# MANDATORY: Date of creation (ISO-8601 format: YYYY-MM-DD)
+created_date = "2025-01-01"
+
+# MANDATORY: Creator(s) - multi-line text, each line: "<name> <orcid-URL or ror-URL>"
+creator = """
+Alice Smith https://orcid.org/0000-0001-2345-6788
+Sofia Garcia https://orcid.org/0000-0001-2345-6789
+"""
+
+# Optional: Publisher(s) - multi-line text, each line: "<name> <orcid-URL or ror-URL>"
+# publisher = """
+# Example Organization https://ror.org/04fa4r544
+# """
+
+# Optional: Custodian(s) - multi-line text, each line: "<name> <orcid-URL or ror-URL>"
+# custodian = """
+# Alice Smith https://orcid.org/0000-0001-2345-6789
+# """
+
+# Optional: DOI or other catalogue persistent identifier
+# catalogue_pid = ""
+
+# Optional: URL of documentation or guidelines
+# documentation = ""
+
+# Optional: URL of issue tracker
+# issue_tracker = ""
+
+# Optional: URL of helpdesk
+# helpdesk = ""
+
+# MANDATORY: URL of repository or online vocabulary editor
+# repository = "https://github.com/YOUR-ORG/YOUR-REPO"
+repository = "https://github.com/NFDI4Cat/voc4cat-template"
+
+# Optional: Jinja template for provenance URLs (git blame links)
+# Available template variables: entity_id, vocab_name, version, github_repo
+# Default: GitHub blame URL format (auto-detected from repository field)
+# Examples for other forges:
+# GitHub (default): "https://github.com/{{ github_repo }}/blame/{{ version }}/vocabularies/{{ vocab_name }}/{{ entity_id }}.ttl"
+# GitLab: "https://gitlab.com/myorg/myrepo/-/blame/{{ version }}/vocabularies/{{ vocab_name }}/{{ entity_id }}.ttl"
+# Gitea: "https://gitea.example.com/myorg/myrepo/blame/{{ version }}/vocabularies/{{ vocab_name }}/{{ entity_id }}.ttl"
+# provenance_url_template = ""
+
+# Optional: URL of homepage
+# homepage = ""
+
+# Optional: URL of SHACL profile(s) the vocabulary conforms to
+# conforms_to = ""
+
+# Optional: Path to local SHACL profile file for validation
+# Path is relative to this idranges.toml file location
+# profile_local_path = "profiles/vocpub-5.2-validator.ttl"
+
+# ==== Checks Configuration ====
 # Section to configure checks (useful in CI pipeline)
 [vocabs.vocab_example.checks]
 # Deleting allowed (relevant in CI-pipeline)
 allow_delete = false
 
+# ==== Prefix Map ====
+# Namespace prefix mappings used for CURIE expansion/compression
 [vocabs.vocab_example.prefix_map]
 ex = "https://example.org/"
+
+# ==== ID Ranges ====
 # Section of IDranges for coordinating the allocation of numeric ID ranges to
 # contributors for each vocabulary. Each idrange contains the same keys:
 #
@@ -29,18 +106,23 @@ ex = "https://example.org/"
 # gh_name = "<string>"        - user or organisation name on github
 # orcid = "<string> or <url>" - contributor's ORCID, e.g. "0000-0002-1825-0097" or "https://orcid.org/0000-0002-1825-0097"
 # ror_id = "<url>"            - ROR identifier of home organisation, e.g. "https://ror.org/04fa4r544"
+# name = "<string>"           - (optional) human-readable name for contributor display (e.g. from ORCID profile)
+#
+# Note: Contributors are auto-derived from ID range usage. Anyone who used IDs
+# from their reserved range will be listed as dct:contributor in the output.
 
 [[vocabs.vocab_example.id_range]]
 first_id = 1
 last_id = 10
 gh_name = "sofia-garcia"
+name = "Sofia Garcia"
 orcid = "0000-0001-2345-6789"
 ror_id = "https://ror.org/04fa4r544"
 
 [[vocabs.vocab_example.id_range]]
 first_id = 11
 last_id = 20
-gh_name = "unknown"
+gh_name = "another-contributor"
 orcid = ""
 ror_id = ""
 

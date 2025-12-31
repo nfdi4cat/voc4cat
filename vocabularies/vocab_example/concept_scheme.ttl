@@ -1,23 +1,43 @@
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <https://example.org/test/>
     a skos:ConceptScheme ;
-    dcterms:created "2023-03-10"^^xsd:date ;
-    dcterms:creator <http://example.org/nfdi4cat/> ;
-    dcterms:hasPart <https://example.org/test/0000010> ;
+    dcterms:created "2025-01-01"^^xsd:date ;
+    dcterms:creator
+        <https://orcid.org/0000-0001-2345-6788> ,
+        <https://orcid.org/0000-0001-2345-6789> ;
     dcterms:identifier ""^^xsd:token ;
-    dcterms:modified "2023-03-10"^^xsd:date ;
+    dcterms:modified "2025-12-27"^^xsd:date ;
     dcterms:publisher <http://example.org/nfdi4cat/> ;
     owl:versionInfo "v2023-03-10" ;
-    skos:definition "A test vocabulary for the voc4cat template"@en ;
+    skos:definition "Description of the vocabulary"@en ;
     skos:hasTopConcept
         <https://example.org/test/0000001> ,
         <https://example.org/test/0000003> ;
-    skos:historyNote "https://orcid.org/0000-0001-2345-6789 Sofia Garcia"@en ;
-    skos:prefLabel "Test-of-Voc4Cat"@en ;
+    skos:historyNote "Created 2025-01-01."@en ;
+    skos:prefLabel "My Vocabulary"@en ;
     dcat:contactPoint "Sofia Garcia (orcid:0000-0001-2345-6789)" ;
+.
+
+<http://example.org/nfdi4cat/>
+    a schema:Organization ;
+    schema:name "http://example.org/nfdi4cat/" ;
+    schema:url "http://example.org/nfdi4cat/"^^xsd:anyURI ;
+.
+
+<https://orcid.org/0000-0001-2345-6788>
+    a schema:Person ;
+    schema:name "Alice Smith" ;
+    schema:url "https://orcid.org/0000-0001-2345-6788"^^xsd:anyURI ;
+.
+
+<https://orcid.org/0000-0001-2345-6789>
+    a schema:Person ;
+    schema:name "Sofia Garcia" ;
+    schema:url "https://orcid.org/0000-0001-2345-6789"^^xsd:anyURI ;
 .

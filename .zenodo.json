@@ -9,9 +9,9 @@
       "affiliation": "Leibniz Institute for Catalysis, Albert-Einstein-Str. 29 A, 18059 Rostock, Germany"
     }
   ],
-  "description": "<p>A repository template with workflows to maintain SKOS vocabularies on GitHub as a community or for yourself.</p>\n\n<p>The workflows use the software <a href=\"https://github.com/nfdi4cat/voc4cat-tool/\">voc4cat-tool</a> and GitHub features like pull requests, gh-actions, gh-pages etc. to reduce the maintenance workload for contributors and editors. The template has been developed as part of the <a href=\"http://www.nfdi4cat.org\">NFDI4Cat</a> initiative and is used for the SKOS vocabulary for catalysis <a href=\"https://github.com/nfdi4cat/voc4cat/\"><b>voc4cat</b></a>.</p>",
+  "description": "<p>A repository template with workflows to maintain SKOS vocabularies on GitHub as a community or for yourself.</p>\n\n<p>The workflows use the software <a href=\"https://github.com/nfdi4cat/voc4cat-tool/\">voc4cat-tool</a> and GitHub features like pull requests, gh-actions, gh-pages etc. to reduce the maintenance workload for contributors and editors. The <a href=\"https://github.com/nfdi4cat/voc4cat-template/\"><b>voc4cat-template</b></a> has been developed as part of the <a href=\"http://www.nfdi4cat.org\">NFDI4Cat</a> initiative and is used for the SKOS vocabulary for catalysis <a href=\"https://github.com/nfdi4cat/voc4cat/\"><b>voc4cat</b></a>.</p>",
   "keywords": [
-    "SKOS", "vocabulary", "maintenance", "xlsx", "linked data", "rdf"
+    "SKOS", "vocabulary", "maintenance", "xlsx", "linked data", "RDF"
   ],
   "license": "CC0-1.0",
   "related_identifiers": [

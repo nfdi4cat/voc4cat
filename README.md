@@ -5,12 +5,13 @@
 # A template to maintain vocabularies on GitHub
 
 This repository helps to create and maintain your own SKOS-vocabularies on GitHub.
-It builds upon the [voc4cat-tool](https://github.com/nfdi4cat/voc4cat-tool) and GitHub features like pull requests, gh-actions, gh-pages etc. to reduce the maintenance workload for contributors and editors.
+It builds upon [voc4cat-tool](https://github.com/nfdi4cat/voc4cat-tool) and GitHub features like pull requests, gh-actions, gh-pages etc. to reduce the workload for contributors and editors.
 The template is maintained as part of the [NFDI4Cat](http://www.nfdi4cat.org) initiative.
 
 ## How to start?
 
-Please see [README_TEMPLATE.md](/README_TEMPLATE.md#how-to-start) for help on getting started and guidance on using the template.
+Please follow the [Setting up a Vocabulary Project](https://nfdi4cat.github.io/voc4cat-tool/user-guide/project-setup.html) guide in the voc4cat-tool documentation. 
+See also [README_TEMPLATE.md](/README_TEMPLATE.md#how-to-start) included in this repositroy for help and guidance on using the template.
 
 *If you based your own vocabulary on this template, you will need to adjust this section.
 The contents in [README_TEMPLATE.md](/README_TEMPLATE.md) should give you a good start for adjusting your README.md (this file).*

@@ -53,7 +53,8 @@ check: _fake_actions_env
 [group('individual steps')]
 convert: _fake_actions_env
   # make a backup of the original file just in case
-  @cp inbox-excel-vocabs/voc4cat.xlsx inbox-excel-vocabs/voc4cat.xlsx.backup
+  @mkdir -p inbox-excel-vocabs/backup
+  @cp inbox-excel-vocabs/*.xlsx inbox-excel-vocabs/backup
   @voc4cat convert --config _main_branch/idranges.toml --logfile outbox/voc4cat.log --outdir outbox inbox-excel-vocabs/
   @if [ -z "$(ls outbox/*.ttl 2>/dev/null)" ]; then \
     @echo "No ttl file in outbox. Building joined vocabulary ttl-file from individual ttl-files in vocabulary.\n" && \

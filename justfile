@@ -40,7 +40,7 @@ setup:
 upgrade:
   uv tool install --upgrade voc4cat --with git+https://github.com/dalito/pyLODE.git@nfdi4cat-2.x
 
-# Check the vocab_example.xlsx file in inbox/ for errors
+# Check the *.xlsx file(s) in inbox/ for errors
 [group('individual steps')]
 check: _fake_actions_env
   @voc4cat --version

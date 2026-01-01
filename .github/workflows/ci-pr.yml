@@ -131,14 +131,14 @@ jobs:
 
       - name: Store artifacts
         if: ${{ always() }}
-        uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f
         with:
           name: voc4cat-outbox_${{ env.RUN_DATE }}_run${{ GITHUB.RUN_ID }}
           path: outbox/
 
       - name: Add/stage vocabulary changes
         # Pinning of action managed by dependabot
-        uses: stefanzweifel/git-auto-commit-action@28e16e81777b558cc906c8750092100bbb34c5e3
+        uses: stefanzweifel/git-auto-commit-action@04702edda442b2e678b25b537cec683a1493fcb9
         with:
           # glob pattern of files which should be added to the commit
           file_pattern: 'vocabularies/\*.ttl'
@@ -150,7 +150,7 @@ jobs:
 
       - name: Commit vocabulary changes & xlsx cleanup on behalf of PR-author
         # Pinning of action managed by dependabot
-        uses: stefanzweifel/git-auto-commit-action@28e16e81777b558cc906c8750092100bbb34c5e3
+        uses: stefanzweifel/git-auto-commit-action@04702edda442b2e678b25b537cec683a1493fcb9
         with:
           commit_user_name: voc4cat-CI-bot
           commit_message: 'CI: vocabulary update in ${{ GITHUB.SERVER_URL }}/${{ GITHUB.REPOSITORY }}/actions/runs/${{ GITHUB.RUN_ID }}'

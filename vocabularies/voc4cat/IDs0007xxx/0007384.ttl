@@ -1,13 +1,18 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://w3id.org/nfdi4cat/voc4cat_0007384>
+voc4cat:0007384
     a skos:Concept ;
-    dcterms:identifier "voc4cat_0007384"^^xsd:token ;
+    dcterms:created "2025-04-14"^^xsd:date ;
+    dcterms:identifier "0007384"^^xsd:token ;
+    dcterms:modified "2026-01-01"^^xsd:date ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007384.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007384.ttl> ;
     skos:altLabel "wall_thickness"@en ;
     skos:definition "the thickness of the wall of a chemical reactor"@en ;
-    skos:historyNote "0000-0001-8623-047X Sofia Angeli created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:prefLabel "reactor wall thickness"@en ;
     skos:topConceptOf <https://w3id.org/nfdi4cat/voc4cat> ;

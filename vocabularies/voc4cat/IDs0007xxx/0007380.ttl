@@ -1,10 +1,16 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://w3id.org/nfdi4cat/voc4cat_0007380>
+voc4cat:0007380
     a skos:Concept ;
-    dcterms:identifier "voc4cat_0007380"^^xsd:token ;
+    dcterms:created "2025-04-14"^^xsd:date ;
+    dcterms:identifier "0007380"^^xsd:token ;
+    dcterms:modified "2026-01-01"^^xsd:date ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007380.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007380.ttl> ;
     skos:altLabel
         "NP diameter"@en ,
         "NP size"@en ,
@@ -12,7 +18,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         "NP_size"@en ,
         "metal nanoparticle diameter"@en ;
     skos:definition "The size/diameter of the metal nanoparticles dispersed on a porous support"@en ;
-    skos:historyNote "0000-0001-8623-047X Sofia Angeli created the resource"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:prefLabel "metal nanoparticle size"@en ;
     skos:topConceptOf <https://w3id.org/nfdi4cat/voc4cat> ;

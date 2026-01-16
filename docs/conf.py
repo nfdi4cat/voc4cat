@@ -61,6 +61,7 @@ myst_heading_anchors = 3
 
 # -- Options for sitemap extension -------------------------------------------
 # https://sphinx-sitemap.readthedocs.io/en/latest/configuration.html
+sitemap_url_scheme = "{link}"  # use html_baseurl as is, without language code prefix
 sitemap_show_lastmod = True
 sitemap_indent = 2
 

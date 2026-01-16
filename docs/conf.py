@@ -9,6 +9,7 @@
 project = 'Voc4Cat'
 copyright = '2024, Voc4Cat contributors'
 author = 'David Linke, Nikolaos Moustakas, and Voc4Cat contributors'
+html_baseurl = 'https://nfdi4cat.github.io/voc4cat/'  # canonical base URL
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -22,6 +23,7 @@ extensions = [
     "sphinx_copybutton",
     "sphinx_design",  # design extensions like tabs/cards
     "sphinxcontrib.mermaid",  # diagrams via MyST directive {mermaid}
+    "sphinx_sitemap",
 ]
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'README.md']
@@ -56,6 +58,11 @@ myst_enable_extensions = [
 
 # generate slug anchors for headings (levels 1..3) so fragment links resolve
 myst_heading_anchors = 3
+
+# -- Options for sitemap extension -------------------------------------------
+# https://sphinx-sitemap.readthedocs.io/en/latest/configuration.html
+sitemap_show_lastmod = True
+sitemap_indent = 2
 
 # -- Options for Furo theme ---------------------------------------------------
 # https://pradyunsg.me/furo/customisation/

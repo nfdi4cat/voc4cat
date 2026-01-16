@@ -6,4 +6,5 @@ furo
 sphinx_inline_tabs
 sphinx-copybutton
 sphinx-design
+sphinx-sitemap
 sphinxcontrib-mermaid

@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description lang=en": "Release checklist for the vocabulary: prepare branch, update docs and metadata, tag vYYYY-MM-DD, monitor publish workflow, verify URLs. Learn more here."
+---
+
 # Making Releases
 
 ```{note} This guide is only relevant for maintainers with commit rights.

@@ -1,5 +1,8 @@
 ---
 hide-toc: true
+myst:
+  html_meta:
+    "description lang=en": "Voc4Cat vocabulary for catalysis: docs, releases, RDF downloads, and why curated terms support FAIR data. Learn more here."
 ---
 
 # Welcome to Voc4Cat

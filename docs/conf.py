@@ -35,6 +35,7 @@ html_theme = 'furo'
 html_static_path = ['_static']
 html_favicon = '_static/favicon_32.png'
 html_last_updated_fmt = '%Y-%m-%d'
+html_extra_path = ['_extra']  # files to copy to output root
 
 # -- Options for todo extension -----------------------------------
 # https://www.sphinx-doc.org/en/master/usage/extensions/todo.html#module-sphinx.ext.todo

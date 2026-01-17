@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description lang=en": "Build docs locally with Python/uv, install requirements, run sphinx-build, and preview vocabulary HTML. Learn more here."
+---
+
 # Building the docs locally
 
 You need on your computer:

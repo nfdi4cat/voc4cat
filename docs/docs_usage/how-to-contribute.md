@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description lang=en": "Contribution guide for the Voc4Cat vocabulary: Learn how to request IDs, edit voc4cat.xlsx, and submit a PR with Excel updates."
+---
+
 # How to contribute to Voc4Cat?
 
 The contribution process is almost the same as in source code repositories.

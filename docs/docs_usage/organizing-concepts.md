@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description lang=en": "Learn how Voc4Cat is organised, from top concepts to its use of different hierarchy types like IS-A, HAS-A or PART-OF."
+---
+
 # Hierarchies, Relations, and Collections
 
 ## The Three Fundamental Semantic Relations

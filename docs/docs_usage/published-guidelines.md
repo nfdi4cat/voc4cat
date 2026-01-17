@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description lang=en": "Citation details for published Voc4Cat vocabulary guidelines on Zenodo and the canonical online version. Learn more here."
+---
+
 # Published Voc4Cat Guidelines
 
 ````{admonition} Suggested citation for the most current version [published on Zenodo](https://doi.org/10.5281/zenodo.15006962)

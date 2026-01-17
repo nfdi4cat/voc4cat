@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description lang=en": "Voc4Cat project context: community, curator governance, citations, licensing, and funding for the vocabulary and tools. Learn more here."
+---
+
 # About Voc4Cat
 
 ## Community

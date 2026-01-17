@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description lang=en": "Editorial rules for Voc4Cat vocabulary and terminology: labels, definitions, spelling, grammar, typography, and SKOS mappings. Learn more here."
+---
+
 # Guidelines for Voc4Cat
 
 The Voc4Cat guidelines have been developed as a blueprint for

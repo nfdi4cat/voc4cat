@@ -1,3 +1,9 @@
+---
+myst:
+  html_meta:
+    "description lang=en": "Maintainer steps to update vocabulary ID ranges: pull main, edit idranges.toml, commit, push, open PR, and clean up branches. Learn more here."
+---
+
 # Handling ID-requests
 
 ```{note} This guide is only relevant for maintainers with commit rights.

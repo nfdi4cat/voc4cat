@@ -148,15 +148,15 @@ PART-OF relations should be modeled in a **separate data model or ontology** whi
 
 The concepts included in Voc4Cat are structured under the following **Top-Concepts**:
 
-|     | **Compact URI**     | **Top-Concept**               | **Definition**                                                                                                                                                      |
-| --- | ------------------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1   | voc4cat:0000180     | Physical entity               | Entity with a concrete and physical nature.                                                                                                                         |
-| 2   | voc4cat:0000181     | Non-temporal abstract entity  | Any entity that cannot be located in space-time. E.g., mathematical entities, formal semantics elements, regions within dimensional spaces, ideas, models.          |
-| 3   | voc4cat:0000182     | Temporal abstract entity      | Anything that has a temporal dimension, whether it is an instantaneous point in time, a duration, or a sequence of events.                                          |
-| 3.1 | voc4cat:0000183     | Events                        | An occurrence or happening, marked by a specific point in time. Events can be observed, recorded, and may have an impact on the state of the system or entities involved. |
-| 3.2 | voc4cat:0000184     | Actions                       | Temporal entities that have a duration and occur at specific points in time.                                                                                        |
-| 3.3 | voc4cat:0000185     | Processes                     | A series of temporal entities, like actions, events, changes, or functions that are not isolated but rather a connected sequence of activities. Processes often involve the transformation of inputs into outputs and can be conceptualized as workflows. |
-| 4   | voc4cat:0000186     | Attributes                    | A characteristic of an entity that is intrinsic to and cannot exist without the entity. (Properties, characteristics, qualities of things, states).                 |
+|     | **Compact URI**     | **Top-Concept**               | **Definition**                                                                                                                                                      | **Examples** | 
+| --- | ------------------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
+| 1   | voc4cat:0000180     | Physical entity               | Entity with a concrete and physical nature.                                                                                                                         | electrode, photocatalyst |
+| 2   | voc4cat:0000181     | Non-temporal abstract entity  | Any entity that cannot be located in space-time. E.g., mathematical entities, formal semantics elements, regions within dimensional spaces, ideas, models.          | valence band, Fermi level |
+| 3   | voc4cat:0000182     | Temporal abstract entity      | Anything that has a temporal dimension, whether it is an instantaneous point in time, a duration, or a sequence of events.                                          |   |
+| 3.1 | voc4cat:0000183     | Events                        | An occurrence or happening, marked by a specific point in time. Events can be observed, recorded, and may have an impact on the state of the system or entities involved. | charge transport, oxidation |
+| 3.2 | voc4cat:0000184     | Actions                       | Temporal entities that have a duration and occur at specific points in time.                                                                                        | purging, calcination |
+| 3.3 | voc4cat:0000185     | Processes                     | A series of temporal entities, like actions, events, changes, or functions that are not isolated but rather a connected sequence of activities. Processes often involve the transformation of inputs into outputs and can be conceptualized as workflows. | hydrothermal synthesis, catalyst deactivation |
+| 4   | voc4cat:0000186     | Attributes                    | A characteristic of an entity that is intrinsic to and cannot exist without the entity. E.g., properties, characteristics, qualities of things, states.                 | reaction rate, sample mass |
 
 These top concepts are similar to those in top-level ontologies (BFO, SIO, DOLCE), to what is proposed in ANSI/NISO Z39.19-2005 (R2010), or what was proposed as minimal set of terms for a re-organization of AgroVoc.
 

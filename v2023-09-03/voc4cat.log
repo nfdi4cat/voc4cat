@@ -1,0 +1,66 @@
+2023-08-17 13:57:25|voc4cat.cli         |INFO    |Executing cmd: voc4cat transform --logfile publish/latest/voc4cat.log --join publish/latest/
+2023-08-17 13:57:25|voc4cat.cli         |DEBUG   |Processing common options.
+2023-08-17 13:57:25|voc4cat.transform   |DEBUG   |Transform subcommand started!
+2023-08-17 13:57:25|voc4cat.transform   |DEBUG   |Processing rdf files in "publish/latest/voc4cat"
+2023-08-17 13:57:26|voc4cat.transform   |INFO    |-> joined vocabulary into: publish/latest/voc4cat.ttl
+2023-08-17 13:57:26|voc4cat.cli         |INFO    |Executing cmd: voc4cat docs --force --logfile publish/latest/voc4cat.log publish/latest/
+2023-08-17 13:57:26|voc4cat.cli         |DEBUG   |Processing common options.
+2023-08-17 13:57:26|voc4cat.docs        |DEBUG   |Docs subcommand started!
+2023-08-17 13:57:26|voc4cat.docs        |DEBUG   |Processing "publish/latest/voc4cat.ttl"
+2023-08-17 13:57:26|pylode.common       |DEBUG   |Application dir: /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/pylode
+2023-08-17 13:57:28|voc4cat.docs        |INFO    |-> built pyLODE documentation for publish/latest/voc4cat.ttl
+2023-08-17 13:57:29|voc4cat.cli         |INFO    |Executing cmd: voc4cat convert --logfile publish/latest/voc4cat.log --template templates/voc4cat_template_043.xlsx publish/latest/
+2023-08-17 13:57:29|voc4cat.cli         |DEBUG   |Processing common options.
+2023-08-17 13:57:29|voc4cat.convert     |DEBUG   |Convert subcommand started!
+2023-08-17 13:57:29|voc4cat.convert     |DEBUG   |Processing "publish/latest/voc4cat.ttl"
+2023-08-17 13:57:29|voc4cat.convert     |INFO    |-> successfully converted to publish/latest/voc4cat.xlsx
+2023-09-03 21:50:34|voc4cat.cli         |INFO    |Executing cmd: voc4cat transform --logfile publish/latest/voc4cat.log --join publish/latest/
+2023-09-03 21:50:34|voc4cat.cli         |DEBUG   |Processing common options.
+2023-09-03 21:50:34|voc4cat.transform   |DEBUG   |Transform subcommand started!
+2023-09-03 21:50:34|voc4cat.transform   |DEBUG   |Processing rdf files in "publish/latest/voc4cat"
+2023-09-03 21:50:34|voc4cat.transform   |INFO    |-> joined vocabulary into: publish/latest/voc4cat.ttl
+2023-09-03 21:50:35|voc4cat.cli         |INFO    |Executing cmd: voc4cat docs --force --logfile publish/latest/voc4cat.log publish/latest/
+2023-09-03 21:50:35|voc4cat.cli         |DEBUG   |Processing common options.
+2023-09-03 21:50:35|voc4cat.docs        |DEBUG   |Docs subcommand started!
+2023-09-03 21:50:35|voc4cat.docs        |DEBUG   |Processing "publish/latest/voc4cat.ttl"
+2023-09-03 21:50:35|pylode.common       |DEBUG   |Application dir: /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/pylode
+2023-09-03 21:50:37|voc4cat.docs        |INFO    |-> built pyLODE documentation for publish/latest/voc4cat.ttl
+2023-09-03 21:50:37|voc4cat.config      |DEBUG   |Config loaded from: idranges.toml
+2023-09-03 21:50:37|voc4cat.gh_index    |DEBUG   |Running cmd: git -C . tag --list v[0-9]*-[0-9]*-[0-9]*
+2023-09-03 21:50:37|voc4cat.gh_index    |DEBUG   |Cmd output: b'v2023-08-17\nv2023-09-03\n'
+2023-09-03 21:50:37|voc4cat.gh_index    |DEBUG   |Repository name (from env.var): "voc4cat"
+2023-09-03 21:50:37|voc4cat.gh_index    |DEBUG   |Adding tag "v2023-08-17" to index.html
+2023-09-03 21:50:37|voc4cat.gh_index    |DEBUG   |Adding tag "v2023-09-03" to index.html
+2023-09-03 21:50:37|voc4cat.cli         |INFO    |Executing cmd: voc4cat convert --logfile publish/latest/voc4cat.log --template templates/voc4cat_template_043.xlsx publish/latest/
+2023-09-03 21:50:37|voc4cat.cli         |DEBUG   |Processing common options.
+2023-09-03 21:50:37|voc4cat.convert     |DEBUG   |Convert subcommand started!
+2023-09-03 21:50:37|voc4cat.convert     |DEBUG   |Processing "publish/latest/voc4cat.ttl"
+2023-09-03 21:50:38|voc4cat.convert     |INFO    |-> successfully converted to publish/latest/voc4cat.xlsx
+2023-09-03 21:50:38|voc4cat.utils       |DEBUG   |Adjusted table "concepts" in sheet "Concepts" from {A2:I20} to {A2:I181}.
+2023-09-03 21:50:38|voc4cat.utils       |DEBUG   |Adjusted table "concept_relations" in sheet "Additional Concept Features" from {A2:F20} to {A2:F181}.
+2023-09-03 21:50:38|voc4cat.utils       |DEBUG   |Adjusted table "prefixes" in sheet "Prefix Sheet" from {A1:B19} to {A1:B30}.
+2023-09-03 21:56:42|voc4cat.cli         |INFO    |Executing cmd: voc4cat transform --logfile publish/latest/voc4cat.log --join publish/latest/
+2023-09-03 21:56:42|voc4cat.cli         |DEBUG   |Processing common options.
+2023-09-03 21:56:42|voc4cat.transform   |DEBUG   |Transform subcommand started!
+2023-09-03 21:56:42|voc4cat.transform   |DEBUG   |Processing rdf files in "publish/latest/voc4cat"
+2023-09-03 21:56:42|voc4cat.transform   |INFO    |-> joined vocabulary into: publish/latest/voc4cat.ttl
+2023-09-03 21:56:43|voc4cat.cli         |INFO    |Executing cmd: voc4cat docs --force --logfile publish/latest/voc4cat.log publish/latest/
+2023-09-03 21:56:43|voc4cat.cli         |DEBUG   |Processing common options.
+2023-09-03 21:56:43|voc4cat.docs        |DEBUG   |Docs subcommand started!
+2023-09-03 21:56:43|voc4cat.docs        |DEBUG   |Processing "publish/latest/voc4cat.ttl"
+2023-09-03 21:56:43|pylode.common       |DEBUG   |Application dir: /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/pylode
+2023-09-03 21:56:45|voc4cat.docs        |INFO    |-> built pyLODE documentation for publish/latest/voc4cat.ttl
+2023-09-03 21:56:45|voc4cat.config      |DEBUG   |Config loaded from: idranges.toml
+2023-09-03 21:56:45|voc4cat.gh_index    |DEBUG   |Running cmd: git -C . tag --list v[0-9]*-[0-9]*-[0-9]*
+2023-09-03 21:56:45|voc4cat.gh_index    |DEBUG   |Cmd output: b'v2023-08-17\nv2023-09-03\n'
+2023-09-03 21:56:45|voc4cat.gh_index    |DEBUG   |Repository name (from env.var): "voc4cat"
+2023-09-03 21:56:45|voc4cat.gh_index    |DEBUG   |Adding tag "v2023-08-17" to index.html
+2023-09-03 21:56:45|voc4cat.gh_index    |DEBUG   |Adding tag "v2023-09-03" to index.html
+2023-09-03 21:56:45|voc4cat.cli         |INFO    |Executing cmd: voc4cat convert --logfile publish/latest/voc4cat.log --template templates/voc4cat_template_043.xlsx publish/latest/
+2023-09-03 21:56:45|voc4cat.cli         |DEBUG   |Processing common options.
+2023-09-03 21:56:45|voc4cat.convert     |DEBUG   |Convert subcommand started!
+2023-09-03 21:56:45|voc4cat.convert     |DEBUG   |Processing "publish/latest/voc4cat.ttl"
+2023-09-03 21:56:46|voc4cat.convert     |INFO    |-> successfully converted to publish/latest/voc4cat.xlsx
+2023-09-03 21:56:46|voc4cat.utils       |DEBUG   |Adjusted table "concepts" in sheet "Concepts" from {A2:I20} to {A2:I181}.
+2023-09-03 21:56:46|voc4cat.utils       |DEBUG   |Adjusted table "concept_relations" in sheet "Additional Concept Features" from {A2:F20} to {A2:F181}.
+2023-09-03 21:56:46|voc4cat.utils       |DEBUG   |Adjusted table "prefixes" in sheet "Prefix Sheet" from {A1:B19} to {A1:B30}.

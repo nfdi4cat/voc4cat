@@ -39,7 +39,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
         with:
           # Using fetch-depth 0 is the only way to get all tags which are needed for building docs.
           fetch-depth: 0
@@ -47,7 +47,7 @@ jobs:
           persist-credentials: true
 
       - name: Checkout gh-pages branch to dir publish/
-        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
         with:
           ref: gh-pages
           path: publish

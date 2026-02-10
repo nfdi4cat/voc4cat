@@ -1,0 +1,18 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+voc4cat:0007137
+    a skos:Concept ;
+    dcterms:identifier "0007137"^^xsd:token ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007137.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007137.ttl> ;
+    skos:altLabel "ICP-OES"@en ;
+    skos:broader voc4cat:0007146 ;
+    skos:changeNote "0000-0001-5886-7860 Hendrik Borgelt created this resource"@en ;
+    skos:definition "An analytical technique that uses a high‑temperature argon plasma to excite atoms and ions in a sample so they emit light at characteristic wavelengths for the purpose of determining the type and concentration of elements present, typically at trace to ultra‑trace levels."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:prefLabel "inductively coupled plasma optical emission spectrometry"@en ;
+.

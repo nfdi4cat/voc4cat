@@ -9,9 +9,9 @@ voc4cat:0008098
     dcterms:created "2025-08-27"^^xsd:date ;
     dcterms:identifier "0008098"^^xsd:token ;
     dcterms:modified "2025-12-31"^^xsd:date ;
-    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0008098.ttl> ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008098.ttl> ;
     rdfs:isDefinedBy <https://w3id.org/nfdi4cat/voc4cat> ;
-    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0008098.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008098.ttl> ;
     skos:changeNote "0009-0004-3786-0773 Carla Terboven created the collection"@en ;
     skos:definition "A collection of concepts related to X-ray Absorption Spectroscopy (XAS)."@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;

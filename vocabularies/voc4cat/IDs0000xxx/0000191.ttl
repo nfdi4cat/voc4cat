@@ -9,8 +9,8 @@ voc4cat:0000191
     dcterms:created "2023-08-11"^^xsd:date ;
     dcterms:identifier "0000191"^^xsd:token ;
     dcterms:modified "2025-12-31"^^xsd:date ;
-    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000191.ttl> ;
-    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000191.ttl> ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000191.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000191.ttl> ;
     skos:broader voc4cat:0000192 ;
     skos:changeNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource, 0009-0004-3786-0773 Carla Terboven added a child"@en ;
     skos:definition "A device designed to identify a measurable change or signal in a system, often providing a binary (detected / not detected) or a qualitative response."@en ;

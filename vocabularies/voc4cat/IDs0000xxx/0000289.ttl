@@ -9,8 +9,8 @@ voc4cat:0000289
     dcterms:created "2025-04-15"^^xsd:date ;
     dcterms:identifier "0000289"^^xsd:token ;
     dcterms:modified "2025-12-31"^^xsd:date ;
-    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000289.ttl> ;
-    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000289.ttl> ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000289.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000289.ttl> ;
     skos:altLabel
         "CO oxidation reaction"@en ,
         "carbon monoxide oxidation"@en ,

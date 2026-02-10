@@ -9,8 +9,8 @@ voc4cat:0007008
     dcterms:created "2024-02-02"^^xsd:date ;
     dcterms:identifier "0007008"^^xsd:token ;
     dcterms:modified "2025-12-31"^^xsd:date ;
-    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007008.ttl> ;
-    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007008.ttl> ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007008.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007008.ttl> ;
     skos:broader voc4cat:0000184 ;
     skos:changeNote "0000-0002-4041-0165 Julia Schumann created the resource"@en ;
     skos:definition "A type of catalytic test, where the depletion of formation of chemical substances is measured, usually performed under differential conditions"@en ;

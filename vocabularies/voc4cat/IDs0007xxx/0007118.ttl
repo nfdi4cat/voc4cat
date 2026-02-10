@@ -9,8 +9,8 @@ voc4cat:0007118
     dcterms:created "2025-07-25"^^xsd:date ;
     dcterms:identifier "0007118"^^xsd:token ;
     dcterms:modified "2025-12-31"^^xsd:date ;
-    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007118.ttl> ;
-    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007118.ttl> ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007118.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007118.ttl> ;
     skos:altLabel "energy fluctuation coefficient; charge generation variability factor"@en ;
     skos:broader voc4cat:0000186 ;
     skos:changeNote "0000-0001-5886-7860 Hendrik Borgelt created this resource, 0009-0006-1375-2895 Marc Völkenrath contributed to the definition of the resource"@en ;

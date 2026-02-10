@@ -9,8 +9,8 @@ voc4cat:0007041
     dcterms:created "2025-01-07"^^xsd:date ;
     dcterms:identifier "0007041"^^xsd:token ;
     dcterms:modified "2025-12-31"^^xsd:date ;
-    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007041.ttl> ;
-    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007041.ttl> ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007041.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007041.ttl> ;
     skos:altLabel "elementary step"@en ;
     skos:broader voc4cat:0000181 ;
     skos:changeNote """2025-12-30 Complete rewrite of definition folowing OBO-style genus-differentia by gh:dalito

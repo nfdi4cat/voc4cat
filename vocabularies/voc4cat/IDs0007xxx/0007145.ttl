@@ -1,0 +1,18 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+voc4cat:0007145
+    a skos:Concept ;
+    dcterms:identifier "0007145"^^xsd:token ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007145.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007145.ttl> ;
+    skos:altLabel "inert diluent; bed diluent; dilution solids"@en ;
+    skos:broader voc4cat:0000190 ;
+    skos:changeNote "0000-0001-5886-7860 Hendrik Borgelt created this resource"@en ;
+    skos:definition "An inert solid mixed with catalyst particles in a fixed bed to modify bed properties (e.g., improve heat transfer, hydrodynamics or isothermicity) without participating in the reaction."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:prefLabel "catalyst dilution material"@en ;
+.

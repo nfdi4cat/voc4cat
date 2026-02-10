@@ -9,8 +9,8 @@ voc4cat:0000186
     dcterms:created "2023-08-11"^^xsd:date ;
     dcterms:identifier "0000186"^^xsd:token ;
     dcterms:modified "2025-12-31"^^xsd:date ;
-    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000186.ttl> ;
-    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000186.ttl> ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000186.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000186.ttl> ;
     skos:changeNote "0000-0002-6242-2167 Nikolaos G. Moustakas and 0000-0002-5898-1820 David Linke created the resource"@en ;
     skos:definition "A characteristic of an entity that is intrinsic to and cannot exist without the entity. E.g., properties, characteristics, qualities of things, states."@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
@@ -119,6 +119,13 @@ voc4cat:0000186
         voc4cat:0007127 ,
         voc4cat:0007128 ,
         voc4cat:0007129 ,
+        voc4cat:0007133 ,
+        voc4cat:0007134 ,
+        voc4cat:0007136 ,
+        voc4cat:0007139 ,
+        voc4cat:0007140 ,
+        voc4cat:0007144 ,
+        voc4cat:0007149 ,
         voc4cat:0007210 ,
         voc4cat:0007219 ,
         voc4cat:0007220 ,

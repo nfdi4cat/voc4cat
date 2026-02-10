@@ -9,8 +9,8 @@ voc4cat:0000105
     dcterms:created "2023-08-11"^^xsd:date ;
     dcterms:identifier "0000105"^^xsd:token ;
     dcterms:modified "2025-12-31"^^xsd:date ;
-    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000105.ttl> ;
-    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000105.ttl> ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000105.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000105.ttl> ;
     skos:broader voc4cat:0000181 ;
     skos:changeNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:definition "Electron donors or hole scavengers used to reduce the recombination tendency of electrons and holes. Sacrificial reagents are used in catalysis to study an oxidation or reduction reaction separately."@en ;

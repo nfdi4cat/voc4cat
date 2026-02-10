@@ -9,8 +9,8 @@ voc4cat:0005054
     dcterms:created "2025-01-23"^^xsd:date ;
     dcterms:identifier "0005054"^^xsd:token ;
     dcterms:modified "2025-12-31"^^xsd:date ;
-    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0005054.ttl> ;
-    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0005054.ttl> ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0005xxx/0005054.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0005xxx/0005054.ttl> ;
     skos:broader voc4cat:0005051 ;
     skos:changeNote "0000-0002-5898-1820 David Linke created the resource"@en ;
     skos:definition "The persistent identifier is obsolete, e.g. because the resource is referenced by another persistent identifier."@en ;

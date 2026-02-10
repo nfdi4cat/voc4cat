@@ -9,8 +9,8 @@ voc4cat:0007256
     dcterms:created "2024-02-28"^^xsd:date ;
     dcterms:identifier "0007256"^^xsd:token ;
     dcterms:modified "2025-12-31"^^xsd:date ;
-    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007256.ttl> ;
-    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007256.ttl> ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007256.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007256.ttl> ;
     skos:broader voc4cat:0007249 ;
     skos:changeNote "0009-0008-1278-8890 Michael Götte created the resource"@en ;
     skos:definition "An electrochemical cell that converts chemical energy into electrical energy. A cell in which chemical reactions occur spontaneously at the electrodes when they are connected through an external circuit, producing an electrical current."@en ;

@@ -1,0 +1,18 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+voc4cat:0007138
+    a skos:Concept ;
+    dcterms:identifier "0007138"^^xsd:token ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007138.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007138.ttl> ;
+    skos:altLabel "ICP-MS"@en ;
+    skos:broader voc4cat:0000137 ;
+    skos:changeNote "0000-0001-5886-7860 Hendrik Borgelt created this resource"@en ;
+    skos:definition "An analytical technique that uses a high‑temperature argon plasma to ionize elements in a sample and a mass spectrometer to separate and quantify those ions based on their mass‑to‑charge ratio enabling highly sensitive, multi‑element trace and ultra‑trace analysis."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:prefLabel "inductively coupled plasma mass spectrometry"@en ;
+.

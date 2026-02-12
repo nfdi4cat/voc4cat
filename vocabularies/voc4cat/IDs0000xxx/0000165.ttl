@@ -9,8 +9,8 @@ voc4cat:0000165
     dcterms:created "2023-08-11"^^xsd:date ;
     dcterms:identifier "0000165"^^xsd:token ;
     dcterms:modified "2025-12-31"^^xsd:date ;
-    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000165.ttl> ;
-    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000165.ttl> ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000165.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000165.ttl> ;
     skos:broader voc4cat:0000189 ;
     skos:changeNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:definition "All the necessary equipment needed to perform a catalytic experiment involving irradiation. The system apart from the light source can include, filters, power units, lamp cooling devices etc.."@en ;

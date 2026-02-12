@@ -9,8 +9,8 @@ voc4cat:0005028
     dcterms:created "2025-01-23"^^xsd:date ;
     dcterms:identifier "0005028"^^xsd:token ;
     dcterms:modified "2025-12-31"^^xsd:date ;
-    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0005028.ttl> ;
-    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0005028.ttl> ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0005xxx/0005028.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0005xxx/0005028.ttl> ;
     skos:broader voc4cat:0005018 ;
     skos:changeNote "0000-0002-5898-1820 David Linke created the resource"@en ;
     skos:definition "The resource is a version of another resource. This is useful to refer to an abstract resource that has different versions, for example, \"Python 3.12.4 is version of Python\"."@en ;

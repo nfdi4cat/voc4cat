@@ -9,8 +9,8 @@ voc4cat:0000136
     dcterms:created "2023-08-11"^^xsd:date ;
     dcterms:identifier "0000136"^^xsd:token ;
     dcterms:modified "2025-12-31"^^xsd:date ;
-    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000136.ttl> ;
-    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000136.ttl> ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000136.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000136.ttl> ;
     skos:broader voc4cat:0000184 ;
     skos:changeNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:definition "A process in which gaseous substances of known purity and concentration are introduced to the gas chromatograph and the respective area and retention time of the resulting peaks are identified. This process when concluded, allows for the calculation of concentrations of products and intermediates of the photoreaction."@en ;

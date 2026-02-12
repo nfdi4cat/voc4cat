@@ -9,8 +9,8 @@ voc4cat:0000292
     dcterms:created "2025-04-15"^^xsd:date ;
     dcterms:identifier "0000292"^^xsd:token ;
     dcterms:modified "2025-12-31"^^xsd:date ;
-    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000292.ttl> ;
-    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000292.ttl> ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000292.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000292.ttl> ;
     skos:broader voc4cat:0000181 ;
     skos:changeNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource, 0000-0001-6434-6623 Aleksandr Fedorov defined the resource"@en ;
     skos:definition "An industrial term that covers the Fischer-Tropsch process and all the systems, equipment, and engineering methods used to apply it at commercial scale. This includes reactors, control systems, and plant designs used to produce synthetic fuels using the Fischer-Tropsch synthesis."@en ;

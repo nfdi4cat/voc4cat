@@ -9,8 +9,8 @@ voc4cat:0005012
     dcterms:created "2025-01-23"^^xsd:date ;
     dcterms:identifier "0005012"^^xsd:token ;
     dcterms:modified "2025-12-31"^^xsd:date ;
-    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0005012.ttl> ;
-    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0005012.ttl> ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0005xxx/0005012.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0005xxx/0005012.ttl> ;
     skos:broader voc4cat:0005011 ;
     skos:changeNote "0000-0002-5898-1820 David Linke created the resource"@en ;
     skos:definition "A PID resource category for a collection, which is a group of resources and/or other collections."@en ;

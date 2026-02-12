@@ -9,8 +9,8 @@ voc4cat:0005004
     dcterms:created "2024-02-28"^^xsd:date ;
     dcterms:identifier "0005004"^^xsd:token ;
     dcterms:modified "2025-12-31"^^xsd:date ;
-    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0005004.ttl> ;
-    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0005004.ttl> ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0005xxx/0005004.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0005xxx/0005004.ttl> ;
     skos:broader
         voc4cat:0005001 ,
         voc4cat:0005002 ,

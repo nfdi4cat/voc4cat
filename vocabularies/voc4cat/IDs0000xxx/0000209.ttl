@@ -9,8 +9,8 @@ voc4cat:0000209
     dcterms:created "2024-12-09"^^xsd:date ;
     dcterms:identifier "0000209"^^xsd:token ;
     dcterms:modified "2025-12-31"^^xsd:date ;
-    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000209.ttl> ;
-    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000209.ttl> ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000209.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000209.ttl> ;
     skos:broader voc4cat:0007249 ;
     skos:changeNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:definition "A fuel cell is an electrochemical device that converts the chemical energy of a fuel, often hydrogen, and an oxidizing agent, typically oxygen, into electrical energy, with water and heat as the main byproducts."@en ;

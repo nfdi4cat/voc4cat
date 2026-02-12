@@ -9,8 +9,8 @@ voc4cat:0000208
     dcterms:created "2023-08-11"^^xsd:date ;
     dcterms:identifier "0000208"^^xsd:token ;
     dcterms:modified "2025-12-31"^^xsd:date ;
-    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000208.ttl> ;
-    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000208.ttl> ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000208.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000208.ttl> ;
     skos:broader voc4cat:0000196 ;
     skos:changeNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:definition "A type of catalysis where the rate of a chemical reaction is increased by the addition of a substoichiometric quantity of an organic (non-metallic) compound."@en ;

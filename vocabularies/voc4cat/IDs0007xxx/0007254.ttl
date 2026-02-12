@@ -9,8 +9,8 @@ voc4cat:0007254
     dcterms:created "2024-02-28"^^xsd:date ;
     dcterms:identifier "0007254"^^xsd:token ;
     dcterms:modified "2025-12-31"^^xsd:date ;
-    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007254.ttl> ;
-    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007254.ttl> ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007254.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007254.ttl> ;
     skos:broader voc4cat:0007201 ;
     skos:changeNote "0009-0008-1278-8890 Michael Götte created the resource"@en ;
     skos:definition "The electrode where reduction occurs in an electrochemical cell. It is the negative electrode in an electrolytic cell, while it is the positive electrode in a galvanic cell."@en ;

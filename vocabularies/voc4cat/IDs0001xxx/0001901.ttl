@@ -9,9 +9,9 @@ voc4cat:0001901
     dcterms:created "2023-08-11"^^xsd:date ;
     dcterms:identifier "0001901"^^xsd:token ;
     dcterms:modified "2025-12-31"^^xsd:date ;
-    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0001901.ttl> ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0001xxx/0001901.ttl> ;
     rdfs:isDefinedBy <https://w3id.org/nfdi4cat/voc4cat> ;
-    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0001901.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0001xxx/0001901.ttl> ;
     skos:changeNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the collection, 0000-0002-5898-1820 David Linke updated members"@en ;
     skos:definition "A collection of concepts referring to photocatalysis."@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;

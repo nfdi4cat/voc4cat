@@ -9,8 +9,8 @@ voc4cat:0000259
     dcterms:created "2025-04-11"^^xsd:date ;
     dcterms:identifier "0000259"^^xsd:token ;
     dcterms:modified "2025-12-31"^^xsd:date ;
-    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000259.ttl> ;
-    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000259.ttl> ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000259.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000259.ttl> ;
     skos:altLabel
         "CO hydrogenation reaction"@en ,
         "carbon dioxide hydrogenation"@en ,

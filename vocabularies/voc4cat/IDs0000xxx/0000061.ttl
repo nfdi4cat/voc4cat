@@ -9,8 +9,8 @@ voc4cat:0000061
     dcterms:created "2023-08-11"^^xsd:date ;
     dcterms:identifier "0000061"^^xsd:token ;
     dcterms:modified "2025-12-31"^^xsd:date ;
-    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000061.ttl> ;
-    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000061.ttl> ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000061.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000061.ttl> ;
     skos:broader voc4cat:0000187 ;
     skos:changeNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:definition "Equipment used in each step of the synthesis of the catalysts. The equipment can include (but not limited to): crucibles, pH meters, condensers, volumetric cylinders, centrifuges, test tubes, flasks, beakers, mechanical shakers, pipettes, syringes, magnetic stirrers, heating plates, filters, funnels, and digital balances."@en ;

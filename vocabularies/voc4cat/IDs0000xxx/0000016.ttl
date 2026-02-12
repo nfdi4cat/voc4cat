@@ -9,8 +9,8 @@ voc4cat:0000016
     dcterms:created "2023-08-11"^^xsd:date ;
     dcterms:identifier "0000016"^^xsd:token ;
     dcterms:modified "2025-12-31"^^xsd:date ;
-    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000016.ttl> ;
-    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000016.ttl> ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000016.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000016.ttl> ;
     skos:broader voc4cat:0000186 ;
     skos:changeNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource, 0000-0002-4041-0165 Julia Schumann generalized the definition"@en ;
     skos:definition "The form in which the catalyst is introduced to the reaction chamber. This can include e.g., powders, pellets or thin films deposited on a substrate."@en ;

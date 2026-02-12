@@ -9,8 +9,8 @@ voc4cat:0007102
     dcterms:created "2024-05-10"^^xsd:date ;
     dcterms:identifier "0007102"^^xsd:token ;
     dcterms:modified "2025-12-31"^^xsd:date ;
-    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007102.ttl> ;
-    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007102.ttl> ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007102.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007102.ttl> ;
     skos:altLabel "PFR model"@en ;
     skos:broader voc4cat:0007101 ;
     skos:changeNote "0000-0001-5886-7860 Hendrik Borgelt created this resource, 0000-0002-5898-1820 David Linke contributed to the definition of the resource"@en ;

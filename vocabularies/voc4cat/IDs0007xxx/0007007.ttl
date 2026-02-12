@@ -9,8 +9,8 @@ voc4cat:0007007
     dcterms:created "2024-02-02"^^xsd:date ;
     dcterms:identifier "0007007"^^xsd:token ;
     dcterms:modified "2025-12-31"^^xsd:date ;
-    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007007.ttl> ;
-    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007007.ttl> ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007007.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007007.ttl> ;
     skos:broader voc4cat:0000184 ;
     skos:changeNote "0000-0002-4041-0165 Julia Schumann created the resource"@en ;
     skos:definition "A type of catalytic test, where the performance of the catalyst is measured over an extended time period. Not to be performed at full conversion to be able to see catalyst deactivation, but usually also not at differential conditions to see the effect of product concentration on the catalyst."@en ;

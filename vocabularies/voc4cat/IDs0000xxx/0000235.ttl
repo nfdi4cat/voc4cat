@@ -9,8 +9,8 @@ voc4cat:0000235
     dcterms:created "2025-04-02"^^xsd:date ;
     dcterms:identifier "0000235"^^xsd:token ;
     dcterms:modified "2025-12-31"^^xsd:date ;
-    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000235.ttl> ;
-    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000235.ttl> ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000235.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000235.ttl> ;
     skos:broader voc4cat:0000181 ;
     skos:changeNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:definition "The interaction between at least two constituent parts (e.g., substances, processes, chemical species) to produce a combined effect greater than the sum of their individual effects, resulting in a more significant outcome than each part could achieve alone."@en ;

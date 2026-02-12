@@ -9,8 +9,8 @@ voc4cat:0000301
     dcterms:created "2023-08-11"^^xsd:date ;
     dcterms:identifier "0000301"^^xsd:token ;
     dcterms:modified "2025-12-31"^^xsd:date ;
-    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000301.ttl> ;
-    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000301.ttl> ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000301.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000301.ttl> ;
     skos:broader voc4cat:0000181 ;
     skos:changeNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:definition "A Lewis acid is a molecular entity that functions as an electron-pair acceptor, forming a coordinate covalent bond with a Lewis base through interaction with its lone electron pair."@en ;

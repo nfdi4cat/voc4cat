@@ -9,8 +9,8 @@ voc4cat:0007125
     dcterms:created "2025-11-18"^^xsd:date ;
     dcterms:identifier "0007125"^^xsd:token ;
     dcterms:modified "2025-12-31"^^xsd:date ;
-    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007125.ttl> ;
-    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007125.ttl> ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007125.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007125.ttl> ;
     skos:broader voc4cat:0000186 ;
     skos:changeNote "0000-0001-5886-7860 Hendrik Borgelt created this resource"@en ;
     skos:definition "The complete period during which a detector actively accumulates photons or other signal-generating particles to constitute a single, distinct measurement."@en ;

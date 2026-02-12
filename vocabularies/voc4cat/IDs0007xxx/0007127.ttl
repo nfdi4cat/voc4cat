@@ -9,8 +9,8 @@ voc4cat:0007127
     dcterms:created "2025-11-18"^^xsd:date ;
     dcterms:identifier "0007127"^^xsd:token ;
     dcterms:modified "2025-12-31"^^xsd:date ;
-    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007127.ttl> ;
-    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007127.ttl> ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007127.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007127.ttl> ;
     skos:broader voc4cat:0000186 ;
     skos:changeNote "0000-0001-5886-7860 Hendrik Borgelt created this resource"@en ;
     skos:definition "The calibrated span, from a minimum to a maximum intensity, within which an analytical instrument or detector can quantitatively measure or process an incoming signal."@en ;

@@ -9,8 +9,8 @@ voc4cat:0000280
     dcterms:created "2025-04-15"^^xsd:date ;
     dcterms:identifier "0000280"^^xsd:token ;
     dcterms:modified "2025-12-31"^^xsd:date ;
-    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000280.ttl> ;
-    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000280.ttl> ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000280.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000280.ttl> ;
     skos:broader voc4cat:0000183 ;
     skos:changeNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:definition "A catalytic chemical reaction in which a mixture of carbon monoxide (CO) and hydrogen (H2), is converted via a chain-growth mechanism into long-chain hydrocarbons (e.g., alkanes, alkenes or alcohols)—typically using iron or cobalt catalysts under moderate to high pressures and temperatures."@en ;

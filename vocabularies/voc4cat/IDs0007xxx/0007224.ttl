@@ -9,8 +9,8 @@ voc4cat:0007224
     dcterms:created "2024-02-28"^^xsd:date ;
     dcterms:identifier "0007224"^^xsd:token ;
     dcterms:modified "2025-12-31"^^xsd:date ;
-    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007224.ttl> ;
-    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007224.ttl> ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007224.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007224.ttl> ;
     skos:broader voc4cat:0000187 ;
     skos:changeNote "0009-0008-1278-8890 Michael Götte created the resource"@en ;
     skos:definition "A chemical compound (salt, acid, or base) that dissociates into electrically charged ions when dissolved in a solvent."@en ;

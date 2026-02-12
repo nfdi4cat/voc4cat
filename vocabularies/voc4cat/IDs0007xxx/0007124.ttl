@@ -9,8 +9,8 @@ voc4cat:0007124
     dcterms:created "2025-11-18"^^xsd:date ;
     dcterms:identifier "0007124"^^xsd:token ;
     dcterms:modified "2025-12-31"^^xsd:date ;
-    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007124.ttl> ;
-    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007124.ttl> ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007124.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007124.ttl> ;
     skos:broader voc4cat:0000186 ;
     skos:changeNote "0000-0001-5886-7860 Hendrik Borgelt created this resource"@en ;
     skos:definition "The specific interval of time that a scanning probe, beam, or sensor remains stationary at a single, discrete coordinate or pixel to acquire data."@en ;

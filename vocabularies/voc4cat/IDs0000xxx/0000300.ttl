@@ -9,8 +9,8 @@ voc4cat:0000300
     dcterms:created "2025-04-16"^^xsd:date ;
     dcterms:identifier "0000300"^^xsd:token ;
     dcterms:modified "2025-12-31"^^xsd:date ;
-    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000300.ttl> ;
-    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000300.ttl> ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000300.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000300.ttl> ;
     skos:broader voc4cat:0000190 ;
     skos:changeNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource, 0000-0002-2367-1988 Norbert Kockmann defined the resource"@en ;
     skos:definition "Mixture of metals with certain (often improved) mechanical, chemical, electrical, magnetic or other properties."@en ;

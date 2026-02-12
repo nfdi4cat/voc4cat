@@ -9,8 +9,8 @@ voc4cat:0007020
     dcterms:created "2024-03-23"^^xsd:date ;
     dcterms:identifier "0007020"^^xsd:token ;
     dcterms:modified "2025-12-31"^^xsd:date ;
-    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007020.ttl> ;
-    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007020.ttl> ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007020.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007020.ttl> ;
     skos:broader voc4cat:0000188 ;
     skos:changeNote "0000-0002-4041-0165 Julia Schumann created the resource"@en ;
     skos:definition "The part of the reactor where the catalyst is located, characterized by length, diameter, volume."@en ;

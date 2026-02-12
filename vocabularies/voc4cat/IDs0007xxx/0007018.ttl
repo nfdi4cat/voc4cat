@@ -9,8 +9,8 @@ voc4cat:0007018
     dcterms:created "2024-03-23"^^xsd:date ;
     dcterms:identifier "0007018"^^xsd:token ;
     dcterms:modified "2025-12-31"^^xsd:date ;
-    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007018.ttl> ;
-    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007018.ttl> ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007018.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007018.ttl> ;
     skos:broader voc4cat:0000186 ;
     skos:changeNote "0000-0002-4041-0165 Julia Schumann created the resource, 0000-0002-5898-1820 David Linke provided the definition"@en ;
     skos:definition "A classification of chemical reactors based on the distinct design, configuration, and operational characteristics. Examples are stirred tank reactors, loop reactors, trickle beds, multitubular reactors, fluidized beds, and others. Each type is tailored to accomodate a specific combinations of reaction kinetics, thermodynamics, mass transfer requirements, and process variables."@en ;

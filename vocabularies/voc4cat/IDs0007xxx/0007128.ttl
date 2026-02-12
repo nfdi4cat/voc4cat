@@ -9,8 +9,8 @@ voc4cat:0007128
     dcterms:created "2025-11-18"^^xsd:date ;
     dcterms:identifier "0007128"^^xsd:token ;
     dcterms:modified "2025-12-31"^^xsd:date ;
-    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007128.ttl> ;
-    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007128.ttl> ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007128.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007128.ttl> ;
     skos:broader voc4cat:0000186 ;
     skos:changeNote "0000-0001-5886-7860 Hendrik Borgelt created this resource"@en ;
     skos:definition "The defined set of dimensions, often expressed as the total number of discrete points or pixels in one or more coordinates, that constitute the structural grid for a data recording."@en ;

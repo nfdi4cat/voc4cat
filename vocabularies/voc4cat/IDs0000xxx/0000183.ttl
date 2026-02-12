@@ -9,8 +9,8 @@ voc4cat:0000183
     dcterms:created "2023-08-11"^^xsd:date ;
     dcterms:identifier "0000183"^^xsd:token ;
     dcterms:modified "2025-12-31"^^xsd:date ;
-    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000183.ttl> ;
-    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0000183.ttl> ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000183.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000183.ttl> ;
     skos:broader voc4cat:0000182 ;
     skos:changeNote "0000-0002-6242-2167 Nikolaos G. Moustakas and 0000-0002-5898-1820 David Linke created the resource"@en ;
     skos:definition "An occurrence or happening, marked by a specific point in time. Events can be observed, recorded, and may have an impact on the state of the system or entities involved."@en ;

@@ -9,8 +9,8 @@ voc4cat:0007044
     dcterms:created "2024-02-02"^^xsd:date ;
     dcterms:identifier "0007044"^^xsd:token ;
     dcterms:modified "2025-12-31"^^xsd:date ;
-    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007044.ttl> ;
-    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/0007044.ttl> ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007044.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007044.ttl> ;
     skos:broader voc4cat:0000186 ;
     skos:changeNote "0000-0002-4041-0165 Julia Schumann created the resource"@en ;
     skos:definition "The fractions of atoms of a specific chemical element located at the surface of a material versus the total number of atoms of this specific element in the material."@en ;

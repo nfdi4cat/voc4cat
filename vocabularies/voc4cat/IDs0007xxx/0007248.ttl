@@ -8,7 +8,7 @@ voc4cat:0007248
     a skos:Concept ;
     dcterms:created "2024-02-28"^^xsd:date ;
     dcterms:identifier "0007248"^^xsd:token ;
-    dcterms:modified "2026-02-12"^^xsd:date ;
+    dcterms:modified "2026-02-13"^^xsd:date ;
     dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007248.ttl> ;
     rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007248.ttl> ;
     skos:altLabel

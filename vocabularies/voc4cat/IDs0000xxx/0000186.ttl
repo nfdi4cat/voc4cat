@@ -80,6 +80,7 @@ voc4cat:0000186
         voc4cat:0005008 ,
         voc4cat:0005009 ,
         voc4cat:0005010 ,
+        voc4cat:0005555 ,
         voc4cat:0007004 ,
         voc4cat:0007009 ,
         voc4cat:0007010 ,

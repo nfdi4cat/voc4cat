@@ -214,4 +214,16 @@ name = "Arjun Neyyathala"
 orcid = "0000-0001-5161-4801"
 ror_id = "https://ror.org/04t3en479"
 
+# Not yet assigned.
+# [[vocabs.voc4cat.id_range]]
+# first_id = 8101
+# last_id = 8150
+
+[[vocabs.voc4cat.id_range]]
+first_id = 8201
+last_id = 8300
+gh_name = "IvoKuehnrich"
+name = "Ivo Kühnrich"
+orcid = "0000-0002-5561-4320"
+
 # Continue with as many [[vocabs.voc4cat.id_range]] sections as needed.

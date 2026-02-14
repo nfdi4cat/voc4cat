@@ -8,7 +8,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a skos:Concept ;
     dcterms:created "2023-08-10"^^xsd:date ;
     dcterms:identifier "0000002"^^xsd:token ;
-    dcterms:modified "2026-01-01"^^xsd:date ;
+    dcterms:modified "2026-02-01"^^xsd:date ;
     dcterms:provenance <https://github.com/NFDI4Cat/voc4cat-template/blame/main/vocabularies/vocab_example/0000002.ttl> ;
     rdfs:seeAlso <https://github.com/NFDI4Cat/voc4cat-template/blame/main/vocabularies/vocab_example/0000002.ttl> ;
     skos:altLabel

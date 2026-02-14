@@ -65,7 +65,7 @@ jobs:
           python -m pip install --upgrade pip setuptools wheel
 
           # Select to install a stable tagged version or main branch (in development)
-          # python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@v1.0.0
+          # python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@v1.0.3
           python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@main
 
           # install custom pylode 2.x

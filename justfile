@@ -11,6 +11,7 @@
 # Else download it from https://git-scm.com/download/win
 
 export GITHUB_ENV := datetime("%Y-%m-%dT%H%M")
+set windows-shell := ["C:\\Program Files\\Git\\bin\\sh.exe","-c"]
 
 # List all commands as default command. The prefix "_" hides the command.
 _default:

@@ -1,0 +1,18 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+voc4cat:0008205
+    a skos:Concept ;
+    dcterms:identifier "0008205"^^xsd:token ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008205.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008205.ttl> ;
+    skos:altLabel "washing solvent; rinsing medium; rinse solvent; wash liquid"@en ;
+    skos:broader voc4cat:0000190 ;
+    skos:changeNote "0000-0002-5561-4320 Ivo Kuehnrich and 0000-0001-5886-7860 Hendrik Borgelt created this resource"@en ;
+    skos:definition "The fluid used to remove residual reagents, by‑products, or adsorbates from a material or catalyst during a washing step, specified by its composition and purity."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:prefLabel "washing medium"@en ;
+.

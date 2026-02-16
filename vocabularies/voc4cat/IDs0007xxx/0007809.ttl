@@ -8,12 +8,13 @@ voc4cat:0007809
     a skos:Concept ;
     dcterms:created "2025-08-22"^^xsd:date ;
     dcterms:identifier "0007809"^^xsd:token ;
-    dcterms:modified "2026-02-12"^^xsd:date ;
+    dcterms:modified "2026-02-13"^^xsd:date ;
     dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007809.ttl> ;
     rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007809.ttl> ;
     skos:broader voc4cat:0000181 ;
     skos:changeNote "0000-0003-4418-7455 Franziska Flecken created the resource"@en ;
     skos:definition "The gaseous environment in which a process, such as a catalytic test, synthesis or a measurement, takes place."@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:narrower voc4cat:0008208 ;
     skos:prefLabel "atmosphere"@en ;
 .

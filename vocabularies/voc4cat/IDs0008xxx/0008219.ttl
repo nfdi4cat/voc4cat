@@ -1,0 +1,17 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+voc4cat:0008219
+    a skos:Concept ;
+    dcterms:identifier "0008219"^^xsd:token ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008219.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008219.ttl> ;
+    skos:broader voc4cat:0000181 ;
+    skos:changeNote "0000-0002-5561-4320 Ivo Kuehnrich and 0000-0001-5886-7860 Hendrik Borgelt created this resource"@en ;
+    skos:definition "A generic description of the logical sequence of operations based on a stated measurement principle to produce measurement results, typically further specified as a detailed measurement procedure for implementation."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:prefLabel "analytical measurement method"@en ;
+.

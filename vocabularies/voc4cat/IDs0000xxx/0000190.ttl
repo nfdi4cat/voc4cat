@@ -8,7 +8,7 @@ voc4cat:0000190
     a skos:Concept ;
     dcterms:created "2024-12-09"^^xsd:date ;
     dcterms:identifier "0000190"^^xsd:token ;
-    dcterms:modified "2026-02-12"^^xsd:date ;
+    dcterms:modified "2026-02-13"^^xsd:date ;
     dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000190.ttl> ;
     rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000190.ttl> ;
     skos:broader voc4cat:0000180 ;
@@ -28,6 +28,10 @@ voc4cat:0000190
         voc4cat:0000295 ,
         voc4cat:0000300 ,
         voc4cat:0000307 ,
-        voc4cat:0005056 ;
+        voc4cat:0005056 ,
+        voc4cat:0008202 ,
+        voc4cat:0008203 ,
+        voc4cat:0008205 ,
+        voc4cat:0008218 ;
     skos:prefLabel "material"@en ;
 .

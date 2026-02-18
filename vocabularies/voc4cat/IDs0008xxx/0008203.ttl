@@ -8,12 +8,12 @@ voc4cat:0008203
     a skos:Concept ;
     dcterms:created "2023-08-11"^^xsd:date ;
     dcterms:identifier "0008203"^^xsd:token ;
-    dcterms:modified "2026-02-16"^^xsd:date ;
+    dcterms:modified "2026-02-18"^^xsd:date ;
     dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008203.ttl> ;
     rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008203.ttl> ;
     skos:broader voc4cat:0000190 ;
     skos:changeNote "0000-0002-5561-4320 Ivo Kuehnrich and 0000-0001-5886-7860 Hendrik Borgelt created this resource"@en ;
-    skos:definition "A reagent which is added to a liquid solution to induce sedimentation by reduction of solubility."@en ;
+    skos:definition "A reagent which is added to a liquid solution to induce precipitation by reduction of solubility."@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:prefLabel "precipitation agent"@en ;
 .

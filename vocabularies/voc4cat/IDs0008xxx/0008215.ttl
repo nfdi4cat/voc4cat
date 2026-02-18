@@ -8,10 +8,12 @@ voc4cat:0008215
     a skos:Concept ;
     dcterms:created "2026-02-16"^^xsd:date ;
     dcterms:identifier "0008215"^^xsd:token ;
-    dcterms:modified "2026-02-16"^^xsd:date ;
+    dcterms:modified "2026-02-18"^^xsd:date ;
     dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008215.ttl> ;
     rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008215.ttl> ;
-    skos:altLabel "NH3-TPD, ammonia TPD"@en ;
+    skos:altLabel
+        "NH3-TPD"@en ,
+        "ammonia TPD"@en ;
     skos:broader voc4cat:0008218 ;
     skos:changeNote "0000-0002-5561-4320 Ivo Kuehnrich and 0000-0001-5886-7860 Hendrik Borgelt created this resource"@en ;
     skos:definition "A temperature‑programmed desorption experiment that uses ammonia as a probe molecule to quantify the amount and strength distribution of acidic surface sites on a catalyst by monitoring NH₃ desorption under a controlled heating rate."@en ;

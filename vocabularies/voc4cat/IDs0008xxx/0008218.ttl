@@ -8,10 +8,9 @@ voc4cat:0008218
     a skos:Concept ;
     dcterms:created "2026-02-16"^^xsd:date ;
     dcterms:identifier "0008218"^^xsd:token ;
-    dcterms:modified "2026-02-16"^^xsd:date ;
+    dcterms:modified "2026-02-18"^^xsd:date ;
     dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008218.ttl> ;
     rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008218.ttl> ;
-    skos:altLabel "inert diluent; bed diluent; dilution solids"@en ;
     skos:broader voc4cat:0000190 ;
     skos:changeNote "0000-0002-5561-4320 Ivo Kuehnrich and 0000-0001-5886-7860 Hendrik Borgelt created this resource"@en ;
     skos:definition "An inert solid mixed with catalyst particles in a fixed bed to modify bed properties (e.g., improve heat transfer, hydrodynamics or isothermicity) without participating in the reaction."@en ;

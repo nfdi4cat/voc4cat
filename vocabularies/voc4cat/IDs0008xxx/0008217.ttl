@@ -8,10 +8,13 @@ voc4cat:0008217
     a skos:Concept ;
     dcterms:created "2026-02-16"^^xsd:date ;
     dcterms:identifier "0008217"^^xsd:token ;
-    dcterms:modified "2026-02-16"^^xsd:date ;
+    dcterms:modified "2026-02-18"^^xsd:date ;
     dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008217.ttl> ;
     rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008217.ttl> ;
-    skos:altLabel "packed bed height; bed height; catalyst layer height"@en ;
+    skos:altLabel
+        "bed height"@en ,
+        "catalyst layer height"@en ,
+        "packed bed height"@en ;
     skos:broader voc4cat:0000186 ;
     skos:changeNote "0000-0002-5561-4320 Ivo Kuehnrich and 0000-0001-5886-7860 Hendrik Borgelt created this resource"@en ;
     skos:definition "The axial length of the packed catalyst section in a reactor, measured along the direction of flow between the defined bed boundaries."@en ;

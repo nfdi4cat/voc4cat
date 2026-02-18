@@ -8,7 +8,7 @@ voc4cat:0000266
     a skos:Concept ;
     dcterms:created "2025-04-11"^^xsd:date ;
     dcterms:identifier "0000266"^^xsd:token ;
-    dcterms:modified "2026-02-16"^^xsd:date ;
+    dcterms:modified "2026-02-18"^^xsd:date ;
     dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000266.ttl> ;
     rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000266.ttl> ;
     skos:altLabel "DE"@en ;

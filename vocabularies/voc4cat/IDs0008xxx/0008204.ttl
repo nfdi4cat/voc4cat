@@ -8,10 +8,12 @@ voc4cat:0008204
     a skos:Concept ;
     dcterms:created "2026-02-16"^^xsd:date ;
     dcterms:identifier "0008204"^^xsd:token ;
-    dcterms:modified "2026-02-16"^^xsd:date ;
+    dcterms:modified "2026-02-18"^^xsd:date ;
     dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008204.ttl> ;
     rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008204.ttl> ;
-    skos:altLabel "aging duration; maturation time"@en ;
+    skos:altLabel
+        "aging duration"@en ,
+        "maturation time"@en ;
     skos:broader voc4cat:0000186 ;
     skos:changeNote "0000-0002-5561-4320 Ivo Kuehnrich and 0000-0001-5886-7860 Hendrik Borgelt created this resource"@en ;
     skos:definition "The duration during which a material, mixture, or suspension is kept under controlled conditions without further processing to allow time‑dependent structure‑ or property‑defining processes to proceed."@en ;

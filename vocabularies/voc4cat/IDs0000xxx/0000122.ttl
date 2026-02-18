@@ -8,13 +8,13 @@ voc4cat:0000122
     a skos:Concept ;
     dcterms:created "2023-08-11"^^xsd:date ;
     dcterms:identifier "0000122"^^xsd:token ;
-    dcterms:modified "2026-02-12"^^xsd:date ;
+    dcterms:modified "2026-02-18"^^xsd:date ;
     dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000122.ttl> ;
     rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000122.ttl> ;
     skos:altLabel "sample pretreatment"@en ;
     skos:broader voc4cat:0000184 ;
-    skos:changeNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
-    skos:definition "Pre-treatment of a catalyst before its introduction to the reaction chamber."@en ;
+    skos:changeNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource,0000-0002-5561-4320 Ivo Kuehnrich, and 0000-0001-5886-7860 Hendrik Borgelt contributed to the definition of the resource"@en ;
+    skos:definition "Pre-treatment of a catalyst before the reaction is initiated."@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:prefLabel "sample pre-treatment"@en ;
 .

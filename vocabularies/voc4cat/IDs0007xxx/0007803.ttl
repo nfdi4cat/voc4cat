@@ -8,7 +8,7 @@ voc4cat:0007803
     a skos:Concept ;
     dcterms:created "2025-08-22"^^xsd:date ;
     dcterms:identifier "0007803"^^xsd:token ;
-    dcterms:modified "2026-02-12"^^xsd:date ;
+    dcterms:modified "2026-02-18"^^xsd:date ;
     dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007803.ttl> ;
     rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007803.ttl> ;
     skos:altLabel "TON"@en ;

@@ -103,7 +103,7 @@ For example, the compact URI of `https://w3id.org/nfdi4cat/voc4cat_0005001` is `
 Overview <self>
 GitHub page <https://github.com/nfdi4cat/voc4cat>
 Kanban board <https://github.com/orgs/nfdi4cat/projects/11>
-Skosmos (ZB MED) <https://semanticlookup.zbmed.de/skosmos/voc4cat/en/>
+Skosmos (ZB MED) <https://semanticlookup.zbmed.de/skosmos/voc4cat/>
 About <docs_usage/about>
 ```
 

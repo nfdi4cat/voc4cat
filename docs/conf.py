@@ -66,6 +66,10 @@ sitemap_url_scheme = "{link}"  # use html_baseurl as is, without language code p
 sitemap_show_lastmod = True
 sitemap_indent = 2
 
+# -- Options for mermaid extension -------------------------------------------
+# https://sphinxcontrib-mermaid-demo.readthedocs.io/en/latest/
+mermaid_height = "120px"  # default is 500px which is excessive for simple flowcharts
+
 # -- Options for Furo theme ---------------------------------------------------
 # https://pradyunsg.me/furo/customisation/
 
@@ -102,7 +106,5 @@ html_theme_options = {
     ],
     # HTML to be show in a announcement banner at the top of the page
     "announcement":
-        '<em>News: Voc4Cat is available via <a class="reference external" href="https://semanticlookup.zbmed.de/skosmos/voc4cat/en/">Skosmos</a>'
-        ' at ZB MED thanks to a <a class="reference external" href="https://terminology.services.base4nfdi.de/incubators">TS4NFDI incubator</a> project.'
-        ' (2025-11-09) </em>',
+        '<em>New: The <b>xlsx template</b> has been <b>updated to v1.0</b> with provenance tracking, deprecation support and many other improvements. (2026-01-02)</em>',
 }

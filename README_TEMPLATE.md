@@ -120,17 +120,17 @@ After these steps your repository should work just like [voc4cat](https://github
 
 ### Keeping your vocabulary repository in sync with voc4cat-template
 
-To review the changes made in the template in version 1.x.y and compare to when you last pulled it use:
+To review the changes made in the template in version 26.x and compare to when you last pulled it use:
 
 ```gitattributes
-git fetch https://github.com/nfdi4cat/voc4cat-template tag v1.x.y
+git fetch https://github.com/nfdi4cat/voc4cat-template tag v26.x
 git diff ...FETCH_HEAD
 ```
 
 If you want to take over the changes, pull them into your repository
 
 ```gitattributes
-git pull https://github.com/nfdi4cat/voc4cat-template tag v1.x.y
+git pull https://github.com/nfdi4cat/voc4cat-template tag v26.x
 ```
 
 and push the change to the remote repository.

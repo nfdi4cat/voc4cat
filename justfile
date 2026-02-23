@@ -89,7 +89,7 @@ join:
 # Add provenance information to all ttl files in vocabularies/
 [group('individual steps')]
 prov:
-  voc4cat transform --prov-from-git --inplace --config idranges.toml --logfile outbox/voc4cat.log vocabularies/
+  voc4cat transform --prov-from-git --diff-base origin/main --inplace --config idranges.toml --logfile outbox/voc4cat.log vocabularies/
 
 # Run all steps as in gh-actions: check xlsx, convert to SKOS, build docs, re-build xlsx
 all: check convert docs xlsx

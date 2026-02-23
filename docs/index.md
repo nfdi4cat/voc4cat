@@ -34,6 +34,7 @@ Producing Voc4Cat-annotated data contributes to realising the vision of machine-
 **Vocabulary**, XLSX file
 ^^^
 
+<!-- TODO: Replace screenshot _static/voc4cat-concept-sheet.png with one showing the v1.0 column headers -->
 ```{image} _static/voc4cat-concept-sheet.png
 :align: center
 :alt: screenshot concepts in xlsx worksheet
@@ -102,6 +103,7 @@ For example, the compact URI of `https://w3id.org/nfdi4cat/voc4cat_0005001` is `
 Overview <self>
 GitHub page <https://github.com/nfdi4cat/voc4cat>
 Kanban board <https://github.com/orgs/nfdi4cat/projects/11>
+Skosmos (ZB MED) <https://semanticlookup.zbmed.de/skosmos/voc4cat/en/>
 About <docs_usage/about>
 ```
 

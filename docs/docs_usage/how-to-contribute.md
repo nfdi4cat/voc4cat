@@ -276,7 +276,7 @@ Allgemeinen an der Grenzfläche statt.</td>
 
 10. **Change Note** *(optional)*: A note documenting changes to the
     concept (`skos:changeNote`). Use this for general provenance remarks
-    such as “definition revised based on IUPAC Gold Book”.
+    such as “definition aligned with RXN ontology”.
 
 11. **Editorial Note** *(optional)*: Internal notes for editors and
     curators (`skos:editorialNote`). Not shown in the public vocabulary

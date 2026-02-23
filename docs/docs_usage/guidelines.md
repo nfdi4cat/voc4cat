@@ -359,6 +359,7 @@ Mappings are used to relate concepts in Voc4Cat to concepts in other controlled 
 This enables interoperability, data integration, and reuse across different systems and domains.
 We only add mappings to well-established external vocabularies or ontologies that are relevant to catalysis.
 The mappings are reviewed and approved by the Voc4Cat team before being added to the vocabulary assuring a high level of mapping confidence.
+In the xlsx vocabulary file, mappings are entered in the dedicated **Mappings** sheet.
 
 Voc4Cat uses the [SKOS](https://www.w3.org/TR/skos-reference/) (Simple Knowledge Organization System) standard for representing mappings.
 SKOS provides a set of properties for expressing relationships to concepts in other concept schemes (or OWL ontologies):

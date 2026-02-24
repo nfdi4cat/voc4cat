@@ -1,0 +1,22 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+voc4cat:0008206
+    a skos:Concept ;
+    dcterms:created "2026-02-16"^^xsd:date ;
+    dcterms:identifier "0008206"^^xsd:token ;
+    dcterms:modified "2026-02-18"^^xsd:date ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008206.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008206.ttl> ;
+    skos:altLabel
+        "drying duration"@en ,
+        "drying period"@en ;
+    skos:broader voc4cat:0000186 ;
+    skos:changeNote "0000-0002-5561-4320 Ivo Kuehnrich and 0000-0001-5886-7860 Hendrik Borgelt created this resource"@en ;
+    skos:definition "The period during which volatile components such as solvents or water are removed from a material under defined conditions."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:prefLabel "drying time"@en ;
+.

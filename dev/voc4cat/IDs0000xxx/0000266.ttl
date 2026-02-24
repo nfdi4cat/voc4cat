@@ -1,0 +1,20 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+voc4cat:0000266
+    a skos:Concept ;
+    dcterms:created "2025-04-11"^^xsd:date ;
+    dcterms:identifier "0000266"^^xsd:token ;
+    dcterms:modified "2026-02-18"^^xsd:date ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000266.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000266.ttl> ;
+    skos:altLabel "DE"@en ;
+    skos:broader voc4cat:0000185 ;
+    skos:changeNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:definition "A process of accelerating natural evolution of biological molecules (e.g., proteins, enzymes, nucleic acids) and systems by random mutagenesis and selective screening leading to tailored properties and functionality."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:prefLabel "directed evolution"@en ;
+.

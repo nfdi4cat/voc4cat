@@ -1,0 +1,552 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="../">
+  <head><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta content="How to use the Voc4Cat vocabulary: browse online, download RDF, content negotiation, terminology service APIs, Python/rdflib, and integration tips." lang="en" name="description" xml:lang="en" />
+
+    <meta property="article:modified_time" content="2026-02-24T13:30:41+00:00" /><link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="How to contribute to Voc4Cat?" href="how-to-contribute.html"><link rel="prev" title="About Voc4Cat" href="about.html">
+        <link rel="canonical" href="https://nfdi4cat.github.io/voc4cat/docs_usage/how-to-use.html">
+        <link rel="prefetch" href="../_static/voc4cat-logo-light-mode.svg" as="image">
+        <link rel="prefetch" href="../_static/voc4cat-logo-dark-mode.svg" as="image">
+
+    <link rel="shortcut icon" href="../_static/favicon_32.png"><!-- Generated with Sphinx 8.2.3 and Furo 2025.12.19 -->
+        <title>How to use Voc4Cat? - Voc4Cat documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d111a655" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=7bdb33bb" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=8dab3a3b" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f2f2f2;
+  --color-code-foreground: #1e1e1e;
+  --color-brand-primary: #016992;
+  --color-brand-content: #016992;
+  --color-announcement-background: #91c63f;
+  --color-announcement-text: #000000;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-announcement-background: #91c63f;
+  --color-announcement-text: #000000;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-announcement-background: #91c63f;
+  --color-announcement-text: #000000;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle site navigation sidebar">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc" aria-label="Toggle table of contents sidebar">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+<div class="announcement">
+  <aside class="announcement-content">
+     <em>New: <strong> Release 2026-02-24 </strong> - First release based on the improved <b>xlsx template v1.0</b> with provenance tracking, deprecation support and many other improvements.</em> 
+  </aside>
+</div>
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <span class="icon"><svg><use href="#svg-menu"></use></svg></span>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">Voc4Cat  documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../_static/voc4cat-logo-light-mode.svg" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../_static/voc4cat-logo-dark-mode.svg" alt="Dark Logo"/>
+  </div>
+  
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/nfdi4cat/voc4cat">GitHub page</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/orgs/nfdi4cat/projects/11">Kanban board</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://semanticlookup.zbmed.de/skosmos/voc4cat/">Skosmos (ZB MED)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">For Users</span></p>
+<ul class="current">
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">How to use Voc4Cat?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how-to-contribute.html">How to contribute to Voc4Cat?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="organizing-concepts.html">Organizing Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guidelines.html">Guidelines for Voc4Cat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="published-guidelines.html">Guidelines Publication</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">For Maintainers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../docs_maintenance/creating-docs-locally.html">Building the docs locally</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs_maintenance/handling-ID-requests.html">Handling ID-requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs_maintenance/making-releases.html">Making Releases</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="edit-this-page">
+  <a class="muted-link" href="https://github.com/nfdi4cat/voc4cat/edit/main/docs/docs_usage/how-to-use.md" rel="edit" title="Edit this page">
+    <svg><use href="#svg-pencil"></use></svg>
+    <span class="visually-hidden">Edit this page</span>
+  </a>
+</div><div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section id="how-to-use-voc4cat">
+<h1>How to use Voc4Cat?<a class="headerlink" href="#how-to-use-voc4cat" title="Link to this heading">¶</a></h1>
+<p>Voc4Cat provides persistent identifiers and definitions for catalysis concepts in the machine-readable <a class="reference external" href="https://www.w3.org/TR/skos-reference/">SKOS</a> format.
+This page gives an overview of the various ways to access and work with Voc4Cat in your tools, code, and data workflows.</p>
+<section id="browsing-voc4cat-online">
+<h2>Browsing Voc4Cat online<a class="headerlink" href="#browsing-voc4cat-online" title="Link to this heading">¶</a></h2>
+<p>There are several web-based entry points for exploring the vocabulary:</p>
+<ul class="simple">
+<li><p><strong>pyLODE HTML documentation</strong> – The auto-generated documentation shows the full concept hierarchy, definitions, and relationships. The <a class="reference external" href="https://w3id.org/nfdi4cat/voc4cat">latest release</a> is the recommended stable reference. A <a class="reference external" href="https://w3id.org/nfdi4cat/voc4cat/dev">development version</a> is also available and reflects the most current state of the vocabulary.</p></li>
+<li><p><strong>Skosmos at ZB MED</strong> – The <a class="reference external" href="https://semanticlookup.zbmed.de/skosmos/voc4cat/">Skosmos instance at ZB MED</a> provides search, hierarchical browsing, and a REST API tailored for SKOS vocabularies. It shows the latest published release.</p></li>
+<li><p><strong>TIB Terminology Service</strong> – The <a class="reference external" href="https://terminology.tib.eu/ts/ontologies/voc4cat">TIB service</a> offers an alternative OLS-based interface and API. It also shows the latest published release.</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>For SKOS vocabularies, the Skosmos service is recommended because it understands SKOS-specific features such as concept hierarchies, collections, and semantic relations.</p>
+</div>
+</section>
+<section id="downloading-voc4cat">
+<h2>Downloading Voc4Cat<a class="headerlink" href="#downloading-voc4cat" title="Link to this heading">¶</a></h2>
+<p>The vocabulary is available for download in multiple formats.
+The direct links below are convenient but not permanent – for stable references, use the permanent URLs listed on the <a class="reference internal" href="../index.html"><span class="doc std std-doc">main page</span></a>.</p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Format</p></th>
+<th class="head"><p>Development version</p></th>
+<th class="head"><p>Latest release</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Turtle (.ttl)</p></td>
+<td><p><a class="reference external" href="https://nfdi4cat.github.io/voc4cat/dev/voc4cat.ttl">dev/voc4cat.ttl</a></p></td>
+<td><p><a class="reference external" href="https://nfdi4cat.github.io/voc4cat/latest/voc4cat.ttl">latest/voc4cat.ttl</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>RDF/XML (.xml)</p></td>
+<td><p><a class="reference external" href="https://nfdi4cat.github.io/voc4cat/dev/voc4cat.xml">dev/voc4cat.xml</a></p></td>
+<td><p><a class="reference external" href="https://nfdi4cat.github.io/voc4cat/latest/voc4cat.xml">latest/voc4cat.xml</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Excel (.xlsx)</p></td>
+<td><p><a class="reference external" href="https://nfdi4cat.github.io/voc4cat/dev/voc4cat.xlsx">dev/voc4cat.xlsx</a></p></td>
+<td><p>–</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<section id="content-negotiation">
+<h3>Content negotiation<a class="headerlink" href="#content-negotiation" title="Link to this heading">¶</a></h3>
+<p>Content negotiation allows you to request a specific format from the same permanent URL.
+By setting the <code class="docutils literal notranslate"><span class="pre">Accept</span></code> header, you can download Turtle, RDF/XML, or get the HTML documentation – all from <code class="docutils literal notranslate"><span class="pre">https://w3id.org/nfdi4cat/voc4cat</span></code>.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+curl</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Download Turtle format</span>
+curl<span class="w"> </span>-L<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Accept: text/turtle&quot;</span><span class="w"> </span>-o<span class="w"> </span>voc4cat.ttl<span class="w"> </span>https://w3id.org/nfdi4cat/voc4cat
+
+<span class="c1"># Download RDF/XML format</span>
+curl<span class="w"> </span>-L<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Accept: application/rdf+xml&quot;</span><span class="w"> </span>-o<span class="w"> </span>voc4cat.xml<span class="w"> </span>https://w3id.org/nfdi4cat/voc4cat
+
+<span class="c1"># Download a specific release</span>
+curl<span class="w"> </span>-L<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Accept: text/turtle&quot;</span><span class="w"> </span>-o<span class="w"> </span>voc4cat.ttl<span class="w"> </span>https://w3id.org/nfdi4cat/voc4cat/v2025-10-14
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1">
+Python</label><div class="sd-tab-content docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://w3id.org/nfdi4cat/voc4cat&quot;</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Accept&quot;</span><span class="p">:</span> <span class="s2">&quot;text/turtle&quot;</span><span class="p">})</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;voc4cat.ttl&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <strong>development version</strong> is rebuilt on every merge to the main branch and reflects the latest accepted changes.
+<strong>Releases</strong> are tagged snapshots deposited on <a class="reference external" href="https://doi.org/10.5281/zenodo.8313340">Zenodo</a> and published to terminology services.
+For reproducible references in publications, always use a specific release version.</p>
+</div>
+</section>
+</section>
+<section id="using-voc4cat-via-terminology-service-apis">
+<h2>Using Voc4Cat via terminology service APIs<a class="headerlink" href="#using-voc4cat-via-terminology-service-apis" title="Link to this heading">¶</a></h2>
+<p>Both Skosmos and TIB provide REST APIs for programmatic access to the vocabulary.
+The Skosmos REST API is recommended for SKOS vocabularies.</p>
+<section id="skosmos-rest-api-examples">
+<h3>Skosmos REST API examples<a class="headerlink" href="#skosmos-rest-api-examples" title="Link to this heading">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Search for concepts by text</span>
+curl<span class="w"> </span><span class="s2">&quot;https://semanticlookup.zbmed.de/skosmos/rest/v1/voc4cat/search?query=catalysis&quot;</span>
+
+<span class="c1"># Get data for a specific concept by IRI</span>
+curl<span class="w"> </span><span class="s2">&quot;https://semanticlookup.zbmed.de/skosmos/rest/v1/voc4cat/data?uri=https://w3id.org/nfdi4cat/voc4cat_0000001&quot;</span>
+
+<span class="c1"># Get narrower concepts of a given concept</span>
+curl<span class="w"> </span><span class="s2">&quot;https://semanticlookup.zbmed.de/skosmos/rest/v1/voc4cat/narrower?uri=https://w3id.org/nfdi4cat/voc4cat_0000196&quot;</span>
+</pre></div>
+</div>
+<p>The full Skosmos REST API documentation is available at <a class="reference external" href="https://semanticlookup.zbmed.de/skosmos/rest/v1/">https://semanticlookup.zbmed.de/skosmos/rest/v1/</a>.</p>
+<p>The TIB Terminology Service also offers a REST API; see <a class="reference external" href="https://terminology.tib.eu/ts/ontologies/voc4cat">https://terminology.tib.eu/ts/ontologies/voc4cat</a> for details.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The NFDI4Cat data repository <a class="reference external" href="https://repository.nfdi4cat.org/">repo4cat</a> uses the Skosmos REST API to integrate Voc4Cat concepts into its metadata forms.</p>
+</div>
+</section>
+</section>
+<section id="working-with-voc4cat-in-python">
+<h2>Working with Voc4Cat in Python<a class="headerlink" href="#working-with-voc4cat-in-python" title="Link to this heading">¶</a></h2>
+<p>The vocabulary can be loaded and queried directly in Python using <a class="reference external" href="https://rdflib.readthedocs.io/">rdflib</a>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">rdflib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Graph</span><span class="p">,</span> <span class="n">Namespace</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rdflib.namespace</span><span class="w"> </span><span class="kn">import</span> <span class="n">SKOS</span><span class="p">,</span> <span class="n">RDF</span>
+
+<span class="n">g</span> <span class="o">=</span> <span class="n">Graph</span><span class="p">()</span>
+<span class="n">g</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;https://nfdi4cat.github.io/voc4cat/dev/voc4cat.ttl&quot;</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;turtle&quot;</span><span class="p">)</span>
+
+<span class="n">VOC4CAT</span> <span class="o">=</span> <span class="n">Namespace</span><span class="p">(</span><span class="s2">&quot;https://w3id.org/nfdi4cat/voc4cat_&quot;</span><span class="p">)</span>
+
+<span class="c1"># List all concepts with their labels</span>
+<span class="k">for</span> <span class="n">concept</span> <span class="ow">in</span> <span class="n">g</span><span class="o">.</span><span class="n">subjects</span><span class="p">(</span><span class="n">predicate</span><span class="o">=</span><span class="n">RDF</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="nb">object</span><span class="o">=</span><span class="n">SKOS</span><span class="o">.</span><span class="n">Concept</span><span class="p">):</span>
+    <span class="n">label</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="n">concept</span><span class="p">,</span> <span class="n">SKOS</span><span class="o">.</span><span class="n">prefLabel</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">concept</span><span class="si">}</span><span class="s2"> -- </span><span class="si">{</span><span class="n">label</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>For a complete walkthrough – including searching, navigating the hierarchy, SPARQL queries, and visualizing the concept graph – see our <a class="reference external" href="https://github.com/nfdi4cat/voc4cat/blob/main/demo/explore-voc4cat.ipynb">Jupyter notebook demo</a>.</p>
+<p>To run the notebook locally, install the dependencies from <a class="reference external" href="https://github.com/nfdi4cat/voc4cat/blob/main/demo/requirements.txt"><code class="docutils literal notranslate"><span class="pre">demo/requirements.txt</span></code></a>.</p>
+</div>
+</section>
+<section id="using-voc4cat-in-data-management-tools">
+<h2>Using Voc4Cat in data management tools<a class="headerlink" href="#using-voc4cat-in-data-management-tools" title="Link to this heading">¶</a></h2>
+<p>Voc4Cat concepts can be used to annotate research data in various data management platforms.</p>
+<p><strong>repo4cat (Dataverse)</strong> – The <a class="reference external" href="https://repository.nfdi4cat.org/">repo4cat</a> data repository, operated by NFDI4Cat, integrates Voc4Cat via the Skosmos REST API. Researchers can select Voc4Cat concepts when annotating datasets, ensuring consistent and machine-readable metadata.</p>
+<p><strong>NOMAD (FAIRMAT)</strong> – The <a class="reference external" href="https://github.com/FAIRmat-NFDI/nomad-catalysis-plugin">nomad-catalysis-plugin</a> integrates Voc4Cat concepts into <a class="reference external" href="https://nomad-lab.eu/">NOMAD</a>, providing a data schema for heterogeneous catalysis that uses Voc4Cat identifiers for standardized annotation. See the accompanying <a class="reference external" href="https://doi.org/10.26434/chemrxiv-2025-kx99k">preprint</a> for details.</p>
+<p><strong>LabImotion / Chemotion (NFDI4Chem)</strong> – <a class="reference external" href="https://www.chemotion.net/">Chemotion</a> is an electronic lab notebook developed within <a class="reference external" href="https://nfdi4chem.de/">NFDI4Chem</a> that supports vocabulary-based annotation. Using Voc4Cat concepts in Chemotion is a potential future integration.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The list of tools with Voc4Cat integration is growing.
+If you are using Voc4Cat in a tool not listed here, please let us know by <a class="reference external" href="https://github.com/nfdi4cat/voc4cat/issues/new?assignees=&amp;amp;labels=voc4cat+guidelines&amp;amp;projects=&amp;amp;template=improvement_guidelines.yaml&amp;amp;title=%F0%9F%93%9D+%3Ctitle%3E">creating an issue</a>.</p>
+</div>
+</section>
+<section id="using-voc4cat-concepts-in-data-models-and-ontologies">
+<h2>Using Voc4Cat concepts in data models and ontologies<a class="headerlink" href="#using-voc4cat-concepts-in-data-models-and-ontologies" title="Link to this heading">¶</a></h2>
+<section id="linkml-data-models">
+<h3>LinkML data models<a class="headerlink" href="#linkml-data-models" title="Link to this heading">¶</a></h3>
+<p>SKOS concepts from Voc4Cat can be referenced as permissible values in <a class="reference external" href="https://linkml.io/">LinkML</a> data model schemas.
+For example, a dataset schema could restrict a field to only accept Voc4Cat concept IRIs:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">enums</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">CatalysisResearchField</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">permissible_values</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">photocatalysis</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">meaning</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">voc4cat:0000001</span>
+<span class="w">      </span><span class="nt">electrocatalysis</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">meaning</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">voc4cat:0000204</span>
+<span class="w">      </span><span class="nt">biocatalysis</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">meaning</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">voc4cat:0000207</span>
+</pre></div>
+</div>
+<p>See the <a class="reference external" href="https://linkml.io/linkml/schemas/enums.html">LinkML documentation</a> for details on using enumerations with external concept identifiers.</p>
+<p>A real-world example is the <a class="reference external" href="https://nfdi4cat.github.io/pid4cat-model/">pid4cat-model</a>, which uses Voc4Cat concepts to provide URIs and definitions for its <a class="reference external" href="https://nfdi4cat.github.io/pid4cat-model/latest/elements/enums/RelationType/"><code class="docutils literal notranslate"><span class="pre">RelationType</span></code></a> enumeration.</p>
+</section>
+<section id="skos-concepts-in-owl-ontologies">
+<h3>SKOS concepts in OWL ontologies<a class="headerlink" href="#skos-concepts-in-owl-ontologies" title="Link to this heading">¶</a></h3>
+<p>SKOS concepts are not OWL classes – they represent terms in a vocabulary rather than formal categories in a logical framework.
+However, SKOS and OWL can be used together.
+To connect Voc4Cat concepts with classes in an OWL ontology, use SKOS mapping properties such as <code class="docutils literal notranslate"><span class="pre">skos:exactMatch</span></code> or <code class="docutils literal notranslate"><span class="pre">skos:closeMatch</span></code>:</p>
+<div class="highlight-turtle notranslate"><div class="highlight"><pre><span></span><span class="nn">ex</span><span class="p">:</span><span class="nt">PhotocatalysisProcess</span> <span class="kt">a</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">Class</span> <span class="p">;</span>
+    <span class="nn">skos</span><span class="p">:</span><span class="nt">exactMatch</span> <span class="nn">voc4cat</span><span class="p">:</span><span class="nt">0000001</span> <span class="p">.</span>
+</pre></div>
+</div>
+<p>This approach preserves the distinct roles of the vocabulary (informal, consensus-based definitions) and the ontology (formal logic and reasoning) while making the relationship explicit.
+See the <a class="reference external" href="https://www.w3.org/TR/skos-reference/#mapping">SKOS Reference</a> for more on mapping properties.</p>
+<hr class="docutils" />
+<p>What other topics would you like to read about here? Let us know by <a class="reference external" href="https://github.com/nfdi4cat/voc4cat/issues/new?assignees=&amp;amp;labels=voc4cat+guidelines&amp;amp;projects=&amp;amp;template=improvement_guidelines.yaml&amp;amp;title=%F0%9F%93%9D+%3Ctitle%3E">creating an issue</a>!</p>
+</section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="how-to-contribute.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">How to contribute to Voc4Cat?</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="about.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">About Voc4Cat</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2024, Voc4Cat contributors
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            <div class="last-updated">
+              Last updated on 2026-02-24</div>
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              <a class="muted-link " href="https://github.com/nfdi4cat/voc4cat" aria-label="GitHub">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                </svg>
+            </a>
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">How to use Voc4Cat?</a><ul>
+<li><a class="reference internal" href="#browsing-voc4cat-online">Browsing Voc4Cat online</a></li>
+<li><a class="reference internal" href="#downloading-voc4cat">Downloading Voc4Cat</a><ul>
+<li><a class="reference internal" href="#content-negotiation">Content negotiation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#using-voc4cat-via-terminology-service-apis">Using Voc4Cat via terminology service APIs</a><ul>
+<li><a class="reference internal" href="#skosmos-rest-api-examples">Skosmos REST API examples</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#working-with-voc4cat-in-python">Working with Voc4Cat in Python</a></li>
+<li><a class="reference internal" href="#using-voc4cat-in-data-management-tools">Using Voc4Cat in data management tools</a></li>
+<li><a class="reference internal" href="#using-voc4cat-concepts-in-data-models-and-ontologies">Using Voc4Cat concepts in data models and ontologies</a><ul>
+<li><a class="reference internal" href="#linkml-data-models">LinkML data models</a></li>
+<li><a class="reference internal" href="#skos-concepts-in-owl-ontologies">SKOS concepts in OWL ontologies</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/furo.js?v=46bd48cc"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    </body>
+</html>

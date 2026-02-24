@@ -1,0 +1,17 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0000302>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0000302"^^xsd:token ;
+    skos:altLabel
+        "isomerisation reaction"@en ,
+        "isomerization"@en ,
+        "isomerization reaction"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000183> ;
+    skos:definition "A chemical reaction in which the main product is an isomer of the main reactant, entailing a change in molecular structure without altering the overall molecular composition."@en ;
+    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:prefLabel "isomerisation"@en ;
+.

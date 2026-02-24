@@ -1,0 +1,19 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0005001>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0005001"^^xsd:token ;
+    skos:definition "A measure to quantify how fast and selective a chemical conversion occurs in a reactor. A chemical conversion may include multiple reactions."@en ;
+    skos:historyNote "0000-0002-5898-1820 David Linke created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower
+        <https://w3id.org/nfdi4cat/voc4cat_0000125> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005004> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005005> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005006> ;
+    skos:prefLabel "reactor performance measure"@en ;
+    skos:topConceptOf <https://w3id.org/nfdi4cat/voc4cat_> ;
+.
+

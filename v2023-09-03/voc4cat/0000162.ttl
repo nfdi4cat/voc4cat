@@ -1,0 +1,16 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0000162>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0000162"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "gas flow"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000128> ;
+    skos:definition "Flow rates of gases used in an experiment. Gases can have either the role of a reactant (e.g., CO2) or be inert (e.g., Ar, He). "@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000163> ;
+    skos:prefLabel "gas feed"@en ;
+.
+

@@ -21,12 +21,12 @@
     {
       "name": "Schumann, Julia",
       "orcid": "0000-0002-4041-0165",
-      "affiliation": "Physics Department and CSMB, Humboldt-Universität zu Berlin, Zum Großen Windkanal 2, 12489 Berlin, Germany"
+      "affiliation": "Physics Department and CSMB, Humboldt-UniversitÃ¤t zu Berlin, Zum GroÃŸen Windkanal 2, 12489 Berlin, Germany"
     },
     {
-      "name": "Götte, Michael",
+      "name": "GÃ¶tte, Michael",
       "orcid": "0009-0008-1278-8890",
-      "affiliation": "Helmholtz-Zentrum Berlin für Materialien und Energie, 14109 Berlin, Germany"
+      "affiliation": "Helmholtz-Zentrum Berlin fÃ¼r Materialien und Energie, 14109 Berlin, Germany"
     },
     {
       "name": "Borgelt, Hendrik",
@@ -41,12 +41,21 @@
     {
       "name": "Terboven, Carla",
       "orcid": "0009-0004-3786-0773",
-      "affiliation": "Helmholtz-Zentrum Berlin für Materialien und Energie"
+      "affiliation": "Helmholtz-Zentrum Berlin fÃ¼r Materialien und Energie"
     },
     {
       "name": "Flecken, Franziska",
       "orcid": "0000-0003-4418-7455",
       "affiliation": "Karlsruhe Institute of Technology"
+    },
+    {
+      "name": "Neyyathala, Arjun",
+      "orcid": "0000-0001-5161-4801",
+      "affiliation": "Karlsruhe Institute of Technology"
+    },
+    {
+      "name": "KÃ¼hnrich, Ivo",
+      "orcid": "0000-0002-5561-4320"
     }
   ],
   "description": "<p><b>Voc4Cat</b> is a SKOS vocabulary for the catalysis disciplines, continuously growing to cover catalysis and related fields such as chemical engineering and materials science.</p><p>The vocabulary was created in the <a href=\"http://www.nfdi4cat.org\">NFDI4Cat</a> initiative. Starting with photocatalysis in 2023, we are steadily extending the vocabulary to other areas of catalysis. The principles that we follow are summarized in the <a href=\"https://doi.org/10.5281/zenodo.7669182\">Voc4Cat Guidelines</a>.</p><p>If you want to help us building a comprehensive catalysis vocabulary, please come to our <a href=\"https://github.com/nfdi4cat/voc4cat/\">GitHub repository</a>. Everyone is welcome! We tried to make contributing easy: Download the current vocabulary as Excel file, make your edits and upload the modified file in a pull request.</p><p>The voc4cat repository is based on <a href=\"https://github.com/nfdi4cat/voc4cat-template/\">voc4cat-template</a>. The workflows use <a href=\"https://github.com/nfdi4cat/voc4cat-tool/\">voc4cat-tool</a> and GitHub features like pull requests, gh-actions, gh-pages etc. to minimize the workload for contributors and editors.</p>",

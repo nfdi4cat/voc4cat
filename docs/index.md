@@ -34,7 +34,6 @@ Producing Voc4Cat-annotated data contributes to realising the vision of machine-
 **Vocabulary**, XLSX file
 ^^^
 
-<!-- TODO: Replace screenshot _static/voc4cat-concept-sheet.png with one showing the v1.0 column headers -->
 ```{image} _static/voc4cat-concept-sheet.png
 :align: center
 :alt: screenshot concepts in xlsx worksheet

@@ -1,0 +1,6 @@
+# Compile to requirements.txt with `pip-compile --upgrade requirements.in`
+# With uv: `uv pip compile --upgrade requirements.in -o requirements.txt`
+jupyter
+rdflib>=7.0
+networkx>=3.0
+matplotlib>=3.7

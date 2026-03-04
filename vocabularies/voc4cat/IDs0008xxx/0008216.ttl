@@ -6,7 +6,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 voc4cat:0008216
     a skos:Concept ;
-    dcterms:created "2026-02-16"^^xsd:date ;
+    dcterms:created "2026-02-18"^^xsd:date ;
     dcterms:identifier "0008216"^^xsd:token ;
     dcterms:modified "2026-02-18"^^xsd:date ;
     dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008216.ttl> ;
@@ -18,5 +18,5 @@ voc4cat:0008216
     skos:changeNote "0000-0002-5561-4320 Ivo Kuehnrich and 0000-0001-5886-7860 Hendrik Borgelt created this resource"@en ;
     skos:definition "A temperature‑programmed desorption experiment that uses carbon dioxide as a probe molecule to characterise basic surface sites on solids by measuring CO₂ desorption as the sample is heated at a defined rate."@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
-    skos:prefLabel "Carbon dioxide temperature programmed desorption"@en ;
+    skos:prefLabel "carbon dioxide temperature programmed desorption"@en ;
 .

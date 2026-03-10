@@ -9,8 +9,8 @@ voc4cat:0000187
     dcterms:created "2024-12-09"^^xsd:date ;
     dcterms:identifier "0000187"^^xsd:token ;
     dcterms:modified "2026-02-18"^^xsd:date ;
-    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000187.ttl> ;
-    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000187.ttl> ;
+    dcterms:provenance <https://github.com/arjunneyyathalaCat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000187.ttl> ;
+    rdfs:seeAlso <https://github.com/arjunneyyathalaCat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000187.ttl> ;
     skos:broader voc4cat:0000180 ;
     skos:changeNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:definition "Apparatus, devices, and instruments employed in the construction and operation of experimental setups and the analysis of catalytic reactions and materials."@en ;
@@ -34,6 +34,7 @@ voc4cat:0000187
         voc4cat:0007235 ,
         voc4cat:0007236 ,
         voc4cat:0007249 ,
-        voc4cat:0007250 ;
+        voc4cat:0007250 ,
+        voc4cat:0008113 ;
     skos:prefLabel "equipment"@en ;
 .

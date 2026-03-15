@@ -72,7 +72,7 @@ issue_tracker = "https://github.com/nfdi4cat/voc4cat/issues"
 # helpdesk = ""
 
 # Optional: multi-line text, each line with one URL of a SHACL profile the vocabulary conforms to
-conforms_to = "https://w3id.org/nfdi4cat/voc4cat/profile/vp4cat/"
+conforms_to = "https://w3id.org/nfdi4cat/vp4cat/"
 
 # ==== Checks Configuration ====
 # Section to configure checks (useful in CI pipeline)

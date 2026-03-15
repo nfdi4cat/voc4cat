@@ -1,0 +1,20 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0000069>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0000069"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel
+        "RAMAN"@en ,
+        "Raman"@en ,
+        "Raman scattering spectrometry"@en ,
+        "Raman spectrometry"@en ,
+        "raman scattering spectroscopy"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000066> ;
+    skos:definition "A spectroscopy technique studying the vibrational modes of molecules, by measuring the intensity and frequency of scattered by the sample of monochromatic light. "@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "Raman spectroscopy"@en ;
+.
+

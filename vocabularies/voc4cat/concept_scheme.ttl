@@ -9,7 +9,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <https://w3id.org/nfdi4cat/voc4cat>
     a skos:ConceptScheme ;
-    dcterms:conformsTo <https://w3id.org/nfdi4cat/voc4cat/profile/vp4cat/> ;
+    dcterms:conformsTo <https://w3id.org/nfdi4cat/vp4cat/> ;
     dcterms:created "2023-06-29"^^xsd:date ;
     dcterms:creator
         <https://orcid.org/0000-0002-5898-1820> ,

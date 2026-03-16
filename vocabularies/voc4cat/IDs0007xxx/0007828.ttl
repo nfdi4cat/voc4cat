@@ -15,5 +15,6 @@ voc4cat:0007828
     skos:changeNote "0000-0003-4418-7455 Franziska Flecken created the resource"@en ;
     skos:definition "A compound that is used to generate a calibration curve which can then be used to determine the concentration of a compound in a reaction mixture."@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:narrower voc4cat:0008111 ;
     skos:prefLabel "external standard"@en ;
 .

@@ -36,6 +36,7 @@ voc4cat:0000066
         voc4cat:0000286 ,
         voc4cat:0000288 ,
         voc4cat:0007807 ,
-        voc4cat:0007808 ;
+        voc4cat:0007808 ,
+        voc4cat:0008117 ;
     skos:prefLabel "characterization technique"@en ;
 .

@@ -15,6 +15,8 @@ voc4cat:0007809
     skos:changeNote "0000-0003-4418-7455 Franziska Flecken created the resource"@en ;
     skos:definition "The gaseous environment in which a process, such as a catalytic test, synthesis or a measurement, takes place."@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
-    skos:narrower voc4cat:0008208 ;
+    skos:narrower
+        voc4cat:0008105 ,
+        voc4cat:0008208 ;
     skos:prefLabel "atmosphere"@en ;
 .

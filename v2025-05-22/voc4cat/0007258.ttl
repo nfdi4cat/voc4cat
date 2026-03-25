@@ -1,0 +1,14 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0007258>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0007258"^^xsd:token ;
+    skos:altLabel "true electrode area"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000186> ;
+    skos:definition "In contrast to substrate area, the actual area of a sample or electrode which is active."@en ;
+    skos:historyNote "0009-0008-1278-8890 Michael Götte created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:prefLabel "active area"@en ;
+.

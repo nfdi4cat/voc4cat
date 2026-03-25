@@ -1,0 +1,789 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="../">
+  <head><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta content="Editorial rules for Voc4Cat vocabulary and terminology: labels, definitions, spelling, grammar, typography, and SKOS mappings. Learn more here." lang="en" name="description" xml:lang="en" />
+
+    <meta property="article:modified_time" content="2026-02-23T23:39:37+00:00" /><link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="Published Voc4Cat Guidelines" href="published-guidelines.html"><link rel="prev" title="Hierarchies, Relations, and Collections" href="organizing-concepts.html">
+        <link rel="canonical" href="https://nfdi4cat.github.io/voc4cat/docs_usage/guidelines.html">
+        <link rel="prefetch" href="../_static/voc4cat-logo-light-mode.svg" as="image">
+        <link rel="prefetch" href="../_static/voc4cat-logo-dark-mode.svg" as="image">
+
+    <link rel="shortcut icon" href="../_static/favicon_32.png"><!-- Generated with Sphinx 8.2.3 and Furo 2025.12.19 -->
+        <title>Guidelines for Voc4Cat - Voc4Cat documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d111a655" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=7bdb33bb" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=8dab3a3b" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f2f2f2;
+  --color-code-foreground: #1e1e1e;
+  --color-brand-primary: #016992;
+  --color-brand-content: #016992;
+  --color-announcement-background: #91c63f;
+  --color-announcement-text: #000000;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-announcement-background: #91c63f;
+  --color-announcement-text: #000000;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-announcement-background: #91c63f;
+  --color-announcement-text: #000000;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle site navigation sidebar">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc" aria-label="Toggle table of contents sidebar">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+<div class="announcement">
+  <aside class="announcement-content">
+     <em>New: <strong> Release 2026-02-24 </strong> - First release based on the improved <b>xlsx template v1.0</b> with provenance tracking, deprecation support and many other improvements.</em> 
+  </aside>
+</div>
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <span class="icon"><svg><use href="#svg-menu"></use></svg></span>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">Voc4Cat  documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../_static/voc4cat-logo-light-mode.svg" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../_static/voc4cat-logo-dark-mode.svg" alt="Dark Logo"/>
+  </div>
+  
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/nfdi4cat/voc4cat">GitHub page</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/orgs/nfdi4cat/projects/11">Kanban board</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://semanticlookup.zbmed.de/skosmos/voc4cat/">Skosmos (ZB MED)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">For Users</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="how-to-use.html">How to use Voc4Cat?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how-to-contribute.html">How to contribute to Voc4Cat?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="organizing-concepts.html">Organizing Concepts</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Guidelines for Voc4Cat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="published-guidelines.html">Guidelines Publication</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">For Maintainers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../docs_maintenance/creating-docs-locally.html">Building the docs locally</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs_maintenance/handling-ID-requests.html">Handling ID-requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs_maintenance/making-releases.html">Making Releases</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="edit-this-page">
+  <a class="muted-link" href="https://github.com/nfdi4cat/voc4cat/edit/main/docs/docs_usage/guidelines.md" rel="edit" title="Edit this page">
+    <svg><use href="#svg-pencil"></use></svg>
+    <span class="visually-hidden">Edit this page</span>
+  </a>
+</div><div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section id="guidelines-for-voc4cat">
+<h1>Guidelines for Voc4Cat<a class="headerlink" href="#guidelines-for-voc4cat" title="Link to this heading">¶</a></h1>
+<p>The Voc4Cat guidelines have been developed as a blueprint for
+suggesting, adding, and editing content to the vocabularies developed
+throughout NFDI4Cat. The aim of this document is to provide guidelines
+to guarantee consistency and coherence on selection of concepts and
+terms between all catalysis-related vocabularies in NFDI4Cat.</p>
+<p>The first version of the Voc4Cat guidelines, were inspired by the AGROVOC
+editorial guidelines of FAO.<sup>[1]</sup> This second updated version
+aligns our guidelines closer to the  American National Standards
+Institute (ANSI) / National Information Standards Organization (NISO)
+Z39.19-2005 (R2010) Standard.<sup>[2]</sup></p>
+<p>The guidelines have been through excessive discussions and were evolved
+over the course of <em>Task Area 1 (TA1): Ontology Development and Metadata
+Standards</em> of NFDI4Cat.</p>
+<p>Please note that all language dependent parts refer to only the default language (British English).</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>In addition to this guidelines page, we also provide the page <strong><a class="reference internal" href="organizing-concepts.html"><span class="std std-doc">organization of concepts</span></a></strong>
+that explains Voc4Cat’s approach to hierarchy and grouping of concepts.</p>
+</div>
+<section id="general-recommendations">
+<h2>General recommendations<a class="headerlink" href="#general-recommendations" title="Link to this heading">¶</a></h2>
+<section id="preferred-label">
+<h3>Preferred label<a class="headerlink" href="#preferred-label" title="Link to this heading">¶</a></h3>
+<p>The <em>Preferred Label</em> of a concept refers to the primary term used to
+represent a concept. It should be the most commonly used and widely
+understood term. Such terms can be drawn from the catalysis-related
+scientific literature. Between two or more variants of label for a
+concept, the most frequently used term should be selected as the
+preferred label. The remaining terms can be used as <em>Alternate Labels</em>
+(see below). If the choice is not clear, opinions of experts of the
+field regarding the preferred form of terms may be sought.</p>
+</section>
+<section id="alternate-label">
+<h3>Alternate label<a class="headerlink" href="#alternate-label" title="Link to this heading">¶</a></h3>
+<p>When a concept can be expressed by two or more terms, the one(s) not
+selected as the <em>Preferred Label</em> can be used as <em>Alternate Label(s)</em>.
+The relationship between <em>Preferred Label</em> and <em>Alternate Label(s)</em> is
+an equivalence relationship in which each label is regarded as referring
+to the same concept. <em>Alternate Label(s)</em> can be e.g., synonyms (terms
+whose meanings are regarded as the same or nearly the same in a wide
+range of contexts), lexical or spelling variants (see below) etc.</p>
+</section>
+<section id="spelling-variants">
+<h3>Spelling variants<a class="headerlink" href="#spelling-variants" title="Link to this heading">¶</a></h3>
+<p>British English spelling must be used as the spelling standard for the
+development of Voc4Cat. Exceptions may be made for proper names. If
+variant spellings exist and are commonly recognized, each should be
+entered in Voc4Cat, one being the <em>Preferred Label</em> and the rest being
+used as <em>Alternate Labels</em>. Spelling rules for English:</p>
+<ol class="arabic simple">
+<li><p>words ending in -re/-er. Prefer -re: litre, metre;</p></li>
+<li><p>words ending in -our/-or. Prefer -our: colour;</p></li>
+<li><p>words ending in -ence/-ense. Prefer -ence (for nouns): licence;</p></li>
+<li><p>words ending in -l and followed by a suffix. Prefer -ll (not -l):
+modelling;</p></li>
+<li><p>words ending in -ize/-ise. Prefer -ize: immobilize, categorize;</p></li>
+<li><p>words ending in -yse/-yze. Prefer -yse: analyse, catalyse</p></li>
+</ol>
+</section>
+<section id="gender-neutral-language">
+<h3>(Gender-) neutral language<a class="headerlink" href="#gender-neutral-language" title="Link to this heading">¶</a></h3>
+<p>(Gender-) neutral language should be used whenever possible.</p>
+</section>
+<section id="duplicates">
+<h3>Duplicates<a class="headerlink" href="#duplicates" title="Link to this heading">¶</a></h3>
+<p>Duplicates of existing concepts must be avoided. <em>Preferred Labels</em>,
+<em>Alternate Labels</em>, <em>Singular</em> and <em>Plural</em> forms*, hyphenation* should
+also be considered when checking for the presence of duplicates.</p>
+</section>
+<section id="definitions">
+<h3>Definitions<a class="headerlink" href="#definitions" title="Link to this heading">¶</a></h3>
+<p>A formal explanation of the meaning of a concept. The following
+considerations should be followed when adding definitions:</p>
+<ol class="arabic simple">
+<li><p>A good definition explains what a concept is, not what it does.</p></li>
+<li><p>Only one definition per language is mandatory. The default language
+for the definitions is English.</p></li>
+<li><p>A definition is a sentence that requires orthographical rules, such
+as starting a sentence with a capital letter and ending a sentence
+with a full stop (period). The definitions need to be concise
+(ideally one sentence) and clear.</p></li>
+<li><p>A definition should implicitly explain the difference from closely
+related concepts.</p></li>
+<li><p>Circular, imprecise, or negative definitions should be avoided.</p></li>
+<li><p>A definition of a concept should not start with mentioning the
+concept that it defines.</p></li>
+<li><p>If the source of a definition is not the contributor, a
+trusted and stable source should be used. Credit must be given to
+the original creator. When copyright or license is restrictive, it
+must be respected. To identify the source, a URL, or a descriptive
+source (with details of the publication) can be used.</p></li>
+</ol>
+</section>
+<section id="things-to-avoid">
+<h3>Things to avoid<a class="headerlink" href="#things-to-avoid" title="Link to this heading">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Trademarked names (e.g., brand names and commercial names). Example:
+Teflon vs. polytetrafluoroethylene.</p></li>
+<li><p>Names of individuals (unless as a part of the name of a method or
+technique)</p></li>
+<li><p>Names of specific software or models of devices.</p></li>
+<li><p>Names of policies, programs, or initiatives.</p></li>
+<li><p>Neologisms, slang, and jargon. When no widely accepted alternative
+exists, the neologism, slang, or jargon term should be accepted as a
+term.</p></li>
+</ol>
+</section>
+</section>
+<section id="single-vs-multi-word-compound-terms">
+<h2>Single vs. multi-word (compound) terms<a class="headerlink" href="#single-vs-multi-word-compound-terms" title="Link to this heading">¶</a></h2>
+<ol class="arabic simple">
+<li><p>If terms are seen in both multi-word and one-word forms (e.g.,
+“thermal conductivity” vs. “thermoconductivity”), the preferred term
+should be the one-word form. The two-word form can be included as an
+<em>Alternate Label</em>.</p></li>
+<li><p>Multi-word (compound) terms should express a single concept or unit
+of thought. Complex compound concepts are discouraged. It is
+recommended (if possible) to split compound words into simpler
+concepts.</p></li>
+<li><p>Multi-word (compound) terms should be established as terms in the
+following circumstances:</p></li>
+</ol>
+<!-- -->
+<ol class="arabic simple">
+<li><p>Splitting the parts would lead to ambiguity or a loss of meaning.</p></li>
+<li><p>One component of the term is not relevant to the scope of Voc4Cat or
+is too vague to exist as an independent term.</p></li>
+<li><p>The meaning of the compound term as a whole is not the sum of the
+meaning of its parts.</p></li>
+<li><p>The compound term has become so familiar in common use, or in the
+field covered by Voc4Cat, that it is considered for practical
+purposes to represent a single concept.</p></li>
+</ol>
+</section>
+<section id="singular-vs-plural">
+<h2>Singular vs. plural<a class="headerlink" href="#singular-vs-plural" title="Link to this heading">¶</a></h2>
+<p>Use <strong>singular</strong> for</p>
+<ul class="simple">
+<li><p><strong>mass nouns</strong> which are names for non-countable entities subject to the question “How much?”.
+Examples are names of materials or substances.</p></li>
+<li><p>names of <strong>abstract concepts</strong> (e.g., activities, properties, disciplines).</p></li>
+<li><p>names of <strong>unique entities</strong>, no matter if abstract or concrete.</p></li>
+</ul>
+<p>Use <strong>plural</strong> for</p>
+<ul class="simple">
+<li><p><strong>count nouns</strong> which are names for entities or concepts that are subject to the question “How many?” (e.g., redox cycles).</p></li>
+<li><p>names representing a <strong>class</strong> with more than one member (e.g., plastics).</p></li>
+</ul>
+<p>Where the singular and plural forms of a term represent different
+concepts, separate terms for each should be added to Voc4Cat as
+appropriate. The distinction may be indicated by a qualifier, e.g.,
+Wood (material), woods (forested areas).</p>
+</section>
+<section id="lower-vs-capital-letters">
+<h2>Lower vs. capital letters<a class="headerlink" href="#lower-vs-capital-letters" title="Link to this heading">¶</a></h2>
+<p>Concepts should be written in all lower-case letters.</p>
+<p>However, the first letter of proper names must be a capital, when the proper
+name occurs within longer terms, such in combination with “method”,
+“theory”, or “process” (e.g., Brønsted acid site, Lewis acid site,
+Röntgen crystallography, Langmuir-Hinshelwood mechanism).</p>
+</section>
+<section id="grammatical-forms">
+<h2>Grammatical forms<a class="headerlink" href="#grammatical-forms" title="Link to this heading">¶</a></h2>
+<section id="nouns">
+<h3>Nouns<a class="headerlink" href="#nouns" title="Link to this heading">¶</a></h3>
+<p>The grammatical form of a concept must be a noun or noun phrase. Noun
+phrases are compound terms that may be established as terms if they
+represent a single concept. When possible, noun phrases should exclude
+prepositions (e.g., carbohydrate metabolism rather than metabolism of
+carbohydrates). Terms in the form of prepositional noun phrases should
+be restricted to concepts that cannot be expressed in any other way, or
+that have become idiomatic (e.g., burden of proof, state of the art).</p>
+</section>
+<section id="verbs">
+<h3>Verbs<a class="headerlink" href="#verbs" title="Link to this heading">¶</a></h3>
+<p>Verbs should be nominalized (transformed into nouns). Activities should
+be represented by nouns or gerunds (e.g., freezing rather than freeze,
+distillation rather than distill).</p>
+</section>
+<section id="adjectives">
+<h3>Adjectives<a class="headerlink" href="#adjectives" title="Link to this heading">¶</a></h3>
+<p>Adjectives and adjectival phrases used alone may be established as terms
+in Voc4Cat under certain special circumstances. Single adjectives may be
+used in a “nominal” way; that is, the noun is obvious from the context,
+or the adjective is used to describe and attribute of the concept object
+other than topic, such as color or size. Certain noun phrases may be
+used to modify other nouns, e.g., <em>high frequency</em> can modify the noun
+<em>waves</em>. The guidelines for adjectives may be applied to such noun
+phrases. Adjectives should only be used in compound terms, such as
+“continuous flow”, but never alone. The use of adjectives (without a
+noun), verbs, and initial articles (e.g., “A”, “An”, “The”) should be
+avoided. Example: drying in an oven vs. drying in oven (prefer drying in
+oven).</p>
+</section>
+<section id="adverbs">
+<h3>Adverbs<a class="headerlink" href="#adverbs" title="Link to this heading">¶</a></h3>
+<p>Single adverbs are rarely used. Adverbs such as “very” or “highly”
+should not be used alone as terms. A phrase beginning with such an
+adverb may be accepted as a term only when it has acquired a specialized
+meaning within a domain (e.g., very high frequency).</p>
+</section>
+</section>
+<section id="typographical-marks">
+<h2>Typographical marks<a class="headerlink" href="#typographical-marks" title="Link to this heading">¶</a></h2>
+<section id="hyphens">
+<h3>Hyphens<a class="headerlink" href="#hyphens" title="Link to this heading">¶</a></h3>
+<p>The non-hyphenated version of a concept is always preferred, unless the
+hyphenated version is always the one used in literature. Both versions
+of a concept (hyphenated and non-hyphenated) must be included (one of
+them as an alternate label). Examples: photoexcitation vs.
+photo-excitation, pretreatment vs. pre-treatment, counter electrode vs.
+counter-electrode, transition metal vs. transition-metal. Hyphens should
+be retained in topical terms when dropping them would lead to ambiguity.
+Hyphens should be retained where they occur as part of proper nouns (see
+also 7.5.1), abbreviations (see also 7.11), or chemical names (see also
+7.12).</p>
+</section>
+<section id="parentheses">
+<h3>Parentheses<a class="headerlink" href="#parentheses" title="Link to this heading">¶</a></h3>
+<p>Parentheses should be avoided in Voc4Cat concepts and definitions
+whenever possible. Parentheses should be used only to enclose qualifiers
+and trademark indicators, or when they constitute part of a term.</p>
+</section>
+<section id="apostrophes">
+<h3>Apostrophes<a class="headerlink" href="#apostrophes" title="Link to this heading">¶</a></h3>
+<p>Apostrophes: Apostrophes generally should not be used in Voc4Cat
+concepts. Two exceptions:</p>
+<ol class="arabic simple">
+<li><p>Possessive Case: Apostrophes indicating the possessive case, whether
+in a singular or plural, should be retained. The singular form is
+most frequently found in eponyms.</p></li>
+<li><p>Proper names: Apostrophes that are part of proper names must be
+retained.</p></li>
+</ol>
+</section>
+<section id="slashes">
+<h3>Slashes<a class="headerlink" href="#slashes" title="Link to this heading">¶</a></h3>
+<p>The slash (/) must be avoided (e.g., oxidation / reduction, forward /
+backward reaction, working / counter electrodes) whenever possible. Two
+separate concepts must be defined if the terms differ in meaning, or one
+of them should be set as an <em>Alternate Label</em> if the meaning is the
+same. Antonyms (concepts with opposite definitions) should be generated
+into a separate concept.</p>
+</section>
+</section>
+<section id="prepositional-phrases">
+<h2>Prepositional phrases<a class="headerlink" href="#prepositional-phrases" title="Link to this heading">¶</a></h2>
+<p>Prepositional phrases should be avoided (e.g., alcohol oxidation rather
+than oxidation of alcohol, catalyst pretreatment rather than
+pretreatment of catalyst).</p>
+</section>
+<section id="punctuation-diacritics-and-special-characters">
+<h2>Punctuation, diacritics, and special characters<a class="headerlink" href="#punctuation-diacritics-and-special-characters" title="Link to this heading">¶</a></h2>
+<p>Appropriate punctuation, diacritics and other special characters of an
+individual language should be used (e.g., ü, ö, ß, ô, ñ). Examples:
+Ångström, Brønsted acid sites, Röntgen crystallography. Mössbauer
+effect. Symbols and punctuation marks should not be used except in
+trademarks and proper names.</p>
+</section>
+<section id="empty-spaces-and-commas">
+<h2>Empty spaces and commas<a class="headerlink" href="#empty-spaces-and-commas" title="Link to this heading">¶</a></h2>
+<p>(Extra) empty spaces must be avoided before, within and after a term.
+Commas should be avoided unless in chemical substances. Unnecessary
+empty spaces could compromise search results.  Examples (using <code class="docutils literal notranslate"><span class="pre">·</span></code> as space):</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">·Semiconductor</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Semiconductor·</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Charge··transfer</span></code></p></li>
+</ol>
+</section>
+<section id="initial-articles">
+<h2>Initial articles<a class="headerlink" href="#initial-articles" title="Link to this heading">¶</a></h2>
+<p>Initial articles in terms should be avoided except when required to
+convey essential information. Remove the initial article when the term
+is clear without it. If the initial article is an integral part of a
+proper name, and should be searchable, it should be included in the term
+in direct order.</p>
+</section>
+<section id="abbreviations-and-acronyms">
+<h2>Abbreviations and acronyms<a class="headerlink" href="#abbreviations-and-acronyms" title="Link to this heading">¶</a></h2>
+<ol class="arabic simple">
+<li><p>The full form (written out) of a word / term should be generally
+selected as the preferred term. The abbreviated form or acronym
+should be included as the non-preferred label (e.g., gas
+chromatography vs. GC, density functional theory vs. DFT).</p></li>
+<li><p>Abbreviations and acronyms should be selected as preferred labels of
+terms only when they have become so well established that the full
+form of the term or proper name is rarely used. In this case, the
+full form of the term should be included as an alternate label.</p></li>
+<li><p>Many acronyms and abbreviations stand for more than one word or
+phrase; the full form of the term should therefore be selected as
+the term in preference to the abbreviated form, even when the
+abbreviation has only one value in the domain of Voc4Cat.</p></li>
+</ol>
+</section>
+<section id="chemical-compounds-and-elements">
+<h2>Chemical compounds and elements<a class="headerlink" href="#chemical-compounds-and-elements" title="Link to this heading">¶</a></h2>
+<p>In principle, Voc4Cat does not accept terms for chemical compounds
+already defined in other controlled vocabularies (e.g., the *Chemical
+Entities of Biological Interest - <a class="reference external" href="https://www.ebi.ac.uk/chebi/">ChEBI</a>).
+In cases and if contributing to ChEBI is not an option, a chemical
+compound or element is not defined elsewhere, the following guidelines
+should be followed for the term to be considered for Voc4Cat:</p>
+<ol class="arabic simple">
+<li><p>Chemical compounds and elements in their full form, are written in
+lowercase, such as “carbon”, while the chemical symbol(s) is(are)
+always capitalized, such as “C”.</p></li>
+<li><p>The full form is always the preferred term, whereas the symbol is
+the non-preferred term.</p></li>
+<li><p>Chemical compounds and chemical elements written out are
+non-countable nouns and should be explained in the singular.</p></li>
+<li><p>The definition should contain a unique identifier for chemical
+substances, such as the CAS number.</p></li>
+<li><p>British English spelling is recommended, e.g., prefer aluminium (UK)
+over aluminum (USA).</p></li>
+</ol>
+</section>
+<section id="loanwords-and-translations">
+<h2>Loanwords and translations<a class="headerlink" href="#loanwords-and-translations" title="Link to this heading">¶</a></h2>
+<p>Loanwords are terms borrowed from the other languages that have become
+naturalized in the borrowing language. If such terms are well
+established in the catalysis domain, they should be admitted into
+Voc4Cat. Diacritics should be included if required. In all cases where a
+concept can be expressed by both a loanword and a translated equivalent,
+the most widely used of the two should be used as the preferred label
+and the other as an alternate label.</p>
+</section>
+<section id="mappings">
+<h2>Mappings<a class="headerlink" href="#mappings" title="Link to this heading">¶</a></h2>
+<p>Mappings are used to relate concepts in Voc4Cat to concepts in other controlled vocabularies or ontologies.
+This enables interoperability, data integration, and reuse across different systems and domains.
+We only add mappings to well-established external vocabularies or ontologies that are relevant to catalysis.
+The mappings are reviewed and approved by the Voc4Cat team before being added to the vocabulary assuring a high level of mapping confidence.
+In the xlsx vocabulary file, mappings are entered in the dedicated <strong>Mappings</strong> sheet.</p>
+<p>Voc4Cat uses the <a class="reference external" href="https://www.w3.org/TR/skos-reference/">SKOS</a> (Simple Knowledge Organization System) standard for representing mappings.
+SKOS provides a set of properties for expressing relationships to concepts in other concept schemes (or OWL ontologies):</p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Mapping relation</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">skos:exactMatch</span></code></p></td>
+<td><p>Indicates that two concepts are equivalent in meaning and can be used interchangeably in all contexts.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">skos:closeMatch</span></code></p></td>
+<td><p>Indicates a high degree of similarity, but not complete interchangeability for example due to slight differences in meaning or context.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">skos:broadMatch</span></code><br><code class="docutils literal notranslate"><span class="pre">skos:narrowMatch</span></code></p></td>
+<td><p>Indicate hierarchical relationships between concepts in different schemes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">skos:relatedMatch</span></code></p></td>
+<td><p>Indicates an associative relationship, where none of the concepts is more general than the other.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Mappings in Voc4Cat are intended to be simple connections to external concepts.
+They are expressed purely in the SKOS data model which has the consequence that assertions about the mapping itself are not possible (e.g. about the mapping-author).
+If you need mappings with rich metadata,
+consider using <a class="reference external" href="https://github.com/mapping-commons/sssom">SSSOM</a> (Simple Standard for Sharing Ontology Mappings) or
+<a class="reference external" href="https://gbv.github.io/jskos/">JSKOS</a> (JSON for Knowledge Organization Systems),
+which allow for detailed mapping assertions, provenance, and other metadata.</p>
+<p>When creating mappings in Voc4Cat, please follow these guidelines:</p>
+<ul class="simple">
+<li><p>Only create mappings to well-established external vocabularies or ontologies.</p></li>
+<li><p>Use the most specific SKOS mapping property that fits the relationship.</p></li>
+<li><p>Use hierarchical relationships between concepts only if mappings on the same hierarchical level are not possible.</p></li>
+<li><p>Use skos:relatedMatch relationships sparingly. If you suggest them, explain why the proposed loose mapping is worth to add.</p></li>
+</ul>
+<div class="admonition-example admonition">
+<p class="admonition-title">Example</p>
+<p>The skos:concept <strong><a class="reference external" href="https://w3id.org/nfdi4cat/voc4cat_0007201">voc4cat:0000222 (hydroformylation)</a>
+should be mapped to <a class="reference external" href="https://purl.obolibrary.org/obo/RXNO_0000272">RXNO:hydroformylation</a></strong>, an owl:class.<br>
+<strong>Which mapping-relation would be appropriate?</strong><br>
+Concepts are not only defined by their textual definition, but implicitly also by their position in the class hierarchy and other axioms.
+<code class="docutils literal notranslate"><span class="pre">skos:exactMatch</span></code> would imply that the definition of <code class="docutils literal notranslate"><span class="pre">RXNO:Hydroformylation</span></code> is exactly the same as the definition of <code class="docutils literal notranslate"><span class="pre">voc4cat:0000222</span></code> (hydroformylation).
+However, <code class="docutils literal notranslate"><span class="pre">RXNO:Hydroformylation</span></code> is defined as a “planned process” in the <a class="reference external" href="https://purl.obolibrary.org/obo/RXNO_0000272">RXNO ontology</a>,
+which is not the case for <code class="docutils literal notranslate"><span class="pre">voc4cat:0000222</span></code> (hydroformylation) in the <a class="reference external" href="https://w3id.org/nfdi4cat/voc4cat">voc4cat</a> vocabulary.
+Therefore, the less specific <strong><code class="docutils literal notranslate"><span class="pre">skos:closeMatch</span></code> should be used.</strong><BR> <em>Source of example: Hendrik Borgelt (<a class="reference external" href="https://github.com/nfdi4cat/voc4cat/issues/157">issue #157</a>).</em></p>
+</div>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">¶</a></h2>
+<ol class="arabic simple">
+<li><p>FAO. 2022. The AGROVOC Editorial Guidelines 2020 – Second edition.
+Rome. DOI: 10.4060/cb8640en</p></li>
+<li><p>“Guidelines for the Construction, Format, and Management of
+Monolingual Controlled Vocabularies”, ANSI/NISO Z39.19 – 2005
+(R2010). DOI: 10.3789/ansi.niso.z39.19-2005R2010.</p></li>
+</ol>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="published-guidelines.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Published Voc4Cat Guidelines</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="organizing-concepts.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Hierarchies, Relations, and Collections</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2024, Voc4Cat contributors
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            <div class="last-updated">
+              Last updated on 2026-02-23</div>
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              <a class="muted-link " href="https://github.com/nfdi4cat/voc4cat" aria-label="GitHub">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                </svg>
+            </a>
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Guidelines for Voc4Cat</a><ul>
+<li><a class="reference internal" href="#general-recommendations">General recommendations</a><ul>
+<li><a class="reference internal" href="#preferred-label">Preferred label</a></li>
+<li><a class="reference internal" href="#alternate-label">Alternate label</a></li>
+<li><a class="reference internal" href="#spelling-variants">Spelling variants</a></li>
+<li><a class="reference internal" href="#gender-neutral-language">(Gender-) neutral language</a></li>
+<li><a class="reference internal" href="#duplicates">Duplicates</a></li>
+<li><a class="reference internal" href="#definitions">Definitions</a></li>
+<li><a class="reference internal" href="#things-to-avoid">Things to avoid</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#single-vs-multi-word-compound-terms">Single vs. multi-word (compound) terms</a></li>
+<li><a class="reference internal" href="#singular-vs-plural">Singular vs. plural</a></li>
+<li><a class="reference internal" href="#lower-vs-capital-letters">Lower vs. capital letters</a></li>
+<li><a class="reference internal" href="#grammatical-forms">Grammatical forms</a><ul>
+<li><a class="reference internal" href="#nouns">Nouns</a></li>
+<li><a class="reference internal" href="#verbs">Verbs</a></li>
+<li><a class="reference internal" href="#adjectives">Adjectives</a></li>
+<li><a class="reference internal" href="#adverbs">Adverbs</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#typographical-marks">Typographical marks</a><ul>
+<li><a class="reference internal" href="#hyphens">Hyphens</a></li>
+<li><a class="reference internal" href="#parentheses">Parentheses</a></li>
+<li><a class="reference internal" href="#apostrophes">Apostrophes</a></li>
+<li><a class="reference internal" href="#slashes">Slashes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#prepositional-phrases">Prepositional phrases</a></li>
+<li><a class="reference internal" href="#punctuation-diacritics-and-special-characters">Punctuation, diacritics, and special characters</a></li>
+<li><a class="reference internal" href="#empty-spaces-and-commas">Empty spaces and commas</a></li>
+<li><a class="reference internal" href="#initial-articles">Initial articles</a></li>
+<li><a class="reference internal" href="#abbreviations-and-acronyms">Abbreviations and acronyms</a></li>
+<li><a class="reference internal" href="#chemical-compounds-and-elements">Chemical compounds and elements</a></li>
+<li><a class="reference internal" href="#loanwords-and-translations">Loanwords and translations</a></li>
+<li><a class="reference internal" href="#mappings">Mappings</a></li>
+<li><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/furo.js?v=46bd48cc"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    </body>
+</html>

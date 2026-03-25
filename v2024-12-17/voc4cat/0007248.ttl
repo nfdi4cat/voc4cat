@@ -1,0 +1,17 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0007248>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0007248"^^xsd:token ;
+    skos:altLabel
+        "RDE"@en ,
+        "rotating disk electrode"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0007201> ;
+    skos:definition "A specialized hydrodynamic electrode used in the study of the kinetics and mechanism of electrode reactions and in electroanalysis for ensuring a known and controllable flow of solution over the electrode."@en ;
+    skos:historyNote "0009-0008-1278-8890 Michael Götte created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "rotating-disk electrode"@en ;
+.
+

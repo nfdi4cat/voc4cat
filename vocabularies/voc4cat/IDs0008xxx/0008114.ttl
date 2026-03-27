@@ -8,7 +8,7 @@ voc4cat:0008114
     a skos:Concept ;
     dcterms:created "2025-12-28"^^xsd:date ;
     dcterms:identifier "0008114"^^xsd:token ;
-    dcterms:modified "2026-03-16"^^xsd:date ;
+    dcterms:modified "2026-03-27"^^xsd:date ;
     dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008114.ttl> ;
     rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008114.ttl> ;
     skos:altLabel "stirring speed"@en ;

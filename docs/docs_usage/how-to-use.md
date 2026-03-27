@@ -84,17 +84,29 @@ curl "https://semanticlookup.zbmed.de/skosmos/rest/v1/voc4cat/search?query=catal
 # Get data for a specific concept by IRI
 curl "https://semanticlookup.zbmed.de/skosmos/rest/v1/voc4cat/data?uri=https://w3id.org/nfdi4cat/voc4cat_0000001"
 
-# Get narrower concepts of a given concept
+# Add the MIME type to get the data in other formats (Supported MIME types are: application/rdf+xml
+# text/turtle application/ld+json application/json application/marcxml+xml)
+# For example to get the concept by IRI in turtle format:
+curl "https://semanticlookup.zbmed.de/skosmos/rest/v1/voc4cat/data?uri=https://w3id.org/nfdi4cat/voc4cat_0000001&format=text%2Fturtle"
+
+# Get all narrower concepts of a given concept
 curl "https://semanticlookup.zbmed.de/skosmos/rest/v1/voc4cat/narrower?uri=https://w3id.org/nfdi4cat/voc4cat_0000196"
 ```
 
-The full Skosmos REST API documentation is available at <https://semanticlookup.zbmed.de/skosmos/rest/v1/>.
+The Skosmos REST API documentation is available at <https://api.finto.fi/doc/#/>.
 
 The TIB Terminology Service also offers a REST API; see <https://terminology.tib.eu/ts/ontologies/voc4cat> for details.
 
 ```{tip}
 The NFDI4Cat data repository [repo4cat](https://repository.nfdi4cat.org/) uses the Skosmos REST API to integrate Voc4Cat concepts into its metadata forms.
 ```
+
+### Widgets to embed Voc4Cat term lookups into web applications
+
+BASE4NFDI offers a Terminology Service Suite which is a collection of interactive widgets designed to ease the integration of terminology service functions into third-party applications.
+The widgets can be used in both React and plain HTML applications.
+
+<https://terminology.services.base4nfdi.de/tss/comp/latest/?path=/docs/overview--docs>
 
 ## Working with Voc4Cat in Python
 

@@ -6,12 +6,14 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 voc4cat:0008103
     a skos:Concept ;
+    dcterms:created "2025-12-28"^^xsd:date ;
     dcterms:identifier "0008103"^^xsd:token ;
+    dcterms:modified "2026-03-16"^^xsd:date ;
     dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008103.ttl> ;
     rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008103.ttl> ;
     skos:broader voc4cat:0007034 ;
     skos:changeNote "0000-0001-5161-4801 Arjun Neyyathala created this resource"@en ;
     skos:definition "Physical geometry and macroscopic form of the catalyst support. Eg., spherical, cubic, rod."@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
-    skos:prefLabel "Support shape"@en ;
+    skos:prefLabel "support shape"@en ;
 .

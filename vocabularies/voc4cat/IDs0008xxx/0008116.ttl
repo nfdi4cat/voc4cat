@@ -6,13 +6,15 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 voc4cat:0008116
     a skos:Concept ;
+    dcterms:created "2025-12-28"^^xsd:date ;
     dcterms:identifier "0008116"^^xsd:token ;
+    dcterms:modified "2026-03-16"^^xsd:date ;
     dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008116.ttl> ;
     rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008116.ttl> ;
-    skos:altLabel "Heating ramp"@en ;
+    skos:altLabel "heating ramp"@en ;
     skos:broader voc4cat:0000186 ;
     skos:changeNote "0000-0001-5161-4801 Arjun Neyyathala created this resource"@en ;
-    skos:definition "The rate at which temperature increases with time, typically expressed in degree celsius or kelvin per unit time"@en ;
+    skos:definition "The rate at which temperature increases with time, typically expressed in degree celsius or kelvin per unit time."@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
-    skos:prefLabel "Heating rate"@en ;
+    skos:prefLabel "heating rate"@en ;
 .

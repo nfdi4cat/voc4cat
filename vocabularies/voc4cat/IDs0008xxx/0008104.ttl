@@ -11,9 +11,10 @@ voc4cat:0008104
     dcterms:modified "2026-03-27"^^xsd:date ;
     dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008104.ttl> ;
     rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008104.ttl> ;
+    skos:altLabel "catalyst carrier"@en ;
     skos:broader voc4cat:0000190 ;
     skos:changeNote "0000-0001-5161-4801 Arjun Neyyathala created this resource"@en ;
-    skos:definition "A solid material, typically porous and possessing a high surface area, onto which a catalyst is immobilized. Eg.,silica, alumina, and carbon."@en ;
+    skos:definition "A solid material, typically porous and possessing a high surface area, onto which a catalytically active component is deposited. Eg.,silica, alumina, and carbon."@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
-    skos:prefLabel "Catalyst Support "@en ;
+    skos:prefLabel "catalyst support "@en ;
 .

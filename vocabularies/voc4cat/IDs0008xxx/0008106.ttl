@@ -11,10 +11,9 @@ voc4cat:0008106
     dcterms:modified "2026-03-27"^^xsd:date ;
     dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008106.ttl> ;
     rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008106.ttl> ;
-    skos:altLabel "Impregnation loading"@en ;
     skos:broader voc4cat:0007034 ;
     skos:changeNote "0000-0001-5161-4801 Arjun Neyyathala created this resource"@en ;
     skos:definition "The weight percentage of the active metal relative to the total mass of the supported catalyst"@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
-    skos:prefLabel "Metal loading "@en ;
+    skos:prefLabel "metal loading "@en ;
 .

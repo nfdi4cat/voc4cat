@@ -1,0 +1,19 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+voc4cat:0008111
+    a skos:Concept ;
+    dcterms:created "2025-12-28"^^xsd:date ;
+    dcterms:identifier "0008111"^^xsd:token ;
+    dcterms:modified "2026-03-27"^^xsd:date ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008111.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008111.ttl> ;
+    skos:broader voc4cat:0007828 ;
+    skos:changeNote "0000-0001-5161-4801 Arjun Neyyathala created this resource"@en ;
+    skos:definition "Known concentration of the compound that is used to generate a calibration curve which can then be used to determine the unknown concentration of a compound in a reaction mixture."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:prefLabel "external standard concentration"@en ;
+.

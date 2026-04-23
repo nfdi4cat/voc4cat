@@ -15,6 +15,10 @@ voc4cat:0007028
     skos:changeNote "0000-0002-4041-0165 Julia Schumann created the resource, 0000-0002-5898-1820 David Linke contributed to the definition of the resource"@en ;
     skos:definition "A synthesis method in which inorganic compounds are dissolved in a solvent and brought into contact with a solid support in order to deposit them completely or in parts onto the surface."@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
-    skos:narrower voc4cat:0007806 ;
+    skos:narrower
+        voc4cat:0007806 ,
+        voc4cat:0008119 ,
+        voc4cat:0008120 ,
+        voc4cat:0008121 ;
     skos:prefLabel "impregnation"@en ;
 .

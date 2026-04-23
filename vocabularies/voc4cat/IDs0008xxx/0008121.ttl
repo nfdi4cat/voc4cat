@@ -1,0 +1,17 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+voc4cat:0008121
+    a skos:Concept ;
+    dcterms:identifier "0008121"^^xsd:token ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008121.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008121.ttl> ;
+    skos:broader voc4cat:0007028 ;
+    skos:changeNote "0000-0001-5161-4801 Arjun Neyyathala created this resource"@en ;
+    skos:definition "The temperature at which a precursor solution is introduced into a support during impregnation, influencing mass transport, adsorption behavior, and the uniformity of precursor distribution within the material."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:prefLabel "impregnation temperature"@en ;
+.

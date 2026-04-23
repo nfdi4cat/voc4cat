@@ -53,6 +53,9 @@ voc4cat:0000185
         voc4cat:0007206 ,
         voc4cat:0007238 ,
         voc4cat:0008101 ,
-        voc4cat:0008102 ;
+        voc4cat:0008102 ,
+        voc4cat:0008124 ,
+        voc4cat:0008129 ,
+        voc4cat:0008130 ;
     skos:prefLabel "processes"@en ;
 .

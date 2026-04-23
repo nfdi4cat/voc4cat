@@ -15,6 +15,8 @@ voc4cat:0007244
     skos:changeNote "0009-0008-1278-8890 Michael Götte created the resource"@en ;
     skos:definition "The measure of the amount of dissolved material (solute) in a solution."@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
-    skos:narrower voc4cat:0008214 ;
+    skos:narrower
+        voc4cat:0008125 ,
+        voc4cat:0008214 ;
     skos:prefLabel "concentration"@en ;
 .

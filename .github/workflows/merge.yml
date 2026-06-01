@@ -117,7 +117,7 @@ jobs:
         # checked out the gh-pages branch above so that we keep all prior
         # content and just re-publish the extended version.
         # Pinning of action managed by dependabot
-        uses: peaceiris/actions-gh-pages@4f9cc6602d3f66b9c108549d475ec49e8ef4d45e
+        uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453
         if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main'
         with:
           publish_branch: gh-pages
@@ -129,7 +129,7 @@ jobs:
         # This step is not required and may be removed.
         # It may be helpful for trouble shooting.
         if: ${{ always() }}
-        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
         with:
           name: voc4cat-pages-dev-content
           path: publish/

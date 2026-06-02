@@ -23,6 +23,7 @@ voc4cat:0000194
         voc4cat:0000254 ,
         voc4cat:0007003 ,
         voc4cat:0007015 ,
-        voc4cat:0007034 ;
+        voc4cat:0007034 ,
+        voc4cat:0008141 ;
     skos:prefLabel "catalyst"@en ;
 .

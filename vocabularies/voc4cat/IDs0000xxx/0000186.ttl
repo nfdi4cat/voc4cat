@@ -8,7 +8,7 @@ voc4cat:0000186
     a skos:Concept ;
     dcterms:created "2023-08-11"^^xsd:date ;
     dcterms:identifier "0000186"^^xsd:token ;
-    dcterms:modified "2026-04-23"^^xsd:date ;
+    dcterms:modified "2026-06-01"^^xsd:date ;
     dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000186.ttl> ;
     rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000186.ttl> ;
     skos:changeNote "0000-0002-6242-2167 Nikolaos G. Moustakas and 0000-0002-5898-1820 David Linke created the resource"@en ;
@@ -165,6 +165,18 @@ voc4cat:0000186
         voc4cat:0008126 ,
         voc4cat:0008127 ,
         voc4cat:0008131 ,
+        voc4cat:0008133 ,
+        voc4cat:0008134 ,
+        voc4cat:0008135 ,
+        voc4cat:0008136 ,
+        voc4cat:0008137 ,
+        voc4cat:0008138 ,
+        voc4cat:0008139 ,
+        voc4cat:0008140 ,
+        voc4cat:0008142 ,
+        voc4cat:0008143 ,
+        voc4cat:0008144 ,
+        voc4cat:0008145 ,
         voc4cat:0008204 ,
         voc4cat:0008206 ,
         voc4cat:0008207 ,

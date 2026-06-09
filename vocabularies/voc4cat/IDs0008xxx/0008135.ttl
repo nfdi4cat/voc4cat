@@ -6,11 +6,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 voc4cat:0008135
     a skos:Concept ;
+    dcterms:created "2024-02-02"^^xsd:date ;
     dcterms:identifier "0008135"^^xsd:token ;
+    dcterms:modified "2026-06-02"^^xsd:date ;
     dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008135.ttl> ;
     rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008135.ttl> ;
     skos:broader voc4cat:0000186 ;
-    skos:definition "A unique sequence of numbers, letters, or a combination of both used to identify and distinguish a specific device."@en ;
+    skos:definition "A unique alphanumeric identifier assigned to a device to unambiguously distinguish it from others."@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:prefLabel "device ID"@en ;
 .

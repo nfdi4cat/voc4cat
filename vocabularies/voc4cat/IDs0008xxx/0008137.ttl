@@ -6,11 +6,14 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 voc4cat:0008137
     a skos:Concept ;
+    dcterms:created "2024-02-02"^^xsd:date ;
     dcterms:identifier "0008137"^^xsd:token ;
+    dcterms:modified "2026-06-02"^^xsd:date ;
     dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008137.ttl> ;
     rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008137.ttl> ;
+    skos:altLabel "total mass of feed"@en ;
     skos:broader voc4cat:0000186 ;
-    skos:definition "The total mass of chemical species fed to the inlet of a chemical reactor."@en ;
+    skos:definition "The combined mass of chemical species introduced into the inlet of a chemical reactor."@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
-    skos:prefLabel "total mass of feed"@en ;
+    skos:prefLabel "total feed mass"@en ;
 .

@@ -39,7 +39,7 @@ jobs:
 
     steps:
       - name: Checkout PR branch into cwd
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
         with:
           # Checkout the fork/head-repository to push changes to the fork.
           # Without this the base repository will be checked out and committed to.
@@ -52,7 +52,7 @@ jobs:
           persist-credentials: true
 
       - name: Checkout main branch into directory _main_branch/
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
         with:
           ref: main
           path: _main_branch
@@ -63,7 +63,7 @@ jobs:
           # Be specific about keeping credentials (it is the default)
           persist-credentials: true
 
-      - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
         with:
           python-version: '3.13'
 
@@ -139,7 +139,7 @@ jobs:
 
       - name: Add/stage vocabulary changes
         # Pinning of action managed by dependabot
-        uses: stefanzweifel/git-auto-commit-action@04702edda442b2e678b25b537cec683a1493fcb9
+        uses: stefanzweifel/git-auto-commit-action@4a55954c782fc1ea30b9056cd3e7a2b40ca8887d
         with:
           # glob pattern of files which should be added to the commit
           file_pattern: 'vocabularies/\*.ttl'
@@ -151,7 +151,7 @@ jobs:
 
       - name: Commit vocabulary changes & xlsx cleanup on behalf of PR-author
         # Pinning of action managed by dependabot
-        uses: stefanzweifel/git-auto-commit-action@04702edda442b2e678b25b537cec683a1493fcb9
+        uses: stefanzweifel/git-auto-commit-action@4a55954c782fc1ea30b9056cd3e7a2b40ca8887d
         with:
           commit_user_name: voc4cat-CI-bot
           commit_message: 'CI: vocabulary update in ${{ GITHUB.SERVER_URL }}/${{ GITHUB.REPOSITORY }}/actions/runs/${{ GITHUB.RUN_ID }}'

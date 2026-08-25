@@ -3,11 +3,23 @@
 
 name: CI on pull request create or update
 on:
-  # Using "pull_request" is not sufficient to allow commits to PR branches in
-  # forks. Since the workflow only accesses the xlsx and turtle files, but does
-  # not run any code, it is safe to use pull_request_target. More info:
+  # "pull_request" cannot be used here: GITHUB_TOKEN is read-only for PRs from
+  # forks, so the workflow could not commit the converted turtle files back to
+  # the PR branch. "pull_request_target" provides a writable token but runs in
+  # the context of the base repository while the working directory holds
+  # fork-controlled content.
+  #
+  # This is an accepted risk, not a safe pattern. Not executing the PR's code is
+  # necessary but not sufficient - argument injection, GITHUB_ENV manipulation
+  # and file inclusion remain possible. To limit the exposure, voc4cat always
+  # reads its configuration from the trusted main branch checkout below. The
+  # fork's xlsx, turtle and template files are still processed, since that is
+  # the purpose of this workflow.
+  # More info:
   # https://securitylab.github.com/resources/github-actions-preventing-pwn-requests/
-  # zizmor: ignore[dangerous-triggers] OK as per comment above
+  # https://docs.zizmor.sh/audits/#dangerous-triggers
+  # Redesign to remove the exposure entirely is tracked in issue #127.
+  # zizmor: ignore[dangerous-triggers] accepted risk, see comment above
   pull_request_target:
     branches:
       - main
@@ -114,21 +126,21 @@ jobs:
 
       - name: Split vocabulary, merge into vocabulary dir (in PR branch) and update provenance info
         run: |
-          voc4cat transform --split --inplace  --config idranges.toml --logfile outbox/voc4cat.log --outdir outbox_new_voc outbox/
+          voc4cat transform --split --inplace  --config _main_branch/idranges.toml --logfile outbox/voc4cat.log --outdir outbox_new_voc outbox/
           voc4cat-merge --logfile outbox/voc4cat.log  outbox_new_voc/ vocabularies/
           # copy xlsx to outbox so that the xlsx file is part of the artifact
           find inbox-excel-vocabs -name '*.xlsx' -exec cp {} -t outbox/ \;
           git status
           # Add/update dct:created and dct:modified base on git history
-          voc4cat transform --prov-from-git --diff-base origin/main --inplace --config idranges.toml --logfile outbox/voc4cat.log vocabularies/
+          voc4cat transform --prov-from-git --diff-base origin/main --inplace --config _main_branch/idranges.toml --logfile outbox/voc4cat.log vocabularies/
 
       - name: Run voc4cat (re-build updated Excel file and joined turtle vocabulary file)
         # Passing the config is important to make use of the prefixes therein.
         run: |
           mkdir -p outbox/updated-xlsx-ttl
-          voc4cat transform --join --config idranges.toml --logfile outbox/voc4cat.log --outdir outbox/updated-xlsx-ttl vocabularies/
+          voc4cat transform --join --config _main_branch/idranges.toml --logfile outbox/voc4cat.log --outdir outbox/updated-xlsx-ttl vocabularies/
           # Using a template is optional and gives just a warning if missing.
-          voc4cat convert --config idranges.toml --logfile outbox/voc4cat.log --template templates/default_sheets.xlsx outbox/updated-xlsx-ttl
+          voc4cat convert --config _main_branch/idranges.toml --logfile outbox/voc4cat.log --template templates/default_sheets.xlsx outbox/updated-xlsx-ttl
 
       - name: Store artifacts
         if: ${{ always() }}

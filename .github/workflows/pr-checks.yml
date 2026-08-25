@@ -9,6 +9,14 @@
 name: PR Submission Checks
 
 on:
+  # "pull_request" cannot be used here: GITHUB_TOKEN is read-only for PRs from
+  # forks, so the workflow could not post its comments. Unlike ci-pr.yml this
+  # workflow never checks out the fork - no fork-controlled file is written to
+  # the runner and no write access to repository contents is requested. The PR
+  # metadata is read at runtime through the github-script "context" object
+  # instead of being interpolated into the script, as described in the security
+  # note at the top of this file.
+  # zizmor: ignore[dangerous-triggers] no fork checkout, see comment above
   pull_request_target:
     types: [opened, reopened, synchronize]
     branches:

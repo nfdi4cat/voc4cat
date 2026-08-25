@@ -39,7 +39,7 @@ jobs:
 
     steps:
       - name: Checkout PR branch into cwd
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
         with:
           # Checkout the fork/head-repository to push changes to the fork.
           # Without this the base repository will be checked out and committed to.
@@ -52,7 +52,7 @@ jobs:
           persist-credentials: true
 
       - name: Checkout main branch into directory _main_branch/
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
         with:
           ref: main
           path: _main_branch
@@ -63,7 +63,7 @@ jobs:
           # Be specific about keeping credentials (it is the default)
           persist-credentials: true
 
-      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
         with:
           python-version: '3.13'
 
@@ -132,14 +132,14 @@ jobs:
 
       - name: Store artifacts
         if: ${{ always() }}
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
         with:
           name: voc4cat-outbox_${{ env.RUN_DATE }}_run${{ GITHUB.RUN_ID }}
           path: outbox/
 
       - name: Add/stage vocabulary changes
         # Pinning of action managed by dependabot
-        uses: stefanzweifel/git-auto-commit-action@4a55954c782fc1ea30b9056cd3e7a2b40ca8887d
+        uses: stefanzweifel/git-auto-commit-action@4a55954c782fc1ea30b9056cd3e7a2b40ca8887d  # v7.2.0
         with:
           # glob pattern of files which should be added to the commit
           file_pattern: 'vocabularies/\*.ttl'
@@ -151,7 +151,7 @@ jobs:
 
       - name: Commit vocabulary changes & xlsx cleanup on behalf of PR-author
         # Pinning of action managed by dependabot
-        uses: stefanzweifel/git-auto-commit-action@4a55954c782fc1ea30b9056cd3e7a2b40ca8887d
+        uses: stefanzweifel/git-auto-commit-action@4a55954c782fc1ea30b9056cd3e7a2b40ca8887d  # v7.2.0
         with:
           commit_user_name: voc4cat-CI-bot
           commit_message: 'CI: vocabulary update in ${{ GITHUB.SERVER_URL }}/${{ GITHUB.REPOSITORY }}/actions/runs/${{ GITHUB.RUN_ID }}'

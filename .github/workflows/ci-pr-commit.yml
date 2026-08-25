@@ -1,0 +1,193 @@
+# This action commits the vocabulary changes produced by ci-pr.yml back to the
+# pull request branch.
+#
+# This is the privileged half of the PR pipeline. It holds the write token, but
+# it runs no tooling over fork-controlled content: it copies a directory out of
+# an artifact, stages it and pushes. See issue #127 for the reasoning.
+
+name: Commit CI vocabulary changes
+on:
+  # "workflow_run" is needed because ci-pr.yml runs on "pull_request" and so
+  # receives a read-only GITHUB_TOKEN for pull requests from forks. This
+  # workflow supplies the write access that committing to the PR branch needs.
+  #
+  # Unlike the pattern zizmor warns about, the job below never executes the PR's
+  # code and never runs a tool over its files. Where the push goes is validated
+  # against values GitHub supplies on the event, not against the artifact alone.
+  # https://docs.zizmor.sh/audits/#dangerous-triggers
+  # zizmor: ignore[dangerous-triggers] no tooling runs over fork content, see comment above
+  workflow_run:
+    workflows: ["CI on pull request create or update"]
+    types: [completed]
+
+permissions: {}
+
+concurrency:
+  # Serialise pushes per PR branch. Cancelling a push in flight would be worse
+  # than queueing it, so runs in progress are never cancelled.
+  group: ${{ github.workflow }}-${{ github.event.workflow_run.head_repository.full_name }}-${{ github.event.workflow_run.head_branch }}
+  cancel-in-progress: false
+
+jobs:
+  commit_vocab:
+    name: Commit converted vocabulary to the PR branch
+    # Only for successful conversion runs that came from a pull request. A
+    # workflow_dispatch run of ci-pr.yml produces no hand-off artifact.
+    if: >-
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.event == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    permissions:
+      actions: read         # to download the artifact of the conversion run
+      contents: write       # to commit to the PR branch
+      pull-requests: write  # to report a failure as a PR comment
+
+    steps:
+      - name: Download hand-off from the conversion run
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c  # v8.0.1
+        with:
+          name: voc4cat-pr-changes
+          # Outside GITHUB_WORKSPACE so the checkout below cannot clean it away.
+          path: ${{ runner.temp }}/handoff
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Validate hand-off against the pull request
+        id: validate
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          # Supplied by GitHub on the event, not by the artifact.
+          RUN_HEAD_REPO: ${{ github.event.workflow_run.head_repository.full_name }}
+          RUN_HEAD_BRANCH: ${{ github.event.workflow_run.head_branch }}
+        run: |
+          set -euo pipefail
+          ctx="$RUNNER_TEMP/handoff/pr-context.json"
+          number=$(jq -r '.number' "$ctx")
+          head_repo=$(jq -r '.head_repo' "$ctx")
+          head_ref=$(jq -r '.head_ref' "$ctx")
+          head_sha=$(jq -r '.head_sha' "$ctx")
+
+          # Shape checks before the values are used anywhere.
+          case "$number" in
+            ''|*[!0-9]*) echo "::error::PR number '$number' is not numeric"; exit 1 ;;
+          esac
+          case "$head_sha" in
+            ''|*[!0-9a-f]*) echo "::error::head sha is not lowercase hex"; exit 1 ;;
+          esac
+          if [ ${#head_sha} -ne 40 ]; then
+            echo "::error::head sha has wrong length"; exit 1
+          fi
+
+          # Recorded before the remaining checks so the failure comment below
+          # knows which pull request to post to even when validation fails.
+          echo "number=$number" >> "$GITHUB_OUTPUT"
+          echo "head_sha=$head_sha" >> "$GITHUB_OUTPUT"
+
+          # The artifact must describe the run that triggered this workflow.
+          if [ "$head_repo" != "$RUN_HEAD_REPO" ]; then
+            echo "::error::hand-off head repo '$head_repo' does not match run head repo '$RUN_HEAD_REPO'"
+            exit 1
+          fi
+          if [ "$head_ref" != "$RUN_HEAD_BRANCH" ]; then
+            echo "::error::hand-off head ref '$head_ref' does not match run head branch '$RUN_HEAD_BRANCH'"
+            exit 1
+          fi
+
+          # ...and an open pull request in this repository whose head matches.
+          pr=$(gh api "repos/$REPO/pulls/$number")
+          if [ "$(jq -r '.state' <<<"$pr")" != "open" ]; then
+            echo "::notice::PR $number is no longer open; nothing to commit."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if [ "$(jq -r '.base.repo.full_name' <<<"$pr")" != "$REPO" ]; then
+            echo "::error::PR $number does not target $REPO"; exit 1
+          fi
+          if [ "$(jq -r '.head.repo.full_name' <<<"$pr")" != "$head_repo" ]; then
+            echo "::error::PR $number head repo does not match the hand-off"; exit 1
+          fi
+          if [ "$(jq -r '.head.sha' <<<"$pr")" != "$head_sha" ]; then
+            # Not an error: a newer commit means a newer conversion run is
+            # already in flight and this output is stale.
+            echo "::notice::PR $number has moved past $head_sha; a newer run supersedes this one."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+      - name: Checkout the PR branch
+        if: ${{ steps.validate.outputs.skip != 'true' }}
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          repository: ${{ github.event.workflow_run.head_repository.full_name }}
+          ref: ${{ github.event.workflow_run.head_branch }}
+          fetch-depth: 1
+          # Needed to push the commit below. No tool runs over the tree while
+          # the credential is on disk.
+          persist-credentials: true
+
+      - name: Apply converted vocabulary and stage changes
+        id: apply
+        if: ${{ steps.validate.outputs.skip != 'true' }}
+        env:
+          EXPECTED_SHA: ${{ steps.validate.outputs.head_sha }}
+        run: |
+          set -euo pipefail
+          actual=$(git rev-parse HEAD)
+          if [ "$actual" != "$EXPECTED_SHA" ]; then
+            echo "::notice::Branch tip is $actual, expected $EXPECTED_SHA; a newer run supersedes this one."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          # Only vocabularies/ is copied out of the artifact, by explicit path,
+          # so nothing else in the artifact can reach the working tree.
+          rm -rf vocabularies
+          cp -r "$RUNNER_TEMP/handoff/vocabularies" vocabularies
+          # -A so that files the conversion removed are staged as deletions.
+          git add -A vocabularies
+          # The submitted spreadsheets are cleaned up once converted.
+          git rm --quiet --ignore-unmatch -- 'inbox-excel-vocabs/*.xlsx'
+          git status --short
+
+      - name: Commit and push on behalf of the PR author
+        if: ${{ steps.validate.outputs.skip != 'true' && steps.apply.outputs.skip != 'true' }}
+        env:
+          ACTOR: ${{ github.event.workflow_run.actor.login }}
+          ACTOR_ID: ${{ github.event.workflow_run.actor.id }}
+          HEAD_BRANCH: ${{ github.event.workflow_run.head_branch }}
+          # Points at the conversion run, which is what a contributor wants to
+          # look at, and keeps the message format used before the split.
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.event.workflow_run.id }}
+        run: |
+          set -euo pipefail
+          if git diff --cached --quiet; then
+            echo "::notice::No vocabulary changes to commit."
+            exit 0
+          fi
+          git -c user.name='voc4cat-CI-bot' \
+              -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+              commit \
+              --author="$ACTOR <$ACTOR_ID+$ACTOR@users.noreply.github.com>" \
+              -m "CI: vocabulary update in $RUN_URL"
+          git push origin "HEAD:$HEAD_BRANCH"
+
+      - name: Report failure on the pull request
+        if: ${{ failure() }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          PR_NUMBER: ${{ steps.validate.outputs.number }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          if [ -z "${PR_NUMBER:-}" ]; then
+            echo "::warning::No pull request number available; cannot post a comment."
+            exit 0
+          fi
+          gh api "repos/$REPO/issues/$PR_NUMBER/comments" \
+            -f body="The CI could not commit the converted vocabulary to this branch. See the [workflow run]($RUN_URL) for details.
+
+          If your fork belongs to an organization, this is expected: GitHub does not offer the \"Allow edits by maintainers\" option for such forks, and the CI cannot push to them."

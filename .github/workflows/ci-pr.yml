@@ -1,26 +1,18 @@
 # This action runs when a pull request to main is created or updated
 # (but not when it is merged into main).
+#
+# This is the unprivileged half of the PR pipeline. It runs on "pull_request",
+# so for pull requests from forks GitHub withholds all secrets and issues a
+# read-only GITHUB_TOKEN. The job therefore cannot push anywhere, whatever the
+# fork-controlled files it processes may contain.
+#
+# The converted vocabulary is handed to ci-pr-commit.yml through an artifact.
+# That workflow holds the write token and commits the result to the PR branch
+# without running any tooling over fork-controlled content. See issue #127.
 
 name: CI on pull request create or update
 on:
-  # "pull_request" cannot be used here: GITHUB_TOKEN is read-only for PRs from
-  # forks, so the workflow could not commit the converted turtle files back to
-  # the PR branch. "pull_request_target" provides a writable token but runs in
-  # the context of the base repository while the working directory holds
-  # fork-controlled content.
-  #
-  # This is an accepted risk, not a safe pattern. Not executing the PR's code is
-  # necessary but not sufficient - argument injection, GITHUB_ENV manipulation
-  # and file inclusion remain possible. To limit the exposure, voc4cat always
-  # reads its configuration from the trusted main branch checkout below. The
-  # fork's xlsx, turtle and template files are still processed, since that is
-  # the purpose of this workflow.
-  # More info:
-  # https://securitylab.github.com/resources/github-actions-preventing-pwn-requests/
-  # https://docs.zizmor.sh/audits/#dangerous-triggers
-  # Redesign to remove the exposure entirely is tracked in issue #127.
-  # zizmor: ignore[dangerous-triggers] accepted risk, see comment above
-  pull_request_target:
+  pull_request:
     branches:
       - main
     types: [opened, reopened, synchronize]
@@ -47,21 +39,29 @@ jobs:
     timeout-minutes: 10
 
     permissions:
-      contents: write  # Give the default GITHUB_TOKEN write permission to commit to the PR branch.
+      contents: read  # This job never pushes; ci-pr-commit.yml does that.
 
     steps:
-      - name: Checkout PR branch into cwd
+      - name: Checkout PR head into cwd
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
         with:
-          # Checkout the fork/head-repository to push changes to the fork.
-          # Without this the base repository will be checked out and committed to.
-          repository: ${{ github.event.pull_request.head.repo.full_name }}
-          # Checkout the branch made in the fork.
-          ref: ${{ github.head_ref }}
+          # The PR head is taken from the base repository via refs/pull/<n>/head,
+          # so "origin" is the upstream repository. This makes the
+          # "--diff-base origin/main" below compare against the real main branch
+          # instead of a possibly stale copy of main in the fork.
+          ref: >-
+            ${{ github.event_name == 'pull_request'
+                && format('refs/pull/{0}/head', github.event.pull_request.number)
+                || github.ref }}
           # The full history is required for "voc4cat transform --prov-from-git" below.
           fetch-depth: 0
-          # Be specific about keeping credentials (it is the default)
-          persist-credentials: true
+          # No credentials on disk while fork-controlled files are processed.
+          persist-credentials: false
+
+      - name: Make origin/main available for provenance diffing
+        # The checkout above fetched a single ref. Fetch main explicitly rather
+        # than relying on the action's default refspec.
+        run: git fetch --no-tags origin +refs/heads/main:refs/remotes/origin/main
 
       - name: Checkout main branch into directory _main_branch/
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
@@ -72,8 +72,7 @@ jobs:
           sparse-checkout: |
             vocabularies/
           fetch-depth: 1
-          # Be specific about keeping credentials (it is the default)
-          persist-credentials: true
+          persist-credentials: false
 
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
         with:
@@ -149,21 +148,33 @@ jobs:
           name: voc4cat-outbox_${{ env.RUN_DATE }}_run${{ GITHUB.RUN_ID }}
           path: outbox/
 
-      - name: Add/stage vocabulary changes
-        # Pinning of action managed by dependabot
-        uses: stefanzweifel/git-auto-commit-action@4a55954c782fc1ea30b9056cd3e7a2b40ca8887d  # v7.2.0
-        with:
-          # glob pattern of files which should be added to the commit
-          file_pattern: 'vocabularies/\*.ttl'
-
-      - name: Remove Excel vocabulary files from inbox
+      - name: Assemble hand-off for the commit workflow
+        if: ${{ github.event_name == 'pull_request' }}
+        env:
+          # Passed as environment variables rather than interpolated into the
+          # script, so that a crafted branch name cannot inject shell syntax.
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          HEAD_REPO: ${{ github.event.pull_request.head.repo.full_name }}
+          HEAD_REF: ${{ github.event.pull_request.head.ref }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
         run: |
-          git rm inbox-excel-vocabs/\*.xlsx || echo "No xlsx files to remove."
-          git status
+          set -euo pipefail
+          mkdir -p handoff
+          cp -r vocabularies handoff/vocabularies
+          # jq builds the JSON so that every value is escaped correctly.
+          jq -n \
+            --argjson number "$PR_NUMBER" \
+            --arg head_repo "$HEAD_REPO" \
+            --arg head_ref "$HEAD_REF" \
+            --arg head_sha "$HEAD_SHA" \
+            '{number: $number, head_repo: $head_repo, head_ref: $head_ref, head_sha: $head_sha}' \
+            > handoff/pr-context.json
+          cat handoff/pr-context.json
 
-      - name: Commit vocabulary changes & xlsx cleanup on behalf of PR-author
-        # Pinning of action managed by dependabot
-        uses: stefanzweifel/git-auto-commit-action@4a55954c782fc1ea30b9056cd3e7a2b40ca8887d  # v7.2.0
+      - name: Upload hand-off for the commit workflow
+        if: ${{ github.event_name == 'pull_request' }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
         with:
-          commit_user_name: voc4cat-CI-bot
-          commit_message: 'CI: vocabulary update in ${{ GITHUB.SERVER_URL }}/${{ GITHUB.REPOSITORY }}/actions/runs/${{ GITHUB.RUN_ID }}'
+          name: voc4cat-pr-changes
+          path: handoff/
+          retention-days: 1

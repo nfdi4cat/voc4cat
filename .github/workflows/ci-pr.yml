@@ -64,6 +64,18 @@ jobs:
         run: git fetch --no-tags origin +refs/heads/main:refs/remotes/origin/main
 
       - name: Checkout main branch into directory _main_branch/
+        # Supplies two things that every voc4cat call below depends on:
+        #
+        # - idranges.toml. The config is always read from main, never from the
+        #   pull request, so the ID ranges enforced are the ones already
+        #   approved there. A pull request therefore cannot allocate itself a
+        #   range and use it in the same pull request: the allocation has to be
+        #   reviewed and merged first, and only then can the IDs be used. Do
+        #   not change these paths to the branch copy without replacing that
+        #   control - it predates the pull_request_target mitigation and is not
+        #   a leftover of it.
+        # - vocabularies/, the baseline that "check --ci-pre" and "--ci-post"
+        #   compare the submission against.
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
         with:
           ref: main

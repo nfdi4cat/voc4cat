@@ -127,6 +127,13 @@ jobs:
           # Needed to push the commit below. No tool runs over the tree while
           # the credential is on disk.
           persist-credentials: true
+          # actions/checkout refuses fork checkouts from workflow_run because
+          # the job holds the base repository's token. Opting in is safe here
+          # for the same reason the trigger itself is: nothing from the fork is
+          # executed or parsed. The steps below replace vocabularies/ from the
+          # artifact, stage it, commit and push.
+          # https://gh.io/securely-using-pull_request_target
+          allow-unsafe-pr-checkout: true
 
       - name: Apply converted vocabulary and stage changes
         id: apply

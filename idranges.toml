@@ -41,10 +41,11 @@ Alice Smith https://orcid.org/0000-0001-2345-6788
 Sofia Garcia https://orcid.org/0000-0001-2345-6789
 """
 
-# Optional: Publisher(s) - multi-line text, each line: "<name> <orcid-URL or ror-URL>"
-# publisher = """
-# Example Organization https://ror.org/04fa4r544
-# """
+# MANDATORY: Publisher - single line of text: "<name> <orcid-URL or ror-URL>"
+# The vp4cat profile requires exactly one publisher (requirement 2.1.6).
+publisher = """
+Example Organization https://ror.org/04fa4r544
+"""
 
 # Optional: Custodian(s) - multi-line text, each line: "<name> <orcid-URL or ror-URL>"
 # custodian = """

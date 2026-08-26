@@ -48,9 +48,11 @@ Example Organization https://ror.org/04fa4r544
 """
 
 # Optional: Custodian(s) - multi-line text, each line: "<name> <orcid-URL or ror-URL>"
-# custodian = """
-# Alice Smith https://orcid.org/0000-0001-2345-6789
-# """
+# Becomes dcat:contactPoint. A line carrying a URL yields an IRI, plain text
+# yields a literal.
+custodian = """
+Sofia Garcia https://orcid.org/0000-0001-2345-6789
+"""
 
 # Optional: DOI or other catalogue persistent identifier
 # catalogue_pid = ""

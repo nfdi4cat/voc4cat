@@ -21,7 +21,7 @@ permanent_iri_part = "https://example.org/test/"
 # Fields marked MANDATORY must be filled before use.
 
 # MANDATORY: IRI for the vocabulary (skos:ConceptScheme)
-vocabulary_iri = "https://example.org/vocab/"
+vocabulary_iri = "https://example.org/test/"
 
 # Optional: Registered (or preferred) prefix for this vocabulary
 prefix = "ex"

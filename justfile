@@ -41,7 +41,7 @@ setup:
 upgrade:
   uv tool install --upgrade voc4cat --with git+https://github.com/dalito/pyLODE.git@nfdi4cat-2.x
 
-# Check the *.xlsx file(s) in inbox/ for errors
+# Check the *.xlsx file(s) in inbox-excel-vocabs/ for errors
 [group('individual steps')]
 check: _fake_actions_env
   @voc4cat --version
@@ -50,7 +50,7 @@ check: _fake_actions_env
   # check xlsx file(s). If the check fails, write annotated file to outbox.
   @voc4cat check --config _main_branch/idranges.toml --logfile outbox/voc4cat.log --outdir outbox inbox-excel-vocabs/
 
-# Convert the voc4cat.xlsx file in inbox/ to turtle
+# Convert the *.xlsx file(s) in inbox-excel-vocabs/ to turtle
 [group('individual steps')]
 convert: _fake_actions_env
   # make a backup of the original file just in case

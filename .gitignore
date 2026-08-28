@@ -111,3 +111,6 @@ _main_branch
 # Excel/OpenOffice temporary files
 ~$*
 .~*
+
+# Copies of submitted xlsx files kept by the local "just convert" recipe.
+_xlsx-backup/

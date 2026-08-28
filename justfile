@@ -10,22 +10,11 @@
 # It is included in git for windows so most likely you have it already.
 # Else download it from https://git-scm.com/download/win
 
-export GITHUB_ENV := datetime("%Y-%m-%dT%H%M")
 set windows-shell := ["C:\\Program Files\\Git\\bin\\sh.exe","-c"]
 
 # List all commands as default command. The prefix "_" hides the command.
 _default:
     @just --list
-
-# Set cross-platform Python shebang line (assumes presence of launcher on Windows)
-shebang := if os() == 'windows' {
-  'py'
-} else {
-  '/usr/bin/env python3'
-}
-
-# Directory variables
-src := "src"
 
 # Ignore recipe lines beginning with #.
 set ignore-comments	:= true
@@ -94,6 +83,23 @@ prov:
 
 # Run all steps as in gh-actions: check xlsx, convert to SKOS, build docs, re-build xlsx
 all: check convert docs xlsx
+
+# The checks that guard a pull request are advisory when run locally and fatal
+# in gh-actions. Uncomment to get the pipeline's strict behaviour here, e.g. to
+# see whether the IDs you minted are inside the id_range that idranges.toml
+# grants your GITHUB_ACTOR. The example name is the one used in the example
+# vocabulary; replace it with your own GitHub name (or ORCID).
+# These must stay at file level: "export" inside a recipe applies to that line only.
+# export GITHUB_ACTIONS := "true"
+# export GITHUB_ACTOR := "sofia-garcia"
+
+# The pipeline stamps these into the built vocabulary; uncomment to do the same
+# locally. VOC4CAT_MODIFIED sets dcterms:modified on the concept scheme (it
+# defaults to today), VOC4CAT_VERSION sets owl:versionInfo and must start with
+# "v". A "v_" prefix keeps the git-blame links pointing at main, like the dev
+# build in merge.yml; a release tag points them at that tag instead.
+# export VOC4CAT_MODIFIED := datetime("%Y-%m-%d")
+# export VOC4CAT_VERSION := "v_local"
 
 # Create local environment suitable to run the same commands as in gh-actions
 _fake_actions_env:

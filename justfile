@@ -53,13 +53,14 @@ check: _fake_actions_env
 # Convert the *.xlsx file(s) in inbox-excel-vocabs/ to turtle
 [group('individual steps')]
 convert: _fake_actions_env
-  # make a backup of the original file just in case
-  @mkdir -p inbox-excel-vocabs/backup
-  @cp inbox-excel-vocabs/*.xlsx inbox-excel-vocabs/backup
+  # keep a copy of the submitted file(s) outside the inbox, which voc4cat
+  # requires to hold nothing but xlsx and markdown
+  @mkdir -p _xlsx-backup
+  @if ls inbox-excel-vocabs/*.xlsx >/dev/null 2>&1; then cp inbox-excel-vocabs/*.xlsx _xlsx-backup; fi
   @voc4cat convert --config _main_branch/idranges.toml --logfile outbox/voc4cat.log --outdir outbox inbox-excel-vocabs/
   @if [ -z "$(ls outbox/*.ttl 2>/dev/null)" ]; then \
-    @echo "No ttl file in outbox. Building joined vocabulary ttl-file from individual ttl-files in vocabulary.\n" && \
-    @voc4cat transform --join --config _main_branch/idranges.toml --logfile outbox/voc4cat.log --outdir outbox/ vocabularies/ ;\
+    echo "No ttl file in outbox. Building joined vocabulary ttl-file from individual ttl-files in vocabulary." && \
+    voc4cat transform --join --config _main_branch/idranges.toml --logfile outbox/voc4cat.log --outdir outbox/ vocabularies/ ;\
   fi
 
   #=== post-convert checks ===

@@ -107,3 +107,6 @@ outbox/
 outbox_new_voc/
 publish/
 _main_branch
+
+# Copies of submitted xlsx files kept by the local "just convert" recipe.
+_xlsx-backup/

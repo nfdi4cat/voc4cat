@@ -11,7 +11,7 @@ The template is maintained as part of the [NFDI4Cat](http://www.nfdi4cat.org) in
 ## How to start?
 
 Please follow the [Setting up a Vocabulary Project](https://nfdi4cat.github.io/voc4cat-tool/user-guide/project-setup.html) guide in the voc4cat-tool documentation. 
-See also [README_TEMPLATE.md](/README_TEMPLATE.md#how-to-start) included in this repositroy for help and guidance on using the template.
+See also [README_TEMPLATE.md](/README_TEMPLATE.md#how-to-start) included in this repository for help and guidance on using the template.
 
 *If you based your own vocabulary on this template, you will need to adjust this section.
 The contents in [README_TEMPLATE.md](/README_TEMPLATE.md) should give you a good start for adjusting your README.md (this file).*

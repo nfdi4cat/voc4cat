@@ -31,7 +31,10 @@ The voc4cat-template implements automatic storage of different versions of the v
 
 - `dev` - Directory with artifacts built from the most recent commit to the main branch.
 - `latest` - Directory with all files built for the latest release.
-- `vYYYY-MM-DD` (for example `v2023-08-16`) - Directory with all files built for the release with this tag.
+- `<release-tag>` (for example `v2023-08-16`) - Directory with all files built for the release with this tag.
+
+A release is built and published whenever a GitHub release is created.
+Pushing a bare tag publishes it as well if the tag has the form `vYYYY-MM-DD`, the suggested naming scheme for vocabulary releases.
 
 For all versions, multiple files are stored (see https://github.com/nfdi4cat/voc4cat-template/issues/11#issuecomment-1680592185 for details). The correct version string is automatically inserted to all build artifacts. For `dev`, the first eight characters of the commit hash are used as version (for example `v_fadfa5f9`).
 
@@ -79,6 +82,7 @@ Here are the steps for submitting updates in Excel.
 Finally, when the proposed pull request is accepted, your changes will be integrated in the vocabularies in the folder `vocabularies`.
 The vocabularies are stored in split form using one folder per vocabulary.
 Each concept, collection and concept scheme is stored in a separate file using the ID-part of the IRI as file name.
+Concepts and collections are grouped into subfolders of 1000 IDs each (`IDs0000xxx`, `IDs0001xxx`, ...) to keep the folders browsable.
 
 See [inbox-excel-vocabs/README.md](inbox-excel-vocabs/README.md) for a minimal example how to test the submission process.
 
@@ -96,7 +100,7 @@ The template can be used to create your own independent repository for SKOS voca
 
 First create a new repository on github without any contents, named e.g. "my-new-vocabulary". Then set up your own independent vocabulary repository on the command line:
 
-```gitattributes
+```bash
 git init my-new-vocabulary
 cd my-new-vocabulary
 git pull https://github.com/nfdi4cat/voc4cat-template
@@ -104,7 +108,7 @@ git remote add origin https://github.com/my-gh-name/my-new-vocabulary.git
 git push -u origin main
 ```
 
-This adds all commits made in the template´s main branch to your new repository. In addition to this basic setup you may want to
+This adds all commits made in the template's main branch to your new repository. In addition to this basic setup you may want to
 
 - Adjust the README.md file for your vocabulary.
 - Adjust the configuration of your vocabularies in `idranges.toml`
@@ -114,28 +118,28 @@ This adds all commits made in the template´s main branch to your new repository
   - Configure GitHub pages to use as source "deploy from a branch" and select the branch `gh-pages` (Settings > Pages > Build and deployment)
 - Optionally
   - Add a different license for your vocabulary.
-- Optionally provide a custom Excel template with extra sheets, see [documentation](https://nfdi4cat.github.io/voc4cat-tool/migration-to-v1.0.html#step-3-generate-v1-0-excel-template).
+- Optionally provide a custom Excel template with extra sheets, see [documentation](https://nfdi4cat.github.io/voc4cat-tool/migration-to-v1.0.html#step-4-generate-v1-0-excel-template).
 
 After these steps your repository should work just like [voc4cat](https://github.com/nfdi4cat/voc4cat).
 
 ### Keeping your vocabulary repository in sync with voc4cat-template
 
-To review the changes made in the template in version 26.x and compare to when you last pulled it use:
+To review the changes made in the template in version v26.8 and compare to when you last pulled it use:
 
-```gitattributes
-git fetch https://github.com/nfdi4cat/voc4cat-template tag v26.x
+```bash
+git fetch https://github.com/nfdi4cat/voc4cat-template tag v26.8
 git diff ...FETCH_HEAD
 ```
 
 If you want to take over the changes, pull them into your repository
 
-```gitattributes
-git pull https://github.com/nfdi4cat/voc4cat-template tag v26.x
+```bash
+git pull https://github.com/nfdi4cat/voc4cat-template tag v26.8
 ```
 
 and push the change to the remote repository.
 
-```gitattributes
+```bash
 git push
 ```
 
@@ -143,15 +147,15 @@ It is suggested to merge the changes from the template repository before every n
 
 ## Working with voc4cat-tools on your own computer
 
-This repository template contains a `justfile` which pre-defines series of commands as tasks. Theses tasks are run with the [just command runner](https://github.com/casey/just).
+This repository template contains a `justfile` which pre-defines series of commands as tasks. These tasks are run with the [just command runner](https://github.com/casey/just).
 
-In the justfile, [uv](https://docs.astral.sh/[uv](https://docs.astral.sh/uv/)/) is used to install and update the Python package [voc4cat](https://pypi.org/project/voc4cat/).
+In the justfile, [uv](https://docs.astral.sh/uv/) is used to install and update the Python package [voc4cat](https://pypi.org/project/voc4cat/).
 
-The justfile helps to tun (almost) the same commands as are used in the GitHub workflows locally on your computer.
+The justfile helps to run (almost) the same commands as are used in the GitHub workflows locally on your computer.
 This makes local testing of a modified vocabulary xlsx-file easier.
 Read the header of the justfile for more info on setting up your environment.
 
-Once you have `just` installed type the command `just` at the root of the git-project to list the available commands. For version 1.0.0 of the template, it gives:
+Once you have `just` installed type the command `just` at the root of the git-project to list the available commands. For version v26.8 of the template, it gives:
 
 ```bash
 $ just
@@ -164,8 +168,8 @@ Available recipes:
     upgrade # Upgrades voc4cat-tool installation
 
     [individual steps]
-    check   # Check the voc4cat.xlsx file in inbox/ for errors
-    convert # Convert the voc4cat.xlsx file in inbox/ to turtle
+    check   # Check the *.xlsx file(s) in inbox-excel-vocabs/ for errors
+    convert # Convert the *.xlsx file(s) in inbox-excel-vocabs/ to turtle
     docs    # Run voc4cat (build HTML documentation from ttl files)
     join    # Join individual ttl files in vocabularies/ to one turtle file in outbox/
     prov    # Add provenance information to all ttl files in vocabularies/

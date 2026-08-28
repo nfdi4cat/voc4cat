@@ -86,6 +86,31 @@ Concepts and collections are grouped into subfolders of 1000 IDs each (`IDs0000x
 
 See [inbox-excel-vocabs/README.md](inbox-excel-vocabs/README.md) for a minimal example how to test the submission process.
 
+### How to tell that a submitted xlsx file was converted and committed
+
+A successfully processed submission shows two things on the pull request:
+
+- a green check for "CI on pull request create or update" (`ci-pr.yml`), the workflow that validates the xlsx file and converts it to turtle, and
+- a commit named "CI: vocabulary update in ..." (linking to the run), which adds the resulting turtle files to `vocabularies/` and removes the xlsx file from `inbox-excel-vocabs/`.
+
+The workflow that writes that commit (`ci-pr-commit.yml`, "Commit CI vocabulary changes") runs after the conversion.
+It is listed in the Actions tab under the main branch and not among the checks of the pull request, so the commit itself is the sign that it succeeded.
+If it cannot push to the pull request branch, it says so in a comment on the pull request.
+
+### Why a second workflow run has to be approved
+
+That commit updates the pull request branch, which starts `ci-pr.yml` a second time.
+GitHub holds this run until a maintainer presses "Approve and run" in the Actions tab, because a workflow made the update with the built-in `GITHUB_TOKEN`.
+A waiting run is not a sign that anything failed.
+
+The second run is the one that validates the merged vocabulary.
+The first run checks the submission on its own: it validates the xlsx file and the turtle built from it, and only after those checks are the new turtle files merged into the existing files in `vocabularies/` and given their provenance dates.
+The second run finds an empty inbox, joins `vocabularies/` as the pull request now leaves it and validates that whole vocabulary, which is the state that a merge puts on the main branch.
+Nothing later repeats this check, since the build that runs after a merge only publishes.
+
+Approve the run before merging, in particular for submissions that change existing concepts.
+Making the workflow a required status check enforces this, at the price of blocking the merge until the queued run has been approved.
+
 ## How to suggest improvements to the tooling & template?
 
 To discuss about the workflow for maintaining SKOS vocabularies based on this template, create an [voc4cat-template issue](https://github.com/nfdi4cat/voc4cat-template/issues).

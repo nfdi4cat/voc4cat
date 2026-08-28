@@ -8,9 +8,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a skos:Concept ;
     dcterms:created "2023-08-10"^^xsd:date ;
     dcterms:identifier "0000003"^^xsd:token ;
-    dcterms:modified "2026-02-14"^^xsd:date ;
-    dcterms:provenance <https://github.com/NFDI4Cat/voc4cat-template/blame/main/vocabularies/vocab_example/0000003.ttl> ;
-    rdfs:seeAlso <https://github.com/NFDI4Cat/voc4cat-template/blame/main/vocabularies/vocab_example/0000003.ttl> ;
+    dcterms:modified "2026-02-23"^^xsd:date ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat-template/blame/main/vocabularies/vocab_example/IDs0000xxx/0000003.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat-template/blame/main/vocabularies/vocab_example/IDs0000xxx/0000003.ttl> ;
     skos:altLabel "IRI"@en ;
     skos:changeNote "0000-0001-2345-6789 Created concept"@en ;
     skos:definition "Internationalized Resource Identifier (IRI) is an internet protocol standard which builds on the Uniform Resource Identifier (URI) protocol by greatly expanding the set of permitted characters."@en ;

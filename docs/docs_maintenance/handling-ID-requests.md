@@ -12,6 +12,11 @@ myst:
 To update or create ID-ranges for people use the following workflow.
 It is written for using git from the command line.
 
+```{note}
+Merge the ID-range change before the requester submits concepts using the new IDs.
+The ID ranges are read from the main branch, so a range that is still waiting in an open pull request does not count yet.
+```
+
 **Step 1**: Navigate to the folder on your computer with a local clone of the voc4cat-repo:
 
 ```bat

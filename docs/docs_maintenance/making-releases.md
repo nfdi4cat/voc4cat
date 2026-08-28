@@ -30,6 +30,13 @@ Before creating a release, ensure:
 3. You have tested the development documentation to verify correctness
 4. You have commit/push rights to the repository
 
+```{warning}
+Merge pull requests with "Create a merge commit" or "Rebase and merge", never with "Squash and merge".
+The dates telling when a concept was created and last changed are taken from the git history.
+Squashing replaces the commits of a pull request by a single new one, so these dates are lost.
+Squash merging is switched off in the repository settings and should stay off.
+```
+
 ## Release Process
 
 ### Step 1: Create Feature Branch

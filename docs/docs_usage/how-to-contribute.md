@@ -471,9 +471,10 @@ Here are some points to check before you finally submit the PR:
 
 - PR title and description summarize motivation and scope.
 - Vocabulary file is `inbox-excel-vocabs/voc4cat.xlsx` (name and path unchanged).
-- IDs of added concepts are within my allocated range.
+- IDs of added concepts are within my allocated range (checked automatically).
 - Each concept has prefLabel, definition, and a broader chain to a top concept.
 - Contribution is focused/small enough for review (split if needed).
+- No concepts or collections removed (removals are rejected).
 - No `.ttl` files edited.
 
 ```{tip}

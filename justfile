@@ -10,22 +10,11 @@
 # It is included in git for windows so most likely you have it already.
 # Else download it from https://git-scm.com/download/win
 
-export GITHUB_ENV := datetime("%Y-%m-%dT%H%M")
 set windows-shell := ["C:\\Program Files\\Git\\bin\\sh.exe","-c"]
 
 # List all commands as default command. The prefix "_" hides the command.
 _default:
     @just --list
-
-# Set cross-platform Python shebang line (assumes presence of launcher on Windows)
-shebang := if os() == 'windows' {
-  'py'
-} else {
-  '/usr/bin/env python3'
-}
-
-# Directory variables
-src := "src"
 
 # Ignore recipe lines beginning with #.
 set ignore-comments	:= true
@@ -41,7 +30,7 @@ setup:
 upgrade:
   uv tool install --upgrade voc4cat --with git+https://github.com/dalito/pyLODE.git@nfdi4cat-2.x
 
-# Check the *.xlsx file(s) in inbox/ for errors
+# Check the *.xlsx file(s) in inbox-excel-vocabs/ for errors
 [group('individual steps')]
 check: _fake_actions_env
   @voc4cat --version
@@ -50,16 +39,17 @@ check: _fake_actions_env
   # check xlsx file(s). If the check fails, write annotated file to outbox.
   @voc4cat check --config _main_branch/idranges.toml --logfile outbox/voc4cat.log --outdir outbox inbox-excel-vocabs/
 
-# Convert the voc4cat.xlsx file in inbox/ to turtle
+# Convert the *.xlsx file(s) in inbox-excel-vocabs/ to turtle
 [group('individual steps')]
 convert: _fake_actions_env
-  # make a backup of the original file just in case
-  @mkdir -p inbox-excel-vocabs/backup
-  @cp inbox-excel-vocabs/*.xlsx inbox-excel-vocabs/backup
+  # keep a copy of the submitted file(s) outside the inbox, which voc4cat
+  # requires to hold nothing but xlsx and markdown
+  @mkdir -p _xlsx-backup
+  @if ls inbox-excel-vocabs/*.xlsx >/dev/null 2>&1; then cp inbox-excel-vocabs/*.xlsx _xlsx-backup; fi
   @voc4cat convert --config _main_branch/idranges.toml --logfile outbox/voc4cat.log --outdir outbox inbox-excel-vocabs/
   @if [ -z "$(ls outbox/*.ttl 2>/dev/null)" ]; then \
-    @echo "No ttl file in outbox. Building joined vocabulary ttl-file from individual ttl-files in vocabulary.\n" && \
-    @voc4cat transform --join --config _main_branch/idranges.toml --logfile outbox/voc4cat.log --outdir outbox/ vocabularies/ ;\
+    echo "No ttl file in outbox. Building joined vocabulary ttl-file from individual ttl-files in vocabulary." && \
+    voc4cat transform --join --config _main_branch/idranges.toml --logfile outbox/voc4cat.log --outdir outbox/ vocabularies/ ;\
   fi
 
   #=== post-convert checks ===
@@ -93,6 +83,23 @@ prov:
 
 # Run all steps as in gh-actions: check xlsx, convert to SKOS, build docs, re-build xlsx
 all: check convert docs xlsx
+
+# The checks that guard a pull request are advisory when run locally and fatal
+# in gh-actions. Uncomment to get the pipeline's strict behaviour here, e.g. to
+# see whether the IDs you minted are inside the id_range that idranges.toml
+# grants your GITHUB_ACTOR. The example name is the one used in the example
+# vocabulary; replace it with your own GitHub name (or ORCID).
+# These must stay at file level: "export" inside a recipe applies to that line only.
+# export GITHUB_ACTIONS := "true"
+# export GITHUB_ACTOR := "sofia-garcia"
+
+# The pipeline stamps these into the built vocabulary; uncomment to do the same
+# locally. VOC4CAT_MODIFIED sets dcterms:modified on the concept scheme (it
+# defaults to today), VOC4CAT_VERSION sets owl:versionInfo and must start with
+# "v". A "v_" prefix keeps the git-blame links pointing at main, like the dev
+# build in merge.yml; a release tag points them at that tag instead.
+# export VOC4CAT_MODIFIED := datetime("%Y-%m-%d")
+# export VOC4CAT_VERSION := "v_local"
 
 # Create local environment suitable to run the same commands as in gh-actions
 _fake_actions_env:

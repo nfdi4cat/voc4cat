@@ -1,6 +1,6 @@
 [![DOI](https://zenodo.org/badge/577900339.svg)](https://zenodo.org/badge/latestdoi/577900339)
 [![](https://github.com/nfdi4cat/voc4cat-template/workflows/Publish/badge.svg)](https://github.com/nfdi4cat/voc4cat-template/actions)
-[![](https://github.com/nfdi4cat/voc4cat-template/workflows/Build/badge.svg)](https://github.com/nfdi4cat/voc4cat-template/actions)
+[![](https://github.com/nfdi4cat/voc4cat-template/workflows/Merge%20%26%20re-build/badge.svg)](https://github.com/nfdi4cat/voc4cat-template/actions)
 
 # A template to maintain vocabularies on GitHub
 

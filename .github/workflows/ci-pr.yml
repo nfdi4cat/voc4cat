@@ -22,7 +22,6 @@ env:
   PIP_DISABLE_PIP_VERSION_CHECK: "1"
   PIP_PROGRESS_BAR: "off"
   LOGLEVEL: "DEBUG"
-  RUN_URL: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
@@ -119,7 +118,7 @@ jobs:
         run: |
           # convert file(s) from xlsx in inbox to turtle in outbox
           voc4cat convert --config _main_branch/idranges.toml --logfile outbox/voc4cat.log --outdir outbox inbox-excel-vocabs/
-          if [ ! -f outbox/*.ttl ]; then
+          if [ -z "$(ls outbox/*.ttl 2>/dev/null)" ]; then
             echo "No ttl file in outbox. Building joined vocabulary ttl-file from individual ttl-files in vocabulary."
             voc4cat transform --join --config _main_branch/idranges.toml --logfile outbox/voc4cat.log --outdir outbox/ vocabularies/
           fi
@@ -157,7 +156,7 @@ jobs:
         if: ${{ always() }}
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
         with:
-          name: voc4cat-outbox_${{ env.RUN_DATE }}_run${{ GITHUB.RUN_ID }}
+          name: voc4cat-outbox_${{ env.RUN_DATE }}_run${{ github.run_id }}
           path: outbox/
 
       - name: Assemble hand-off for the commit workflow

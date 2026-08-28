@@ -68,15 +68,16 @@ Sofia Garcia https://orcid.org/0000-0001-2345-6789
 
 # MANDATORY: URL of repository or online vocabulary editor
 # repository = "https://github.com/YOUR-ORG/YOUR-REPO"
-repository = "https://github.com/NFDI4Cat/voc4cat-template"
+repository = "https://github.com/nfdi4cat/voc4cat-template"
 
 # Optional: Jinja template for provenance URLs (git blame links)
-# Available template variables: entity_id, vocab_name, version, github_repo
+# Available template variables: entity_id, vocab_name, version, github_repo,
+# partition_dir (the "IDs<n>xxx" subdirectory that holds the entity file)
 # Default: GitHub blame URL format (auto-detected from repository field)
 # Examples for other forges:
-# GitHub (default): "https://github.com/{{ github_repo }}/blame/{{ version }}/vocabularies/{{ vocab_name }}/{{ entity_id }}.ttl"
-# GitLab: "https://gitlab.com/myorg/myrepo/-/blame/{{ version }}/vocabularies/{{ vocab_name }}/{{ entity_id }}.ttl"
-# Gitea: "https://gitea.example.com/myorg/myrepo/blame/{{ version }}/vocabularies/{{ vocab_name }}/{{ entity_id }}.ttl"
+# GitHub (default): "https://github.com/{{ github_repo }}/blame/{{ version }}/vocabularies/{{ vocab_name }}/{{ partition_dir }}/{{ entity_id }}.ttl"
+# GitLab: "https://gitlab.com/myorg/myrepo/-/blame/{{ version }}/vocabularies/{{ vocab_name }}/{{ partition_dir }}/{{ entity_id }}.ttl"
+# Gitea: "https://gitea.example.com/myorg/myrepo/blame/{{ version }}/vocabularies/{{ vocab_name }}/{{ partition_dir }}/{{ entity_id }}.ttl"
 # provenance_url_template = ""
 
 # Optional: URL of homepage
@@ -129,10 +130,10 @@ gh_name = "another-contributor"
 orcid = ""
 ror_id = ""
 
-# Continue with as many [[vocabs.vocab_example.idrange]] sections as needed.
+# Continue with as many [[vocabs.vocab_example.id_range]] sections as needed.
 
 # More vocabularies can be configured by adding sections with appropriate name.
 # [vocabs.othervocab]
 # [vocabs.othervocab.checks]
 # [vocabs.othervocab.prefix_map]
-# [[vocabs.othervocab.idrange]]
+# [[vocabs.othervocab.id_range]]

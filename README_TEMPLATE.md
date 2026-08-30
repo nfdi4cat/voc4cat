@@ -152,14 +152,14 @@ After these steps your repository should work just like [voc4cat](https://github
 To review the changes made in the template in version v26.8 and compare to when you last pulled it use:
 
 ```bash
-git fetch https://github.com/nfdi4cat/voc4cat-template tag v26.8
+git fetch --no-tags https://github.com/nfdi4cat/voc4cat-template refs/tags/v26.8
 git diff ...FETCH_HEAD
 ```
 
-If you want to take over the changes, pull them into your repository
+If you want to take over the changes, merge them into your repository
 
 ```bash
-git pull https://github.com/nfdi4cat/voc4cat-template tag v26.8
+git merge FETCH_HEAD -m "Merge voc4cat-template v26.8"
 ```
 
 and push the change to the remote repository.
@@ -167,6 +167,11 @@ and push the change to the remote repository.
 ```bash
 git push
 ```
+
+Use `--no-tags` together with the full `refs/tags/...` path to keep the tags of the template out of your repository.
+The shorter form `tag v26.8` copies that tag into your repository and, with it, every other tag of the template.
+There they are indistinguishable from the release tags of your own vocabulary.
+If an earlier sync brought template tags into your repository, delete them with `git tag -d <tag>` and, where they were pushed, with `git push --delete origin <tag>`.
 
 It is suggested to merge the changes from the template repository before every new release of your vocabulary. This ensures that the centrally maintained features and best practices trickle into your project.
 

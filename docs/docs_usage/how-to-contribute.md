@@ -401,6 +401,7 @@ These guidelines for suggesting, adding, and editing content to Voc4Cat guarante
 - Keep changes focussed. Solve one issue or add/edit a set of strongly related concepts.
 - Not more than 20 new concepts per PR. This keeps the review process manageable for you and the curators. Less is better!
 - Do not change the Excel template structure (sheet names, header rows, column order).
+- Editing a concept that is already in Voc4Cat? Its meaning is fixed, while its wording, parents and mappings can still be improved. See [what may be changed on an existing concept](changing-concepts.md).
 
 #### Step 7 – Create & iterate on the Pull Request
 
@@ -475,6 +476,7 @@ Here are some points to check before you finally submit the PR:
 - Each concept has prefLabel, definition, and a broader chain to a top concept.
 - Contribution is focused/small enough for review (split if needed).
 - No concepts or collections removed (removals are rejected).
+- Edits to existing concepts leave their meaning unchanged ([what may be changed](changing-concepts.md)).
 - No `.ttl` files edited.
 
 ```{tip}

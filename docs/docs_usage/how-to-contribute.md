@@ -279,11 +279,16 @@ Allgemeinen an der Grenzfläche statt.</td>
 
 9. **Provenance** *(read-only)*: Auto-populated by the CI pipeline with
     `dct:created` and `dct:modified` dates from git history. Do not edit
-    this column manually.
+    this column manually. Every concept also carries a link to the git
+    blame view of its own turtle file (`dct:provenance`, `rdfs:seeAlso`),
+    where the full history of the concept can be read.
 
 10. **Change Note** *(optional)*: A note documenting changes to the
-    concept (`skos:changeNote`). Use this for general provenance remarks
-    such as “definition aligned with RXN ontology”.
+    concept (`skos:changeNote`). Since the blame view shows what changed,
+    when and by whom, use this column only for what the history does not
+    show: crediting someone who contributed the content but is not the
+    author of the commit, or a rationale that the commit message does not
+    carry for this concept alone.
 
 11. **Editorial Note** *(optional)*: Internal notes for editors and
     curators (`skos:editorialNote`). Not shown in the public vocabulary

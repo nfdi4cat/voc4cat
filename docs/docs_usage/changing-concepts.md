@@ -85,8 +85,6 @@ A quick test whenever you set a parent: **is my concept a kind of its parent, or
 If it is a property, the parent is wrong.
 The full reasoning, including how to express HAS-A and PART-OF instead, is in [Hierarchies, Relations, and Collections](organizing-concepts.md).
 
-Because a parent correction changes what a hierarchical query returns, name the previous parent in the *Change Note* column.
-
 ## Deprecating a concept
 
 Concepts are never deleted once they are in Voc4Cat, because the IRI has to keep resolving for everyone who has used it.

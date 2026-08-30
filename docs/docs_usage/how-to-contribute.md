@@ -252,17 +252,24 @@ Allgemeinen an der Grenzfläche statt.</td>
 </tbody>
 </table>
 
-3. **Preferred Label** *(required)*: A simple one-line label for the concept.
+3. **Preferred Label** *(required)*: A simple one-line label for the
+    concept, following the [rules for labels](guidelines.md#preferred-label).
+    A multi-word label has to meet the
+    [criteria for compound terms](guidelines.md#single-vs-multi-word-compound-terms);
+    otherwise split it into simpler concepts.
 
 4. **Definition** *(required)*: The defining description of the *Concept*.
+    See the [rules for definitions](guidelines.md#definitions).
 
 5. **Alternate Labels** *(optional)*: Any other names for this *Concept*,
-    separated by vertical bar "|". To include a vertcial bar in a label, escape it with “\\” like in: “one\\|two”.
+    separated by vertical bar "|". To include a vertical bar in a label, escape it with “\\” like in: “one\\|two”.
 
 6. **Parent IRIs** *(optional)*: IRIs of parent concepts, one per line.
-    This creates a hierarchical relationship: the *Concept* is narrower
-    than its parent, and the parent is broader than the *Concept*
-    (in SKOS terminology). Note that broader/narrower are not transitive.
+    In Voc4Cat this expresses an **IS-A** relation and nothing else: the
+    *Concept* has to be a kind of its parent, never a property or a part
+    of it. HAS-A and PART-OF are modelled differently, see
+    [Hierarchies, Relations, and Collections](organizing-concepts.md).
+    Note that broader/narrower are not transitive.
 
 7. **Member of collection(s)** *(optional)*: Assign this concept to one
     or more collections by collection IRI, one per line.
@@ -302,6 +309,10 @@ Allgemeinen an der Grenzfläche statt.</td>
 16. **Obsoletion reason** *(optional)*: If this concept is being
     deprecated, select a reason from the dropdown. Sets `owl:deprecated`
     to true and records a `skos:historyNote` with the obsoletion reason.
+    Deprecate a concept when its meaning would otherwise have to change;
+    a concept that only needs better wording or a better parent is
+    corrected instead. See
+    [what may be changed on an existing concept](changing-concepts.md).
 
 17. **dct:isReplacedBy** *(optional)*: When deprecating a concept,
     provide the IRI of the replacement concept.

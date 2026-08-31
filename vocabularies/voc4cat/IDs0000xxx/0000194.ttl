@@ -8,7 +8,7 @@ voc4cat:0000194
     a skos:Concept ;
     dcterms:created "2024-12-09"^^xsd:date ;
     dcterms:identifier "0000194"^^xsd:token ;
-    dcterms:modified "2026-02-18"^^xsd:date ;
+    dcterms:modified "2026-08-31"^^xsd:date ;
     dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000194.ttl> ;
     rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000194.ttl> ;
     skos:broader voc4cat:0000190 ;
@@ -23,6 +23,7 @@ voc4cat:0000194
         voc4cat:0000254 ,
         voc4cat:0007003 ,
         voc4cat:0007015 ,
-        voc4cat:0007034 ;
+        voc4cat:0007034 ,
+        voc4cat:0008141 ;
     skos:prefLabel "catalyst"@en ;
 .

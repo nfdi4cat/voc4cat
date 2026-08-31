@@ -3,7 +3,8 @@
 #
 # This is the privileged half of the PR pipeline. It holds the write token, but
 # it runs no tooling over fork-controlled content: it copies a directory out of
-# an artifact, stages it and pushes. See issue #127 for the reasoning.
+# an artifact, stages it and pushes. See issue nfdi4cat/voc4cat-template#127
+# for the reasoning.
 
 name: Commit CI vocabulary changes
 on:

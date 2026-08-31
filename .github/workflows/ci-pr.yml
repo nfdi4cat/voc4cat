@@ -124,11 +124,19 @@ jobs:
           fi
 
       - name: Run voc4cat (post-convert checks)
+        env:
+          # The ID ranges belong to the contributor who submitted the concepts.
+          # GITHUB_ACTOR names whoever started the run, which is the CI bot for
+          # the run that the commit of ci-pr-commit.yml triggers, and that bot
+          # holds no range. See issue #136.
+          PR_AUTHOR: ${{ github.event.pull_request.user.login || github.actor }}
         run: |
           # check all ttl file(s) in outbox
           voc4cat check --redundant-hierarchies --config _main_branch/idranges.toml --logfile outbox/voc4cat.log outbox/
-          # check if vocabulary changes are allowed
-          voc4cat check --config _main_branch/idranges.toml --logfile outbox/voc4cat.log --ci-post _main_branch/vocabularies outbox/
+          # check if vocabulary changes are allowed. GITHUB_ACTOR is replaced for
+          # this command only: the env key above and GITHUB_ENV both refuse to
+          # overwrite a GITHUB_* variable, a shell assignment does not.
+          GITHUB_ACTOR="$PR_AUTHOR" voc4cat check --config _main_branch/idranges.toml --logfile outbox/voc4cat.log --ci-post _main_branch/vocabularies outbox/
 
       - name: Run voc4cat (build HTML documentation)
         run: |

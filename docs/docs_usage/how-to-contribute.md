@@ -502,12 +502,14 @@ The artifact is a zip-file with several files that help to diagnose the source o
 If the run succeeded you see a similar job message but with a green checkmark:
 ![GitHub Screenshot of action success](media/succesful-job-with-ttl-commit.png)
 
-The second line with the GitHub icon is a commit created by the pipeline in which
+The second line with the GitHub icon is a commit created by the pipeline. It adds the RDF/turtle (ttl-files) with the SKOS representation.
 
-- the xlsx vocabulary file gets removed and 
-- the RDF/turtle (ttl-files) with the SKOS representation are added.
+The pipeline then rewrites your branch so that the xlsx vocabulary file is in none of its commits and never enters the history of voc4cat. Because the branch is rewritten rather than added to, `git pull` does not apply. If you work on a local checkout on your computer, reset it to the branch as the pipeline published it:
 
-If you work on a local checkout on you computer, you need to pull this commit made on GitHub to your local clone with `git pull`.
+```bash
+git fetch origin
+git reset --hard origin/<your-branch>
+```
 
 **Later updates on your PR**
 

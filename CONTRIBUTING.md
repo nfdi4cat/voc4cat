@@ -46,7 +46,7 @@ For detailed guidelines and step-by-step instructions, see:
 5. Reviewers will check your contribution
 6. Upon approval, your changes are merged and published
 
-**Note**: Automated checks are informational and won't block your PR (except organization accounts due to GitHub limitations).
+**Note**: Most automated checks are informational. The check "No spreadsheet in the branch history" does block merging: it stays red until the pipeline has removed your Excel file from the branch, which it does by itself once the conversion succeeds. For a fork owned by an organization the pipeline cannot push to your branch, so the check cannot go green and the pull request has to be re-submitted from a fork in a personal account.
 
 ## Questions or Issues?
 

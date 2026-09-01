@@ -1,0 +1,14 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0000141>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0000141"^^xsd:token ;
+    skos:altLabel "LC"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000185> ;
+    skos:definition "A sepation technique that uses a liquid mobile phase to separate the components of a mixture based on their interactions with a stationary phase and a mobile phase."@en ;
+    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:prefLabel "liquid chromatography"@en ;
+.

@@ -1,0 +1,26 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+voc4cat:0000191
+    a skos:Concept ;
+    dcterms:created "2023-08-11"^^xsd:date ;
+    dcterms:identifier "0000191"^^xsd:token ;
+    dcterms:modified "2026-02-18"^^xsd:date ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000191.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000191.ttl> ;
+    skos:broader voc4cat:0000192 ;
+    skos:changeNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource, 0009-0004-3786-0773 Carla Terboven added a child"@en ;
+    skos:definition "A device designed to identify a measurable change or signal in a system, often providing a binary (detected / not detected) or a qualitative response."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:narrower
+        voc4cat:0000131 ,
+        voc4cat:0000132 ,
+        voc4cat:0000133 ,
+        voc4cat:0000134 ,
+        voc4cat:0000138 ,
+        voc4cat:0008083 ;
+    skos:prefLabel "detector"@en ;
+.

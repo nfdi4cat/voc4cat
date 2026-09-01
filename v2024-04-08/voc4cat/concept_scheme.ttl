@@ -1,0 +1,86 @@
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_>
+    a skos:ConceptScheme ;
+    dcterms:created "2023-06-29"^^xsd:date ;
+    dcterms:creator <https://w3id.org/nfdi4cat/> ;
+    dcterms:hasPart
+        <https://w3id.org/nfdi4cat/voc4cat_0001900> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0001901> ;
+    dcterms:identifier "voc4cat_"^^xsd:token ;
+    dcterms:modified "2024-03-09"^^xsd:date ;
+    dcterms:publisher <https://w3id.org/nfdi4cat/> ;
+    owl:versionInfo "automatic" ;
+    skos:definition "A vocabulary for all areas of catalysis initiated in NFDI4Cat. Starting with photocatalysis we add more and more terms from other areas of catalysis and related disciplines like chemical engineering or materials science."@en ;
+    skos:hasTopConcept
+        <https://w3id.org/nfdi4cat/voc4cat_0000001> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000033> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000037> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005001> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005002> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005003> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005007> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005008> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005009> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005010> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007001> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007002> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007007> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007008> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007012> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007016> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007017> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007018> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007023> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007024> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007025> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007026> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007034> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007201> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007206> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007207> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007208> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007209> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007210> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007212> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007219> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007220> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007221> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007222> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007223> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007224> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007225> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007226> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007227> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007228> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007229> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007230> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007233> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007234> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007237> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007238> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007239> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007240> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007244> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007245> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007246> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007247> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007249> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007250> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007251> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007252> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007253> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007258> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007260> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007261> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007262> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007263> ;
+    skos:historyNote "https://orcid.org/0000-0002-5898-1820 David Linke, https://orcid.org/0000-0002-6242-2167 Nikolaos G. Moustakas"@en ;
+    skos:prefLabel "Voc4Cat - A SKOS vocabulary for Catalysis."@en ;
+    dcat:contactPoint "David Linke (orcid:0000-0002-5898-1820), Nikolaos G. Moustakas (orcid:0000-0002-6242-2167)" ;
+.
+

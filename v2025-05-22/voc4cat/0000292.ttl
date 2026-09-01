@@ -1,0 +1,13 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0000292>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0000292"^^xsd:token ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000181> ;
+    skos:definition "An industrial term that covers the Fischer-Tropsch process and all the systems, equipment, and engineering methods used to apply it at commercial scale. This includes reactors, control systems, and plant designs used to produce synthetic fuels using the Fischer-Tropsch synthesis."@en ;
+    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource, 0000-0001-6434-6623 Aleksandr Fedorov defined the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:prefLabel "Fischer-Tropsch technology"@en ;
+.

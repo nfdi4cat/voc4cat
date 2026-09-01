@@ -1,0 +1,14 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0000053>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0000053"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000049> ;
+    skos:definition "Pressure applied (if necessary) in any of the synthesis step. Changes in the pressure may be observed if variations in the temperature of the reaction occur (e.g., exothermic reaction)."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "synthesis pressure"@en ;
+.
+

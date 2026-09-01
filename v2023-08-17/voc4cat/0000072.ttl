@@ -1,0 +1,23 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0000072>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0000072"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel
+        "TG"@en ,
+        "TG analysis"@en ,
+        "TG measurements"@en ,
+        "TGA"@en ,
+        "thermal gravimetric analysis"@en ,
+        "thermo-gravimetric analysis"@en ,
+        "thermogravimetric (TG) analyses"@en ,
+        "thermogravimetric (TG) analysis"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000066> ;
+    skos:definition "A thermal analysis technique used to measure the change of a sample’s mass under the influence of controlled applied temperature profiles."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "thermogravimetric analysis"@en ;
+.
+

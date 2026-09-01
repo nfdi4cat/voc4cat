@@ -1,0 +1,14 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0000136>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0000136"^^xsd:token ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000130> ;
+    skos:definition "A process in which gaseous substances of known purity and concentration are introduced to the gas chromatograph and the respective area and retention time of the resulting peaks are identified. This process when concluded, allows for the calculation of concentrations of products and intermediates of the photoreaction."@en ;
+    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "gas chromatograph calibration"@en ;
+.
+

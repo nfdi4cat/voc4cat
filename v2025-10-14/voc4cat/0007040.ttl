@@ -1,0 +1,16 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0007040>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0007040"^^xsd:token ;
+    rdfs:isDefinedBy <https://doi.org/10.1351/goldbook.M03804> ;
+    skos:altLabel "reaction mechanism"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000181> ;
+    skos:definition "A detailed description of the process leading from the reactants to the products of a reaction, including a description as complete as possible of the composition, structure, energy and other properties of reaction intermediates, products and transition states."@en ;
+    skos:historyNote "0000-0002-4041-0165 Julia Schumann created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:prefLabel "chemical reaction mechanism"@en ;
+.

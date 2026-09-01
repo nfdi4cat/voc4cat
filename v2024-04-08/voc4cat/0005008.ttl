@@ -1,0 +1,14 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0005008>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0005008"^^xsd:token ;
+    skos:definition "A quantity describing the progress of a chemical reaction. For any chemical entitiy taking part in the reaction it is defined by the amount of chemical entity formed devided by its stoichiometric number in the reaction."@en ;
+    skos:historyNote "0000-0002-5898-1820 David Linke created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "extend of reaction"@en ;
+    skos:topConceptOf <https://w3id.org/nfdi4cat/voc4cat_> ;
+.
+

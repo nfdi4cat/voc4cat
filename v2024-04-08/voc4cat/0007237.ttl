@@ -1,0 +1,17 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0007237>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0007237"^^xsd:token ;
+    skos:definition "An electrochemical measuring technique used for electrochemical analysis, for the determination of the kinetics and mechanism of electrode reactions, and for corrosion studies. \"Voltammetry\" is a family of techniques with the common characteristics that the potential of the working electrode is controlled (typically with a potentiostat) and the current flowing through the electrode is measured. "@en ;
+    skos:historyNote "0009-0008-1278-8890 Michael Götte created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower
+        <https://w3id.org/nfdi4cat/voc4cat_0000082> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007211> ;
+    skos:prefLabel "voltammetry"@en ;
+    skos:topConceptOf <https://w3id.org/nfdi4cat/voc4cat_> ;
+.
+

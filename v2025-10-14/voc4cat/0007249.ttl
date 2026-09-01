@@ -1,0 +1,17 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0007249>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0007249"^^xsd:token ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000187> ;
+    skos:definition "A device that converts chemical energy into electrical energy or vice versa when a chemical reaction is occurring in the cell. Typically, it consists of two metal electrodes immersed into an aqueous solution (electrolyte) with electrode reactions occurring at the electrode-solution surfaces. See also galvanic cell and electrolytic cell."@en ;
+    skos:historyNote "0009-0008-1278-8890 Michael Götte created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:narrower
+        <https://w3id.org/nfdi4cat/voc4cat_0000209> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007256> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007257> ;
+    skos:prefLabel "electrochemical cell"@en ;
+.

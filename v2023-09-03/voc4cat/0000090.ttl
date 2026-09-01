@@ -1,0 +1,20 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0000090>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0000090"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel
+        "charge photo-generation"@en ,
+        "charge photogeneration"@en ,
+        "electron excitation"@en ,
+        "electron-hole pair"@en ,
+        "photogenerated charges"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000087> ;
+    skos:definition "The generation of electron - hole pairs in a semiconductor as a result of light absorption of sufficient energy to overcome the bandgap energy. Electrons (negative charge) get excited to the conduction band, while holes (positive charge) remain in the valence band. "@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "photoinduced charge generation"@en ;
+.
+

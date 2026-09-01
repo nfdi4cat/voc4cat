@@ -1,0 +1,32 @@
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat>
+    a skos:ConceptScheme ;
+    dcterms:created "2023-06-29"^^xsd:date ;
+    dcterms:creator <https://w3id.org/nfdi4cat/> ;
+    dcterms:hasPart
+        <https://w3id.org/nfdi4cat/voc4cat_0000195> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0001900> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0001901> ;
+    dcterms:identifier "voc4cat"^^xsd:token ;
+    dcterms:modified "2025-04-24"^^xsd:date ;
+    dcterms:publisher <https://w3id.org/nfdi4cat/> ;
+    owl:versionInfo "automatic" ;
+    skos:definition """The Voc4Cat vocabulary is a collection of concepts (or "terms") from the field of catalysis and related disciplines such as chemical engineering or materials science. For each concept, Voc4Cat provides a unique resolvable persistent identifier and a carefully written textual definition, which reflects the community’s shared understanding of the concept’s meaning.
+
+By using the identifiers provided by Voc4Cat to annotate data, rather than just words and symbols, ambiguity as to what is meant is avoided. Producing Voc4Cat-annotated data contributes to realising the vision of machine-actionability described as the ultimate goal of the FAIR principles.
+
+See also [voc4cat help](https://nfdi4cat.github.io/voc4cat/)."""@en ;
+    skos:hasTopConcept
+        <https://w3id.org/nfdi4cat/voc4cat_0000180> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000181> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000182> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000186> ;
+    skos:historyNote "https://orcid.org/0000-0002-5898-1820 David Linke, https://orcid.org/0000-0002-6242-2167 Nikolaos G. Moustakas"@en ;
+    skos:prefLabel "Voc4Cat - A SKOS vocabulary for Catalysis."@en ;
+    dcat:contactPoint "David Linke (orcid:0000-0002-5898-1820), Nikolaos G. Moustakas (orcid:0000-0002-6242-2167)" ;
+.

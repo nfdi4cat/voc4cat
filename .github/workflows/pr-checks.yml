@@ -184,3 +184,13 @@ jobs:
               body: commentBody
             });
 
+      - name: Fail a submission from an organization-owned fork
+        # The comment above tells the contributor the pull request cannot be
+        # merged as-is. Only a failing check makes that true: GitHub reports
+        # such a pull request as mergeable, and merging it carries the
+        # submitted spreadsheet into the history of main, because the CI could
+        # not push the branch that would have removed it.
+        if: steps.check-main-branch.outputs.is_from_org == 'true' && steps.check-main-branch.outputs.is_fork == 'true' && steps.check-main-branch.outputs.head_owner_login != steps.check-main-branch.outputs.base_owner_login
+        run: |
+          echo '::error::This pull request comes from a fork owned by an organization. GitHub offers no "Allow edits by maintainers" for such forks, so the CI cannot push the converted vocabulary or remove the submitted spreadsheet. Re-submit from a fork in a personal account.'
+          exit 1

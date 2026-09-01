@@ -8,7 +8,8 @@
 #
 # The converted vocabulary is handed to ci-pr-commit.yml through an artifact.
 # That workflow holds the write token and commits the result to the PR branch
-# without running any tooling over fork-controlled content. See issue #127.
+# without running any tooling over fork-controlled content.
+# See issue nfdi4cat/voc4cat-template#127.
 
 name: CI on pull request create or update
 on:
@@ -128,7 +129,7 @@ jobs:
           # The ID ranges belong to the contributor who submitted the concepts.
           # GITHUB_ACTOR names whoever started the run, which is the CI bot for
           # the run that the commit of ci-pr-commit.yml triggers, and that bot
-          # holds no range. See issue #136.
+          # holds no range. See issue nfdi4cat/voc4cat-template#136.
           PR_AUTHOR: ${{ github.event.pull_request.user.login || github.actor }}
         run: |
           # check all ttl file(s) in outbox

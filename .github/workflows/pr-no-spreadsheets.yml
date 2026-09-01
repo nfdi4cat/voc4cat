@@ -1,0 +1,72 @@
+# This action blocks a pull request whose branch still carries a submitted
+# spreadsheet in any of its commits.
+#
+# ci-pr-commit.yml strips inbox-excel-vocabs/*.xlsx from every commit of the
+# branch once the conversion succeeded, so this check goes green on its own for
+# an ordinary submission. It stays red when that could not happen: a conversion
+# that failed, or a fork owned by an organization, which the bot cannot push
+# to. Merging such a branch puts the spreadsheet into the history of main under
+# every merge method, squash included, because the spreadsheet is still part of
+# the merged tree.
+#
+# Deliberately a workflow of its own rather than a job in ci-pr.yml. As a job
+# there a red result would make the conversion run conclude "failure",
+# ci-pr-commit.yml would never run, the spreadsheet would never be removed and
+# the check could never turn green.
+
+name: No spreadsheets in the branch
+on:
+  pull_request:
+    branches:
+      - main
+    types: [opened, reopened, synchronize]
+
+permissions: {}
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  no_spreadsheet_in_history:
+    # This name is what branch protection makes a required check. Renaming the
+    # job silently stops the protection from applying.
+    name: No spreadsheet in the branch history
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout the pull request head
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          ref: refs/pull/${{ github.event.pull_request.number }}/head
+          # Every commit of the branch is examined, not just its tip.
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Make the base branch available
+        run: git fetch --no-tags origin +refs/heads/main:refs/remotes/origin/main
+
+      - name: Fail while a spreadsheet is in the branch history
+        run: |
+          set -euo pipefail
+          base=$(git merge-base origin/main HEAD)
+          carriers=""
+          for c in $(git rev-list "$base..HEAD"); do
+            if git ls-tree -r --name-only "$c" -- inbox-excel-vocabs | grep -q '[.]xlsx$'; then
+              carriers="$carriers $c"
+            fi
+          done
+          if [ -z "$carriers" ]; then
+            echo "No spreadsheet in $base..HEAD."
+            exit 0
+          fi
+          echo "Commits still carrying a submitted spreadsheet:"
+          for c in $carriers; do
+            echo "  $c $(git log -1 --format=%s "$c")"
+          done
+          echo "::error::A submitted spreadsheet is still in this branch. The CI removes it once the conversion succeeds; while this check is red the conversion failed or the CI cannot push to the fork. Merging now would put the spreadsheet into the history of main."
+          exit 1

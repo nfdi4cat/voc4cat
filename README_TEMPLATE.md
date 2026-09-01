@@ -75,9 +75,15 @@ Here are the steps for submitting updates in Excel.
   - directly merged by the maintainers
   - or a discussion will be started about what else is needed
   - or why the proposed change may not fit.
-- If you need to fix something, first pull the changes made by the action with `git pull` (or "sync" in GUI).
+- If you need to fix something, first bring your clone in line with the branch as the pipeline left it.
+  To keep submitted xlsx files out of the history, the pipeline rewrites the pull request branch instead of adding to it, so `git pull` does not apply. Reset your branch to the published state:
+
+  ```bash
+  git fetch origin
+  git reset --hard origin/<your-branch>
+  ```
+
   Next, commit further changes to the pull request branch in your clone. This will trigger the pipeline to run again.
-  - If any commits have been made by the CI pipeline, pull the changes to your repo (via "Sync fork" button in GUI) before committing any additional changes.
 
 Finally, when the proposed pull request is accepted, your changes will be integrated in the vocabularies in the folder `vocabularies`.
 The vocabularies are stored in split form using one folder per vocabulary.
@@ -140,6 +146,9 @@ This adds all commits made in the template's main branch to your new repository.
 - Adjust settings of your new GitHub repository. Typically you will want to
   - Forbid pushing to main via [branch protection rules](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule) (Settings > Branches, edit rules for "main")
   - Set up rules for required approvals (Settings > Branches, edit rules for "main")
+  - Make "No spreadsheet in the branch history" a required status check (Settings > Branches, edit rules for "main").
+    The pipeline removes submitted xlsx files from the pull request branch on its own, but it can only do so when it is able to push to the branch.
+    When it cannot - a failed conversion, or a fork owned by an organization - GitHub still reports the pull request as mergeable, and merging it puts the xlsx file into the history of main.
   - Configure GitHub pages to use as source "deploy from a branch" and select the branch `gh-pages` (Settings > Pages > Build and deployment)
 - Optionally
   - Add a different license for your vocabulary.

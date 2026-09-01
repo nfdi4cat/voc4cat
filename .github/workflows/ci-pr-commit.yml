@@ -124,7 +124,8 @@ jobs:
         with:
           repository: ${{ github.event.workflow_run.head_repository.full_name }}
           ref: ${{ github.event.workflow_run.head_branch }}
-          fetch-depth: 1
+          # The rewrite below needs the branch's commits, not just its tip.
+          fetch-depth: 0
           # Needed to push the commit below. No tool runs over the tree while
           # the credential is on disk.
           persist-credentials: true
@@ -135,6 +136,12 @@ jobs:
           # artifact, stage it, commit and push.
           # https://gh.io/securely-using-pull_request_target
           allow-unsafe-pr-checkout: true
+
+      - name: Fetch the base branch to bound the rewrite
+        if: ${{ steps.validate.outputs.skip != 'true' }}
+        env:
+          BASE_REPO: ${{ github.server_url }}/${{ github.repository }}
+        run: git fetch --no-tags "$BASE_REPO" +refs/heads/main:refs/remotes/base/main
 
       - name: Apply converted vocabulary and stage changes
         id: apply
@@ -156,11 +163,10 @@ jobs:
           cp -r "$RUNNER_TEMP/handoff/vocabularies" vocabularies
           # -A so that files the conversion removed are staged as deletions.
           git add -A vocabularies
-          # The submitted spreadsheets are cleaned up once converted.
-          git rm --quiet --ignore-unmatch -- 'inbox-excel-vocabs/*.xlsx'
           git status --short
 
-      - name: Commit and push on behalf of the PR author
+      - name: Commit on behalf of the PR author
+        id: commit
         if: ${{ steps.validate.outputs.skip != 'true' && steps.apply.outputs.skip != 'true' }}
         env:
           ACTOR: ${{ github.event.workflow_run.actor.login }}
@@ -173,6 +179,7 @@ jobs:
           set -euo pipefail
           if git diff --cached --quiet; then
             echo "::notice::No vocabulary changes to commit."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           git -c user.name='voc4cat-CI-bot' \
@@ -180,7 +187,82 @@ jobs:
               commit \
               --author="$ACTOR <$ACTOR_ID+$ACTOR@users.noreply.github.com>" \
               -m "CI: vocabulary update in $RUN_URL"
-          git push origin "HEAD:$HEAD_BRANCH"
+
+      - name: Drop the submitted spreadsheets from the branch history and push
+        id: rewrite
+        # Deleting the spreadsheet in a follow-up commit leaves the blob in the
+        # branch's earlier commits, so a merge commit or a rebase merge carries
+        # it into the history of main. Removing the path from every commit of
+        # the branch makes the merge method irrelevant.
+        #
+        # Deliberately not gated on whether the commit step committed: a
+        # resubmission that changes no concept still has to have its
+        # spreadsheet removed. The job as a whole runs only for a conversion
+        # run that succeeded, so a failed check or conversion never gets here.
+        if: >-
+          ${{ steps.validate.outputs.skip != 'true'
+              && steps.apply.outputs.skip != 'true' }}
+        env:
+          HEAD_BRANCH: ${{ github.event.workflow_run.head_branch }}
+          ORIGINAL_TIP: ${{ steps.validate.outputs.head_sha }}
+          FILTER_REPO_VERSION: "2.47.0"
+        run: |
+          set -euo pipefail
+          base=$(git merge-base base/main HEAD)
+          echo "rewrite range: $base..HEAD"
+
+          carriers() {
+            for c in $(git rev-list "$base..HEAD"); do
+              if git ls-tree -r --name-only "$c" -- inbox-excel-vocabs | grep -q '[.]xlsx$'; then
+                echo "$c"
+              fi
+            done
+          }
+
+          before=$(carriers | wc -l)
+          echo "commits carrying a spreadsheet before the rewrite: $before"
+          if [ "$before" -gt 0 ]; then
+            # Scoped to the spreadsheets so that inbox-excel-vocabs/README.md stays.
+            pipx run "git-filter-repo==$FILTER_REPO_VERSION" --path-glob 'inbox-excel-vocabs/*.xlsx' --invert-paths --refs "$base..HEAD" --force
+          fi
+
+          after=$(carriers | wc -l)
+          echo "commits carrying a spreadsheet after the rewrite: $after"
+          if [ "$after" -ne 0 ]; then
+            echo "::error::spreadsheets remain in the branch history; refusing to push"
+            exit 1
+          fi
+
+          # Push when the vocabulary commit, the rewrite, or both moved the
+          # branch away from the tip the conversion ran against.
+          if [ "$(git rev-parse HEAD)" = "$ORIGINAL_TIP" ]; then
+            echo "::notice::Branch unchanged; nothing to push."
+            exit 0
+          fi
+          git push --force origin "HEAD:$HEAD_BRANCH"
+
+          # The branch now equals its base: the submission changed no concept
+          # and the spreadsheet was all it carried.
+          if [ "$(git rev-parse HEAD)" = "$base" ]; then
+            echo "collapsed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Close a submission that changed nothing
+        # Without this the contributor is left with an empty, unmergeable pull
+        # request and no explanation. Closing also removes the trap that the
+        # collapse leaves behind: the branch has moved back to the parent of the
+        # commit that carried the spreadsheet, so that commit is still a
+        # descendant and a plain "git push" would restore it.
+        if: ${{ steps.rewrite.outputs.collapsed == 'true' }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          PR_NUMBER: ${{ steps.validate.outputs.number }}
+        run: |
+          set -euo pipefail
+          body='This pull request changes no concept: the submitted spreadsheet converts to the vocabulary that is already on main. The spreadsheet has been removed from the branch, which leaves nothing to merge, so the pull request is closed. To submit a change, edit the spreadsheet and open a new pull request. Do not push the old branch again: the commit that carried the spreadsheet is still a descendant of the branch as it now stands, so an ordinary git push would restore it.'
+          gh api "repos/$REPO/issues/$PR_NUMBER/comments" -f body="$body"
+          gh pr close "$PR_NUMBER" --repo "$REPO"
 
       - name: Report failure on the pull request
         if: ${{ failure() }}

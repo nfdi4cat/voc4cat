@@ -146,9 +146,10 @@ This adds all commits made in the template's main branch to your new repository.
 - Adjust settings of your new GitHub repository. Typically you will want to
   - Forbid pushing to main via [branch protection rules](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule) (Settings > Branches, edit rules for "main")
   - Set up rules for required approvals (Settings > Branches, edit rules for "main")
-  - Make "No spreadsheet in the branch history" a required status check (Settings > Branches, edit rules for "main").
+  - Make "No spreadsheet in the branch history" a required status check, and enable "Do not allow bypassing the above settings" (Settings > Branches, edit rules for "main").
     The pipeline removes submitted xlsx files from the pull request branch on its own, but it can only do so when it is able to push to the branch.
     When it cannot - a failed conversion, or a fork owned by an organization - GitHub still reports the pull request as mergeable, and merging it puts the xlsx file into the history of main.
+    Both settings are needed: without the second, repository administrators can merge past the failing check, and administrators are usually the people who press the merge button.
   - Configure GitHub pages to use as source "deploy from a branch" and select the branch `gh-pages` (Settings > Pages > Build and deployment)
 - Optionally
   - Add a different license for your vocabulary.

@@ -270,6 +270,8 @@ Allgemeinen an der Grenzfläche statt.</td>
     of it. HAS-A and PART-OF are modelled differently, see
     [Hierarchies, Relations, and Collections](organizing-concepts.md).
     Note that broader/narrower are not transitive.
+    A concept normally has one parent; see
+    [Number of Parents](organizing-concepts.md#number-of-parents) before giving it several.
 
 7. **Member of collection(s)** *(optional)*: Assign this concept to one
     or more collections by collection IRI, one per line.

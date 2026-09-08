@@ -26,7 +26,9 @@ Please note that all language dependent parts refer to only the default language
 
 :::{tip}
 In addition to this guidelines page, we also provide the page **[organization of concepts](organizing-concepts.md)**
-that explains Voc4Cat's approach to hierarchy and grouping of concepts.
+that explains Voc4Cat's approach to hierarchy and grouping of concepts,
+and the page **[what may be changed on an existing concept](changing-concepts.md)**
+that says which changes are allowed once a concept has been accepted.
 :::
 
 ## General recommendations
@@ -358,7 +360,7 @@ and the other as an alternate label.
 Mappings are used to relate concepts in Voc4Cat to concepts in other controlled vocabularies or ontologies.
 This enables interoperability, data integration, and reuse across different systems and domains.
 We only add mappings to well-established external vocabularies or ontologies that are relevant to catalysis.
-The mappings are reviewed and approved by the Voc4Cat team before being added to the vocabulary assuring a high level of mapping confidence.
+The mappings are reviewed and approved by the Voc4Cat curators before being added to the vocabulary assuring a high level of mapping confidence.
 In the xlsx vocabulary file, mappings are entered in the dedicated **Mappings** sheet.
 
 Voc4Cat uses the [SKOS](https://www.w3.org/TR/skos-reference/) (Simple Knowledge Organization System) standard for representing mappings.

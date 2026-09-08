@@ -52,9 +52,10 @@ Such **subject hierarchies** with **IS-A** based hierarchies correspond well wit
 # Wrong: Confuses PART-OF ("Window PART-OF reactor") with IS-A
 ```
 
-### Single Location per Attribute Concept
+### Avoid Object-Specific Attribute Concepts
 
-Each attribute concept should appear **once** in the hierarchy at its most appropriate taxonomic level, based on IS-A relations.
+Each attribute concept should be placed at its most appropriate taxonomic level, based on IS-A relations,
+and should not be repeated for every object that it can describe.
 
 **Don't create object-specific attribute concepts:**
 
@@ -95,6 +96,51 @@ A more fundamental error is placing attribute concepts under entity concepts:
     skos:broader :Substrate .
     # Wrong: "Width" is not a subtype of "Substrate"
 ```
+
+### Number of Parents
+
+One parent is the norm.
+A concept may be given more than one parent (a **polyhierarchy**) when it belongs to two independent classifications at the same time.
+Polyhierarchies are permitted by ANSI/NISO Z39.19-2005 (R2010) and ISO 25964-1.
+In Voc4Cat they are the exception, and are used only where all three of the following conditions hold:
+
+1. **Each parent passes the IS-A test on its own.**
+   Every instance of the concept must be an instance of every parent, checked one parent at a time.
+2. **No parent is an ancestor of another parent.**
+   `skos:broader` itself is not transitive, but `skos:broaderTransitive` already yields the ancestor,
+   so such an entry states a relation that holds anyway.
+3. **The parents come from different classifications.**
+   Parents that answer the same question about a concept do not separate anything.
+
+**Correct usage:**
+
+```turtle
+:DetectorDeadTime skos:broader :DeadTime .
+# Classification by kind of quantity
+
+:DetectorDeadTime skos:broader :DetectorPerformanceMeasure .
+# Classification by what the quantity characterizes
+```
+
+**Anti-patterns:**
+
+```turtle
+:DimensionalProperty skos:broader :Attribute .
+
+:Width skos:broader :DimensionalProperty ;
+    skos:broader :Attribute .
+# Wrong: Attribute is already reached through DimensionalProperty (condition 2)
+
+:Width skos:broader :SubstrateProperty ;
+    skos:broader :FilmProperty .
+# Wrong: both parents answer "which object does this describe?" (condition 3)
+```
+
+**Practical check for condition 3**: compare the members of the parent classes.
+If they always contain the same concepts, those classes are one class under several names.
+What then needs revision is the classification, not the number of parents on the concept.
+
+Where a second parent would express a context of use rather than a kind, use a `skos:Collection` instead.
 
 ### Using skos:Collection for HAS-A and Contextual Relations
 

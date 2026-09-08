@@ -115,6 +115,7 @@ About <docs_usage/about>
 docs_usage/how-to-use
 docs_usage/how-to-contribute
 Organizing Concepts <docs_usage/organizing-concepts>
+Changing Concepts <docs_usage/changing-concepts>
 docs_usage/guidelines
 Guidelines Publication <docs_usage/published-guidelines>
 ```

@@ -252,17 +252,26 @@ Allgemeinen an der Grenzfläche statt.</td>
 </tbody>
 </table>
 
-3. **Preferred Label** *(required)*: A simple one-line label for the concept.
+3. **Preferred Label** *(required)*: A simple one-line label for the
+    concept, following the [rules for labels](guidelines.md#preferred-label).
+    A multi-word label has to meet the
+    [criteria for compound terms](guidelines.md#single-vs-multi-word-compound-terms);
+    otherwise split it into simpler concepts.
 
 4. **Definition** *(required)*: The defining description of the *Concept*.
+    See the [rules for definitions](guidelines.md#definitions).
 
 5. **Alternate Labels** *(optional)*: Any other names for this *Concept*,
-    separated by vertical bar "|". To include a vertcial bar in a label, escape it with “\\” like in: “one\\|two”.
+    separated by vertical bar "|". To include a vertical bar in a label, escape it with “\\” like in: “one\\|two”.
 
 6. **Parent IRIs** *(optional)*: IRIs of parent concepts, one per line.
-    This creates a hierarchical relationship: the *Concept* is narrower
-    than its parent, and the parent is broader than the *Concept*
-    (in SKOS terminology). Note that broader/narrower are not transitive.
+    In Voc4Cat this expresses an **IS-A** relation and nothing else: the
+    *Concept* has to be a kind of its parent, never a property or a part
+    of it. HAS-A and PART-OF are modelled differently, see
+    [Hierarchies, Relations, and Collections](organizing-concepts.md).
+    Note that broader/narrower are not transitive.
+    A concept normally has one parent; see
+    [Number of Parents](organizing-concepts.md#number-of-parents) before giving it several.
 
 7. **Member of collection(s)** *(optional)*: Assign this concept to one
     or more collections by collection IRI, one per line.
@@ -272,11 +281,16 @@ Allgemeinen an der Grenzfläche statt.</td>
 
 9. **Provenance** *(read-only)*: Auto-populated by the CI pipeline with
     `dct:created` and `dct:modified` dates from git history. Do not edit
-    this column manually.
+    this column manually. Every concept also carries a link to the git
+    blame view of its own turtle file (`dct:provenance`, `rdfs:seeAlso`),
+    where the full history of the concept can be read.
 
 10. **Change Note** *(optional)*: A note documenting changes to the
-    concept (`skos:changeNote`). Use this for general provenance remarks
-    such as “definition aligned with RXN ontology”.
+    concept (`skos:changeNote`). Since the blame view shows what changed,
+    when and by whom, use this column only for what the history does not
+    show: crediting someone who contributed the content but is not the
+    author of the commit, or a rationale that the commit message does not
+    carry for this concept alone.
 
 11. **Editorial Note** *(optional)*: Internal notes for editors and
     curators (`skos:editorialNote`). Not shown in the public vocabulary
@@ -302,6 +316,10 @@ Allgemeinen an der Grenzfläche statt.</td>
 16. **Obsoletion reason** *(optional)*: If this concept is being
     deprecated, select a reason from the dropdown. Sets `owl:deprecated`
     to true and records a `skos:historyNote` with the obsoletion reason.
+    Deprecate a concept when its meaning would otherwise have to change;
+    a concept that only needs better wording or a better parent is
+    corrected instead. See
+    [what may be changed on an existing concept](changing-concepts.md).
 
 17. **dct:isReplacedBy** *(optional)*: When deprecating a concept,
     provide the IRI of the replacement concept.
@@ -401,6 +419,7 @@ These guidelines for suggesting, adding, and editing content to Voc4Cat guarante
 - Keep changes focussed. Solve one issue or add/edit a set of strongly related concepts.
 - Not more than 20 new concepts per PR. This keeps the review process manageable for you and the curators. Less is better!
 - Do not change the Excel template structure (sheet names, header rows, column order).
+- Editing a concept that is already in Voc4Cat? Its meaning is fixed, while its wording, parents and mappings can still be improved. See [what may be changed on an existing concept](changing-concepts.md).
 
 #### Step 7 – Create & iterate on the Pull Request
 
@@ -475,6 +494,7 @@ Here are some points to check before you finally submit the PR:
 - Each concept has prefLabel, definition, and a broader chain to a top concept.
 - Contribution is focused/small enough for review (split if needed).
 - No concepts or collections removed (removals are rejected).
+- Edits to existing concepts leave their meaning unchanged ([what may be changed](changing-concepts.md)).
 - No `.ttl` files edited.
 
 ```{tip}

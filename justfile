@@ -79,7 +79,11 @@ join:
 # Add provenance information to all ttl files in vocabularies/
 [group('individual steps')]
 prov:
-  voc4cat transform --prov-from-git --diff-base origin/main --inplace --config idranges.toml --logfile outbox/voc4cat.log vocabularies/
+  # --modified-date is what ci-pr.yml passes. Without it the date of a changed
+  # concept is read from the commits that touched its file, which a squash
+  # merge replaces with one commit dated at merge time; running this recipe
+  # against such a history would overwrite the dates the pipeline wrote.
+  voc4cat transform --prov-from-git --diff-base origin/main --modified-date "$(date +'%Y-%m-%d')" --inplace --config idranges.toml --logfile outbox/voc4cat.log vocabularies/
 
 # Run all steps as in gh-actions: check xlsx, convert to SKOS, build docs, re-build xlsx
 all: check convert docs xlsx

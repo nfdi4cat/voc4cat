@@ -6,13 +6,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 voc4cat:0008141
     a skos:Concept ;
-    dcterms:created "2026-08-31"^^xsd:date ;
+    dcterms:created "2024-03-23"^^xsd:date ;
     dcterms:identifier "0008141"^^xsd:token ;
-    dcterms:modified "2026-08-31"^^xsd:date ;
+    dcterms:modified "2026-09-15"^^xsd:date ;
     dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008141.ttl> ;
     rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008141.ttl> ;
-    skos:broader voc4cat:0000194 ;
-    skos:definition "The quantity of catalyst, expressed as mass, that is synthesized or used in a reaction, reactor, catalytic testing setup, analytical procedure, or other application."@en ;
+    skos:broader voc4cat:0008136 ;
+    skos:definition "The mass of catalyst used in an experiment."@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:prefLabel "catalyst mass"@en ;
 .

@@ -8,11 +8,12 @@ voc4cat:0008136
     a skos:Concept ;
     dcterms:created "2026-08-31"^^xsd:date ;
     dcterms:identifier "0008136"^^xsd:token ;
-    dcterms:modified "2026-08-31"^^xsd:date ;
+    dcterms:modified "2026-09-15"^^xsd:date ;
     dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008136.ttl> ;
     rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008136.ttl> ;
     skos:broader voc4cat:0000186 ;
-    skos:definition "The quantity of catalyst introduced into a reaction system, expressed as a mass, mass per unit area, mass per unit volume, or mass relative to the reactant, to characterize the amount of active material available for catalytic transformation."@en ;
+    skos:definition "A measure of the amount of catalyst present in a reaction system, given either as an absolute mass or relative to the reactor, the reaction mixture, or the amount of reactant."@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:narrower voc4cat:0008141 ;
     skos:prefLabel "catalyst loading"@en ;
 .

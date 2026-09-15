@@ -6,14 +6,16 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 voc4cat:0008139
     a skos:Concept ;
-    dcterms:created "2026-08-31"^^xsd:date ;
+    dcterms:created "2024-02-02"^^xsd:date ;
     dcterms:identifier "0008139"^^xsd:token ;
-    dcterms:modified "2026-08-31"^^xsd:date ;
+    dcterms:modified "2026-09-15"^^xsd:date ;
     dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008139.ttl> ;
     rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008139.ttl> ;
-    skos:altLabel "gas headspace"@en ;
+    skos:altLabel
+        "gas headspace"@en ,
+        "headspace"@en ;
     skos:broader voc4cat:0000186 ;
-    skos:definition "The gas- or vapour-filled volume within a reactor located above the liquid level."@en ;
+    skos:definition "The volume of the gas or vapour filled space above the liquid in a reactor."@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
-    skos:prefLabel "headspace"@en ;
+    skos:prefLabel "headspace volume"@en ;
 .

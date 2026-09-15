@@ -6,9 +6,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 voc4cat:0008137
     a skos:Concept ;
-    dcterms:created "2026-08-31"^^xsd:date ;
+    dcterms:created "2024-02-02"^^xsd:date ;
     dcterms:identifier "0008137"^^xsd:token ;
-    dcterms:modified "2026-08-31"^^xsd:date ;
+    dcterms:modified "2026-09-15"^^xsd:date ;
     dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008137.ttl> ;
     rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008137.ttl> ;
     skos:altLabel "total mass of feed"@en ;

@@ -19,7 +19,7 @@ voc4cat:0000202
         "carbon-hydrogen bond activation"@en ;
     skos:broader voc4cat:0000185 ;
     skos:changeNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
-    skos:definition "A type of organic reaction in which a stable carbon-hydrogen (C-H)  bond is cleaved and replaced with a C-X bond."@en ;
+    skos:definition "A type of organic reaction in which a stable carbon-hydrogen (C-H) bond is cleaved and replaced with a C-X bond."@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:prefLabel "C-H activation reaction"@en ;
 .

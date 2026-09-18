@@ -1,0 +1,27 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+voc4cat:0007219
+    a skos:Concept ;
+    dcterms:created "2024-02-28"^^xsd:date ;
+    dcterms:identifier "0007219"^^xsd:token ;
+    dcterms:modified "2026-02-18"^^xsd:date ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007219.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007219.ttl> ;
+    skos:altLabel "voltage"@en ;
+    skos:broader voc4cat:0000186 ;
+    skos:changeNote "0009-0008-1278-8890 Michael Götte created the resource"@en ;
+    skos:definition "Defined as the amount of work needed per unit of electric charge to move the charge from a reference point to a specific point in an electric field. By definition, the electric potential at the reference point is zero units. A typical reference point is earth (ground)."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:narrower
+        voc4cat:0007213 ,
+        voc4cat:0007214 ,
+        voc4cat:0007215 ,
+        voc4cat:0007216 ,
+        voc4cat:0007217 ,
+        voc4cat:0007218 ;
+    skos:prefLabel "electrical potential"@en ;
+.

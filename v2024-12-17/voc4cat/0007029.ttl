@@ -1,0 +1,14 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0007029>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0007029"^^xsd:token ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000185> ;
+    skos:definition "A synthesis method involving the thermal treatment of a mixture of substances in aqueous solution or in form of a slurry in water characterised by heating the mixture in a sealed  reaction vessel to a temperature greater than the boiling point at standard pressure ."@en ;
+    skos:historyNote "0000-0002-4041-0165 Julia Schumann created the resource, 0000-0002-5898-1820 David Linke contributed to the definition of the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "hydrothermal synthesis"@en ;
+.
+

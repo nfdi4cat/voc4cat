@@ -1,0 +1,18 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0000024>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0000024"^^xsd:token ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000190> ;
+    skos:definition "The substate onto which a (powdered) catalyst is deposited. Such substrates include glass surfaces (e.g., borosilicate glass or conductive glass like ITO and FTO), ceramic substrates (e.g., alumina) or metal substrates (e.g., Ti foils, stainless steel etc.)."@en ;
+    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower
+        <https://w3id.org/nfdi4cat/voc4cat_0000026> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000027> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000032> ;
+    skos:prefLabel "substrate"@en ;
+.
+

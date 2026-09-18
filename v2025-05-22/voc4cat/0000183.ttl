@@ -1,0 +1,56 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0000183>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0000183"^^xsd:token ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000182> ;
+    skos:definition "An occurrence or happening, marked by a specific point in time. Events can be observed, recorded, and may have an impact on the state of the system or entities involved."@en ;
+    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas and 0000-0002-5898-1820 David Linke created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:narrower
+        <https://w3id.org/nfdi4cat/voc4cat_0000088> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000089> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000090> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000091> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000092> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000093> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000094> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000095> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000096> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000097> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000098> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000220> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000222> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000223> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000224> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000226> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000230> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000236> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000237> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000241> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000242> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000243> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000244> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000245> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000247> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000252> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000253> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000258> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000259> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000260> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000261> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000276> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000278> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000280> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000283> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000289> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000290> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000297> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000302> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000303> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000306> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007234> ;
+    skos:prefLabel "events"@en ;
+.

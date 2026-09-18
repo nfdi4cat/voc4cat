@@ -1,0 +1,21 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0000001>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0000001"^^xsd:token ;
+    skos:altLabel "photocatalytic reaction"@en ;
+    skos:definition "A process which catalyzes a chemical reaction through the absorption of sufficient light energy by a photocatalyst."@en ;
+    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower
+        <https://w3id.org/nfdi4cat/voc4cat_0000002> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000084> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000087> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000100> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000128> ;
+    skos:prefLabel "photocatalysis"@en ;
+    skos:topConceptOf <https://w3id.org/nfdi4cat/voc4cat_> ;
+.
+

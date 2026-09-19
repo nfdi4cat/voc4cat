@@ -1,7 +1,8 @@
 name: 💡 Vocabulary improvement
 description: Suggest a change or addition
 title: "💡 <title>"
-labels: ["Enhancement"]
+# No static label here on purpose: the "What does this propose?" checkboxes
+# below carry the classification, and label-vocabulary-changes.yml applies it.
 body:
 - type: textarea
   id: description

@@ -1,0 +1,78 @@
+# Applies the "vocab: ..." labels from the checkboxes of the vocabulary
+# improvement form.
+# Runs on "edited" as well as "opened" so that a box ticked or removedlater
+# still applies or removes its label.
+
+name: Label vocabulary changes
+
+on:
+  issues:
+    types: [opened, edited]
+
+permissions: {}
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.issue.number }}
+  cancel-in-progress: true
+
+jobs:
+  label_from_checkboxes:
+    name: Label from the change-kind checkboxes
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    permissions:
+      issues: write  # required to add labels to the issue
+
+    steps:
+      - name: Apply one label per ticked checkbox
+        shell: python
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          import json
+          import os
+          import re
+          import urllib.request
+
+          # Keys are matched verbatim against the option labels in
+          # .github/ISSUE_TEMPLATE/improvement.yaml.
+          LABEL_OF_OPTION = {
+              "Adding new concepts or collections": "vocab: addition",
+              "Changing a preferred label or definition": "vocab: term change",
+              "Changing parents, mappings or collection membership": "vocab: relation change",
+              "Deprecating a concept or collection": "vocab: deprecation",
+          }
+          TICKED = re.compile(r"^[ \t]*- \[[xX]\][ \t]+(.+?)[ \t]*$", re.MULTILINE)
+
+          with open(os.environ["GITHUB_EVENT_PATH"], encoding="utf-8") as event_file:
+              issue = json.load(event_file)["issue"]
+
+          ticked = set(TICKED.findall(issue.get("body") or ""))
+          present = {label["name"] for label in issue.get("labels", [])}
+          wanted = {label for option, label in LABEL_OF_OPTION.items() if option in ticked}
+          missing = sorted(wanted - present)
+
+          if not missing:
+              print("Nothing to apply.")
+              raise SystemExit(0)
+
+          request = urllib.request.Request(
+              "{api}/repos/{repo}/issues/{number}/labels".format(
+                  api=os.environ["GITHUB_API_URL"],
+                  repo=os.environ["GITHUB_REPOSITORY"],
+                  number=issue["number"],
+              ),
+              data=json.dumps({"labels": missing}).encode("utf-8"),
+              headers={
+                  "Accept": "application/vnd.github+json",
+                  "Authorization": "Bearer {}".format(os.environ["GH_TOKEN"]),
+                  "Content-Type": "application/json",
+                  "X-GitHub-Api-Version": "2022-11-28",
+              },
+              method="POST",
+          )
+          with urllib.request.urlopen(request) as response:
+              response.read()
+
+          print("Applied: {}".format(", ".join(missing)))

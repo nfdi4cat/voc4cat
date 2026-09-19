@@ -1,7 +1,7 @@
 name: 🙋 Request a range of IDs
 description: To add new content you need IDs. Here you get them!
 title: "🙋 ID-request"
-labels: []
+labels: ["ID request"]
 assignees: []
 body:
 - type: markdown

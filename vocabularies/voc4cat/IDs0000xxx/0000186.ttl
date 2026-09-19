@@ -12,7 +12,7 @@ voc4cat:0000186
     dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000186.ttl> ;
     rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000186.ttl> ;
     skos:changeNote "0000-0002-6242-2167 Nikolaos G. Moustakas and 0000-0002-5898-1820 David Linke created the resource"@en ;
-    skos:definition "A characteristic of an entity that is intrinsic to and cannot exist without the entity. E.g., properties, characteristics, qualities of things, states."@en ;
+    skos:definition "A property that an entity has rather than is: a quantity, whose value has a magnitude, or a nominal property, whose value is a name or a code. E.g., reaction rate, sample mass, catalyst form, stirrer type."@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:narrower
         voc4cat:0000004 ,

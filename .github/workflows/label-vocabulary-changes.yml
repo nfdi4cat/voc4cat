@@ -1,18 +1,7 @@
 # Applies the "vocab: ..." labels from the checkboxes of the vocabulary
 # improvement form.
-#
-# A GitHub issue form can only declare a fixed set of labels that every issue
-# created from it receives; it cannot attach a label to an individual checkbox.
-# See https://github.com/orgs/community/discussions/15807. The mapping from
-# ticked box to label therefore happens here.
-#
-# Runs on "edited" as well as "opened" so that a box ticked later still applies
-# its label. That is also how a maintainer corrects an issue whose author left
-# the block empty: tick the box, and the label follows. A checkbox group cannot
-# be made mandatory in an issue form, so an untouched block yields no label.
-#
-# Add-only on purpose. Unticking a box leaves its label in place, because
-# removing labels here would also strip labels that a maintainer set by hand.
+# Runs on "edited" as well as "opened" so that a box ticked or removedlater
+# still applies or removes its label.
 
 name: Label vocabulary changes
 
@@ -33,7 +22,7 @@ jobs:
     timeout-minutes: 5
 
     permissions:
-      issues: write  # to add labels to the issue that triggered the run
+      issues: write  # required to add labels to the issue
 
     steps:
       - name: Apply one label per ticked checkbox

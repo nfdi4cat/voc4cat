@@ -8,15 +8,13 @@ voc4cat:0007795
     a skos:Concept ;
     dcterms:created "2025-08-22"^^xsd:date ;
     dcterms:identifier "0007795"^^xsd:token ;
-    dcterms:modified "2026-02-18"^^xsd:date ;
+    dcterms:modified "2026-09-20"^^xsd:date ;
     dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007795.ttl> ;
     rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007795.ttl> ;
-    skos:altLabel
-        "co precipitation"@en ,
-        "coprecipitation"@en ;
-    skos:broader voc4cat:0007016 ;
+    skos:altLabel "coprecipitation"@en ;
+    skos:broader voc4cat:0007027 ;
     skos:changeNote "0000-0003-4418-7455 Franziska Flecken created the resource"@en ;
-    skos:definition "A synthesis method for chemical substances which includes the simultaneous precipitation of two or more precursors."@en ;
+    skos:definition "A specific step in the synthesis of a solid materal which is characterised by the simultaneous precipitation of two or more precursor species from a homogeneous solution. The precipitation is typically driven by the addition of a precipitation agent that changes the solubility of the precursors."@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:prefLabel "co-precipitation"@en ;
 .

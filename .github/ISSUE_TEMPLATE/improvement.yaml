@@ -7,7 +7,7 @@ body:
 - type: checkboxes
   id: change-kind
   attributes:
-    label: What does this propose?
+    label: Kind of change
     description: >
       Tick everything that applies. More than one is normal, and a proposal
       that adds concepts while correcting others is common.

@@ -1,18 +1,9 @@
 name: 💡 Vocabulary improvement
 description: Suggest a change or addition
-title: "💡 <title>"
-# No static label here on purpose: the "What does this propose?" checkboxes
-# below carry the classification, and label-vocabulary-changes.yml applies it.
+title: "💡 <short descriptive title>"
+# No static label here on purpose: classification is done via the checkboxes.
+# GH-action label-vocabulary-changes.yml applies the corresponding labels.
 body:
-- type: textarea
-  id: description
-  attributes:
-    label: Description
-    description: What do you propose?
-  validations:
-    required: false
-# The option labels are matched verbatim by .github/workflows/label-vocabulary-changes.yml.
-# Changing the wording here without changing it there stops the labelling.
 - type: checkboxes
   id: change-kind
   attributes:
@@ -20,8 +11,16 @@ body:
     description: >
       Tick everything that applies. More than one is normal, and a proposal
       that adds concepts while correcting others is common.
+    # Do not change the option wording here without changing it also in the action.
     options:
       - label: Adding new concepts or collections
       - label: Changing a preferred label or definition
       - label: Changing parents, mappings or collection membership
       - label: Deprecating a concept or collection
+- type: textarea
+  id: description
+  attributes:
+    label: Description
+    description: What do you propose?
+  validations:
+    required: false

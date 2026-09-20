@@ -25,6 +25,12 @@ setup:
   # install current voc4cat-tool version
   uv tool install voc4cat --with git+https://github.com/dalito/pyLODE.git@nfdi4cat-2.x
 
+# Install voc4cat-tool with the assistant used by maintainers (pulls in torch)
+[group('environment')]
+setup-all:
+  # The extra is quoted because sh expands the brackets as a glob.
+  uv tool install "voc4cat[assistant]" --with git+https://github.com/dalito/pyLODE.git@nfdi4cat-2.x
+
 # Upgrades voc4cat-tool installation
 [group('environment')]
 upgrade:
@@ -84,6 +90,17 @@ prov:
   # merge replaces with one commit dated at merge time; running this recipe
   # against such a history would overwrite the dates the pipeline wrote.
   voc4cat transform --prov-from-git --diff-base origin/main --modified-date "$(date +'%Y-%m-%d')" --inplace --config idranges.toml --logfile outbox/voc4cat.log vocabularies/
+
+# Report duplicate concepts (needs "just setup-all")
+[group('individual steps')]
+duplicates:
+  @test -n "$(ls outbox/*.ttl 2>/dev/null)" || { echo 'No joined vocabulary in outbox/ - run "just convert" to screen a submission or "just join" to screen the current vocabulary.'; exit 1; }
+  # voc-assistant takes one file, named after the vocabulary, and writes its
+  # report into the working directory - hence the glob and the cd. The flags
+  # work around nfdi4cat/voc4cat-tool#387, which otherwise hides identical
+  # labels whose definitions are worded differently.
+  @cd outbox && voc-assistant check --method levenshtein --threshold-defs 0 $(ls *.ttl)
+  @echo "Report written to outbox/check_report_levenshtein.md"
 
 # Run all steps as in gh-actions: check xlsx, convert to SKOS, build docs, re-build xlsx
 all: check convert docs xlsx

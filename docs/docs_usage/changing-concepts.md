@@ -118,3 +118,26 @@ If you are the first to use it, check the resulting Turtle in the pull request a
 :::
 
 Collections are deprecated in the same way, using the *Obsoletion reason* and *dct:isReplacedBy* columns of the **Collections** sheet.
+
+### Converting a concept to a collection
+
+One of the obsoletion reasons is *This concept was converted to a collection*.
+It applies to a concept that turns out to be a grouping rather than a thing;
+the test is in [Concept or Collection?](organizing-concepts.md#concept-or-collection).
+
+The conversion does not change the type of an existing IRI.
+SKOS keeps `skos:Concept` and `skos:Collection` apart,
+and a merged IRI in Voc4Cat keeps the meaning it was given.
+The steps are:
+
+1. Deprecate the concept with the obsoletion reason *This concept was converted to a collection*.
+2. Create a collection with a new IRI and give it the members.
+3. Leave *dct:isReplacedBy* empty, or point it at a concept that replaces the deprecated one
+   for annotation. It never points at the collection, because a consumer cannot substitute a
+   set of concepts for the concept their data was annotated with.
+
+Data that is already annotated with the deprecated concept has no automatic replacement.
+Only the data owner can decide which member of the new collection each annotation should use.
+
+The mirror case works the same way: a collection that should have been a concept is deprecated
+with *This collection was converted to a concept*, and a new concept IRI is created.

@@ -122,6 +122,10 @@ In Voc4Cat they are the exception, and are used only where all three of the foll
 # Classification by what the quantity characterizes
 ```
 
+The second parent is a kind and not a context of use, because every concept below
+`DetectorPerformanceMeasure` is itself a measure.
+[Concept or Collection?](#concept-or-collection) gives the test.
+
 **Anti-patterns:**
 
 ```turtle
@@ -140,7 +144,9 @@ In Voc4Cat they are the exception, and are used only where all three of the foll
 If they always contain the same concepts, those classes are one class under several names.
 What then needs revision is the classification, not the number of parents on the concept.
 
-Where a second parent would express a context of use rather than a kind, use a `skos:Collection` instead.
+Where the second parent would group concepts by a context of use, such as a measurement
+technique, an application domain or a project, it is not a classification and fails condition 1.
+Use a `skos:Collection` instead.
 
 ### Using skos:Collection for HAS-A and Contextual Relations
 
@@ -158,6 +164,36 @@ Use collections to express **HAS-A relationships** and group attributes by conte
 - **Application domain** (e.g., photocatalysis parameters)
 
 An example for such a collection in Voc4Cat is [voc4cat:0007130](https://w3id.org/nfdi4cat/voc4cat_0007130), which collects the attribute terms for Scanning Electron Microscopy (SEM) measurements.
+
+Collections can be nested with the *Parent Collection IRIs* column,
+which is preferable to repeating the members of one collection in another.
+
+### Concept or Collection?
+
+Concepts and collections both group other concepts, and the spreadsheet offers both.
+So a candidate term has to be assigned to one or the other.
+Ask what the IRI is going to be used for:
+
+- A **concept** is what data is annotated with. It denotes a thing, a kind or a property.
+- A **collection** is what is used to find the concepts that data is annotated with.
+  It denotes a set of concepts and is never the value of an annotation.
+
+Two checks follow from this.
+
+**Are all members a kind of the candidate?**
+If every concept in the group is a kind of the candidate, then the candidate is a concept
+and the group are its narrower concepts.
+`0008100` (detector performance measure) is such a case, since every concept below it is
+itself a measure.
+If the members are held together by something other than what they are, such as the technique
+they serve, the application they belong to or the project that needs them, then the candidate
+is a collection.
+`0007130` (SEM measurement attribute) is such a case: its members are attributes of several
+kinds, held together by the measurement they describe.
+
+**Does the candidate have an honest parent?**
+A concept has to reach a top concept through IS-A relations.
+A grouping that can only be placed under a top concept by bending the IS-A criterion is a collection.
 
 ### Expressing PART-OF Relations
 

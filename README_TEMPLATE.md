@@ -151,6 +151,10 @@ This adds all commits made in the template's main branch to your new repository.
     When it cannot - a failed conversion, or a fork owned by an organization - GitHub still reports the pull request as mergeable, and merging it puts the xlsx file into the history of main.
     Both settings are needed: without the second, repository administrators can merge past the failing check, and administrators are usually the people who press the merge button.
   - Configure GitHub pages to use as source "deploy from a branch" and select the branch `gh-pages` (Settings > Pages > Build and deployment)
+  - Run the "Sync labels" workflow once (Actions > Sync labels > Run workflow).
+    It creates the labels of `.github/labels.yml`, which the issue forms and `label-vocabulary-changes.yml` reference.
+    A label that does not exist in the repository is silently dropped from an issue.
+    The workflow never deletes a label, so the default labels of GitHub that you do not want have to be removed by hand.
 - Optionally
   - Add a different license for your vocabulary.
 - Optionally provide a custom Excel template with extra sheets, see [documentation](https://nfdi4cat.github.io/voc4cat-tool/migration-to-v1.0.html#step-4-generate-v1-0-excel-template).

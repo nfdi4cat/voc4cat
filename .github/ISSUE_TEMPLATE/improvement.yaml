@@ -1,8 +1,22 @@
 name: 💡 Vocabulary improvement
 description: Suggest a change or addition
-title: "💡 <title>"
-labels: ["Enhancement"]
+title: "💡 <short descriptive title>"
+# No static label here on purpose: classification is done via the checkboxes.
+# GH-action label-vocabulary-changes.yml applies the corresponding labels.
 body:
+- type: checkboxes
+  id: change-kind
+  attributes:
+    label: Kind of change
+    description: >
+      Tick everything that applies. More than one is normal, and a proposal
+      that adds concepts while correcting others is common.
+    # Do not change the option wording here without changing it also in the action.
+    options:
+      - label: Adding new concepts or collections
+      - label: Changing a preferred label or definition
+      - label: Changing parents, mappings or collection membership
+      - label: Deprecating a concept or collection
 - type: textarea
   id: description
   attributes:

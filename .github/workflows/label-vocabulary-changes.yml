@@ -1,0 +1,107 @@
+# Keeps the "vocab: ..." labels of an issue in sync with the checkboxes of the
+# vocabulary improvement form. Runs on "edited" as well as "opened" so that a
+# box ticked or unticked later applies or removes its label.
+
+name: Label vocabulary changes
+
+on:
+  issues:
+    types: [opened, edited]
+
+permissions: {}
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.issue.number }}
+  cancel-in-progress: true
+
+jobs:
+  label_from_checkboxes:
+    name: Label from the change-kind checkboxes
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    permissions:
+      issues: write  # required to add and remove labels
+
+    steps:
+      - name: Sync labels with the ticked checkboxes
+        shell: python
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          import json
+          import os
+          import re
+          import urllib.error
+          import urllib.parse
+          import urllib.request
+
+          # Keys are matched verbatim against the option labels in
+          # .github/ISSUE_TEMPLATE/improvement.yaml.
+          LABEL_OF_OPTION = {
+              "Adding new concepts or collections": "vocab: addition",
+              "Changing a preferred label or definition": "vocab: term change",
+              "Changing parents, mappings or collection membership": "vocab: relation change",
+              "Deprecating a concept or collection": "vocab: deprecation",
+          }
+          CHECKBOX = re.compile(r"^[ \t]*- \[([ xX])\][ \t]+(.+?)[ \t]*$", re.MULTILINE)
+
+          with open(os.environ["GITHUB_EVENT_PATH"], encoding="utf-8") as event_file:
+              issue = json.load(event_file)["issue"]
+
+
+          def call(method, path="", body=None):
+              """Send one labels request for this issue."""
+              url = "{api}/repos/{repo}/issues/{number}/labels{path}".format(
+                  api=os.environ["GITHUB_API_URL"],
+                  repo=os.environ["GITHUB_REPOSITORY"],
+                  number=issue["number"],
+                  path=path,
+              )
+              request = urllib.request.Request(
+                  url,
+                  data=None if body is None else json.dumps(body).encode("utf-8"),
+                  headers={
+                      "Accept": "application/vnd.github+json",
+                      "Authorization": "Bearer {}".format(os.environ["GH_TOKEN"]),
+                      "Content-Type": "application/json",
+                      "X-GitHub-Api-Version": "2022-11-28",
+                  },
+                  method=method,
+              )
+              with urllib.request.urlopen(request) as response:
+                  response.read()
+
+
+          # An issue that carries none of the options was not filed from the
+          # improvement form, so its labels are not ours to touch.
+          ticked_of_option = {}
+          for mark, text in CHECKBOX.findall(issue.get("body") or ""):
+              if text in LABEL_OF_OPTION:
+                  ticked_of_option[text] = ticked_of_option.get(text, False) or mark.lower() == "x"
+
+          if not ticked_of_option:
+              print("No change-kind checkboxes in the body; labels left untouched.")
+              raise SystemExit(0)
+
+          # The labels on the event payload can already be stale when a rapid
+          # second edit cancels the run that was about to change them, so the
+          # ticked boxes alone decide and both calls are made unconditionally.
+          wanted = {label for option, label in LABEL_OF_OPTION.items() if ticked_of_option.get(option)}
+          stale = sorted(set(LABEL_OF_OPTION.values()) - wanted)
+
+          if wanted:
+              call("POST", body={"labels": sorted(wanted)})
+              print("Ticked: {}".format(", ".join(sorted(wanted))))
+          else:
+              print("Nothing ticked.")
+
+          for label in stale:
+              try:
+                  call("DELETE", "/{}".format(urllib.parse.quote(label, safe="")))
+              except urllib.error.HTTPError as error:
+                  if error.code != 404:
+                      raise
+                  print("Not set: {}".format(label))
+              else:
+                  print("Removed: {}".format(label))

@@ -1,0 +1,54 @@
+# Applies the label set of .github/labels.yml to this repository.
+#
+# Labels are repository settings and not files, so they neither come with the
+# template nor with a template update. Run this workflow once when setting up a
+# repository from the template, and again after taking over a template update
+# that changed labels.yml.
+#
+# Labels are created and updated only. Deleting a label would strip it from
+# every issue that carries it, so unwanted labels, including the defaults of
+# GitHub, have to be removed by hand.
+
+name: Sync labels
+
+on:
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: ${{ github.workflow }}
+
+jobs:
+  sync_labels:
+    name: Apply the label set
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    permissions:
+      contents: read  # required to read the label manifest
+      issues: write  # required to create and update labels
+
+    steps:
+      - name: Check out the label manifest
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          sparse-checkout: .github/labels.yml
+          sparse-checkout-cone-mode: false
+          persist-credentials: false
+
+      - name: Create or update every label
+        shell: bash
+        env:
+          GH_REPO: ${{ github.repository }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # One compact JSON object per line, so that a name or description
+          # containing spaces survives the loop.
+          yq --output-format=json --indent=0 '.[]' .github/labels.yml |
+          while IFS= read -r label; do
+            gh label create "$(jq --raw-output '.name' <<<"$label")" \
+              --color "$(jq --raw-output '.color' <<<"$label")" \
+              --description "$(jq --raw-output '.description' <<<"$label")" \
+              --force </dev/null  # keep gh off the label list on stdin
+          done

@@ -97,6 +97,81 @@ A more fundamental error is placing attribute concepts under entity concepts:
     # Wrong: "Width" is not a subtype of "Substrate"
 ```
 
+### Classifying Attributes and Their Values
+
+Not every attribute is measured.
+`0000186` (attributes) covers a quantity, whose value has a magnitude,
+and a nominal property, whose value is a name or a code.
+An attribute of the second kind records **which kind of thing** was used, not how much of it.
+Voc4Cat calls such a concept a **classifying attribute**.
+Examples are `0008119` (impregnation type), `0007114` (detector type),
+`0000016` (catalyst form).
+
+#### Recognizing a classifying attribute
+
+Ask which values the attribute can take, then ask whether those values are attributes as well.
+
+- `0008099` (dead time) takes values such as a number of microseconds,
+  and the concepts below it are again attributes. This is an ordinary attribute.
+- `0007114` (detector type) takes values such as `0000132` (flame ionization detector).
+  A detector is a piece of equipment, not an attribute. This is a classifying attribute.
+
+The head noun of the label is a hint (*type*, *mode*, *method*, *form*, *shape*).
+
+#### Where the values belong
+
+A classifying attribute and the thing it classifies are two concepts in two branches.
+The values are the narrower concepts of the thing that is classified (never of the attribute). For example:
+
+```text
+0000186 attributes
+└── 0008119 impregnation type                      the classifying attribute
+
+0000184 actions
+└── 0007028 impregnation                           the thing that is classified
+    ├── 0008132 wet impregnation                   its subtypes are the values
+    └── 0007806 incipient wetness impregnation
+```
+
+The values are not always actions. For `0007114` (detector type) they are equipment:
+
+```text
+0000186 attributes
+└── 0007114 detector type
+
+0000180 physical entity
+└── 0000187 equipment
+    └── 0000192 sensor
+        └── 0000191 detector
+            ├── 0000132 flame ionization detector
+            ├── 0000133 thermal conductivity detector
+            └── 0008083 silicon drift detector
+```
+
+Both parts are needed: the attribute is used to say that a detector type was recorded,
+and the value concept says which detector it was.
+
+#### Classifying attributes without values
+
+A classifying attribute may be added even when Voc4Cat holds neither the thing it classifies
+nor any of its values.
+`0008113` (stirrer type) is such a case, since the vocabulary has no concept for a stirrer.
+This is allowed and does not block a contribution.
+
+It is still worth asking whether the values should be added too.
+As long as they are missing, data can be annotated with the attribute,
+but its value has to be written as free text, which is what a controlled vocabulary is meant to avoid.
+
+#### Grouping concepts are not classifying attributes
+
+`0000170` (light source property) has `0000172` (light operation current)
+and `0000173` (light operation voltage) below it.
+These are attributes, so the test above is answered with yes and the concepts stay where they are.
+A concept that groups attributes is an ordinary part of the attribute hierarchy.
+
+For the label of a classifying attribute, see
+[Labels for classifying attributes](guidelines.md#labels-for-classifying-attributes).
+
 ### Number of Parents
 
 One parent is the norm.

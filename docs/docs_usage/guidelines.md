@@ -159,6 +159,31 @@ considerations should be followed when adding definitions:
     field covered by Voc4Cat, that it is considered for practical
     purposes to represent a single concept.
 
+## Labels for classifying attributes
+
+Some attributes record which kind of thing was used rather than how much of it,
+for example impregnation type, detector type, catalyst form.
+Where such a concept and its values belong in the hierarchy is explained in
+[Classifying Attributes and Their Values](organizing-concepts.md#classifying-attributes-and-their-values).
+Their labels follow a pattern:
+
+1. The label is formed from the thing that is classified plus a head noun that names the kind
+    of classification: *type*, *mode*, *method*, *form*, *shape*, *material*.
+    Examples: impregnation type, reactor design type, acquisition mode, catalyst form.
+
+2. Such a compound term must not be split into simpler concepts (see the section above).
+    "impregnation" and "type" on their own do not express the concept.
+
+3. The label names the attribute and never one of the values it can take.
+    "impregnation type" is the label of the attribute, while "wet impregnation" is one of
+    its values and is a concept of its own in another branch.
+    The reverse holds as well: a concept that denotes the values themselves must not carry
+    such a head noun.
+
+4. The general rules for labels apply unchanged, in particular the singular form and the
+    avoidance of prepositional phrases. Write "semiconductor category" rather than
+    "categories of semiconductors".
+
 ## Singular vs. plural
 
 Use **singular** for

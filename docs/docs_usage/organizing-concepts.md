@@ -202,7 +202,7 @@ The concepts included in Voc4Cat are structured under the following **Top-Concep
 | 3.1 | voc4cat:0000183     | Events                        | An occurrence or happening, marked by a specific point in time. Events can be observed, recorded, and may have an impact on the state of the system or entities involved. | charge transport, oxidation |
 | 3.2 | voc4cat:0000184     | Actions                       | Temporal entities that have a duration and occur at specific points in time.                                                                                        | purging, calcination |
 | 3.3 | voc4cat:0000185     | Processes                     | A series of temporal entities, like actions, events, changes, or functions that are not isolated but rather a connected sequence of activities. Processes often involve the transformation of inputs into outputs and can be conceptualized as workflows. | hydrothermal synthesis, catalyst deactivation |
-| 4   | voc4cat:0000186     | Attributes                    | A characteristic of an entity that is intrinsic to and cannot exist without the entity. E.g., properties, characteristics, qualities of things, states.                 | reaction rate, sample mass |
+| 4   | voc4cat:0000186     | Attributes                    | A property that an entity has rather than is: a quantity, whose value has a magnitude, or a nominal property, whose value is a name or a code. | reaction rate, sample mass, catalyst form, stirrer type |
 
 These top concepts are similar to those in top-level ontologies (BFO, SIO, DOLCE), to what is proposed in ANSI/NISO Z39.19-2005 (R2010), or what was proposed as minimal set of terms for a re-organization of AgroVoc.
 

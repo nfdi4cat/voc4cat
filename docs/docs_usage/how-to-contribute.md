@@ -272,6 +272,9 @@ Allgemeinen an der Grenzfläche statt.</td>
     Note that broader/narrower are not transitive.
     A concept normally has one parent; see
     [Number of Parents](organizing-concepts.md#number-of-parents) before giving it several.
+    An attribute whose values are things of another kind, such as a *type* or
+    *material* attribute, does not receive those values as children; see
+    [Classifying Attributes and Their Values](organizing-concepts.md#classifying-attributes-and-their-values).
 
 7. **Member of collection(s)** *(optional)*: Assign this concept to one
     or more collections by collection IRI, one per line.

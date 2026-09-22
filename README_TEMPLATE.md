@@ -199,25 +199,28 @@ The justfile helps to run (almost) the same commands as are used in the GitHub w
 This makes local testing of a modified vocabulary xlsx-file easier.
 Read the header of the justfile for more info on setting up your environment.
 
-Once you have `just` installed type the command `just` at the root of the git-project to list the available commands. For version v26.8 of the template, it gives:
+Once you have `just` installed type the command `just` at the root of the git-project to list the available commands. It gives:
 
 ```bash
 $ just
 Available recipes:
-    all     # Run all steps as in gh-actions: check xlsx, convert to SKOS, build docs, re-build xlsx
+    all            # Run all steps as in gh-actions: check xlsx, convert to SKOS, build docs, re-build xlsx
 
     [environment]
-    clean   # Remove all generated files/directories
-    setup   # Run initial setup (run this first)
-    upgrade # Upgrades voc4cat-tool installation
+    clean          # Remove all generated files/directories
+    setup          # Run initial setup (run this first)
+    setup-all      # Install voc4cat-tool with semantic similarity scoring (pulls in torch)
+    upgrade        # Upgrades voc4cat-tool installation
 
     [individual steps]
-    check   # Check the *.xlsx file(s) in inbox-excel-vocabs/ for errors
-    convert # Convert the *.xlsx file(s) in inbox-excel-vocabs/ to turtle
-    docs    # Run voc4cat (build HTML documentation from ttl files)
-    join    # Join individual ttl files in vocabularies/ to one turtle file in outbox/
-    prov    # Add provenance information to all ttl files in vocabularies/
-    xlsx    # Rebuild the xlsx file from the joined ttl file.
+    check          # Check the *.xlsx file(s) in inbox-excel-vocabs/ for errors
+    convert        # Convert the *.xlsx file(s) in inbox-excel-vocabs/ to turtle
+    docs           # Run voc4cat (build HTML documentation from ttl files)
+    duplicates     # Report concepts that resemble another concept in the vocabulary (needs "just setup-all")
+    duplicates-new # Report concepts a submission adds that resemble a published concept
+    join           # Join individual ttl files in vocabularies/ to one turtle file in outbox/
+    prov           # Add provenance information to all ttl files in vocabularies/
+    xlsx           # Rebuild the xlsx file from the joined ttl file.
 ```
 
 If you have some Python knowledge, you can of course also install and use the [voc4cat](https://pypi.org/project/voc4cat/) Python package just like any other Python package, starting with `pip install voc4cat` and continuing from there.

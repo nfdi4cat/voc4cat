@@ -124,8 +124,8 @@ duplicates-new:
   done ;\
   exit $status
 
-# Run all steps as in gh-actions: check xlsx, convert to SKOS, build docs, re-build xlsx
-all: check convert docs xlsx
+# Run all steps as in gh-actions: check xlsx, convert to SKOS, screen for duplicates, build docs, re-build xlsx
+all: check convert duplicates-new docs xlsx
 
 # The checks that guard a pull request are advisory when run locally and fatal
 # in gh-actions. Uncomment to get the pipeline's strict behaviour here, e.g. to

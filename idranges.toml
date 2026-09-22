@@ -80,6 +80,11 @@ repository = "https://github.com/nfdi4cat/voc4cat-template"
 # Gitea: "https://gitea.example.com/myorg/myrepo/blame/{{ version }}/vocabularies/{{ vocab_name }}/{{ partition_dir }}/{{ entity_id }}.ttl"
 # provenance_url_template = ""
 
+# Optional: Jinja template for the concept links in voc-assistant reports.
+# Must contain {{ entity_id }}, the numeric concept ID. Without it a concept
+# links to its own permanent IRI, so reports are useful unconfigured.
+# concept_url_template = "https://myorg.github.io/myvocab/index.html#https://example.org/{{ entity_id }}"
+
 # Optional: URL of homepage
 # homepage = ""
 
@@ -131,6 +136,18 @@ orcid = ""
 ror_id = ""
 
 # Continue with as many [[vocabs.vocab_example.id_range]] sections as needed.
+
+# ==== Accepted Similarities ====
+# Concept pairs that voc-assistant reports and that the vocabulary
+# maintainers reviewed and accepted. They are listed in a separate section
+# of its report and do not fail the duplicate screening of a pull request.
+# Both keys are required. An entry naming a concept that is not in the
+# vocabulary, or matching no reported pair, is reported as unused, so the
+# list does not go stale unnoticed.
+#
+# [[vocabs.vocab_example.accepted_similarity]]
+# concepts = ["ex:test/0000001", "ex:test/0000002"]
+# reason = "Homonyms in different facets; decided in issue #42."
 
 # More vocabularies can be configured by adding sections with appropriate name.
 # [vocabs.othervocab]

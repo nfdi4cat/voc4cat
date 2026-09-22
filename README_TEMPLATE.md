@@ -103,6 +103,16 @@ The workflow that writes that commit (`ci-pr-commit.yml`, "Commit CI vocabulary 
 It is listed in the Actions tab under the main branch and not among the checks of the pull request, so the commit itself is the sign that it succeeded.
 If it cannot push to the pull request branch, it says so in a comment on the pull request.
 
+### When the duplicate check fails
+
+The pipeline screens the concepts a submission adds against the published vocabulary and stops the run when a label resembles one that is already in use.
+The pairs are listed in the summary of the workflow run and in its artifact, each linking to the concept it collides with.
+
+There are two ways on:
+
+- The two concepts mean the same thing. Remove the new concept from the spreadsheet and use the existing one.
+- They are different and share a label, as homonyms in different facets do. Record the pair as `accepted_similarity` in `idranges.toml`, together with the reason, see the [configuration reference](https://nfdi4cat.github.io/voc4cat-tool/reference/schemas.html). Like the ID ranges, this file is read from the main branch, so the entry has to be merged before it takes effect.
+
 ### Why a second workflow run has to be approved
 
 That commit updates the pull request branch, which starts `ci-pr.yml` a second time.
@@ -204,7 +214,7 @@ Once you have `just` installed type the command `just` at the root of the git-pr
 ```bash
 $ just
 Available recipes:
-    all            # Run all steps as in gh-actions: check xlsx, convert to SKOS, build docs, re-build xlsx
+    all            # Run all steps as in gh-actions: check xlsx, convert to SKOS, screen for duplicates, build docs, re-build xlsx
 
     [environment]
     clean          # Remove all generated files/directories

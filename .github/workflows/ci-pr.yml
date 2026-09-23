@@ -96,7 +96,7 @@ jobs:
           python -m pip install --upgrade pip setuptools wheel
 
           # Select to install a stable tagged version or main branch (in development)
-          python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@v1.1.1
+          python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@v1.2.0
           # python -m pip install git+https://github.com/nfdi4cat/voc4cat-tool.git@main
 
           # install custom pylode 2.x  (adds sorted collections,
@@ -138,6 +138,41 @@ jobs:
           # this command only: the env key above and GITHUB_ENV both refuse to
           # overwrite a GITHUB_* variable, a shell assignment does not.
           GITHUB_ACTOR="$PR_AUTHOR" voc4cat check --config _main_branch/idranges.toml --logfile outbox/voc4cat.log --ci-post _main_branch/vocabularies outbox/
+
+      - name: Run voc-assistant (screen added concepts for duplicate labels)
+        run: |
+          set -euo pipefail
+          # voc-assistant compares two files and both are named after the
+          # vocabulary, so the published copy needs a directory of its own.
+          # Its config is read from main like every other call here: an
+          # accepted_similarity entry that takes a pair out of this gate has
+          # to be reviewed and merged before it counts.
+          voc4cat transform --join --config _main_branch/idranges.toml --logfile outbox/voc4cat.log --outdir _published _main_branch/vocabularies
+          status=0
+          for voc in outbox/*.ttl; do
+            published="_published/$(basename "$voc")"
+            if [ ! -f "$published" ]; then
+              echo "::notice::$voc has no published counterpart; nothing to compare it against."
+              continue
+            fi
+            report="outbox/duplicates-new-$(basename "$voc" .ttl).md"
+            rc=0
+            # Labels only: that needs no sbert install and beats semantic
+            # scoring on spelling variants, which is what a duplicate looks
+            # like. --hide-accepted keeps the summary to the pairs that need
+            # a decision; a stale allow-list is still reported.
+            voc-assistant compare "$published" "$voc" \
+              --method levenshtein --definitions none --hide-accepted \
+              --config _main_branch/idranges.toml --logfile outbox/voc4cat.log \
+              --output "$report" || rc=$?
+            if [ "$rc" -eq 0 ]; then
+              echo "No similarities to decide on in $(basename "$voc")." >> "$GITHUB_STEP_SUMMARY"
+            else
+              status=$rc
+              if [ -f "$report" ]; then cat "$report" >> "$GITHUB_STEP_SUMMARY"; fi
+            fi
+          done
+          exit $status
 
       - name: Run voc4cat (build HTML documentation)
         run: |

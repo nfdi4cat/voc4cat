@@ -103,6 +103,16 @@ The workflow that writes that commit (`ci-pr-commit.yml`, "Commit CI vocabulary 
 It is listed in the Actions tab under the main branch and not among the checks of the pull request, so the commit itself is the sign that it succeeded.
 If it cannot push to the pull request branch, it says so in a comment on the pull request.
 
+### When the duplicate check fails
+
+The pipeline screens the concepts a submission adds against the published vocabulary and stops the run when a label resembles one that is already in use.
+The pairs are listed in the summary of the workflow run and in its artifact, each linking to the concept it collides with.
+
+There are two ways on:
+
+- The two concepts mean the same thing. Remove the new concept from the spreadsheet and use the existing one.
+- They are different and share a label, as homonyms in different facets do. Record the pair as `accepted_similarity` in `idranges.toml`, together with the reason, see the [configuration reference](https://nfdi4cat.github.io/voc4cat-tool/reference/schemas.html). Like the ID ranges, this file is read from the main branch, so the entry has to be merged before it takes effect.
+
 ### Why a second workflow run has to be approved
 
 That commit updates the pull request branch, which starts `ci-pr.yml` a second time.
@@ -151,6 +161,10 @@ This adds all commits made in the template's main branch to your new repository.
     When it cannot - a failed conversion, or a fork owned by an organization - GitHub still reports the pull request as mergeable, and merging it puts the xlsx file into the history of main.
     Both settings are needed: without the second, repository administrators can merge past the failing check, and administrators are usually the people who press the merge button.
   - Configure GitHub pages to use as source "deploy from a branch" and select the branch `gh-pages` (Settings > Pages > Build and deployment)
+  - Run the "Sync labels" workflow once (Actions > Sync labels > Run workflow).
+    It creates the labels of `.github/labels.yml`, which the issue forms and `label-vocabulary-changes.yml` reference.
+    A label that does not exist in the repository is silently dropped from an issue.
+    The workflow never deletes a label, so the default labels of GitHub that you do not want have to be removed by hand.
 - Optionally
   - Add a different license for your vocabulary.
 - Optionally provide a custom Excel template with extra sheets, see [documentation](https://nfdi4cat.github.io/voc4cat-tool/migration-to-v1.0.html#step-4-generate-v1-0-excel-template).
@@ -195,25 +209,28 @@ The justfile helps to run (almost) the same commands as are used in the GitHub w
 This makes local testing of a modified vocabulary xlsx-file easier.
 Read the header of the justfile for more info on setting up your environment.
 
-Once you have `just` installed type the command `just` at the root of the git-project to list the available commands. For version v26.8 of the template, it gives:
+Once you have `just` installed type the command `just` at the root of the git-project to list the available commands. It gives:
 
 ```bash
 $ just
 Available recipes:
-    all     # Run all steps as in gh-actions: check xlsx, convert to SKOS, build docs, re-build xlsx
+    all            # Run all steps as in gh-actions: check xlsx, convert to SKOS, screen for duplicates, build docs, re-build xlsx
 
     [environment]
-    clean   # Remove all generated files/directories
-    setup   # Run initial setup (run this first)
-    upgrade # Upgrades voc4cat-tool installation
+    clean          # Remove all generated files/directories
+    setup          # Run initial setup (run this first)
+    setup-all      # Install voc4cat-tool with semantic similarity scoring (pulls in torch)
+    upgrade        # Upgrades voc4cat-tool installation
 
     [individual steps]
-    check   # Check the *.xlsx file(s) in inbox-excel-vocabs/ for errors
-    convert # Convert the *.xlsx file(s) in inbox-excel-vocabs/ to turtle
-    docs    # Run voc4cat (build HTML documentation from ttl files)
-    join    # Join individual ttl files in vocabularies/ to one turtle file in outbox/
-    prov    # Add provenance information to all ttl files in vocabularies/
-    xlsx    # Rebuild the xlsx file from the joined ttl file.
+    check          # Check the *.xlsx file(s) in inbox-excel-vocabs/ for errors
+    convert        # Convert the *.xlsx file(s) in inbox-excel-vocabs/ to turtle
+    docs           # Run voc4cat (build HTML documentation from ttl files)
+    duplicates     # Report concepts that resemble another concept in the vocabulary (needs "just setup-all")
+    duplicates-new # Report concepts a submission adds that resemble a published concept
+    join           # Join individual ttl files in vocabularies/ to one turtle file in outbox/
+    prov           # Add provenance information to all ttl files in vocabularies/
+    xlsx           # Rebuild the xlsx file from the joined ttl file.
 ```
 
 If you have some Python knowledge, you can of course also install and use the [voc4cat](https://pypi.org/project/voc4cat/) Python package just like any other Python package, starting with `pip install voc4cat` and continuing from there.

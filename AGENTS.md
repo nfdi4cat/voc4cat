@@ -90,7 +90,7 @@ Hierarchy:
 
 Before opening the pull request:
 
-- Check for duplicates with `just duplicates`, and consider alternate labels, singular and plural forms and hyphenation.
+- Check for duplicates with `just duplicates-new`, the label screening the pipeline runs, and consider alternate labels, singular and plural forms and hyphenation.
 - Put mappings in the Mappings sheet, to established vocabularies only, using the most specific property that fits the evidence.
   Use `skos:relatedMatch` sparingly and say why.
 - For a concept that is already merged, confirm that data annotated with its IRI would still be about the same thing afterwards.
@@ -128,11 +128,12 @@ Style:
 
 ## Checking a submission locally
 
-`just setup` installs the tool, `just setup-all` adds the duplicate checker.
+`just setup` installs the tool, `just setup-all` adds semantic similarity scoring for `just duplicates`.
 
-- `just all` runs the pipeline's sequence: check the spreadsheet, convert to turtle, build the HTML documentation, rebuild the spreadsheet.
-- `just check`, `just convert`, `just docs`, `just xlsx`, `just join` and `just duplicates` run the steps individually.
-- Output goes to `outbox/`; `_main_branch/` and `_xlsx-backup/` are local scaffolding. All three are ignored by git.
+- `just all` runs the pipeline's sequence: check the spreadsheet, convert to turtle, screen added concepts for duplicate labels, build the HTML documentation, rebuild the spreadsheet.
+- `just check`, `just convert`, `just duplicates-new`, `just docs`, `just xlsx` and `just join` run the steps individually.
+- `just duplicates` screens the whole vocabulary for similar concepts, not only the added ones; it is a maintainer's audit and needs `just setup-all`.
+- Output goes to `outbox/`; `_main_branch/`, `_published/` and `_xlsx-backup/` are local scaffolding. All four are ignored by git.
 - The ID-range check is advisory locally.
   To reproduce the pipeline's strict behaviour, uncomment the `GITHUB_ACTIONS` and `GITHUB_ACTOR` exports in the `justfile`.
 

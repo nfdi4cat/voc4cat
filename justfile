@@ -25,11 +25,12 @@ setup:
   # install current voc4cat-tool version
   uv tool install voc4cat --with git+https://github.com/dalito/pyLODE.git@nfdi4cat-2.x
 
-# Install voc4cat-tool with the assistant used by maintainers (pulls in torch)
+# Install voc4cat-tool with semantic similarity scoring (pulls in torch)
 [group('environment')]
 setup-all:
   # The extra is quoted because sh expands the brackets as a glob.
-  uv tool install "voc4cat[assistant]" --with git+https://github.com/dalito/pyLODE.git@nfdi4cat-2.x
+  # "just upgrade" reinstalls without the extra, so re-run this recipe after it.
+  uv tool install "voc4cat[sbert]" --with git+https://github.com/dalito/pyLODE.git@nfdi4cat-2.x
 
 # Upgrades voc4cat-tool installation
 [group('environment')]
@@ -91,19 +92,40 @@ prov:
   # against such a history would overwrite the dates the pipeline wrote.
   voc4cat transform --prov-from-git --diff-base origin/main --modified-date "$(date +'%Y-%m-%d')" --inplace --config idranges.toml --logfile outbox/voc4cat.log vocabularies/
 
-# Report duplicate concepts (needs "just setup-all")
+# Report concepts that resemble another concept in the vocabulary (needs "just setup-all")
 [group('individual steps')]
 duplicates:
-  @test -n "$(ls outbox/*.ttl 2>/dev/null)" || { echo 'No joined vocabulary in outbox/ - run "just convert" to screen a submission or "just join" to screen the current vocabulary.'; exit 1; }
-  # voc-assistant takes one file, named after the vocabulary, and writes its
-  # report into the working directory - hence the glob and the cd. The flags
-  # work around nfdi4cat/voc4cat-tool#387, which otherwise hides identical
-  # labels whose definitions are worded differently.
-  @cd outbox && voc-assistant check --method levenshtein --threshold-defs 0 $(ls *.ttl)
-  @echo "Report written to outbox/check_report_levenshtein.md"
+  @test -n "$(ls outbox/*.ttl 2>/dev/null)" || { echo 'No vocabulary in outbox/ - run "just join" to audit the published vocabulary or "just convert" to include a submission.'; exit 1; }
+  # voc-assistant takes one file and is run per vocabulary, which matters only
+  # for a repository that sets single_vocab = false.
+  # The exit status is carried out of the loop: it is 0 while a finding is
+  # only advisory and 1 once GITHUB_ACTIONS is exported, which makes it fatal.
+  @status=0 ;\
+  for voc in outbox/*.ttl; do \
+    voc-assistant check "$voc" --config idranges.toml --logfile outbox/voc4cat.log --output "outbox/duplicates-$(basename "$voc" .ttl).md" || status=$? ;\
+  done ;\
+  exit $status
 
-# Run all steps as in gh-actions: check xlsx, convert to SKOS, build docs, re-build xlsx
-all: check convert docs xlsx
+# Report concepts a submission adds that resemble a published concept
+[group('individual steps')]
+duplicates-new:
+  @test -n "$(ls outbox/*.ttl 2>/dev/null)" || { echo 'No converted vocabulary in outbox/ - run "just convert" first.'; exit 1; }
+  # voc-assistant compares two files, both named after the vocabulary, so the
+  # published copy needs a directory of its own.
+  @rm -rf _published
+  @voc4cat transform --join --config idranges.toml --logfile outbox/voc4cat.log --outdir _published vocabularies/
+  # Labels only: that needs no sbert install and beats semantic scoring on
+  # spelling variants, which is what a duplicate label looks like.
+  @status=0 ;\
+  for voc in outbox/*.ttl; do \
+    published="_published/$(basename "$voc")" ;\
+    if [ ! -f "$published" ]; then echo "Skipping $voc: nothing published under this name yet, use 'just duplicates' for a new vocabulary." ; continue ; fi ;\
+    voc-assistant compare "$published" "$voc" --method levenshtein --definitions none --config idranges.toml --logfile outbox/voc4cat.log --output "outbox/duplicates-new-$(basename "$voc" .ttl).md" || status=$? ;\
+  done ;\
+  exit $status
+
+# Run all steps as in gh-actions: check xlsx, convert to SKOS, screen for duplicates, build docs, re-build xlsx
+all: check convert duplicates-new docs xlsx
 
 # The checks that guard a pull request are advisory when run locally and fatal
 # in gh-actions. Uncomment to get the pipeline's strict behaviour here, e.g. to
@@ -134,3 +156,4 @@ clean:
   rm -rf outbox
   rm -rf outbox_new_voc
   rm -rf _main_branch
+  rm -rf _published

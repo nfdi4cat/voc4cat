@@ -230,3 +230,15 @@ orcid = "0000-0001-5161-4801"
 ror_id = "https://ror.org/04t3en479"
 
 # Continue with as many [[vocabs.voc4cat.id_range]] sections as needed.
+
+# ==== Accepted Similarities ====
+# Concept pairs that voc-assistant reports and that the vocabulary
+# maintainers reviewed and accepted. They are listed in a separate section
+# of its report and do not fail the duplicate screening of a pull request.
+# Both keys are required. An entry naming a concept that is not in the
+# vocabulary, or matching no reported pair, is reported as unused, so the
+# list does not go stale unnoticed.
+#
+# [[vocabs.voc4cat.accepted_similarity]]
+# concepts = ["voc4cat:0000001", "voc4cat:0000002"]
+# reason = "Homonyms in different facets; decided in issue #42."

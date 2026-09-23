@@ -1,0 +1,65 @@
+# The labels of a vocabulary repository based on this template.
+#
+# Labels are repository settings and not files, so a new repository set up from
+# this template starts with the default labels of GitHub instead of these. Run
+# the "Sync labels" workflow (sync-labels.yml) once to apply them. It creates
+# and updates labels; it never deletes any.
+#
+# The names in the first group are referenced by the issue forms in
+# ISSUE_TEMPLATE/ and by label-vocabulary-changes.yml. Renaming one here means
+# renaming it there as well.
+
+# Referenced by the issue forms and workflows.
+- name: "bug"
+  color: "d73a4a"
+  description: "Something is not working as expected."
+- name: "ID request"
+  color: "0e8a16"
+  description: "Request for a range of IDs to add new content."
+- name: "vocab: addition"
+  color: "d4c5f9"
+  description: "Proposes new concepts or collections."
+- name: "vocab: deprecation"
+  color: "d4c5f9"
+  description: "Proposes deprecating a concept or collection."
+- name: "vocab: relation change"
+  color: "d4c5f9"
+  description: "Proposes changing parents, mappings or collection membership."
+- name: "vocab: term change"
+  color: "d4c5f9"
+  description: "Proposes changing a preferred label or definition."
+
+# For sorting the work. Adapt these to your project.
+- name: "dependencies"
+  color: "0366d6"
+  description: "Pull requests that update a dependency file"
+- name: "discussion"
+  color: "0000cd"
+  description: "This needs more discussion"
+- name: "documentation"
+  color: "0075ca"
+  description: "Improvements or additions to documentation"
+- name: "enhancement"
+  color: "a2eeef"
+  description: "Request for changing or improving existing features"
+- name: "github_actions"
+  color: "000000"
+  description: "Pull requests that update GitHub Actions code"
+- name: "good first issue"
+  color: "7057ff"
+  description: "Good for newcomers"
+- name: "housekeeping"
+  color: "008b8b"
+  description: "Clean-up or maintenance tasks like updates etc."
+- name: "low priority"
+  color: "f9d0c4"
+  description: "Low priority tasks."
+- name: "needs decision"
+  color: "adff2f"
+  description: "This needs to be decided by maintainers."
+- name: "needs info"
+  color: "adff2f"
+  description: "Further information is requested."
+- name: "question"
+  color: "ffd700"
+  description: "A request for help"

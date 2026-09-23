@@ -1,0 +1,22 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0000148>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0000148"^^xsd:token ;
+    skos:altLabel
+        "operation temperature range"@en ,
+        "range of operation temperature"@en ,
+        "temperature range"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000142> ;
+    skos:definition "Maximum and minimum of operation temperature range within the reactor can operate safely."@en ;
+    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower
+        <https://w3id.org/nfdi4cat/voc4cat_0000149> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000150> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000151> ;
+    skos:prefLabel "operation temperature"@en ;
+.
+

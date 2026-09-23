@@ -1,0 +1,15 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0007220>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0007220"^^xsd:token ;
+    skos:definition "The movement of electrical charges in a conductor; carried by electrons in an electronic conductor (electronic current) or by ions in an ionic conductor (ionic current). "@en ;
+    skos:historyNote "0009-0008-1278-8890 Michael Götte created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0007259> ;
+    skos:prefLabel "current"@en ;
+    skos:topConceptOf <https://w3id.org/nfdi4cat/voc4cat_> ;
+.
+

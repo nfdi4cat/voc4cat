@@ -1,0 +1,14 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0007204>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0007204"^^xsd:token ;
+    skos:altLabel "reaction class"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0007201> ;
+    skos:definition "An electrode that has a well known and stable equilibrium electrode potential."@en ;
+    skos:historyNote "0009-0008-1278-8890 Michael Götte created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:prefLabel "reference electrode"@en ;
+.

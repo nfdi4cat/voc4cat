@@ -1,0 +1,15 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0007209>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0007209"^^xsd:token ;
+    skos:altLabel "EIS"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0007206> ;
+    skos:definition "A powerful tool for examining processes occurring at electrode surfaces. A small amplitude ac (sinusoidal) excitation signal (potential or current), covering a wide range of frequencies, is applied to the system under investigation and the response (current or voltage or another signal of interest) is measured. It is routinely used in electrode kinetics and mechanism investigations, and in the characterization of batteries, fuel cells, and corrosion phenomena."@en ;
+    skos:historyNote "0009-0008-1278-8890 Michael Götte created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "electrochemical impedance spectroscopy "@en ;
+.
+

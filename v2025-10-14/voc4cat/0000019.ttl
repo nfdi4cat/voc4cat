@@ -1,0 +1,13 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0000019>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0000019"^^xsd:token ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000194> ;
+    skos:definition "A catalyst introduced to the reaction chamber in the form of a thin film. To form a thin film, a (powdered) catalyst is deposited on a substrate (e.g., glass or metal) using an appropriate deposition technique."@en ;
+    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource, 0000-0002-4041-0165 Julia Schumann generalized the definition"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:prefLabel "thin film"@en ;
+.

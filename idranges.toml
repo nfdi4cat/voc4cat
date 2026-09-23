@@ -242,3 +242,7 @@ ror_id = "https://ror.org/04t3en479"
 # [[vocabs.voc4cat.accepted_similarity]]
 # concepts = ["voc4cat:0000001", "voc4cat:0000002"]
 # reason = "Homonyms in different facets; decided in issue #42."
+
+[[vocabs.voc4cat.accepted_similarity]]
+concepts = ["voc4cat:0005014", "voc4cat:0000190"]  # material
+reason = "Homonyms in different facets."

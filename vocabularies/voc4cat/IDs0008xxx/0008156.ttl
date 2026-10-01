@@ -1,0 +1,22 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+voc4cat:0008156
+    a skos:Concept ;
+    dcterms:created "2026-10-01"^^xsd:date ;
+    dcterms:identifier "0008156"^^xsd:token ;
+    dcterms:modified "2026-10-01"^^xsd:date ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008156.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008156.ttl> ;
+    skos:altLabel
+        "combustion synthesis"@en ,
+        "solution combustion"@en ;
+    skos:broader voc4cat:0000185 ;
+    skos:changeNote "0000-0001-5161-4801 Arjun Neyyathala created this resource"@en ;
+    skos:definition "A synthesis method in which a homogeneous solution containing suitable precursors and a fuel undergoes a self-sustaining exothermic combustion reaction to form a solid product, typically as a powder."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:prefLabel "solution combustion synthesis"@en ;
+.

@@ -155,18 +155,26 @@ For such groupings, `skos:Collection` should be used.
 In Voc4Cat, `skos:Collection` may be used to create topic-wise lists or even for representing list-of-lists.
 In this topic-wise form of organization, PART-OF relations, HAS-A relations, or even looser relations (e.g., `skos:related`) dominate.
 
-Use collections to express **HAS-A relationships** and group attributes by context:
+Use collections to group concepts by a **HAS-A relationship** or another context:
 
 - **Object context** (e.g., substrate attributes, reactor parameters)
-  - Expresses: "Substrate HAS-A {width, thickness, material}"
+  - Grouping criterion: "Substrate HAS-A {width, thickness, material}"
 - **Measurement technique** (e.g., XRF-measurable attributes)
-  - Expresses: "XRF HAS-A {set of measurable attributes}"
+  - Grouping criterion: "XRF HAS-A {set of measurable attributes}"
 - **Application domain** (e.g., photocatalysis parameters)
 
 An example for such a collection in Voc4Cat is [voc4cat:0007130](https://w3id.org/nfdi4cat/voc4cat_0007130), which collects the attribute terms for Scanning Electron Microscopy (SEM) measurements.
 
 Collections can be nested with the *Parent Collection IRIs* column,
 which is preferable to repeating the members of one collection in another.
+
+A collection states membership and nothing more:
+
+- Members are not kinds of the collection. Each member keeps its place in the concept hierarchy.
+- Any relation between members comes from the hierarchy, not from the collection.
+  Members may share a parent or be unrelated.
+- A concept may belong to several collections.
+- The collection's definition states what its members share, such as the technique, application or project.
 
 ### Concept or Collection?
 
@@ -175,6 +183,7 @@ So a candidate term has to be assigned to one or the other.
 Ask what the IRI is going to be used for:
 
 - A **concept** is what data is annotated with. It denotes a thing, a kind or a property.
+  A concept placed under a parent is a kind of that parent: "every [child] is a [parent]" holds.
 - A **collection** is what is used to find the concepts that data is annotated with.
   It denotes a set of concepts and is never the value of an annotation.
 
@@ -223,7 +232,7 @@ PART-OF relations should be modeled in a **separate data model or ontology** whi
 2. **Unambiguous concept URIs**: One URI per semantic concept following IS-A logic
 3. **Simple queries**: "Find all width measurements" queries a single concept
 4. **Maintainable**: No proliferation of concepts mixing relation types
-5. **Flexible**: Collections express HAS-A relations without hierarchy pollution
+5. **Flexible**: Collections group concepts by HAS-A relations without hierarchy pollution
 6. **Extensible**: New objects or measurement techniques don't require new attribute concepts
 
 ## Voc4Cat Top-Concepts

@@ -120,18 +120,17 @@ Collections are deprecated in the same way, using the *Obsoletion reason* and *d
 
 One of the obsoletion reasons is *This concept was converted to a collection*.
 It applies to a concept that turns out to be a grouping rather than a thing;
-the test is in [Concept or Collection?](organizing-concepts.md#concept-or-collection).
+the question to ask yourself is in [Concept or Collection?](organizing-concepts.md#concept-or-collection).
 
-The conversion does not change the type of an existing IRI.
-SKOS keeps `skos:Concept` and `skos:Collection` apart,
-and a merged IRI in Voc4Cat keeps the meaning it was given.
+The conversion does not imply a change of the type of an existing IRI.
+Once merged, an IRI in Voc4Cat keeps the meaning and type it was given.
 The steps are:
 
 1. Deprecate the concept with the obsoletion reason *This concept was converted to a collection*.
 2. Create a collection with a new IRI and give it the members.
-3. Leave *dct:isReplacedBy* empty, or point it at a concept that replaces the deprecated one
-   for annotation. It never points at the collection, because a consumer cannot substitute a
-   set of concepts for the concept their data was annotated with.
+3. Leave *dct:isReplacedBy* empty. It must never point to the new collection,
+   because a consumer of the concept cannot substitute a set of concepts for the concept
+   their data were annotated with.
 
 Data that is already annotated with the deprecated concept has no automatic replacement.
 Only the data owner can decide which member of the new collection each annotation should use.

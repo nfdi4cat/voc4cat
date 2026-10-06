@@ -112,10 +112,7 @@ The pipeline sets `owl:deprecated` to `true` and records the reason as a `skos:h
 The concept keeps its IRI and stays resolvable; consumers see that it is obsolete and where to go instead.
 :::
 
-:::{caution}
-No concept in Voc4Cat carries `owl:deprecated` yet.
-If you are the first to use it, check the resulting Turtle in the pull request artifacts and report anything unexpected as an [issue](https://github.com/nfdi4cat/voc4cat/issues).
-:::
+[voc4cat:0008124](https://w3id.org/nfdi4cat/voc4cat_0008124) is a concept deprecated this way, replaced by `voc4cat:0007795`.
 
 Collections are deprecated in the same way, using the *Obsoletion reason* and *dct:isReplacedBy* columns of the **Collections** sheet.
 

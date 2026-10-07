@@ -1,0 +1,14 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0005057>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0005057"^^xsd:token ;
+    skos:broadMatch <https://www.w3.org/ns/sosa/Sample> ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000182> ;
+    skos:definition "A representative part of an entity of interest on which observations are made and which is created by time-based or spatial selection. It may have a lower dimension than the entity of interest. For example, an image may be a spatio-temporal sample of a 3D object."@en ;
+    skos:historyNote "0000-0002-5898-1820 David Linke created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:prefLabel "spatio-temporal sample"@en ;
+.

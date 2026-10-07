@@ -1,0 +1,14 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0000251>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0000251"^^xsd:token ;
+    skos:altLabel "MCR"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000185> ;
+    skos:definition "A synthesis process where three or more compounds react in the same reactor (one-pot reaction) to form a structurally complex single product that incorporates most of the atoms of the starting compounds."@en ;
+    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:prefLabel "multicomponent reaction"@en ;
+.

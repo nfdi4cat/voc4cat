@@ -1,0 +1,19 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0000202>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0000202"^^xsd:token ;
+    skos:altLabel
+        "C-H activation"@en ,
+        "C-H bond activation"@en ,
+        "carbon-hydrogen activation"@en ,
+        "carbon-hydrogen activation reaction"@en ,
+        "carbon-hydrogen bond activation"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000185> ;
+    skos:definition "A type of organic reaction in which a stable carbon-hydrogen (C-H)  bond is cleaved and replaced with a C-X bond."@en ;
+    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:prefLabel "C-H activation reaction"@en ;
+.

@@ -1,0 +1,22 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0000194>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0000194"^^xsd:token ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000190> ;
+    skos:definition "A material that initiates or increases the rate of a catalytic reaction, without it being consumed in the process."@en ;
+    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower
+        <https://w3id.org/nfdi4cat/voc4cat_0000002> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000017> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000019> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000038> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007003> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007015> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007034> ;
+    skos:prefLabel "catalyst"@en ;
+.
+

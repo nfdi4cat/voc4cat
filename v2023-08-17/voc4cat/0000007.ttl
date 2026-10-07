@@ -1,0 +1,17 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0000007>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0000007"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    rdfs:isDefinedBy <https://www.w3.org/TR/2010/NOTE-curie-20101216/> ;
+    skos:altLabel "EF"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000006> ;
+    skos:definition "The energy level in a semiconductor where the probability of finding an electron is 0.5."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "Fermi level"@en ;
+.
+

@@ -1,0 +1,20 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0005011>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0005011"^^xsd:token ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000181> ;
+    skos:definition "A collection of the resource categories used in pid4cat. Resource categories classify for which type of resource the PID is used, e.g. if the PID is for a sample or a device."@en ;
+    skos:historyNote "0000-0002-5898-1820 David Linke created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:narrower
+        <https://w3id.org/nfdi4cat/voc4cat_0005012> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005013> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005014> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005015> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005016> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005017> ;
+    skos:prefLabel "PID resource categories"@en ;
+.

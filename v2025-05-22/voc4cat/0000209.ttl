@@ -1,0 +1,13 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0000209>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0000209"^^xsd:token ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0007249> ;
+    skos:definition "A fuel cell is an electrochemical device that converts the chemical energy of a fuel, often hydrogen, and an oxidizing agent, typically oxygen, into electrical energy, with water and heat as the main byproducts."@en ;
+    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:prefLabel "fuel cell"@en ;
+.

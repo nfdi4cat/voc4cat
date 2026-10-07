@@ -1,0 +1,33 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0000187>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0000187"^^xsd:token ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000180> ;
+    skos:definition "Apparatus, devices, and instruments employed in the construction and operation of experimental setups and the analysis of catalytic reactions and materials."@en ;
+    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:narrower
+        <https://w3id.org/nfdi4cat/voc4cat_0000061> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000146> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000151> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000163> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000188> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000189> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000192> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000234> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007012> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007201> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007205> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007224> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007230> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007231> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007232> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007235> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007236> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007249> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007250> ;
+    skos:prefLabel "equipment"@en ;
+.

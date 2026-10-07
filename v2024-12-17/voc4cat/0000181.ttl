@@ -1,0 +1,34 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0000181>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0000181"^^xsd:token ;
+    rdfs:isDefinedBy <https://www.w3.org/TR/2010/NOTE-curie-20101216/> ;
+    skos:definition "Any entity that cannot be located in space-time. E.g., mathematical entities, formal semantics elements, regions within dimensional spaces, ideas, conceptual models."@en ;
+    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas and 0000-0002-5898-1820 David Linke created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower
+        <https://w3id.org/nfdi4cat/voc4cat_0000007> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000011> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000012> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000055> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000062> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000084> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000101> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000105> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000128> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000177> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000178> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000179> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007005> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007006> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007101> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007246> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007247> ;
+    skos:prefLabel "non-temporal abstract entity"@en ;
+    skos:topConceptOf <https://w3id.org/nfdi4cat/voc4cat_> ;
+.
+

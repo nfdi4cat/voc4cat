@@ -1,0 +1,28 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0000196>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0000196"^^xsd:token ;
+    skos:altLabel "catalysis domain"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000181> ;
+    skos:definition "An area of study, focusing in a specific sub-section of the general field of catalysis."@en ;
+    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:narrower
+        <https://w3id.org/nfdi4cat/voc4cat_0000001> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000204> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000207> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000208> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000216> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000217> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000232> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000233> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000246> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000294> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000296> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007001> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007002> ;
+    skos:prefLabel "catalysis research field"@en ;
+.

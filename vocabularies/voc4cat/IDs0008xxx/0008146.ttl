@@ -6,14 +6,15 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 voc4cat:0008146
     a skos:Concept ;
-    dcterms:created "2026-10-01"^^xsd:date ;
+    dcterms:created "2025-12-28"^^xsd:date ;
     dcterms:identifier "0008146"^^xsd:token ;
-    dcterms:modified "2026-10-01"^^xsd:date ;
+    dcterms:modified "2026-10-07"^^xsd:date ;
     dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008146.ttl> ;
     rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008146.ttl> ;
-    skos:broader voc4cat:0000186 ;
+    skos:altLabel "structure-directing agent"@en ;
+    skos:broader voc4cat:0000190 ;
     skos:changeNote "0000-0001-5161-4801 Arjun Neyyathala created this resource"@en ;
-    skos:definition "The molar ratio of water to the alkoxide precursor used during the hydrolysis step of a sol–gel process."@en ;
+    skos:definition "A substance used during material synthesis to direct the formation of a specific structure, framework, morphology, or pore architecture by influencing the organization of precursor species during crystallization or assembly."@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
-    skos:prefLabel "hydrolysis ratio"@en ;
+    skos:prefLabel "structure directing agent"@en ;
 .

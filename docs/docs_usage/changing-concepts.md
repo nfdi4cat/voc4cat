@@ -112,9 +112,28 @@ The pipeline sets `owl:deprecated` to `true` and records the reason as a `skos:h
 The concept keeps its IRI and stays resolvable; consumers see that it is obsolete and where to go instead.
 :::
 
-:::{caution}
-No concept in Voc4Cat carries `owl:deprecated` yet.
-If you are the first to use it, check the resulting Turtle in the pull request artifacts and report anything unexpected as an [issue](https://github.com/nfdi4cat/voc4cat/issues).
-:::
+[voc4cat:0008124](https://w3id.org/nfdi4cat/voc4cat_0008124) is a concept deprecated this way, replaced by `voc4cat:0007795`.
 
 Collections are deprecated in the same way, using the *Obsoletion reason* and *dct:isReplacedBy* columns of the **Collections** sheet.
+
+### Converting a concept to a collection
+
+One of the obsoletion reasons is *This concept was converted to a collection*.
+It applies to a concept that turns out to be a grouping rather than a thing;
+the question to ask yourself is in [Concept or Collection?](organizing-concepts.md#concept-or-collection).
+
+The conversion does not imply a change of the type of an existing IRI.
+Once merged, an IRI in Voc4Cat keeps the meaning and type it was given.
+The steps are:
+
+1. Deprecate the concept with the obsoletion reason *This concept was converted to a collection*.
+2. Create a collection with a new IRI and give it the members.
+3. Leave *dct:isReplacedBy* empty. It must never point to the new collection,
+   because a consumer of the concept cannot substitute a set of concepts for the concept
+   their data were annotated with.
+
+Data that is already annotated with the deprecated concept has no automatic replacement.
+Only the data owner can decide which member of the new collection each annotation should use.
+
+The mirror case works the same way: a collection that should have been a concept is deprecated
+with *This collection was converted to a concept*, and a new concept IRI is created.

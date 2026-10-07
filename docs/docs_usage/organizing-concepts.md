@@ -97,6 +97,81 @@ A more fundamental error is placing attribute concepts under entity concepts:
     # Wrong: "Width" is not a subtype of "Substrate"
 ```
 
+### Classifying Attributes and Their Values
+
+Not every attribute is measured.
+`0000186` (attributes) covers a quantity, whose value has a magnitude,
+and a nominal property, whose value is a name or a code.
+An attribute of the second kind records **which kind of thing** was used, not how much of it.
+Voc4Cat calls such a concept a **classifying attribute**.
+Examples are `0008119` (impregnation type), `0007114` (detector type),
+`0000016` (catalyst form).
+
+#### Recognizing a classifying attribute
+
+Ask which values the attribute can take, then ask whether those values are attributes as well.
+
+- `0008099` (dead time) takes values such as a number of microseconds,
+  and the concepts below it are again attributes. This is an ordinary attribute.
+- `0007114` (detector type) takes values such as `0000132` (flame ionization detector).
+  A detector is a piece of equipment, not an attribute. This is a classifying attribute.
+
+The head noun of the label is a hint (*type*, *mode*, *method*, *form*, *shape*).
+
+#### Where the values belong
+
+A classifying attribute and the thing it classifies are two concepts in two branches.
+The values are the narrower concepts of the thing that is classified (never of the attribute). For example:
+
+```text
+0000186 attributes
+└── 0008119 impregnation type                      the classifying attribute
+
+0000184 actions
+└── 0007028 impregnation                           the thing that is classified
+    ├── 0008132 wet impregnation                   its subtypes are the values
+    └── 0007806 incipient wetness impregnation
+```
+
+The values are not always actions. For `0007114` (detector type) they are equipment:
+
+```text
+0000186 attributes
+└── 0007114 detector type
+
+0000180 physical entity
+└── 0000187 equipment
+    └── 0000192 sensor
+        └── 0000191 detector
+            ├── 0000132 flame ionization detector
+            ├── 0000133 thermal conductivity detector
+            └── 0008083 silicon drift detector
+```
+
+Both parts are needed: the attribute is used to say that a detector type was recorded,
+and the value concept says which detector it was.
+
+#### Classifying attributes without values
+
+A classifying attribute may be added even when Voc4Cat holds neither the thing it classifies
+nor any of its values.
+`0008113` (stirrer type) is such a case, since the vocabulary has no concept for a stirrer.
+This is allowed and does not block a contribution.
+
+It is still worth asking whether the values should be added too.
+As long as they are missing, data can be annotated with the attribute,
+but its value has to be written as free text, which is what a controlled vocabulary is meant to avoid.
+
+#### Grouping concepts are not classifying attributes
+
+`0000170` (light source property) has `0000172` (light operation current)
+and `0000173` (light operation voltage) below it.
+These are attributes, so the test above is answered with yes and the concepts stay where they are.
+A concept that groups attributes is an ordinary part of the attribute hierarchy.
+
+For the label of a classifying attribute, see
+[Labels for classifying attributes](guidelines.md#labels-for-classifying-attributes).
+
 ### Number of Parents
 
 One parent is the norm.
@@ -122,6 +197,10 @@ In Voc4Cat they are the exception, and are used only where all three of the foll
 # Classification by what the quantity characterizes
 ```
 
+The second parent is a kind and not a context of use, because every concept below
+`DetectorPerformanceMeasure` is itself a measure.
+[Concept or Collection?](#concept-or-collection) gives the test.
+
 **Anti-patterns:**
 
 ```turtle
@@ -140,7 +219,9 @@ In Voc4Cat they are the exception, and are used only where all three of the foll
 If they always contain the same concepts, those classes are one class under several names.
 What then needs revision is the classification, not the number of parents on the concept.
 
-Where a second parent would express a context of use rather than a kind, use a `skos:Collection` instead.
+Where the second parent would group concepts by a context of use, such as a measurement
+technique, an application domain or a project, it is not a classification and fails condition 1.
+Use a `skos:Collection` instead.
 
 ### Using skos:Collection for HAS-A and Contextual Relations
 
@@ -149,15 +230,54 @@ For such groupings, `skos:Collection` should be used.
 In Voc4Cat, `skos:Collection` may be used to create topic-wise lists or even for representing list-of-lists.
 In this topic-wise form of organization, PART-OF relations, HAS-A relations, or even looser relations (e.g., `skos:related`) dominate.
 
-Use collections to express **HAS-A relationships** and group attributes by context:
+Use collections to group concepts by a **HAS-A relationship** or another context:
 
 - **Object context** (e.g., substrate attributes, reactor parameters)
-  - Expresses: "Substrate HAS-A {width, thickness, material}"
+  - Grouping criterion: "Substrate HAS-A {width, thickness, material}"
 - **Measurement technique** (e.g., XRF-measurable attributes)
-  - Expresses: "XRF HAS-A {set of measurable attributes}"
+  - Grouping criterion: "XRF HAS-A {set of measurable attributes}"
 - **Application domain** (e.g., photocatalysis parameters)
 
 An example for such a collection in Voc4Cat is [voc4cat:0007130](https://w3id.org/nfdi4cat/voc4cat_0007130), which collects the attribute terms for Scanning Electron Microscopy (SEM) measurements.
+
+Collections can be nested with the *Parent Collection IRIs* column,
+which is preferable to repeating the members of one collection in another.
+
+A collection states membership and nothing more:
+
+- Members are not kinds of the collection. Each member keeps its place in the concept hierarchy.
+- Any relation between members comes from the hierarchy, not from the collection.
+  Members may share a parent or be unrelated.
+- A concept may belong to several collections.
+- The collection's definition states what its members share, such as the technique, application or project.
+
+### Concept or Collection?
+
+Concepts and collections both group other concepts, and the spreadsheet offers both.
+So a candidate term has to be assigned to one or the other.
+Ask what the IRI is going to be used for:
+
+- A **concept** is what data is annotated with. It denotes a thing, a kind or a property.
+  A concept placed under a parent is a kind of that parent: "every [child] is a [parent]" holds.
+- A **collection** is what is used to find the concepts that data is annotated with.
+  It denotes a set of concepts and is never the value of an annotation.
+
+Two checks follow from this.
+
+**Are all members a kind of the candidate?**
+If every concept in the group is a kind of the candidate, then the candidate is a concept
+and the group are its narrower concepts.
+`0008100` (detector performance measure) is such a case, since every concept below it is
+itself a measure.
+If the members are held together by something other than what they are, such as the technique
+they serve, the application they belong to or the project that needs them, then the candidate
+is a collection.
+`0007130` (SEM measurement attribute) is such a case: its members are attributes of several
+kinds, held together by the measurement they describe.
+
+**Does the candidate have an honest parent?**
+A concept has to reach a top concept through IS-A relations.
+A grouping that can only be placed under a top concept by bending the IS-A criterion is a collection.
 
 ### Expressing PART-OF Relations
 
@@ -187,7 +307,7 @@ PART-OF relations should be modeled in a **separate data model or ontology** whi
 2. **Unambiguous concept URIs**: One URI per semantic concept following IS-A logic
 3. **Simple queries**: "Find all width measurements" queries a single concept
 4. **Maintainable**: No proliferation of concepts mixing relation types
-5. **Flexible**: Collections express HAS-A relations without hierarchy pollution
+5. **Flexible**: Collections group concepts by HAS-A relations without hierarchy pollution
 6. **Extensible**: New objects or measurement techniques don't require new attribute concepts
 
 ## Voc4Cat Top-Concepts

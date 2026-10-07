@@ -197,6 +197,10 @@ In Voc4Cat they are the exception, and are used only where all three of the foll
 # Classification by what the quantity characterizes
 ```
 
+The second parent is a kind and not a context of use, because every concept below
+`DetectorPerformanceMeasure` is itself a measure.
+[Concept or Collection?](#concept-or-collection) gives the test.
+
 **Anti-patterns:**
 
 ```turtle
@@ -215,7 +219,9 @@ In Voc4Cat they are the exception, and are used only where all three of the foll
 If they always contain the same concepts, those classes are one class under several names.
 What then needs revision is the classification, not the number of parents on the concept.
 
-Where a second parent would express a context of use rather than a kind, use a `skos:Collection` instead.
+Where the second parent would group concepts by a context of use, such as a measurement
+technique, an application domain or a project, it is not a classification and fails condition 1.
+Use a `skos:Collection` instead.
 
 ### Using skos:Collection for HAS-A and Contextual Relations
 
@@ -224,15 +230,54 @@ For such groupings, `skos:Collection` should be used.
 In Voc4Cat, `skos:Collection` may be used to create topic-wise lists or even for representing list-of-lists.
 In this topic-wise form of organization, PART-OF relations, HAS-A relations, or even looser relations (e.g., `skos:related`) dominate.
 
-Use collections to express **HAS-A relationships** and group attributes by context:
+Use collections to group concepts by a **HAS-A relationship** or another context:
 
 - **Object context** (e.g., substrate attributes, reactor parameters)
-  - Expresses: "Substrate HAS-A {width, thickness, material}"
+  - Grouping criterion: "Substrate HAS-A {width, thickness, material}"
 - **Measurement technique** (e.g., XRF-measurable attributes)
-  - Expresses: "XRF HAS-A {set of measurable attributes}"
+  - Grouping criterion: "XRF HAS-A {set of measurable attributes}"
 - **Application domain** (e.g., photocatalysis parameters)
 
 An example for such a collection in Voc4Cat is [voc4cat:0007130](https://w3id.org/nfdi4cat/voc4cat_0007130), which collects the attribute terms for Scanning Electron Microscopy (SEM) measurements.
+
+Collections can be nested with the *Parent Collection IRIs* column,
+which is preferable to repeating the members of one collection in another.
+
+A collection states membership and nothing more:
+
+- Members are not kinds of the collection. Each member keeps its place in the concept hierarchy.
+- Any relation between members comes from the hierarchy, not from the collection.
+  Members may share a parent or be unrelated.
+- A concept may belong to several collections.
+- The collection's definition states what its members share, such as the technique, application or project.
+
+### Concept or Collection?
+
+Concepts and collections both group other concepts, and the spreadsheet offers both.
+So a candidate term has to be assigned to one or the other.
+Ask what the IRI is going to be used for:
+
+- A **concept** is what data is annotated with. It denotes a thing, a kind or a property.
+  A concept placed under a parent is a kind of that parent: "every [child] is a [parent]" holds.
+- A **collection** is what is used to find the concepts that data is annotated with.
+  It denotes a set of concepts and is never the value of an annotation.
+
+Two checks follow from this.
+
+**Are all members a kind of the candidate?**
+If every concept in the group is a kind of the candidate, then the candidate is a concept
+and the group are its narrower concepts.
+`0008100` (detector performance measure) is such a case, since every concept below it is
+itself a measure.
+If the members are held together by something other than what they are, such as the technique
+they serve, the application they belong to or the project that needs them, then the candidate
+is a collection.
+`0007130` (SEM measurement attribute) is such a case: its members are attributes of several
+kinds, held together by the measurement they describe.
+
+**Does the candidate have an honest parent?**
+A concept has to reach a top concept through IS-A relations.
+A grouping that can only be placed under a top concept by bending the IS-A criterion is a collection.
 
 ### Expressing PART-OF Relations
 
@@ -262,7 +307,7 @@ PART-OF relations should be modeled in a **separate data model or ontology** whi
 2. **Unambiguous concept URIs**: One URI per semantic concept following IS-A logic
 3. **Simple queries**: "Find all width measurements" queries a single concept
 4. **Maintainable**: No proliferation of concepts mixing relation types
-5. **Flexible**: Collections express HAS-A relations without hierarchy pollution
+5. **Flexible**: Collections group concepts by HAS-A relations without hierarchy pollution
 6. **Extensible**: New objects or measurement techniques don't require new attribute concepts
 
 ## Voc4Cat Top-Concepts

@@ -1,0 +1,20 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+voc4cat:0007795
+    a skos:Concept ;
+    dcterms:created "2025-08-22"^^xsd:date ;
+    dcterms:identifier "0007795"^^xsd:token ;
+    dcterms:modified "2026-09-20"^^xsd:date ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007795.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007795.ttl> ;
+    skos:altLabel "coprecipitation"@en ;
+    skos:broader voc4cat:0007027 ;
+    skos:changeNote "0000-0003-4418-7455 Franziska Flecken created the resource"@en ;
+    skos:definition "A specific step in the synthesis of a solid materal which is characterised by the simultaneous precipitation of two or more precursor species from a homogeneous solution. The precipitation is typically driven by the addition of a precipitation agent that changes the solubility of the precursors."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:prefLabel "co-precipitation"@en ;
+.

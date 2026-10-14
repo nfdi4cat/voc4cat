@@ -1,0 +1,18 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0007101>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0007101"^^xsd:token ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000181> ;
+    skos:definition "Chemical reactors are often classified by their abstract concept. The reactor model type characterizes the basic physicochemical behavior of a reactor and thus creates a level of comparability between reactors. Different reactor model types are often used in simulation to simplify complex equations and physical behaviors."@en ;
+    skos:historyNote "0000-0001-5886-7860 Hendrik Borgelt created this resource, 0000-0002-5898-1820 David Linke contributed to the definition of the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower
+        <https://w3id.org/nfdi4cat/voc4cat_0007102> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007103> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007104> ;
+    skos:prefLabel "reactor model type"@en ;
+.
+

@@ -1,0 +1,337 @@
+---
+myst:
+  html_meta:
+    "description lang=en": "Learn how Voc4Cat is organised, from top concepts to its use of different hierarchy types like IS-A, HAS-A or PART-OF."
+---
+
+# Hierarchies, Relations, and Collections
+
+## The Three Fundamental Semantic Relations
+
+Knowledge organization relies on three basic types of semantic relations between concepts:
+
+1. **IS-A** (taxonomic/subsumption): A subtype relationship
+   - Example: "Width IS-A dimensional property"
+   
+2. **PART-OF** (mereological/composition): A component relationship
+   - Example: "Optical window PART-OF reactor"
+   
+3. **HAS-A** (attribution/possession): A property relationship
+   - Example: "Substrate HAS-A width"
+
+Understanding these distinctions is essential for correctly structuring vocabularies and avoiding semantic confusion.
+
+## Core Principles
+
+### Using skos:narrower / skos:broader for IS-A Relations Exclusively
+
+The SKOS standard does not constrain the type of hierarchy expressed with the relations `skos:broader` and `skos:narrower`.
+While SKOS focuses on "IS-A" relations (car is a vehicle),
+expressing part-whole relations (tire is part of car) would also be possible.
+However, **Voc4Cat is designed as a taxonomy that organizes concepts by subject**.
+Therefore, the type of relations between concepts to create hierarchies are strictly "IS-A" relationships,
+and `skos:broader` and `skos:narrower` are only used to express IS-A (but not for PART-OF or HAS-A relations).
+
+Thus, Voc4Cat focuses on categorizing things by what they are.
+Such **subject hierarchies** with **IS-A** based hierarchies correspond well with ontological modeling and reasoning as well as semantic search.
+
+**Correct usage:**
+
+```turtle
+:Width skos:broader :DimensionalProperty .
+# "Width IS-A Dimensional Property" (taxonomic)
+```
+
+**Anti-patterns:**
+
+```turtle
+:SubstrateWidth skos:broader :Substrate .
+# Wrong: Confuses HAS-A ("Substrate HAS-A width") with IS-A
+
+:OpticalWindow skos:broader :Reactor .
+# Wrong: Confuses PART-OF ("Window PART-OF reactor") with IS-A
+```
+
+### Avoid Object-Specific Attribute Concepts
+
+Each attribute concept should be placed at its most appropriate taxonomic level, based on IS-A relations,
+and should not be repeated for every object that it can describe.
+
+**Don't create object-specific attribute concepts:**
+
+```turtle
+:Width a skos:Concept ;
+    skos:broader :DimensionalProperty .
+
+:SubstrateWidth a skos:Concept ;
+    skos:broader :Width .
+    
+:FilmWidth a skos:Concept ;
+    skos:broader :Width .
+```
+
+**Problem**: Unnecessary proliferation of concepts. 
+While these technically follow IS-A logic, they create redundancy.
+The single concept `Width` can be applied to various objects (substrate, film, reactor) through data annotation metadata.
+
+**Create a generic attribute concept:**
+
+```turtle
+:Width a skos:Concept ;
+    skos:broader :DimensionalProperty .
+    # This single concept can be applied to substrates, films, reactors, etc.
+```
+
+### Avoid Mixing Entity and Attribute Hierarchies
+
+A more fundamental error is placing attribute concepts under entity concepts:
+
+**Never do this:**
+
+```turtle
+:Substrate a skos:Concept ;
+    skos:broader :PhysicalEntity .
+    
+:SubstrateWidth a skos:Concept ;
+    skos:broader :Substrate .
+    # Wrong: "Width" is not a subtype of "Substrate"
+```
+
+### Classifying Attributes and Their Values
+
+Not every attribute is measured.
+`0000186` (attributes) covers a quantity, whose value has a magnitude,
+and a nominal property, whose value is a name or a code.
+An attribute of the second kind records **which kind of thing** was used, not how much of it.
+Voc4Cat calls such a concept a **classifying attribute**.
+Examples are `0008119` (impregnation type), `0007114` (detector type),
+`0000016` (catalyst form).
+
+#### Recognizing a classifying attribute
+
+Ask which values the attribute can take, then ask whether those values are attributes as well.
+
+- `0008099` (dead time) takes values such as a number of microseconds,
+  and the concepts below it are again attributes. This is an ordinary attribute.
+- `0007114` (detector type) takes values such as `0000132` (flame ionization detector).
+  A detector is a piece of equipment, not an attribute. This is a classifying attribute.
+
+The head noun of the label is a hint (*type*, *mode*, *method*, *form*, *shape*).
+
+#### Where the values belong
+
+A classifying attribute and the thing it classifies are two concepts in two branches.
+The values are the narrower concepts of the thing that is classified (never of the attribute). For example:
+
+```text
+0000186 attributes
+└── 0008119 impregnation type                      the classifying attribute
+
+0000184 actions
+└── 0007028 impregnation                           the thing that is classified
+    ├── 0008132 wet impregnation                   its subtypes are the values
+    └── 0007806 incipient wetness impregnation
+```
+
+The values are not always actions. For `0007114` (detector type) they are equipment:
+
+```text
+0000186 attributes
+└── 0007114 detector type
+
+0000180 physical entity
+└── 0000187 equipment
+    └── 0000192 sensor
+        └── 0000191 detector
+            ├── 0000132 flame ionization detector
+            ├── 0000133 thermal conductivity detector
+            └── 0008083 silicon drift detector
+```
+
+Both parts are needed: the attribute is used to say that a detector type was recorded,
+and the value concept says which detector it was.
+
+#### Classifying attributes without values
+
+A classifying attribute may be added even when Voc4Cat holds neither the thing it classifies
+nor any of its values.
+`0008113` (stirrer type) is such a case, since the vocabulary has no concept for a stirrer.
+This is allowed and does not block a contribution.
+
+It is still worth asking whether the values should be added too.
+As long as they are missing, data can be annotated with the attribute,
+but its value has to be written as free text, which is what a controlled vocabulary is meant to avoid.
+
+#### Grouping concepts are not classifying attributes
+
+`0000170` (light source property) has `0000172` (light operation current)
+and `0000173` (light operation voltage) below it.
+These are attributes, so the test above is answered with yes and the concepts stay where they are.
+A concept that groups attributes is an ordinary part of the attribute hierarchy.
+
+For the label of a classifying attribute, see
+[Labels for classifying attributes](guidelines.md#labels-for-classifying-attributes).
+
+### Number of Parents
+
+One parent is the norm.
+A concept may be given more than one parent (a **polyhierarchy**) when it belongs to two independent classifications at the same time.
+Polyhierarchies are permitted by ANSI/NISO Z39.19-2005 (R2010) and ISO 25964-1.
+In Voc4Cat they are the exception, and are used only where all three of the following conditions hold:
+
+1. **Each parent passes the IS-A test on its own.**
+   Every instance of the concept must be an instance of every parent, checked one parent at a time.
+2. **No parent is an ancestor of another parent.**
+   `skos:broader` itself is not transitive, but `skos:broaderTransitive` already yields the ancestor,
+   so such an entry states a relation that holds anyway.
+3. **The parents come from different classifications.**
+   Parents that answer the same question about a concept do not separate anything.
+
+**Correct usage:**
+
+```turtle
+:DetectorDeadTime skos:broader :DeadTime .
+# Classification by kind of quantity
+
+:DetectorDeadTime skos:broader :DetectorPerformanceMeasure .
+# Classification by what the quantity characterizes
+```
+
+The second parent is a kind and not a context of use, because every concept below
+`DetectorPerformanceMeasure` is itself a measure.
+[Concept or Collection?](#concept-or-collection) gives the test.
+
+**Anti-patterns:**
+
+```turtle
+:DimensionalProperty skos:broader :Attribute .
+
+:Width skos:broader :DimensionalProperty ;
+    skos:broader :Attribute .
+# Wrong: Attribute is already reached through DimensionalProperty (condition 2)
+
+:Width skos:broader :SubstrateProperty ;
+    skos:broader :FilmProperty .
+# Wrong: both parents answer "which object does this describe?" (condition 3)
+```
+
+**Practical check for condition 3**: compare the members of the parent classes.
+If they always contain the same concepts, those classes are one class under several names.
+What then needs revision is the classification, not the number of parents on the concept.
+
+Where the second parent would group concepts by a context of use, such as a measurement
+technique, an application domain or a project, it is not a classification and fails condition 1.
+Use a `skos:Collection` instead.
+
+### Using skos:Collection for HAS-A and Contextual Relations
+
+For other use cases, grouping concepts by topic is valuable.
+For such groupings, `skos:Collection` should be used.
+In Voc4Cat, `skos:Collection` may be used to create topic-wise lists or even for representing list-of-lists.
+In this topic-wise form of organization, PART-OF relations, HAS-A relations, or even looser relations (e.g., `skos:related`) dominate.
+
+Use collections to group concepts by a **HAS-A relationship** or another context:
+
+- **Object context** (e.g., substrate attributes, reactor parameters)
+  - Grouping criterion: "Substrate HAS-A {width, thickness, material}"
+- **Measurement technique** (e.g., XRF-measurable attributes)
+  - Grouping criterion: "XRF HAS-A {set of measurable attributes}"
+- **Application domain** (e.g., photocatalysis parameters)
+
+An example for such a collection in Voc4Cat is [voc4cat:0007130](https://w3id.org/nfdi4cat/voc4cat_0007130), which collects the attribute terms for Scanning Electron Microscopy (SEM) measurements.
+
+Collections can be nested with the *Parent Collection IRIs* column,
+which is preferable to repeating the members of one collection in another.
+
+A collection states membership and nothing more:
+
+- Members are not kinds of the collection. Each member keeps its place in the concept hierarchy.
+- Any relation between members comes from the hierarchy, not from the collection.
+  Members may share a parent or be unrelated.
+- A concept may belong to several collections.
+- The collection's definition states what its members share, such as the technique, application or project.
+
+### Concept or Collection?
+
+Concepts and collections both group other concepts, and the spreadsheet offers both.
+So a candidate term has to be assigned to one or the other.
+Ask what the IRI is going to be used for:
+
+- A **concept** is what data is annotated with. It denotes a thing, a kind or a property.
+  A concept placed under a parent is a kind of that parent: "every [child] is a [parent]" holds.
+- A **collection** is what is used to find the concepts that data is annotated with.
+  It denotes a set of concepts and is never the value of an annotation.
+
+Two checks follow from this.
+
+**Are all members a kind of the candidate?**
+If every concept in the group is a kind of the candidate, then the candidate is a concept
+and the group are its narrower concepts.
+`0008100` (detector performance measure) is such a case, since every concept below it is
+itself a measure.
+If the members are held together by something other than what they are, such as the technique
+they serve, the application they belong to or the project that needs them, then the candidate
+is a collection.
+`0007130` (SEM measurement attribute) is such a case: its members are attributes of several
+kinds, held together by the measurement they describe.
+
+**Does the candidate have an honest parent?**
+A concept has to reach a top concept through IS-A relations.
+A grouping that can only be placed under a top concept by bending the IS-A criterion is a collection.
+
+### Expressing PART-OF Relations
+
+PART-OF relationships between physical entities should **not** be modeled in Voc4Cat.
+
+**Example of what NOT to do:**
+```turtle
+:OpticalWindowThickness skos:broader :ReactorDimensions .
+# Mixes PART-OF (optical window PART-OF reactor) with attribute hierarchy
+```
+
+PART-OF relations should be modeled in a **separate data model or ontology** which may reference concepts from Voc4Cat. Voc4Cat focuses exclusively on providing well-defined concepts that can be used as building blocks in such data models, but does not itself express compositional relationships between physical entities.
+
+### Context from Metadata, Not Vocabulary Structure
+
+**HAS-A** and **PART-OF** relationships are expressed in data annotation metadata, not in the vocabulary hierarchy.
+
+**In data annotation:**
+- Attribute concept: URI reference to `voc4cat:Width`
+- Measured object (HAS-A): Specified in metadata field (e.g., "substrate HAS-A width")
+- Object composition (PART-OF): Specified in metadata (e.g., "substrate PART-OF thin film")
+- Measurement device: Specified in metadata field
+
+### Benefits for Data Annotation
+
+1. **Semantic clarity**: Each relation type handled appropriately
+2. **Unambiguous concept URIs**: One URI per semantic concept following IS-A logic
+3. **Simple queries**: "Find all width measurements" queries a single concept
+4. **Maintainable**: No proliferation of concepts mixing relation types
+5. **Flexible**: Collections group concepts by HAS-A relations without hierarchy pollution
+6. **Extensible**: New objects or measurement techniques don't require new attribute concepts
+
+## Voc4Cat Top-Concepts
+
+The concepts included in Voc4Cat are structured under the following **Top-Concepts**:
+
+|     | **Compact URI**     | **Top-Concept**               | **Definition**                                                                                                                                                      | **Examples** | 
+| --- | ------------------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
+| 1   | voc4cat:0000180     | Physical entity               | Entity with a concrete and physical nature.                                                                                                                         | electrode, photocatalyst |
+| 2   | voc4cat:0000181     | Non-temporal abstract entity  | Any entity that cannot be located in space-time. E.g., mathematical entities, formal semantics elements, regions within dimensional spaces, ideas, models.          | valence band, Fermi level |
+| 3   | voc4cat:0000182     | Temporal abstract entity      | Anything that has a temporal dimension, whether it is an instantaneous point in time, a duration, or a sequence of events.                                          |   |
+| 3.1 | voc4cat:0000183     | Events                        | An occurrence or happening, marked by a specific point in time. Events can be observed, recorded, and may have an impact on the state of the system or entities involved. | charge transport, oxidation |
+| 3.2 | voc4cat:0000184     | Actions                       | Temporal entities that have a duration and occur at specific points in time.                                                                                        | purging, calcination |
+| 3.3 | voc4cat:0000185     | Processes                     | A series of temporal entities, like actions, events, changes, or functions that are not isolated but rather a connected sequence of activities. Processes often involve the transformation of inputs into outputs and can be conceptualized as workflows. | hydrothermal synthesis, catalyst deactivation |
+| 4   | voc4cat:0000186     | Attributes                    | A property that an entity has rather than is: a quantity, whose value has a magnitude, or a nominal property, whose value is a name or a code. | reaction rate, sample mass, catalyst form, stirrer type |
+
+These top concepts are similar to those in top-level ontologies (BFO, SIO, DOLCE), to what is proposed in ANSI/NISO Z39.19-2005 (R2010), or what was proposed as minimal set of terms for a re-organization of AgroVoc.
+
+## Summary: Relation Types and Their Modeling
+
+| Relation Type | Modeling Approach                     | Example                                      |
+| ------------- | ------------------------------------- | -------------------------------------------- |
+| **IS-A**      | `skos:broader`/`skos:narrower`        | Width IS-A dimensional property              |
+| **HAS-A**     | `skos:Collection` membership          | Substrate HAS-A {width, thickness}           |
+| **PART-OF**   | External to attribute hierarchy       | Window PART-OF reactor                       |
+
+**Key principle**: Keep the attribute vocabulary hierarchy pure by using `skos:broader`/`skos:narrower` exclusively for IS-A (taxonomic) relationships.

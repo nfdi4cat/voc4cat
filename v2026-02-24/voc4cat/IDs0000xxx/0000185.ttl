@@ -1,0 +1,58 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+voc4cat:0000185
+    a skos:Concept ;
+    dcterms:created "2024-08-21"^^xsd:date ;
+    dcterms:identifier "0000185"^^xsd:token ;
+    dcterms:modified "2026-02-18"^^xsd:date ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000185.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000185.ttl> ;
+    skos:broader voc4cat:0000182 ;
+    skos:changeNote "0000-0002-6242-2167 Nikolaos G. Moustakas and 0000-0002-5898-1820 David Linke created the resource"@en ;
+    skos:definition "A series of temporal entities, like actions, events, changes, or functions that are not isolated but rather a connected sequence of activities. Processes often involve the transformation of inputs into outputs and can be conceptualized as workflows."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:narrower
+        voc4cat:0000014 ,
+        voc4cat:0000020 ,
+        voc4cat:0000045 ,
+        voc4cat:0000049 ,
+        voc4cat:0000066 ,
+        voc4cat:0000087 ,
+        voc4cat:0000099 ,
+        voc4cat:0000100 ,
+        voc4cat:0000123 ,
+        voc4cat:0000130 ,
+        voc4cat:0000137 ,
+        voc4cat:0000141 ,
+        voc4cat:0000202 ,
+        voc4cat:0000205 ,
+        voc4cat:0000206 ,
+        voc4cat:0000221 ,
+        voc4cat:0000227 ,
+        voc4cat:0000239 ,
+        voc4cat:0000248 ,
+        voc4cat:0000249 ,
+        voc4cat:0000250 ,
+        voc4cat:0000251 ,
+        voc4cat:0000256 ,
+        voc4cat:0000262 ,
+        voc4cat:0000265 ,
+        voc4cat:0000266 ,
+        voc4cat:0000269 ,
+        voc4cat:0000273 ,
+        voc4cat:0000281 ,
+        voc4cat:0000285 ,
+        voc4cat:0000291 ,
+        voc4cat:0000304 ,
+        voc4cat:0007029 ,
+        voc4cat:0007031 ,
+        voc4cat:0007206 ,
+        voc4cat:0007238 ,
+        voc4cat:0008101 ,
+        voc4cat:0008102 ;
+    skos:prefLabel "processes"@en ;
+.

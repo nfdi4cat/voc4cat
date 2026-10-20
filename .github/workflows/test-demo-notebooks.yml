@@ -39,7 +39,7 @@ jobs:
           python-version: ${{ matrix.python-version }}
 
       - name: Install dependencies
-        run: pip install -r demo/requirements.in
+        run: pip install -r demo/requirements.txt
 
       - name: Execute notebook
         run: >

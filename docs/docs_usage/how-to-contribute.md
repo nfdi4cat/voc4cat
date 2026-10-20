@@ -495,6 +495,7 @@ Here are some points to check before you finally submit the PR:
 - Vocabulary file is `inbox-excel-vocabs/voc4cat.xlsx` (name and path unchanged).
 - IDs of added concepts are within my allocated range (checked automatically).
 - Each concept has prefLabel, definition, and a broader chain to a top concept.
+- The noun that opens each definition agrees with the branch its parent chain reaches, e.g. a technique is not placed under processes ([Technique or Process?](organizing-concepts.md#technique-or-process)).
 - Contribution is focused/small enough for review (split if needed).
 - No concepts or collections removed (removals are rejected).
 - Edits to existing concepts leave their meaning unchanged ([what may be changed](changing-concepts.md)).

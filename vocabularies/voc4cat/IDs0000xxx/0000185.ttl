@@ -8,12 +8,12 @@ voc4cat:0000185
     a skos:Concept ;
     dcterms:created "2024-08-21"^^xsd:date ;
     dcterms:identifier "0000185"^^xsd:token ;
-    dcterms:modified "2026-04-23"^^xsd:date ;
+    dcterms:modified "2026-10-20"^^xsd:date ;
     dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000185.ttl> ;
     rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000185.ttl> ;
     skos:broader voc4cat:0000182 ;
     skos:changeNote "0000-0002-6242-2167 Nikolaos G. Moustakas and 0000-0002-5898-1820 David Linke created the resource"@en ;
-    skos:definition "A series of temporal entities, like actions, events, changes, or functions that are not isolated but rather a connected sequence of activities. Processes often involve the transformation of inputs into outputs and can be conceptualized as workflows."@en ;
+    skos:definition "A connected sequence of actions, events, changes or functions that happens over a period of time and involves participants such as substances, samples, instruments or people. Processes often involve the transformation of inputs into outputs and can be conceptualized as workflows."@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:narrower
         voc4cat:0000014 ,

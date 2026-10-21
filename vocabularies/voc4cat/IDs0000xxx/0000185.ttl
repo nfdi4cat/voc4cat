@@ -8,7 +8,7 @@ voc4cat:0000185
     a skos:Concept ;
     dcterms:created "2024-08-21"^^xsd:date ;
     dcterms:identifier "0000185"^^xsd:token ;
-    dcterms:modified "2026-04-23"^^xsd:date ;
+    dcterms:modified "2026-10-20"^^xsd:date ;
     dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000185.ttl> ;
     rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000185.ttl> ;
     skos:broader voc4cat:0000182 ;
@@ -16,18 +16,14 @@ voc4cat:0000185
     skos:definition "A series of temporal entities, like actions, events, changes, or functions that are not isolated but rather a connected sequence of activities. Processes often involve the transformation of inputs into outputs and can be conceptualized as workflows."@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:narrower
-        voc4cat:0000014 ,
-        voc4cat:0000020 ,
+        voc4cat:0000015 ,
         voc4cat:0000045 ,
         voc4cat:0000049 ,
-        voc4cat:0000066 ,
+        voc4cat:0000081 ,
         voc4cat:0000087 ,
         voc4cat:0000099 ,
         voc4cat:0000100 ,
         voc4cat:0000123 ,
-        voc4cat:0000130 ,
-        voc4cat:0000137 ,
-        voc4cat:0000141 ,
         voc4cat:0000202 ,
         voc4cat:0000205 ,
         voc4cat:0000206 ,
@@ -50,11 +46,14 @@ voc4cat:0000185
         voc4cat:0000304 ,
         voc4cat:0007029 ,
         voc4cat:0007031 ,
-        voc4cat:0007206 ,
         voc4cat:0007238 ,
+        voc4cat:0007807 ,
+        voc4cat:0007808 ,
         voc4cat:0008101 ,
         voc4cat:0008102 ,
         voc4cat:0008129 ,
-        voc4cat:0008130 ;
+        voc4cat:0008130 ,
+        voc4cat:0008215 ,
+        voc4cat:0008216 ;
     skos:prefLabel "processes"@en ;
 .

@@ -8,12 +8,12 @@ voc4cat:0000078
     a skos:Concept ;
     dcterms:created "2023-08-11"^^xsd:date ;
     dcterms:identifier "0000078"^^xsd:token ;
-    dcterms:modified "2026-02-18"^^xsd:date ;
+    dcterms:modified "2026-10-20"^^xsd:date ;
     dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000078.ttl> ;
     rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000078.ttl> ;
     skos:altLabel "TEM"@en ;
     skos:broadMatch <http://purl.org/pan-science/PaNET/PaNET01145> ;
-    skos:broader voc4cat:0000066 ;
+    skos:broader voc4cat:0000288 ;
     skos:changeNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
     skos:definition "Transmission electron microscopy is a technique that produces high-resolution images if the internal structure of a sample by using a beam of electrons to bombard the thin sample and measuring the intensity of the scattered transmitted electrons."@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;

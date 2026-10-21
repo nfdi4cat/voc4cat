@@ -8,10 +8,10 @@ voc4cat:0007206
     a skos:Concept ;
     dcterms:created "2024-02-28"^^xsd:date ;
     dcterms:identifier "0007206"^^xsd:token ;
-    dcterms:modified "2026-02-18"^^xsd:date ;
+    dcterms:modified "2026-10-20"^^xsd:date ;
     dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007206.ttl> ;
     rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007206.ttl> ;
-    skos:broader voc4cat:0000185 ;
+    skos:broader voc4cat:0008201 ;
     skos:changeNote "0009-0008-1278-8890 Michael Götte created the resource"@en ;
     skos:definition "An electroanalytical technique based on the measurement of the electromotive force of an electrochemical cell comprised of a measuring and a reference electrode."@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;

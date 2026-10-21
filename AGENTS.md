@@ -117,7 +117,7 @@ Process:
   Once the conversion succeeds, `ci-pr-commit.yml` strips `inbox-excel-vocabs/*.xlsx` from every commit and rewrites the branch,
   so a contributor with a local clone needs `git fetch origin && git reset --hard origin/<branch>` rather than `git pull`.
   Review the generated turtle and the run artifacts, not a file that is no longer in the branch.
-- "No spreadsheets in the branch" stays red when the conversion failed, or when the fork is owned by an organization and the bot cannot push to it.
+- "xlsx file removed by CI" stays red when the conversion failed, or when the fork is owned by an organization and the bot cannot push to it.
   The second case is a GitHub limitation rather than the contributor's doing: the pull request has to be resubmitted from a fork in a personal account.
 - For a failing check, give one short hint per failing job and name the job. Do not paste logs.
 

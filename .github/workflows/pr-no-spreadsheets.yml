@@ -14,7 +14,7 @@
 # ci-pr-commit.yml would never run, the spreadsheet would never be removed and
 # the check could never turn green.
 
-name: No spreadsheets in the branch
+name: xlsx file cleanup
 on:
   pull_request:
     branches:
@@ -31,7 +31,7 @@ jobs:
   no_spreadsheet_in_history:
     # This name is what branch protection makes a required check. Renaming the
     # job silently stops the protection from applying.
-    name: No spreadsheet in the branch history
+    name: xlsx file removed by CI
     runs-on: ubuntu-latest
     timeout-minutes: 5
 

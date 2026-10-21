@@ -12,7 +12,7 @@ voc4cat:0000181
     dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000181.ttl> ;
     rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000181.ttl> ;
     skos:changeNote "0000-0002-6242-2167 Nikolaos G. Moustakas and 0000-0002-5898-1820 David Linke created the resource"@en ;
-    skos:definition "Any entity that cannot be located in space-time. E.g., mathematical entities, formal semantics elements, regions within dimensional spaces, ideas, conceptual models."@en ;
+    skos:definition "An entity that cannot be located in space-time: it does not happen and has no duration. Examples are mathematical entities, formal semantics elements, regions within dimensional spaces, ideas, conceptual models, techniques and methods."@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:narrower
         voc4cat:0000007 ,

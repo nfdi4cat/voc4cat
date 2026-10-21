@@ -1,0 +1,17 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0000105>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0000105"^^xsd:token ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000101> ;
+    skos:definition "Electron donors or hole scavengers used to reduce the recombination tendency of electrons and holes. Sacrificial reagents are used in photocatalysis to study an oxidation or reduction reaction separately."@en ;
+    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower
+        <https://w3id.org/nfdi4cat/voc4cat_0000106> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000107> ;
+    skos:prefLabel "sacrificial reagant"@en ;
+.
+

@@ -1,0 +1,22 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+voc4cat:0007041
+    a skos:Concept ;
+    dcterms:created "2025-01-07"^^xsd:date ;
+    dcterms:identifier "0007041"^^xsd:token ;
+    dcterms:modified "2026-02-18"^^xsd:date ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007041.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007041.ttl> ;
+    skos:altLabel "elementary step"@en ;
+    skos:broader voc4cat:0000181 ;
+    skos:changeNote """2025-12-30 Complete rewrite of definition folowing OBO-style genus-differentia by gh:dalito
+2025-01-20 Concept created by gh:chumannj"""@en ;
+    skos:closeMatch <https://doi.org/10.1351/goldbook.E02035> ;
+    skos:definition "A chemical process that proceeds through a single transition state in one molecular event, encompassing bond formation, bond cleavage, adsorption, desorption, or surface migration."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:prefLabel "elementary reaction"@en ;
+.

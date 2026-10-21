@@ -1,0 +1,13 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0007238>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0007238"^^xsd:token ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000185> ;
+    skos:definition "Graphical representation of the results of a voltammetric measurement."@en ;
+    skos:historyNote "0009-0008-1278-8890 Michael Götte created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:prefLabel "voltammogramm"@en ;
+.

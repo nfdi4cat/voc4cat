@@ -1,0 +1,21 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0000046>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0000046"^^xsd:token ;
+    skos:altLabel
+        "manuscripts"@en ,
+        "papers"@en ,
+        "publications"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000045> ;
+    skos:definition "Thorough search of available literature on the research topic of interest using online research platforms (e.g, Scopus, Google Scholar, Web of Science, Research Gate etc.) and / or libraries. Relevant literature can be found in the form of publications, books, abstracts and conference presentations. "@en ;
+    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower
+        <https://w3id.org/nfdi4cat/voc4cat_0000047> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000048> ;
+    skos:prefLabel "literature research"@en ;
+.
+

@@ -1,0 +1,5 @@
+user-agent: *
+disallow: /_sources/
+
+sitemap: https://nfdi4cat.github.io/voc4cat/sitemap.xml
+sitemap: https://nfdi4cat.github.io/voc4cat/_static/sitemap_vocab.xml

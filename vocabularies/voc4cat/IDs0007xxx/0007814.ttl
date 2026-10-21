@@ -8,14 +8,14 @@ voc4cat:0007814
     a skos:Concept ;
     dcterms:created "2025-08-22"^^xsd:date ;
     dcterms:identifier "0007814"^^xsd:token ;
-    dcterms:modified "2026-02-18"^^xsd:date ;
+    dcterms:modified "2026-10-21"^^xsd:date ;
     dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007814.ttl> ;
     rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007814.ttl> ;
     skos:altLabel
         "gas phase characterization"@en ,
         "gas-phase analysis"@en ,
         "gas-phase characterization"@en ;
-    skos:broader voc4cat:0000129 ;
+    skos:broader voc4cat:0000185 ;
     skos:changeNote "0000-0003-4418-7455 Franziska Flecken created the resource"@en ;
     skos:definition "Analysis of the gaseous sample from a catalytic test."@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;

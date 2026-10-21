@@ -279,6 +279,35 @@ kinds, held together by the measurement they describe.
 A concept has to reach a top concept through IS-A relations.
 A grouping that can only be placed under a top concept by bending the IS-A criterion is a collection.
 
+### Technique or Process?
+
+A technique and the act of applying it often share a name.
+"BET surface area analysis" can mean the method or one particular measurement on one sample.
+The two readings belong in different branches, so the definition has to commit to one of them, and the parent follows from it.
+
+Ask whether the concept happens:
+
+- A **process**, **action** or **event** (below `0000182`, temporal abstract entity) happens.
+  It has a start and an end and involves particular participants such as a sample, an instrument or an operator.
+  Two runs on two samples are two occurrences.
+  `0000081` (Brunauer-Emmett-Teller surface area analysis), defined as "The study of physical adsorption of gas molecules on a solid surface…", is such a case.
+- A **technique** or **method** (below `0000181`, non-temporal abstract entity) is a way of doing something.
+  It does not happen, has no duration and stays the same however often it is applied.
+  `0000077` (X-ray diffraction), defined as "A technique which analyses the diffraction pattern…", is such a case.
+
+The noun that opens the definition names the kind of thing, and the parent chain has to agree with it:
+
+| Definition opens with | Parent chain reaches |
+| --------------------- | -------------------- |
+| a technique or method: "A technique …", "A method …" | `0000181` (non-temporal abstract entity) |
+| an activity: "The study of …", "Characterization during …", "An experiment …" | `0000182` (temporal abstract entity) |
+
+The label does not decide the case.
+A label ending in *analysis* is used for both: `0000081` (Brunauer-Emmett-Teller surface area analysis) is an activity,
+while `0000083` (Mott-Schottky analysis) is defined as a method.
+
+Where both readings are needed, they are two concepts with two IRIs: the technique below `0000181` and the activity below `0000182`.
+
 ### Expressing PART-OF Relations
 
 PART-OF relationships between physical entities should **not** be modeled in Voc4Cat.

@@ -86,6 +86,8 @@ Hierarchy:
 - One parent is the norm.
   Add a second only when each parent passes the IS-A test on its own, neither is an ancestor of the other, and the two come from different classifications.
 - Never place an attribute under the entity it describes. One generic attribute (width) beats object-specific ones (substrate width, film width).
+- A technique or method goes below `voc4cat:0000181`, the act of performing it below `voc4cat:0000182`.
+  The noun that opens the definition decides which, and the parent chain has to agree with it; a label ending in "analysis" decides nothing.
 - Grouping by context or by HAS-A belongs in a `skos:Collection`. PART-OF is not modelled in Voc4Cat at all.
 
 Before opening the pull request:
@@ -103,6 +105,7 @@ Content, in order of importance:
 
 - every new concept classified, with a broader chain that reaches a top concept
 - IS-A-only hierarchy: attributes not parked under entities, collections used for contextual grouping
+- each definition's opening noun agreeing with its branch: techniques below `0000181`, activities below `0000182`
 - no duplicate of an existing concept
 - label and definition following the guidelines
 - edits to existing concepts leaving their meaning unchanged

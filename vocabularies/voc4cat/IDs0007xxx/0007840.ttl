@@ -12,7 +12,7 @@ voc4cat:0007840
     dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007840.ttl> ;
     rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007840.ttl> ;
     skos:broader voc4cat:0000184 ;
-    skos:changeNote "0000-0003-4418-7455 Franziska Flecken created the resource"@en ;
+    skos:changeNote "0000-0003-4418-7455 Franziska Flecken created the resource, 0000-0002-6242-2167 Nikolaos G. Moustakas edited the definition"@en ;
     skos:definition "The dissolution or dispersion of a precursor in a solution."@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:prefLabel "solvation"@en ;

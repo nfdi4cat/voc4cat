@@ -470,4 +470,4 @@ Therefore, the less specific **`skos:closeMatch` should be used.**<BR> *Source o
 
 3. Seppälä, S.; Ruttenberg, A.; Smith, B. “Guidelines for writing
     definitions in ontologies”, Ciência da Informação 46(1), 73–88 (2017).
-    DOI: 10.18225/ci.inf.v46i1.4015
+    DOI: 10.18225/ci.inf.v46i1

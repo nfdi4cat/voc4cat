@@ -366,7 +366,9 @@ Collections group concepts for various purposes.
 
 3. **Preferred Label** *(required)*: A one-line title for the collection.
 
-4. **Definition** *(required)*: A description of the collection.
+4. **Definition** *(required)*: What the members of the collection
+    share, such as a technique or a subdomain
+    (see [collections](organizing-concepts.md#using-skoscollection-for-has-a-and-contextual-relations)).
 
 5. **Parent Collection IRIs** *(optional)*: IRIs of parent collections
     (one per line), for nesting collections hierarchically.

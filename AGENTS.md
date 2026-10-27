@@ -74,7 +74,7 @@ Definitions:
 - One sentence where possible, starting with a capital and ending with a full stop.
 - Open with the genus, the preferred label of the parent, then state what distinguishes the concept from its siblings.
   Do not open with the term being defined, and leave out features that only some instances have ("often", "typically").
-- Not circular, negative only where the negative feature is essential, and implicitly distinct from neighbouring concepts.
+- Not circular, negative only where the negative feature is essential or distinguishes it from a sibling, and implicitly distinct from neighbouring concepts.
 
 Hierarchy:
 

@@ -95,13 +95,13 @@ considerations should be followed when adding definitions:
     the concept is, usually the preferred label of its parent concept.
     The rest of the definition states what distinguishes the concept from
     other concepts of the same kind.<sup>\[3\]</sup>
-    Example: catalytic reactor is defined as “A chemical reactor in which
+    Example: *catalytic reactor* is defined as “A chemical reactor in which
     the reaction is carried out in the presence of a catalyst.”
     What the thing does may be one of the distinguishing features,
     but it does not replace the genus.
-    Example: galvanic cell is defined as “An electrochemical cell that
+    Example: *galvanic cell* is defined as “An electrochemical cell that
     converts chemical energy into electrical energy.”, which distinguishes
-    it from electrolytic cell by its function.
+    it from *electrolytic cell* by its function.
     The genus is written in the singular and without fillers such as
     “a type of” or “a kind of”: “A gas chromatography detector that …”,
     not “A type of gas chromatography detector that …”.
@@ -127,13 +127,13 @@ considerations should be followed when adding definitions:
     A definition is circular when it explains the concept only by its
     own label, an alternate label or a word derived from them, as in
     “Initial frequency in an electrochemical impedance spectroscopy.”
-    for initial frequency. Using an established term with a definition
-    of its own is not circular: oxidation may be defined through
-    oxidation state.
+    for *initial frequency*. Using an established term with a definition
+    of its own is not circular: *oxidation* may be defined through
+    *oxidation state*.
 
 7. A definition states what a concept is, not only what it is not.
     A negative feature is acceptable when it is essential to the concept,
-    as in catalyst: “A material that initiates or increases the rate of
+    as in *catalyst*: “A material that initiates or increases the rate of
     a catalytic reaction, without it being consumed in the process.”,
     or when it distinguishes the concept from a closely related one.
 

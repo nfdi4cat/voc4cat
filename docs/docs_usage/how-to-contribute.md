@@ -70,7 +70,7 @@ While on the Voc4Cat repository page <https://github.com/nfdi4cat/voc4cat>,
 
 - click on *Issues* (top left corner), then
 - click on *New issue* (green button on the top right corner)
-- finally click on the “*Request a range of IDs*” option.
+- finally click on the "*Request a range of IDs*" option.
 
 This opens a dialog window:
 
@@ -212,39 +212,39 @@ The columns are:
 
 2. **Language Code** *(required)*: Two or three letter language code
     according to ISO 639-2 or 639-3. Applies to both *Preferred Label*
-    and *Definition*. If no language code is given, “en” is assumed
+    and *Definition*. If no language code is given, "en" is assumed
     (English). Translations of a concept into different languages use
-    the same IRI but occupy different rows. For example, “heterogeneous
-    catalysis” has English and German translations sharing the same
+    the same IRI but occupy different rows. For example, "heterogeneous
+    catalysis" has English and German translations sharing the same
     concept IRI (voc4cat:0007001):
 
 <table>
 <colgroup>
-<col style=”width: 22%” />
-<col style=”width: 12%” />
-<col style=”width: 20%” />
-<col style=”width: 46%” />
+<col style="width: 22%" />
+<col style="width: 12%" />
+<col style="width: 20%" />
+<col style="width: 46%" />
 </colgroup>
 <tbody>
 <tr>
-<td style=”text-align: center;”><strong>Concept IRI</strong></td>
-<td style=”text-align: center;”><strong>Language Code</strong></td>
-<td style=”text-align: center;”><strong>Preferred Label</strong></td>
-<td style=”text-align: center;”><strong>Definition</strong></td>
+<td style="text-align: center;"><strong>Concept IRI</strong></td>
+<td style="text-align: center;"><strong>Language Code</strong></td>
+<td style="text-align: center;"><strong>Preferred Label</strong></td>
+<td style="text-align: center;"><strong>Definition</strong></td>
 </tr>
 <tr>
-<td style=”text-align: center;”>voc4cat:0007001</td>
-<td style=”text-align: center;”>en</td>
-<td style=”text-align: center;”>heterogeneous catalysis</td>
-<td style=”text-align: left;”>A process during which a chemical reaction
+<td style="text-align: center;">voc4cat:0007001</td>
+<td style="text-align: center;">en</td>
+<td style="text-align: center;">heterogeneous catalysis</td>
+<td style="text-align: left;">A process during which a chemical reaction
 is accelerated by the presence of a catalyst in a different phase than
 the reactant. The reaction generally proceeds at the interface.</td>
 </tr>
 <tr>
-<td style=”text-align: center;”>voc4cat:0007001</td>
-<td style=”text-align: center;”>de</td>
-<td style=”text-align: center;”>heterogene Katalyse</td>
-<td style=”text-align: left;”>Ein Prozess, bei dem eine chemische
+<td style="text-align: center;">voc4cat:0007001</td>
+<td style="text-align: center;">de</td>
+<td style="text-align: center;">heterogene Katalyse</td>
+<td style="text-align: left;">Ein Prozess, bei dem eine chemische
 Reaktion durch das Vorhandensein eines Katalysators in einer anderen
 Phase als der Reaktant beschleunigt wird. Die Reaktion findet im
 Allgemeinen an der Grenzfläche statt.</td>
@@ -262,7 +262,7 @@ Allgemeinen an der Grenzfläche statt.</td>
     See the [rules for definitions](guidelines.md#definitions).
 
 5. **Alternate Labels** *(optional)*: Any other names for this *Concept*,
-    separated by vertical bar "|". To include a vertical bar in a label, escape it with “\\” like in: “one\\|two”.
+    separated by vertical bar "|". To include a vertical bar in a label, escape it with "\\" like in: "one\\|two".
 
 6. **Parent IRIs** *(optional)*: IRIs of parent concepts, one per line.
     In Voc4Cat this expresses an **IS-A** relation and nothing else: the
@@ -311,7 +311,7 @@ Allgemeinen an der Grenzfläche statt.</td>
     is permitted by their license.
 
 14. **Source Vocab License** *(optional)*: The license of the source
-    vocabulary (`dct:license`), e.g. “CC BY 4.0”.
+    vocabulary (`dct:license`), e.g. "CC BY 4.0".
 
 15. **Source Vocab Rights Holder** *(optional)*: The rights holder of
     the source vocabulary (`dct:rightsHolder`).
@@ -336,8 +336,8 @@ Voc4Cat tracks provenance at multiple levels:
   history. This column is read-only.
 
 - **Change notes** (Change Note column): Use this to document the
-  rationale for changes, e.g. “definition aligned with IUPAC Gold Book
-  entry for catalysis”.
+  rationale for changes, e.g. "definition aligned with IUPAC Gold Book
+  entry for catalysis".
 
 - **Source citation** (Source Vocab IRI or URL, Source Vocab License,
   Source Vocab Rights Holder): When borrowing a definition from another
@@ -366,13 +366,15 @@ Collections group concepts for various purposes.
 
 3. **Preferred Label** *(required)*: A one-line title for the collection.
 
-4. **Definition** *(required)*: A description of the collection.
+4. **Definition** *(required)*: What the members of the collection
+    share, such as a technique or a subdomain
+    (see [collections](organizing-concepts.md#using-skoscollection-for-has-a-and-contextual-relations)).
 
 5. **Parent Collection IRIs** *(optional)*: IRIs of parent collections
     (one per line), for nesting collections hierarchically.
 
-6. **Ordered?** *(optional)*: Set to “Yes” if the collection members
-    have a meaningful order. Default is “No”.
+6. **Ordered?** *(optional)*: Set to "Yes" if the collection members
+    have a meaningful order. Default is "No".
 
 7. **Provenance** *(read-only)*: Auto-populated by CI.
 
@@ -385,9 +387,9 @@ Collections group concepts for various purposes.
 11. **dct:isReplacedBy** *(optional)*: IRI of the replacement collection.
 
 Note that collection membership is assigned from the **Concepts** sheet
-(via the “Member of collection(s)” column), not from the Collections
+(via the "Member of collection(s)" column), not from the Collections
 sheet. This is a change from older template versions where membership
-was defined via a “Member IRIs” column in Collections.
+was defined via a "Member IRIs" column in Collections.
 
 ##### Mappings sheet
 
@@ -427,7 +429,7 @@ These guidelines for suggesting, adding, and editing content to Voc4Cat guarante
 #### Step 7 – Create & iterate on the Pull Request
 
 After you finished the additions and edits in the Voc4Cat xlsx file,
-the update file can be submitted. This happens in a “*Pull request*”.
+the update file can be submitted. This happens in a "*Pull request*".
 
 Make sure that you are in your fork .
 
@@ -460,7 +462,7 @@ git push
 :sync: GitHub Web UI
 
 - Open the GitHub page of your fork `https://github.com/<your_username>/voc4cat` and - if you already created a branch for your contribution - switch to the branch.
-- Open the “inbox-excel-vocabs” folder
+- Open the "inbox-excel-vocabs" folder
 - Click click on the "*Add file*" then "*Upload files*" to open a file submission page.
 - Upload the voc4cat.xlsx file (the file name must be exactly this).
 - Commit the uploaded file making sure that you **commit to your feature-branch** (not `main`). 

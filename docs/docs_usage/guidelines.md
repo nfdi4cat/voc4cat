@@ -91,9 +91,25 @@ A formal explanation of the meaning of a concept. The following
 considerations should be followed when adding definitions:
 
 1. A good definition explains what a concept is, not what it does.
+    It opens with the genus: a broader term that names the kind of thing
+    the concept is, usually the preferred label of its parent concept.
+    The rest of the definition states what distinguishes the concept from
+    other concepts of the same kind.<sup>\[3\]</sup>
+    Example: *catalytic reactor* is defined as "A chemical reactor in which
+    the reaction is carried out in the presence of a catalyst."
+    What the thing does may be one of the distinguishing features,
+    but it does not replace the genus.
+    Example: *galvanic cell* is defined as "An electrochemical cell that
+    converts chemical energy into electrical energy.", which distinguishes
+    it from *electrolytic cell* by its function.
+    The genus is written in the singular and without fillers such as
+    "a type of" or "a kind of": "A gas chromatography detector that …",
+    not "A type of gas chromatography detector that …".
 
-2. Only one definition per language is mandatory. The default language
-    for the definitions is English.
+2. A concept has exactly one definition per language. The default
+    language for the definitions is English. Definitions in other
+    languages need not be literal translations, but they must have
+    the same meaning as the English definition.
 
 3. A definition is a sentence that requires orthographical rules, such
     as starting a sentence with a capital letter and ending a sentence
@@ -103,12 +119,30 @@ considerations should be followed when adding definitions:
 4. A definition should implicitly explain the difference from closely
     related concepts.
 
-5. Circular, imprecise, or negative definitions should be avoided.
+5. A definition states only features that every instance of the concept has.
+    Words such as "often", "typically" or "usually" mark a feature that
+    some instances lack; such a feature is left out of the definition.
 
-6. A definition of a concept should not start with mentioning the
-    concept that it defines.
+6. Circular and imprecise definitions should be avoided.
+    A definition is circular when it explains the concept only by its
+    own label, an alternate label or a word derived from them, as in
+    "Initial frequency in an electrochemical impedance spectroscopy."
+    for *initial frequency*. Using an established term with a definition
+    of its own is not circular: *oxidation* may be defined through
+    *oxidation state*.
 
-7. If the source of a definition is not the contributor, a
+7. A definition states what a concept is, not only what it is not.
+    A negative feature is acceptable when it is essential to the concept,
+    as in *catalyst*: "A material that initiates or increases the rate of
+    a catalytic reaction, without it being consumed in the process.",
+    or when it distinguishes the concept from a closely related one.
+
+8. A definition of a concept should not start with mentioning the
+    concept that it defines, but with the genus: "An electrochemical
+    device that converts …", not "A fuel cell is an electrochemical
+    device that converts …".
+
+9. If the source of a definition is not the contributor, a
     trusted and stable source should be used. Credit must be given to
     the original creator. When copyright or license is restrictive, it
     must be respected. To identify the source, a URL, or a descriptive
@@ -133,7 +167,7 @@ considerations should be followed when adding definitions:
 ## Single vs. multi-word (compound) terms
 
 1. If terms are seen in both multi-word and one-word forms (e.g.,
-    “thermal conductivity” vs. “thermoconductivity”), the preferred term
+    "thermal conductivity" vs. "thermoconductivity"), the preferred term
     should be the one-word form. The two-word form can be included as an
     *Alternate Label*.
 
@@ -188,14 +222,14 @@ Their labels follow a pattern:
 
 Use **singular** for
 
-- **mass nouns** which are names for non-countable entities subject to the question “How much?”.
+- **mass nouns** which are names for non-countable entities subject to the question "How much?".
  Examples are names of materials or substances.
 - names of **abstract concepts** (e.g., activities, properties, disciplines).
 - names of **unique entities**, no matter if abstract or concrete.
 
 Use **plural** for
 
-- **count nouns** which are names for entities or concepts that are subject to the question “How many?” (e.g., redox cycles).
+- **count nouns** which are names for entities or concepts that are subject to the question "How many?" (e.g., redox cycles).
 - names representing a **class** with more than one member (e.g., plastics).
 
 Where the singular and plural forms of a term represent different
@@ -208,8 +242,8 @@ Wood (material), woods (forested areas).
 Concepts should be written in all lower-case letters.
 
 However, the first letter of proper names must be a capital, when the proper
-name occurs within longer terms, such in combination with “method”,
-“theory”, or “process” (e.g., Brønsted acid site, Lewis acid site,
+name occurs within longer terms, such in combination with "method",
+"theory", or "process" (e.g., Brønsted acid site, Lewis acid site,
 Röntgen crystallography, Langmuir-Hinshelwood mechanism).
 
 ## Grammatical forms
@@ -234,20 +268,20 @@ distillation rather than distill).
 
 Adjectives and adjectival phrases used alone may be established as terms
 in Voc4Cat under certain special circumstances. Single adjectives may be
-used in a “nominal” way; that is, the noun is obvious from the context,
+used in a "nominal" way; that is, the noun is obvious from the context,
 or the adjective is used to describe and attribute of the concept object
 other than topic, such as color or size. Certain noun phrases may be
 used to modify other nouns, e.g., *high frequency* can modify the noun
 *waves*. The guidelines for adjectives may be applied to such noun
 phrases. Adjectives should only be used in compound terms, such as
-“continuous flow”, but never alone. The use of adjectives (without a
-noun), verbs, and initial articles (e.g., “A”, “An”, “The”) should be
+"continuous flow", but never alone. The use of adjectives (without a
+noun), verbs, and initial articles (e.g., "A", "An", "The") should be
 avoided. Example: drying in an oven vs. drying in oven (prefer drying in
 oven).
 
 ### Adverbs
 
-Single adverbs are rarely used. Adverbs such as “very” or “highly”
+Single adverbs are rarely used. Adverbs such as "very" or "highly"
 should not be used alone as terms. A phrase beginning with such an
 adverb may be accepted as a term only when it has acquired a specialized
 meaning within a domain (e.g., very high frequency).
@@ -345,30 +379,32 @@ in direct order.
     the term in preference to the abbreviated form, even when the
     abbreviation has only one value in the domain of Voc4Cat.
 
-## Chemical compounds and elements
+## Chemical compounds
 
 In principle, Voc4Cat does not accept terms for chemical compounds
 already defined in other controlled vocabularies (e.g., the *Chemical
 Entities of Biological Interest - [ChEBI](https://www.ebi.ac.uk/chebi/)).
-In cases and if contributing to ChEBI is not an option, a chemical
-compound or element is not defined elsewhere, the following guidelines
-should be followed for the term to be considered for Voc4Cat:
+Chemical elements are not added to Voc4Cat.
+If a chemical compound is not defined elsewhere and contributing it to ChEBI
+is not an option, the following guidelines should be followed for the term
+to be considered for Voc4Cat:
 
-1. Chemical compounds and elements in their full form, are written in
-    lowercase, such as “carbon”, while the chemical symbol(s) is(are)
-    always capitalized, such as “C”.
+1. Names of chemical compounds are written in lowercase, such as
+    "ethanol", while chemical formulas keep their capitalization, such
+    as "C2H5OH".
 
-2. The full form is always the preferred term, whereas the symbol is
+2. The name is always the preferred term, whereas the formula is
     the non-preferred term.
 
-3. Chemical compounds and chemical elements written out are
-    non-countable nouns and should be explained in the singular.
+3. Names of chemical compounds are non-countable nouns and should be
+    used in the singular.
 
-4. The definition should contain a unique identifier for chemical
-    substances, such as the CAS number.
+4. Identifiers such as the CAS number are not part of the definition.
+    Where an established chemical database lists the compound, add a
+    mapping to it in the **Mappings** sheet.
 
-5. British English spelling is recommended, e.g., prefer aluminium (UK)
-    over aluminum (USA).
+5. British English spelling is recommended, e.g., prefer aluminium oxide (UK)
+    over aluminum oxide (USA).
 
 ## Loanwords and translations
 
@@ -428,6 +464,10 @@ Therefore, the less specific **`skos:closeMatch` should be used.**<BR> *Source o
 1. FAO. 2022. The AGROVOC Editorial Guidelines 2020 – Second edition.
     Rome. DOI: 10.4060/cb8640en
 
-2. “Guidelines for the Construction, Format, and Management of
-    Monolingual Controlled Vocabularies”, ANSI/NISO Z39.19 – 2005
+2. "Guidelines for the Construction, Format, and Management of
+    Monolingual Controlled Vocabularies", ANSI/NISO Z39.19 – 2005
     (R2010). DOI: 10.3789/ansi.niso.z39.19-2005R2010.
+
+3. Seppälä, S.; Ruttenberg, A.; Smith, B. "Guidelines for writing
+    definitions in ontologies", Ciência da Informação 46(1), 73–88 (2017).
+    DOI: 10.18225/ci.inf.v46i1

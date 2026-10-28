@@ -249,7 +249,7 @@ A collection states membership and nothing more:
 - Any relation between members comes from the hierarchy, not from the collection.
   Members may share a parent or be unrelated.
 - A concept may belong to several collections.
-- The collection's definition states what its members share, such as the technique, application or project.
+- The collection's definition states what its members share, such as a technique or a subdomain.
 
 ### Concept or Collection?
 

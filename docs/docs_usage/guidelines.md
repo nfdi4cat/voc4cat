@@ -167,7 +167,7 @@ considerations should be followed when adding definitions:
 ## Single vs. multi-word (compound) terms
 
 1. If terms are seen in both multi-word and one-word forms (e.g.,
-    “thermal conductivity” vs. “thermoconductivity”), the preferred term
+    "thermal conductivity" vs. "thermoconductivity"), the preferred term
     should be the one-word form. The two-word form can be included as an
     *Alternate Label*.
 
@@ -222,14 +222,14 @@ Their labels follow a pattern:
 
 Use **singular** for
 
-- **mass nouns** which are names for non-countable entities subject to the question “How much?”.
+- **mass nouns** which are names for non-countable entities subject to the question "How much?".
  Examples are names of materials or substances.
 - names of **abstract concepts** (e.g., activities, properties, disciplines).
 - names of **unique entities**, no matter if abstract or concrete.
 
 Use **plural** for
 
-- **count nouns** which are names for entities or concepts that are subject to the question “How many?” (e.g., redox cycles).
+- **count nouns** which are names for entities or concepts that are subject to the question "How many?" (e.g., redox cycles).
 - names representing a **class** with more than one member (e.g., plastics).
 
 Where the singular and plural forms of a term represent different
@@ -242,8 +242,8 @@ Wood (material), woods (forested areas).
 Concepts should be written in all lower-case letters.
 
 However, the first letter of proper names must be a capital, when the proper
-name occurs within longer terms, such in combination with “method”,
-“theory”, or “process” (e.g., Brønsted acid site, Lewis acid site,
+name occurs within longer terms, such in combination with "method",
+"theory", or "process" (e.g., Brønsted acid site, Lewis acid site,
 Röntgen crystallography, Langmuir-Hinshelwood mechanism).
 
 ## Grammatical forms
@@ -268,20 +268,20 @@ distillation rather than distill).
 
 Adjectives and adjectival phrases used alone may be established as terms
 in Voc4Cat under certain special circumstances. Single adjectives may be
-used in a “nominal” way; that is, the noun is obvious from the context,
+used in a "nominal" way; that is, the noun is obvious from the context,
 or the adjective is used to describe and attribute of the concept object
 other than topic, such as color or size. Certain noun phrases may be
 used to modify other nouns, e.g., *high frequency* can modify the noun
 *waves*. The guidelines for adjectives may be applied to such noun
 phrases. Adjectives should only be used in compound terms, such as
-“continuous flow”, but never alone. The use of adjectives (without a
-noun), verbs, and initial articles (e.g., “A”, “An”, “The”) should be
+"continuous flow", but never alone. The use of adjectives (without a
+noun), verbs, and initial articles (e.g., "A", "An", "The") should be
 avoided. Example: drying in an oven vs. drying in oven (prefer drying in
 oven).
 
 ### Adverbs
 
-Single adverbs are rarely used. Adverbs such as “very” or “highly”
+Single adverbs are rarely used. Adverbs such as "very" or "highly"
 should not be used alone as terms. A phrase beginning with such an
 adverb may be accepted as a term only when it has acquired a specialized
 meaning within a domain (e.g., very high frequency).
@@ -464,8 +464,8 @@ Therefore, the less specific **`skos:closeMatch` should be used.**<BR> *Source o
 1. FAO. 2022. The AGROVOC Editorial Guidelines 2020 – Second edition.
     Rome. DOI: 10.4060/cb8640en
 
-2. “Guidelines for the Construction, Format, and Management of
-    Monolingual Controlled Vocabularies”, ANSI/NISO Z39.19 – 2005
+2. "Guidelines for the Construction, Format, and Management of
+    Monolingual Controlled Vocabularies", ANSI/NISO Z39.19 – 2005
     (R2010). DOI: 10.3789/ansi.niso.z39.19-2005R2010.
 
 3. Seppälä, S.; Ruttenberg, A.; Smith, B. "Guidelines for writing

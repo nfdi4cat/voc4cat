@@ -95,16 +95,16 @@ considerations should be followed when adding definitions:
     the concept is, usually the preferred label of its parent concept.
     The rest of the definition states what distinguishes the concept from
     other concepts of the same kind.<sup>\[3\]</sup>
-    Example: *catalytic reactor* is defined as “A chemical reactor in which
-    the reaction is carried out in the presence of a catalyst.”
+    Example: *catalytic reactor* is defined as "A chemical reactor in which
+    the reaction is carried out in the presence of a catalyst."
     What the thing does may be one of the distinguishing features,
     but it does not replace the genus.
-    Example: *galvanic cell* is defined as “An electrochemical cell that
-    converts chemical energy into electrical energy.”, which distinguishes
+    Example: *galvanic cell* is defined as "An electrochemical cell that
+    converts chemical energy into electrical energy.", which distinguishes
     it from *electrolytic cell* by its function.
     The genus is written in the singular and without fillers such as
-    “a type of” or “a kind of”: “A gas chromatography detector that …”,
-    not “A type of gas chromatography detector that …”.
+    "a type of" or "a kind of": "A gas chromatography detector that …",
+    not "A type of gas chromatography detector that …".
 
 2. A concept has exactly one definition per language. The default
     language for the definitions is English. Definitions in other
@@ -120,27 +120,27 @@ considerations should be followed when adding definitions:
     related concepts.
 
 5. A definition states only features that every instance of the concept has.
-    Words such as “often”, “typically” or “usually” mark a feature that
+    Words such as "often", "typically" or "usually" mark a feature that
     some instances lack; such a feature is left out of the definition.
 
 6. Circular and imprecise definitions should be avoided.
     A definition is circular when it explains the concept only by its
     own label, an alternate label or a word derived from them, as in
-    “Initial frequency in an electrochemical impedance spectroscopy.”
+    "Initial frequency in an electrochemical impedance spectroscopy."
     for *initial frequency*. Using an established term with a definition
     of its own is not circular: *oxidation* may be defined through
     *oxidation state*.
 
 7. A definition states what a concept is, not only what it is not.
     A negative feature is acceptable when it is essential to the concept,
-    as in *catalyst*: “A material that initiates or increases the rate of
-    a catalytic reaction, without it being consumed in the process.”,
+    as in *catalyst*: "A material that initiates or increases the rate of
+    a catalytic reaction, without it being consumed in the process.",
     or when it distinguishes the concept from a closely related one.
 
 8. A definition of a concept should not start with mentioning the
-    concept that it defines, but with the genus: “An electrochemical
-    device that converts …”, not “A fuel cell is an electrochemical
-    device that converts …”.
+    concept that it defines, but with the genus: "An electrochemical
+    device that converts …", not "A fuel cell is an electrochemical
+    device that converts …".
 
 9. If the source of a definition is not the contributor, a
     trusted and stable source should be used. Credit must be given to
@@ -390,8 +390,8 @@ is not an option, the following guidelines should be followed for the term
 to be considered for Voc4Cat:
 
 1. Names of chemical compounds are written in lowercase, such as
-    “ethanol”, while chemical formulas keep their capitalization, such
-    as “C2H5OH”.
+    "ethanol", while chemical formulas keep their capitalization, such
+    as "C2H5OH".
 
 2. The name is always the preferred term, whereas the formula is
     the non-preferred term.
@@ -468,6 +468,6 @@ Therefore, the less specific **`skos:closeMatch` should be used.**<BR> *Source o
     Monolingual Controlled Vocabularies”, ANSI/NISO Z39.19 – 2005
     (R2010). DOI: 10.3789/ansi.niso.z39.19-2005R2010.
 
-3. Seppälä, S.; Ruttenberg, A.; Smith, B. “Guidelines for writing
-    definitions in ontologies”, Ciência da Informação 46(1), 73–88 (2017).
+3. Seppälä, S.; Ruttenberg, A.; Smith, B. "Guidelines for writing
+    definitions in ontologies", Ciência da Informação 46(1), 73–88 (2017).
     DOI: 10.18225/ci.inf.v46i1

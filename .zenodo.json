@@ -56,6 +56,21 @@
     {
       "name": "Kühnrich, Ivo",
       "orcid": "0000-0002-5561-4320"
+    },
+    {
+      "name": "Kockmann, Norbert",
+      "orcid": "0000-0002-2367-1988",
+      "affiliation": "TU Dortmund University"
+    },
+    {
+      "name": "Fedorov, Aleksandr",
+      "orcid": "0000-0001-6434-6623",
+      "affiliation": "Leibniz Institute for Catalysis, Albert-Einstein-Str. 29 A, 18059 Rostock, Germany"
+    },
+    {
+      "name": "Völkenrath, Marc",
+      "orcid": "0009-0006-1375-2895",
+      "affiliation": "TU Dortmund University"
     }
   ],
   "description": "<p><b>Voc4Cat</b> is a SKOS vocabulary for the catalysis disciplines, continuously growing to cover catalysis and related fields such as chemical engineering and materials science.</p><p>The vocabulary was created in the <a href=\"http://www.nfdi4cat.org\">NFDI4Cat</a> initiative. Starting with photocatalysis in 2023, we are steadily extending the vocabulary to other areas of catalysis. The principles that we follow are summarized in the <a href=\"https://doi.org/10.5281/zenodo.7669182\">Voc4Cat Guidelines</a>.</p><p>If you want to help us building a comprehensive catalysis vocabulary, please come to our <a href=\"https://github.com/nfdi4cat/voc4cat/\">GitHub repository</a>. Everyone is welcome! We tried to make contributing easy: Download the current vocabulary as Excel file, make your edits and upload the modified file in a pull request.</p><p>The voc4cat repository is based on <a href=\"https://github.com/nfdi4cat/voc4cat-template/\">voc4cat-template</a>. The workflows use <a href=\"https://github.com/nfdi4cat/voc4cat-tool/\">voc4cat-tool</a> and GitHub features like pull requests, gh-actions, gh-pages etc. to minimize the workload for contributors and editors.</p>",

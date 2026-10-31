@@ -1,0 +1,19 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0005007>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0005007"^^xsd:token ;
+    skos:definition "Describes a transformation that changes the chemical composition of involved materials."@en ;
+    skos:historyNote "0000-0002-5898-1820 David Linke created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower
+        <https://w3id.org/nfdi4cat/voc4cat_0007004> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007009> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007010> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007013> ;
+    skos:prefLabel "chemical conversion"@en ;
+    skos:topConceptOf <https://w3id.org/nfdi4cat/voc4cat_> ;
+.
+

@@ -1,0 +1,16 @@
+2023-08-17 13:57:25|voc4cat.cli         |INFO    |Executing cmd: voc4cat transform --logfile publish/latest/voc4cat.log --join publish/latest/
+2023-08-17 13:57:25|voc4cat.cli         |DEBUG   |Processing common options.
+2023-08-17 13:57:25|voc4cat.transform   |DEBUG   |Transform subcommand started!
+2023-08-17 13:57:25|voc4cat.transform   |DEBUG   |Processing rdf files in "publish/latest/voc4cat"
+2023-08-17 13:57:26|voc4cat.transform   |INFO    |-> joined vocabulary into: publish/latest/voc4cat.ttl
+2023-08-17 13:57:26|voc4cat.cli         |INFO    |Executing cmd: voc4cat docs --force --logfile publish/latest/voc4cat.log publish/latest/
+2023-08-17 13:57:26|voc4cat.cli         |DEBUG   |Processing common options.
+2023-08-17 13:57:26|voc4cat.docs        |DEBUG   |Docs subcommand started!
+2023-08-17 13:57:26|voc4cat.docs        |DEBUG   |Processing "publish/latest/voc4cat.ttl"
+2023-08-17 13:57:26|pylode.common       |DEBUG   |Application dir: /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/pylode
+2023-08-17 13:57:28|voc4cat.docs        |INFO    |-> built pyLODE documentation for publish/latest/voc4cat.ttl
+2023-08-17 13:57:29|voc4cat.cli         |INFO    |Executing cmd: voc4cat convert --logfile publish/latest/voc4cat.log --template templates/voc4cat_template_043.xlsx publish/latest/
+2023-08-17 13:57:29|voc4cat.cli         |DEBUG   |Processing common options.
+2023-08-17 13:57:29|voc4cat.convert     |DEBUG   |Convert subcommand started!
+2023-08-17 13:57:29|voc4cat.convert     |DEBUG   |Processing "publish/latest/voc4cat.ttl"
+2023-08-17 13:57:29|voc4cat.convert     |INFO    |-> successfully converted to publish/latest/voc4cat.xlsx

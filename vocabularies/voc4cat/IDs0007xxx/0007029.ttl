@@ -1,4 +1,5 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
@@ -8,12 +9,15 @@ voc4cat:0007029
     a skos:Concept ;
     dcterms:created "2024-03-23"^^xsd:date ;
     dcterms:identifier "0007029"^^xsd:token ;
-    dcterms:modified "2026-08-30"^^xsd:date ;
+    dcterms:isReplacedBy voc4cat:0000273 ;
+    dcterms:modified "2026-10-31"^^xsd:date ;
     dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007029.ttl> ;
     rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0007xxx/0007029.ttl> ;
+    owl:deprecated true ;
     skos:broader voc4cat:0000185 ;
     skos:changeNote "0000-0002-4041-0165 Julia Schumann created the resource, 0000-0002-5898-1820 David Linke contributed to the definition of the resource"@en ;
     skos:definition "A synthesis method involving the thermal treatment of a mixture of substances in aqueous solution or in form of a slurry in water characterised by heating the mixture in a sealed reaction vessel to a temperature greater than the boiling point at standard pressure."@en ;
+    skos:historyNote "This concept was added in error."@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
-    skos:prefLabel "hydrothermal synthesis"@en ;
+    skos:prefLabel "OBSOLETE hydrothermal synthesis"@en ;
 .

@@ -8,7 +8,7 @@ voc4cat:0000045
     a skos:Concept ;
     dcterms:created "2023-08-11"^^xsd:date ;
     dcterms:identifier "0000045"^^xsd:token ;
-    dcterms:modified "2026-10-14"^^xsd:date ;
+    dcterms:modified "2026-10-31"^^xsd:date ;
     dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000045.ttl> ;
     rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000045.ttl> ;
     skos:broader voc4cat:0000185 ;
@@ -16,6 +16,7 @@ voc4cat:0000045
     skos:definition "The process by which one or more chemical reactions are performed with the aim of converting a reactant or starting material into a product or multiple products."@en ;
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:narrower
+        voc4cat:0000273 ,
         voc4cat:0008152 ,
         voc4cat:0008156 ;
     skos:prefLabel "synthesis"@en ;

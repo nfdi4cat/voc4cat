@@ -59,8 +59,16 @@ Switched to a new branch 'release-prep-vYYYY-MM-DD'
 ### Step 2: Update Contributor Information (if needed)
 
 If there are new contributors since the last release, update the `.zenodo.json` file to include them. This ensures proper attribution when the release is archived on Zenodo.
+Holding an ID range alone does not make someone a contributor.
 
-1. Check for new contributors by reviewing recent commit history and pull requests
+1. Check both sources of contributors:
+   - the commit history and pull requests since the last release, for the authors of vocabulary changes
+   - the change notes of the concepts, which credit contributors who did not author a commit.
+     This command lists the ORCIDs credited there but missing from `.zenodo.json` (bash, also in Git Bash on Windows):
+     ```bash
+     grep -rhoE "[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]" vocabularies/voc4cat/IDs* | sort -u \
+       | grep -vFf <(grep -oE "[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]" .zenodo.json)
+     ```
 2. For each new contributor, add an entry to the `creators` array in `.zenodo.json`:
    ```json
    {

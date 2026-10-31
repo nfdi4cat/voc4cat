@@ -106,7 +106,6 @@ html_theme_options = {
     ],
     # HTML to be show in a announcement banner at the top of the page
     "announcement":
-        '<em>New: <strong> Release 2026-02-24 </strong> - First release based '
-        'on the improved <b>xlsx template v1.0</b> with provenance tracking, '
-        'deprecation support and many other improvements.</em>',
+        '<em>New: <strong> Release 2026-10-31 </strong> - Sharper guidelines '
+        'for definitions and hierarchy, and many new and corrected concepts.</em>',
 }

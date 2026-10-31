@@ -17,6 +17,7 @@ voc4cat:0000045
     skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
     skos:narrower
         voc4cat:0000273 ,
+        voc4cat:0007031 ,
         voc4cat:0008152 ,
         voc4cat:0008156 ;
     skos:prefLabel "synthesis"@en ;

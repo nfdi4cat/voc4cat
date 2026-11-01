@@ -1,0 +1,14 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0000200>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0000200"^^xsd:token ;
+    skos:altLabel "sustainable chemistry"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000181> ;
+    skos:definition "The science and technology of sustainable and environment friendly chemical processes and products that reduce or eliminate hazardous substances, while minimizing waste and energy consumption."@en ;
+    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:prefLabel "green chemistry"@en ;
+.

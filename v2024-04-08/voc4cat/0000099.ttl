@@ -1,0 +1,19 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0000099>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0000099"^^xsd:token ;
+    skos:altLabel
+        "CO2 photoreduction"@en ,
+        "artificial photosynthesis"@en ,
+        "carbon dioxide photoreduction"@en ,
+        "photocatalytic carbon dioxide reduction"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000098> ;
+    skos:definition "The light-driven reduction (conversion) of carbon dioxide (CO2) to hydrocarbons and / or platform chemicals in presence of water. The absorption of light and the adsorption of the reactants is performed by a photocatalyst (usually a metal oxide). "@en ;
+    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "photocatalytic CO2 reduction"@en ;
+.
+

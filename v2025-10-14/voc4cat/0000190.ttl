@@ -1,0 +1,27 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0000190>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0000190"^^xsd:token ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000180> ;
+    skos:definition "Substances used as catalysts, supports, or reactants in catalytic processes."@en ;
+    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:narrower
+        <https://w3id.org/nfdi4cat/voc4cat_0000003> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000005> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000024> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000194> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000197> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000210> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000268> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000270> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000293> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000295> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000300> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000307> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005056> ;
+    skos:prefLabel "material"@en ;
+.

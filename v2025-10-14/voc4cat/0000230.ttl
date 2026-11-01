@@ -1,0 +1,17 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0000230>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0000230"^^xsd:token ;
+    skos:altLabel
+        "cascade reaction"@en ,
+        "domino reaction"@en ,
+        "tandem reaction"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000183> ;
+    skos:definition "A domino reaction is a chemical process of at least two consecutive sub-reactions occurring spontaneously in the same reaction vessel, without the need to add additional reagents, change reaction conditions and isolate intermediates. Each sub-reaction uses the product(s) already formed in the previous steps as reactant(s)."@en ;
+    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:prefLabel "sequential reaction"@en ;
+.

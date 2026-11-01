@@ -1,0 +1,13 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0007028>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0007028"^^xsd:token ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000184> ;
+    skos:definition "A synthesis method in which inorganic compounds are dissolved in a solvent and brought into contact with a solid support in order to deposit them completely or in parts onto the surface."@en ;
+    skos:historyNote "0000-0002-4041-0165 Julia Schumann created the resource, 0000-0002-5898-1820 David Linke contributed to the definition of the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:prefLabel "impregnation"@en ;
+.

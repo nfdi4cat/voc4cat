@@ -1,0 +1,19 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0000146>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0000146"^^xsd:token ;
+    skos:altLabel
+        "pressure controller"@en ,
+        "pressure gauge"@en ,
+        "pressure monitor"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000143> ;
+    skos:definition "Equipment used for controlling and / or monitoring the pressure in various parts of a photoreactor. A vacuum pump is a typical example of such equipment."@en ;
+    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000147> ;
+    skos:prefLabel "pressure controller and monitor"@en ;
+.
+

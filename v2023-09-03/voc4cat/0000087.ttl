@@ -1,0 +1,26 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0000087>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0000087"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000001> ;
+    skos:definition "A multi-step process iniatiated by the absorption of photons by a photocatalyst. This process involves various sub-processes that include the photogeneration and transfer of electron and hole pairs. "@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower
+        <https://w3id.org/nfdi4cat/voc4cat_0000088> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000089> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000090> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000091> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000092> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000093> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000094> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000095> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000096> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000097> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000098> ;
+    skos:prefLabel "photocatalytic process"@en ;
+.
+

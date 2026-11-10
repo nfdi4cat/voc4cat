@@ -1,0 +1,14 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0000175>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0000175"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000170> ;
+    skos:definition "The light intensity (usually in mW cm-2) of the selected light source. The light intensity should be measured at the same distance as the one between the light source and the reaction chamber / sample."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "light intensity"@en ;
+.
+

@@ -28,6 +28,9 @@ extensions = [
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'README.md']
 
+# Cards use the card-header/card-footer directives; the ^^^/+++ separators are deprecated.
+sd_card_legacy_separators = False
+
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 

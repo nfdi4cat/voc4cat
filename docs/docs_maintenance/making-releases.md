@@ -90,15 +90,19 @@ Update the following files in the `docs/` folder:
    ```
 
 2. The latest release reference (in `docs/index.md`):
-   ```markdown
-   +++
+   ````markdown
+   ```{card-footer}
    <small>Latest release **vYYYY-MM-DD**</small>
    ```
+   ````
 
 3. Add the new release to the "All releases" section (in `docs/index.md`):
    ```markdown
    - **vYYYY-MM-DD**: [Documentation (HTML)](https://w3id.org/nfdi4cat/voc4cat/vYYYY-MM-DD), permanent url `https://w3id.org/nfdi4cat/voc4cat/vYYYY-MM-DD`
    ```
+
+4. Add the new release to the table "Profile version of each release" (in `docs/docs_usage/vocabulary-profile.md`).
+   The profile is the default of the voc4cat-tool version pinned in `.github/workflows/publish.yml`, see the [voc4cat-tool reference](https://nfdi4cat.github.io/voc4cat-tool/reference/schemas.html#vp4cat-profile).
 
 ### Step 4: Create and Merge Pull Request
 
@@ -106,7 +110,7 @@ Commit and push your documentation changes:
 
 ```bat
 C:\Users\dlinke\MyProg_local\gh-nfdi4cat\voc4cat(release-prep-vYYYY-MM-DD)
-λ git add docs/index.md docs/conf.py .zenodo.json
+λ git add docs/index.md docs/conf.py docs/docs_usage/vocabulary-profile.md .zenodo.json
 
 C:\Users\dlinke\MyProg_local\gh-nfdi4cat\voc4cat(release-prep-vYYYY-MM-DD)
 λ git commit -m "Prepare documentation for vYYYY-MM-DD release"

@@ -56,15 +56,15 @@ A contribution can break the following ones:
 
 | Requirement | Sheet: column | Where a violation is reported |
 |-------------|---------------|-------------------------------|
-| A preferred label and a definition for every concept | Concepts: *Preferred Label*, *Definition* | conversion |
-| At most one preferred label and one definition per language | Concepts: *Concept IRI*, *Language Code* | spreadsheet check |
-| A preferred label and a definition for every collection | Collections: *Preferred Label*, *Definition* | conversion |
+| A preferred label and a definition for every concept | Concepts: *Preferred Label*, *Definition* | spreadsheet check |
+| At most one preferred label and one definition per language | Concepts and Collections: *Concept IRI* or *Collection IRI*, *Language Code* | spreadsheet check |
+| A preferred label and a definition for every collection | Collections: *Preferred Label*, *Definition* | spreadsheet check |
 | At least one member in every collection | Concepts: *Member of collection(s)*, *Member of ordered collection # position* | profile validation |
 
 :::
 
-A concept may have one row per language.
-The spreadsheet check rejects two rows with the same *Concept IRI* and the same *Language Code*.
+A concept or collection may have one row per language.
+The spreadsheet check rejects two rows with the same IRI and the same *Language Code*.
 
 The pipeline adds everything else the profile asks for: `skos:inScheme` and `dct:provenance` on every concept and collection, and `rdfs:isDefinedBy` on every collection.
 The concept scheme metadata and the creators come from `idranges.toml`.
@@ -74,10 +74,9 @@ The concept scheme metadata and the creators come from `idranges.toml`.
 The checks run in three steps, locally with `just all` and in the pipeline of a pull request:
 
 1. `just check`, pipeline step "Run voc4cat (pre-convert checks)", checks the spreadsheet itself.
-   It reports, for example, two rows with the same IRI and language code.
+   It reports an empty required cell with its sheet and row, for example `Invalid data in sheet "Concepts" of voc4cat.xlsx: Import errors found:` followed by `Row 7: Required field 'definition' is empty`.
+   It also reports two rows with the same IRI and language code, and writes a copy of the spreadsheet with these cells highlighted to `outbox/`; in the pipeline the copy is part of the job artifact.
 2. `just convert`, pipeline step "Run voc4cat (convert)", converts the spreadsheet to turtle.
-   An empty required cell stops the conversion with "Unexpected error." and a traceback.
-   Its last line names the empty field, for example `Required field 'definition' is empty` or `Required field 'preferred_label' is empty`.
 3. `just convert`, pipeline step "Run voc4cat (post-convert checks)", validates the turtle against the profile.
 
 A profile violation is reported with the number of the requirement and the IRI of the concept or collection, the *focus node*.

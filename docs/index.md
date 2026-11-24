@@ -126,6 +126,7 @@ docs_usage/how-to-use
 docs_usage/how-to-contribute
 Organizing Concepts <docs_usage/organizing-concepts>
 Changing Concepts <docs_usage/changing-concepts>
+Profile Conformance <docs_usage/vocabulary-profile>
 docs_usage/guidelines
 Guidelines Publication <docs_usage/published-guidelines>
 ```

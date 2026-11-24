@@ -1,5 +1,5 @@
 # Compile to requirements.txt with:
-# `uv pip compile --upgrade --universal --python-version 3.11 requirements.in -o requirements.txt`
+# `uv pip compile --upgrade --universal --python-version 3.11.5 requirements.in -o requirements.txt`
 jupyter
 rdflib>=7.0
 networkx>=3.0

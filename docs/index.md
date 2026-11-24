@@ -17,44 +17,53 @@ Producing Voc4Cat-annotated data contributes to realising the vision of machine-
 ::::{grid} 3
 :::{grid-item-card}
 :link: https://w3id.org/nfdi4cat/voc4cat/dev
+
+```{card-header}
 **Documentation**, preview
-^^^
+```
 
 ```{image} _static/voc4cat-pylode-docs.png
 :align: center
 :alt: screenshot of pylode generated vocabulary documentation
 ```
 
-+++
+```{card-footer}
 <small>Most current, matches XLSX file</small>
+```
 :::
 
 :::{grid-item-card}
 :link: https://nfdi4cat.github.io/voc4cat/dev/voc4cat.xlsx
+
+```{card-header}
 **Vocabulary**, XLSX file
-^^^
+```
 
 ```{image} _static/voc4cat-concept-sheet.png
 :align: center
 :alt: screenshot concepts in xlsx worksheet
 ```
 
-+++
+```{card-footer}
 <small>Download to contribute</small>
+```
 :::
 
 :::{grid-item-card}
 :link: https://w3id.org/nfdi4cat/voc4cat
+
+```{card-header}
 **Documentation**, released
-^^^
+```
 
 ```{image} _static/voc4cat-pylode-docs.png
 :align: center
 :alt: screenshot of pylode generated vocabulary documentation
 ```
 
-+++
+```{card-footer}
 <small>Latest release **v2026-10-31**</small>
+```
 :::
 ::::
 

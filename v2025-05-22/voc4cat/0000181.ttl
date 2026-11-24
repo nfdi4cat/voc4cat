@@ -1,0 +1,66 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0000181>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0000181"^^xsd:token ;
+    skos:definition "Any entity that cannot be located in space-time. E.g., mathematical entities, formal semantics elements, regions within dimensional spaces, ideas, conceptual models."@en ;
+    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas and 0000-0002-5898-1820 David Linke created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:narrower
+        <https://w3id.org/nfdi4cat/voc4cat_0000007> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000011> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000012> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000055> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000062> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000084> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000101> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000105> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000128> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000177> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000178> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000179> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000196> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000199> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000200> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000201> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000203> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000215> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000218> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000219> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000225> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000229> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000231> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000235> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000238> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000240> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000255> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000257> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000263> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000264> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000267> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000274> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000275> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000277> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000279> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000284> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000287> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000292> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000298> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000301> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000309> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005011> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005018> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005051> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005058> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007005> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007006> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007040> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007041> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007101> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007246> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007247> ;
+    skos:prefLabel "non-temporal abstract entity"@en ;
+    skos:topConceptOf <https://w3id.org/nfdi4cat/voc4cat> ;
+.

@@ -1,0 +1,47 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0005018>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0005018"^^xsd:token ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000181> ;
+    skos:definition "The type of relation between two resources. These relations are for example used to express relations between resources identified by their persistent identifiers."@en ;
+    skos:historyNote "0000-0002-5898-1820 David Linke created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:narrower
+        <https://w3id.org/nfdi4cat/voc4cat_0005019> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005020> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005021> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005022> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005023> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005024> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005025> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005026> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005027> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005028> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005029> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005030> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005031> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005032> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005033> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005034> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005035> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005036> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005037> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005038> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005039> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005040> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005041> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005042> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005043> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005044> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005045> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005046> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005047> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005048> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005049> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005050> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0005059> ;
+    skos:prefLabel "resource relation"@en ;
+.

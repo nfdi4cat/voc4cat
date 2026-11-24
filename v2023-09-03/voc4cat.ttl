@@ -1,0 +1,1992 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/nfdi4cat/voc4cat_0001900> a skos:Collection ;
+    dcterms:identifier "voc4cat_0001900"^^xsd:token ;
+    dcterms:isPartOf <https://w3id.org/nfdi4cat/voc4cat_> ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:definition "A collection of concepts referring to material  characterization techniques and methods to evaluate their efficiency in photocatalysis."@en ;
+    skos:member <https://w3id.org/nfdi4cat/voc4cat_0000067>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000068>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000069>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000070>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000071>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000072>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000073>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000074>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000075>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000076>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000077>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000078>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000079>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000080>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000081>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000082>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000083>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000130>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000137>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000141> ;
+    skos:prefLabel "Characterization and evaluation techniques"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0001901> a skos:Collection ;
+    dcterms:identifier "voc4cat_0001901"^^xsd:token ;
+    dcterms:isPartOf <https://w3id.org/nfdi4cat/voc4cat_> ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:definition "A collection of concepts referring to photocatalysis."@en ;
+    skos:member <https://w3id.org/nfdi4cat/voc4cat_0000001>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000002>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000003>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000004>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000005>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000006>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000007>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000008>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000009>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000010>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000011>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000012>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000013>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000014>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000015>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000016>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000017>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000018>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000019>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000020>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000021>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000022>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000023>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000024>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000025>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000026>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000027>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000028>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000029>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000030>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000031>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000032>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000033>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000034>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000035>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000036>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000037>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000038>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000039>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000040>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000041>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000042>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000043>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000044>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000045>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000046>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000047>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000048>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000049>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000050>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000051>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000052>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000053>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000054>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000055>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000056>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000057>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000058>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000059>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000060>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000061>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000062>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000063>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000064>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000065>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000066>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000067>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000068>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000069>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000070>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000071>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000072>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000073>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000074>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000075>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000076>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000077>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000078>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000079>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000080>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000081>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000082>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000083>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000084>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000085>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000086>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000087>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000088>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000089>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000090>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000091>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000092>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000093>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000094>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000095>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000096>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000097>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000098>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000099>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000100>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000101>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000102>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000103>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000104>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000105>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000106>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000107>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000108>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000109>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000110>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000111>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000112>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000113>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000114>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000115>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000116>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000117>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000118>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000119>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000120>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000121>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000122>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000123>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000124>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000125>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000126>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000127>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000128>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000129>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000130>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000131>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000132>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000133>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000134>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000135>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000136>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000137>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000138>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000139>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000140>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000141>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000142>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000143>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000144>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000145>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000146>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000147>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000148>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000149>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000150>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000151>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000152>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000153>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000154>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000155>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000156>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000157>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000158>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000159>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000160>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000161>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000162>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000163>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000164>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000165>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000166>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000167>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000168>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000169>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000170>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000171>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000172>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000173>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000174>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000175>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000176>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000177>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000178>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000179> ;
+    skos:prefLabel "Photocatalysis collection"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000005> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000005"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000004> ;
+    skos:definition "A chemical compound formed by the reaction of a metal with oxygen."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "metal oxide"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000007> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000007"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    rdfs:isDefinedBy <https://www.w3.org/TR/2010/NOTE-curie-20101216/> ;
+    skos:altLabel "EF"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000006> ;
+    skos:definition "The energy level in a semiconductor where the probability of finding an electron is 0.5."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "Fermi level"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000008> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000008"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000006> ;
+    skos:definition "The degree of a three-dimensional structural order of atoms which constitute the crystal lattice of a material."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "crystallinity"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000009> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000009"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000006> ;
+    skos:definition "Pore size distribution refers to the range of pore sizes in a material."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "pore size distribution"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000010> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000010"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "Eg"@en,
+        "energy bandgap"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000006> ;
+    skos:definition "The energy difference between a semiconductor’s valence band top and conduction band bottom, which is required to excite an electron from the former to the latter."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "bandgap energy"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000011> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000011"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "VB"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000006> ;
+    skos:definition "The band of energy levels in a solid fully occupied by electrons at 0 K (273.15 °C)."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "valence band"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000012> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000012"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "CB"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000006> ;
+    skos:definition "The energy band of electronic levels of partially or fully filled mobile electrons in a metal or a semiconductor."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "conduction band"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000013> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000013"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "SSA"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000006> ;
+    skos:definition "Α measure of the total surface area of a material per unit mass or volume."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "specific surface area"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000015> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000015"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000014> ;
+    skos:definition "The introduction of foreign atoms into a semiconductor leading to the formation of new energy levels and charge concentrations."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "doping"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000018> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000018"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000017> ;
+    skos:definition "Mass of a powdered photocatalyst used for an experiment."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "powder mass"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000021> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000021"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "spray-coating"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000020> ;
+    skos:definition "A technique used to deposit uniform thin films onto a substrate by spraying a solution of the material onto the surface."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "spray coating"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000022> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000022"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000020> ;
+    skos:definition "A tape-casting method used to deposit thin films of a photocatalyst onto the surface of a substrate."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "doctor blading"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000023> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000023"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "spin casting"@en,
+        "spin-casting"@en,
+        "spin-coating"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000020> ;
+    skos:definition "A technique used to deposit uniform thin films onto a substrate (e.g., metal or glass) by spinning at high speeds a solution (paste) of the material onto the surface."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "spin coating"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000026> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000026"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000025> ;
+    skos:definition "A flat surface made of a metal (e.g., titanium, stainless steel) serving as a substrate for the deposition of a photocatalyst."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "metallic substrate"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000028> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000028"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "FTO"@en,
+        "FTO glass"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000027> ;
+    skos:definition "Transparent conductive metal oxide (fluorine doped tin oxide) that can be used in the fabrication of transparent electrodes for thin films."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "fluorine doped tin oxide coated glass"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000029> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000029"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "ITO"@en,
+        "ITO glass"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000027> ;
+    skos:definition "Transparent conductive metal oxide (indium tin oxide) that can be used in the fabrication of transparent electrodes for thin films."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "indium tin oxide coated glass"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000030> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000030"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000027> ;
+    skos:definition "A resistant to thermal shock type of glass, composed mainly of silica and boron trioxide."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "borosilicate glass"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000031> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000031"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "quartz"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000027> ;
+    skos:definition "A type of pure silicon dioxide, highly crystalline glass that allows the transmission of light in the UV wavelength range."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "quartz glass"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000032> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000032"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000025> ;
+    skos:definition "A surface made of a ceramic material (e.g., alumina) serving as a substrate for the deposition of a photocatalyst."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "ceramic substrate"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000034> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000034"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000033> ;
+    skos:definition "The width of the substrate."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "substrate width"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000035> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000035"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000033> ;
+    skos:definition "The depth of the substrate."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "substrate depth"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000036> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000036"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000033> ;
+    skos:definition "The thickness of the substrate."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "substrate thickness"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000037> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000037"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "substrate surface area"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000033> ;
+    skos:definition "The surface area of the substrate."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "substrate area"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000039> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000039"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000038> ;
+    skos:definition "Mass of catalyst deposited onto the surface of a substrate."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "thin film mass"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000041> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000041"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000040> ;
+    skos:definition "The width of the film of the deposited photocatalyst."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "thin film width"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000042> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000042"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000040> ;
+    skos:definition "The thickness of the film of the deposited photocatalyst. "@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "thin film thickness"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000043> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000043"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000040> ;
+    skos:definition "The depth of the film of the deposited photocatalyst."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "thin film depth"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000044> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000044"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000040> ;
+    skos:definition "The area of the substrate covered by the deposited photocatalyst."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "thin film area"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000047> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000047"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000046> ;
+    skos:definition "Assembly of literature research to include only the most relevant sources of information for the application / experiment / catalysts of interest."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "literature collection"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000048> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000048"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "citation management software"@en,
+        "literature organization"@en,
+        "organization of literature"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000046> ;
+    skos:definition "Addition and organization of relevant literature of interest using a citation management software (e.g., Mendeley, Zotero, EndNote etc.) allowing for easy access and categorization."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "literature organization"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000050> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000050"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000049> ;
+    skos:definition "Duration of each synthesis step needed to synthesize the desired photocatalyst."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "synthesis duration"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000051> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000051"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000049> ;
+    skos:definition "Temperature externally applied (if necessary) in any of the synthesis step. Higher temperature values can be observed if an exothermic reaction takes place during the synthesis."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "synthesis temperature"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000052> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000052"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000049> ;
+    skos:definition "The pH value in each of the synthesis steps."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "synthesis pH"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000053> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000053"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000049> ;
+    skos:definition "Pressure applied (if necessary) in any of the synthesis step. Changes in the pressure may be observed if variations in the temperature of the reaction occur (e.g., exothermic reaction)."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "synthesis pressure"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000055> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000055"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000054> ;
+    skos:definition "A gas flow under which the calcination step takes place (e,g,, Ar or synthetic air)."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "gaseous environment in calcination"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000056> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000056"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000054> ;
+    skos:definition "The flow of gas (usually in ml min-1) used in the calcination steps during synthesis."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "gas flow rate in calcination"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000057> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000057"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000054> ;
+    skos:definition "Initial temperature of the calcination step."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "calcination initial temperature"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000058> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000058"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000054> ;
+    skos:definition "Final temperature of the calcination step."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "calcination final temperature"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000059> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000059"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000054> ;
+    skos:definition "Rate of increasing or decreasing the temperature during the calcination step. Usually mentioned in K min-1."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "calcination heating rate"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000060> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000060"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000054> ;
+    skos:definition "Time (usually in h) for which a desired temperature is held."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "calcination dwelling time"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000061> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000061"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000049> ;
+    skos:definition "Equipment used in each step of the synthesis of the photocatalysts. The equipment can include (but not limited to): crucibles, pH meters, condensers, volumetric cylinders, centrifuges, test tubes, flasks, beakers, mechanical shakers, pipettes, syringes, magenetic stirrers, heating plates, filters, funnels and digital balances."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "synthesis equipment"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000063> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000063"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000062> ;
+    skos:definition "Mass of chemicals used for synthesis."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "mass of chemical substance for synthesis"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000064> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000064"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000062> ;
+    skos:definition "Volume of chemicals used for synthesis."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "volume chemical substance for synthesis"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000065> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000065"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000062> ;
+    skos:definition "Concentration of chemicals used for synthesis."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "concentration chemical substance for synthesis"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000085> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000085"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000084> ;
+    skos:definition "Τhe lowest energy state of a system. "@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "ground state"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000086> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000086"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000084> ;
+    skos:definition "Τhe temporary state of a system with higher energy than its ground state caused by an external factor. "@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "excited state"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000088> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000088"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource, 0000-0002-2367-1988 Norbert Kockmann edited the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000087> ;
+    skos:definition "The transfer of an electron initiated by the absorption of a photon of sufficient energy. "@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "photoinduced electron transfer"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000089> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000089"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000087> ;
+    skos:definition "The transfer of a hole initiated by the absorption of a photon of sufficient energy. "@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "photoinduced hole transfer"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000090> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000090"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "charge photo-generation"@en,
+        "charge photogeneration"@en,
+        "electron excitation"@en,
+        "electron-hole pair"@en,
+        "photogenerated charges"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000087> ;
+    skos:definition "The generation of electron - hole pairs in a semiconductor as a result of light absorption of sufficient energy to overcome the bandgap energy. Electrons (negative charge) get excited to the conduction band, while holes (positive charge) remain in the valence band. "@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "photoinduced charge generation"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000091> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000091"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000087> ;
+    skos:definition "The process by which photogenerated charges (electrons and holes) in a semiconductor recombine, resulting in the dissipation of energy in the form of e.g., heat or light. "@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "charge recombination"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000092> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000092"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000087> ;
+    skos:definition "Absorption is the process in which energy (e.g., photons) or an absorbent (e.g., a gas) is taken up by an absorbate. "@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "absorption"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000093> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000093"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000087> ;
+    skos:definition "The adhesion of a gas, liquid or dissolved solid chemical of interest onto a solid surface."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "adsorption"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000094> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000094"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000087> ;
+    skos:definition "The process under which reactants, intermediates and products are released from the surface of the photocatalyst. Desoprtion can be facilitated by an increase in temperature or a change in the pH."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "desorption"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000095> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000095"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000087> ;
+    skos:definition "The process of separating positive and negative charges in a semiconductor, typically as a result of an external force, (e.g., photoexcitation). "@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "charge separation"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000096> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000096"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "photo-excitation"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000087> ;
+    skos:definition "The state caused by the transition of electrons from the valence band top to the conduction band bottom by absorption of photons of sufficient energy. "@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "photoexcitation"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000097> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000097"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000087> ;
+    skos:definition "The loss of electrons or an increase in the oxidation state of a species. "@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "oxidation"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000099> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000099"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "CO2 photoreduction"@en,
+        "artificial photosynthesis"@en,
+        "carbon dioxide photoreduction"@en,
+        "photocatalytic carbon dioxide reduction"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000098> ;
+    skos:definition "The light-driven reduction (conversion) of carbon dioxide (CO2) to hydrocarbons and / or platform chemicals in presence of water. The absorption of light and the adsorption of the reactants is performed by a photocatalyst (usually a metal oxide). "@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "photocatalytic CO2 reduction"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000102> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000102"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000101> ;
+    skos:definition "Concentration of the reactants (e.g., CO2 and H2O) used in the photocatalytic CO2 reduction experiments."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "reactant concentration"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000103> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000103"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000101> ;
+    skos:definition "Purity of reactants (e.g., CO2, H2O, He) used in the photocatalytic CO2 reduction experiments. Purity is measure of the impurities contained in the reactants' supply. The highest purity reactants should be used to ensure the collection of reliable results. "@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "reactant purity"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000104> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000104"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000101> ;
+    skos:definition "The rate of flow of reactants (often in ml per min) in the photoreactor. Flow rates are usually controlled by mass flow controllers (MFCs)."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "reactant flow rate"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000106> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000106"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000105> ;
+    skos:definition "A molecule that accepts electrons from photoexcited species in a redox reaction and is subsequently consumed or degraded."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "sacrificial acceptor"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000107> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000107"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000105> ;
+    skos:definition "A molecule that donates electrons from photoexcited species in a redox reaction and is subsequently consumed or degraded."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "sacrificial donor"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000109> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000109"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "continuous flow mode"@en,
+        "continuous-flow mode"@en,
+        "flow-mode"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000108> ;
+    skos:definition " Under flow conditions, a continuous flow of reactants is supplied to the reaction chamber and the formed products are removed and identified by an appropriate technique."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "flow mode"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000110> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000110"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "batch-mode"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000108> ;
+    skos:definition "Operation mode in which the reaction chamber is filled with the (reactant) gas(es) up to a certain pressure, and the photoreaction products acummulate over time."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "batch mode"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000112> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000112"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000111> ;
+    skos:definition "Time for which a gas is purged through the reaction chamber."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "purging duration"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000113> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000113"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000111> ;
+    skos:definition "The time in between the collection of two data points."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "sampling interval"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000114> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000114"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000111> ;
+    skos:definition "The total duration in which the photocatalyst was under irradiation by the selected light source. "@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "irradiation duration"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000116> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000116"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000115> ;
+    skos:definition "The temperature at the initiaton of the experiment."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "experiment initial temperature"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000117> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000117"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000115> ;
+    skos:definition "The temperature at the end of the experiment."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "experiment final temperature"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000119> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000119"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000118> ;
+    skos:definition "The pressure at the initiaton of the experiment or before a sampling event."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "experiment initial pressure"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000120> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000120"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000118> ;
+    skos:definition "The pressure at the end of the experiment or after a sampling event."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "experiment final pressure"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000121> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000121"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000100> ;
+    skos:definition "The pressure drop occurring when collecting a gaseous sample for the reaction chamber. This pressure drop should be taken into consideration when calculating the concentration of formed products. "@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "experiment pressure drop"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000122> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000122"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000100> ;
+    skos:definition "Pretreatment of the photocatalyst before its intoduction to the reaction chamber."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "sample pre-treatment"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000123> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000123"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "control experiment"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000100> ;
+    skos:definition "Measurements performed to ensure that the studied photocatalytic reaction occurs because of the interaction of the photocatalyst with the reactants, and not from the environment or the photoreactor. Such blank experiment include experiments under dark conditions, experiments with light but without a photocatalyst and experiments under light in the presence of the photocatalyst but without the targeted reactants."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "blank experiment"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000125> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000125"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000124> ;
+    skos:definition "In photocatalytic processes where product formation is expected, selectivity describes the ability of a photocatalyst to produce only the desired product with minimal (or none) of byproducts."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "selectivity"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000126> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000126"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "AQY"@en,
+        "AQY%"@en,
+        "apparent photonic yield"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000124> ;
+    skos:definition "A measure of the efficiency of a photocatalytic reaction. It is expressed as the number of consumed charge carriers divided by the number of incident photons."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "apparent quantum yield"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000127> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000127"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000124> ;
+    skos:definition "The concentration (usually in ppm or mol) of the products formed during a reaction."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "product concentration"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000132> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000132"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "FID"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000131> ;
+    skos:definition "A type of gas chromatography detector that detects and quantifies the concentration of organic compounds in a gas sample emerging from a column, by measuring the electrical current generated by ionized gas constituents in a hydrogen flame."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "flame ionization detector"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000133> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000133"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "TCD"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000131> ;
+    skos:definition "A type of gas chromatography detector that measures the thermal conductivity of a gas sample and identifies its constituent molecules through changes in a filament’s temperature."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "thermal conductivity detector"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000134> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000134"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "BID"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000131> ;
+    skos:definition "Detector incorporating Ionization via a new dielectric barrier discharge He plasma."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "dielectric-barrier discharge ionization detector"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000135> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000135"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000130> ;
+    skos:definition "The minimum concentration of a product or intermediate that the gas chromatograph can identify. "@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "gas chromatograph sensitivity"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000136> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000136"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000130> ;
+    skos:definition "A process in which gaseous substances of known purity and concentration are introduced to the gas chromatograph and the respective area and retention time of the resulting peaks are identified. This process when concluded, allows for the calculation of concentrations of products and intermediates of the photoreaction."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "gas chromatograph calibration"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000138> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000138"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000137> ;
+    skos:definition "Detectors of the mass spectrometer used to identify the reaction products and intemediates."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "mass spectrometer detector"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000139> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000139"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000137> ;
+    skos:definition "The minimum concentration of a product or intermediate that the mass spectrometer can identify. "@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "mass spectrometer sensitivity"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000140> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000140"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000137> ;
+    skos:definition "A process in which gaseous substances of known purity and concentration are introduced to the mass spectrometer and the respective mass-to-charge ratios are identified. This process when concluded, allows for the calculation of concentrations of products and intermediates of the photoreaction."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "mass spectrometer calibration"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000144> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000144"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000143> ;
+    skos:definition "Maximum of operation pressure range within the reactor can operate safely. "@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "maximum operation pressure"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000145> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000145"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000143> ;
+    skos:definition "Minimum of operation pressure range within the reactor can operate safely. "@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "minimum operation pressure"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000147> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000147"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000146> ;
+    skos:definition "Α mechanical device that removes gas molecules from a sealed chamber reaching pressures lower than the atmospheric pressure. "@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "vacuum pump"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000149> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000149"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000148> ;
+    skos:definition "Maximum of operation temperature range within the reactor can operate safely."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "maximum operation temperature"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000150> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000150"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000148> ;
+    skos:definition "Minimum of operation temperature range within the reactor can operate safely."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "minimum operation temperature"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000151> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000151"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "cooling device"@en,
+        "heating device"@en,
+        "temperature controller"@en,
+        "temperature gauge"@en,
+        "temperature monitor"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000148> ;
+    skos:definition "Equipment used for controlling and/or monitoring the temperature in various parts of a photoreactor. This can include hot plates, heating elements and cryostats. Light sources in operation can also affect the temperature in the reaction chamber."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "temperature controller and monitor"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000153> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000153"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000152> ;
+    skos:definition "Volume of the reaction chamber, calculated by its dimensions. Volume of pipes and valves connected to the reaction chamber should also be calculated and added to the total volume. "@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "reaction chamber volume"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000154> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000154"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000152> ;
+    skos:definition "Height, width and depth (in cubic- or rectangular- shaped reaction chambers) or diameter and height (in cylindrer - shaped reaction chambers)."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "reaction chamber dimension"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000155> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000155"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000152> ;
+    skos:definition "The shape of the reaction chamber. In gas-phase reactions, reaction chambers have usually a cylindrical, cubical or rectangular shape."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "reaction chamber shape"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000156> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000156"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000152> ;
+    skos:definition "Material used for the construction of the main body of the reaction chamber."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "reaction chamber material"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000158> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000158"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000157> ;
+    skos:definition "Material that the window is made of. The window, usually attached to the lid sealing the reaction chamber, allows for the incoming light to enter the reaction chamber and interact with the photocatalyst. The material of the window influences the wavelenth range the the photocatalyst experieneces. "@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "optical window material"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000160> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000160"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000159> ;
+    skos:definition "Diameter of the optical window allowing the incoming light to enter the reaction chamber and interact with the photocatalyst."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "optical window diameter"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000161> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000161"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000159> ;
+    skos:definition "Thickness of the optical window allowing the incoming light to enter the reaction chamber and interact with the photocatalyst."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "optical window thickness"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000164> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000164"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "MFC"@en,
+        "MFCs"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000163> ;
+    skos:definition "A mass flow controller (MFC) is a device used to measure and control the flow of liquids and gases. A mass flow controller is designed and calibrated to control a specific type of liquid or gas at a particular range of flow rates."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "mass flow controller"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000167> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000167"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "Hg-Xe lamp"@en,
+        "Hg/Xe lamp"@en,
+        "mercury xenon lamp"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000166> ;
+    skos:definition "A lamp containing a mixture of mercury (Hg) and xenon (Xe) gases. Under electric current, the gas mixture gets ionized through a discharge electric charge creating a plasma generating UV and visible light. "@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "mercury-xenon lamp"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000168> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000168"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "Xe lamp"@en,
+        "Xe-lamp"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000166> ;
+    skos:definition "A lamp containing pure xenon (Xe) gas. Under electric current, the gas mixture gets ionized through a discharge electric charge creating a plasma generating UV and visible light. "@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "xenon lamp"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000169> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000169"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "LED"@en,
+        "light-emitting diode"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000166> ;
+    skos:definition "A solid-state semiconductor emitting light at highly controllable (narrow) wavelength ranges."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "light emitting diode"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000171> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000171"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000170> ;
+    skos:definition "The distance of the light source from the reaction chamber and the photocatalyst."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "light source distance"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000172> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000172"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000170> ;
+    skos:definition "The value of current (usually in A or mA) used to operate the selected light source."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "light operation current"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000173> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000173"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000170> ;
+    skos:definition "The value of voltage (usually in V or mV) used to operate the selected light source."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "light operation voltage"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000174> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000174"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000170> ;
+    skos:definition "The power of the light source (usually in W or mW). The power can be calculated by the multiplication of the current and voltage used to operate the light source."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "light power output"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000175> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000175"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000170> ;
+    skos:definition "The light intensity (usually in mW cm-2) of the selected light source. The light intensity should be measured at the same distance as the one between the light source and the reaction chamber / sample."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "light intensity"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000177> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000177"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "IR"@en,
+        "Ir"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000176> ;
+    skos:definition "Electromagnetic radiation with wavelengths typically in the range of 800 nm - 20000 nm."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "infrared"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000178> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000178"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "VIS"@en,
+        "Vis"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000176> ;
+    skos:definition "Electromagnetic radiation with wavelengths visible to the human eye, typically in the range of 400-800 nm. "@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "visible"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000179> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000179"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "UV"@en,
+        "UV-A"@en,
+        "UV-B"@en,
+        "UV-C"@en,
+        "VUV"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000176> ;
+    skos:definition "Electromagnetic radiation with a wavelength typically in the range of 100-400 nanometers."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "ultraviolet"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000004> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000004"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000003> ;
+    skos:definition "Broad families of semiconduction materials (e.g., metal oxides) that can be used as photocatalysts in various applications."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000005> ;
+    skos:prefLabel "categories of semiconductors"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000014> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000014"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000003> ;
+    skos:definition "Techniques used to modify the properties of a photocatalyst, with the aim to increase its efficiency in a photocatalytic application."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000015> ;
+    skos:prefLabel "modification technique"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000017> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000017"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000016> ;
+    skos:definition "A photocatalyst introduced to the reaction chamber in the form of a powder. Usually the powdered photocatalyst is spread inside a quartz / glass plate."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000018> ;
+    skos:prefLabel "powdered photocatalyst"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000067> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000067"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "X-ray emission spectrometry"@en,
+        "X-ray fluorescence spectrometry"@en,
+        "X-ray fluorescence spectroscopy"@en,
+        "XES"@en,
+        "XRES"@en,
+        "XRF"@en,
+        "XRF spectrometry"@en,
+        "XRF spectroscopy"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000066> ;
+    skos:definition "A non-destructive analytical technique which uses a high-energy X-ray source to expose a material and monitors the emitted characteristic fluorescent X-Rays. "@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "X-ray fluorescence"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000068> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000068"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "EELS"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000066> ;
+    skos:definition "An analytical technique used to measure the energy loss of electrons passing through a sample. "@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "electron energy loss spectroscopy"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000069> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000069"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "RAMAN"@en,
+        "Raman"@en,
+        "Raman scattering spectrometry"@en,
+        "Raman spectrometry"@en,
+        "raman scattering spectroscopy"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000066> ;
+    skos:definition "A spectroscopy technique studying the vibrational modes of molecules, by measuring the intensity and frequency of scattered by the sample of monochromatic light. "@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "Raman spectroscopy"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000070> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000070"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "AFM"@en,
+        "SFM"@en,
+        "atomic force imaging"@en,
+        "atomic-force microscopy"@en,
+        "scanning force microscopy"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000066> ;
+    skos:definition "A high-resolution imaging technique that measures the interaction between a sharp probe and the sample’s surface to create a three-dimensional image of the surface’s morphology. "@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "atomic force microscopy"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000071> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000071"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "DSC"@en,
+        "differential scanning calorimetric (DSC) analysis"@en,
+        "differential scanning calorimetric analysis"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000066> ;
+    skos:definition "A thermal analysis technique which compares the heat flow in a sample and a reference material under controlled applied temperature profiles. "@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "differential scanning calorimetry"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000072> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000072"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "TG"@en,
+        "TG analysis"@en,
+        "TG measurements"@en,
+        "TGA"@en,
+        "thermal gravimetric analysis"@en,
+        "thermo-gravimetric analysis"@en,
+        "thermogravimetric (TG) analyses"@en,
+        "thermogravimetric (TG) analysis"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000066> ;
+    skos:definition "A thermal analysis technique used to measure the change of a sample’s mass under the influence of controlled applied temperature profiles."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "thermogravimetric analysis"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000073> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000073"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "NMR"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000066> ;
+    skos:definition "A spectroscopic technique that uses a static magnetic field and radiofrequency radiation to measure the magnetic resonance of atomic nuclei protons or electrons."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "nuclear magnetic resonance spectroscopy"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000074> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000074"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "PL"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000066> ;
+    skos:definition "Light emission of lower energy photons from a sample upon its photoexcitation. "@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "photoluminescence"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000075> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000075"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "SEM"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000066> ;
+    skos:definition "An electron microscopy technique that produces high-resolution images under high magnification of a sample's surface by assessing the secondary and back-scattered electrons produced by a focused electron beam."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "scanning electron microscopy"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000076> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000076"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "XPS"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000066> ;
+    skos:definition "A technique that analyzes the chemical composition of an X-ray irradiated sample by measuring the energies of the emitted electrons."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "X-ray photoelectron spectroscopy"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000077> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000077"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "X-ray analysis"@en,
+        "X-ray crystallographic analysis"@en,
+        "X-ray crystallography"@en,
+        "X-ray diffraction analysis"@en,
+        "X-ray diffractometry"@en,
+        "X-ray structure determination"@en,
+        "XRD"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000066> ;
+    skos:definition "A technique which analyses the diffraction pattern produced when X-rays are scattered by a sample bombarded by a focused electron beam."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "X-ray diffraction"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000078> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000078"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "TEM"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000066> ;
+    skos:definition "Transmission electron microscopy is a technique that produces high-resolution images if the internal structure of a sample by using a beam of electrons to bombard the thin sample and measuring the intensity of the scattered transmitted electrons."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "transmission electron microscopy"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000079> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000079"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "UV-Vis"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000066> ;
+    skos:definition "A technique used to measure the absorption, transmission or reflectance of light by a sample in the ultraviolet and visible regions of the electromagnetic spectrum."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "ultraviolet-visible spectroscopy"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000080> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000080"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "FT-IR"@en,
+        "FT-IR spectroscopy"@en,
+        "FTIR"@en,
+        "FTIR spectrometry"@en,
+        "FTIR spectroscopy"@en,
+        "Fourier transform infra-red absoprtion spectroscopy"@en,
+        "Fourier transform infra-red spectrometry"@en,
+        "Fourier transform infrared (FT-IR)"@en,
+        "Fourier transform infrared (FT-IR) spectroscopy"@en,
+        "Fourier-transform infra-red absorption spectrometry"@en,
+        "Fourier-transform infrared (FTIR) absorption spectroscopy"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000066> ;
+    skos:definition "A spectroscopic technique used to study the vibrational modes of chemical bonds of a sample using infrared radiation."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "fourier transform infrared spectroscopy"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000081> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000081"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "BET"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000066> ;
+    skos:definition "The study of physical adsorption of gas molecules on a solid surface for the calculation of the specific surface area of materials."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "Brunauer-Emmett-Teller surface area analysis"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000082> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000082"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "CV"@en,
+        "cyclovoltammetry"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000066> ;
+    skos:definition "An electrochemical technique used to study the redox properties of a sample by measuring the current produced by an applied voltage sweep."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "cyclic voltammetry"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000083> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000083"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000066> ;
+    skos:definition "A method used in cyclic voltammetry to determine the charge carrier concentration and the flat-band potential of an electrochemical system by measuring the capacitance as a function of applied voltage."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "Mott-Schottky analysis"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000098> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000098"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000087> ;
+    skos:definition "The gain of electrons or a decrease in the oxidation state of a species. "@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000099> ;
+    skos:prefLabel "reduction"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000141> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000141"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "LC"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000129> ;
+    skos:definition "A sepation technique that uses a liquid mobile phase to separate the components of a mixture based on their interactions with a stationary phase and a mobile phase. "@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "liquid chromatography"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000146> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000146"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "pressure controller"@en,
+        "pressure gauge"@en,
+        "pressure monitor"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000143> ;
+    skos:definition "Equipment used for controlling and / or monitoring the pressure in various parts of a photoreactor. A vacuum pump is a typical example of such equipment."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000147> ;
+    skos:prefLabel "pressure controller and monitor"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000162> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000162"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "gas flow"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000128> ;
+    skos:definition "Flow rates of gases used in an experiment. Gases can have either the role of a reactant (e.g., CO2) or be inert (e.g., Ar, He). "@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000163> ;
+    skos:prefLabel "gas feed"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000163> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000163"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000162> ;
+    skos:definition "Equipment used for controlling and / or monitoring the flow of gases (reactant or inert) needed for a photocatalytic experiment. Mass flow controllers (MFCs) are commonly used to control gas flows."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000164> ;
+    skos:prefLabel "gas flow controller and monitor"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000016> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000016"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000002> ;
+    skos:definition "The form in which the photocatalyst is introduced to the reaction chamber. This can include e.g., powders, pellets or thin films deposited on a substrate."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000017>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000019> ;
+    skos:prefLabel "sample form"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000024> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000024"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000019> ;
+    skos:definition "The substate onto which a (powdered) photocatalyst is deposited. Such substrates include glass surfaces (e.g., borosilicate glass or conductive glass like ITO and FTO), ceramic substrates (e.g., alumina) or metal substrates (e.g., Ti foils, stainless steel etc.)."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000025>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000033> ;
+    skos:prefLabel "substrate"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000038> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000038"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000019> ;
+    skos:definition "A thin film of the photocatalyst deposited on an appropriate for the application substrate."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000039>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000040> ;
+    skos:prefLabel "deposited sample"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000045> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000045"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000002> ;
+    skos:definition "The process by which one or more chemical reactions are performed with the aim of converting a reactant or starting material into a product or multiple products."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000046>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000049> ;
+    skos:prefLabel "synthesis"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000046> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000046"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "manuscripts"@en,
+        "papers"@en,
+        "publications"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000045> ;
+    skos:definition "Thorough search of available literature on the research topic of interest using online research platforms (e.g, Scopus, Google Scholar, Web of Science, Research Gate etc.) and / or libraries. Relevant literature can be found in the form of publications, books, abstracts and conference presentations. "@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000047>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000048> ;
+    skos:prefLabel "literature research"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000084> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000084"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000001> ;
+    skos:definition "The energy state occupied by an electron in a photocatalyst. This state cab affect the electron's ability to participate in a photocatalytic reaction. "@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000085>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000086> ;
+    skos:prefLabel "electronic state"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000105> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000105"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000101> ;
+    skos:definition "Electron donors or hole scavengers used to reduce the recombination tendency of electrons and holes. Sacrificial reagents are used in photocatalysis to study an oxidation or reduction reaction separately."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000106>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000107> ;
+    skos:prefLabel "sacrificial reagant"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000108> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000108"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000100> ;
+    skos:definition "Operation mode under the which the experiment takes place: batch of continuous flow mode."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000109>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000110> ;
+    skos:prefLabel "operation mode"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000115> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000115"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000100> ;
+    skos:definition "The temperature (range) under which the photocatalytic reaction takes place."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000116>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000117> ;
+    skos:prefLabel "experiment temperature"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000118> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000118"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000100> ;
+    skos:definition "The pressure (range) under which the photocatalytic reaction takes place."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000119>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000120> ;
+    skos:prefLabel "experiment pressure"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000142> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000142"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000128> ;
+    skos:definition "The range of critical for the safe operation of the photoreactor parameters."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000143>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000148> ;
+    skos:prefLabel "operation parameters"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000157> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000157"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000152> ;
+    skos:definition "A transparent material optimized to allow the transmission of electromagnetic radiation with low reflectance and scattering. "@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000158>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000159> ;
+    skos:prefLabel "optical window"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000159> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000159"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000157> ;
+    skos:definition "The dimension of the optical window (diameter / thickness) allowing the incoming light to enter the reaction chamber and interact with the photocatalyst."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000160>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000161> ;
+    skos:prefLabel "optical window dimensions"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000165> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000165"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000128> ;
+    skos:definition "The irradiation system includes all the necessary equipment needed to perform a photocatalytic experiment. The system apart from the light source can include, filters, power units, lamp cooling devices etc.."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000166>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000170> ;
+    skos:prefLabel "irradiation system"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000003> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000003"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000002> ;
+    skos:definition "A material with electrical conductivity between that of a conductor and an insulator."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000004>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000006>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000014> ;
+    skos:prefLabel "semiconductor"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000019> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000019"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000016> ;
+    skos:definition "A photocatalyst introduced to the reaction chamber in the form of a thin film. To form a thin film, a (powdered) photocatalyst is deposited on a substrate (e.g., glass or metal) using an appropriate deposition technique."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000020>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000024>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000038> ;
+    skos:prefLabel "thin film"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000020> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000020"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000019> ;
+    skos:definition "A technique used to deposit (immobilize) a (powdered) photocatalyst on a substate. These techniques indlude (but are not limited to): doctor blading, spin coating, spray coating, etc.."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000021>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000022>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000023> ;
+    skos:prefLabel "deposition technique"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000025> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000025"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000024> ;
+    skos:definition "The material that the substrate is made of. Common materials include: glass (conductive or not), ceramics and metal."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000026>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000027>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000032> ;
+    skos:prefLabel "substrate material"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000062> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000062"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000049> ;
+    skos:definition "Chemical substances used in the synthesis process of a desired photocatalyst."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000063>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000064>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000065> ;
+    skos:prefLabel "chemical substance for synthesis"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000111> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000111"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000100> ;
+    skos:definition "The total duration of an experiment."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000112>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000113>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000114> ;
+    skos:prefLabel "experiment duration"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000124> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000124"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000100> ;
+    skos:definition "Quantitative and qualitative evaluation of the outcome of a photocatalytic reaction (e.g., product formation from the photoreduction of CO2). The evaluation can lead to changes in the synthesis of the photocatalyst and / or selecting different experimental parameters."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000125>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000126>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000127> ;
+    skos:prefLabel "evaluation"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000129> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000129"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000128> ;
+    skos:definition "Spectroscopic or chromatographic methods used to qualitatively and quantitatively identify the products of the photoreaction. Such devices are usually attached to the photoreactor, or a sample is being trasfered to an identification method via another medium (e.g., gastight syringes)."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000130>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000137>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000141> ;
+    skos:prefLabel "product identification method"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000131> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000131"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000130> ;
+    skos:definition "Detectors of the gas chromatogragh used to identify the reaction products and intemediates."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000132>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000133>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000134> ;
+    skos:prefLabel "gas chromatograph detector"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000143> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000143"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "\\Ppressure range"@en,
+        "operation pressure range"@en,
+        "range of operation pressure"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000142> ;
+    skos:definition "Maximum and minimum of operation pressure range within the reactor can operate safely. Higher operation temperatures can lead to higher pressure values."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000144>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000145>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000146> ;
+    skos:prefLabel "operation pressure"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000148> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000148"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "operation temperature range"@en,
+        "range of operation temperature"@en,
+        "temperature range"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000142> ;
+    skos:definition "Maximum and minimum of operation temperature range within the reactor can operate safely."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000149>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000150>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000151> ;
+    skos:prefLabel "operation temperature"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000166> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000166"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000165> ;
+    skos:definition "Light source used to irradiate a photocatalyst in a reaction chamber. These include sources with various intensities, powers and wavelength ranges, including Hg/Xe lamps, Xe lamps and LEDs. "@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000167>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000168>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000169> ;
+    skos:prefLabel "light source"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000176> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000176"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "λ"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000170> ;
+    skos:definition "The distance between two successive peaks or troughs in a wave."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000177>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000178>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000179> ;
+    skos:prefLabel "light wavelength"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000002> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000002"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "photocatalytic material"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000001> ;
+    skos:definition "A material that absorbs photons (light) of appropriate energy and initiates or accelerates a photochemical reaction, while it regenerates itself after each reaction cycle."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000003>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000016>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000045>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000066> ;
+    skos:prefLabel "photocatalyst"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000027> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000027"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000025> ;
+    skos:definition "A flat surface made of glass serving as a substrate for the deposition of a photocatalyst."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000028>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000029>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000030>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000031> ;
+    skos:prefLabel "glass substrate"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000033> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000033"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000024> ;
+    skos:definition "The diamensions of the substrate."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000034>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000035>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000036>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000037> ;
+    skos:prefLabel "substrate dimension"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000040> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000040"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000038> ;
+    skos:definition "The diamensions of the - deposited on the substrate - thin film."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000041>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000042>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000043>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000044> ;
+    skos:prefLabel "thin film dimension"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000101> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000101"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000100> ;
+    skos:definition "A starting substance that undergoes a chemical reaction to produce a desired product."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000102>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000103>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000104>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000105> ;
+    skos:prefLabel "reactant"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000130> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000130"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "GC"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000129> ;
+    skos:definition "An analytical technique that separates and analyzes the components of a gas mixture by passing it though a stationary phase."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000131>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000135>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000136> ;
+    skos:prefLabel "gas chromatography"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000137> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000137"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "MS"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000129> ;
+    skos:definition "An analytical technique which determines the mass-to-charge ratio of ions in a sample to give information about the composition of the sample."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000138>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000139>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000140> ;
+    skos:prefLabel "mass spectrometry"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000001> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000001"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "photocatalytic reaction"@en ;
+    skos:definition "A process which catalyzes a chemical reaction through the absorption of sufficient light energy by a photocatalyst."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000002>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000084>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000087>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000100>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000128> ;
+    skos:prefLabel "photocatalysis"@en ;
+    skos:topConceptOf <https://w3id.org/nfdi4cat/voc4cat_> .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000128> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000128"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "photoreactor engineering"@en,
+        "reactor design"@en,
+        "reactor engineering"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000001> ;
+    skos:definition "Details describing the construction, physical dimensions, and operation of the photoreactor used to perform a photocatalytic reaction."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000129>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000142>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000152>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000162>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000165> ;
+    skos:prefLabel "photoreactor design"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000152> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000152"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "photoreaction chamber"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000128> ;
+    skos:definition "A construction inside of which the photocatalyst and the reactants coexist and the photoreaction takes place."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000153>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000154>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000155>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000156>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000157> ;
+    skos:prefLabel "reaction chamber"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000054> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000054"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:altLabel "calcination"@en,
+        "heat treatment"@en,
+        "heat-treatment"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000049> ;
+    skos:definition "Heat treatment to reach the desired final photocatalyst. The parameters of the heat treatment can vary between each calcination step. "@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000055>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000056>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000057>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000058>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000059>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000060> ;
+    skos:prefLabel "calcination step"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000170> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000170"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000165> ;
+    skos:definition "Specific of roperties of the light source dictaning its operation and its adequacy in the studied photocatalytic reaction. "@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000171>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000172>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000173>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000174>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000175>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000176> ;
+    skos:prefLabel "light source property"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000006> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000006"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000003> ;
+    skos:definition "Characteristic properties of a semiconductor used in the field of photocatalysis. These properties determine its performance in the studied photocatalytic application."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000007>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000008>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000009>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000010>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000011>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000012>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000013> ;
+    skos:prefLabel "semiconductor property"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000049> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000049"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000045> ;
+    skos:definition "Necessary steps needed to follow in order to reach the desired photocatalyst."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000050>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000051>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000052>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000053>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000054>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000061>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000062> ;
+    skos:prefLabel "synthesis procedure"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000100> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000100"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000001> ;
+    skos:definition "A lab-scale experiment performed to test the efficiency of a studied photocatalyst in a photocatalytic application (e.g., dye degradation, CO2 photoreduction e.t.c.)."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000101>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000108>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000111>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000115>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000118>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000121>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000122>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000123>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000124> ;
+    skos:prefLabel "photocatalytic experiment"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000087> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000087"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000001> ;
+    skos:definition "A multi-step process iniatiated by the absorption of photons by a photocatalyst. This process involves various sub-processes that include the photogeneration and transfer of electron and hole pairs. "@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000088>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000089>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000090>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000091>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000092>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000093>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000094>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000095>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000096>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000097>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000098> ;
+    skos:prefLabel "photocatalytic process"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_0000066> a skos:Concept ;
+    dcterms:identifier "voc4cat_0000066"^^xsd:token ;
+    dcterms:provenance "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000002> ;
+    skos:definition "Techniques used to identify the (physico)chemical, morphological, structural, mechanical, optical and electrical properties of the syntesized catalysts. Characterization is performed after the synthesis of the catalysts to evaluate the success of the synthetic approach, but also after the completion of the evaluation of the materials in a reaction to ensure their stability under the selected experimental parameters."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower <https://w3id.org/nfdi4cat/voc4cat_0000067>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000068>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000069>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000070>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000071>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000072>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000073>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000074>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000075>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000076>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000077>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000078>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000079>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000080>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000081>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000082>,
+        <https://w3id.org/nfdi4cat/voc4cat_0000083> ;
+    skos:prefLabel "characterization"@en .
+
+<https://w3id.org/nfdi4cat/voc4cat_> a skos:ConceptScheme ;
+    dcterms:created "2023-06-29"^^xsd:date ;
+    dcterms:creator <https://w3id.org/nfdi4cat/> ;
+    dcterms:hasPart <https://w3id.org/nfdi4cat/voc4cat_0001900>,
+        <https://w3id.org/nfdi4cat/voc4cat_0001901> ;
+    dcterms:identifier "voc4cat_"^^xsd:token ;
+    dcterms:modified "2023-09-03"^^xsd:date ;
+    dcterms:provenance "https://orcid.org/0000-0002-5898-1820 David Linke, https://orcid.org/0000-0002-6242-2167 Nikolaos G. Moustakas"@en ;
+    dcterms:publisher <https://w3id.org/nfdi4cat/> ;
+    owl:versionInfo "v2023-09-03" ;
+    skos:definition "A vocabulary for all areas of catalysis initiated in NFDI4Cat. Starting with photocatalysis we add more and more terms from other areas of catalysis and related disciplines like chemical enineering or material science."@en ;
+    skos:hasTopConcept <https://w3id.org/nfdi4cat/voc4cat_0000001> ;
+    skos:prefLabel "Voc4Cat - A SKOS vocabulary for Catalysis."@en ;
+    dcat:contactPoint "David Linke (orcid:0000-0002-5898-1820), Nikolaos G. Moustakas (orcid:0000-0002-6242-2167)" .
+

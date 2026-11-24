@@ -1,0 +1,26 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+voc4cat:0000020
+    a skos:Concept ;
+    dcterms:created "2023-08-11"^^xsd:date ;
+    dcterms:identifier "0000020"^^xsd:token ;
+    dcterms:modified "2026-02-18"^^xsd:date ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000020.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0000xxx/0000020.ttl> ;
+    skos:altLabel
+        "immobilization"@en ,
+        "immobilization technique"@en ;
+    skos:broader voc4cat:0000185 ;
+    skos:changeNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:definition "A technique used to deposit (immobilize) a (powdered) catalyst on a substate. These techniques include (but are not limited to): doctor blading, spin coating, spray coating, etc.."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:narrower
+        voc4cat:0000021 ,
+        voc4cat:0000022 ,
+        voc4cat:0000023 ;
+    skos:prefLabel "deposition technique"@en ;
+.

@@ -1,0 +1,14 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0000237>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0000237"^^xsd:token ;
+    skos:altLabel "ORR"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000183> ;
+    skos:definition "The reduction half reaction where oxygen is reduced to water or hydrogen peroxide. In electrochemistry it takes place in the cathode."@en ;
+    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:prefLabel "oxygen reduction reaction"@en ;
+.

@@ -1,0 +1,17 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0007239>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0007239"^^xsd:token ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000186> ;
+    skos:definition "The frequency of an alternating (ac) current is a measure of how many times the direction of the current flow changes, in the same direction, per second. As the direction of flow changes back and forth, the total number of directional changes, per second, is twice the frequency."@en ;
+    skos:historyNote "0009-0008-1278-8890 Michael Götte created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower
+        <https://w3id.org/nfdi4cat/voc4cat_0007241> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0007242> ;
+    skos:prefLabel "frequency"@en ;
+.
+

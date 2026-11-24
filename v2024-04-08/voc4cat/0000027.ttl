@@ -1,0 +1,19 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0000027>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0000027"^^xsd:token ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000025> ;
+    skos:definition "A flat surface made of glass serving as a substrate for the deposition of a photocatalyst."@en ;
+    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:narrower
+        <https://w3id.org/nfdi4cat/voc4cat_0000028> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000029> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000030> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000031> ;
+    skos:prefLabel "glass substrate"@en ;
+.
+

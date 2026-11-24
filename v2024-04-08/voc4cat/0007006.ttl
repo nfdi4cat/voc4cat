@@ -1,0 +1,15 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0007006>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0007006"^^xsd:token ;
+    skos:altLabel "active centre"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0007003> ;
+    skos:definition "Those sites for adsorption which are the effective sites for a particular heterogeneous catalytic reaction. "@en ;
+    skos:historyNote "0000-0002-4041-0165 Julia Schumann created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "active site"@en ;
+.
+

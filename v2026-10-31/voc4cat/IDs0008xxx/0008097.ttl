@@ -1,0 +1,22 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX voc4cat: <https://w3id.org/nfdi4cat/voc4cat_>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+voc4cat:0008097
+    a skos:Concept ;
+    dcterms:created "2025-08-27"^^xsd:date ;
+    dcterms:identifier "0008097"^^xsd:token ;
+    dcterms:modified "2026-02-18"^^xsd:date ;
+    dcterms:provenance <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008097.ttl> ;
+    rdfs:seeAlso <https://github.com/nfdi4cat/voc4cat/blame/main/vocabularies/voc4cat/IDs0008xxx/0008097.ttl> ;
+    skos:altLabel
+        "energy"@en ,
+        "photon energy"@en ;
+    skos:broader voc4cat:0000186 ;
+    skos:changeNote "0009-0004-3786-0773 Carla Terboven created the resource"@en ;
+    skos:definition "Energy of X-ray photons, representing the incident radiation in a measurement."@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:prefLabel "X-ray photon energy"@en ;
+.

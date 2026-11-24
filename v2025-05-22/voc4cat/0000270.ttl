@@ -1,0 +1,18 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0000270>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0000270"^^xsd:token ;
+    skos:altLabel "porous media"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000190> ;
+    skos:definition "A solid substance featuring pores, the size, arrangement and shape of which govern the material’s permeability, adsorption properties, and mechanical properties."@en ;
+    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat> ;
+    skos:narrower
+        <https://w3id.org/nfdi4cat/voc4cat_0000198> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000271> ,
+        <https://w3id.org/nfdi4cat/voc4cat_0000272> ;
+    skos:prefLabel "porous material"@en ;
+.

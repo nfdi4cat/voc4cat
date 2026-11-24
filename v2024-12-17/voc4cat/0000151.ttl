@@ -1,0 +1,20 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://w3id.org/nfdi4cat/voc4cat_0000151>
+    a skos:Concept ;
+    dcterms:identifier "voc4cat_0000151"^^xsd:token ;
+    skos:altLabel
+        "cooling device"@en ,
+        "heating device"@en ,
+        "temperature controller and monitor"@en ,
+        "temperature gauge"@en ,
+        "temperature monitor"@en ;
+    skos:broader <https://w3id.org/nfdi4cat/voc4cat_0000187> ;
+    skos:definition "Equipment used for controlling and/or monitoring the temperature in various parts of a reactor. This can include hot plates, heating elements and cryostats. "@en ;
+    skos:historyNote "0000-0002-6242-2167 Nikolaos G. Moustakas created the resource"@en ;
+    skos:inScheme <https://w3id.org/nfdi4cat/voc4cat_> ;
+    skos:prefLabel "temperature controller"@en ;
+.
+
